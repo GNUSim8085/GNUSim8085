@@ -1,0 +1,207 @@
+2002-09-23  Bastien Nocera  <hadess@hadess.net>
+
+	* autogen.sh: exit if aclocal, autoheader, automake or autoconf
+	fails to run without warnings. Usually compilation would fail
+	afterwards with funky errors.
+	This is more anal than the version committed to the gnome-2-0 branch
+
+2002-08-18  Havoc Pennington  <hp@pobox.com>
+
+	* autogen.sh: hardcode aclocal-1.4/automake-1.4 so that users with
+	both automake 1.6 and 1.4 installed get the right automake. Means
+	compilation from CVS will now require the latest automake 1.4
+	release, or manually creating symlinks called "automake-1.4" and
+	"aclocal-1.4"
+
+Mon Aug 12 23:49:41 2002  HideToshi Tajima  <hidetoshi.tajima@sun.com>
+
+	* autogen.sh : use portable -o instead of GNU-ish -or for find test
+
+2002-08-10  Miles Lane  <miles_lane@yahoo.com>
+
+	* autogen.sh: fix the "find" test so that the presence of
+	  configure.in is reporteded.  Each expression requires its
+	  own -print flag.
+
+2002-08-10  Sebastian Rittau  <srittau@jroger.in-berlin.de>
+
+	* autogen.sh: support for configure.ac
+
+2002-05-10  Chema Celorio  <chema@celorio.com>
+
+	* compiler-flags.m4: fix GNOME_COMPILE_WARNINGS to work when a parameter is
+	passed. The arguments to AC_ARG_ENABLE where swapped
+
+2002-04-01  jacob berkman  <jacob@ximian.com>
+
+	* gnome-x-checks.m4 (GNOME2_X_CHECKS): kill bogus clearing of
+	LDFLAGS
+
+2001-10-29  jacob berkman  <jacob@ximian.com>
+
+	* autogen.sh: add check for glib-gettextize
+
+2001-10-15  Bastien Nocera  <hadess@hadess.net>
+
+	* Makefile.am, curses.m4: added curses.m4 (copied from the gnome1
+	macros. this file is needed to gdialog
+
+2001-10-02  Darin Adler  <darin@bentspoon.com>
+
+	* autogen.sh: Complete intltool support.
+
+2001-10-02  Darin Adler  <darin@bentspoon.com>
+
+	* autogen.sh: Add intltool support.
+
+2001-09-04  Frank Belew  <frb@ximian.com>
+
+	* autogen.sh: change gettext regexp to work with non-gnu grep
+
+2001-08-18  Darin Adler  <darin@bentspoon.com>
+
+	* autogen.sh: Don't ask people to ignore xml-i18n-tools messages.
+
+2001-08-04  Darin Adler  <darin@bentspoon.com>
+
+	* autogen.sh: Update gettext logic to allow anything that
+	starts with AM and ends with gettext. This makes it work with
+	AM_GLIB_GNU_GETTEXT, which is what libbonobo is now using.
+
+2001-08-03  Martin Baulig  <baulig@suse.de>
+
+	* gnome-pkgconfig.m4 (GNOME_PKGCONFIG_CHECK_VERSION): Removed.
+	(GNOME_PKGCONFIG_CHECK_CFLAG): Removed.
+	(GNOME_PKGCONFIG_ACLOCALFLAGS): Removed.
+	(GNOME_PKGCONFIG_CHECK_OPTIONAL_MODULES): Removed.
+	(GNOME_PKGCONFIG_CHECK_MODULES): Removed.
+	(GNOME_CHECK_PKGCONFIG): Use $PKG_CONFIG --atleast-pkgconfig-version
+	to check for the pkg-config version.
+
+2001-07-20  Martin Baulig  <baulig@suse.de>
+
+	* gnome-pkgconfig.m4: Require pkg-config 0.8.0.
+
+2001-06-29  Laszlo Peter <laca@ireland.sun.com>
+
+	* gnome-pkgconfig.m4 (GNOME_PKGCONFIG_CHECK_VERSION): Fix the regexp
+	to process all 6 version numbers.
+
+2001-06-22  Elliot Lee  <sopwith@redhat.com>
+
+	* gnome-gettext.m4: N'sync with the gnome1 version, bye bye buggies.
+
+2001-06-13  Martin Baulig  <baulig@suse.de>
+
+	* gnome-pkgconfig.m4 (GNOME_CHECK_PKGCONFIG): Require pkg-config 0.7.0
+	and fix download URL.
+
+	* gnome-platform.m4: Require pkgconfig on the GNOME 2.0 platform.
+
+2001-06-01  Peter Williams  <peterw@ximian.com>
+
+	* autogen.sh: s,Gnome,$PKG_NAME,g
+
+2001-04-13  Martin Baulig  <baulig@suse.de>
+
+	* gnome-pkgconfig.m4 (GNOME_PKGCONFIG_CHECK_OPTIONAL_MODULES):
+	Set variable `have_<name>' to yes or no depending on whether the
+	module was found or not; allows you to define automake conditionals
+	for optional modules.
+
+2001-03-24  Martin Baulig  <baulig@suse.de>
+
+	* autogen.sh: Add the xml-i18n-tools stuff here.
+
+2000-12-01  Martin Baulig  <baulig@suse.de>
+
+	* compile-warnings.m4: Improved compile warnings check; the
+	--enable-compile-warnings parameter now takes 5 different
+	values (no/minimum/yes/maximum/error). AC_SUBST(WARN_CFLAGS).
+
+2000-11-29  Martin Baulig  <baulig@suse.de>
+
+	* gnome.m4, gnome-gnorba-check.m4, gnome-fileutils.m4: Removed.
+
+2000-11-26  Martin Baulig  <martin@home-of-linux.org>
+
+	* gnome-x-checks.m4 (GNOME2_X_CHECKS): Use
+	GNOME_PKGCONFIG_CHECK_MODULES.
+
+	* gnome-pkgconfig.m4 (GNOME_PKGCONFIG_CHECK_VERSION): Don't
+	AC_REQUIRE([GNOME_REQUIRE_PKGCONFIG]).
+	(GNOME_CHECK_PKGCONFIG): Check for pkg-config >= 0.4.1.
+
+2000-11-22  Martin Baulig  <martin@home-of-linux.org>
+
+	* gnome-pkgconfig.m4: Added GNOME_PKGCONFIG_CHECK_OPTIONAL_MODULES
+	to check for a list of optional modules.
+
+	* gnome-platform.m4: Require GNOME_REQUIRE_PKGCONFIG.
+
+2000-11-22  Martin Baulig  <martin@home-of-linux.org>
+
+	* gnome-platform.m4: New file. This defines
+	GNOME_PLATFORM_GNOME_2.
+
+	* gnome-pkgconfig.m4: Disable the --extra-flags argument to
+	pkg-config, this doesn't exist anymore.
+
+2000-11-22  Martin Baulig  <martin@home-of-linux.org>
+
+	* gnome-pkgconfig.m4: New file. This defines
+	GNOME_CHECK_PKGCONFIG, GNOME_REQUIRE_PKGCONFIG and
+	GNOME_PKGCONFIG_* macros from pkg-config.
+
+2000-11-21  Martin Baulig  <baulig@suse.de>
+
+	* gnome-support.m4, need-declaration.m4: Removed.
+
+2000-09-30  Martin Baulig  <baulig@suse.de>
+
+	* gnome-x-checks.m4: Switch to pkg-config to check for GTK+ 2.0;
+	Removed all `gnome_cv_passdown_x_*' variables and `USE_DEVGTK'.
+
+	* gnome-common.m4 (GNOME_COMMON_INIT): Added the always-false
+	INSIDE_GNOME_COMMON automake conditional.
+	(GNOME_GTKDOC_CHECK): New macro.
+	(GNOME_DEBUG_CHECK): New macro.
+
+Thu Aug 24 02:28:57 2000  George Lebl <jirka@5z.com>
+
+	* gnome-x-checks.m4: use the correct name in AC_PROVIDE
+
+2000-08-06  Martin Baulig  <baulig@suse.de>
+
+	* gnome-x-checks.m4 (GNOME_X_CHECKS): Renamed
+	to GNOME2_X_CHECKS.
+
+2000-07-24  Martin Baulig  <martin@home-of-linux.org>
+
+	* autogen.sh: Removed some old crap in it.
+	* aclocal-include.m4: Removed.
+
+	* gnome-x-checks.m4: Check for GTK+ 2.0.
+
+2000-07-24  Martin Baulig  <baulig@suse.de>
+
+	* autogen.sh: Make it work with AM_GNOME2_GETTEXT.
+	* check-utmp.m4: New file.
+
+2000-07-24  Martin Baulig  <baulig@suse.de>
+
+	Synced with gnome-libs/gnome-data.
+
+2000-06-09  Martin Baulig  <martin@home-of-linux.org>
+
+	* gnome-common.m4: We need this here as well.
+
+2000-05-29  Martin Baulig  <baulig@suse.de>
+
+	* Makefile.am: New file. Install this stuff into
+	`$(datadir)/aclocal/gnome2-macros'.
+
+	* gnome.m4: New file. Copied from `hack-macros' dir.
+
+	* autogen.sh: New file. Copied from `macros' dir.
+

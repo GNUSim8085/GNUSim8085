@@ -1,0 +1,59 @@
+GNUSim8085 1.2.89 (26 Jan 2004)				- Sridhar
+New:	GNUSim8085 is ready for translation (gettext)!
+New:	Icon for all dialogs
+Fix:	'string.h' bug fixed
+Fix:	Removed gdk* funcs which were making library dependency problems on some systems
+
+GNUSim8085 1.2.88 (31 Dec 2003)				- Sridhar
+
+Fix:	ACI instruction bug fixed
+Fix:	Add/Sub with carry instructions bug fixed
+Fix:	Add/Sub instructions - carry set bug fixed
+Fix:	CMA instruction bug fixed
+Fix:	Carry check bug fixed
+Fix:	File listing save crash bug fixed
+New:	Main window has new title
+New:	Pango rendered text
+New:	XCHG implemented. (Oops! This was a very very critical bug!)
+Fix:	App Pixmap will now show correctly (unless u fiddle with pixmap dir)
+
+GNUSim8085 1.2.8 (11 Dec 2003)				- Sridhar
+
+New:	Keypad (Not stable!)
+
+GNUSim8085 1.2.3 (05 Nov 2003)				- Sridhar
+
+New:	ASM Files can be passed as a parameter hereafter!
+
+GNUSim8085 1.2.1 (01 Oct 2003)				- Sridhar
+
+Fix:	Instructions: LHLD, RAR, RAL, STC - wrong exec - fixed
+New:	Listing Window - added Button Box for "Save listing file"
+
+GNUSim8085 1.2.0 beta (26 Aug 2003)				- Sridhar
+
+New:	Stable Stack view
+Fix:	Now simulation will be as fast as that of release 1.1.9
+
+GNUSim8085 1.2.0 alpha (26 Aug 2003)				- Sridhar
+
+New:	Stack view - view current functions called and variables pushed!
+Fix:	"I/O Port" widget - resetting on execution - fixed
+TODO:	in this beta release, simulation is really slow, will be fixed later
+TODO:	tutorial
+
+GNUSim8085 1.1.9 (04 Aug 2003)				- Sridhar
+
+New:	Dec-Hex convertion widgets added
+New:	step-in and step-out implemented
+New:	Start-with dialog with "Tutorial" button
+New:	Automatic breakpoint insertion syntax for assembly code
+New:	Replace scintilla archives with sources (hence smaller package size!)
+Fix:	view not following trace - fixed
+Fix:	Assembler Syntax Fix: "equ" symbols can used in pseudo op operands also
+Fix:	Last char is not saved during saving file. Now fixed. (Don't use v < 1.2!)
+New:	Informative statusbar
+
+GNUSim8085 1.1 (25 July 2003)				- Sridhar
+
+New:	First stable release of the simulator(lot of bugs) :-)

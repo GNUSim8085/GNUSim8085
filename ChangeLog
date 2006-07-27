@@ -1,0 +1,129 @@
+2006-7-20  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* Apply patch 964792 submitted by Alexander Shigin. Corrects 'PUSH
+	PSW' instruction behaviour.
+
+2006-7-20  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* Update to scintilla 1.66
+	* Updated build scripts
+
+2004-01-25  Sridhar R  <r_sridhar@users.sf.net>
+	* 8085-instructions.h: removed 'extern' just before G_END_DECLS (fixes string.h bug)
+	* *.*: _() macro, now working
+	* glade: icon for all dialogs
+
+2004-01-01  Sridhar R  <r_sridhar@users.sf.net>
+	* gui-app.c: removed gdk* functions
+	* *.c: encapsulated all strings in _() macro for translation
+
+2003-12-30  Sridhar R  <r_sridhar@users.sf.net>
+	* 8085-instructions.c: In _eef_inst_func_47, fixed ~(instead of !)
+	* 8085-instructions.c: In _eef_is_carry, return value of op '-' changed
+	* 8085-instructions.c: ADD, ADC, SUB, SBB M bug fixed
+	* file-op.c: In fs_cb_save_listing, invalid cast of button to fileselection fixed
+	* glade: changed main windows title acc. to gnome hig
+	* 8085-instructions.c: Oops! XCHG was not at all implemented. Now done.
+	* glade: Hacked glade sources and saved the changes in tools/glade_reinsert.c
+
+2003-12-28  Sridhar R  <r_sridhar@users.sf.net>
+	* asm-id.c: Fixed *ACI* bug
+	* 8085-instructions.c: ACI int-len 1 -> 2
+	* 8085-instructions.c: Fixed add(sub)-with-carry function
+
+2003-12-07  Sridhar R  <r_sridhar@users.sf.net>
+	* 8085-instructions.c: Added warning messages for unimplemented instructions
+
+2003-12-07  Sridhar R  <r_sridhar@users.sf.net>
+	* gui-keypad.c: fixed crash bug in cb_clicked (which is why that large gap!)
+	* gui-editor.*: added gui_editor_grab_focus
+	* asm-id-info.*: added to project
+	* *: modified all files to reflect the new mail-id 
+	* asm-ds-limits.h: opcode length = 5 (smaller size!)
+	
+2003-11-21  Sridhar R  <r_sridhar@users.sf.net>
+	* gui-input-symbol.c: added gui_input_reg()
+	* asm-id.*: added util funcs
+	* gui-keypad.c: 90% completed
+	* scintilla sources: funcs to insert text
+	* project: added dependency "libiconv" - otherwise i get linker error FIXME
+
+2003-11-11  Sridhar R  <r_sridhar@users.sf.net>
+	* asm-id.c: removed double semi-colon (thanks Shaun)
+
+2003-11-04  Sridhar R  <r_sridhar@users.sf.net>
+	* *: Fixed anjuta project to include doc files
+	
+2003-11-03  Sridhar R  <r_sridhar@users.sf.net>
+	* file-op.c: on creating new file template code is set
+	* *.*: autoconf is working properly in slackware
+
+2003-11-02  Sridhar R  <r_sridhar@users.sf.net>
+	* file-op.c: dialogs will now be modal
+	* callbacks.c: removed funcs file_ok_sel, i_save
+	* warnings: suppressed all warnings (platform: slackware 9)
+	* *.c: changed g_sprintf to g_snprinf, so more stable software!
+	* main.c: filename can be passed in command line!
+
+2003-10-24  Sridhar R  <r_sridhar@users.sf.net>
+	* gui-input-symbol.c: made it working ;-)g
+	* file-op.c: changed error messages format
+
+2003-10-09  Sridhar R  <r_sridhar@users.sf.net>
+	* gui-keypad.[ch]: added files
+
+2003-10-04  Sridhar R  <r_sridhar@users.sf.net>
+	* :moved all *.h files in include/ to src/
+
+2003-09-31  Sridhar R  <r_sridhar@users.sf.net>
+	* 8085-instructions.c: shld, ral, rar, stc - modified
+
+2003-08-26  Sridhar R  <r_sridhar@users.sf.net>
+	* bridge.c: clear the stack
+	* gui-list-stack.c: stack view is working (in beta)
+	* gui-list-stack.c: <-- started working after beta release -->
+	* gui-list-stack.c: code rewrite for attaining efficient execution
+	                    by updating stack view only during breakpoints or trace.
+	* asm-ds-symtable.[ch]: added listing_no member to AsmSymEntry and modified
+	                        appropriate functions
+	* asm-ds-symtable.[ch]: added functionality to search for symbol given data(addr)
+	* asm-gensym.c: Due to above modifications, this is also modified
+	* gui-list-stack.c: print function(call) name in view
+	* [*].c: replaced "gnome_error_dialog" with "gtk_message_dialog"
+	* gui-list-stack.c: fixed add() 8bit - 16bit data
+
+2003-08-13  Sridhar R  <r_sridhar@users.sf.net>
+
+	* 8085-asm.c: Show success msg after assembling
+	* gui-list-data.c: changed globals to static
+	* 8085-[ins*].c: added support for stack change callback
+
+2003-08-04  Sridhar R  <r_sridhar@users.sf.net>
+
+	* file-op.c: Each file-selection dialog has its own title
+	* bridge.c: addes statusbar information display
+	* gui-view.c: fixed io-mem-update bug.
+
+2003-08-03  Sridhar R  <r_sridhar@users.sf.net>
+
+	* asm-gen[sym,obj].c: fixed assembler syntax - "equ" symbol - used with pseudo ops also
+	* sci*face.cc: fixed "last char not begin saved" bug - (len ==> len + 1)
+	* file-op.c: fixed "critical save bugs" (sometimes extra lines, or stripped lines!)
+	* glade: changed text in about dialog
+	* :-- Added copyright messages to all source files written my me!
+	* bridge.c: fixed: breakpoints are considered only when not stepping!
+
+2003-07-31  Sridhar R  <r_sridhar@users.sf.net>
+
+	* bridge.c: Implemented "step in", "step out"
+	* callbacks.c: glade update
+	* main.c: Added widgets for dec-hex converstion
+	* gui-list-stack.[ch]: Added source for stack trace
+	* scintilla-interface.cc: Fixed - automatic view update on cursor change
+	* main.c: added start-with dialog
+	* bridge.c: Fixed - file-op widgets disable on debug
+	* glade: removed "run to cursor" functionality - considered redundant
+	* file-op.c: added automatic breakpoint syntax for assembly code
+	* scintilla: archives (binaries) are replaced with sources (lesser package size!)
+
+2003-07-25  Sridhar R  <r_sridhar@users.sf.net>
+
+	* :Released 1.1 (first stable release) with lot of bugs, of course! (coded in just 2 days!)

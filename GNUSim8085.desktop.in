@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=GNUSim8085
+Comment=Intel 8085 microprocessor simulator
+Exec=gnusim8085
+Icon=@PACKAGE_PIXMAPS_DIR@/gnusim8085_icon.png
+Terminal=false
+MultipleArgs=false
+Type=Application

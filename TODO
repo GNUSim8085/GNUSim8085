@@ -1,0 +1,17 @@
+U - urgent
+C - critical
+
+TODO
+=============================
+(U)* Divide screen properly (depending upto screen res) to each widget ??
+* More accurately aligned listing file
+* Program Icon display in dialogs and main window
+* Menu shortcuts are not displayed and performed eventhough they are given through glade-2
+* Descriptive assembler messages - no repetitions
+* "Load address" entry widget- not properly rendering and processing hex address! Bug in GtkEntry?
+* Data, Stack List view should restore state after reload/re-expand.
+* Colors for List views
+
+Features Pending
+=================
+* Instruction Info (as a tooltip in KeyPad window) (patches are welcome!)

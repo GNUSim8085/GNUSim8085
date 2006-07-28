@@ -1,14 +1,35 @@
-GNUSim8085 (http://sourceforge.net/projects/gnusim8085)
+GNUSim8085 (http://gnusim8085.sourceforge.net/)
 ==========
 
-GNUSim8085 is a graphical simulator plus assembler with debugger for the Intel 8085 microprocessor.  It is written using GNOME libs.  It can also run on several wms.
+GNUSim8085 is a graphical simulator plus assembler with debugger for
+the Intel 8085 microprocessor.  It is written using GNOME libs.  It
+can also run on several window managers.
 
-You have to enter assembly code in order to use the simulator.  The assembly syntax is not too hard to learn. For more information see "asm_reference.txt" in the docs.
+You have to enter assembly code in order to use the simulator.  The
+assembly syntax is not too hard to learn. For more information see
+"asm_reference.txt" in the doc/ directory.
 
-Keypad(Entering opcodes by pressing buttons!) feauture is being planned.  Variable declarations are supported in assembler.  You have a seperate Data view widget to show variable values during debugging.  And did I mention that?  Yes, you can also debug your code with the builtin debugger!  For detailed stuffs, you can generate program listing which contains line by line of code with address and operand information.
+Keypad(Entering opcodes by pressing buttons!) feauture is being
+planned.  Variable declarations are supported in assembler.  You have
+a seperate Data view widget to show variable values during debugging.
+And did I mention that?  Yes, you can also debug your code with the
+builtin debugger!  For detailed stuff, you can generate program
+listing which contains line by line of code with address and operand
+information.
 
-Contents of memory, IO ports can be modified during program execution.  Modification of registers, flag are being planned, but they are not necessary always.
+Contents of memory, IO ports can be modified during program execution.
+Modification of registers, flag are being planned, but they are not
+necessary always.
 
-A lot of examples can be found in the docs directory!  Try them.
+A lot of examples can be found in the docs directory! Try them.
 
-Also don't forget to take a tutorial, when you will be asked during the program startup.
+Also don't forget to take a tutorial, when you will be asked during
+the program startup.
+
+To install from source, run the following commands
+
+  $ ./configure
+  $ make
+  $ sudo make install
+
+OR, see the INSTALL file.

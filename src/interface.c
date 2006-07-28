@@ -1420,11 +1420,11 @@ create_dialog_about (void)
 {
   const gchar *authors[] = {
     "Main programmer and founder:",
-    "Sridhar R (r_sridhar@users.sf.net)",
+    "Sridhar Ratna (srid@nearfar.org)",
     NULL
   };
   const gchar *documenters[] = {
-    "Sridhar R (r_sridhar@users.sf.net)",
+    "Sridhar Ratna (srid@nearfar.org)",
     NULL
   };
   /* TRANSLATORS: Replace this string with your names, one name per line. */
@@ -1437,8 +1437,8 @@ create_dialog_about (void)
     translators = NULL;
   dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085_icon.png");
   dialog_about = gnome_about_new ("GNUSim8085", VERSION,
-                        _("Copyright (C) 2003 Sridhar R"),
-                        _("8085 Microprocessor Simulator\nhttp://freshmeat.net/projects/gnusim8085"),
+                        _("Copyright (C) 2003 Sridhar Ratna"),
+                        _("8085 Microprocessor Simulator\nhttp://gnusim8085.sourceforge.net/"),
                         authors,
                         documenters,
                         translators,

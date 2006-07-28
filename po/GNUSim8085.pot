@@ -443,7 +443,7 @@ msgid "translator_credits"
 msgstr ""
 
 #: src/interface.c:1440
-msgid "Copyright (C) 2003 Sridhar R"
+msgid "Copyright (C) 2003 Sridhar Ratna"
 msgstr ""
 
 #: src/interface.c:1441

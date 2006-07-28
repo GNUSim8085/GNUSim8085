@@ -2,7 +2,7 @@
 ;continuing
 
 ;solution to N-Queens problem
-;Sridhar <r_sridhar@users.sf.net>
+;Sridhar <srid@nearfar.org>
 
 ;TUTORIAL
 ;1. Click "execute" and expand the 

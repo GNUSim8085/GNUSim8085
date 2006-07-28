@@ -15,3 +15,11 @@ TODO
 Features Pending
 =================
 * Instruction Info (as a tooltip in KeyPad window) (patches are welcome!)
+
+Website (http://gnusim8085.sourceforge.net)
+=======
+* Use Mediawiki (Theme like: http://mono-project.com/ , http://ubuntu-in.org/)
+* Add 'Documentation' online: 8085 Reference, Example code, etc. (add a link in 'Help' menu of the application)
+* ..
+* Submit link to various sites like freshmeat, gnomefiles.org, etc.
+

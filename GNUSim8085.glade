@@ -2876,12 +2876,12 @@ Check out for v1.3)</property>
   <property name="destroy_with_parent">True</property>
   <property name="icon">gnusim8085_icon.png</property>
   <property name="logo">gnusim8085_icon.png</property>
-  <property name="copyright" translatable="yes">Copyright (C) 2003 Sridhar R</property>
+  <property name="copyright" translatable="yes">Copyright (C) 2003 Sridhar Ratna</property>
   <property name="comments" translatable="yes">8085 Microprocessor Simulator
-http://freshmeat.net/projects/gnusim8085</property>
+http://gnusim8085.sourceforge.net/</property>
   <property name="authors">Main programmer and founder:
-Sridhar R (r_sridhar@users.sf.net)</property>
-  <property name="documenters">Sridhar R (r_sridhar@users.sf.net)</property>
+Sridhar Ratna (srid@nearfar.org)</property>
+  <property name="documenters">Sridhar Ratna (srid@nearfar.org)</property>
   <property name="translator_credits" translatable="yes">translator_credits</property>
   <signal name="close" handler="gtk_widget_hide" last_modification_time="Tue, 22 Jul 2003 16:16:15 GMT"/>
 </widget>

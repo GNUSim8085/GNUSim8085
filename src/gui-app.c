@@ -1,5 +1,5 @@
 /*
-	Copyright (C) 2006  Sridhar Ratna <srid@nearfar.org>
+	Copyright (C) 2003  Sridhar Ratna <srid@nearfar.org>
 	
 	This file is part of GNUSim8085.
 

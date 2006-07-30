@@ -83,6 +83,7 @@ gnusim8085_SOURCES = \
 	AutoComplete.h\
 	CallTip.h\
 	CellBuffer.h\
+	Converter.h\
 	ContractionState.h\
 	Document.h\
 	DocumentAccessor.h\

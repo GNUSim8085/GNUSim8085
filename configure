@@ -1772,7 +1772,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=GNUSim8085
- VERSION=1.2.89
+ VERSION=1.2.90
 
 
 cat >>confdefs.h <<_ACEOF

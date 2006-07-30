@@ -1,4 +1,11 @@
+GNUSim8085 1.2.90 (30 Jul 2006)
+
+New:     We've got maintainers! Thanks to Aanjhan and Onkar for helping to make this release.
+Fix:     Text widget doesn't work in newer version of GNOME. Fixed by updating to Scintilla 1.66
+Fix:     Patch #964792 in sourceforge: PUSH/POP PSW operation fix.
+
 GNUSim8085 1.2.89 (26 Jan 2004)				- Sridhar
+
 New:	GNUSim8085 is ready for translation (gettext)!
 New:	Icon for all dialogs
 Fix:	'string.h' bug fixed

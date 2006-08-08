@@ -88,27 +88,30 @@ _update_gui_state (void)
 	g_assert (widget); \
 	gtk_widget_set_sensitive (widget, issen);
 
-	DF ("new1", !bdebug);
-	DF ("open1", !bdebug);
-	DF ("save1", !bdebug);
-	DF ("save_as1", !bdebug);
-	DF ("new1_t", !bdebug);
-	DF ("open1_t", !bdebug);
-	DF ("save1_t", !bdebug);
-	DF ("save_as1_t", !bdebug);
-
-	DF ("assemble1", !bdebug);
-	DF ("assemble1_tb", !bdebug);
-	DF ("show_listing1", !bdebug);
-	DF ("stop_execution1", bdebug);
-	DF ("stop_execution1_tb", bdebug);
-
-	DF ("reset1", !bdebug);
-
-	//DF ("execute1_tb", !bdebug);
 
 
 #undef DF
+	
+	GtkAction *action_widget;
+#define DF_ACTION(wstr, issen) \
+	action_widget = lookup_action_widget (app->window_main, wstr); \
+	g_assert (action_widget); \
+	gtk_action_set_sensitive (action_widget, issen);
+
+	DF_ACTION ("newfile", !bdebug);
+	DF_ACTION ("openfile", !bdebug);
+	DF_ACTION ("savefile", !bdebug);
+	DF_ACTION ("savefileas", !bdebug);
+	DF_ACTION ("resetregisters", !bdebug);
+	DF_ACTION ("resetflags", !bdebug);
+	DF_ACTION ("resetports", !bdebug);
+	DF_ACTION ("resetmemory", !bdebug);
+	DF_ACTION ("resetall", !bdebug);
+	DF_ACTION ("assemble", !bdebug);
+	DF_ACTION ("listing", !bdebug);
+
+
+#undef DF_ACTION
 }
 
 static void

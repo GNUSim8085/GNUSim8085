@@ -8,3 +8,4 @@ GtkWidget* create_window_listing (void);
 GtkWidget* create_window_start (void);
 GtkWidget* create_dialog_isymbol (void);
 GtkWidget* create_dialog_ireg (void);
+void activate_url (GtkAboutDialog *about, const gchar *url, gpointer data);

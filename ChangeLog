@@ -1,3 +1,19 @@
+2006-8-07  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* Fixed a bug with menus being disabled while debugging
+	* Addded url handler for about dialog
+	* Disable file actions and reset actions while debugging
+
+2006-8-05  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* Migrated menus and toolbar from GnomeUIInfo to GtkAction,
+	GtkActionGroup, GtkUIManager system.
+	* As result of the above, keyboard shortcuts actually work.
+	* Changed keyboard shortcuts for some menus.
+
+2006-7-31  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* Replaced GtkFileSelecton with GtkFileChooserDialog.
+	* Replaced GnomeAbout with GtkAboutDialog.
+	* Compilation will need GTK+ 2.6 at least.
+
 2006-7-20  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* Apply patch 964792 submitted by Alexander Shigin. Corrects 'PUSH
 	PSW' instruction behaviour.

@@ -45,39 +45,6 @@ _set_file_name (gchar * name)
 		g_string_assign (file_name, name);
 }
 
-static void
-_fs_show (GCallback cb, gpointer udata, gchar * title)
-{
-	GtkWidget *file_selector;
-
-	/* Create the selector */
-
-	file_selector = gtk_file_selection_new (title);
-
-	udata = udata ? udata : file_selector;
-	g_signal_connect (GTK_OBJECT
-			  (GTK_FILE_SELECTION (file_selector)->ok_button),
-			  "clicked", G_CALLBACK (cb), (gpointer) udata);
-
-	/* Ensure that the dialog box is destroyed when the user clicks a button. */
-
-	g_signal_connect_swapped (GTK_OBJECT
-				  (GTK_FILE_SELECTION (file_selector)->
-				   ok_button), "clicked",
-				  G_CALLBACK (gtk_widget_destroy),
-				  (gpointer) file_selector);
-
-	g_signal_connect_swapped (GTK_OBJECT
-				  (GTK_FILE_SELECTION (file_selector)->
-				   cancel_button), "clicked",
-				  G_CALLBACK (gtk_widget_destroy),
-				  (gpointer) file_selector);
-
-	gtk_window_set_modal (GTK_WINDOW (file_selector), TRUE);
-	gtk_widget_show (file_selector);
-	//gtk_dialog_run (GTK_DIALOG(file_selector));
-}
-
 void
 ori_open (gchar * fn, gboolean replace)
 {
@@ -206,31 +173,6 @@ start:\t\tnop\n\
 	gui_editor_goto_line (app->editor, 11);
 }
 
-void
-fs_cb_open (GtkButton * button, gpointer user_data)
-{
-	gchar *selected_filename;
-
-	selected_filename =
-		(gchar *) gtk_file_selection_get_filename (GTK_FILE_SELECTION
-							   (user_data));
-
-	ori_open (selected_filename, TRUE);
-}
-
-void
-fs_cb_save_as (GtkButton * button, gpointer user_data)
-{
-	gchar *selected_filename;
-
-	selected_filename =
-		(gchar *) gtk_file_selection_get_filename (GTK_FILE_SELECTION
-							   (user_data));
-
-
-	ori_save (selected_filename, TRUE);
-}
-
 /* funcs related to main editor */
 void
 file_op_editor_save (void)
@@ -241,51 +183,126 @@ file_op_editor_save (void)
 		return;
 	}
 
-	_fs_show (G_CALLBACK (fs_cb_save_as), NULL, _("Save this unnamed file"));
+	gchar *selected_filename;
+	GtkWidget *file_selector;
+	GtkFileFilter *file_filter;
+
+	file_selector = gtk_file_chooser_dialog_new ("Save this unnamed file",
+				      NULL,
+				      GTK_FILE_CHOOSER_ACTION_SAVE,
+				      GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+				      GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
+				      NULL);
+	file_filter = gtk_file_filter_new();
+	gtk_file_filter_set_name (file_filter, "All Text Files");
+	gtk_file_filter_add_mime_type(file_filter, "text/plain");
+	gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
+
+	if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
+	{
+
+		selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		ori_save(selected_filename, TRUE);
+		g_free (selected_filename);
+	}
+
+	gtk_widget_destroy (file_selector);
 }
 
 void
 file_op_editor_save_as (void)
 {
+	gchar *selected_filename;
+	GtkWidget *file_selector;
+	GtkFileFilter *file_filter;
 
-	_fs_show (G_CALLBACK (fs_cb_save_as), NULL,
-		  _("Save this file under different name"));
+	file_selector = gtk_file_chooser_dialog_new ("Save this file under different name",
+				      NULL,
+				      GTK_FILE_CHOOSER_ACTION_SAVE,
+				      GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+				      GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
+				      NULL);
+	file_filter = gtk_file_filter_new();
+	gtk_file_filter_set_name (file_filter, "All Text Files");
+	gtk_file_filter_add_mime_type(file_filter, "text/plain");
+	gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
+
+	if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
+	{
+
+		selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		ori_save(selected_filename, TRUE);
+		g_free (selected_filename);
+	}
+
+	gtk_widget_destroy (file_selector);
 }
 
 void
 file_op_editor_open (void)
 {
-
-	_fs_show (G_CALLBACK (fs_cb_open), NULL, _("Open an existing file"));
-}
-
-void
-fs_cb_save_listing (GtkButton * button, gpointer user_data)
-{
 	gchar *selected_filename;
-	gchar *text = (gchar *) user_data;
-	FILE *fp;
+	GtkWidget *file_selector;
+	GtkFileFilter *file_filter;
 
-	selected_filename =
-		(gchar *) gtk_file_selection_get_filename (GTK_FILE_SELECTION
-							   (gtk_widget_get_ancestor
-							    (GTK_WIDGET(button),
-							    GTK_TYPE_FILE_SELECTION)) );
+	file_selector = gtk_file_chooser_dialog_new ("Open an existing file",
+				      NULL,
+				      GTK_FILE_CHOOSER_ACTION_OPEN,
+				      GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+				      GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
+				      NULL);
+	file_filter = gtk_file_filter_new();
+	gtk_file_filter_set_name (file_filter, "All Text Files");
+	gtk_file_filter_add_mime_type(file_filter, "text/plain");
+	gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
 
-	fp = fopen (selected_filename, "w");
-	if (fp == NULL)
+	if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 	{
-		gui_app_show_msg (GTK_MESSAGE_ERROR, _("Failed to save listing file"));
-		return;
+
+		selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		ori_open(selected_filename, TRUE);
+		g_free (selected_filename);
 	}
-	fwrite (text, 1, strlen (text), fp);
-	fclose (fp);
+
+	gtk_widget_destroy (file_selector);
 }
 
 /* -- related to listing window */
 void
 file_op_listing_save (gchar * text)
 {
-	_fs_show (G_CALLBACK (fs_cb_save_listing), (gpointer) text,
-		  _("Save assembler listing"));
+	gchar *selected_filename;
+	GtkWidget *file_selector;
+	GtkFileFilter *file_filter;
+	FILE *fp;
+
+	file_selector = gtk_file_chooser_dialog_new ("Save this file under different name",
+				      NULL,
+				      GTK_FILE_CHOOSER_ACTION_SAVE,
+				      GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+				      GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
+				      NULL);
+	file_filter = gtk_file_filter_new();
+	gtk_file_filter_set_name (file_filter, "All Text Files");
+	gtk_file_filter_add_mime_type(file_filter, "text/plain");
+	gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
+
+	if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
+	{
+
+		selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+
+		fp = fopen (selected_filename, "w");
+		if (fp == NULL)
+		{
+			gui_app_show_msg (GTK_MESSAGE_ERROR, _("Failed to save listing file"));
+			return;
+		}
+		fwrite (text, 1, strlen (text), fp);
+		fclose (fp);
+
+		g_free (selected_filename);
+	}
+
+	gtk_widget_destroy (file_selector);
 }

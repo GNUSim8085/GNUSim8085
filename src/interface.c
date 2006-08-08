@@ -23,237 +23,109 @@
   g_object_set_data_full (G_OBJECT (component), name, \
     gtk_widget_ref (widget), (GDestroyNotify) gtk_widget_unref)
 
+#define GLADE_HOOKUP_ACTION_OBJECT(component,widget,name) \
+  g_object_set_data_full (G_OBJECT (component), name, \
+    g_object_ref (widget), (GDestroyNotify) gtk_widget_unref)
+
 #define GLADE_HOOKUP_OBJECT_NO_REF(component,widget,name) \
   g_object_set_data (G_OBJECT (component), name, widget)
 
-static GnomeUIInfo file1_menu_uiinfo[] =
-{
-  GNOMEUIINFO_MENU_NEW_ITEM (N_("_New"), N_("New source file"), on_new1_activate, NULL),
-  GNOMEUIINFO_MENU_OPEN_ITEM (on_open1_activate, NULL),
-  GNOMEUIINFO_MENU_SAVE_ITEM (on_save1_activate, NULL),
-  GNOMEUIINFO_MENU_SAVE_AS_ITEM (on_save_as1_activate, NULL),
-  GNOMEUIINFO_SEPARATOR,
-  GNOMEUIINFO_MENU_EXIT_ITEM (on_quit1_activate, NULL),
-  GNOMEUIINFO_END
+static const GtkActionEntry entries[] = {
+  { "FileMenu", NULL, "_File" },
+  { "ResetMenu", NULL, "_Reset" },
+  { "AssemblerMenu", NULL, "_Assembler" },
+  { "DebugMenu", NULL, "_Debug" },
+  { "BreakPointMenu", NULL, "_Breakpoints" },
+  { "HelpMenu", NULL, "_Help" },
+  { "New", GTK_STOCK_NEW, "_New", "<control>N", "New source file", G_CALLBACK(on_new1_activate) },
+  { "Open", GTK_STOCK_OPEN, "_Open", "<control>O", "Open a file", G_CALLBACK(on_open1_activate) },
+  { "Save", GTK_STOCK_SAVE, "_Save", "<control>S", "Save file", G_CALLBACK(on_save1_activate) },
+  { "SaveAs", GTK_STOCK_SAVE_AS, "Save _As", "<shift><control>S", "Save file as", G_CALLBACK(on_save_as1_activate) },
+  { "Quit", GTK_STOCK_QUIT, "_Quit", "<control>Q", "Exit the program", G_CALLBACK(on_quit1_activate) },
+  { "Registers", NULL, "_Registers", NULL, "Reset Registers", G_CALLBACK(on_registers1_activate) },
+  { "Flags", NULL, "_Flags", NULL, "Reset Flags", G_CALLBACK(on_flags1_activate) },
+  { "IOPorts", NULL, "_IO Ports", NULL, "Reset IO Ports", G_CALLBACK(on_io_ports1_activate) },
+  { "Memory", NULL, "_Memory", NULL, "Reset Memory", G_CALLBACK(on_main_memory1_activate) },
+  { "ResetAll", GTK_STOCK_REFRESH, "Reset _All", "<control>R", "Reset All", G_CALLBACK(on_reset_all1_activate) },
+  { "Assemble", GTK_STOCK_CONVERT, "A_ssemble", "F8", "Only assemble program", G_CALLBACK(on_assemble1_activate) },
+  { "Execute", GTK_STOCK_EXECUTE, "E_xecute", "F9", "Execute assembled and loaded program", G_CALLBACK(on_execute1_activate) },
+  { "Listing", GNOME_STOCK_TEXT_BULLETED_LIST, "Show _listing", "<control>L", "Show the source code along with opcodes and operands in hex numbers", G_CALLBACK(on_show_listing1_activate) },
+  { "StepIn", GTK_STOCK_GO_FORWARD, "Step _in", "F5", "Step in the code", G_CALLBACK(on_step_in1_activate) },
+  { "StepOver", GTK_STOCK_GO_UP, "Step o_ver", "F6", "Step over the code without calling functions", G_CALLBACK(on_step_over1_activate) },
+  { "StepOut", GTK_STOCK_GO_BACK, "Step _out", "F7", "Step out of the current function", G_CALLBACK(on_step_out1_activate) },
+  { "ToggleBreak", GNOME_STOCK_ATTACH, "Toggle _breakpoint", "<control>B", "Toggles breakpoint at current line", G_CALLBACK(on_toggle_breakpoint1_activate) },
+  { "ClearBreak", NULL, "_Clear all breakpoints", "<control><shift>B", "Remove all breakpoints", G_CALLBACK(on_clear_all_breakpoints1_activate) },
+  { "StopExec", GTK_STOCK_STOP, "Stop execution", NULL, "Stop debugging", G_CALLBACK(on_stop_execution1_activate) },
+  { "Help", GTK_STOCK_HELP, "Help", "F1", NULL, G_CALLBACK(on_help_activate) },
+  { "Manual", GTK_STOCK_DIALOG_INFO, "8085 _Manual", "<control>M", NULL, G_CALLBACK(on_8085_manual1_activate) },
+  { "Reference", GTK_STOCK_DIALOG_INFO, "Assembler _Reference", "<control><shift>S", NULL, G_CALLBACK(on_assembler_reference1_activate) },
+  { "About", GTK_STOCK_ABOUT, "_About", NULL, "About this program", G_CALLBACK(on_about1_activate) }
 };
 
-static GnomeUIInfo reset1_menu_uiinfo[] =
-{
-  {
-    GNOME_APP_UI_ITEM, N_("Registers"),
-    NULL,
-    (gpointer) on_registers1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_ITEM, N_("Flags"),
-    NULL,
-    (gpointer) on_flags1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_ITEM, N_("IO Ports"),
-    NULL,
-    (gpointer) on_io_ports1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_ITEM, N_("Main Memory"),
-    NULL,
-    (gpointer) on_main_memory1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_ITEM, N_("Reset all"),
-    NULL,
-    (gpointer) on_reset_all1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_END
-};
-
-static GnomeUIInfo _8085_menu_uiinfo[] =
-{
-  {
-    GNOME_APP_UI_SUBTREE, N_("_Reset"),
-    N_("Reset Microprocessor"),
-    reset1_menu_uiinfo, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-no",
-    0, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_END
-};
-
-static GnomeUIInfo assembler1_menu_uiinfo[] =
-{
-  {
-    GNOME_APP_UI_ITEM, N_("_Assemble"),
-    N_("Only assemble the program"),
-    (gpointer) on_assemble1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-convert",
-    GDK_F11, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_ITEM, N_("E_xecute"),
-    N_("Execute assembled and loaded program"),
-    (gpointer) on_execute1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-execute",
-    GDK_F4, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_ITEM, N_("Show _listing"),
-    N_("Show the source code along with opcodes and operands in hex numbers"),
-    (gpointer) on_show_listing1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gnome-stock-text-bulleted-list",
-    GDK_L, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK, NULL
-  },
-  GNOMEUIINFO_END
-};
-
-static GnomeUIInfo breakpoints1_menu_uiinfo[] =
-{
-  {
-    GNOME_APP_UI_ITEM, N_("_Toggle breakpoint"),
-    N_("Toggles breakpoint at current line"),
-    (gpointer) on_toggle_breakpoint1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gnome-stock-attach",
-    GDK_B, (GdkModifierType) GDK_CONTROL_MASK, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_ITEM, N_("_Clear all breakpoints"),
-    N_("Remove all breakpoints"),
-    (gpointer) on_clear_all_breakpoints1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_END
-};
-
-static GnomeUIInfo debug1_menu_uiinfo[] =
-{
-  {
-    GNOME_APP_UI_ITEM, N_("Step _in"),
-    N_("Step in the code"),
-    (gpointer) on_step_in1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-jump-to",
-    GDK_F5, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_ITEM, N_("Step o_ver"),
-    N_("Step over the code without calling functions"),
-    (gpointer) on_step_over1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-jump-to",
-    GDK_F6, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_ITEM, N_("Step _out"),
-    N_("Step out of the current function"),
-    (gpointer) on_step_out1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-jump-to",
-    GDK_F7, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_SUBTREE, N_("_Breakpoints"),
-    N_("Add or remove breakpoints"),
-    breakpoints1_menu_uiinfo, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gnome-stock-attach",
-    0, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_ITEM, N_("Stop execution"),
-    N_("Stop debugging"),
-    (gpointer) on_stop_execution1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-stop",
-    GDK_E, (GdkModifierType) GDK_CONTROL_MASK, NULL
-  },
-  GNOMEUIINFO_END
-};
-
-static GnomeUIInfo help1_menu_uiinfo[] =
-{
-  {
-    GNOME_APP_UI_ITEM, N_("_Help"),
-    NULL,
-    (gpointer) on_help_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-help",
-    GDK_F1, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_ITEM, N_("_8085 manual"),
-    NULL,
-    (gpointer) on_8085_manual1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-dialog-info",
-    GDK_F1, (GdkModifierType) GDK_CONTROL_MASK, NULL
-  },
-  {
-    GNOME_APP_UI_ITEM, N_("_Assembler reference"),
-    NULL,
-    (gpointer) on_assembler_reference1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gtk-dialog-info",
-    GDK_F1, (GdkModifierType) GDK_SHIFT_MASK, NULL
-  },
-  GNOMEUIINFO_SEPARATOR,
-  {
-    GNOME_APP_UI_ITEM, N_("_About"),
-    N_("About this program"),
-    (gpointer) on_about1_activate, NULL, NULL,
-    GNOME_APP_PIXMAP_STOCK, "gnome-stock-about",
-    0, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_END
-};
-
-static GnomeUIInfo menubar1_uiinfo[] =
-{
-  {
-    GNOME_APP_UI_SUBTREE, N_("_File"),
-    NULL,
-    file1_menu_uiinfo, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_SUBTREE, N_("_8085"),
-    NULL,
-    _8085_menu_uiinfo, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_SUBTREE, N_("_Assembler"),
-    N_("Do assembling stuffs"),
-    assembler1_menu_uiinfo, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_SUBTREE, N_("_Debug"),
-    N_("Debug your program"),
-    debug1_menu_uiinfo, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  {
-    GNOME_APP_UI_SUBTREE, N_("_Help"),
-    NULL,
-    help1_menu_uiinfo, NULL, NULL,
-    GNOME_APP_PIXMAP_NONE, NULL,
-    0, (GdkModifierType) 0, NULL
-  },
-  GNOMEUIINFO_END
-};
+static const char *ui_description =
+"<ui>"
+"  <menubar name='MainMenu'>"
+"    <menu action='FileMenu'>"
+"      <menuitem action='New'/>"
+"      <menuitem action='Open'/>"
+"      <menuitem action='Save'/>"
+"      <menuitem action='SaveAs'/>"
+"      <separator/>"
+"      <menuitem action='Quit'/>"
+"    </menu>"
+"    <menu action='ResetMenu'>"
+"      <menuitem action='Registers'/>"
+"      <menuitem action='Flags'/>"
+"      <menuitem action='IOPorts'/>"
+"      <menuitem action='Memory'/>"
+"      <separator/>"
+"      <menuitem action='ResetAll'/>"
+"    </menu>"
+"    <menu action='AssemblerMenu'>"
+"      <menuitem action='Assemble'/>"
+"      <menuitem action='Execute'/>"
+"      <separator/>"
+"      <menuitem action='Listing'/>"
+"    </menu>"
+"    <menu action='DebugMenu'>"
+"      <menuitem action='StepIn'/>"
+"      <menuitem action='StepOver'/>"
+"      <menuitem action='StepOut'/>"
+"      <separator/>"
+"      <menu action='BreakPointMenu'>"
+"        <menuitem action='ToggleBreak'/>"
+"        <separator/>"
+"        <menuitem action='ClearBreak'/>"
+"      </menu>"
+"      <separator/>"
+"      <menuitem action='StopExec'/>"
+"    </menu>"
+"    <menu action='HelpMenu'>"
+"      <menuitem action='Help'/>"
+"      <separator/>"
+"      <menuitem action='Manual'/>"
+"      <menuitem action='Reference'/>"
+"      <separator/>"
+"      <menuitem action='About'/>"
+"    </menu>"
+"  </menubar>"
+"  <toolbar name='MainToolBar'>"
+"    <toolitem action='New'/>"
+"    <toolitem action='Open'/>"
+"    <toolitem action='Save'/>"
+"    <toolitem action='SaveAs'/>"
+"    <separator/>"
+"    <toolitem action='Assemble'/>"
+"    <toolitem action='Execute'/>"
+"    <separator/>"
+"    <toolitem action='StepIn'/>"
+"    <toolitem action='StepOver'/>"
+"    <toolitem action='StepOut'/>"
+"    <separator/>"
+"    <toolitem action='ToggleBreak'/>"
+"    <toolitem action='StopExec'/>"
+"  </toolbar>"
+"</ui>";
 
 GtkWidget*
 create_window_main (void)
@@ -264,21 +136,6 @@ create_window_main (void)
   GtkWidget *menubar1;
   GtkWidget *handlebox1;
   GtkWidget *toolbar1;
-  GtkWidget *new1_t;
-  GtkWidget *open1_t;
-  GtkWidget *save1_t;
-  GtkWidget *save_as1_t;
-  GtkWidget *vseparator1;
-  GtkWidget *tmp_toolbar_icon;
-  GtkWidget *assemble1_tb;
-  GtkWidget *execute1_tb;
-  GtkWidget *vseparator2;
-  GtkWidget *button7;
-  GtkWidget *button8;
-  GtkWidget *button9;
-  GtkWidget *vseparator3;
-  GtkWidget *button11;
-  GtkWidget *stop_execution1_tb;
   GtkWidget *main_hpaned_left;
   GtkWidget *vbox9;
   GtkWidget *hbox15;
@@ -401,6 +258,10 @@ create_window_main (void)
   GtkWidget *label168;
   GtkWidget *main_appbar;
   GtkTooltips *tooltips;
+  GtkActionGroup *action_group;
+  GtkUIManager *ui_manager;
+  GtkAccelGroup *accel_group;
+  GError *error;
 
   tooltips = gtk_tooltips_new ();
 
@@ -419,133 +280,35 @@ create_window_main (void)
   gtk_widget_show (vbox1);
   gtk_container_add (GTK_CONTAINER (window_main), vbox1);
 
-  menubar1 = gtk_menu_bar_new ();
-  gtk_widget_show (menubar1);
+  action_group = gtk_action_group_new ("MenuActions");
+  gtk_action_group_add_actions (action_group, entries, G_N_ELEMENTS (entries), window_main);
+
+  ui_manager = gtk_ui_manager_new ();
+  gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
+
+  accel_group = gtk_ui_manager_get_accel_group (ui_manager);
+  gtk_window_add_accel_group (GTK_WINDOW (window_main), accel_group);
+
+  error = NULL;
+  if (!gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, &error))
+    {
+      g_message ("building menus failed: %s", error->message);
+      g_error_free (error);
+      exit (EXIT_FAILURE);
+    }
+
+  menubar1 = gtk_ui_manager_get_widget (ui_manager, "/MainMenu"); 
   gtk_box_pack_start (GTK_BOX (vbox1), menubar1, FALSE, FALSE, 0);
-  gnome_app_fill_menu (GTK_MENU_SHELL (menubar1), menubar1_uiinfo,
-                       NULL, FALSE, 0);
+  gtk_widget_show (menubar1);
 
   handlebox1 = gtk_handle_box_new ();
   gtk_widget_show (handlebox1);
   gtk_box_pack_start (GTK_BOX (vbox1), handlebox1, FALSE, TRUE, 0);
 
-  toolbar1 = gtk_toolbar_new ();
+  toolbar1 = gtk_ui_manager_get_widget (ui_manager, "/MainToolBar");
   gtk_widget_show (toolbar1);
   gtk_container_add (GTK_CONTAINER (handlebox1), toolbar1);
   gtk_toolbar_set_style (GTK_TOOLBAR (toolbar1), GTK_TOOLBAR_ICONS);
-
-  new1_t = gtk_toolbar_insert_stock (GTK_TOOLBAR (toolbar1),
-                                "gtk-new",
-                                "gtk-new",
-                                NULL, NULL, NULL, -1);
-  gtk_widget_show (new1_t);
-
-  open1_t = gtk_toolbar_insert_stock (GTK_TOOLBAR (toolbar1),
-                                "gtk-open",
-                                "gtk-open",
-                                NULL, NULL, NULL, -1);
-  gtk_widget_show (open1_t);
-
-  save1_t = gtk_toolbar_insert_stock (GTK_TOOLBAR (toolbar1),
-                                "gtk-save",
-                                "gtk-save",
-                                NULL, NULL, NULL, -1);
-  gtk_widget_show (save1_t);
-
-  save_as1_t = gtk_toolbar_insert_stock (GTK_TOOLBAR (toolbar1),
-                                "gtk-save-as",
-                                "gtk-save-as",
-                                NULL, NULL, NULL, -1);
-  gtk_widget_show (save_as1_t);
-
-  vseparator1 = gtk_vseparator_new ();
-  gtk_widget_show (vseparator1);
-  gtk_toolbar_append_widget (GTK_TOOLBAR (toolbar1), vseparator1, NULL, NULL);
-
-  gtk_toolbar_append_space (GTK_TOOLBAR (toolbar1));
-
-  tmp_toolbar_icon = gtk_image_new_from_stock ("gtk-convert", gtk_toolbar_get_icon_size (GTK_TOOLBAR (toolbar1)));
-  assemble1_tb = gtk_toolbar_append_element (GTK_TOOLBAR (toolbar1),
-                                GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL,
-                                _("Assemble"),
-                                _("Only assemble the program"), NULL,
-                                tmp_toolbar_icon, NULL, NULL);
-  gtk_label_set_use_underline (GTK_LABEL (((GtkToolbarChild*) (g_list_last (GTK_TOOLBAR (toolbar1)->children)->data))->label), TRUE);
-  gtk_widget_show (assemble1_tb);
-
-  tmp_toolbar_icon = gtk_image_new_from_stock ("gtk-execute", gtk_toolbar_get_icon_size (GTK_TOOLBAR (toolbar1)));
-  execute1_tb = gtk_toolbar_append_element (GTK_TOOLBAR (toolbar1),
-                                GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL,
-                                _("Execute"),
-                                _("Execute program until breakpoint"), NULL,
-                                tmp_toolbar_icon, NULL, NULL);
-  gtk_label_set_use_underline (GTK_LABEL (((GtkToolbarChild*) (g_list_last (GTK_TOOLBAR (toolbar1)->children)->data))->label), TRUE);
-  gtk_widget_show (execute1_tb);
-
-  vseparator2 = gtk_vseparator_new ();
-  gtk_widget_show (vseparator2);
-  gtk_toolbar_append_widget (GTK_TOOLBAR (toolbar1), vseparator2, NULL, NULL);
-
-  gtk_toolbar_append_space (GTK_TOOLBAR (toolbar1));
-
-  tmp_toolbar_icon = gtk_image_new_from_stock ("gtk-jump-to", gtk_toolbar_get_icon_size (GTK_TOOLBAR (toolbar1)));
-  button7 = gtk_toolbar_append_element (GTK_TOOLBAR (toolbar1),
-                                GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL,
-                                _("Step in"),
-                                _("Step in"), NULL,
-                                tmp_toolbar_icon, NULL, NULL);
-  gtk_label_set_use_underline (GTK_LABEL (((GtkToolbarChild*) (g_list_last (GTK_TOOLBAR (toolbar1)->children)->data))->label), TRUE);
-  gtk_widget_show (button7);
-
-  tmp_toolbar_icon = gtk_image_new_from_stock ("gtk-jump-to", gtk_toolbar_get_icon_size (GTK_TOOLBAR (toolbar1)));
-  button8 = gtk_toolbar_append_element (GTK_TOOLBAR (toolbar1),
-                                GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL,
-                                _("Step over"),
-                                _("Step over"), NULL,
-                                tmp_toolbar_icon, NULL, NULL);
-  gtk_label_set_use_underline (GTK_LABEL (((GtkToolbarChild*) (g_list_last (GTK_TOOLBAR (toolbar1)->children)->data))->label), TRUE);
-  gtk_widget_show (button8);
-
-  tmp_toolbar_icon = gtk_image_new_from_stock ("gtk-jump-to", gtk_toolbar_get_icon_size (GTK_TOOLBAR (toolbar1)));
-  button9 = gtk_toolbar_append_element (GTK_TOOLBAR (toolbar1),
-                                GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL,
-                                _("Step out"),
-                                _("Step out"), NULL,
-                                tmp_toolbar_icon, NULL, NULL);
-  gtk_label_set_use_underline (GTK_LABEL (((GtkToolbarChild*) (g_list_last (GTK_TOOLBAR (toolbar1)->children)->data))->label), TRUE);
-  gtk_widget_show (button9);
-
-  vseparator3 = gtk_vseparator_new ();
-  gtk_widget_show (vseparator3);
-  gtk_toolbar_append_widget (GTK_TOOLBAR (toolbar1), vseparator3, NULL, NULL);
-
-  gtk_toolbar_append_space (GTK_TOOLBAR (toolbar1));
-
-  tmp_toolbar_icon = gtk_image_new_from_stock ("gnome-stock-attach", gtk_toolbar_get_icon_size (GTK_TOOLBAR (toolbar1)));
-  button11 = gtk_toolbar_append_element (GTK_TOOLBAR (toolbar1),
-                                GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL,
-                                _("Toggle breakpoint at current line"),
-                                _("Toggle breakpoint"), NULL,
-                                tmp_toolbar_icon, NULL, NULL);
-  gtk_label_set_use_underline (GTK_LABEL (((GtkToolbarChild*) (g_list_last (GTK_TOOLBAR (toolbar1)->children)->data))->label), TRUE);
-  gtk_widget_show (button11);
-
-  tmp_toolbar_icon = gtk_image_new_from_stock ("gtk-stop", gtk_toolbar_get_icon_size (GTK_TOOLBAR (toolbar1)));
-  stop_execution1_tb = gtk_toolbar_append_element (GTK_TOOLBAR (toolbar1),
-                                GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL,
-                                _("Stop execution"),
-                                _("Stop debugging"), NULL,
-                                tmp_toolbar_icon, NULL, NULL);
-  gtk_label_set_use_underline (GTK_LABEL (((GtkToolbarChild*) (g_list_last (GTK_TOOLBAR (toolbar1)->children)->data))->label), TRUE);
-  gtk_widget_show (stop_execution1_tb);
-  gtk_widget_set_sensitive (stop_execution1_tb, FALSE);
 
   main_hpaned_left = gtk_hpaned_new ();
   gtk_widget_show (main_hpaned_left);
@@ -1173,39 +936,6 @@ create_window_main (void)
   g_signal_connect ((gpointer) window_main, "delete_event",
                     G_CALLBACK (on_window_main_delete_event),
                     NULL);
-  g_signal_connect ((gpointer) new1_t, "clicked",
-                    G_CALLBACK (on_new1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) open1_t, "clicked",
-                    G_CALLBACK (on_open1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) save1_t, "clicked",
-                    G_CALLBACK (on_save1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) save_as1_t, "clicked",
-                    G_CALLBACK (on_save_as1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) assemble1_tb, "clicked",
-                    G_CALLBACK (on_assemble1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) execute1_tb, "clicked",
-                    G_CALLBACK (on_execute1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) button7, "clicked",
-                    G_CALLBACK (on_step_in1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) button8, "clicked",
-                    G_CALLBACK (on_step_over1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) button9, "clicked",
-                    G_CALLBACK (on_step_out1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) button11, "clicked",
-                    G_CALLBACK (on_toggle_breakpoint1_activate),
-                    NULL);
-  g_signal_connect ((gpointer) stop_execution1_tb, "clicked",
-                    G_CALLBACK (on_stop_execution1_activate),
-                    NULL);
   g_signal_connect ((gpointer) main_entry_dec, "activate",
                     G_CALLBACK (on_main_entry_dec_activate),
                     NULL);
@@ -1235,61 +965,8 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT_NO_REF (window_main, window_main, "window_main");
   GLADE_HOOKUP_OBJECT (window_main, vbox1, "vbox1");
   GLADE_HOOKUP_OBJECT (window_main, menubar1, "menubar1");
-  GLADE_HOOKUP_OBJECT (window_main, menubar1_uiinfo[0].widget, "file1");
-  GLADE_HOOKUP_OBJECT (window_main, file1_menu_uiinfo[0].widget, "new1");
-  GLADE_HOOKUP_OBJECT (window_main, file1_menu_uiinfo[1].widget, "open1");
-  GLADE_HOOKUP_OBJECT (window_main, file1_menu_uiinfo[2].widget, "save1");
-  GLADE_HOOKUP_OBJECT (window_main, file1_menu_uiinfo[3].widget, "save_as1");
-  GLADE_HOOKUP_OBJECT (window_main, file1_menu_uiinfo[4].widget, "separator3");
-  GLADE_HOOKUP_OBJECT (window_main, file1_menu_uiinfo[5].widget, "quit1");
-  GLADE_HOOKUP_OBJECT (window_main, menubar1_uiinfo[1].widget, "_8085");
-  GLADE_HOOKUP_OBJECT (window_main, _8085_menu_uiinfo[0].widget, "reset1");
-  GLADE_HOOKUP_OBJECT (window_main, reset1_menu_uiinfo[0].widget, "registers1");
-  GLADE_HOOKUP_OBJECT (window_main, reset1_menu_uiinfo[1].widget, "flags1");
-  GLADE_HOOKUP_OBJECT (window_main, reset1_menu_uiinfo[2].widget, "io_ports1");
-  GLADE_HOOKUP_OBJECT (window_main, reset1_menu_uiinfo[3].widget, "main_memory1");
-  GLADE_HOOKUP_OBJECT (window_main, reset1_menu_uiinfo[4].widget, "separator5");
-  GLADE_HOOKUP_OBJECT (window_main, reset1_menu_uiinfo[5].widget, "reset_all1");
-  GLADE_HOOKUP_OBJECT (window_main, menubar1_uiinfo[2].widget, "assembler1");
-  GLADE_HOOKUP_OBJECT (window_main, assembler1_menu_uiinfo[0].widget, "assemble1");
-  GLADE_HOOKUP_OBJECT (window_main, assembler1_menu_uiinfo[1].widget, "separator6");
-  GLADE_HOOKUP_OBJECT (window_main, assembler1_menu_uiinfo[2].widget, "execute1");
-  GLADE_HOOKUP_OBJECT (window_main, assembler1_menu_uiinfo[3].widget, "separator13");
-  GLADE_HOOKUP_OBJECT (window_main, assembler1_menu_uiinfo[4].widget, "show_listing1");
-  GLADE_HOOKUP_OBJECT (window_main, menubar1_uiinfo[3].widget, "debug1");
-  GLADE_HOOKUP_OBJECT (window_main, debug1_menu_uiinfo[0].widget, "step_in1");
-  GLADE_HOOKUP_OBJECT (window_main, debug1_menu_uiinfo[1].widget, "step_over1");
-  GLADE_HOOKUP_OBJECT (window_main, debug1_menu_uiinfo[2].widget, "step_out1");
-  GLADE_HOOKUP_OBJECT (window_main, debug1_menu_uiinfo[3].widget, "separator7");
-  GLADE_HOOKUP_OBJECT (window_main, debug1_menu_uiinfo[4].widget, "breakpoints1");
-  GLADE_HOOKUP_OBJECT (window_main, breakpoints1_menu_uiinfo[0].widget, "toggle_breakpoint1");
-  GLADE_HOOKUP_OBJECT (window_main, breakpoints1_menu_uiinfo[1].widget, "separator8");
-  GLADE_HOOKUP_OBJECT (window_main, breakpoints1_menu_uiinfo[2].widget, "clear_all_breakpoints1");
-  GLADE_HOOKUP_OBJECT (window_main, debug1_menu_uiinfo[5].widget, "separator9");
-  GLADE_HOOKUP_OBJECT (window_main, debug1_menu_uiinfo[6].widget, "stop_execution1");
-  GLADE_HOOKUP_OBJECT (window_main, menubar1_uiinfo[4].widget, "help1");
-  GLADE_HOOKUP_OBJECT (window_main, help1_menu_uiinfo[0].widget, "help2");
-  GLADE_HOOKUP_OBJECT (window_main, help1_menu_uiinfo[1].widget, "separator11");
-  GLADE_HOOKUP_OBJECT (window_main, help1_menu_uiinfo[2].widget, "_8085_manual1");
-  GLADE_HOOKUP_OBJECT (window_main, help1_menu_uiinfo[3].widget, "assembler_reference1");
-  GLADE_HOOKUP_OBJECT (window_main, help1_menu_uiinfo[4].widget, "separator10");
-  GLADE_HOOKUP_OBJECT (window_main, help1_menu_uiinfo[5].widget, "about1");
   GLADE_HOOKUP_OBJECT (window_main, handlebox1, "handlebox1");
   GLADE_HOOKUP_OBJECT (window_main, toolbar1, "toolbar1");
-  GLADE_HOOKUP_OBJECT (window_main, new1_t, "new1_t");
-  GLADE_HOOKUP_OBJECT (window_main, open1_t, "open1_t");
-  GLADE_HOOKUP_OBJECT (window_main, save1_t, "save1_t");
-  GLADE_HOOKUP_OBJECT (window_main, save_as1_t, "save_as1_t");
-  GLADE_HOOKUP_OBJECT (window_main, vseparator1, "vseparator1");
-  GLADE_HOOKUP_OBJECT (window_main, assemble1_tb, "assemble1_tb");
-  GLADE_HOOKUP_OBJECT (window_main, execute1_tb, "execute1_tb");
-  GLADE_HOOKUP_OBJECT (window_main, vseparator2, "vseparator2");
-  GLADE_HOOKUP_OBJECT (window_main, button7, "button7");
-  GLADE_HOOKUP_OBJECT (window_main, button8, "button8");
-  GLADE_HOOKUP_OBJECT (window_main, button9, "button9");
-  GLADE_HOOKUP_OBJECT (window_main, vseparator3, "vseparator3");
-  GLADE_HOOKUP_OBJECT (window_main, button11, "button11");
-  GLADE_HOOKUP_OBJECT (window_main, stop_execution1_tb, "stop_execution1_tb");
   GLADE_HOOKUP_OBJECT (window_main, main_hpaned_left, "main_hpaned_left");
   GLADE_HOOKUP_OBJECT (window_main, vbox9, "vbox9");
   GLADE_HOOKUP_OBJECT (window_main, hbox15, "hbox15");
@@ -1410,9 +1087,26 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label168, "label168");
   GLADE_HOOKUP_OBJECT (window_main, main_appbar, "main_appbar");
   GLADE_HOOKUP_OBJECT_NO_REF (window_main, tooltips, "tooltips");
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/New"), "newfile"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/Open"), "openfile"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/Save"), "savefile"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/SaveAs"), "savefileas"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/ResetMenu/Registers"), "resetregisters"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/ResetMenu/Flags"), "resetflags"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/ResetMenu/IOPorts"), "resetports"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/ResetMenu/Memory"), "resetmemory"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/ResetMenu/ResetAll"), "resetall"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/AssemblerMenu/Assemble"), "assemble"); 
+  GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/AssemblerMenu/Listing"), "listing"); 
 
   gtk_widget_grab_focus (main_entry_sa);
   return window_main;
+}
+
+void
+activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
+{
+        gnome_url_show_on_screen (url, NULL, NULL);
 }
 
 GtkWidget*
@@ -1421,6 +1115,10 @@ create_dialog_about (void)
   const gchar *authors[] = {
     "Main programmer and founder:",
     "Sridhar Ratna (srid@nearfar.org)",
+    "\n",
+    "Maintainers and Developers:",
+    "Aanjhan Ranganathan (aanjhan@tuxmaniac.com)",
+    "Onkar Shinde (onkarshinde@rediffmail.com)",
     NULL
   };
   const gchar *documenters[] = {
@@ -1436,13 +1134,17 @@ create_dialog_about (void)
   if (!strcmp (translators, "translator_credits"))
     translators = NULL;
   dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085_icon.png");
-  dialog_about = gnome_about_new ("GNUSim8085", VERSION,
-                        _("Copyright (C) 2003 Sridhar Ratna"),
-                        _("8085 Microprocessor Simulator\nhttp://gnusim8085.sourceforge.net/"),
-                        authors,
-                        documenters,
-                        translators,
-                        dialog_about_logo_pixbuf);
+  dialog_about = gtk_about_dialog_new();
+  gtk_about_dialog_set_name (GTK_ABOUT_DIALOG(dialog_about), "GNUSim8085");
+  gtk_about_dialog_set_version (GTK_ABOUT_DIALOG(dialog_about), VERSION);
+  gtk_about_dialog_set_copyright (GTK_ABOUT_DIALOG(dialog_about), "Copyright (C) 2003 Sridhar Ratna");
+  gtk_about_dialog_set_comments (GTK_ABOUT_DIALOG(dialog_about), "8085 Microprocessor Simulator");
+  gtk_about_dialog_set_website (GTK_ABOUT_DIALOG(dialog_about), "http://gnusim8085.sourceforge.net/");
+  gtk_about_dialog_set_authors (GTK_ABOUT_DIALOG(dialog_about), authors);
+  gtk_about_dialog_set_documenters (GTK_ABOUT_DIALOG(dialog_about), documenters);
+  gtk_about_dialog_set_translator_credits (GTK_ABOUT_DIALOG(dialog_about), translators);
+  gtk_about_dialog_set_logo (GTK_ABOUT_DIALOG(dialog_about), dialog_about_logo_pixbuf);
+
   gtk_container_set_border_width (GTK_CONTAINER (dialog_about), 5);
   gtk_window_set_destroy_with_parent (GTK_WINDOW (dialog_about), TRUE);
   dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");

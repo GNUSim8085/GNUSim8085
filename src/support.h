@@ -17,6 +17,14 @@
 GtkWidget*  lookup_widget              (GtkWidget       *widget,
                                         const gchar     *widget_name);
 
+/*
+ * This function returns a action widget in a component.
+ * Call it with the toplevel widget in the component (i.e. a window/dialog),
+ * or alternatively any widget in the component, and the name of the widget
+ * you want returned.
+ */
+GtkAction*  lookup_action_widget              (GtkWidget       *widget,
+                                        const gchar     *widget_name);
 
 
 /*

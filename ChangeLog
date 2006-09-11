@@ -1,3 +1,10 @@
+2006-09-11 Aanjhan Ranganathan <aanjhan@gmail.com>
+        * Solved bug on DAA Instruction
+
+2006-8-07  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* Use gtk stock items for some of the menus
+	* Change configure script to check GTK+ >= 2.6.0
+
 2006-8-07  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* Fixed a bug with menus being disabled while debugging
 	* Addded url handler for about dialog

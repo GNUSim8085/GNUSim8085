@@ -935,16 +935,17 @@ _eef_inst_func_38 (eef_addr_t opnd_addr)
 static gint
 _eef_inst_func_39 (eef_addr_t opnd_addr)
 {
-	eef_data_t low, high;
+	eef_data_t low;
+        eef_data_t high;
 	eef_addr_t big = sys.reg.a;
 
 	high = sys.reg.a >> 4;
-	low = (sys.reg.a << 4) >> 4;
+	low = sys.reg.a & 0x0F;
 
 	if (low > 9 || sys.flag.ac)
 		big += 6;
 	sys.flag.ac = 1;	/* FIXME : ? */
-	if (low > 9 || sys.flag.c)
+	if (high > 9 || sys.flag.c)
 		big += (6 << 4);
 
 	sys.reg.a = big;

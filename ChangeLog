@@ -1,7 +1,11 @@
-2006-09-11 Aanjhan Ranganathan <aanjhan@gmail.com>
-        * Solved bug on DAA Instruction
+2006-9-13  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* Fixed some assertion failures while closing window
+	* Some clenup
 
-2006-8-07  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+2006-09-11 Aanjhan Ranganathan <aanjhan@gmail.com>
+	* Solved bug on DAA Instruction
+
+2006-8-11  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* Use gtk stock items for some of the menus
 	* Change configure script to check GTK+ >= 2.6.0
 

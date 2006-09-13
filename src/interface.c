@@ -25,7 +25,7 @@
 
 #define GLADE_HOOKUP_ACTION_OBJECT(component,widget,name) \
   g_object_set_data_full (G_OBJECT (component), name, \
-    g_object_ref (widget), (GDestroyNotify) gtk_widget_unref)
+    g_object_ref (widget), (GDestroyNotify) g_object_unref)
 
 #define GLADE_HOOKUP_OBJECT_NO_REF(component,widget,name) \
   g_object_set_data (G_OBJECT (component), name, widget)
@@ -1144,6 +1144,7 @@ create_dialog_about (void)
   gtk_about_dialog_set_documenters (GTK_ABOUT_DIALOG(dialog_about), documenters);
   gtk_about_dialog_set_translator_credits (GTK_ABOUT_DIALOG(dialog_about), translators);
   gtk_about_dialog_set_logo (GTK_ABOUT_DIALOG(dialog_about), dialog_about_logo_pixbuf);
+  g_object_unref (dialog_about_logo_pixbuf);
 
   gtk_container_set_border_width (GTK_CONTAINER (dialog_about), 5);
   gtk_window_set_destroy_with_parent (GTK_WINDOW (dialog_about), TRUE);
@@ -1151,12 +1152,9 @@ create_dialog_about (void)
   if (dialog_about_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (dialog_about), dialog_about_icon_pixbuf);
-      gdk_pixbuf_unref (dialog_about_icon_pixbuf);
+      g_object_unref (dialog_about_icon_pixbuf);
     }
 
-  g_signal_connect ((gpointer) dialog_about, "close",
-                    G_CALLBACK (gtk_widget_hide),
-                    NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_about, dialog_about, "dialog_about");

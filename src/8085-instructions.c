@@ -3199,7 +3199,7 @@ eef_instruction_length (eef_data_t op)
 	case 0xE8:
 		return 1;
 	case 0xE9:
-		return 3;
+		return 1;
 	case 0xEA:
 		return 3;
 	case 0xEB:

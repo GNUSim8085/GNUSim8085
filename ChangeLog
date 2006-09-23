@@ -1,3 +1,7 @@
+2006-9-18 Aanjhan Ranganathan <aanjhan@gmail.com>
+	* Fixed Bug related to DAA(reopened). Thanks to Dinesh
+	* Fixed the PCHL Bug.
+
 2006-9-13  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* Fixed some assertion failures while closing window
 	* Some clenup

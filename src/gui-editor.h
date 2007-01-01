@@ -21,8 +21,6 @@
 /*
  * GUI - Editor for ASM code
  * using scintilla
- *
- * R. Sridhar 
  */
 
 #ifndef __GUI_EDITOR_H__

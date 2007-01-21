@@ -1,3 +1,7 @@
+2007-01-21  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* src/interface.c, src/interface.h, src/callback.c: Change the way
+	about dialog is shown. Fixes bug #1556427.
+
 2007-01-17  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* src/gui-editor.h, src/gui-editor.c: Add scroll window and make it
 	parent of text widget, add method to set font, default to "Monospace

@@ -36,7 +36,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-subdir = pixmaps
+subdir = data
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
@@ -54,9 +54,9 @@ am__vpath_adj = case $$p in \
     *) f=$$p;; \
   esac;
 am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
-am__installdirs = "$(DESTDIR)$(gnusim8085_pixmapsdir)"
-gnusim8085_pixmapsDATA_INSTALL = $(INSTALL_DATA)
-DATA = $(gnusim8085_pixmaps_DATA)
+am__installdirs = "$(DESTDIR)$(gsvlangspecdir)"
+gsvlangspecDATA_INSTALL = $(INSTALL_DATA)
+DATA = $(gsvlangspec_DATA)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 ALLOCA = @ALLOCA@
@@ -213,11 +213,11 @@ sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
-gnusim8085_pixmapsdir = $(prefix)/@NO_PREFIX_PACKAGE_PIXMAPS_DIR@
-gnusim8085_pixmaps_DATA = \
-	gnusim8085_icon.png
+gsvlangspecdir = $(prefix)/share/gtksourceview-1.0/language-specs
+gsvlangspec_DATA = \
+	8085asm.lang 
 
-EXTRA_DIST = $(gnusim8085_pixmaps_DATA)
+EXTRA_DIST = $(gsvlangspec_DATA)
 all: all-am
 
 .SUFFIXES:
@@ -230,9 +230,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  pixmaps/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  data/Makefile'; \
 	cd $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu  pixmaps/Makefile
+	  $(AUTOMAKE) --gnu  data/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -260,22 +260,22 @@ clean-libtool:
 distclean-libtool:
 	-rm -f libtool
 uninstall-info-am:
-install-gnusim8085_pixmapsDATA: $(gnusim8085_pixmaps_DATA)
+install-gsvlangspecDATA: $(gsvlangspec_DATA)
 	@$(NORMAL_INSTALL)
-	test -z "$(gnusim8085_pixmapsdir)" || $(mkdir_p) "$(DESTDIR)$(gnusim8085_pixmapsdir)"
-	@list='$(gnusim8085_pixmaps_DATA)'; for p in $$list; do \
+	test -z "$(gsvlangspecdir)" || $(mkdir_p) "$(DESTDIR)$(gsvlangspecdir)"
+	@list='$(gsvlangspec_DATA)'; for p in $$list; do \
 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
 	  f=$(am__strip_dir) \
-	  echo " $(gnusim8085_pixmapsDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(gnusim8085_pixmapsdir)/$$f'"; \
-	  $(gnusim8085_pixmapsDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(gnusim8085_pixmapsdir)/$$f"; \
+	  echo " $(gsvlangspecDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(gsvlangspecdir)/$$f'"; \
+	  $(gsvlangspecDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(gsvlangspecdir)/$$f"; \
 	done
 
-uninstall-gnusim8085_pixmapsDATA:
+uninstall-gsvlangspecDATA:
 	@$(NORMAL_UNINSTALL)
-	@list='$(gnusim8085_pixmaps_DATA)'; for p in $$list; do \
+	@list='$(gsvlangspec_DATA)'; for p in $$list; do \
 	  f=$(am__strip_dir) \
-	  echo " rm -f '$(DESTDIR)$(gnusim8085_pixmapsdir)/$$f'"; \
-	  rm -f "$(DESTDIR)$(gnusim8085_pixmapsdir)/$$f"; \
+	  echo " rm -f '$(DESTDIR)$(gsvlangspecdir)/$$f'"; \
+	  rm -f "$(DESTDIR)$(gsvlangspecdir)/$$f"; \
 	done
 tags: TAGS
 TAGS:
@@ -315,7 +315,7 @@ check-am: all-am
 check: check-am
 all-am: Makefile $(DATA)
 installdirs:
-	for dir in "$(DESTDIR)$(gnusim8085_pixmapsdir)"; do \
+	for dir in "$(DESTDIR)$(gsvlangspecdir)"; do \
 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
 	done
 install: install-am
@@ -360,7 +360,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-gnusim8085_pixmapsDATA
+install-data-am: install-gsvlangspecDATA
 
 install-exec-am:
 
@@ -386,18 +386,18 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-gnusim8085_pixmapsDATA uninstall-info-am
+uninstall-am: uninstall-gsvlangspecDATA uninstall-info-am
 
 .PHONY: all all-am check check-am clean clean-generic clean-libtool \
 	distclean distclean-generic distclean-libtool distdir dvi \
 	dvi-am html html-am info info-am install install-am \
 	install-data install-data-am install-exec install-exec-am \
-	install-gnusim8085_pixmapsDATA install-info install-info-am \
+	install-gsvlangspecDATA install-info install-info-am \
 	install-man install-strip installcheck installcheck-am \
 	installdirs maintainer-clean maintainer-clean-generic \
 	mostlyclean mostlyclean-generic mostlyclean-libtool pdf pdf-am \
-	ps ps-am uninstall uninstall-am \
-	uninstall-gnusim8085_pixmapsDATA uninstall-info-am
+	ps ps-am uninstall uninstall-am uninstall-gsvlangspecDATA \
+	uninstall-info-am
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

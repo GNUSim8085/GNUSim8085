@@ -3,15 +3,13 @@
 ## If you don't want it to overwrite it,
 ## 	Please disable it in the Anjuta project configuration
 
-SUBDIRS = intl po macros src pixmaps doc
+SUBDIRS = intl po macros src pixmaps doc data
 
-gnusim8085docdir = ${prefix}/doc/GNUSim8085
+gnusim8085docdir = ${prefix}/share/doc/gnusim8085
 gnusim8085doc_DATA = \
 	README\
-	COPYING\
 	AUTHORS\
 	ChangeLog\
-	INSTALL\
 	NEWS\
 	TODO\
 	ABOUT-NLS
@@ -21,8 +19,6 @@ EXTRA_DIST = $(gnusim8085doc_DATA)
 gnomemenudir = $(prefix)/@NO_PREFIX_PACKAGE_MENU_DIR@/Development
 gnomemenu_DATA = GNUSim8085.desktop
 
-
-
 # Copy all the spec files. Of cource, only one is actually used.
 dist-hook:
 	for specfile in *.spec; do \
@@ -30,4 +26,8 @@ dist-hook:
 			cp -p $$specfile $(distdir); \
 		fi \
 	done
+
+
+
+
 

@@ -20,22 +20,36 @@
 
 /*
  * GUI - Editor for ASM code
- * using scintilla
+ * using gtksourceview
+ *
+ * R. Sridhar 
  */
 
 #ifndef __GUI_EDITOR_H__
 #define __GUI_EDITOR_H__
 
+#include <string.h>
 #include <gtk/gtk.h>
-#include "scintilla-interface.h"
+#include <gtksourceview/gtksourceview.h>
+#include <gtksourceview/gtksourcebuffer.h>
+#include <gtksourceview/gtksourcelanguage.h>
+#include <gtksourceview/gtksourcelanguagesmanager.h>
+
+#define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"
 
 G_BEGIN_DECLS typedef struct
 {
 	/* use this id for use with GTK+ */
 	GtkWidget *widget;
-	
-	ScintillaObject *sci;
 
+	GtkWidget *scroll;
+	
+	GtkSourceBuffer *buffer;
+
+	GtkSourceLanguagesManager *lang_manager;
+
+	GtkSourceLanguage *language;
+	
 } GUIEditor;
 
 GUIEditor *gui_editor_new (void);
@@ -66,6 +80,12 @@ void gui_editor_set_readonly (GUIEditor *self, gboolean val);
 void gui_editor_insert (GUIEditor *self, gchar *text);
 
 void gui_editor_grab_focus (GUIEditor *self);
+
+void gui_editor_set_font (GUIEditor *self, const gchar *font_name);
+
+GtkSourceLanguage *
+gui_editor_languages_manager_get_language_from_id (GtkSourceLanguagesManager *lm,
+                                                        const gchar *lang_id);
 
 G_END_DECLS
 #endif /* __GUI_EDITOR_H__ */

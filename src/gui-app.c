@@ -43,7 +43,7 @@ gui_app_new (void)
 	g_assert (container);
 
 	gtk_box_pack_start_defaults (GTK_BOX (container),
-				     app->editor->widget);
+				     app->editor->scroll);
 
 	/* dim */
 	//gtk_window_get_size(app->window_main, &w, &h);

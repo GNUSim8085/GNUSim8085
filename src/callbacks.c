@@ -322,11 +322,7 @@ void
 on_about1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
 	/* create about box */
-	GtkWidget *dialog;
-
-	dialog = create_dialog_about ();
-
-	gtk_widget_show (dialog);
+	create_dialog_about ();
 }
 
 
@@ -440,7 +436,7 @@ on_show_listing1_activate (GtkMenuItem * menuitem, gpointer user_data)
 	edit = gui_editor_new ();
 	g_assert (edit);
 	gui_editor_set_text (edit, list->str);
-	gtk_box_pack_end_defaults (GTK_BOX (cont), edit->widget);
+	gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);
 	gtk_window_maximize (GTK_WINDOW (wind));
 	gtk_widget_show_all (wind);
 	/* TODO clean up of listing window editor on delete event */

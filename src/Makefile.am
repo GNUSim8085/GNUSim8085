@@ -40,8 +40,6 @@ gnusim8085_SOURCES = \
 	8085-asm.c\
 	gui-app.c\
 	gui-editor.c\
-	scintilla-interface.cc\
-	scintilla-marshal.c\
 	8085-link.c\
 	gui-view.c\
 	bridge.c\
@@ -50,64 +48,11 @@ gnusim8085_SOURCES = \
 	asm-listing.c\
 	file-op.c\
 	gui-list-stack.c\
-	AutoComplete.cxx\
-	CallTip.cxx\
-	CellBuffer.cxx\
-	ContractionState.cxx\
-	Document.cxx\
-	DocumentAccessor.cxx\
-	Editor.cxx\
-	ExternalLexer.cxx\
-	Indicator.cxx\
-	KeyMap.cxx\
-	KeyWords.cxx\
-	LexAsm.cxx\
-	LineMarker.cxx\
-	PropSet.cxx\
-	RESearch.cxx\
-	ScintillaBase.cxx\
-	Style.cxx\
-	StyleContext.cxx\
-	UniConversion.cxx\
-	ViewStyle.cxx\
-	WindowAccessor.cxx\
-	XPM.cxx\
-	PlatGTK.cxx\
-	ScintillaGTK.cxx\
 	8085-asm.h\
 	8085-instructions.h\
 	8085-link.h\
 	8085-memblock.h\
 	8085.h\
-	Accessor.h\
-	AutoComplete.h\
-	CallTip.h\
-	CellBuffer.h\
-	Converter.h\
-	ContractionState.h\
-	Document.h\
-	DocumentAccessor.h\
-	Editor.h\
-	ExternalLexer.h\
-	Indicator.h\
-	KeyMap.h\
-	KeyWords.h\
-	LineMarker.h\
-	Platform.h\
-	PropSet.h\
-	RESearch.h\
-	SString.h\
-	SVector.h\
-	SciLexer.h\
-	Scintilla.h\
-	ScintillaBase.h\
-	ScintillaWidget.h\
-	Style.h\
-	StyleContext.h\
-	UniConversion.h\
-	ViewStyle.h\
-	WindowAccessor.h\
-	XPM.h\
 	asm-ds-limits.h\
 	asm-ds-symtable.h\
 	asm-err-comm.h\
@@ -125,8 +70,6 @@ gnusim8085_SOURCES = \
 	gui-list-message.h\
 	gui-list-stack.h\
 	gui-view.h\
-	scintilla-interface.h\
-	scintilla-marshal.h\
 	support-common.h\
 	gui-keypad.h\
 	gui-keypad.c\

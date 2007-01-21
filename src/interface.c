@@ -1109,7 +1109,7 @@ activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
         gnome_url_show_on_screen (url, NULL, NULL);
 }
 
-GtkWidget*
+void
 create_dialog_about (void)
 {
   const gchar *authors[] = {
@@ -1126,40 +1126,38 @@ create_dialog_about (void)
     NULL
   };
   /* TRANSLATORS: Replace this string with your names, one name per line. */
+  gchar *name = "GNUSim8085";
+  gchar *copyright = "Copyright (C) 2003 Sridhar Ratna";
+  gchar *comments = "8085 Microprocessor Simulator";
   gchar *translators = _("translator_credits");
+  gchar *website = "http://gnusim8085.sourceforge.net/";
   GdkPixbuf *dialog_about_logo_pixbuf;
-  GtkWidget *dialog_about;
   GdkPixbuf *dialog_about_icon_pixbuf;
 
   if (!strcmp (translators, "translator_credits"))
     translators = NULL;
   dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085_icon.png");
-  dialog_about = gtk_about_dialog_new();
-  gtk_about_dialog_set_name (GTK_ABOUT_DIALOG(dialog_about), "GNUSim8085");
-  gtk_about_dialog_set_version (GTK_ABOUT_DIALOG(dialog_about), VERSION);
-  gtk_about_dialog_set_copyright (GTK_ABOUT_DIALOG(dialog_about), "Copyright (C) 2003 Sridhar Ratna");
-  gtk_about_dialog_set_comments (GTK_ABOUT_DIALOG(dialog_about), "8085 Microprocessor Simulator");
-  gtk_about_dialog_set_website (GTK_ABOUT_DIALOG(dialog_about), "http://gnusim8085.sourceforge.net/");
-  gtk_about_dialog_set_authors (GTK_ABOUT_DIALOG(dialog_about), authors);
-  gtk_about_dialog_set_documenters (GTK_ABOUT_DIALOG(dialog_about), documenters);
-  gtk_about_dialog_set_translator_credits (GTK_ABOUT_DIALOG(dialog_about), translators);
-  gtk_about_dialog_set_logo (GTK_ABOUT_DIALOG(dialog_about), dialog_about_logo_pixbuf);
-  g_object_unref (dialog_about_logo_pixbuf);
 
-  gtk_container_set_border_width (GTK_CONTAINER (dialog_about), 5);
-  gtk_window_set_destroy_with_parent (GTK_WINDOW (dialog_about), TRUE);
   dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");
+  gtk_show_about_dialog (NULL,
+			"name", name,
+			"version", VERSION,
+			"comments", comments,
+			"copyright", copyright,
+			"website", website,
+			"logo", dialog_about_logo_pixbuf,
+			"icon", dialog_about_icon_pixbuf,
+			"authors", authors,
+			"documenters", documenters,
+			"translator-credits", translators,
+			"border-width", 5,
+			NULL);
+
   if (dialog_about_icon_pixbuf)
-    {
-      gtk_window_set_icon (GTK_WINDOW (dialog_about), dialog_about_icon_pixbuf);
       g_object_unref (dialog_about_icon_pixbuf);
-    }
-
-
-  /* Store pointers to all widgets, for use by lookup_widget(). */
-  GLADE_HOOKUP_OBJECT_NO_REF (dialog_about, dialog_about, "dialog_about");
-
-  return dialog_about;
+    
+  if (dialog_about_logo_pixbuf)
+      g_object_unref (dialog_about_logo_pixbuf);
 }
 
 GtkWidget*

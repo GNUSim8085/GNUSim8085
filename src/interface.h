@@ -3,7 +3,7 @@
  */
 
 GtkWidget* create_window_main (void);
-GtkWidget* create_dialog_about (void);
+void create_dialog_about (void);
 GtkWidget* create_window_listing (void);
 GtkWidget* create_window_start (void);
 GtkWidget* create_dialog_isymbol (void);

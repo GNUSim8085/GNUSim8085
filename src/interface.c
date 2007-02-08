@@ -911,7 +911,7 @@ create_window_main (void)
   gtk_container_add (GTK_CONTAINER (frame14), main_keypad_scroll);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_keypad_scroll), GTK_SHADOW_OUT);
 
-  label169 = gtk_label_new (_("(KeyPad not yet stable.\nCheck out for v1.3)"));
+  label169 = gtk_label_new (_("(KeyPad not very stable.\nCheck out for v1.4)"));
   gtk_widget_show (label169);
   gtk_frame_set_label_widget (GTK_FRAME (frame14), label169);
   gtk_label_set_justify (GTK_LABEL (label169), GTK_JUSTIFY_LEFT);

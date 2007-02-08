@@ -1,3 +1,9 @@
+2007-02-08  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* src/gui-editor.h, src/gui-editor.c: Make breakpoints work
+
+2007-01-27  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* src/gui-editor.h, src/gui-editor.c: Line highlight in debug mode
+
 2007-01-21  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* src/interface.c, src/interface.h, src/callback.c: Change the way
 	about dialog is shown. Fixes bug #1556427.

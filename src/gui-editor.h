@@ -34,8 +34,10 @@
 #include <gtksourceview/gtksourcebuffer.h>
 #include <gtksourceview/gtksourcelanguage.h>
 #include <gtksourceview/gtksourcelanguagesmanager.h>
+#include <gtksourceview/gtksourcemarker.h>
 
 #define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"
+#define MARKER_BREAKPOINT   (const gchar*) "breakpoint"
 
 G_BEGIN_DECLS typedef struct
 {
@@ -45,6 +47,10 @@ G_BEGIN_DECLS typedef struct
 	GtkWidget *scroll;
 	
 	GtkSourceBuffer *buffer;
+
+	GtkTextIter iter;
+
+	GtkTextMark *mark;
 
 	GtkSourceLanguagesManager *lang_manager;
 
@@ -61,7 +67,7 @@ gchar *gui_editor_get_text (GUIEditor * self);
 void gui_editor_set_text (GUIEditor * self, const gchar * text);
 
 void gui_editor_set_mark (GUIEditor * self, guint line_no, gboolean set);
-void gui_editor_set_highlight (GUIEditor * self, guint line_no, gboolean set);
+void gui_editor_set_highlight (GUIEditor * self, gboolean set);
 
 void gui_editor_toggle_mark (GUIEditor * self);
 
@@ -82,6 +88,9 @@ void gui_editor_insert (GUIEditor *self, gchar *text);
 void gui_editor_grab_focus (GUIEditor *self);
 
 void gui_editor_set_font (GUIEditor *self, const gchar *font_name);
+
+GdkPixbuf *
+gui_editor_get_stock_icon (GtkWidget *widget, const gchar *stock_id, GtkIconSize size);
 
 GtkSourceLanguage *
 gui_editor_languages_manager_get_language_from_id (GtkSourceLanguagesManager *lm,

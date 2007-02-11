@@ -38,6 +38,11 @@ gui_editor_new (void)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (self->scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
 	gui_editor_set_font (self, DEFAULT_EDITOR_FONT);
+
+	self->hltag = gtk_text_buffer_create_tag (GTK_TEXT_BUFFER(self->buffer),
+							HIGHLIGHT_TAG,
+							"background", COLOUR_BG_HL,
+							NULL);
 	
 	self->lang_manager = gtk_source_languages_manager_new ();
 
@@ -103,10 +108,20 @@ gui_editor_set_mark (GUIEditor * self, guint line_no, gboolean set)
 }
 
 void
-gui_editor_set_highlight (GUIEditor * self, gboolean set)
+gui_editor_set_highlight (GUIEditor * self, guint line_no, gboolean set)
 {
 	g_assert (self);
-	gtk_source_view_set_highlight_current_line(GTK_SOURCE_VIEW(self->widget), set);
+	GtkTextIter line_start, line_end;
+
+	/* get line bounds */
+	gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (self->buffer), &line_start, line_no);
+	line_end = line_start;
+	gtk_text_iter_forward_to_line_end (&line_end);
+
+	if (set)
+		gtk_text_buffer_apply_tag (GTK_TEXT_BUFFER(self->buffer), self->hltag, &line_start, &line_end);
+	else
+		gtk_text_buffer_remove_tag (GTK_TEXT_BUFFER(self->buffer), self->hltag, &line_start, &line_end);
 }
 
 void
@@ -163,7 +178,10 @@ gui_editor_toggle_mark (GUIEditor * self)
 void
 gui_editor_clear_all_highlights (GUIEditor * self)
 {
-//	si_editor_clear_all_highlights (self->sci);
+	GtkTextIter buffer_start, buffer_end;
+
+	gtk_text_buffer_get_bounds (GTK_TEXT_BUFFER(self->buffer), &buffer_start, &buffer_end);
+	gtk_text_buffer_remove_tag (GTK_TEXT_BUFFER(self->buffer), self->hltag, &buffer_start, &buffer_end);
 }
 
 gboolean
@@ -234,6 +252,8 @@ gui_editor_goto_line (GUIEditor * self, gint ln)
 	gtk_text_buffer_place_cursor (GTK_TEXT_BUFFER(self->buffer), &(self->iter));
 
 	gtk_text_buffer_move_mark (GTK_TEXT_BUFFER(self->buffer), self->mark, &(self->iter));
+
+	gtk_text_view_scroll_mark_onscreen (GTK_TEXT_VIEW(self->widget), self->mark);
 }
 
 gint
@@ -253,7 +273,7 @@ gui_editor_insert (GUIEditor * self, gchar * text)
 void
 gui_editor_set_readonly (GUIEditor * self, gboolean val)
 {
-    gtk_text_view_set_editable (GTK_TEXT_VIEW(self->widget), val);
+    gtk_text_view_set_editable (GTK_TEXT_VIEW(self->widget), !val);
     gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(self->widget), !val);
 }
 

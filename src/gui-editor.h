@@ -38,6 +38,8 @@
 
 #define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"
 #define MARKER_BREAKPOINT   (const gchar*) "breakpoint"
+#define HIGHLIGHT_TAG   (const gchar*) "hl_tag"
+#define COLOUR_BG_HL   (const gchar*) "#00FFFF"
 
 G_BEGIN_DECLS typedef struct
 {
@@ -51,6 +53,8 @@ G_BEGIN_DECLS typedef struct
 	GtkTextIter iter;
 
 	GtkTextMark *mark;
+
+	GtkTextTag *hltag;
 
 	GtkSourceLanguagesManager *lang_manager;
 
@@ -67,7 +71,7 @@ gchar *gui_editor_get_text (GUIEditor * self);
 void gui_editor_set_text (GUIEditor * self, const gchar * text);
 
 void gui_editor_set_mark (GUIEditor * self, guint line_no, gboolean set);
-void gui_editor_set_highlight (GUIEditor * self, gboolean set);
+void gui_editor_set_highlight (GUIEditor * self, guint line_no, gboolean set);
 
 void gui_editor_toggle_mark (GUIEditor * self);
 

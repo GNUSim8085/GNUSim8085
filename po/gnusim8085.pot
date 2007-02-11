@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-09 00:59+0530\n"
+"POT-Creation-Date: 2007-02-10 11:07+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,11 +36,11 @@ msgstr ""
 msgid "Error in step out"
 msgstr ""
 
-#: src/callbacks.c:362
+#: src/callbacks.c:358
 msgid "Enter a valid number within range"
 msgstr ""
 
-#: src/callbacks.c:526
+#: src/callbacks.c:522
 msgid ""
 "Do the following\n"
 "\n"
@@ -62,34 +62,6 @@ msgstr ""
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr ""
 
-#: src/interface.c:338
-msgid "<i>BC</i>"
-msgstr ""
-
-#: src/interface.c:345
-msgid "<i>DE</i>"
-msgstr ""
-
-#: src/interface.c:352
-msgid "<i>HL</i>"
-msgstr ""
-
-#: src/interface.c:359
-msgid "<i>PSW</i>"
-msgstr ""
-
-#: src/interface.c:366
-msgid "<i>PC</i>"
-msgstr ""
-
-#: src/interface.c:373
-msgid "<i>SP</i>"
-msgstr ""
-
-#: src/interface.c:380
-msgid "<i>Int-Reg</i>"
-msgstr ""
-
 #: src/interface.c:387 src/interface.c:393 src/interface.c:399
 #: src/interface.c:405 src/interface.c:411 src/interface.c:417
 #: src/interface.c:423 src/interface.c:429 src/interface.c:435
@@ -98,32 +70,8 @@ msgstr ""
 msgid "00"
 msgstr ""
 
-#: src/interface.c:471
-msgid "<i>A</i>"
-msgstr ""
-
 #: src/interface.c:486
 msgid "<b>Registers</b>"
-msgstr ""
-
-#: src/interface.c:504
-msgid "<i>S</i>"
-msgstr ""
-
-#: src/interface.c:511
-msgid "<i>Z</i>"
-msgstr ""
-
-#: src/interface.c:518
-msgid "<i>AC</i>"
-msgstr ""
-
-#: src/interface.c:525
-msgid "<i>P</i>"
-msgstr ""
-
-#: src/interface.c:532
-msgid "<i>C</i>"
 msgstr ""
 
 #: src/interface.c:539 src/interface.c:545 src/interface.c:551
@@ -238,8 +186,8 @@ msgstr ""
 
 #: src/interface.c:914
 msgid ""
-"(KeyPad not yet stable.\n"
-"Check out for v1.3)"
+"(KeyPad not very stable.\n"
+"Check out for v1.4)"
 msgstr ""
 
 #: src/interface.c:927
@@ -247,81 +195,81 @@ msgid "KeyPad"
 msgstr ""
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: src/interface.c:1129
+#: src/interface.c:1133
 msgid "translator_credits"
 msgstr ""
 
-#: src/interface.c:1179
+#: src/interface.c:1178
 msgid "Assembler Listing"
 msgstr ""
 
-#: src/interface.c:1214
+#: src/interface.c:1213
 msgid "Save to file"
 msgstr ""
 
-#: src/interface.c:1266
+#: src/interface.c:1265
 msgid "GNUSim8085 start with dialog"
 msgstr ""
 
-#: src/interface.c:1296
+#: src/interface.c:1295
 msgid "1. How to use this simulator?"
 msgstr ""
 
-#: src/interface.c:1306
+#: src/interface.c:1305
 msgid "A short tutorial on writing assembly code!"
 msgstr ""
 
-#: src/interface.c:1320
+#: src/interface.c:1319
 msgid "Tutorial"
 msgstr ""
 
-#: src/interface.c:1330
+#: src/interface.c:1329
 msgid "2. Open an existing assembly program."
 msgstr ""
 
-#: src/interface.c:1340
+#: src/interface.c:1339
 msgid "Open an already saved program"
 msgstr ""
 
-#: src/interface.c:1354
+#: src/interface.c:1353
 msgid "Open program"
 msgstr ""
 
-#: src/interface.c:1359
+#: src/interface.c:1358
 msgid "What do you want to do now?"
 msgstr ""
 
-#: src/interface.c:1369
+#: src/interface.c:1368
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
 msgstr ""
 
-#: src/interface.c:1443
+#: src/interface.c:1442
 msgid "Choose a symbol"
 msgstr ""
 
-#: src/interface.c:1462
+#: src/interface.c:1461
 msgid "Enter a symbol or choose one from the lists"
 msgstr ""
 
-#: src/interface.c:1472
+#: src/interface.c:1471
 msgid "Enter Symbol"
 msgstr ""
 
-#: src/interface.c:1489
+#: src/interface.c:1488
 msgid "Variables List"
 msgstr ""
 
-#: src/interface.c:1510
+#: src/interface.c:1509
 msgid "Functions List"
 msgstr ""
 
-#: src/interface.c:1531
+#: src/interface.c:1530
 msgid "Macros List"
 msgstr ""
 
-#: src/interface.c:1603
+#: src/interface.c:1602
 msgid "Choose a register"
 msgstr ""
 
@@ -354,7 +302,7 @@ msgid "Instruction 'RIM' Not implemented"
 msgstr ""
 
 #. TODO (page 752)
-#: src/8085-instructions.c:1033
+#: src/8085-instructions.c:1036
 msgid "Instruction 'SIM' Not implemented"
 msgstr ""
 
@@ -439,7 +387,7 @@ msgstr ""
 msgid "Simulator: Program running"
 msgstr ""
 
-#: src/bridge.c:197
+#: src/bridge.c:198
 #, c-format
 msgid ""
 "Execution branched to invalid memory location <%xH>. Execution will be "
@@ -451,7 +399,7 @@ msgid ""
 "advised to send a copy of your source progam."
 msgstr ""
 
-#: src/bridge.c:298
+#: src/bridge.c:300
 msgid "Assembler: running"
 msgstr ""
 

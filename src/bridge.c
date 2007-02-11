@@ -109,6 +109,7 @@ _update_gui_state (void)
 	DF_ACTION ("resetall", !bdebug);
 	DF_ACTION ("assemble", !bdebug);
 	DF_ACTION ("listing", !bdebug);
+	DF_ACTION ("stop_debug", bdebug);
 
 
 #undef DF_ACTION
@@ -136,8 +137,8 @@ hightlight_line (gint ln)
 
 	if (ln != -1)
 	{
+		gui_editor_set_highlight (app->editor, ln, TRUE);
 		gui_editor_goto_line (app->editor, ln);
-		gui_editor_set_highlight (app->editor, TRUE);
 	}
 }
 
@@ -174,7 +175,6 @@ _bridge_8085_cb (eef_addr_t addr, eef_addr_t prev_addr, gboolean finished)
 		saved_and_assembled_successfully = FALSE;
 		bridge_debug_this_line (0, -1);
 		gui_editor_set_readonly (app->editor, FALSE);
-		gui_editor_set_highlight (app->editor, FALSE);
 		//gnome_appbar_pop (appbar);
 		_end_of_exec ();
 		return TRUE;	/* caller is going to return */
@@ -281,6 +281,7 @@ b_init (void)
 	/* set appbar id */
 	appbar = lookup_widget (app->window_main, "main_appbar");
 	g_assert (appbar);
+	_update_gui_state();
 }
 
 gboolean
@@ -327,7 +328,6 @@ b_execute (void)
 		state = B_STATE_IDLE;
 		execution_single_stepped = FALSE;
 		gui_editor_set_readonly (app->editor, TRUE);
-		gui_editor_set_highlight (app->editor, TRUE);
 		return eef_execute_from (about_to_execute_from,
 					 &executed_bytes, -1);
 	}
@@ -367,7 +367,6 @@ b_resume_execution (BTraceMode tmode)
 		ess_trace_mode = tmode;
 
 		gui_editor_set_readonly (app->editor, TRUE);
-		gui_editor_set_highlight (app->editor, TRUE);
 		bridge_debug_this_line (about_to_execute_from,
 					eef_link_get_line_no
 					(about_to_execute_from));
@@ -399,6 +398,7 @@ b_enter_debug_mode (void)
 	execution_single_stepped = TRUE;
 
 	_update_gui_state ();
+	gui_editor_set_readonly (app->editor, TRUE);
 
 }
 
@@ -417,7 +417,6 @@ b_debug_stop (void)
 	//gnome_appbar_pop (appbar);
 	_end_of_exec ();
 	gui_editor_set_readonly (app->editor, FALSE);
-	gui_editor_set_highlight (app->editor, FALSE);
 }
 
 /* toggles at current line number */

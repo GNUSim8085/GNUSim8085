@@ -1,3 +1,11 @@
+2007-02-11  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* src/interface.c, src/bridge.c: Disable 'Stop Debug' menu and button
+	when not in debug mode. Fixes bug #1656194
+	* src/gui-editor.h, src/gui-editor.c: Scrolling in debug mode, proper
+	line highlighting. Fixes bug #1656191
+	* src/interface.c, po/gnusim8085.pot: Register and flag names are not
+	tranlatable now.
+
 2007-02-08  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* src/gui-editor.h, src/gui-editor.c: Make breakpoints work
 

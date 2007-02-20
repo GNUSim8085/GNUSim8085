@@ -1,3 +1,14 @@
+GNUSim8085 1.3 (20 Feb 2007)
+
+New:     Use gtksourceview as editor component.
+Fix:     Syntax highlighting working again.
+Fix:     About dialog does not close by pressing close button.
+
+GNUSim8085 1.2.91 (17 Oct 2006)
+
+Fix:     Bug Fixes for PCHL,DAA Instructions.
+Fix:     GUI Modifications.
+
 GNUSim8085 1.2.90 (30 Jul 2006)
 
 New:     We've got maintainers! Thanks to Aanjhan and Onkar for helping to make this release.

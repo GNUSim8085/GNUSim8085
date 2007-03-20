@@ -1,3 +1,6 @@
+2007-03-19  Aanjhan Ranganathan <aanjhan@users.sourceforge.net>
+        * data/8085asm.lang: Added the patch submitted by Fernando Munoz.
+
 2007-02-11  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* src/interface.c, src/bridge.c: Disable 'Stop Debug' menu and button
 	when not in debug mode. Fixes bug #1656194

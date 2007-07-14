@@ -1,3 +1,9 @@
+2007-07-07  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+	* data/8085asm.lang: Corrected expression for dz and cmc
+	* src/: Replace most GNOME UI widgets with GTK+ widgets. Move
+	non-local header includes to local header files instead of source
+	files. Replace occurrences of tabs ('\t') with space (' ').
+
 2007-03-19  Aanjhan Ranganathan <aanjhan@users.sourceforge.net>
         * data/8085asm.lang: Added the patch submitted by Fernando Munoz.
 

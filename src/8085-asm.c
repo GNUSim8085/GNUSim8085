@@ -29,7 +29,6 @@
 #include "gui-app.h"
 #include "file-op.h"
 #include "asm-err-comm.h"
-#include <gnome.h>
 
 /* call this when you are prepraring to assemble */
 void

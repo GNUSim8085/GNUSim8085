@@ -29,7 +29,6 @@
 #include "asm-ds-symtable.h"
 #include <stdlib.h>
 #include <string.h>
-#include <gnome.h>
 
 void
 disp_list (AsmSource * self)

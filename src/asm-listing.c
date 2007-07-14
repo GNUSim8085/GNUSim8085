@@ -25,7 +25,6 @@
 #include "asm-listing.h"
 #include "asm-ds-limits.h"
 #include <string.h>
-#include <gnome.h>
 
 static GString *
 get_hex_list (const gchar * str, gint * total)
@@ -38,7 +37,7 @@ get_hex_list (const gchar * str, gint * total)
 
 	/* split */
 	slist = g_strsplit (str, ",", -1);
-	r = g_string_new ("\t");
+	r = g_string_new (" ");
 	
 	/* scan */
 	p = slist;
@@ -107,11 +106,11 @@ asm_listing_get_binary_array (AsmSource *src, GString **listing)
 			
 			if ( entry->s_op > 0x0f )
 			{
-				g_string_append_printf (listing[pto], "%4X\t%2X", entry->address, entry->s_op);
+				g_string_append_printf (listing[pto], "%4X %2X", entry->address, entry->s_op);
 			}
 			else
 			{
-				g_string_append_printf (listing[pto], "%4X\t0%X", entry->address, entry->s_op);
+				g_string_append_printf (listing[pto], "%4X 0%X", entry->address, entry->s_op);
 			}
  			
 			
@@ -143,7 +142,7 @@ asm_listing_get_binary_array (AsmSource *src, GString **listing)
 		{
 			if ( entry->s_op == ID_PSEUDO_DS )
 			{
-				g_string_append_printf (listing[pto], "%4X\t<%d bytes>", entry->address, entry->b_opnd1);
+				g_string_append_printf (listing[pto], "%4X <%d bytes>", entry->address, entry->b_opnd1);
 			}
 			else if ( entry->s_op == ID_PSEUDO_DB )
 			{
@@ -224,7 +223,7 @@ asm_listing_generate (AsmSource * src)
 		
 		g_assert (diff >= 0);
 		
-		g_string_append_printf (listing, "%*s\t", (max_len+1)%4 - diff + 1, "\t");
+		g_string_append_printf (listing, "%*s ", (max_len+1)%4 - diff + 1, " ");
 		g_assert (src->listing_buffer[i]->str);
 		g_string_append ( listing, src->listing_buffer[i]->str);
 		g_string_append ( listing, "\n");
@@ -273,7 +272,7 @@ asm_listing_generate (AsmSource * src)
 			IdOpcode *ido = entry->s_op_id_opcode;
 			g_assert (ido);
 			
-			g_string_append_printf (listing, "%4X\t%2X", entry->address, entry->s_op);
+			g_string_append_printf (listing, "%4X %2X", entry->address, entry->s_op);
 			
 			/* if args */
 			if ( ido->user_args )
@@ -287,7 +286,7 @@ asm_listing_generate (AsmSource * src)
 		{
 			if ( entry->s_op == ID_PSEUDO_DS )
 			{
-				g_string_append_printf (listing, "%4X\t<%d bytes>", entry->address, entry->b_opnd1);
+				g_string_append_printf (listing, "%4X <%d bytes>", entry->address, entry->b_opnd1);
 			}
 			else if ( entry->s_op == ID_PSEUDO_DB )
 			{

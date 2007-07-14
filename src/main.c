@@ -22,8 +22,6 @@
 #  include <config.h>
 #endif
 
-#include <gnome.h>
-
 #include "interface.h"
 #include "gui-app.h"
 #include "gui-list-message.h"
@@ -38,7 +36,7 @@
 int
 main (int argc, char *argv[])
 {
-	GtkWidget *appbar;
+	GtkWidget *statusbar;
 
 #ifdef ENABLE_NLS
 	bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
@@ -68,10 +66,10 @@ main (int argc, char *argv[])
 	/* show start with dialog */
 	gui_app_show ();
 
-	appbar = lookup_widget (app->window_main, "main_appbar");
-	g_assert (appbar);
+	statusbar = lookup_widget (app->window_main, "main_statusbar");
+	g_assert (statusbar);
 
-	gnome_appbar_push (GNOME_APPBAR (appbar), _("Simulator: Idle"));
+	gtk_statusbar_push (GTK_STATUSBAR (statusbar), gtk_statusbar_get_context_id (GTK_STATUSBAR(statusbar), "Simulator"), _("Simulator: Idle"));
 
 	/* hook up url handler */
 	gtk_about_dialog_set_url_hook (activate_url, NULL, NULL);

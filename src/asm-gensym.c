@@ -25,7 +25,6 @@
 #include "asm-gensym.h"
 #include "asm-ds-symtable.h"
 #include "asm-err-comm.h"
-#include <gnome.h>
 
 gboolean
 asm_gensym_generate (AsmSource * src, gint sa)

@@ -27,7 +27,6 @@
 #include "support-common.h"
 #include "8085.h"
 #include "gui-view.h"
-#include <gnome.h>
 
 static GtkTreeStore *store = NULL;
 static GtkTreeView *view = NULL;

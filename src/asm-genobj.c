@@ -27,7 +27,6 @@
 #include "asm-err-comm.h"
 #include "8085.h"
 #include "8085-link.h"
-#include <gnome.h>
 
 #define ASM_GENOBJ_INIT_BYTES 500
 #define ASM_GENOBJ_DS_MAX 1024

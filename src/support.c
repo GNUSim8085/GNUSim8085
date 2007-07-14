@@ -12,8 +12,6 @@
 #include <string.h>
 #include <stdio.h>
 
-#include <gnome.h>
-
 #include "support.h"
 
 GtkWidget*

@@ -29,6 +29,7 @@
 #define __FILE_OP_H__
 
 #include <glib.h>
+#include <libgnome/libgnome.h>
 
 G_BEGIN_DECLS
 

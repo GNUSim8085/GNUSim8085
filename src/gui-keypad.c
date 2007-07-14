@@ -94,9 +94,9 @@ cb_clicked (GtkButton * button, gpointer user_data)
 
 	g_assert (opdata);
 	
-	line_buf = g_string_new ("\t\t");
+	line_buf = g_string_new ("");
 	newop = g_ascii_strdown (opdata->op_str, -1);
-	g_string_append_printf (line_buf, "%s\t", newop);
+	g_string_append_printf (line_buf, "%s ", newop);
 	g_free (newop);
 
 	if (opdata->num_args > 0)
@@ -105,7 +105,7 @@ cb_clicked (GtkButton * button, gpointer user_data)
 		re2 = gui_input_reg (re);
 		if ( !re2 ) goto done;
 		newop = g_ascii_strdown (re2, -1);
-		g_string_append_printf (line_buf, "\t%s", newop);
+		g_string_append_printf (line_buf, " %s", newop);
 		g_free (newop);
 		g_free (re2);
 		if (opdata->num_args > 1)
@@ -126,7 +126,7 @@ cb_clicked (GtkButton * button, gpointer user_data)
 		if (opdata->num_args > 0)
 			g_string_append_printf (line_buf, ", %s", re);
 		else
-			g_string_append_printf (line_buf, "\t%s", re);
+			g_string_append_printf (line_buf, " %s", re);
 		g_free (re);
 	}
 

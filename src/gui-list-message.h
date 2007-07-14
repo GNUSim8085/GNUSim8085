@@ -27,6 +27,7 @@
 #ifndef __GUI_LIST_MESSAGE_H__
 #define __GUI_LIST_MESSAGE_H__
 
+#include <libgnome/libgnome.h>
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS

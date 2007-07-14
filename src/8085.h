@@ -26,6 +26,7 @@
 #define __8085_H__
 
 #include <glib.h>
+#include <libgnome/libgnome.h>
 
 G_BEGIN_DECLS
 /* 16bit Address, 8bit Data */

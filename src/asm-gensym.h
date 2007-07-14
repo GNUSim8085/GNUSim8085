@@ -29,6 +29,7 @@
 #define __ASM_GENSYM_H__
 
 #include <glib.h>
+#include <libgnome/libgnome.h>
 #include "asm-source.h"
 
 G_BEGIN_DECLS

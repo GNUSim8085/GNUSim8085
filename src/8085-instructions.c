@@ -24,7 +24,6 @@
 #endif
 
 #include "8085-instructions.h"
-//#include <gnome.h> /* for translation macros */ FIXME
 #define _(x) x
 
 #define ERR_IV_OP _("Invalid Opcode")

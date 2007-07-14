@@ -12,9 +12,6 @@
 #include <string.h>
 #include <stdio.h>
 
-#include <bonobo.h>
-#include <gnome.h>
-
 #include "callbacks.h"
 #include "interface.h"
 #include "support.h"
@@ -49,11 +46,11 @@ static const GtkActionEntry entries[] = {
   { "ResetAll", GTK_STOCK_REFRESH, "Reset _All", "<control>R", "Reset All", G_CALLBACK(on_reset_all1_activate) },
   { "Assemble", GTK_STOCK_CONVERT, "A_ssemble", "F8", "Only assemble program", G_CALLBACK(on_assemble1_activate) },
   { "Execute", GTK_STOCK_EXECUTE, NULL, "F9", "Execute assembled and loaded program", G_CALLBACK(on_execute1_activate) },
-  { "Listing", GNOME_STOCK_TEXT_BULLETED_LIST, "Show _listing", "<control>L", "Show the source code along with opcodes and operands in hex numbers", G_CALLBACK(on_show_listing1_activate) },
+  { "Listing", GTK_STOCK_EDIT, "Show _listing", "<control>L", "Show the source code along with opcodes and operands in hex numbers", G_CALLBACK(on_show_listing1_activate) },
   { "StepIn", GTK_STOCK_GO_FORWARD, "Step _in", "F5", "Step in the code", G_CALLBACK(on_step_in1_activate) },
   { "StepOver", GTK_STOCK_GO_UP, "Step o_ver", "F6", "Step over the code without calling functions", G_CALLBACK(on_step_over1_activate) },
   { "StepOut", GTK_STOCK_GO_BACK, "Step _out", "F7", "Step out of the current function", G_CALLBACK(on_step_out1_activate) },
-  { "ToggleBreak", GNOME_STOCK_ATTACH, "Toggle _breakpoint", "<control>B", "Toggles breakpoint at current line", G_CALLBACK(on_toggle_breakpoint1_activate) },
+  { "ToggleBreak", GTK_STOCK_NO, "Toggle _breakpoint", "<control>B", "Toggles breakpoint at current line", G_CALLBACK(on_toggle_breakpoint1_activate) },
   { "ClearBreak", NULL, "_Clear all breakpoints", "<control><shift>B", "Remove all breakpoints", G_CALLBACK(on_clear_all_breakpoints1_activate) },
   { "StopExec", GTK_STOCK_STOP, "Stop execution", NULL, "Stop debugging", G_CALLBACK(on_stop_execution1_activate) },
   { "Help", GTK_STOCK_HELP, "_Contents", "F1", NULL, G_CALLBACK(on_help_activate) },
@@ -256,7 +253,9 @@ create_window_main (void)
   GtkWidget *hbox40;
   GtkWidget *image371;
   GtkWidget *label168;
-  GtkWidget *main_appbar;
+  GtkWidget *main_progressbar;
+  GtkWidget *main_statusbar;
+  GtkWidget *status_box;
   GtkTooltips *tooltips;
   GtkActionGroup *action_group;
   GtkUIManager *ui_manager;
@@ -929,9 +928,15 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox40), label168, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label168), GTK_JUSTIFY_LEFT);
 
-  main_appbar = gnome_appbar_new (TRUE, TRUE, GNOME_PREFERENCES_NEVER);
-  gtk_widget_show (main_appbar);
-  gtk_box_pack_end (GTK_BOX (vbox1), main_appbar, FALSE, TRUE, 0);
+  main_progressbar = gtk_progress_bar_new();
+  main_statusbar = gtk_statusbar_new();
+  gtk_widget_show (main_progressbar);
+  gtk_widget_show (main_statusbar);
+  status_box = gtk_hbox_new(FALSE, 2);
+  gtk_widget_show (status_box);
+  gtk_box_pack_end (GTK_BOX (vbox1), status_box, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (status_box), main_progressbar, FALSE, TRUE, 2);
+  gtk_box_pack_start (GTK_BOX (status_box), main_statusbar, TRUE, TRUE, 2);
 
   g_signal_connect ((gpointer) window_main, "delete_event",
                     G_CALLBACK (on_window_main_delete_event),
@@ -1085,7 +1090,8 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, hbox40, "hbox40");
   GLADE_HOOKUP_OBJECT (window_main, image371, "image371");
   GLADE_HOOKUP_OBJECT (window_main, label168, "label168");
-  GLADE_HOOKUP_OBJECT (window_main, main_appbar, "main_appbar");
+  GLADE_HOOKUP_OBJECT (window_main, main_progressbar, "main_progressbar");
+  GLADE_HOOKUP_OBJECT (window_main, main_statusbar, "main_statusbar");
   GLADE_HOOKUP_OBJECT_NO_REF (window_main, tooltips, "tooltips");
   GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/New"), "newfile"); 
   GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/Open"), "openfile"); 
@@ -1420,7 +1426,6 @@ create_dialog_isymbol (void)
   GtkWidget *label170;
   GtkWidget *hbox44;
   GtkWidget *label171;
-  GtkWidget *entry1;
   GtkWidget *isymbol_entry;
   GtkWidget *hbox45;
   GtkWidget *label174;
@@ -1473,12 +1478,10 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox44), label171, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label171), GTK_JUSTIFY_LEFT);
 
-  entry1 = gnome_entry_new (NULL);
-  gtk_widget_show (entry1);
-  gtk_box_pack_start (GTK_BOX (hbox44), entry1, TRUE, TRUE, 0);
-
-  isymbol_entry = gnome_entry_gtk_entry (GNOME_ENTRY (entry1));
+  isymbol_entry = gtk_entry_new ();
   gtk_widget_show (isymbol_entry);
+
+  gtk_box_pack_start (GTK_BOX (hbox44), isymbol_entry, TRUE, TRUE, 0);
 
   hbox45 = gtk_hbox_new (TRUE, 5);
   gtk_widget_show (hbox45);
@@ -1564,7 +1567,6 @@ create_dialog_isymbol (void)
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label170, "label170");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox44, "hbox44");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label171, "label171");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, entry1, "entry1");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_entry, "isymbol_entry");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox45, "hbox45");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label174, "label174");

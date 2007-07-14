@@ -28,6 +28,7 @@
 #define __ASM_LISTING_H__
 
 #include <glib.h>
+#include <libgnome/libgnome.h>
 #include "asm-source.h"
 
 G_BEGIN_DECLS

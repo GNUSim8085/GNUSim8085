@@ -29,7 +29,6 @@
 #include <glib.h>
 #include <stdio.h>		//TODO: remove those non-glib funcs
 #include <string.h>
-#include <gnome.h>
 
 #define MAX_ERR_MSG_SIZE 512
 
@@ -150,17 +149,16 @@ file_op_editor_new (void)
 \n\
 ;<Program title>\n\
 \n\
-\t\tjmp start\n\
+jmp start\n\
 \n\
 ;data\n\
 \n\
 \n\
 ;code\n\
-start:\t\tnop\n\
+start: nop\n\
 \n\
 \n\
-\t\thlt\n\
-";
+hlt";
 
 	if (G_UNLIKELY (file_name))
 	{

@@ -26,7 +26,6 @@
 #include "8085-instructions.h"
 #include <string.h>		/* for memset */
 #include "8085-memblock.h"
-#include <gnome.h> /* for translation macros */
 
 /* errors */
 char *err_regname = N_("None of RegName"); 

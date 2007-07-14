@@ -32,7 +32,6 @@
 #include "8085-link.h"
 #include "gui-view.h"
 #include "gui-list-stack.h"
-#include <gnome.h>
 
 #define SIM_PROG_RUNNING _("Simulator: Program running")
 
@@ -58,8 +57,8 @@ static guint16 about_to_execute_from = 0;
 static AsmSource *ds_source = NULL;
 static EefMemBlock *ds_memblock = NULL;
 
-/* appbar id */
-GtkWidget *appbar = NULL;
+/* statusbar id */
+GtkWidget *statusbar = NULL;
 
 /* Methods */
 BState
@@ -71,7 +70,7 @@ b_get_state (void)
 static void
 _end_of_exec (void)
 {
-	gnome_appbar_pop (GNOME_APPBAR(appbar));
+	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"));
 	//gui_list_stack_reset ();
 }
 
@@ -175,7 +174,6 @@ _bridge_8085_cb (eef_addr_t addr, eef_addr_t prev_addr, gboolean finished)
 		saved_and_assembled_successfully = FALSE;
 		bridge_debug_this_line (0, -1);
 		gui_editor_set_readonly (app->editor, FALSE);
-		//gnome_appbar_pop (appbar);
 		_end_of_exec ();
 		return TRUE;	/* caller is going to return */
 	}
@@ -278,9 +276,9 @@ b_init (void)
 	/* set callback */
 	eef_set_trace_callback (_bridge_8085_cb);
 
-	/* set appbar id */
-	appbar = lookup_widget (app->window_main, "main_appbar");
-	g_assert (appbar);
+	/* set statusbar id */
+	statusbar = lookup_widget (app->window_main, "main_statusbar");
+	g_assert (statusbar);
 	_update_gui_state();
 }
 
@@ -297,10 +295,10 @@ b_assemble (char *text, guint16 start_addr)
 
 	sys.reg.sph = 0xff;
 	sys.reg.spl = 0xff;
-	gnome_appbar_push (GNOME_APPBAR(appbar), _("Assembler: running"));
+        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _("Assembler: running"));
 	saved_and_assembled_successfully =
 		eef_asm_assemble (text, start_addr, &ds_source, &ds_memblock);
-	gnome_appbar_pop (GNOME_APPBAR(appbar));
+	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"));
 
 	if (saved_and_assembled_successfully)
 		last_loaded_address = start_addr;
@@ -340,9 +338,9 @@ b_execute (void)
 		state = B_STATE_DEBUG;
 
 	gui_editor_set_readonly (app->editor, TRUE);
-	gnome_appbar_push (GNOME_APPBAR(appbar), SIM_PROG_RUNNING);
+        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _(SIM_PROG_RUNNING));
 	return eef_execute_from (last_loaded_address, &executed_bytes, -1);
-	gnome_appbar_pop (GNOME_APPBAR(appbar));
+	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"));
 }
 
 gboolean
@@ -371,7 +369,7 @@ b_resume_execution (BTraceMode tmode)
 					eef_link_get_line_no
 					(about_to_execute_from));
 
-		gnome_appbar_push (GNOME_APPBAR(appbar), SIM_PROG_RUNNING);
+                gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _(SIM_PROG_RUNNING));
 		return TRUE;
 	}
 
@@ -379,9 +377,8 @@ b_resume_execution (BTraceMode tmode)
 	ess_trace_mode = tmode;
 
 	gui_editor_set_readonly (app->editor, TRUE);
-	gnome_appbar_push (GNOME_APPBAR(appbar), SIM_PROG_RUNNING);
+        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _(SIM_PROG_RUNNING));
 	r = eef_execute_from (about_to_execute_from, &executed_bytes, -1);
-	//gnome_appbar_pop (appbar);
 	_end_of_exec ();
 
 	return r;
@@ -414,7 +411,6 @@ b_debug_stop (void)
 	bridge_debug_this_line (0, -1);	/* clear display */
 	_update_gui_state ();
 
-	//gnome_appbar_pop (appbar);
 	_end_of_exec ();
 	gui_editor_set_readonly (app->editor, FALSE);
 }

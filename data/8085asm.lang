@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language _name="8085 Assembly" version="1.0" _section="Sources" mimetypes="text/x-asm">
+<language _name="8085 Assembly" version="1.0" _section="Sources" mimetypes="text/plain">
 	
 	<escape-char>\</escape-char>
 
@@ -28,17 +28,15 @@
 		<keyword>an(a|i)</keyword>
 		<keyword>call</keyword>
 		<keyword>c(c|m|p|z)</keyword>
-		<keyword>cm(a|ci|p|c)</keyword>
+		<keyword>cm(a|c|p)</keyword>
 		<keyword>cn(c|z)</keyword>
 		<keyword>cp(e|i|o)</keyword>
 		<keyword>da(a|d)</keyword>
-		<keyword>d(b|s)</keyword>
 		<keyword>dc(r|x)</keyword>
 		<keyword>(d|e)i</keyword>
-		<keyword>equ</keyword>
 		<keyword>hlt</keyword>
 		<keyword>i(n|nr|nx)</keyword>
-      		<keyword>j(c|m|p|zi|mp|z)</keyword>
+      		<keyword>j(c|m|p|z|mp)</keyword>
 		<keyword>jn(c|z)</keyword>
 		<keyword>jp(e|o)</keyword>
 		<keyword>ld(a|ax)</keyword>

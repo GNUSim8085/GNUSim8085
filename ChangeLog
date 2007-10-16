@@ -1,3 +1,27 @@
+2007-10-16  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+        * configure*: Lower the versions of dependencies to the actual
+	required. Bump application version to 1.3.2.
+	* aclocal.m4: Automatically updated
+	* debian/patches/*: Remove patches used for fixing debian build and
+	dependencies' versions.
+	* src/*: Remove ambiguous message about keypad stability. Fix bug
+	#1683342.
+	* data/8085asm.lang: Fix bug #1683228.
+	* po/*: Fix debian build. .pot file automatically updated.
+
+2007-09-22  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+        * debian/*: Multiple changes and patches to fix debian build and lower
+	build dependency to the actual required. No changes to source.
+
+2007-08-31  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+        * src/interface.c: Some cleanup in dialogs. Also don't use hard coded
+	stock ids.
+
+2007-08-24  Onkar Shinde  <onkarshinde@users.sourceforge.net>
+        * src/*.(c,h): Changes some GNOME widgets to GTK widgets.
+	* configure*, **/Makefile*, aclocal.m4: Check proper versions while
+	checking development packages, more verbose errors.
+
 2007-07-07  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* data/8085asm.lang: Corrected expression for dz and cmc
 	* src/: Replace most GNOME UI widgets with GTK+ widgets. Move

@@ -34,6 +34,8 @@
 #include "8085.h"
 #include "asm-source.h"
 
+#define SIM_CONTEXT "Simulator"
+
 G_BEGIN_DECLS
 
 /* the state of the application */

@@ -33,6 +33,8 @@
 		<keyword>cp(e|i|o)</keyword>
 		<keyword>da(a|d)</keyword>
 		<keyword>dc(r|x)</keyword>
+		<keyword>d(b|s)</keyword>
+		<keyword>equ</keyword>
 		<keyword>(d|e)i</keyword>
 		<keyword>hlt</keyword>
 		<keyword>i(n|nr|nx)</keyword>

@@ -125,7 +125,7 @@ _connect_cb_callback (GtkWidget * list, GtkEntry * centry)
 	/* set entry text */
 	GtkWidget *entry;
 
-	entry = lookup_widget (cdialog, "isymbol_entry");
+	entry = lookup_widget (cdialog, "entry1");
 	g_assert (entry);
 
 	gtk_entry_set_text (GTK_ENTRY (entry),
@@ -170,7 +170,7 @@ gui_input_symbol (void)
 	{
 		GtkWidget *entry;
 
-		entry = lookup_widget (dig, "isymbol_entry");
+		entry = lookup_widget (dig, "entry1");
 		g_assert (entry);
 
 		symbol_name =

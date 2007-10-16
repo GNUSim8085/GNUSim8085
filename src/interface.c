@@ -160,7 +160,7 @@ create_window_main (void)
   GtkWidget *main_reg_spl;
   GtkWidget *main_reg_int_reg;
   GtkWidget *label106;
-  GtkWidget *hbox34;
+  GtkWidget *registersbox;
   GtkWidget *image365;
   GtkWidget *label96;
   GtkWidget *frame10;
@@ -175,7 +175,7 @@ create_window_main (void)
   GtkWidget *main_flag_ac;
   GtkWidget *main_flag_p;
   GtkWidget *main_flag_c;
-  GtkWidget *hbox35;
+  GtkWidget *flagsbox;
   GtkWidget *image366;
   GtkWidget *label163;
   GtkWidget *frame12;
@@ -249,7 +249,6 @@ create_window_main (void)
   GtkWidget *label149;
   GtkWidget *frame14;
   GtkWidget *main_keypad_scroll;
-  GtkWidget *label169;
   GtkWidget *hbox40;
   GtkWidget *image371;
   GtkWidget *label168;
@@ -474,17 +473,17 @@ create_window_main (void)
                     (GtkAttachOptions) (0), 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label106), TRUE);
 
-  hbox34 = gtk_hbox_new (FALSE, 5);
-  gtk_widget_show (hbox34);
-  gtk_frame_set_label_widget (GTK_FRAME (frame9), hbox34);
+  registersbox = gtk_hbox_new (FALSE, 5);
+  gtk_widget_show (registersbox);
+  gtk_frame_set_label_widget (GTK_FRAME (frame9), registersbox);
 
-  image365 = gtk_image_new_from_stock ("gtk-sort-ascending", GTK_ICON_SIZE_BUTTON);
+  image365 = gtk_image_new_from_stock (GTK_STOCK_SORT_ASCENDING, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image365);
-  gtk_box_pack_start (GTK_BOX (hbox34), image365, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (registersbox), image365, TRUE, TRUE, 0);
 
   label96 = gtk_label_new (_("<b>Registers</b>"));
   gtk_widget_show (label96);
-  gtk_box_pack_start (GTK_BOX (hbox34), label96, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (registersbox), label96, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label96), TRUE);
   gtk_label_set_justify (GTK_LABEL (label96), GTK_JUSTIFY_LEFT);
 
@@ -565,17 +564,17 @@ create_window_main (void)
                     (GtkAttachOptions) (GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
-  hbox35 = gtk_hbox_new (FALSE, 5);
-  gtk_widget_show (hbox35);
-  gtk_frame_set_label_widget (GTK_FRAME (frame10), hbox35);
+  flagsbox = gtk_hbox_new (FALSE, 5);
+  gtk_widget_show (flagsbox);
+  gtk_frame_set_label_widget (GTK_FRAME (frame10), flagsbox);
 
-  image366 = gtk_image_new_from_stock ("gtk-sort-ascending", GTK_ICON_SIZE_BUTTON);
+  image366 = gtk_image_new_from_stock (GTK_STOCK_SORT_ASCENDING, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image366);
-  gtk_box_pack_start (GTK_BOX (hbox35), image366, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (flagsbox), image366, TRUE, TRUE, 0);
 
   label163 = gtk_label_new (_("<b>Flag</b>"));
   gtk_widget_show (label163);
-  gtk_box_pack_start (GTK_BOX (hbox35), label163, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (flagsbox), label163, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label163), TRUE);
   gtk_label_set_justify (GTK_LABEL (label163), GTK_JUSTIFY_LEFT);
 
@@ -617,7 +616,7 @@ create_window_main (void)
   gtk_widget_show (hbox30);
   gtk_container_add (GTK_CONTAINER (alignment7), hbox30);
 
-  image293 = gtk_image_new_from_stock ("gtk-go-forward", GTK_ICON_SIZE_BUTTON);
+  image293 = gtk_image_new_from_stock (GTK_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image293);
   gtk_box_pack_start (GTK_BOX (hbox30), image293, FALSE, FALSE, 0);
 
@@ -655,7 +654,7 @@ create_window_main (void)
   gtk_widget_show (hbox31);
   gtk_container_add (GTK_CONTAINER (alignment8), hbox31);
 
-  image294 = gtk_image_new_from_stock ("gtk-go-forward", GTK_ICON_SIZE_BUTTON);
+  image294 = gtk_image_new_from_stock (GTK_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image294);
   gtk_box_pack_start (GTK_BOX (hbox31), image294, FALSE, FALSE, 0);
 
@@ -668,7 +667,7 @@ create_window_main (void)
   gtk_widget_show (hbox38);
   gtk_frame_set_label_widget (GTK_FRAME (frame12), hbox38);
 
-  image369 = gtk_image_new_from_stock ("gtk-dialog-info", GTK_ICON_SIZE_BUTTON);
+  image369 = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image369);
   gtk_box_pack_start (GTK_BOX (hbox38), image369, TRUE, TRUE, 0);
 
@@ -723,7 +722,7 @@ create_window_main (void)
   gtk_widget_show (hbox16);
   gtk_container_add (GTK_CONTAINER (alignment4), hbox16);
 
-  image226 = gtk_image_new_from_stock ("gtk-refresh", GTK_ICON_SIZE_BUTTON);
+  image226 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image226);
   gtk_box_pack_start (GTK_BOX (hbox16), image226, FALSE, FALSE, 0);
 
@@ -736,7 +735,7 @@ create_window_main (void)
   gtk_widget_show (hbox36);
   gtk_frame_set_label_widget (GTK_FRAME (frame6), hbox36);
 
-  image367 = gtk_image_new_from_stock ("gtk-justify-fill", GTK_ICON_SIZE_BUTTON);
+  image367 = gtk_image_new_from_stock (GTK_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image367);
   gtk_box_pack_start (GTK_BOX (hbox36), image367, TRUE, TRUE, 0);
 
@@ -787,7 +786,7 @@ create_window_main (void)
   gtk_widget_show (hbox17);
   gtk_container_add (GTK_CONTAINER (alignment5), hbox17);
 
-  image227 = gtk_image_new_from_stock ("gtk-refresh", GTK_ICON_SIZE_BUTTON);
+  image227 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image227);
   gtk_box_pack_start (GTK_BOX (hbox17), image227, FALSE, FALSE, 0);
 
@@ -800,7 +799,7 @@ create_window_main (void)
   gtk_widget_show (hbox37);
   gtk_frame_set_label_widget (GTK_FRAME (frame8), hbox37);
 
-  image368 = gtk_image_new_from_stock ("gtk-justify-fill", GTK_ICON_SIZE_BUTTON);
+  image368 = gtk_image_new_from_stock (GTK_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image368);
   gtk_box_pack_start (GTK_BOX (hbox37), image368, TRUE, TRUE, 0);
 
@@ -863,7 +862,7 @@ create_window_main (void)
   gtk_widget_show (hbox25);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 0), hbox25);
 
-  image232 = gtk_image_new_from_stock ("gtk-execute", GTK_ICON_SIZE_BUTTON);
+  image232 = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image232);
   gtk_box_pack_start (GTK_BOX (hbox25), image232, TRUE, TRUE, 0);
 
@@ -891,7 +890,7 @@ create_window_main (void)
   gtk_widget_show (hbox26);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 1), hbox26);
 
-  image233 = gtk_image_new_from_stock ("gtk-execute", GTK_ICON_SIZE_BUTTON);
+  image233 = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image233);
   gtk_box_pack_start (GTK_BOX (hbox26), image233, TRUE, TRUE, 0);
 
@@ -910,16 +909,11 @@ create_window_main (void)
   gtk_container_add (GTK_CONTAINER (frame14), main_keypad_scroll);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_keypad_scroll), GTK_SHADOW_OUT);
 
-  label169 = gtk_label_new (_("(KeyPad not very stable.\nCheck out for v1.4)"));
-  gtk_widget_show (label169);
-  gtk_frame_set_label_widget (GTK_FRAME (frame14), label169);
-  gtk_label_set_justify (GTK_LABEL (label169), GTK_JUSTIFY_LEFT);
-
   hbox40 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox40);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 2), hbox40);
 
-  image371 = gtk_image_new_from_stock ("gtk-index", GTK_ICON_SIZE_BUTTON);
+  image371 = gtk_image_new_from_stock (GTK_STOCK_INDEX, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image371);
   gtk_box_pack_start (GTK_BOX (hbox40), image371, TRUE, TRUE, 0);
 
@@ -999,7 +993,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_reg_spl, "main_reg_spl");
   GLADE_HOOKUP_OBJECT (window_main, main_reg_int_reg, "main_reg_int_reg");
   GLADE_HOOKUP_OBJECT (window_main, label106, "label106");
-  GLADE_HOOKUP_OBJECT (window_main, hbox34, "hbox34");
+  GLADE_HOOKUP_OBJECT (window_main, registersbox, "registersbox");
   GLADE_HOOKUP_OBJECT (window_main, image365, "image365");
   GLADE_HOOKUP_OBJECT (window_main, label96, "label96");
   GLADE_HOOKUP_OBJECT (window_main, frame10, "frame10");
@@ -1014,7 +1008,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_flag_ac, "main_flag_ac");
   GLADE_HOOKUP_OBJECT (window_main, main_flag_p, "main_flag_p");
   GLADE_HOOKUP_OBJECT (window_main, main_flag_c, "main_flag_c");
-  GLADE_HOOKUP_OBJECT (window_main, hbox35, "hbox35");
+  GLADE_HOOKUP_OBJECT (window_main, flagsbox, "flagsbox");
   GLADE_HOOKUP_OBJECT (window_main, image366, "image366");
   GLADE_HOOKUP_OBJECT (window_main, label163, "label163");
   GLADE_HOOKUP_OBJECT (window_main, frame12, "frame12");
@@ -1086,7 +1080,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label149, "label149");
   GLADE_HOOKUP_OBJECT (window_main, frame14, "frame14");
   GLADE_HOOKUP_OBJECT (window_main, main_keypad_scroll, "main_keypad_scroll");
-  GLADE_HOOKUP_OBJECT (window_main, label169, "label169");
   GLADE_HOOKUP_OBJECT (window_main, hbox40, "hbox40");
   GLADE_HOOKUP_OBJECT (window_main, image371, "image371");
   GLADE_HOOKUP_OBJECT (window_main, label168, "label168");
@@ -1175,10 +1168,6 @@ create_window_listing (void)
   GtkWidget *listing_vbox;
   GtkWidget *hbuttonbox1;
   GtkWidget *listing_save;
-  GtkWidget *alignment11;
-  GtkWidget *hbox39;
-  GtkWidget *image370;
-  GtkWidget *label167;
 
   window_listing = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window_listing), _("Assembler Listing"));
@@ -1200,26 +1189,11 @@ create_window_listing (void)
   gtk_box_pack_start (GTK_BOX (listing_vbox), hbuttonbox1, FALSE, FALSE, 0);
 
   listing_save = gtk_button_new ();
+  gtk_button_set_label (GTK_BUTTON(listing_save), _("Save to file"));
+  gtk_button_set_image (GTK_BUTTON(listing_save), gtk_image_new_from_stock (GTK_STOCK_SAVE_AS, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (listing_save);
   gtk_container_add (GTK_CONTAINER (hbuttonbox1), listing_save);
   GTK_WIDGET_SET_FLAGS (listing_save, GTK_CAN_DEFAULT);
-
-  alignment11 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment11);
-  gtk_container_add (GTK_CONTAINER (listing_save), alignment11);
-
-  hbox39 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox39);
-  gtk_container_add (GTK_CONTAINER (alignment11), hbox39);
-
-  image370 = gtk_image_new_from_stock ("gtk-save", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image370);
-  gtk_box_pack_start (GTK_BOX (hbox39), image370, FALSE, FALSE, 0);
-
-  label167 = gtk_label_new_with_mnemonic (_("Save to file"));
-  gtk_widget_show (label167);
-  gtk_box_pack_start (GTK_BOX (hbox39), label167, FALSE, FALSE, 0);
-  gtk_label_set_justify (GTK_LABEL (label167), GTK_JUSTIFY_LEFT);
 
   g_signal_connect ((gpointer) listing_save, "clicked",
                     G_CALLBACK (on_listing_save_clicked),
@@ -1230,10 +1204,6 @@ create_window_listing (void)
   GLADE_HOOKUP_OBJECT (window_listing, listing_vbox, "listing_vbox");
   GLADE_HOOKUP_OBJECT (window_listing, hbuttonbox1, "hbuttonbox1");
   GLADE_HOOKUP_OBJECT (window_listing, listing_save, "listing_save");
-  GLADE_HOOKUP_OBJECT (window_listing, alignment11, "alignment11");
-  GLADE_HOOKUP_OBJECT (window_listing, hbox39, "hbox39");
-  GLADE_HOOKUP_OBJECT (window_listing, image370, "image370");
-  GLADE_HOOKUP_OBJECT (window_listing, label167, "label167");
 
   return window_listing;
 }
@@ -1249,17 +1219,9 @@ create_window_start (void)
   GtkWidget *vbox17;
   GtkWidget *label159;
   GtkWidget *start_but_tutorial;
-  GtkWidget *alignment9;
-  GtkWidget *hbox32;
-  GtkWidget *image310;
-  GtkWidget *label160;
   GtkWidget *vbox18;
   GtkWidget *label161;
   GtkWidget *start_but_open;
-  GtkWidget *alignment10;
-  GtkWidget *hbox33;
-  GtkWidget *image311;
-  GtkWidget *label162;
   GtkWidget *label158;
   GtkWidget *start_but_close;
   GtkWidget *label166;
@@ -1306,26 +1268,11 @@ create_window_start (void)
   gtk_misc_set_alignment (GTK_MISC (label159), 0, 0.5);
 
   start_but_tutorial = gtk_button_new ();
+  gtk_button_set_label (GTK_BUTTON(start_but_tutorial), _("_Tutorial"));
+  gtk_button_set_image (GTK_BUTTON(start_but_tutorial), gtk_image_new_from_stock (GTK_STOCK_HELP, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (start_but_tutorial);
   gtk_box_pack_start (GTK_BOX (vbox17), start_but_tutorial, FALSE, FALSE, 0);
   gtk_tooltips_set_tip (tooltips, start_but_tutorial, _("A short tutorial on writing assembly code!"), NULL);
-
-  alignment9 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment9);
-  gtk_container_add (GTK_CONTAINER (start_but_tutorial), alignment9);
-
-  hbox32 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox32);
-  gtk_container_add (GTK_CONTAINER (alignment9), hbox32);
-
-  image310 = gtk_image_new_from_stock ("gtk-help", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image310);
-  gtk_box_pack_start (GTK_BOX (hbox32), image310, FALSE, FALSE, 0);
-
-  label160 = gtk_label_new_with_mnemonic (_("Tutorial"));
-  gtk_widget_show (label160);
-  gtk_box_pack_start (GTK_BOX (hbox32), label160, FALSE, FALSE, 0);
-  gtk_label_set_justify (GTK_LABEL (label160), GTK_JUSTIFY_LEFT);
 
   vbox18 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox18);
@@ -1340,33 +1287,18 @@ create_window_start (void)
   gtk_misc_set_alignment (GTK_MISC (label161), 0, 0.5);
 
   start_but_open = gtk_button_new ();
+  gtk_button_set_label (GTK_BUTTON(start_but_open), _("_Open program"));
+  gtk_button_set_image (GTK_BUTTON(start_but_open), gtk_image_new_from_stock (GTK_STOCK_OPEN, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (start_but_open);
   gtk_box_pack_start (GTK_BOX (vbox18), start_but_open, FALSE, FALSE, 0);
   gtk_tooltips_set_tip (tooltips, start_but_open, _("Open an already saved program"), NULL);
-
-  alignment10 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment10);
-  gtk_container_add (GTK_CONTAINER (start_but_open), alignment10);
-
-  hbox33 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox33);
-  gtk_container_add (GTK_CONTAINER (alignment10), hbox33);
-
-  image311 = gtk_image_new_from_stock ("gtk-open", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image311);
-  gtk_box_pack_start (GTK_BOX (hbox33), image311, FALSE, FALSE, 0);
-
-  label162 = gtk_label_new_with_mnemonic (_("Open program"));
-  gtk_widget_show (label162);
-  gtk_box_pack_start (GTK_BOX (hbox33), label162, FALSE, FALSE, 0);
-  gtk_label_set_justify (GTK_LABEL (label162), GTK_JUSTIFY_LEFT);
 
   label158 = gtk_label_new (_("What do you want to do now?"));
   gtk_widget_show (label158);
   gtk_frame_set_label_widget (GTK_FRAME (frame13), label158);
   gtk_label_set_justify (GTK_LABEL (label158), GTK_JUSTIFY_LEFT);
 
-  start_but_close = gtk_button_new_from_stock ("gtk-close");
+  start_but_close = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
   gtk_widget_show (start_but_close);
   gtk_box_pack_end (GTK_BOX (vbox15), start_but_close, FALSE, FALSE, 0);
   GTK_WIDGET_SET_FLAGS (start_but_close, GTK_CAN_DEFAULT);
@@ -1396,17 +1328,9 @@ create_window_start (void)
   GLADE_HOOKUP_OBJECT (window_start, vbox17, "vbox17");
   GLADE_HOOKUP_OBJECT (window_start, label159, "label159");
   GLADE_HOOKUP_OBJECT (window_start, start_but_tutorial, "start_but_tutorial");
-  GLADE_HOOKUP_OBJECT (window_start, alignment9, "alignment9");
-  GLADE_HOOKUP_OBJECT (window_start, hbox32, "hbox32");
-  GLADE_HOOKUP_OBJECT (window_start, image310, "image310");
-  GLADE_HOOKUP_OBJECT (window_start, label160, "label160");
   GLADE_HOOKUP_OBJECT (window_start, vbox18, "vbox18");
   GLADE_HOOKUP_OBJECT (window_start, label161, "label161");
   GLADE_HOOKUP_OBJECT (window_start, start_but_open, "start_but_open");
-  GLADE_HOOKUP_OBJECT (window_start, alignment10, "alignment10");
-  GLADE_HOOKUP_OBJECT (window_start, hbox33, "hbox33");
-  GLADE_HOOKUP_OBJECT (window_start, image311, "image311");
-  GLADE_HOOKUP_OBJECT (window_start, label162, "label162");
   GLADE_HOOKUP_OBJECT (window_start, label158, "label158");
   GLADE_HOOKUP_OBJECT (window_start, start_but_close, "start_but_close");
   GLADE_HOOKUP_OBJECT (window_start, label166, "label166");
@@ -1426,7 +1350,7 @@ create_dialog_isymbol (void)
   GtkWidget *label170;
   GtkWidget *hbox44;
   GtkWidget *label171;
-  GtkWidget *isymbol_entry;
+  GtkWidget *entry1;
   GtkWidget *hbox45;
   GtkWidget *label174;
   GtkWidget *isymbol_variables;
@@ -1440,13 +1364,14 @@ create_dialog_isymbol (void)
   GtkWidget *isymbol_macros;
   GtkWidget *isymbol_macros_entry;
   GtkWidget *dialog_action_area1;
-  GtkWidget *cancelbutton1;
-  GtkWidget *okbutton1;
 
-  dialog_isymbol = gtk_dialog_new ();
-  gtk_window_set_title (GTK_WINDOW (dialog_isymbol), _("Choose a symbol"));
+  dialog_isymbol = gtk_dialog_new_with_buttons (_("Choose a symbol"),
+                                                  NULL,
+                                                  GTK_DIALOG_MODAL,
+                                                  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                                                  GTK_STOCK_OK, GTK_RESPONSE_OK,
+                                                  NULL);
   gtk_window_set_position (GTK_WINDOW (dialog_isymbol), GTK_WIN_POS_MOUSE);
-  gtk_window_set_modal (GTK_WINDOW (dialog_isymbol), TRUE);
   gtk_window_set_resizable (GTK_WINDOW (dialog_isymbol), FALSE);
   dialog_isymbol_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");
   if (dialog_isymbol_icon_pixbuf)
@@ -1478,10 +1403,9 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox44), label171, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label171), GTK_JUSTIFY_LEFT);
 
-  isymbol_entry = gtk_entry_new ();
-  gtk_widget_show (isymbol_entry);
-
-  gtk_box_pack_start (GTK_BOX (hbox44), isymbol_entry, TRUE, TRUE, 0);
+  entry1 = gtk_entry_new ();
+  gtk_widget_show (entry1);
+  gtk_box_pack_start (GTK_BOX (hbox44), entry1, TRUE, TRUE, 0);
 
   hbox45 = gtk_hbox_new (TRUE, 5);
   gtk_widget_show (hbox45);
@@ -1550,16 +1474,6 @@ create_dialog_isymbol (void)
   gtk_widget_show (dialog_action_area1);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (dialog_action_area1), GTK_BUTTONBOX_END);
 
-  cancelbutton1 = gtk_button_new_from_stock ("gtk-cancel");
-  gtk_widget_show (cancelbutton1);
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog_isymbol), cancelbutton1, GTK_RESPONSE_CANCEL);
-  GTK_WIDGET_SET_FLAGS (cancelbutton1, GTK_CAN_DEFAULT);
-
-  okbutton1 = gtk_button_new_from_stock ("gtk-ok");
-  gtk_widget_show (okbutton1);
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog_isymbol), okbutton1, GTK_RESPONSE_OK);
-  GTK_WIDGET_SET_FLAGS (okbutton1, GTK_CAN_DEFAULT);
-
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_isymbol, "dialog_isymbol");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_vbox1, "dialog_vbox1");
@@ -1567,7 +1481,7 @@ create_dialog_isymbol (void)
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label170, "label170");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox44, "hbox44");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label171, "label171");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_entry, "isymbol_entry");
+  GLADE_HOOKUP_OBJECT (dialog_isymbol, entry1, "entry1");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox45, "hbox45");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label174, "label174");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_variables, "isymbol_variables");
@@ -1581,10 +1495,8 @@ create_dialog_isymbol (void)
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros, "isymbol_macros");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros_entry, "isymbol_macros_entry");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_action_area1, "dialog_action_area1");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, cancelbutton1, "cancelbutton1");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, okbutton1, "okbutton1");
 
-  gtk_widget_grab_focus (isymbol_entry);
+  gtk_widget_grab_focus (entry1);
   return dialog_isymbol;
 }
 
@@ -1597,11 +1509,13 @@ create_dialog_ireg (void)
   GtkWidget *ireg;
   GtkWidget *ireg_entry;
   GtkWidget *dialog_action_area2;
-  GtkWidget *cancelbutton2;
-  GtkWidget *okbutton2;
 
-  dialog_ireg = gtk_dialog_new ();
-  gtk_window_set_title (GTK_WINDOW (dialog_ireg), _("Choose a register"));
+  dialog_ireg = gtk_dialog_new_with_buttons (_("Choose a register"),
+                                                  NULL,
+                                                  GTK_DIALOG_MODAL,
+                                                  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                                                  GTK_STOCK_OK, GTK_RESPONSE_OK,
+                                                  NULL);
   gtk_window_set_position (GTK_WINDOW (dialog_ireg), GTK_WIN_POS_MOUSE);
   gtk_window_set_resizable (GTK_WINDOW (dialog_ireg), FALSE);
   dialog_ireg_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");
@@ -1628,24 +1542,12 @@ create_dialog_ireg (void)
   gtk_widget_show (dialog_action_area2);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (dialog_action_area2), GTK_BUTTONBOX_END);
 
-  cancelbutton2 = gtk_button_new_from_stock ("gtk-cancel");
-  gtk_widget_show (cancelbutton2);
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog_ireg), cancelbutton2, GTK_RESPONSE_CANCEL);
-  GTK_WIDGET_SET_FLAGS (cancelbutton2, GTK_CAN_DEFAULT);
-
-  okbutton2 = gtk_button_new_from_stock ("gtk-ok");
-  gtk_widget_show (okbutton2);
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog_ireg), okbutton2, GTK_RESPONSE_OK);
-  GTK_WIDGET_SET_FLAGS (okbutton2, GTK_CAN_DEFAULT);
-
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_ireg, "dialog_ireg");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_vbox2, "dialog_vbox2");
   GLADE_HOOKUP_OBJECT (dialog_ireg, ireg, "ireg");
   GLADE_HOOKUP_OBJECT (dialog_ireg, ireg_entry, "ireg_entry");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_action_area2, "dialog_action_area2");
-  GLADE_HOOKUP_OBJECT (dialog_ireg, cancelbutton2, "cancelbutton2");
-  GLADE_HOOKUP_OBJECT (dialog_ireg, okbutton2, "okbutton2");
 
   return dialog_ireg;
 }

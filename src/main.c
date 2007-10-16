@@ -46,6 +46,7 @@ main (int argc, char *argv[])
 
 	gnome_program_init (PACKAGE, VERSION, LIBGNOMEUI_MODULE,
 			    argc, argv,
+			    GNOME_PARAM_HUMAN_READABLE_NAME, _("8085 Simulator"),
 			    GNOME_PARAM_APP_DATADIR, PACKAGE_DATA_DIR, NULL);
 
 	/* create app */

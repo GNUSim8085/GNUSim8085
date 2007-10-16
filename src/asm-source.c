@@ -428,8 +428,8 @@ asm_source_entry_parse_not_operand_but_this (AsmSourceEntry * entry,
 			return FALSE;
 		}
 
-		if (sym->data == NULL)
-			return FALSE;
+		/* if (sym->data == NULL)
+			return FALSE;*/
 
 		*value = GPOINTER_TO_INT (sym->data) + val;
 		return TRUE;

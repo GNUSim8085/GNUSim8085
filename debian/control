@@ -1,13 +1,14 @@
 Source: gnusim8085
-Section: electronics
+Section: universe/electronics
 Priority: optional
+XSBC-Original-Maintainer: Onkar Shinde <onkarshinde@gmail.com>
 Maintainer: Onkar Shinde <onkarshinde@gmail.com>
-Build-Depends: debhelper (>= 5), autotools-dev, automake1.9, libgnomeui-dev, libgtk2.0-dev (>= 2.6.0), libgtksourceview-dev
+Build-Depends: debhelper (>= 5), autotools-dev, automake1.9, dpatch, libgnomeui-dev (>= 2.16.0), libgtk2.0-dev (>= 2.8.0), libgtksourceview-dev (>= 1.8.0)
 Build-Conflicts: autoconf2.13, automake1.4 
 Standards-Version: 3.7.2.1
 
 Package: gnusim8085
-Section: electronics
+Section: universe/electronics
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Graphical Intel 8085 simulator, assembler and debugger

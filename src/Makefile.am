@@ -5,7 +5,9 @@
 ## 	Please disable it in the Anjuta project configuration
 
 INCLUDES = \
-	$(GNOME_CFLAGS)
+	$(LIBGNOMEUI_CFLAGS)\
+        $(GTK_CFLAGS)\
+        $(GTKSOURCEVIEW_CFLAGS)
 
 gnusim8085_CFLAGS =\
 	 -Wall\
@@ -81,4 +83,6 @@ gnusim8085_SOURCES = \
 gnusim8085_LDFLAGS = 
 
 gnusim8085_LDADD =  \
-	$(GNOME_LIBS)
+	$(LIBGNOMEUI_LIBS)\
+        $(GTK_LIBS)\
+        $(GTKSOURCEVIEW_LIBS)

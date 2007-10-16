@@ -70,7 +70,7 @@ b_get_state (void)
 static void
 _end_of_exec (void)
 {
-	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"));
+	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT));
 	//gui_list_stack_reset ();
 }
 
@@ -295,10 +295,10 @@ b_assemble (char *text, guint16 start_addr)
 
 	sys.reg.sph = 0xff;
 	sys.reg.spl = 0xff;
-        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _("Assembler: running"));
+        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT),  _("Assembler: running"));
 	saved_and_assembled_successfully =
 		eef_asm_assemble (text, start_addr, &ds_source, &ds_memblock);
-	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"));
+	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT));
 
 	if (saved_and_assembled_successfully)
 		last_loaded_address = start_addr;
@@ -338,9 +338,9 @@ b_execute (void)
 		state = B_STATE_DEBUG;
 
 	gui_editor_set_readonly (app->editor, TRUE);
-        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _(SIM_PROG_RUNNING));
+        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT),  _(SIM_PROG_RUNNING));
 	return eef_execute_from (last_loaded_address, &executed_bytes, -1);
-	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"));
+	gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT));
 }
 
 gboolean
@@ -369,7 +369,7 @@ b_resume_execution (BTraceMode tmode)
 					eef_link_get_line_no
 					(about_to_execute_from));
 
-                gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _(SIM_PROG_RUNNING));
+                gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT),  _(SIM_PROG_RUNNING));
 		return TRUE;
 	}
 
@@ -377,7 +377,7 @@ b_resume_execution (BTraceMode tmode)
 	ess_trace_mode = tmode;
 
 	gui_editor_set_readonly (app->editor, TRUE);
-        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), "Simulator"),  _(SIM_PROG_RUNNING));
+        gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT),  _(SIM_PROG_RUNNING));
 	r = eef_execute_from (about_to_execute_from, &executed_bytes, -1);
 	_end_of_exec ();
 

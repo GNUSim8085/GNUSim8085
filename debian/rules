@@ -30,7 +30,7 @@ ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 endif
 
 
-config.status: configure
+config.status: patch configure
 	dh_testdir
 #ifneq "$(wildcard /usr/share/misc/config.sub)" ""
 #+	cp -f /usr/share/misc/config.sub config.sub
@@ -50,7 +50,8 @@ build-stamp: config.status
 	$(MAKE)
 	touch $@
 
-clean:
+clean: clean-patched unpatch
+clean-patched:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
@@ -58,6 +59,15 @@ clean:
 	-$(MAKE) -i distclean
 	-if [ -f Makefile ] ; then $(MAKE) distclean ; fi
 	dh_clean
+
+patch: patch-stamp
+patch-stamp:
+	dpatch apply-all
+	dpatch cat-all >patch-stamp
+
+unpatch:
+	dpatch deapply-all
+	rm -rf patch-stamp debian/patched
 
 install: build
 	dh_testdir

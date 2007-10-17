@@ -1,3 +1,12 @@
+GNUSim8085 1.3.2 (20 Feb 2007)
+
+Fix:     Configure script exits silently (after checking for GNOME)
+Fix:     8085asm.lang file doesn't include some keywords
+FIX:     Assemble Error (equ/in)
+New:     Some code cleanup to use GTK+ widgets instead of GNOME widgets.
+New:     The instruction added using keypad now has single space (' ') instead of tabs ('\t') as field separater.
+New:     Fix 'make distcheck' as well as debian build.
+
 GNUSim8085 1.3 (20 Feb 2007)
 
 New:     Use gtksourceview as editor component.

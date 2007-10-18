@@ -131,16 +131,16 @@
 	* Update to scintilla 1.66
 	* Updated build scripts
 
-2004-01-25  Sridhar Ratna  <srid@nearfar.org>
+2004-01-25  Sridhar Ratnakumar  <srid@nearfar.org>
 	* 8085-instructions.h: removed 'extern' just before G_END_DECLS (fixes string.h bug)
 	* *.*: _() macro, now working
 	* glade: icon for all dialogs
 
-2004-01-01  Sridhar Ratna  <srid@nearfar.org>
+2004-01-01  Sridhar Ratnakumar  <srid@nearfar.org>
 	* gui-app.c: removed gdk* functions
 	* *.c: encapsulated all strings in _() macro for translation
 
-2003-12-30  Sridhar Ratna  <srid@nearfar.org>
+2003-12-30  Sridhar Ratnakumar  <srid@nearfar.org>
 	* 8085-instructions.c: In _eef_inst_func_47, fixed ~(instead of !)
 	* 8085-instructions.c: In _eef_is_carry, return value of op '-' changed
 	* 8085-instructions.c: ADD, ADC, SUB, SBB M bug fixed
@@ -149,59 +149,59 @@
 	* 8085-instructions.c: Oops! XCHG was not at all implemented. Now done.
 	* glade: Hacked glade sources and saved the changes in tools/glade_reinsert.c
 
-2003-12-28  Sridhar Ratna  <srid@nearfar.org>
+2003-12-28  Sridhar Ratnakumar  <srid@nearfar.org>
 	* asm-id.c: Fixed *ACI* bug
 	* 8085-instructions.c: ACI int-len 1 -> 2
 	* 8085-instructions.c: Fixed add(sub)-with-carry function
 
-2003-12-07  Sridhar Ratna  <srid@nearfar.org>
+2003-12-07  Sridhar Ratnakumar  <srid@nearfar.org>
 	* 8085-instructions.c: Added warning messages for unimplemented instructions
 
-2003-12-07  Sridhar Ratna  <srid@nearfar.org>
+2003-12-07  Sridhar Ratnakumar  <srid@nearfar.org>
 	* gui-keypad.c: fixed crash bug in cb_clicked (which is why that large gap!)
 	* gui-editor.*: added gui_editor_grab_focus
 	* asm-id-info.*: added to project
 	* *: modified all files to reflect the new mail-id 
 	* asm-ds-limits.h: opcode length = 5 (smaller size!)
 	
-2003-11-21  Sridhar Ratna  <srid@nearfar.org>
+2003-11-21  Sridhar Ratnakumar  <srid@nearfar.org>
 	* gui-input-symbol.c: added gui_input_reg()
 	* asm-id.*: added util funcs
 	* gui-keypad.c: 90% completed
 	* scintilla sources: funcs to insert text
 	* project: added dependency "libiconv" - otherwise i get linker error FIXME
 
-2003-11-11  Sridhar Ratna  <srid@nearfar.org>
+2003-11-11  Sridhar Ratnakumar  <srid@nearfar.org>
 	* asm-id.c: removed double semi-colon (thanks Shaun)
 
-2003-11-04  Sridhar Ratna  <srid@nearfar.org>
+2003-11-04  Sridhar Ratnakumar  <srid@nearfar.org>
 	* *: Fixed anjuta project to include doc files
 	
-2003-11-03  Sridhar Ratna  <srid@nearfar.org>
+2003-11-03  Sridhar Ratnakumar  <srid@nearfar.org>
 	* file-op.c: on creating new file template code is set
 	* *.*: autoconf is working properly in slackware
 
-2003-11-02  Sridhar Ratna  <srid@nearfar.org>
+2003-11-02  Sridhar Ratnakumar  <srid@nearfar.org>
 	* file-op.c: dialogs will now be modal
 	* callbacks.c: removed funcs file_ok_sel, i_save
 	* warnings: suppressed all warnings (platform: slackware 9)
 	* *.c: changed g_sprintf to g_snprinf, so more stable software!
 	* main.c: filename can be passed in command line!
 
-2003-10-24  Sridhar Ratna  <srid@nearfar.org>
+2003-10-24  Sridhar Ratnakumar  <srid@nearfar.org>
 	* gui-input-symbol.c: made it working ;-)g
 	* file-op.c: changed error messages format
 
-2003-10-09  Sridhar Ratna  <srid@nearfar.org>
+2003-10-09  Sridhar Ratnakumar  <srid@nearfar.org>
 	* gui-keypad.[ch]: added files
 
-2003-10-04  Sridhar Ratna  <srid@nearfar.org>
+2003-10-04  Sridhar Ratnakumar  <srid@nearfar.org>
 	* :moved all *.h files in include/ to src/
 
-2003-09-31  Sridhar Ratna  <srid@nearfar.org>
+2003-09-31  Sridhar Ratnakumar  <srid@nearfar.org>
 	* 8085-instructions.c: shld, ral, rar, stc - modified
 
-2003-08-26  Sridhar Ratna  <srid@nearfar.org>
+2003-08-26  Sridhar Ratnakumar  <srid@nearfar.org>
 	* bridge.c: clear the stack
 	* gui-list-stack.c: stack view is working (in beta)
 	* gui-list-stack.c: <-- started working after beta release -->
@@ -215,19 +215,19 @@
 	* [*].c: replaced "gnome_error_dialog" with "gtk_message_dialog"
 	* gui-list-stack.c: fixed add() 8bit - 16bit data
 
-2003-08-13  Sridhar Ratna  <srid@nearfar.org>
+2003-08-13  Sridhar Ratnakumar  <srid@nearfar.org>
 
 	* 8085-asm.c: Show success msg after assembling
 	* gui-list-data.c: changed globals to static
 	* 8085-[ins*].c: added support for stack change callback
 
-2003-08-04  Sridhar Ratna  <srid@nearfar.org>
+2003-08-04  Sridhar Ratnakumar  <srid@nearfar.org>
 
 	* file-op.c: Each file-selection dialog has its own title
 	* bridge.c: addes statusbar information display
 	* gui-view.c: fixed io-mem-update bug.
 
-2003-08-03  Sridhar Ratna  <srid@nearfar.org>
+2003-08-03  Sridhar Ratnakumar  <srid@nearfar.org>
 
 	* asm-gen[sym,obj].c: fixed assembler syntax - "equ" symbol - used with pseudo ops also
 	* sci*face.cc: fixed "last char not begin saved" bug - (len ==> len + 1)
@@ -236,7 +236,7 @@
 	* :-- Added copyright messages to all source files written my me!
 	* bridge.c: fixed: breakpoints are considered only when not stepping!
 
-2003-07-31  Sridhar Ratna  <srid@nearfar.org>
+2003-07-31  Sridhar Ratnakumar  <srid@nearfar.org>
 
 	* bridge.c: Implemented "step in", "step out"
 	* callbacks.c: glade update
@@ -249,6 +249,6 @@
 	* file-op.c: added automatic breakpoint syntax for assembly code
 	* scintilla: archives (binaries) are replaced with sources (lesser package size!)
 
-2003-07-25  Sridhar Ratna  <srid@nearfar.org>
+2003-07-25  Sridhar Ratnakumar  <srid@nearfar.org>
 
 	* :Released 1.1 (first stable release) with lot of bugs, of course! (coded in just 2 days!)

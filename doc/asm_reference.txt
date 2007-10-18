@@ -1,7 +1,7 @@
 
 GNUSim8085 Assembler Reference Manual
 =====================================
-Author: Sridhar Ratna <srid@nearfar.org>
+Author: Sridhar Ratnakumar <srid@nearfar.org>
 
 
 1. Introduction

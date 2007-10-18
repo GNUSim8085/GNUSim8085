@@ -1114,7 +1114,7 @@ create_dialog_about (void)
 {
   const gchar *authors[] = {
     "Main programmer and founder:",
-    "Sridhar Ratna (srid@nearfar.org)",
+    "Sridhar Ratnakumar (srid@nearfar.org)",
     "\n",
     "Maintainers and Developers:",
     "Aanjhan Ranganathan (aanjhan@tuxmaniac.com)",
@@ -1122,12 +1122,12 @@ create_dialog_about (void)
     NULL
   };
   const gchar *documenters[] = {
-    "Sridhar Ratna (srid@nearfar.org)",
+    "Sridhar Ratnakumar (srid@nearfar.org)",
     NULL
   };
   /* TRANSLATORS: Replace this string with your names, one name per line. */
   gchar *name = "GNUSim8085";
-  gchar *copyright = "Copyright (C) 2003 Sridhar Ratna";
+  gchar *copyright = "Copyright (C) 2003 Sridhar Ratnakumar";
   gchar *comments = "8085 Microprocessor Simulator";
   gchar *translators = _("translator_credits");
   gchar *website = "http://gnusim8085.sourceforge.net/";

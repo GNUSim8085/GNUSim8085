@@ -428,6 +428,8 @@ asm_source_entry_parse_not_operand_but_this (AsmSourceEntry * entry,
 			return FALSE;
 		}
 
+		// This code is disabled to fix the bug #1683342
+		// See http://lustymonk.livejournal.com/1997.html
 		/* if (sym->data == NULL)
 			return FALSE;*/
 

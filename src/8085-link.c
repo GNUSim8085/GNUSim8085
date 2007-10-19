@@ -1,21 +1,21 @@
 /*
-	Copyright (C) 2003  Sridhar Ratnakumar <srid@nearfar.org>
+  Copyright (C) 2003  Sridhar Ratnakumar <srid@nearfar.org>
 	
-	This file is part of GNUSim8085.
+  This file is part of GNUSim8085.
 
-	GNUSim8085 is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
+  GNUSim8085 is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
 
-	GNUSim8085 is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+  GNUSim8085 is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
 
-	You should have received a copy of the GNU General Public License
-	along with GNUSim8085; if not, write to the Free Software
-	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  You should have received a copy of the GNU General Public License
+  along with GNUSim8085; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "8085-link.h"
@@ -28,21 +28,21 @@ static gint link_data[LINK_TOTAL] = { -1 };
 /* clear stuff - call this before assembly */
 void eef_link_clear (void)
 {
-	int i;
-	for (i=0; i<LINK_TOTAL; i++)
-		link_data[i] = -1;
+  int i;
+  for (i=0; i<LINK_TOTAL; i++)
+	link_data[i] = -1;
 }
 
 /* add address, lineno */
 void eef_link_add (gint addr, gint lineno)
 {
-	g_assert (addr < LINK_TOTAL && addr >= 0 );
-	link_data[addr] = lineno;
+  g_assert (addr < LINK_TOTAL && addr >= 0 );
+  link_data[addr] = lineno;
 }
 
 /* main func */
 gint eef_link_get_line_no (gint addr)
 {
-	g_assert (addr < LINK_TOTAL && addr >= 0 );
-	return link_data[addr];
+  g_assert (addr < LINK_TOTAL && addr >= 0 );
+  return link_data[addr];
 }

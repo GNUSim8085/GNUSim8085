@@ -1,21 +1,21 @@
 /*
-	Copyright (C) 2003  Sridhar Ratnakumar <srid@nearfar.org>
+  Copyright (C) 2003  Sridhar Ratnakumar <srid@nearfar.org>
 	
-	This file is part of GNUSim8085.
+  This file is part of GNUSim8085.
 
-	GNUSim8085 is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
+  GNUSim8085 is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
 
-	GNUSim8085 is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+  GNUSim8085 is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
 
-	You should have received a copy of the GNU General Public License
-	along with GNUSim8085; if not, write to the Free Software
-	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  You should have received a copy of the GNU General Public License
+  along with GNUSim8085; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 /*
  * The Core 8085 Microprocessor definition
@@ -38,28 +38,28 @@ typedef guint8 eef_data_t;
 /* CPU Registers */
 typedef struct _EefReg
 {
-	eef_data_t a, b, c, d, e, h, l;
-	eef_data_t pswh, pswl;
-	eef_data_t pch, pcl, sph, spl;
-	eef_data_t int_reg;
+  eef_data_t a, b, c, d, e, h, l;
+  eef_data_t pswh, pswl;
+  eef_data_t pch, pcl, sph, spl;
+  eef_data_t int_reg;
 } EefReg;
 
 /* CPU Flags */
 /*typedef struct _EefFlag
-{
-	unsigned s:1;
-	unsigned z:1;
-	unsigned ac:1;
-	unsigned p:1;
-	unsigned c:1;
-} EefFlag;*/
+  {
+  unsigned s:1;
+  unsigned z:1;
+  unsigned ac:1;
+  unsigned p:1;
+  unsigned c:1;
+  } EefFlag;*/
 typedef struct _EefFlag
 {
-	gboolean s;
-	gboolean z;
-	gboolean ac;
-	gboolean p;
-	gboolean c;
+  gboolean s;
+  gboolean z;
+  gboolean ac;
+  gboolean p;
+  gboolean c;
 } EefFlag;
 
 /* EefFlag to eef_data_t for push to stack then push psw */
@@ -76,27 +76,27 @@ typedef eef_data_t EefIO[EEF_DATA_T_MAX + 1];
 /* System (One Instance) */
 typedef struct _EefSystem
 {
-	EefReg reg;
-	EefFlag flag;
-	EefMem mem;
-	EefIO io;
+  EefReg reg;
+  EefFlag flag;
+  EefMem mem;
+  EefIO io;
 
-	/* --private-- (don't touch directly) */
-	gboolean int_enable;
+  /* --private-- (don't touch directly) */
+  gboolean int_enable;
 } EefSystem;
 
 typedef enum
-{
+  {
 	EEF_MM_UPDATE,		/* memory change */
 	EEF_IO_UPDATE,		/* io change */
 
 	EEF_ERROR		/* Execute error */
-} EefEvent;
+  } EefEvent;
 
 typedef void (*EefSigHandle) (EefEvent evt, gpointer data);
 
-#define EEF_SET_PTR(ptr, val) \
-	if ( ptr ) *ptr=val
+#define EEF_SET_PTR(ptr, val)					\
+  if ( ptr ) *ptr=val
 
 /* reset func */
 void eef_reset_reg (void);
@@ -113,7 +113,7 @@ void eef_signal_connect (EefEvent evt, EefSigHandle hdl);
 /* return if exceeds max_bytes */
 gboolean
 eef_execute_from (eef_addr_t sa, eef_addr_t * executed_bytes,
-		  eef_addr_t max_bytes);
+				  eef_addr_t max_bytes);
 
 /* byte order */
 eef_addr_t eef_swap_bytes (eef_addr_t data);
@@ -157,8 +157,8 @@ void eef_load_mem_block (gpointer mem_block);
 /* system */
 extern EefSystem sys;
 
-#define EEF_CLEAR(structure) \
-	memset( &structure, 0, sizeof(structure) )
+#define EEF_CLEAR(structure)					\
+  memset( &structure, 0, sizeof(structure) )
 
 eef_data_t eef_get_op_at_addr (eef_addr_t addr);
 
@@ -169,7 +169,7 @@ eef_addr_t eef_pc_get (void);
 
 /* Callbacks */
 typedef gboolean (*EefTraceCallback) (eef_addr_t addr, eef_addr_t prev_addr,
-				      gboolean finished);
+									  gboolean finished);
 
 void eef_set_trace_callback (EefTraceCallback cb);
 

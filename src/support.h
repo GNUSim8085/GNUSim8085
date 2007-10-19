@@ -25,7 +25,7 @@ GtkWidget*  lookup_widget              (GtkWidget       *widget,
  * you want returned.
  */
 GtkAction*  lookup_action_widget              (GtkWidget       *widget,
-                                        const gchar     *widget_name);
+											   const gchar     *widget_name);
 
 
 /*

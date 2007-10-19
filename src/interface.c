@@ -16,15 +16,15 @@
 #include "interface.h"
 #include "support.h"
 
-#define GLADE_HOOKUP_OBJECT(component,widget,name) \
-  g_object_set_data_full (G_OBJECT (component), name, \
-    gtk_widget_ref (widget), (GDestroyNotify) gtk_widget_unref)
+#define GLADE_HOOKUP_OBJECT(component,widget,name)						\
+  g_object_set_data_full (G_OBJECT (component), name,					\
+						  gtk_widget_ref (widget), (GDestroyNotify) gtk_widget_unref)
 
-#define GLADE_HOOKUP_ACTION_OBJECT(component,widget,name) \
-  g_object_set_data_full (G_OBJECT (component), name, \
-    g_object_ref (widget), (GDestroyNotify) g_object_unref)
+#define GLADE_HOOKUP_ACTION_OBJECT(component,widget,name)				\
+  g_object_set_data_full (G_OBJECT (component), name,					\
+						  g_object_ref (widget), (GDestroyNotify) g_object_unref)
 
-#define GLADE_HOOKUP_OBJECT_NO_REF(component,widget,name) \
+#define GLADE_HOOKUP_OBJECT_NO_REF(component,widget,name)	\
   g_object_set_data (G_OBJECT (component), name, widget)
 
 static const GtkActionEntry entries[] = {
@@ -60,69 +60,69 @@ static const GtkActionEntry entries[] = {
 };
 
 static const char *ui_description =
-"<ui>"
-"  <menubar name='MainMenu'>"
-"    <menu action='FileMenu'>"
-"      <menuitem action='New'/>"
-"      <menuitem action='Open'/>"
-"      <menuitem action='Save'/>"
-"      <menuitem action='SaveAs'/>"
-"      <separator/>"
-"      <menuitem action='Quit'/>"
-"    </menu>"
-"    <menu action='ResetMenu'>"
-"      <menuitem action='Registers'/>"
-"      <menuitem action='Flags'/>"
-"      <menuitem action='IOPorts'/>"
-"      <menuitem action='Memory'/>"
-"      <separator/>"
-"      <menuitem action='ResetAll'/>"
-"    </menu>"
-"    <menu action='AssemblerMenu'>"
-"      <menuitem action='Assemble'/>"
-"      <menuitem action='Execute'/>"
-"      <separator/>"
-"      <menuitem action='Listing'/>"
-"    </menu>"
-"    <menu action='DebugMenu'>"
-"      <menuitem action='StepIn'/>"
-"      <menuitem action='StepOver'/>"
-"      <menuitem action='StepOut'/>"
-"      <separator/>"
-"      <menu action='BreakPointMenu'>"
-"        <menuitem action='ToggleBreak'/>"
-"        <separator/>"
-"        <menuitem action='ClearBreak'/>"
-"      </menu>"
-"      <separator/>"
-"      <menuitem action='StopExec'/>"
-"    </menu>"
-"    <menu action='HelpMenu'>"
-"      <menuitem action='Help'/>"
-"      <separator/>"
-"      <menuitem action='Manual'/>"
-"      <menuitem action='Reference'/>"
-"      <separator/>"
-"      <menuitem action='About'/>"
-"    </menu>"
-"  </menubar>"
-"  <toolbar name='MainToolBar'>"
-"    <toolitem action='New'/>"
-"    <toolitem action='Open'/>"
-"    <toolitem action='Save'/>"
-"    <toolitem action='SaveAs'/>"
-"    <separator/>"
-"    <toolitem action='Assemble'/>"
-"    <toolitem action='Execute'/>"
-"    <separator/>"
-"    <toolitem action='StepIn'/>"
-"    <toolitem action='StepOver'/>"
-"    <toolitem action='StepOut'/>"
-"    <separator/>"
-"    <toolitem action='ToggleBreak'/>"
-"    <toolitem action='StopExec'/>"
-"  </toolbar>"
-"</ui>";
+  "<ui>"
+  "  <menubar name='MainMenu'>"
+  "    <menu action='FileMenu'>"
+  "      <menuitem action='New'/>"
+  "      <menuitem action='Open'/>"
+  "      <menuitem action='Save'/>"
+  "      <menuitem action='SaveAs'/>"
+  "      <separator/>"
+  "      <menuitem action='Quit'/>"
+  "    </menu>"
+  "    <menu action='ResetMenu'>"
+  "      <menuitem action='Registers'/>"
+  "      <menuitem action='Flags'/>"
+  "      <menuitem action='IOPorts'/>"
+  "      <menuitem action='Memory'/>"
+  "      <separator/>"
+  "      <menuitem action='ResetAll'/>"
+  "    </menu>"
+  "    <menu action='AssemblerMenu'>"
+  "      <menuitem action='Assemble'/>"
+  "      <menuitem action='Execute'/>"
+  "      <separator/>"
+  "      <menuitem action='Listing'/>"
+  "    </menu>"
+  "    <menu action='DebugMenu'>"
+  "      <menuitem action='StepIn'/>"
+  "      <menuitem action='StepOver'/>"
+  "      <menuitem action='StepOut'/>"
+  "      <separator/>"
+  "      <menu action='BreakPointMenu'>"
+  "        <menuitem action='ToggleBreak'/>"
+  "        <separator/>"
+  "        <menuitem action='ClearBreak'/>"
+  "      </menu>"
+  "      <separator/>"
+  "      <menuitem action='StopExec'/>"
+  "    </menu>"
+  "    <menu action='HelpMenu'>"
+  "      <menuitem action='Help'/>"
+  "      <separator/>"
+  "      <menuitem action='Manual'/>"
+  "      <menuitem action='Reference'/>"
+  "      <separator/>"
+  "      <menuitem action='About'/>"
+  "    </menu>"
+  "  </menubar>"
+  "  <toolbar name='MainToolBar'>"
+  "    <toolitem action='New'/>"
+  "    <toolitem action='Open'/>"
+  "    <toolitem action='Save'/>"
+  "    <toolitem action='SaveAs'/>"
+  "    <separator/>"
+  "    <toolitem action='Assemble'/>"
+  "    <toolitem action='Execute'/>"
+  "    <separator/>"
+  "    <toolitem action='StepIn'/>"
+  "    <toolitem action='StepOver'/>"
+  "    <toolitem action='StepOut'/>"
+  "    <separator/>"
+  "    <toolitem action='ToggleBreak'/>"
+  "    <toolitem action='StopExec'/>"
+  "  </toolbar>"
+  "</ui>";
 
 GtkWidget*
 create_window_main (void)
@@ -1106,7 +1106,7 @@ create_window_main (void)
 void
 activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
 {
-        gnome_url_show_on_screen (url, NULL, NULL);
+  gnome_url_show_on_screen (url, NULL, NULL);
 }
 
 void
@@ -1140,24 +1140,24 @@ create_dialog_about (void)
 
   dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");
   gtk_show_about_dialog (NULL,
-			"name", name,
-			"version", VERSION,
-			"comments", comments,
-			"copyright", copyright,
-			"website", website,
-			"logo", dialog_about_logo_pixbuf,
-			"icon", dialog_about_icon_pixbuf,
-			"authors", authors,
-			"documenters", documenters,
-			"translator-credits", translators,
-			"border-width", 5,
-			NULL);
+						 "name", name,
+						 "version", VERSION,
+						 "comments", comments,
+						 "copyright", copyright,
+						 "website", website,
+						 "logo", dialog_about_logo_pixbuf,
+						 "icon", dialog_about_icon_pixbuf,
+						 "authors", authors,
+						 "documenters", documenters,
+						 "translator-credits", translators,
+						 "border-width", 5,
+						 NULL);
 
   if (dialog_about_icon_pixbuf)
-      g_object_unref (dialog_about_icon_pixbuf);
+	g_object_unref (dialog_about_icon_pixbuf);
     
   if (dialog_about_logo_pixbuf)
-      g_object_unref (dialog_about_logo_pixbuf);
+	g_object_unref (dialog_about_logo_pixbuf);
 }
 
 GtkWidget*
@@ -1366,11 +1366,11 @@ create_dialog_isymbol (void)
   GtkWidget *dialog_action_area1;
 
   dialog_isymbol = gtk_dialog_new_with_buttons (_("Choose a symbol"),
-                                                  NULL,
-                                                  GTK_DIALOG_MODAL,
-                                                  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                                                  GTK_STOCK_OK, GTK_RESPONSE_OK,
-                                                  NULL);
+												NULL,
+												GTK_DIALOG_MODAL,
+												GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+												GTK_STOCK_OK, GTK_RESPONSE_OK,
+												NULL);
   gtk_window_set_position (GTK_WINDOW (dialog_isymbol), GTK_WIN_POS_MOUSE);
   gtk_window_set_resizable (GTK_WINDOW (dialog_isymbol), FALSE);
   dialog_isymbol_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");
@@ -1511,11 +1511,11 @@ create_dialog_ireg (void)
   GtkWidget *dialog_action_area2;
 
   dialog_ireg = gtk_dialog_new_with_buttons (_("Choose a register"),
-                                                  NULL,
-                                                  GTK_DIALOG_MODAL,
-                                                  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                                                  GTK_STOCK_OK, GTK_RESPONSE_OK,
-                                                  NULL);
+											 NULL,
+											 GTK_DIALOG_MODAL,
+											 GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+											 GTK_STOCK_OK, GTK_RESPONSE_OK,
+											 NULL);
   gtk_window_set_position (GTK_WINDOW (dialog_ireg), GTK_WIN_POS_MOUSE);
   gtk_window_set_resizable (GTK_WINDOW (dialog_ireg), FALSE);
   dialog_ireg_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");

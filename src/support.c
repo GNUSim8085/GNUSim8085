@@ -42,7 +42,7 @@ lookup_widget                          (GtkWidget       *widget,
 
 GtkAction*
 lookup_action_widget                          (GtkWidget       *widget,
-                                        const gchar     *widget_name)
+											   const gchar     *widget_name)
 {
   GtkWidget *parent;
   GtkAction *found_widget;
@@ -76,7 +76,7 @@ create_pixmap                          (GtkWidget       *widget,
   gchar *pathname;
 
   if (!filename || !filename[0])
-      return gtk_image_new ();
+	return gtk_image_new ();
 
   pathname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
                                         filename, TRUE, NULL);
@@ -100,7 +100,7 @@ create_pixbuf                          (const gchar     *filename)
   GError *error = NULL;
 
   if (!filename || !filename[0])
-      return NULL;
+	return NULL;
 
   pathname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
                                         filename, TRUE, NULL);

@@ -1,4 +1,4 @@
-;See docs/asm_reference.txt before
+;See docs/asm-guide.txt before
 ;continuing
 
 ;solution to N-Queens problem
@@ -10,7 +10,7 @@
 ;2. Click "execute" again for next 
 ;   solution.
 ;3. For more information see 
-;   doc/asm_reference.txt
+;   doc/asm-guide.txt
 
 
 	jmp	start	;skip data

@@ -7,7 +7,7 @@ can also run on several window managers.
 
 You have to enter assembly code in order to use the simulator.  The
 assembly syntax is not too hard to learn. For more information see
-"asm_reference.txt" in the doc/ directory.
+"asm-guide.txt" in the doc/ directory.
 
 Keypad(Entering opcodes by pressing buttons!) feauture is being
 planned.  Variable declarations are supported in assembler.  You have

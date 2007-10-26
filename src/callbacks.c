@@ -518,7 +518,7 @@ on_start_but_tutorial_clicked (GtkButton * button, gpointer user_data)
 {
   gchar *msg =
 	_("Do the following\n\n\
-1. Read \"asm_reference.txt\" for assembler tutorial\n\
+1. Read \"asm-guide.txt\" for assembler tutorial\n\
 2. Open \"examples/nqueens.asm\" and simulate it.\n\n\
 Usually these files will be found in your system document directory,\n\
 which can be one of the following\n\n\

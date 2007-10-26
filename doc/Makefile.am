@@ -7,7 +7,7 @@
 gnusim8085_docdir = $(prefix)/@NO_PREFIX_PACKAGE_DOC_DIR@
 
 gnusim8085_doc_DATA = \
-	asm_reference.txt\
+	asm-guide.txt\
 	examples/readme.txt\
 	examples/swap_hex.asm\
 	examples/nqueens.asm\

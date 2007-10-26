@@ -1,4 +1,4 @@
-;See docs/asm_reference.txt before
+;See docs/asm-guide.txt before
 ;continuing
 
 ;Just debug this

@@ -8,13 +8,12 @@ gnusim8085_docdir = $(prefix)/@NO_PREFIX_PACKAGE_DOC_DIR@
 
 gnusim8085_doc_DATA = \
 	asm-guide.txt\
-	examples/readme.txt\
-	examples/swap_hex.asm\
+	examples/README\
+	examples/swaphex.asm\
 	examples/nqueens.asm\
-	examples/debug1.asm\
-	examples/bcd_to_bin.asm\
+	examples/debugexample.asm\
+	examples/bcd2bin.asm\
 	gnusim8085.1\
-	examples/instructions_test.asm\
-	examples/addwithcarry_test.asm
+	examples/addwithcarry.asm
 
 EXTRA_DIST = $(gnusim8085_doc_DATA)

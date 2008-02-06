@@ -19,7 +19,6 @@
 */
 
 #include "8085-link.h"
-#include <string.h> /* for memset */
 
 #define LINK_TOTAL 65536
 

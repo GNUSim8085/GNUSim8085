@@ -10,6 +10,7 @@ INCLUDES = \
         $(GTKSOURCEVIEW_CFLAGS)
 
 gnusim8085_CFLAGS =\
+	 -DLOCALEDIR=$(localedir)\
 	 -Wall\
 	 -O1\
 	 -g
@@ -72,7 +73,6 @@ gnusim8085_SOURCES = \
 	gui-list-message.h\
 	gui-list-stack.h\
 	gui-view.h\
-	support-common.h\
 	gui-keypad.h\
 	gui-keypad.c\
 	gui-input-symbol.h\
@@ -86,3 +86,5 @@ gnusim8085_LDADD =  \
 	$(LIBGNOMEUI_LIBS)\
         $(GTK_LIBS)\
         $(GTKSOURCEVIEW_LIBS)
+
+LDADD = @LIBINTL@

@@ -19,7 +19,7 @@
 */
 
 #include "gui-input-symbol.h"
-#include "support-common.h"
+#include "support.h"
 #include "interface.h"
 #include "asm-ds-symtable.h"
 

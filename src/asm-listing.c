@@ -24,7 +24,6 @@
 
 #include "asm-listing.h"
 #include "asm-ds-limits.h"
-#include <string.h>
 
 static GString *
 get_hex_list (const gchar * str, gint * total)

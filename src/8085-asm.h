@@ -30,7 +30,6 @@
 #define __8085_ASM_H__
 
 #include <glib.h>
-#include <libgnome/libgnome.h>
 
 #include "asm-ds-limits.h"
 #include "asm-id.h"

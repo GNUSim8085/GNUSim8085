@@ -178,7 +178,6 @@ module.source.files=\
 	gui-view.h\
 	scintilla-interface.h\
 	scintilla-marshal.h\
-	support-common.h\
 	gui-keypad.h\
 	gui-keypad.c\
 	gui-input-symbol.h\

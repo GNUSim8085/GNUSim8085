@@ -24,7 +24,6 @@
 
 #include "gui-list-data.h"
 #include "gui-app.h"
-#include "support-common.h"
 #include "8085.h"
 #include "gui-view.h"
 

@@ -32,7 +32,7 @@
 
 /* widgets */
 #include "gui-editor.h"
-#include "support-common.h"
+#include "support.h"
 
 G_BEGIN_DECLS typedef struct
 {

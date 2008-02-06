@@ -3,7 +3,7 @@
 ## If you don't want it to overwrite it,
 ## 	Please disable it in the Anjuta project configuration
 
-SUBDIRS = intl po macros src pixmaps doc data
+SUBDIRS = po src pixmaps doc data
 
 gnusim8085docdir = ${prefix}/share/doc/gnusim8085
 gnusim8085doc_DATA = \
@@ -14,7 +14,7 @@ gnusim8085doc_DATA = \
 	TODO\
 	ABOUT-NLS
 
-EXTRA_DIST = $(gnusim8085doc_DATA)
+EXTRA_DIST = config.rpath m4/ChangeLog  $(gnusim8085doc_DATA)
 
 gnomemenudir = $(prefix)/@NO_PREFIX_PACKAGE_MENU_DIR@/Development
 gnomemenu_DATA = GNUSim8085.desktop
@@ -31,3 +31,5 @@ dist-hook:
 
 
 
+
+ACLOCAL_AMFLAGS = -I m4

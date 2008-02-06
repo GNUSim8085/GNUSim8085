@@ -28,8 +28,9 @@
 #ifndef __FILE_OP_H__
 #define __FILE_OP_H__
 
+#include <stdio.h>              //TODO: remove those non-glib funcs
+#include <string.h>
 #include <glib.h>
-#include <libgnome/libgnome.h>
 
 G_BEGIN_DECLS
 

@@ -26,7 +26,11 @@
 #define __8085_H__
 
 #include <glib.h>
-#include <libgnome/libgnome.h>
+#include <libintl.h>
+#include <string.h>             /* for memset */
+
+#define _(String) gettext (String)
+#define N_(String) String
 
 G_BEGIN_DECLS
 /* 16bit Address, 8bit Data */

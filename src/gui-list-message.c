@@ -24,7 +24,6 @@
 
 #include "gui-list-message.h"
 #include "gui-app.h"
-#include "support-common.h"
 
 static GtkListStore *store = NULL;
 static GtkTreeView *view = NULL;

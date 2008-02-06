@@ -26,9 +26,6 @@
 #include "gui-editor.h"
 #include "gui-app.h"
 #include "interface.h"
-#include <glib.h>
-#include <stdio.h>		//TODO: remove those non-glib funcs
-#include <string.h>
 
 #define MAX_ERR_MSG_SIZE 512
 

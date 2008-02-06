@@ -27,6 +27,7 @@
 #ifndef __GUI_LIST_STACK_H__
 #define __GUI_LIST_STACK_H__
 
+#include <glib.h>
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS void gui_list_stack_attach_me (void);

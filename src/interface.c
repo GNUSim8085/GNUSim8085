@@ -6,12 +6,6 @@
 #  include <config.h>
 #endif
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
-
 #include "callbacks.h"
 #include "interface.h"
 #include "support.h"

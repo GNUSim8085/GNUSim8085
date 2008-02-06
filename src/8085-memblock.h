@@ -30,6 +30,7 @@
 #define __8085_MEMBLOCK_H__
 
 #include <glib.h>
+#include <string.h>             /* for memset */
 #include "8085.h"
 
 G_BEGIN_DECLS 

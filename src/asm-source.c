@@ -27,8 +27,6 @@
 #include "asm-token.h"
 #include "asm-id.h"
 #include "asm-ds-symtable.h"
-#include <stdlib.h>
-#include <string.h>
 
 void
 disp_list (AsmSource * self)

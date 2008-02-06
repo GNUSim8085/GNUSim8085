@@ -29,7 +29,6 @@
 #define __ASM_GENOBJ_H__
 
 #include <glib.h>
-#include <libgnomeui/libgnomeui.h>
 #include "8085-memblock.h"
 #include "asm-source.h"
 

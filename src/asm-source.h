@@ -30,10 +30,14 @@
 #ifndef __ASM_SOURCE_H__
 #define __ASM_SOURCE_H__
 
+#include <libintl.h>
+#include <stdlib.h>
+#include <string.h>
 #include <glib.h>
-#include <libgnome/libgnome.h>
 #include "asm-ds-limits.h"
 #include "asm-id.h"
+
+#define _(String) gettext (String)
 
 G_BEGIN_DECLS typedef struct
 {

@@ -50,7 +50,6 @@ src/gui-list-data.h
 src/gui-list-message.h
 src/gui-list-stack.h
 src/gui-view.h
-src/support-common.h
 src/gui-keypad.h
 src/gui-keypad.c
 src/gui-input-symbol.h

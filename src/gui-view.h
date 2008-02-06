@@ -28,7 +28,7 @@
 #define __GUI_VIEW_H__
 
 #include <gtk/gtk.h>
-#include "support-common.h"
+#include "support.h"
 #include "8085.h"
 
 G_BEGIN_DECLS

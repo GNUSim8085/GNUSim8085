@@ -28,7 +28,6 @@
 #include "8085.h"
 #include "asm-ds-limits.h"
 #include "asm-ds-symtable.h"
-#include <glib.h>
 
 static GtkTreeStore *store = NULL;
 static GtkTreeView *view = NULL;

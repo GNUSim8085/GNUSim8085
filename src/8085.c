@@ -24,7 +24,6 @@
 
 #include "8085.h"
 #include "8085-instructions.h"
-#include <string.h>		/* for memset */
 #include "8085-memblock.h"
 
 /* errors */

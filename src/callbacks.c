@@ -23,7 +23,6 @@
 
 #include "callbacks.h"
 #include "interface.h"
-#include "support-common.h"
 #include "gui-app.h"
 #include "gui-editor.h"
 #include "8085-asm.h"
@@ -32,8 +31,6 @@
 #include "bridge.h"
 #include "asm-listing.h"
 #include "file-op.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 gint start_addr = 0x4200;
 

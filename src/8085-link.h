@@ -30,6 +30,7 @@
 #define __8085_LINK_H__
 
 #include <glib.h>
+#include <string.h> /* for memset */
 
 G_BEGIN_DECLS
 

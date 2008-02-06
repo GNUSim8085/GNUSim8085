@@ -19,7 +19,6 @@
 */
 
 #include "8085-memblock.h"
-#include <string.h>		/* for memset */
 
 EefMemBlock *
 eef_mem_block_new (eef_addr_t max_size)

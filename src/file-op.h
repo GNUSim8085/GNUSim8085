@@ -31,6 +31,7 @@
 #include <stdio.h>              //TODO: remove those non-glib funcs
 #include <string.h>
 #include <glib.h>
+#include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
@@ -45,6 +46,11 @@ void file_op_listing_save (gchar *text);
 
 /* this is will be called from main.c passing argv[1] */
 void ori_open (gchar * fn, gboolean replace);
+
+GtkWidget* create_file_dialog(const gchar *title,
+							  GtkFileChooserAction action,
+							  const gchar *stock);
+
 
 G_END_DECLS
 

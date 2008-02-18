@@ -23,7 +23,6 @@
 #endif
 
 #include <libintl.h>
-#include <libgnomeui/gnome-ui-init.h>
 #include "interface.h"
 #include "gui-app.h"
 #include "gui-list-message.h"
@@ -44,10 +43,7 @@ main (int argc, char *argv[])
   bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
   textdomain (GETTEXT_PACKAGE);
 
-  gnome_program_init (PACKAGE, VERSION, LIBGNOMEUI_MODULE,
-					  argc, argv,
-					  GNOME_PARAM_HUMAN_READABLE_NAME, _("8085 Simulator"),
-					  GNOME_PARAM_APP_DATADIR, PACKAGE_DATA_DIR, NULL);
+  gtk_init (&argc, &argv);
 
   /* create app */
   gui_app_new ();

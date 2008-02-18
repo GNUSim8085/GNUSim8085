@@ -72,8 +72,7 @@ create_pixmap                          (GtkWidget       *widget,
   if (!filename || !filename[0])
 	return gtk_image_new ();
 
-  pathname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-                                        filename, TRUE, NULL);
+  pathname = NULL; // gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,  filename, TRUE, NULL);
   if (!pathname)
     {
       g_warning (_("Couldn't find pixmap file: %s"), filename);
@@ -96,15 +95,14 @@ create_pixbuf                          (const gchar     *filename)
   if (!filename || !filename[0])
 	return NULL;
 
-  pathname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-                                        filename, TRUE, NULL);
+  pathname = NULL; // gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,   filename, TRUE, NULL);
 
-  /* interface.c patch */
+  // interface.c patch
   if (!pathname)
     {
-	  /* temporaray patch
-		 should be reinserted everytime glade overwrites this file
-		 the code can be found in tools/glade_reinsert.c */
+	  // temporaray patch
+	  // should be reinserted everytime glade overwrites this file
+	  // the code can be found in tools/glade_reinsert.c 
 	  GString *str;
 	  str = g_string_new(PACKAGE_PIXMAPS_DIR);
 	  g_string_append(str, "/");

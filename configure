@@ -2078,7 +2078,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=gnusim8085
- VERSION=1.3.2
+ VERSION=1.3.3
 
 
 cat >>confdefs.h <<_ACEOF
@@ -6148,133 +6148,133 @@ echo "${ECHO_T}no" >&6; }
 fi
 
 pkg_failed=no
-{ echo "$as_me:$LINENO: checking for LIBGNOMEUI" >&5
-echo $ECHO_N "checking for LIBGNOMEUI... $ECHO_C" >&6; }
+# { echo "$as_me:$LINENO: checking for LIBGNOMEUI" >&5
+# echo $ECHO_N "checking for LIBGNOMEUI... $ECHO_C" >&6; }
 
-if test -n "$PKG_CONFIG"; then
-    if test -n "$LIBGNOMEUI_CFLAGS"; then
-        pkg_cv_LIBGNOMEUI_CFLAGS="$LIBGNOMEUI_CFLAGS"
-    else
-        if test -n "$PKG_CONFIG" && \
-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomeui-2.0 >= \$libgnomeui_required\"") >&5
-  ($PKG_CONFIG --exists --print-errors "libgnomeui-2.0 >= $libgnomeui_required") 2>&5
-  ac_status=$?
-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-  (exit $ac_status); }; then
-  pkg_cv_LIBGNOMEUI_CFLAGS=`$PKG_CONFIG --cflags "libgnomeui-2.0 >= $libgnomeui_required" 2>/dev/null`
-else
-  pkg_failed=yes
-fi
-    fi
-else
-	pkg_failed=untried
-fi
-if test -n "$PKG_CONFIG"; then
-    if test -n "$LIBGNOMEUI_LIBS"; then
-        pkg_cv_LIBGNOMEUI_LIBS="$LIBGNOMEUI_LIBS"
-    else
-        if test -n "$PKG_CONFIG" && \
-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomeui-2.0 >= \$libgnomeui_required\"") >&5
-  ($PKG_CONFIG --exists --print-errors "libgnomeui-2.0 >= $libgnomeui_required") 2>&5
-  ac_status=$?
-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-  (exit $ac_status); }; then
-  pkg_cv_LIBGNOMEUI_LIBS=`$PKG_CONFIG --libs "libgnomeui-2.0 >= $libgnomeui_required" 2>/dev/null`
-else
-  pkg_failed=yes
-fi
-    fi
-else
-	pkg_failed=untried
-fi
+# if test -n "$PKG_CONFIG"; then
+#     if test -n "$LIBGNOMEUI_CFLAGS"; then
+#         pkg_cv_LIBGNOMEUI_CFLAGS="$LIBGNOMEUI_CFLAGS"
+#     else
+#         if test -n "$PKG_CONFIG" && \
+#     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomeui-2.0 >= \$libgnomeui_required\"") >&5
+#   ($PKG_CONFIG --exists --print-errors "libgnomeui-2.0 >= $libgnomeui_required") 2>&5
+#   ac_status=$?
+#   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+#   (exit $ac_status); }; then
+#   pkg_cv_LIBGNOMEUI_CFLAGS=`$PKG_CONFIG --cflags "libgnomeui-2.0 >= $libgnomeui_required" 2>/dev/null`
+# else
+#   pkg_failed=yes
+# fi
+#     fi
+# else
+# 	pkg_failed=untried
+# fi
+# if test -n "$PKG_CONFIG"; then
+#     if test -n "$LIBGNOMEUI_LIBS"; then
+#         pkg_cv_LIBGNOMEUI_LIBS="$LIBGNOMEUI_LIBS"
+#     else
+#         if test -n "$PKG_CONFIG" && \
+#     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomeui-2.0 >= \$libgnomeui_required\"") >&5
+#   ($PKG_CONFIG --exists --print-errors "libgnomeui-2.0 >= $libgnomeui_required") 2>&5
+#   ac_status=$?
+#   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+#   (exit $ac_status); }; then
+#   pkg_cv_LIBGNOMEUI_LIBS=`$PKG_CONFIG --libs "libgnomeui-2.0 >= $libgnomeui_required" 2>/dev/null`
+# else
+#   pkg_failed=yes
+# fi
+#     fi
+# else
+# 	pkg_failed=untried
+# fi
 
 
 
-if test $pkg_failed = yes; then
+# if test $pkg_failed = yes; then
 
-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
-        _pkg_short_errors_supported=yes
-else
-        _pkg_short_errors_supported=no
-fi
-        if test $_pkg_short_errors_supported = yes; then
-	        LIBGNOMEUI_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libgnomeui-2.0 >= $libgnomeui_required"`
-        else
-	        LIBGNOMEUI_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgnomeui-2.0 >= $libgnomeui_required"`
-        fi
-	# Put the nasty error message in config.log where it belongs
-	echo "$LIBGNOMEUI_PKG_ERRORS" >&5
+# if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+#         _pkg_short_errors_supported=yes
+# else
+#         _pkg_short_errors_supported=no
+# fi
+#         if test $_pkg_short_errors_supported = yes; then
+# 	        LIBGNOMEUI_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libgnomeui-2.0 >= $libgnomeui_required"`
+#         else
+# 	        LIBGNOMEUI_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgnomeui-2.0 >= $libgnomeui_required"`
+#         fi
+# 	# Put the nasty error message in config.log where it belongs
+# 	echo "$LIBGNOMEUI_PKG_ERRORS" >&5
 
-	{ echo "$as_me:$LINENO: result: no" >&5
-echo "${ECHO_T}no" >&6; }
+# 	{ echo "$as_me:$LINENO: result: no" >&5
+# echo "${ECHO_T}no" >&6; }
 
-    { { echo "$as_me:$LINENO: error:
-    Cannot find libgnomeui >= $libgnomeui_required
+#     { { echo "$as_me:$LINENO: error:
+#     Cannot find libgnomeui >= $libgnomeui_required
 
-        Please check the following:
+#         Please check the following:
 
-         * Do you have the libgnomeui development package installed?
-           (usually called libgnomeui-devel for rpm based distros or
-            libgnomeui-dev for deb based distros or similar)
-           If
-               ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
-           reports that the file does not exist, then you are missing
-           the development package.
+#          * Do you have the libgnomeui development package installed?
+#            (usually called libgnomeui-devel for rpm based distros or
+#             libgnomeui-dev for deb based distros or similar)
+#            If
+#                ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
+#            reports that the file does not exist, then you are missing
+#            the development package.
 
-    " >&5
-echo "$as_me: error:
-    Cannot find libgnomeui >= $libgnomeui_required
+#     " >&5
+# echo "$as_me: error:
+#     Cannot find libgnomeui >= $libgnomeui_required
 
-        Please check the following:
+#         Please check the following:
 
-         * Do you have the libgnomeui development package installed?
-           (usually called libgnomeui-devel for rpm based distros or
-            libgnomeui-dev for deb based distros or similar)
-           If
-               ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
-           reports that the file does not exist, then you are missing
-           the development package.
+#          * Do you have the libgnomeui development package installed?
+#            (usually called libgnomeui-devel for rpm based distros or
+#             libgnomeui-dev for deb based distros or similar)
+#            If
+#                ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
+#            reports that the file does not exist, then you are missing
+#            the development package.
 
-    " >&2;}
-   { (exit 1); exit 1; }; }
-elif test $pkg_failed = untried; then
+#     " >&2;}
+#    { (exit 1); exit 1; }; }
+# elif test $pkg_failed = untried; then
 
-    { { echo "$as_me:$LINENO: error:
-    Cannot find libgnomeui >= $libgnomeui_required
+#     { { echo "$as_me:$LINENO: error:
+#     Cannot find libgnomeui >= $libgnomeui_required
 
-        Please check the following:
+#         Please check the following:
 
-         * Do you have the libgnomeui development package installed?
-           (usually called libgnomeui-devel for rpm based distros or
-            libgnomeui-dev for deb based distros or similar)
-           If
-               ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
-           reports that the file does not exist, then you are missing
-           the development package.
+#          * Do you have the libgnomeui development package installed?
+#            (usually called libgnomeui-devel for rpm based distros or
+#             libgnomeui-dev for deb based distros or similar)
+#            If
+#                ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
+#            reports that the file does not exist, then you are missing
+#            the development package.
 
-    " >&5
-echo "$as_me: error:
-    Cannot find libgnomeui >= $libgnomeui_required
+#     " >&5
+# echo "$as_me: error:
+#     Cannot find libgnomeui >= $libgnomeui_required
 
-        Please check the following:
+#         Please check the following:
 
-         * Do you have the libgnomeui development package installed?
-           (usually called libgnomeui-devel for rpm based distros or
-            libgnomeui-dev for deb based distros or similar)
-           If
-               ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
-           reports that the file does not exist, then you are missing
-           the development package.
+#          * Do you have the libgnomeui development package installed?
+#            (usually called libgnomeui-devel for rpm based distros or
+#             libgnomeui-dev for deb based distros or similar)
+#            If
+#                ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
+#            reports that the file does not exist, then you are missing
+#            the development package.
 
-    " >&2;}
-   { (exit 1); exit 1; }; }
-else
-	LIBGNOMEUI_CFLAGS=$pkg_cv_LIBGNOMEUI_CFLAGS
-	LIBGNOMEUI_LIBS=$pkg_cv_LIBGNOMEUI_LIBS
-        { echo "$as_me:$LINENO: result: yes" >&5
-echo "${ECHO_T}yes" >&6; }
-	:
-fi
+#     " >&2;}
+#    { (exit 1); exit 1; }; }
+# else
+# 	LIBGNOMEUI_CFLAGS=$pkg_cv_LIBGNOMEUI_CFLAGS
+# 	LIBGNOMEUI_LIBS=$pkg_cv_LIBGNOMEUI_LIBS
+#         { echo "$as_me:$LINENO: result: yes" >&5
+# echo "${ECHO_T}yes" >&6; }
+# 	:
+# fi
 
 
 pkg_failed=no
@@ -10186,5 +10186,6 @@ if test "$no_create" != yes; then
   # would make configure fail if this is the last instruction.
   $ac_cs_success || { (exit 1); exit 1; }
 fi
+
 
 

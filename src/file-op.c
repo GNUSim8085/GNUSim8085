@@ -180,19 +180,10 @@ file_op_editor_save (void)
 
   gchar *selected_filename;
   GtkWidget *file_selector;
-  GtkFileFilter *file_filter;
 
-  file_selector = gtk_file_chooser_dialog_new ("Save this unnamed file",
-											   NULL,
-											   GTK_FILE_CHOOSER_ACTION_SAVE,
-											   GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-											   GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
-											   NULL);
-  file_filter = gtk_file_filter_new();
-  gtk_file_filter_set_name (file_filter, "All Text Files");
-  gtk_file_filter_add_mime_type(file_filter, "text/plain");
-  gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
-
+  file_selector = create_file_dialog
+	("Save File", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
+  
   if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 	{
 
@@ -209,18 +200,9 @@ file_op_editor_save_as (void)
 {
   gchar *selected_filename;
   GtkWidget *file_selector;
-  GtkFileFilter *file_filter;
 
-  file_selector = gtk_file_chooser_dialog_new ("Save this file under different name",
-											   NULL,
-											   GTK_FILE_CHOOSER_ACTION_SAVE,
-											   GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-											   GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
-											   NULL);
-  file_filter = gtk_file_filter_new();
-  gtk_file_filter_set_name (file_filter, "All Text Files");
-  gtk_file_filter_add_mime_type(file_filter, "text/plain");
-  gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
+  file_selector = create_file_dialog
+	("Save File As", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
 
   if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 	{
@@ -238,18 +220,9 @@ file_op_editor_open (void)
 {
   gchar *selected_filename;
   GtkWidget *file_selector;
-  GtkFileFilter *file_filter;
 
-  file_selector = gtk_file_chooser_dialog_new ("Open an existing file",
-											   NULL,
-											   GTK_FILE_CHOOSER_ACTION_OPEN,
-											   GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-											   GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
-											   NULL);
-  file_filter = gtk_file_filter_new();
-  gtk_file_filter_set_name (file_filter, "All Text Files");
-  gtk_file_filter_add_mime_type(file_filter, "text/plain");
-  gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
+  file_selector = create_file_dialog
+	("Open File", GTK_FILE_CHOOSER_ACTION_OPEN, GTK_STOCK_OPEN);
 
   if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 	{
@@ -268,19 +241,10 @@ file_op_listing_save (gchar * text)
 {
   gchar *selected_filename;
   GtkWidget *file_selector;
-  GtkFileFilter *file_filter;
   FILE *fp;
 
-  file_selector = gtk_file_chooser_dialog_new ("Save this file under different name",
-											   NULL,
-											   GTK_FILE_CHOOSER_ACTION_SAVE,
-											   GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-											   GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
-											   NULL);
-  file_filter = gtk_file_filter_new();
-  gtk_file_filter_set_name (file_filter, "All Text Files");
-  gtk_file_filter_add_mime_type(file_filter, "text/plain");
-  gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector), GTK_FILE_FILTER(file_filter));
+  file_selector = create_file_dialog
+	("Save Op Listing", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
 
   if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 	{
@@ -300,4 +264,31 @@ file_op_listing_save (gchar * text)
 	}
 
   gtk_widget_destroy (file_selector);
+}
+
+
+GtkWidget *
+create_file_dialog(const gchar *title,
+				   GtkFileChooserAction action,
+				   const gchar *stock)
+				   
+{
+  GtkWidget *file_selector;
+  GtkFileFilter *file_filter;
+  
+  file_selector = gtk_file_chooser_dialog_new
+	(title, NULL,
+	 action,
+	 GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+	 stock, GTK_RESPONSE_ACCEPT,
+	 NULL);
+  
+  file_filter = gtk_file_filter_new();
+  gtk_file_filter_set_name (file_filter, "All Files");
+  gtk_file_filter_add_pattern(file_filter, "*");
+  gtk_file_chooser_add_filter
+	(GTK_FILE_CHOOSER(file_selector),
+	 GTK_FILE_FILTER(file_filter));
+  
+  return file_selector;
 }

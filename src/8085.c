@@ -27,7 +27,7 @@
 #include "8085-memblock.h"
 
 /* errors */
-char *err_regname = N_("None of RegName"); 
+char *err_regname = "None of RegName"; 
 
 /* signal handlers */
 EefSigHandle hdl_mm_update = NULL;

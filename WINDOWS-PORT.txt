@@ -1,0 +1,23 @@
+Windows Port Notes
+==================
+
+Status:
+
+  Using MinGW and Windows ports of several Gtk+ and related libraries, I could
+  create gnusim8085.exe and it runs flawlessly on Windows Vista.
+  
+  Screenshot - http://tinyurl.com/32y7cz
+  
+
+Things to fix:
+
+  0. [Nearfar] Make the 8085asm.lang work on Windows installation
+  
+  1. [Onkar] Patch ./configure.in based on ./configure changes (disabled
+  libgnomeui)
+  
+  2. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
+  
+  3. [Nearfar] support.c: Write replacement for gnome_program_locate_file(); to
+  make the ICON work.
+

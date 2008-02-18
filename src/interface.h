@@ -7,7 +7,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <gtk/gtk.h>
-#include <libgnomeui/gnome-url.h>
 
 GtkWidget* create_window_main (void);
 void create_dialog_about (void);

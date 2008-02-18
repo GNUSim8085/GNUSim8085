@@ -1,7 +1,18 @@
+2008-02-18  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
+
+	* Bump application version to 1.3.3
+	* Merge changes for Windows port done by Srid
+
+2008-02-07  Sridhar Ratnakumar <srid@nearfar.org>
+
+	* file-op.[c,h] - Fix the file selectors to show ALL files.
+	* 8085.c,interface.[c,h],main.c,support.[c,h] - Removed GNOME
+	dependency.
+
 2008-01-29  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 
-        * src/*.h, src/main.c - Remove unneeded headers. Adjust sources for
-	using i10n functions from libc.
+        * src/*.h, src/main.c - Remove unneeded headers. Adjust sources
+	for using i10n functions from libc.
 	* src/Makefile.* - Small correction
 
 2007-12-06  Onkar Shinde  <onkarshinde@users.sourceforge.net>
@@ -11,8 +22,8 @@
 	directory.
 	* configure.in (AM_GNU_GETTEXT_VERSION): Bump to 0.16.1. Removed
 	macros directory.
-	* configure, Makefile.in, aclocal.m4, src/Makefile.in: Auto updated by
-	autotools.
+	* configure, Makefile.in, aclocal.m4, src/Makefile.in: Auto
+	updated by autotools.
 	* ABOUT-NLS, config.rpath: Added/changed by gettextize.
 	* src/Makefile.am,src/main.c: Changes as per gettext manual.
 	* m4/: Added by gettextize. Refer to corresponding ChangeLog
@@ -34,42 +45,44 @@
 	imports to header files.
 
 2007-12-04  Onkar Shinde  <onkarshinde@users.sourceforge.net>
-	* configure*: Lowered libgnomeui_required to 2.14.0. Fixes #1815280.
+	* configure*: Lowered libgnomeui_required to 2.14.0. Fixes
+	#1815280.
 	* Makefile.*: Changed install location of .desktop file to
 	${datadir}/applications which is used by freedesktop compatible
 	desktop environments.
 	* AUTHORS: Added 'Fernando Munoz' in 'Patch Contributors' list.
 	Changed Onkar's and Sridhar's email address.
-	* GNUSim8085.desktop.in: Remove deprecated and invalid fields. Added
-	categories for application.
-	* src/interface.c: Added 'Patch Contributors' list to about dialog.
-	Changed Onkar's and Sridhar's email address.
-	* src/file-op.c: Incorporated Fernando's patch for file dialogs. Fixes
-	#1683318.
+	* GNUSim8085.desktop.in: Remove deprecated and invalid
+	fields. Added categories for application.
+	* src/interface.c: Added 'Patch Contributors' list to about
+	dialog.  Changed Onkar's and Sridhar's email address.
+	* src/file-op.c: Incorporated Fernando's patch for file
+	dialogs. Fixes #1683318.
 
 2007-10-16  Onkar Shinde  <onkarshinde@users.sourceforge.net>
         * configure*: Lower the versions of dependencies to the actual
 	required. Bump application version to 1.3.2.
 	* aclocal.m4: Automatically updated
-	* debian/patches/*: Remove patches used for fixing debian build and
-	dependencies' versions.
+	* debian/patches/*: Remove patches used for fixing debian build
+	and dependencies' versions.
 	* src/*: Remove ambiguous message about keypad stability. Fix bug
 	#1683342.
 	* data/8085asm.lang: Fix bug #1683228.
 	* po/*: Fix debian build. .pot file automatically updated.
 
 2007-09-22  Onkar Shinde  <onkarshinde@users.sourceforge.net>
-        * debian/*: Multiple changes and patches to fix debian build and lower
-	build dependency to the actual required. No changes to source.
+        * debian/*: Multiple changes and patches to fix debian build and
+	lower build dependency to the actual required. No changes to
+	source.
 
 2007-08-31  Onkar Shinde  <onkarshinde@users.sourceforge.net>
-        * src/interface.c: Some cleanup in dialogs. Also don't use hard coded
-	stock ids.
+        * src/interface.c: Some cleanup in dialogs. Also don't use hard
+	coded stock ids.
 
 2007-08-24  Onkar Shinde  <onkarshinde@users.sourceforge.net>
         * src/*.(c,h): Changes some GNOME widgets to GTK widgets.
-	* configure*, **/Makefile*, aclocal.m4: Check proper versions while
-	checking development packages, more verbose errors.
+	* configure*, **/Makefile*, aclocal.m4: Check proper versions
+	while checking development packages, more verbose errors.
 
 2007-07-07  Onkar Shinde  <onkarshinde@users.sourceforge.net>
 	* data/8085asm.lang: Corrected expression for dz and cmc
@@ -181,7 +194,8 @@
 	* Updated build scripts
 
 2004-01-25  Sridhar Ratnakumar  <srid@nearfar.org>
-	* 8085-instructions.h: removed 'extern' just before G_END_DECLS (fixes string.h bug)
+	* 8085-instructions.h: removed 'extern' just before
+	G_END_DECLS (fixes string.h bug)
 	* *.*: _() macro, now working
 	* glade: icon for all dialogs
 
@@ -191,12 +205,16 @@
 
 2003-12-30  Sridhar Ratnakumar  <srid@nearfar.org>
 	* 8085-instructions.c: In _eef_inst_func_47, fixed ~(instead of !)
-	* 8085-instructions.c: In _eef_is_carry, return value of op '-' changed
+	* 8085-instructions.c: In _eef_is_carry, return value of op '-'
+	changed
 	* 8085-instructions.c: ADD, ADC, SUB, SBB M bug fixed
-	* file-op.c: In fs_cb_save_listing, invalid cast of button to fileselection fixed
+	* file-op.c: In fs_cb_save_listing, invalid cast of button to
+	fileselection fixed
 	* glade: changed main windows title acc. to gnome hig
-	* 8085-instructions.c: Oops! XCHG was not at all implemented. Now done.
-	* glade: Hacked glade sources and saved the changes in tools/glade_reinsert.c
+	* 8085-instructions.c: Oops! XCHG was not at all implemented. Now
+	done.
+	* glade: Hacked glade sources and saved the changes in
+	tools/glade_reinsert.c
 
 2003-12-28  Sridhar Ratnakumar  <srid@nearfar.org>
 	* asm-id.c: Fixed *ACI* bug
@@ -204,13 +222,15 @@
 	* 8085-instructions.c: Fixed add(sub)-with-carry function
 
 2003-12-07  Sridhar Ratnakumar  <srid@nearfar.org>
-	* 8085-instructions.c: Added warning messages for unimplemented instructions
+	* 8085-instructions.c: Added warning messages for unimplemented
+	instructions
 
 2003-12-07  Sridhar Ratnakumar  <srid@nearfar.org>
-	* gui-keypad.c: fixed crash bug in cb_clicked (which is why that large gap!)
+	* gui-keypad.c: fixed crash bug in cb_clicked (which is why that
+	large gap!)
 	* gui-editor.*: added gui_editor_grab_focus
 	* asm-id-info.*: added to project
-	* *: modified all files to reflect the new mail-id 
+	* *: modified all files to reflect the new mail-id
 	* asm-ds-limits.h: opcode length = 5 (smaller size!)
 	
 2003-11-21  Sridhar Ratnakumar  <srid@nearfar.org>
@@ -218,7 +238,8 @@
 	* asm-id.*: added util funcs
 	* gui-keypad.c: 90% completed
 	* scintilla sources: funcs to insert text
-	* project: added dependency "libiconv" - otherwise i get linker error FIXME
+	* project: added dependency "libiconv" - otherwise i get linker
+	error FIXME
 
 2003-11-11  Sridhar Ratnakumar  <srid@nearfar.org>
 	* asm-id.c: removed double semi-colon (thanks Shaun)
@@ -255,10 +276,11 @@
 	* gui-list-stack.c: stack view is working (in beta)
 	* gui-list-stack.c: <-- started working after beta release -->
 	* gui-list-stack.c: code rewrite for attaining efficient execution
-	                    by updating stack view only during breakpoints or trace.
-	* asm-ds-symtable.[ch]: added listing_no member to AsmSymEntry and modified
-	                        appropriate functions
-	* asm-ds-symtable.[ch]: added functionality to search for symbol given data(addr)
+	by updating stack view only during breakpoints or trace.
+	* asm-ds-symtable.[ch]: added listing_no member to AsmSymEntry and
+	modified appropriate functions
+	* asm-ds-symtable.[ch]: added functionality to search for symbol
+	given data(addr)
 	* asm-gensym.c: Due to above modifications, this is also modified
 	* gui-list-stack.c: print function(call) name in view
 	* [*].c: replaced "gnome_error_dialog" with "gtk_message_dialog"
@@ -278,12 +300,16 @@
 
 2003-08-03  Sridhar Ratnakumar  <srid@nearfar.org>
 
-	* asm-gen[sym,obj].c: fixed assembler syntax - "equ" symbol - used with pseudo ops also
-	* sci*face.cc: fixed "last char not begin saved" bug - (len ==> len + 1)
-	* file-op.c: fixed "critical save bugs" (sometimes extra lines, or stripped lines!)
+	* asm-gen[sym,obj].c: fixed assembler syntax - "equ" symbol - used
+	with pseudo ops also
+	* sci*face.cc: fixed "last char not begin saved" bug - (len ==>
+	len + 1)
+	* file-op.c: fixed "critical save bugs" (sometimes extra lines, or
+	stripped lines!)
 	* glade: changed text in about dialog
 	* :-- Added copyright messages to all source files written my me!
-	* bridge.c: fixed: breakpoints are considered only when not stepping!
+	* bridge.c: fixed: breakpoints are considered only when not
+	stepping!
 
 2003-07-31  Sridhar Ratnakumar  <srid@nearfar.org>
 
@@ -291,13 +317,17 @@
 	* callbacks.c: glade update
 	* main.c: Added widgets for dec-hex converstion
 	* gui-list-stack.[ch]: Added source for stack trace
-	* scintilla-interface.cc: Fixed - automatic view update on cursor change
+	* scintilla-interface.cc: Fixed - automatic view update on cursor
+	change
 	* main.c: added start-with dialog
 	* bridge.c: Fixed - file-op widgets disable on debug
-	* glade: removed "run to cursor" functionality - considered redundant
+	* glade: removed "run to cursor" functionality - considered
+	redundant
 	* file-op.c: added automatic breakpoint syntax for assembly code
-	* scintilla: archives (binaries) are replaced with sources (lesser package size!)
+	* scintilla: archives (binaries) are replaced with sources (lesser
+	package size!)
 
 2003-07-25  Sridhar Ratnakumar  <srid@nearfar.org>
 
-	* :Released 1.1 (first stable release) with lot of bugs, of course! (coded in just 2 days!)
+	* :Released 1.1 (first stable release) with lot of bugs, of
+	course! (coded in just 2 days!)

@@ -286,7 +286,7 @@ create_window_main (void)
     {
       g_message ("building menus failed: %s", error->message);
       g_error_free (error);
-      exit (EXIT_FAILURE);
+      exit (-1); // EXIT_FAILURE);
     }
 
   menubar1 = gtk_ui_manager_get_widget (ui_manager, "/MainMenu"); 
@@ -1100,7 +1100,7 @@ create_window_main (void)
 void
 activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
 {
-  gnome_url_show_on_screen (url, NULL, NULL);
+  /* gnome_url_show_on_screen (url, NULL, NULL); */
 }
 
 void

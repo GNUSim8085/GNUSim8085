@@ -8,7 +8,6 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
-#include <libgnome/gnome-program.h>
 #include <gtk/gtk.h>
 
 #define _(String) gettext (String)
@@ -51,4 +50,5 @@ GdkPixbuf*  create_pixbuf              (const gchar     *filename);
 void        glade_set_atk_action_description (AtkAction       *action,
                                               const gchar     *action_name,
                                               const gchar     *description);
+
 

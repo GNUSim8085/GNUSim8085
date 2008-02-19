@@ -1,16 +1,14 @@
 GNUSim8085 (http://gnusim8085.sourceforge.net/)
 ==========
 
-GNUSim8085 is a graphical simulator plus assembler with debugger for
-the Intel 8085 microprocessor.  It is written using GNOME libs.  It
-can also run on several window managers.
+GNUSim8085 is a graphical cross platform simulator plus assembler with
+debugger for the Intel 8085 microprocessor. 
 
 You have to enter assembly code in order to use the simulator.  The
 assembly syntax is not too hard to learn. For more information see
 "asm-guide.txt" in the doc/ directory.
 
-Keypad(Entering opcodes by pressing buttons!) feauture is being
-planned.  Variable declarations are supported in assembler.  You have
+Variable declarations are supported in assembler.  You have
 a seperate Data view widget to show variable values during debugging.
 And did I mention that?  Yes, you can also debug your code with the
 builtin debugger!  For detailed stuff, you can generate program

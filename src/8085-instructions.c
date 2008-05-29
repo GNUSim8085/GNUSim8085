@@ -646,8 +646,10 @@ _eef_inst_func_jmpc (eef_addr_t opnd_addr, eef_data_t flag_bit, gboolean val)
 static gint
 _eef_inst_func_callc (eef_addr_t opnd_addr, eef_data_t flag_bit, gboolean val)
 {
-  eef_save_pc_into_stack ();
-
+  if (flag_bit == val)
+  { 
+    eef_save_pc_into_stack ();
+  }
   _eef_inst_func_jmpc (opnd_addr, flag_bit, val);
 
   return 2;
@@ -2077,7 +2079,7 @@ _eef_inst_func_207 (eef_addr_t opnd_addr)
 static gint
 _eef_inst_func_208 (eef_addr_t opnd_addr)
 {
-  return _eef_inst_func_retc (opnd_addr, sys.reg.c, FALSE);
+  return _eef_inst_func_retc (opnd_addr, sys.flag.c, FALSE);
 }
 
 /* D1 POP D */
@@ -2107,7 +2109,7 @@ _eef_inst_func_211 (eef_addr_t opnd_addr)
 static gint
 _eef_inst_func_212 (eef_addr_t opnd_addr)
 {
-  return _eef_inst_func_callc (opnd_addr, sys.reg.c, FALSE);
+  return _eef_inst_func_callc (opnd_addr, sys.flag.c, FALSE);
 }
 
 /* D5 PUSH D */
@@ -2137,7 +2139,7 @@ _eef_inst_func_215 (eef_addr_t opnd_addr)
 static gint
 _eef_inst_func_216 (eef_addr_t opnd_addr)
 {
-  return _eef_inst_func_retc (opnd_addr, sys.reg.c, TRUE);
+  return _eef_inst_func_retc (opnd_addr, sys.flag.c, TRUE);
 }
 
 static gint
@@ -2166,7 +2168,7 @@ _eef_inst_func_219 (eef_addr_t opnd_addr)
 static gint
 _eef_inst_func_220 (eef_addr_t opnd_addr)
 {
-  return _eef_inst_func_callc (opnd_addr, sys.reg.c, TRUE);
+  return _eef_inst_func_callc (opnd_addr, sys.flag.c, TRUE);
 }
 
 static gint

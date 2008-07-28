@@ -2219,17 +2219,16 @@ _eef_inst_func_226 (eef_addr_t opnd_addr)
 static gint
 _eef_inst_func_227 (eef_addr_t opnd_addr)
 {
-  eef_data_t ph, pl;
+  eef_data_t tmp;
 
-  ph = sys.reg.h;
-  pl = sys.reg.l;
+  tmp = sys.reg.l;
+  sys.reg.l = sys.mem[eef_regpair_get ('S')];
+  sys.mem[eef_regpair_get ('S')] = tmp;
 
-  sys.reg.l = eef_stack_pop_byte ();
-  sys.reg.h = eef_stack_pop_byte ();
-
-  eef_stack_push_byte (ph);
-  eef_stack_push_byte (pl);
-
+  tmp = sys.reg.h;
+  sys.reg.h = sys.mem[eef_regpair_get ('S') + 1];
+  sys.mem[eef_regpair_get ('S') + 1] = tmp;
+ 
   return 0;
 }
 

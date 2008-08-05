@@ -1,3 +1,7 @@
+2008-08-05  Aanjhan Ranganathan <aanjhan@tuxmaniac.com>
+	* Bump Application version to 1.3.4
+	* Fixes SF bug #1936852. Thanks to Missouga Dongi 
+
 2008-05-29  Aanjhan Ranganathan <aanjhan@tuxmaniac.com>
 	* Fixes SF bug #1966993. Thanks to Marcelo Souza 
 

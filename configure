@@ -2078,7 +2078,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=gnusim8085
- VERSION=1.3.3
+ VERSION=1.3.4
 
 
 cat >>confdefs.h <<_ACEOF

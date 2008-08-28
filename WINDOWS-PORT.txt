@@ -13,11 +13,8 @@ Things to fix:
 
   0. [Nearfar] Make the 8085asm.lang work on Windows installation
   
-  1. [Onkar] Patch ./configure.in based on ./configure changes (disabled
-  libgnomeui)
+  1. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
   
-  2. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
-  
-  3. [Nearfar] support.c: Write replacement for gnome_program_locate_file(); to
+  2. [Nearfar] support.c: Write replacement for gnome_program_locate_file(); to
   make the ICON work.
 

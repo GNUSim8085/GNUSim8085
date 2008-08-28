@@ -5,7 +5,6 @@
 ## 	Please disable it in the Anjuta project configuration
 
 INCLUDES = \
-	$(LIBGNOMEUI_CFLAGS)\
         $(GTK_CFLAGS)\
         $(GTKSOURCEVIEW_CFLAGS)
 
@@ -15,10 +14,11 @@ gnusim8085_CFLAGS =\
 	 -O1\
 	 -g
 
-gnusim8085_CXXFLAGS =\
-	 -Wall\
-	 -O1\
-	 -g
+if WIN32
+gnusim8085_CFLAGS += \
+        -mms-bitfields  \
+        -mwindows
+endif
 
 bin_PROGRAMS = gnusim8085
 
@@ -83,7 +83,6 @@ gnusim8085_SOURCES = \
 gnusim8085_LDFLAGS = 
 
 gnusim8085_LDADD =  \
-	$(LIBGNOMEUI_LIBS)\
         $(GTK_LIBS)\
         $(GTKSOURCEVIEW_LIBS)
 

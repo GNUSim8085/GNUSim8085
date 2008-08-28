@@ -4,37 +4,25 @@ dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
 AC_INIT(configure.in)
-AM_INIT_AUTOMAKE(gnusim8085, 1.3.2)
+AM_INIT_AUTOMAKE(gnusim8085, 1.3.5)
 AM_CONFIG_HEADER(config.h)
 
 AC_ISC_POSIX
 AC_SUBST(CFLAGS,$CFLAGS)
-AC_SUBST(CXXFLAGS,$CXXFLAGS)
 AC_PROG_CC
-AC_PROG_CXX
 AM_PROG_CC_STDC
+AM_PROG_CC_C_O
 AC_HEADER_STDC
 
-libgnomeui_required="2.16.0"
+case "${host}" in
+        i[[3456789]]86-*-mingw32*) WIN32="yes" ;;
+        *cygwin*) WIN32="yes" ;;
+        *) WIN32="no" ;;
+esac
+AM_CONDITIONAL([WIN32], test "$WIN32" = "yes")
+
 gtk_required="2.8.0"
 gtksourceview_required="1.8.0"
-
-PKG_CHECK_MODULES(LIBGNOMEUI, [libgnomeui-2.0 >= $libgnomeui_required],, [
-    AC_MSG_ERROR(
-    [
-    Cannot find libgnomeui >= $libgnomeui_required
-    
-        Please check the following:
-    
-         * Do you have the libgnomeui development package installed?
-           (usually called libgnomeui-devel for rpm based distros or
-            libgnomeui-dev for deb based distros or similar)
-           If
-               ls -l /usr/lib/pkgconfig/libgnomeui-2.0.pc
-           reports that the file does not exist, then you are missing
-           the development package.
-    
-    ])])
 
 PKG_CHECK_MODULES(GTK, [gtk+-2.0 >= $gtk_required],, [
     AC_MSG_ERROR(

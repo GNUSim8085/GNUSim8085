@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language _name="8085 Assembly" version="1.0" _section="Sources" mimetypes="text/plain">
-	
+<language id="8085_asm" _name="8085 Assembly" version="1.0" _section="Sources" mimetypes="text/plain">
 	<escape-char>\</escape-char>
 
 	<line-comment _name = "Line Comment" style= "Comment">

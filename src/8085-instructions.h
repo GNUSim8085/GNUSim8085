@@ -32,7 +32,7 @@
 #define __8085_INSTRUCTIONS_H__
 
 G_BEGIN_DECLS
-#define MAX_INSTS 246
+#define MAX_INSTS 256
 /* execute this opcode and set is_halt_inst if a terminating inst
  * Returns FALSE of error */
 gboolean eef_inst_execute (eef_addr_t addr,

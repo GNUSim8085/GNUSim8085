@@ -16,7 +16,7 @@ gnusim8085doc_DATA = \
 
 EXTRA_DIST = config.rpath m4/ChangeLog  $(gnusim8085doc_DATA)
 
-gnomemenudir = $(prefix)/@NO_PREFIX_PACKAGE_MENU_DIR@/Development
+gnomemenudir = $(prefix)/share/applications
 gnomemenu_DATA = GNUSim8085.desktop
 
 # Copy all the spec files. Of cource, only one is actually used.

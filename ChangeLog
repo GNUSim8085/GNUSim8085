@@ -1,3 +1,24 @@
+2008-09-03  Onkar Shinde  <onkarshinde@gmail.com>
+	* configure.in: Update to check gtksourceview2 >= 2.2 and gtk >= 2.12.
+	Also removed libgnomeui variables.
+	* GNUSim8085.desktop.in: Fix some of the problems reported by
+	desktop-file-validate.
+	* Makefile.am: Install desktop file in universal location used by
+	freedesktop specification.
+	* WINDOWS-PORT.txt: Updated as per current status.
+	* src/8085-instructions.h: Fix array overflow by incrasing array size.
+	* src/asm-id.[c,h]: Add element in IdOpcode structure for description.
+	* src/gui-editor.[c,h]: Move the gtksourceview2.
+	* src/interface.c, src/gui-keypad.c: Move to new GtkToolTip api from
+	gtk 2.12 for easy tooltip management.
+	* src/Makefile.am: Replace gtksourceview cflags and libs with
+	gtksourceview2.
+	* data/8085asm.lang: Add an id for new search gtksourceview2 search
+	api.
+	* data/Makefile.am: Install .lang file in our own directory.
+	* aclocal.m4, config.h.in, configure, Makefile.in, data/Makefile.in,
+	doc/Makefile.in, pixmaps/Makefile.in, src/Makefile.in: Auto updated.
+
 2008-08-28  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
 	* configure, Makefile.in, aclocal.m4, src/Makefile.in: Auto
 	updated by autotools removing libgnomeui dep for Windows.

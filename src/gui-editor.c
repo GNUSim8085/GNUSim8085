@@ -24,6 +24,9 @@ GUIEditor *
 gui_editor_new (void)
 {
   GUIEditor *self;
+  GPtrArray *dirs;
+  const gchar * const *current_search_path;
+  gchar **lang_spec_search_path;
 
   self = g_malloc0 (sizeof (GUIEditor));
 
@@ -44,13 +47,32 @@ gui_editor_new (void)
 											"background", COLOUR_BG_HL,
 											NULL);
 	
-  self->lang_manager = gtk_source_languages_manager_new ();
+  self->lang_manager = gtk_source_language_manager_new ();
+
+  dirs = g_ptr_array_new();
+
+  current_search_path = gtk_source_language_manager_get_search_path(self->lang_manager);
+
+  for (; current_search_path != NULL && *current_search_path != NULL; ++current_search_path)
+    g_ptr_array_add(dirs, g_strdup(*current_search_path));
+
+  // look for spec file in our own directory
+  g_ptr_array_add(dirs, g_strdup(PACKAGE_DATA_DIR));
+  // look for spec file in data directory when running from svn
+  g_ptr_array_add(dirs, g_strdup("data"));
+  // look for spec file in current directory, when running on windows
+  g_ptr_array_add(dirs, g_strdup("."));
+  g_ptr_array_add(dirs, g_strdup(NULL));
+
+  lang_spec_search_path = (gchar **)g_ptr_array_free(dirs, FALSE);
+
+  gtk_source_language_manager_set_search_path (self->lang_manager, lang_spec_search_path);
 
   GdkPixbuf *pixbuf;
   pixbuf = gui_editor_get_stock_icon (GTK_WIDGET(self->widget), GTK_STOCK_NO, GTK_ICON_SIZE_MENU);
   if (pixbuf)
 	{
-	  gtk_source_view_set_marker_pixbuf (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, pixbuf);
+	  gtk_source_view_set_mark_category_pixbuf (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, pixbuf);
 	  g_object_unref (pixbuf);
 	}
 
@@ -63,13 +85,13 @@ gui_editor_show (GUIEditor * self)
   gtk_widget_show (GTK_WIDGET (self->widget));
   gtk_widget_show (GTK_WIDGET (self->scroll));
   gtk_source_view_set_show_line_numbers (GTK_SOURCE_VIEW(self->widget), TRUE);
-  self->language = gui_editor_languages_manager_get_language_from_id(self->lang_manager,"8085@32@Assembly");
+  self->language = gtk_source_language_manager_get_language(self->lang_manager,"8085_asm");
   if (self->language != NULL){
 	gtk_source_buffer_set_language (GTK_SOURCE_BUFFER(self->buffer), GTK_SOURCE_LANGUAGE(self->language));
-	gtk_source_buffer_set_highlight (GTK_SOURCE_BUFFER(self->buffer), TRUE);
+	gtk_source_buffer_set_highlight_syntax (GTK_SOURCE_BUFFER(self->buffer), TRUE);
   }
   self->mark = gtk_text_buffer_get_insert (GTK_TEXT_BUFFER(self->buffer));
-  gtk_source_view_set_show_line_markers (GTK_SOURCE_VIEW(self->widget), TRUE);
+  gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW(self->widget), TRUE);
 }
 
 void
@@ -103,7 +125,7 @@ void
 gui_editor_set_mark (GUIEditor * self, guint line_no, gboolean set)
 {
   gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER(self->buffer), &(self->iter), line_no);
-  gtk_source_buffer_create_marker (GTK_SOURCE_BUFFER(self->buffer), NULL, MARKER_BREAKPOINT, &(self->iter));
+  gtk_source_buffer_create_source_mark (GTK_SOURCE_BUFFER(self->buffer), NULL, MARKER_BREAKPOINT, &(self->iter));
   g_assert (self);
 }
 
@@ -132,8 +154,8 @@ gui_editor_toggle_mark (GUIEditor * self)
   gint y_buf;
   GtkTextIter line_start, line_end;
   GtkTextMark *insert;
-  GSList *marker_list, *list_iter;
-  GtkSourceMarker *marker;
+  GSList *marker_list;
+  GtkSourceMark *marker;
 
   insert = gtk_text_buffer_get_insert (GTK_TEXT_BUFFER(self->buffer));
   gtk_text_buffer_get_iter_at_mark (GTK_TEXT_BUFFER(self->buffer), &(self->iter), insert);
@@ -144,34 +166,20 @@ gui_editor_toggle_mark (GUIEditor * self)
   line_end = line_start;
   gtk_text_iter_forward_to_line_end (&line_end);
 
-  /* get the markers already in the line */
-  marker_list = gtk_source_buffer_get_markers_in_region (self->buffer, &line_start, &line_end);
+  /* get the breakpoint markers already in the line */
+  marker_list = gtk_source_buffer_get_source_marks_at_line (self->buffer, y_buf, MARKER_BREAKPOINT);
 
-  /* search for the breakpoint marker */
-  marker = NULL;
-  for (list_iter = marker_list; list_iter && !marker; list_iter = g_slist_next (list_iter))
+  if (marker_list != NULL && g_slist_length(marker_list)!=0)
 	{
-	  GtkSourceMarker *tmp = list_iter->data;
-	  gchar *tmp_type = gtk_source_marker_get_marker_type (tmp);
-	  if (tmp_type && !strcmp (tmp_type, MARKER_BREAKPOINT))
-		{
-		  marker = tmp;
-		}
-	  g_free (tmp_type);
-	}
-
-  g_slist_free (marker_list);
-
-  if (marker)
-	{
-	  /* a marker was found, so delete it */
-	  gtk_source_buffer_delete_marker (self->buffer, marker);
+	  /* markers were found, so delete them */
+	  gtk_source_buffer_remove_source_marks (self->buffer,  &line_start, &line_end, MARKER_BREAKPOINT);
 	}
   else
 	{
 	  /* no marker found -> create one */
-	  marker = gtk_source_buffer_create_marker (self->buffer, NULL, MARKER_BREAKPOINT, &(self->iter));
+	  marker = gtk_source_buffer_create_source_mark (self->buffer, NULL, MARKER_BREAKPOINT, &(self->iter));
 	}
+  g_slist_free (marker_list);
 	
 }
 
@@ -196,19 +204,17 @@ gui_editor_is_marked (GUIEditor * self, gint ln)
   gtk_text_iter_forward_to_line_end (&line_end);
 
   /* get the markers already in the line */
-  list_iter = gtk_source_buffer_get_markers_in_region (self->buffer, &line_start, &line_end);
+  list_iter = gtk_source_buffer_get_source_marks_at_iter (self->buffer, &line_start, NULL);
 
   /* search for the breakpoint marker */
   while (list_iter != NULL)
 	{
-	  GtkSourceMarker *tmp = list_iter->data;
-	  gchar *tmp_type = gtk_source_marker_get_marker_type (tmp);
+	  GtkSourceMark *tmp = list_iter->data;
+	  const gchar *tmp_type = gtk_source_mark_get_category (tmp);
 	  if (tmp_type && !strcmp (tmp_type, MARKER_BREAKPOINT))
 		{
 		  return TRUE;
 		}
-	  g_free (tmp_type);
-
 	  list_iter = g_slist_next (list_iter);
 	}
 
@@ -219,28 +225,12 @@ void
 gui_editor_clear_all_marks (GUIEditor * self)
 {
   GtkTextIter buffer_start, buffer_end;
-  GSList *list_iter;
 
   /* get buffer bounds */
   gtk_text_buffer_get_bounds (GTK_TEXT_BUFFER(self->buffer), &buffer_start, &buffer_end);
 
-  /* get the markers already in the line */
-  list_iter = gtk_source_buffer_get_markers_in_region (self->buffer, &buffer_start, &buffer_end);
-
-  /* search for the breakpoint marker */
-  while (list_iter != NULL)
-	{
-	  GtkSourceMarker *tmp = list_iter->data;
-	  gchar *tmp_type = gtk_source_marker_get_marker_type (tmp);
-	  if (tmp_type && !strcmp (tmp_type, MARKER_BREAKPOINT))
-		{
-		  /* a marker was found, so delete it */
-		  gtk_source_buffer_delete_marker (self->buffer, tmp);
-		}
-	  g_free (tmp_type);
-
-	  list_iter = g_slist_next (list_iter);
-	}
+  /* delete all breakpoint mark */
+  gtk_source_buffer_remove_source_marks (self->buffer, &buffer_start, &buffer_end, MARKER_BREAKPOINT);
 
 }
 
@@ -315,36 +305,5 @@ gui_editor_get_stock_icon (GtkWidget *widget, const gchar *stock_id, GtkIconSize
   pixbuf = gtk_icon_theme_load_icon (theme, stock_id, marker_size, 0, NULL);
 
   return pixbuf;
-}
-
-GtkSourceLanguage *
-gui_editor_languages_manager_get_language_from_id (GtkSourceLanguagesManager *lm,
-												   const gchar *lang_id)
-{
-  const GSList *languages;
-
-  g_return_val_if_fail (lang_id != NULL, NULL);
-
-  languages = gtk_source_languages_manager_get_available_languages (lm);
-
-  while (languages != NULL)
-	{
-	  gchar *name;
-
-	  GtkSourceLanguage *lang = GTK_SOURCE_LANGUAGE (languages->data);
-
-	  name = gtk_source_language_get_id (lang);
-
-	  if (strcmp (name, lang_id) == 0)
-		{
-		  g_free (name);
-		  return lang;
-		}
-
-	  g_free (name);
-	  languages = g_slist_next (languages);
-	}
-
-  return NULL;
 }
 

@@ -40,7 +40,11 @@ DIST_COMMON = README $(am__configure_deps) \
 	INSTALL NEWS TODO acconfig.h compile config.guess config.rpath \
 	config.sub depcomp install-sh ltmain.sh missing mkinstalldirs
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
+	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/lib-ld.m4 \
+	$(top_srcdir)/m4/lib-link.m4 $(top_srcdir)/m4/lib-prefix.m4 \
+	$(top_srcdir)/m4/nls.m4 $(top_srcdir)/m4/po.m4 \
+	$(top_srcdir)/m4/progtest.m4 $(top_srcdir)/acinclude.m4 \
 	$(top_srcdir)/configure.in
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
@@ -104,13 +108,12 @@ ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
-GETTEXT_MACRO_VERSION = @GETTEXT_MACRO_VERSION@
 GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
 GMSGFMT = @GMSGFMT@
 GMSGFMT_015 = @GMSGFMT_015@
 GREP = @GREP@
-GTKSOURCEVIEW_CFLAGS = @GTKSOURCEVIEW_CFLAGS@
-GTKSOURCEVIEW_LIBS = @GTKSOURCEVIEW_LIBS@
+GTKSOURCEVIEW2_CFLAGS = @GTKSOURCEVIEW2_CFLAGS@
+GTKSOURCEVIEW2_LIBS = @GTKSOURCEVIEW2_LIBS@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
 INSTALL = @INSTALL@
@@ -121,8 +124,6 @@ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 INTLLIBS = @INTLLIBS@
 INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
 LDFLAGS = @LDFLAGS@
-LIBGNOMEUI_CFLAGS = @LIBGNOMEUI_CFLAGS@
-LIBGNOMEUI_LIBS = @LIBGNOMEUI_LIBS@
 LIBICONV = @LIBICONV@
 LIBINTL = @LIBINTL@
 LIBOBJS = @LIBOBJS@
@@ -162,7 +163,6 @@ USE_NLS = @USE_NLS@
 VERSION = @VERSION@
 XGETTEXT = @XGETTEXT@
 XGETTEXT_015 = @XGETTEXT_015@
-XGETTEXT_EXTRA_OPTIONS = @XGETTEXT_EXTRA_OPTIONS@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -223,7 +223,7 @@ gnusim8085doc_DATA = \
 	ABOUT-NLS
 
 EXTRA_DIST = config.rpath m4/ChangeLog  $(gnusim8085doc_DATA)
-gnomemenudir = $(prefix)/@NO_PREFIX_PACKAGE_MENU_DIR@/Development
+gnomemenudir = $(prefix)/share/applications
 gnomemenu_DATA = GNUSim8085.desktop
 ACLOCAL_AMFLAGS = -I m4
 all: config.h

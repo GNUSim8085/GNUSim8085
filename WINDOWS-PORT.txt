@@ -1,17 +1,41 @@
 Windows Port Notes
 ==================
 
+How to build (using mingw cross compiler, on a linux system):
+
+  Follow instructions at http://live.gnome.org/GTK%2B/Win32/Apps
+  with following changes.
+
+  1. Before doing 'sed -f ...' command
+    a. Download gtksourceview(-dev) zip files from
+       http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.2/
+       and extract them in mingw directory.
+    b. Download libxml2 zip file from http://www.zlatkovic.com/pub/libxml/
+       and extract it in mingw directory.
+
+  2. Before doing "./configure --target=i586-mingw32msvc ..."
+    a. Add target=win32 in gtksourceview-2.0.pc
+    a. Comment out Requires.private from gtksourceview-2.0.pc. This needs to
+       be done to workaround problem in libxml2 distribution.
+
+How to install:
+
+  1. Install GTK+ runtime for windows available at
+     http://www.gtk.org/download-windows.html
+  2. Copy libgtksourceview-2.0-0.dll and libxml2.dll in same directory
+     where other dll files are placed in to GTK+ runtime installation.
+  3. Copy gnusim8085.exe and 8085.lang file to windows machine.
+
 Status:
 
-  Using MinGW and Windows ports of several Gtk+ and related libraries, I could
-  create gnusim8085.exe and it runs flawlessly on Windows Vista.
-  
-  Screenshot - http://tinyurl.com/32y7cz
+  gnusim8085.exe runs fine on Windows machine. :-)
+
+  Screenshot - http://tinyurl.com/32y7cz (Needs update)
   
 
-Things to fix:
+TODO:
 
-  0. [Nearfar] Make the 8085asm.lang work on Windows installation
+  0. [Onkar] Write a installer using NSIS.
   
   1. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
   

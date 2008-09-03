@@ -6,7 +6,7 @@
 
 INCLUDES = \
         $(GTK_CFLAGS)\
-        $(GTKSOURCEVIEW_CFLAGS)
+        $(GTKSOURCEVIEW2_CFLAGS)
 
 gnusim8085_CFLAGS =\
 	 -DLOCALEDIR=$(localedir)\
@@ -84,6 +84,6 @@ gnusim8085_LDFLAGS =
 
 gnusim8085_LDADD =  \
         $(GTK_LIBS)\
-        $(GTKSOURCEVIEW_LIBS)
+        $(GTKSOURCEVIEW2_LIBS)
 
 LDADD = @LIBINTL@

@@ -208,6 +208,7 @@ create_me (void)
 			goto breakout;
 
 		  button = gtk_button_new_with_label (op->op_str);
+		  gtk_widget_set_tooltip_text (button, op->op_desc);
 		  g_signal_connect (button, "clicked",
 							(GCallback) cb_clicked, op);
 		  gtk_table_attach_defaults (GTK_TABLE (table), button,

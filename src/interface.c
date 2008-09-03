@@ -249,13 +249,10 @@ create_window_main (void)
   GtkWidget *main_progressbar;
   GtkWidget *main_statusbar;
   GtkWidget *status_box;
-  GtkTooltips *tooltips;
   GtkActionGroup *action_group;
   GtkUIManager *ui_manager;
   GtkAccelGroup *accel_group;
   GError *error;
-
-  tooltips = gtk_tooltips_new ();
 
   window_main = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window_main), _("GNUSim8085 - 8085 Microprocessor Simulator"));
@@ -594,13 +591,13 @@ create_window_main (void)
   main_entry_dec = gtk_entry_new ();
   gtk_widget_show (main_entry_dec);
   gtk_box_pack_start (GTK_BOX (vbox13), main_entry_dec, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, main_entry_dec, _("Enter a decimal number"), NULL);
+  gtk_widget_set_tooltip_text (main_entry_dec, _("Enter a decimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_dec), _("0"));
 
   main_but_to_hex = gtk_button_new ();
   gtk_widget_show (main_but_to_hex);
   gtk_box_pack_start (GTK_BOX (vbox13), main_but_to_hex, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, main_but_to_hex, _("Convert this number to hexadecimal"), NULL);
+  gtk_widget_set_tooltip_text (main_but_to_hex, _("Convert this number to hexadecimal"));
 
   alignment7 = gtk_alignment_new (0.5, 0.5, 0, 0);
   gtk_widget_show (alignment7);
@@ -632,13 +629,13 @@ create_window_main (void)
   main_entry_hex = gtk_entry_new ();
   gtk_widget_show (main_entry_hex);
   gtk_box_pack_start (GTK_BOX (vbox14), main_entry_hex, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, main_entry_hex, _("Enter a hexadecimal number"), NULL);
+  gtk_widget_set_tooltip_text (main_entry_hex, _("Enter a hexadecimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_hex), _("0"));
 
   main_but_to_dec = gtk_button_new ();
   gtk_widget_show (main_but_to_dec);
   gtk_box_pack_start (GTK_BOX (vbox14), main_but_to_dec, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, main_but_to_dec, _("Convert this number to decimal"), NULL);
+  gtk_widget_set_tooltip_text (main_but_to_dec, _("Convert this number to decimal"));
 
   alignment8 = gtk_alignment_new (0.5, 0.5, 0, 0);
   gtk_widget_show (alignment8);
@@ -693,20 +690,20 @@ create_window_main (void)
   main_io_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_io_spin_adj), 1, 0);
   gtk_widget_show (main_io_spin);
   gtk_box_pack_start (GTK_BOX (hbox13), main_io_spin, TRUE, TRUE, 0);
-  gtk_tooltips_set_tip (tooltips, main_io_spin, _("Change the port address to view here"), NULL);
+  gtk_widget_set_tooltip_text (main_io_spin, _("Change the port address to view here"));
   gtk_spin_button_set_numeric (GTK_SPIN_BUTTON (main_io_spin), TRUE);
   gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (main_io_spin), TRUE);
 
   main_io_entry = gtk_entry_new ();
   gtk_widget_show (main_io_entry);
   gtk_box_pack_start (GTK_BOX (hbox13), main_io_entry, TRUE, TRUE, 0);
-  gtk_tooltips_set_tip (tooltips, main_io_entry, _("Enter new port value and click Update"), NULL);
+  gtk_widget_set_tooltip_text (main_io_entry, _("Enter new port value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_io_entry), _("0"));
 
   main_io_update = gtk_button_new ();
   gtk_widget_show (main_io_update);
   gtk_box_pack_start (GTK_BOX (vbox11), main_io_update, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, main_io_update, _("Update the port value"), NULL);
+  gtk_widget_set_tooltip_text (main_io_update, _("Update the port value"));
 
   alignment4 = gtk_alignment_new (0.5, 0.5, 0, 0);
   gtk_widget_show (alignment4);
@@ -757,20 +754,20 @@ create_window_main (void)
   main_mem_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_mem_spin_adj), 1, 0);
   gtk_widget_show (main_mem_spin);
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_spin, TRUE, TRUE, 0);
-  gtk_tooltips_set_tip (tooltips, main_mem_spin, _("Change the memory location to view here"), NULL);
+  gtk_widget_set_tooltip_text (main_mem_spin, _("Change the memory location to view here"));
   gtk_spin_button_set_numeric (GTK_SPIN_BUTTON (main_mem_spin), TRUE);
   gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (main_mem_spin), TRUE);
 
   main_mem_entry = gtk_entry_new ();
   gtk_widget_show (main_mem_entry);
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_entry, TRUE, TRUE, 0);
-  gtk_tooltips_set_tip (tooltips, main_mem_entry, _("Edit new value and click Update"), NULL);
+  gtk_widget_set_tooltip_text (main_mem_entry, _("Edit new value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_mem_entry), _("0"));
 
   main_mem_update = gtk_button_new ();
   gtk_widget_show (main_mem_update);
   gtk_box_pack_start (GTK_BOX (vbox12), main_mem_update, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, main_mem_update, _("Update the current memory location"), NULL);
+  gtk_widget_set_tooltip_text (main_mem_update, _("Update the current memory location"));
 
   alignment5 = gtk_alignment_new (0.5, 0.5, 0, 0);
   gtk_widget_show (alignment5);
@@ -830,7 +827,7 @@ create_window_main (void)
   main_entry_sa = gtk_entry_new ();
   gtk_widget_show (main_entry_sa);
   gtk_box_pack_start (GTK_BOX (hbox24), main_entry_sa, TRUE, TRUE, 0);
-  gtk_tooltips_set_tip (tooltips, main_entry_sa, _("Enter the program address.  End with a 'h' if it is a hex address."), NULL);
+  gtk_widget_set_tooltip_text (main_entry_sa, _("Enter the program address.  End with a 'h' if it is a hex address."));
   gtk_entry_set_max_length (GTK_ENTRY (main_entry_sa), 100);
 
   notebook5 = gtk_notebook_new ();
@@ -1079,7 +1076,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label168, "label168");
   GLADE_HOOKUP_OBJECT (window_main, main_progressbar, "main_progressbar");
   GLADE_HOOKUP_OBJECT (window_main, main_statusbar, "main_statusbar");
-  GLADE_HOOKUP_OBJECT_NO_REF (window_main, tooltips, "tooltips");
   GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/New"), "newfile"); 
   GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/Open"), "openfile"); 
   GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/Save"), "savefile"); 
@@ -1219,9 +1215,6 @@ create_window_start (void)
   GtkWidget *label158;
   GtkWidget *start_but_close;
   GtkWidget *label166;
-  GtkTooltips *tooltips;
-
-  tooltips = gtk_tooltips_new ();
 
   window_start = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window_start), _("GNUSim8085 start with dialog"));
@@ -1266,7 +1259,7 @@ create_window_start (void)
   gtk_button_set_image (GTK_BUTTON(start_but_tutorial), gtk_image_new_from_stock (GTK_STOCK_HELP, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (start_but_tutorial);
   gtk_box_pack_start (GTK_BOX (vbox17), start_but_tutorial, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, start_but_tutorial, _("A short tutorial on writing assembly code!"), NULL);
+  gtk_widget_set_tooltip_text (start_but_tutorial, _("A short tutorial on writing assembly code!"));
 
   vbox18 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox18);
@@ -1285,7 +1278,7 @@ create_window_start (void)
   gtk_button_set_image (GTK_BUTTON(start_but_open), gtk_image_new_from_stock (GTK_STOCK_OPEN, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (start_but_open);
   gtk_box_pack_start (GTK_BOX (vbox18), start_but_open, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, start_but_open, _("Open an already saved program"), NULL);
+  gtk_widget_set_tooltip_text (start_but_open, _("Open an already saved program"));
 
   label158 = gtk_label_new (_("What do you want to do now?"));
   gtk_widget_show (label158);
@@ -1328,7 +1321,6 @@ create_window_start (void)
   GLADE_HOOKUP_OBJECT (window_start, label158, "label158");
   GLADE_HOOKUP_OBJECT (window_start, start_but_close, "start_but_close");
   GLADE_HOOKUP_OBJECT (window_start, label166, "label166");
-  GLADE_HOOKUP_OBJECT_NO_REF (window_start, tooltips, "tooltips");
 
   gtk_widget_grab_focus (start_but_close);
   return window_start;

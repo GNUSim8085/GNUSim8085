@@ -28,13 +28,14 @@
 #ifndef __GUI_EDITOR_H__
 #define __GUI_EDITOR_H__
 
+#include <config.h>
 #include <string.h>
 #include <gtk/gtk.h>
 #include <gtksourceview/gtksourceview.h>
 #include <gtksourceview/gtksourcebuffer.h>
 #include <gtksourceview/gtksourcelanguage.h>
-#include <gtksourceview/gtksourcelanguagesmanager.h>
-#include <gtksourceview/gtksourcemarker.h>
+#include <gtksourceview/gtksourcelanguagemanager.h>
+#include <gtksourceview/gtksourcemark.h>
 
 #define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"
 #define MARKER_BREAKPOINT   (const gchar*) "breakpoint"
@@ -56,10 +57,10 @@ G_BEGIN_DECLS typedef struct
 
   GtkTextTag *hltag;
 
-  GtkSourceLanguagesManager *lang_manager;
+  GtkSourceLanguageManager *lang_manager;
 
   GtkSourceLanguage *language;
-	
+
 } GUIEditor;
 
 GUIEditor *gui_editor_new (void);
@@ -95,10 +96,6 @@ void gui_editor_set_font (GUIEditor *self, const gchar *font_name);
 
 GdkPixbuf *
 gui_editor_get_stock_icon (GtkWidget *widget, const gchar *stock_id, GtkIconSize size);
-
-GtkSourceLanguage *
-gui_editor_languages_manager_get_language_from_id (GtkSourceLanguagesManager *lm,
-												   const gchar *lang_id);
 
 G_END_DECLS
 #endif /* __GUI_EDITOR_H__ */

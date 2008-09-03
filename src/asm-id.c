@@ -25,7 +25,7 @@ static IdOpcode id_opcode[] = {
   /* 
    * { 0x, "", 0, "X", "X" }, 
    */
-  {0xCE, "ACI", 0, "X", "X", 1}
+  {0xCE, "ACI", 0, "X", "X", 1, "TODO"}	/* TODO - Add descriptions for all the instructions */
   ,
   {0x8F, "ADC", 1, "A", "X", 0}
   ,

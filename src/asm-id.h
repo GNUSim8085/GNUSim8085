@@ -43,6 +43,7 @@ typedef struct
   gchar arg2[4];
 
   gint user_args;		/* 0 - no arg, 1 - byte, 2 - word */
+  gchar *op_desc;		/* describes the instructions */
 
 } IdOpcode;
 

@@ -21,8 +21,8 @@ case "${host}" in
 esac
 AM_CONDITIONAL([WIN32], test "$WIN32" = "yes")
 
-gtk_required="2.8.0"
-gtksourceview_required="1.8.0"
+gtk_required="2.12.0"
+gtksourceview2_required="2.2.0"
 
 PKG_CHECK_MODULES(GTK, [gtk+-2.0 >= $gtk_required],, [
     AC_MSG_ERROR(
@@ -41,29 +41,27 @@ PKG_CHECK_MODULES(GTK, [gtk+-2.0 >= $gtk_required],, [
     
     ])])
 
-PKG_CHECK_MODULES(GTKSOURCEVIEW, [gtksourceview-1.0 >= $gtksourceview_required],, [
+PKG_CHECK_MODULES(GTKSOURCEVIEW2, [gtksourceview-2.0 >= $gtksourceview2_required],, [
     AC_MSG_ERROR(
     [
-    Cannot find gtksourceview >= $gtksourceview_required
+    Cannot find gtksourceview2 >= $gtksourceview2_required
     
         Please check the following:
     
-         * Do you have the gtksourceview development package installed?
-           (usually called gtksourceview-devel for rpm based distros or
-            libgtksourceview-dev for deb based distros or similar)
+         * Do you have the gtksourceview2 development package installed?
+           (usually called gtksourceview2-devel for rpm based distros or
+            libgtksourceview2.0-dev for deb based distros or similar)
            If
-               ls -l /usr/lib/pkgconfig/gtksourceview-1.0.pc
+               ls -l /usr/lib/pkgconfig/gtksourceview-2.0.pc
            reports that the file does not exist, then you are missing
            the development package.
     
     ])])
 
-AC_SUBST(LIBGNOMEUI_LIBS)
-AC_SUBST(LIBGNOMEUI_CFLAGS)
 AC_SUBST(GTK_LIBS)
 AC_SUBST(GTK_CFLAGS)
-AC_SUBST(GTKSOURCEVIEW_LIBS)
-AC_SUBST(GTKSOURCEVIEW_CFLAGS)
+AC_SUBST(GTKSOURCEVIEW2_LIBS)
+AC_SUBST(GTKSOURCEVIEW2_CFLAGS)
 
 dnl Checks for programs.
 

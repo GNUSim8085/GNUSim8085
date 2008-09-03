@@ -1,4 +1,4 @@
-gsvlangspecdir = $(prefix)/share/gtksourceview-1.0/language-specs
+gsvlangspecdir = $(PACKAGE_DATA_DIR)
 
 gsvlangspec_DATA = \
 	8085asm.lang 

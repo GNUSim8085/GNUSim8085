@@ -163,5 +163,6 @@ pixmaps/Makefile
 doc/Makefile
 data/Makefile
 GNUSim8085.desktop
+installer.nsi
 ])
 

@@ -1,3 +1,10 @@
+2008-09-04  Onkar Shinde  <onkarshinde@gmail.com>
+	* configure.in: Add installer.nsi.in
+	* installer.nsi.in: Template for generating installer script to be
+	used with NSIS.
+	* WINDOWS-PORT.txt: Updated with status about installer.
+	* configure, Makefile.in: Auto updated.
+
 2008-09-03  Onkar Shinde  <onkarshinde@gmail.com>
 	* configure.in: Update to check gtksourceview2 >= 2.2 and gtk >= 2.12.
 	Also removed libgnomeui variables.

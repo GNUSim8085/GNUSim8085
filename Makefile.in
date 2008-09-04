@@ -36,9 +36,10 @@ subdir = .
 DIST_COMMON = README $(am__configure_deps) \
 	$(srcdir)/GNUSim8085.desktop.in $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(top_srcdir)/configure ABOUT-NLS AUTHORS COPYING ChangeLog \
-	INSTALL NEWS TODO acconfig.h compile config.guess config.rpath \
-	config.sub depcomp install-sh ltmain.sh missing mkinstalldirs
+	$(srcdir)/installer.nsi.in $(top_srcdir)/configure ABOUT-NLS \
+	AUTHORS COPYING ChangeLog INSTALL NEWS TODO acconfig.h compile \
+	config.guess config.rpath config.sub depcomp install-sh \
+	ltmain.sh missing mkinstalldirs
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
 	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/lib-ld.m4 \
@@ -52,7 +53,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES = GNUSim8085.desktop
+CONFIG_CLEAN_FILES = GNUSim8085.desktop installer.nsi
 SOURCES =
 DIST_SOURCES =
 RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
@@ -281,6 +282,8 @@ $(srcdir)/config.h.in:  $(am__configure_deps) $(top_srcdir)/acconfig.h
 distclean-hdr:
 	-rm -f config.h stamp-h1
 GNUSim8085.desktop: $(top_builddir)/config.status $(srcdir)/GNUSim8085.desktop.in
+	cd $(top_builddir) && $(SHELL) ./config.status $@
+installer.nsi: $(top_builddir)/config.status $(srcdir)/installer.nsi.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 install-gnomemenuDATA: $(gnomemenu_DATA)
 	@$(NORMAL_INSTALL)

@@ -1,0 +1,68 @@
+# NSIS installer script for for gnusim8085
+# AUTHOR - Onkar Shinde <onkarshinde@gmail.com>
+# LICENSE: Same as specified in COPYING file
+#
+# NOTE: Tested with NSIS 2.37 only
+
+# Define application name and installer file name
+Name @PACKAGE@
+OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
+!define startmenu "$SMPROGRAMS\@PACKAGE@"
+!define uninstaller "uninstaller.exe"
+
+# Set default installation directory
+Function .onInit
+  StrCpy $INSTDIR "C:\@PACKAGE@"
+FunctionEnd
+
+# Show license page
+Page license
+  LicenseData COPYING
+  LicenseForceSelection checkbox
+
+# Show installation directory selector page
+Page directory
+
+# Show installation progress page
+Page instfiles
+
+# Show uninstall confirmation page
+UninstPage uninstConfirm
+
+# Show uninstall progress page
+UninstPage instfiles
+
+# Install section
+Section "Install"
+  SetOutPath $INSTDIR
+  !system 'make'
+  !system 'cp /usr/i586-mingw32msvc/bin/libgtksourceview-2.0-0.dll src/'
+  !system 'cp /usr/i586-mingw32msvc/bin/libxml2.dll src/'
+  !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/language.dtd data/'
+  File AUTHORS
+  File ChangeLog
+  File COPYING
+  File NEWS
+  File TODO
+  File src/gnusim8085.exe
+  File /r /x *svn* /x Makefile* data
+  File /r /x *svn* doc/examples
+  File /r /x *svn* /x Makefile* pixmaps
+  File src/libgtksourceview-2.0-0.dll
+  File src/libxml2.dll
+  CreateDirectory ${startmenu}
+  CreateShortcut "${startmenu}\@PACKAGE@.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085_icon.png"
+  WriteUninstaller $INSTDIR\${uninstaller}
+  CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
+  !system 'rm -f src/libgtksourceview-2.0-0.dll'
+  !system 'rm -f src/libxml2.dll'
+  !system 'rm -f data/language.dtd'
+SectionEnd
+
+# Uninstall section
+Section "Uninstall"
+  Delete $INSTDIR\uninstaller.exe
+  RMDir /r ${startmenu}
+  RMDir /r $INSTDIR
+SectionEnd
+

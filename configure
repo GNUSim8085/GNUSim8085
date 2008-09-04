@@ -8166,7 +8166,7 @@ cat >>confdefs.h <<_ACEOF
 _ACEOF
 
 
-ac_config_files="$ac_config_files Makefile po/Makefile.in src/Makefile pixmaps/Makefile doc/Makefile data/Makefile GNUSim8085.desktop"
+ac_config_files="$ac_config_files Makefile po/Makefile.in src/Makefile pixmaps/Makefile doc/Makefile data/Makefile GNUSim8085.desktop installer.nsi"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -8783,6 +8783,7 @@ do
     "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
     "data/Makefile") CONFIG_FILES="$CONFIG_FILES data/Makefile" ;;
     "GNUSim8085.desktop") CONFIG_FILES="$CONFIG_FILES GNUSim8085.desktop" ;;
+    "installer.nsi") CONFIG_FILES="$CONFIG_FILES installer.nsi" ;;
 
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

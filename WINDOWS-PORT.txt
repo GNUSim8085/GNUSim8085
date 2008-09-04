@@ -15,16 +15,31 @@ How to build (using mingw cross compiler, on a linux system):
 
   2. Before doing "./configure --target=i586-mingw32msvc ..."
     a. Add target=win32 in gtksourceview-2.0.pc
-    a. Comment out Requires.private from gtksourceview-2.0.pc. This needs to
+    b. Comment out Requires.private from gtksourceview-2.0.pc. This needs to
        be done to workaround problem in libxml2 distribution.
+
+How to build installer (using nsis, on a linux system):
+
+  1. Make sure you have nsis installed.
+
+  2. After doing "./configure --target=i586-mingw32msvc ..."
+    a. Execute command "makensis installer.nsi".
+       This builds the application and then installer.
 
 How to install:
 
   1. Install GTK+ runtime for windows available at
      http://www.gtk.org/download-windows.html
-  2. Copy libgtksourceview-2.0-0.dll and libxml2.dll in same directory
-     where other dll files are placed in to GTK+ runtime installation.
-  3. Copy gnusim8085.exe and 8085.lang file to windows machine.
+
+  2. Using installer
+    a. Just run the installer. :-)
+
+  3. Without using installer
+    a. Copy gnusim8085.exe and 8085asm.lang files to windows machine.
+    b. Copy libgtksourceview-2.0-0.dll and libxml2.dll to same directory
+       as gnusim8085.exe.
+    c. Copy language.dtd file found in gtksourceview installation to same
+       directory as gnusim8085.exe.
 
 Status:
 
@@ -35,10 +50,8 @@ Status:
 
 TODO:
 
-  0. [Onkar] Write a installer using NSIS.
+  0. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
   
-  1. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
-  
-  2. [Nearfar] support.c: Write replacement for gnome_program_locate_file(); to
+  1. [Nearfar] support.c: Write replacement for gnome_program_locate_file(); to
   make the ICON work.
 

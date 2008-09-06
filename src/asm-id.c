@@ -439,131 +439,131 @@ static IdOpcode id_opcode[] = {
   {0xF5, "PUSH", 1, "PSW", "X", 0}
   ,
 
-  {0x17, "RAL", 0, "M", "X", 0}
+  {0x17, "RAL", 0, "M", "X", 0, "Rotate accumulator left through carry"}
   ,
-  {0x1F, "RAR", 0, "M", "X", 0}
+  {0x1F, "RAR", 0, "M", "X", 0, "Rotate accumulator right through carry"}
   ,
-  {0xD8, "RC", 0, "M", "X", 0}
+  {0xD8, "RC", 0, "M", "X", 0, "Return on Carry"}
   ,
-  {0xC9, "RET", 0, "M", "X", 0}
+  {0xC9, "RET", 0, "M", "X", 0, "Return from subroutine"}
   ,
-  {0x20, "RIM", 0, "M", "X", 0}
+  {0x20, "RIM", 0, "M", "X", 0, "Read interrupt mask"}
   ,
-  {0x07, "RLC", 0, "M", "X", 0}
+  {0x07, "RLC", 0, "M", "X", 0, "Rotate accumulator left"}
   ,
-  {0xF8, "RM", 0, "M", "X", 0}
+  {0xF8, "RM", 0, "M", "X", 0, "Return on minus"}
   ,
-  {0xD0, "RNC", 0, "M", "X", 0}
+  {0xD0, "RNC", 0, "M", "X", 0, "Return on no Carry"}
   ,
-  {0xF0, "RP", 0, "M", "X", 0}
+  {0xF0, "RP", 0, "M", "X", 0, "Return on positive"}
   ,
-  {0xE8, "RPE", 0, "M", "X", 0}
+  {0xE8, "RPE", 0, "M", "X", 0, "Return on parity even"}
   ,
-  {0xE0, "RPO", 0, "M", "X", 0}
+  {0xE0, "RPO", 0, "M", "X", 0, "Return on parity odd"}
   ,
-  {0x0F, "RRC", 0, "M", "X", 0}
-  ,
-
-  {0xC7, "RST", 1, "0", "X", 0}
-  ,
-  {0xCF, "RST", 1, "1", "X", 0}
-  ,
-  {0xD7, "RST", 1, "2", "X", 0}
-  ,
-  {0xDF, "RST", 1, "3", "X", 0}
-  ,
-  {0xE7, "RST", 1, "4", "X", 0}
-  ,
-  {0xEF, "RST", 1, "5", "X", 0}
-  ,
-  {0xF7, "RST", 1, "6", "X", 0}
-  ,
-  {0xFF, "RST", 1, "7", "X", 0}
+  {0x0F, "RRC", 0, "M", "X", 0, "Rotate accumulator right"}
   ,
 
-  {0xC8, "RZ", 0, "X", "X", 0}
+  {0xC7, "RST", 1, "0", "X", 0, "Restart"}
+  ,
+  {0xCF, "RST", 1, "1", "X", 0, "Restart"}
+  ,
+  {0xD7, "RST", 1, "2", "X", 0, "Restart"}
+  ,
+  {0xDF, "RST", 1, "3", "X", 0, "Restart"}
+  ,
+  {0xE7, "RST", 1, "4", "X", 0, "Restart"}
+  ,
+  {0xEF, "RST", 1, "5", "X", 0, "Restart"}
+  ,
+  {0xF7, "RST", 1, "6", "X", 0, "Restart"}
+  ,
+  {0xFF, "RST", 1, "7", "X", 0, "Restart"}
   ,
 
-  {0x9F, "SBB", 1, "A", "X", 0}
-  ,
-  {0x98, "SBB", 1, "B", "X", 0}
-  ,
-  {0x99, "SBB", 1, "C", "X", 0}
-  ,
-  {0x9A, "SBB", 1, "D", "X", 0}
-  ,
-  {0x9B, "SBB", 1, "E", "X", 0}
-  ,
-  {0x9C, "SBB", 1, "H", "X", 0}
-  ,
-  {0x9D, "SBB", 1, "L", "X", 0}
-  ,
-  {0x9E, "SBB", 1, "M", "X", 0}
+  {0xC8, "RZ", 0, "X", "X", 0, "Return on zero"}
   ,
 
-  {0xDE, "SBI", 0, "M", "X", 1}
+  {0x9F, "SBB", 1, "A", "X", 0, "Subtract source and borrow from accumulator"}
   ,
-  {0x22, "SHLD", 0, "M", "X", 2}
+  {0x98, "SBB", 1, "B", "X", 0, "Subtract source and borrow from accumulator"}
+  ,
+  {0x99, "SBB", 1, "C", "X", 0, "Subtract source and borrow from accumulator"}
+  ,
+  {0x9A, "SBB", 1, "D", "X", 0, "Subtract source and borrow from accumulator"}
+  ,
+  {0x9B, "SBB", 1, "E", "X", 0, "Subtract source and borrow from accumulator"}
+  ,
+  {0x9C, "SBB", 1, "H", "X", 0, "Subtract source and borrow from accumulator"}
+  ,
+  {0x9D, "SBB", 1, "L", "X", 0, "Subtract source and borrow from accumulator"}
+  ,
+  {0x9E, "SBB", 1, "M", "X", 0, "Subtract source and borrow from accumulator"}
   ,
 
-  {0x30, "SIM", 0, "M", "X", 0}
+  {0xDE, "SBI", 0, "M", "X", 1, "Subtract immediate from accumulator with borrow"}
   ,
-  {0xF9, "SPHL", 0, "M", "X", 0}
-  ,
-
-  {0x32, "STA", 0, "M", "X", 2}
-  ,
-  {0x02, "STAX", 1, "B", "X", 0}
-  ,
-  {0x12, "STAX", 1, "D", "X", 0}
+  {0x22, "SHLD", 0, "M", "X", 2, "Store H and L registers direct"}
   ,
 
-  {0x37, "STC", 0, "M", "X", 0}
+  {0x30, "SIM", 0, "M", "X", 0, "Set interrupt mask"}
+  ,
+  {0xF9, "SPHL", 0, "M", "X", 0, "Copy H and L registers to the stack pointer"}
+  ,
+
+  {0x32, "STA", 0, "M", "X", 2, "Store accumulator direct"}
+  ,
+  {0x02, "STAX", 1, "B", "X", 0, "Store accumulator indirect (RegPair)"}
+  ,
+  {0x12, "STAX", 1, "D", "X", 0, "Store accumulator indirect (RegPair)"}
+  ,
+
+  {0x37, "STC", 0, "M", "X", 0, "Set Carry"}
   ,			//modified 
 
-  {0x97, "SUB", 1, "A", "X", 0}
+  {0x97, "SUB", 1, "A", "X", 0, "Subtract register or memory from accumulator"}
   ,
-  {0x90, "SUB", 1, "B", "X", 0}
+  {0x90, "SUB", 1, "B", "X", 0, "Subtract register or memory from accumulator"}
   ,
-  {0x91, "SUB", 1, "C", "X", 0}
+  {0x91, "SUB", 1, "C", "X", 0, "Subtract register or memory from accumulator"}
   ,
-  {0x92, "SUB", 1, "D", "X", 0}
+  {0x92, "SUB", 1, "D", "X", 0, "Subtract register or memory from accumulator"}
   ,
-  {0x93, "SUB", 1, "E", "X", 0}
+  {0x93, "SUB", 1, "E", "X", 0, "Subtract register or memory from accumulator"}
   ,
-  {0x94, "SUB", 1, "H", "X", 0}
+  {0x94, "SUB", 1, "H", "X", 0, "Subtract register or memory from accumulator"}
   ,
-  {0x95, "SUB", 1, "L", "X", 0}
+  {0x95, "SUB", 1, "L", "X", 0, "Subtract register or memory from accumulator"}
   ,
-  {0x96, "SUB", 1, "M", "X", 0}
-  ,
-
-  {0xD6, "SUI", 0, "M", "X", 1}
+  {0x96, "SUB", 1, "M", "X", 0, "Subtract register or memory from accumulator"}
   ,
 
-  {0xEB, "XCHG", 0, "M", "X", 0}
+  {0xD6, "SUI", 0, "M", "X", 1, "Subtract immediate from accumulator"}
   ,
 
-  {0xAF, "XRA", 1, "A", "X", 0}
-  ,
-  {0xA8, "XRA", 1, "B", "X", 0}
-  ,
-  {0xA9, "XRA", 1, "C", "X", 0}
-  ,
-  {0xAA, "XRA", 1, "D", "X", 0}
-  ,
-  {0xAB, "XRA", 1, "E", "X", 0}
-  ,
-  {0xAC, "XRA", 1, "H", "X", 0}
-  ,
-  {0xAD, "XRA", 1, "L", "X", 0}
-  ,
-  {0xAE, "XRA", 1, "M", "X", 0}
+  {0xEB, "XCHG", 0, "M", "X", 0, "Exchange H and L with D and E"}
   ,
 
-  {0xEE, "XRI", 0, "M", "X", 1}
+  {0xAF, "XRA", 1, "A", "X", 0, "Exclusive OR register or memory with accumulator"}
   ,
-  {0xE3, "XTHL", 0, "M", "X", 0}
+  {0xA8, "XRA", 1, "B", "X", 0, "Exclusive OR register or memory with accumulator"}
+  ,
+  {0xA9, "XRA", 1, "C", "X", 0, "Exclusive OR register or memory with accumulator"}
+  ,
+  {0xAA, "XRA", 1, "D", "X", 0, "Exclusive OR register or memory with accumulator"}
+  ,
+  {0xAB, "XRA", 1, "E", "X", 0, "Exclusive OR register or memory with accumulator"}
+  ,
+  {0xAC, "XRA", 1, "H", "X", 0, "Exclusive OR register or memory with accumulator"}
+  ,
+  {0xAD, "XRA", 1, "L", "X", 0, "Exclusive OR register or memory with accumulator"}
+  ,
+  {0xAE, "XRA", 1, "M", "X", 0, "Exclusive OR register or memory with accumulator"}
+  ,
+
+  {0xEE, "XRI", 0, "M", "X", 1, "Exclusive OR immediate with accumulator"}
+  ,
+  {0xE3, "XTHL", 0, "M", "X", 0, "Exchange H and L with top of stack"}
 };
 
 IdOpcode *

@@ -25,60 +25,60 @@ static IdOpcode id_opcode[] = {
   /* 
    * { 0x, "", 0, "X", "X" }, 
    */
-  {0xCE, "ACI", 0, "X", "X", 1, "TODO"}	/* TODO - Add descriptions for all the instructions */
+  {0xCE, "ACI", 0, "X", "X", 1, "Add immediate to accumulator with carry"}	/* TODO - Add descriptions for all the instructions */
   ,
-  {0x8F, "ADC", 1, "A", "X", 0}
+  {0x8F, "ADC", 1, "A", "X", 0, "Add register to accumulator with carry"}
   ,
-  {0x88, "ADC", 1, "B", "X", 0}
+  {0x88, "ADC", 1, "B", "X", 0, "Add register to accumulator with carry"}
   ,
-  {0x89, "ADC", 1, "C", "X", 0}
+  {0x89, "ADC", 1, "C", "X", 0, "Add register to accumulator with carry"}
   ,
-  {0x8A, "ADC", 1, "D", "X", 0}
+  {0x8A, "ADC", 1, "D", "X", 0, "Add register to accumulator with carry"}
   ,
-  {0x8B, "ADC", 1, "E", "X", 0}
+  {0x8B, "ADC", 1, "E", "X", 0, "Add register to accumulator with carry"}
   ,
-  {0x8C, "ADC", 1, "H", "X", 0}
+  {0x8C, "ADC", 1, "H", "X", 0, "Add register to accumulator with carry"}
   ,
-  {0x8D, "ADC", 1, "L", "X", 0}
+  {0x8D, "ADC", 1, "L", "X", 0, "Add register to accumulator with carry"}
   ,
-  {0x8E, "ADC", 1, "M", "X", 0}
-  ,
-
-  {0x87, "ADD", 1, "A", "X", 0}
-  ,
-  {0x80, "ADD", 1, "B", "X", 0}
-  ,
-  {0x81, "ADD", 1, "C", "X", 0}
-  ,
-  {0x82, "ADD", 1, "D", "X", 0}
-  ,
-  {0x83, "ADD", 1, "E", "X", 0}
-  ,
-  {0x84, "ADD", 1, "H", "X", 0}
-  ,
-  {0x85, "ADD", 1, "L", "X", 0}
-  ,
-  {0x86, "ADD", 1, "M", "X", 0}
+  {0x8E, "ADC", 1, "M", "X", 0, "Add register to accumulator with carry"}
   ,
 
-  {0xC6, "ADI", 0, "X", "X", 1}
+  {0x87, "ADD", 1, "A", "X", 0, "Add register or memory to accumulator"}
+  ,
+  {0x80, "ADD", 1, "B", "X", 0, "Add register or memory to accumulator"}
+  ,
+  {0x81, "ADD", 1, "C", "X", 0, "Add register or memory to accumulator"}
+  ,
+  {0x82, "ADD", 1, "D", "X", 0, "Add register or memory to accumulator"}
+  ,
+  {0x83, "ADD", 1, "E", "X", 0, "Add register or memory to accumulator"}
+  ,
+  {0x84, "ADD", 1, "H", "X", 0, "Add register or memory to accumulator"}
+  ,
+  {0x85, "ADD", 1, "L", "X", 0, "Add register or memory to accumulator"}
+  ,
+  {0x86, "ADD", 1, "M", "X", 0, "Add register or memory to accumulator"}
   ,
 
-  {0xA7, "ANA", 1, "A", "X", 0}
+  {0xC6, "ADI", 0, "X", "X", 1, "Add immediate to accumulator"}
   ,
-  {0xA0, "ANA", 1, "B", "X", 0}
+
+  {0xA7, "ANA", 1, "A", "X", 0, "Logical AND register or memory with accumulator"}
   ,
-  {0xA1, "ANA", 1, "C", "X", 0}
+  {0xA0, "ANA", 1, "B", "X", 0, "Logical AND register or memory with accumulator"}
   ,
-  {0xA2, "ANA", 1, "D", "X", 0}
+  {0xA1, "ANA", 1, "C", "X", 0, "Logical AND register or memory with accumulator"}
   ,
-  {0xA3, "ANA", 1, "E", "X", 0}
+  {0xA2, "ANA", 1, "D", "X", 0, "Logical AND register or memory with accumulator"}
   ,
-  {0xA4, "ANA", 1, "H", "X", 0}
+  {0xA3, "ANA", 1, "E", "X", 0, "Logical AND register or memory with accumulator"}
   ,
-  {0xA5, "ANA", 1, "L", "X", 0}
+  {0xA4, "ANA", 1, "H", "X", 0, "Logical AND register or memory with accumulator"}
   ,
-  {0xA6, "ANA", 1, "M", "X", 0}
+  {0xA5, "ANA", 1, "L", "X", 0, "Logical AND register or memory with accumulator"}
+  ,
+  {0xA6, "ANA", 1, "M", "X", 0, "Logical AND register or memory with accumulator"}
   ,
 
   {0xE6, "ANI", 0, "M", "X", 1}

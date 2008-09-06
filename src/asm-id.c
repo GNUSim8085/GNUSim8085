@@ -81,95 +81,95 @@ static IdOpcode id_opcode[] = {
   {0xA6, "ANA", 1, "M", "X", 0, "Logical AND register or memory with accumulator"}
   ,
 
-  {0xE6, "ANI", 0, "M", "X", 1}
+  {0xE6, "ANI", 0, "M", "X", 1, "Logical AND immediate with accumulator"}
   ,
 
-  {0xCD, "CALL", 0, "M", "X", 2}
+  {0xCD, "CALL", 0, "M", "X", 2, "Subroutine Call"}
   ,
-  {0xDC, "CC", 0, "M", "X", 2}
+  {0xDC, "CC", 0, "M", "X", 2, "Call on Carry"}
   ,
-  {0xFC, "CM", 0, "M", "X", 2}
+  {0xFC, "CM", 0, "M", "X", 2, "Call on minus"}
   ,
-  {0x2F, "CMA", 0, "M", "X", 0}
+  {0x2F, "CMA", 0, "M", "X", 0, "Complement accumulator"}
   ,
-  {0x3F, "CMC", 0, "M", "X", 0}
-  ,
-
-  {0xBF, "CMP", 1, "A", "X", 0}
-  ,
-  {0xB8, "CMP", 1, "B", "X", 0}
-  ,
-  {0xB9, "CMP", 1, "C", "X", 0}
-  ,
-  {0xBA, "CMP", 1, "D", "X", 0}
-  ,
-  {0xBB, "CMP", 1, "E", "X", 0}
-  ,
-  {0xBC, "CMP", 1, "H", "X", 0}
-  ,
-  {0xBD, "CMP", 1, "L", "X", 0}
-  ,
-  {0xBE, "CMP", 1, "M", "X", 0}
+  {0x3F, "CMC", 0, "M", "X", 0, "Complement carry"}
   ,
 
-  {0xD4, "CNC", 0, "M", "X", 2}
+  {0xBF, "CMP", 1, "A", "X", 0, "Compare register or memory with accumulator"}
   ,
-  {0xC4, "CNZ", 0, "M", "X", 2}
+  {0xB8, "CMP", 1, "B", "X", 0, "Compare register or memory with accumulator"}
   ,
-  {0xF4, "CP", 0, "M", "X", 2}
+  {0xB9, "CMP", 1, "C", "X", 0, "Compare register or memory with accumulator"}
   ,
-  {0xEC, "CPE", 0, "M", "X", 2}
+  {0xBA, "CMP", 1, "D", "X", 0, "Compare register or memory with accumulator"}
   ,
-  {0xFE, "CPI", 0, "M", "X", 1}
+  {0xBB, "CMP", 1, "E", "X", 0, "Compare register or memory with accumulator"}
   ,
-  {0xE4, "CPO", 0, "M", "X", 2}
+  {0xBC, "CMP", 1, "H", "X", 0, "Compare register or memory with accumulator"}
   ,
-  {0xCC, "CZ", 0, "M", "X", 2}
+  {0xBD, "CMP", 1, "L", "X", 0, "Compare register or memory with accumulator"}
   ,
-
-  {0x27, "DAA", 0, "M", "X", 0}
-  ,
-
-  {0x09, "DAD", 1, "B", "X", 0}
-  ,
-  {0x19, "DAD", 1, "D", "X", 0}
-  ,
-  {0x29, "DAD", 1, "H", "X", 0}
-  ,
-  {0x39, "DAD", 1, "SP", "X", 0}
+  {0xBE, "CMP", 1, "M", "X", 0, "Compare register or memory with accumulator"}
   ,
 
-  {0x3D, "DCR", 1, "A", "X", 0}
+  {0xD4, "CNC", 0, "M", "X", 2, "Call on no Carry"}
   ,
-  {0x05, "DCR", 1, "B", "X", 0}
+  {0xC4, "CNZ", 0, "M", "X", 2, "Call on no zero"}
   ,
-  {0x0D, "DCR", 1, "C", "X", 0}
+  {0xF4, "CP", 0, "M", "X", 2, "Call on positive"}
   ,
-  {0x15, "DCR", 1, "D", "X", 0}
+  {0xEC, "CPE", 0, "M", "X", 2, "Call on parity even"}
   ,
-  {0x1D, "DCR", 1, "E", "X", 0}
+  {0xFE, "CPI", 0, "M", "X", 1, "Compare immediate with accumulator"}
   ,
-  {0x25, "DCR", 1, "H", "X", 0}
+  {0xE4, "CPO", 0, "M", "X", 2, "Call on parity odd"}
   ,
-  {0x2D, "DCR", 1, "L", "X", 0}
-  ,
-  {0x35, "DCR", 1, "M", "X", 0}
+  {0xCC, "CZ", 0, "M", "X", 2, "Call on zero"}
   ,
 
-  {0x0B, "DCX", 1, "B", "X", 0}
+  {0x27, "DAA", 0, "M", "X", 0, "Decimal adjust accumulator"}
   ,
-  {0x1B, "DCX", 1, "D", "X", 0}
+
+  {0x09, "DAD", 1, "B", "X", 0, "Add register pair to H and L registers"}
   ,
-  {0x2B, "DCX", 1, "H", "X", 0}
+  {0x19, "DAD", 1, "D", "X", 0, "Add register pair to H and L registers"}
   ,
-  {0x3B, "DCX", 1, "SP", "X", 0}
+  {0x29, "DAD", 1, "H", "X", 0, "Add register pair to H and L registers"}
+  ,
+  {0x39, "DAD", 1, "SP", "X", 0, "Add register pair to H and L registers"}
+  ,
+
+  {0x3D, "DCR", 1, "A", "X", 0, "Decrement register or memory by 1"}
+  ,
+  {0x05, "DCR", 1, "B", "X", 0, "Decrement register or memory by 1"}
+  ,
+  {0x0D, "DCR", 1, "C", "X", 0, "Decrement register or memory by 1"}
+  ,
+  {0x15, "DCR", 1, "D", "X", 0, "Decrement register or memory by 1"}
+  ,
+  {0x1D, "DCR", 1, "E", "X", 0, "Decrement register or memory by 1"}
+  ,
+  {0x25, "DCR", 1, "H", "X", 0, "Decrement register or memory by 1"}
+  ,
+  {0x2D, "DCR", 1, "L", "X", 0, "Decrement register or memory by 1"}
+  ,
+  {0x35, "DCR", 1, "M", "X", 0, "Decrement register or memory by 1"}
+  ,
+
+  {0x0B, "DCX", 1, "B", "X", 0, "Decrement register pair by 1"}
+  ,
+  {0x1B, "DCX", 1, "D", "X", 0, "Decrement register pair by 1"}
+  ,
+  {0x2B, "DCX", 1, "H", "X", 0, "Decrement register pair by 1"}
+  ,
+  {0x3B, "DCX", 1, "SP", "X", 0, "Decrement register pair by 1"}
   ,
 
   {0xF3, "DI", 0, "X", "X", 0}
   ,
   {0xFB, "EI", 0, "X", "X", 0}
   ,
-  {0x76, "HLT", 0, "X", "X", 0}
+  {0x76, "HLT", 0, "X", "X", 0, "Halt and enter wait state"}
   ,
 
   {0xDB, "IN", 0, "X", "X", 1}

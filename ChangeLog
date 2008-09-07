@@ -1,3 +1,8 @@
+2008-09-07  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
+
+	* src/asm-id.c: Added mneumonic descriptions.
+	* Fixes SF bug #1875401.
+
 2008-09-07  Onkar Shinde  <onkarshinde@gmail.com>
 	* pixmaps/gnusim8085_icon.ico: Add icon for Windows
 	* src/support.c: Additional logic for icon file lookup. Works when

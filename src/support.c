@@ -95,25 +95,30 @@ create_pixbuf                          (const gchar     *filename)
   if (!filename || !filename[0])
 	return NULL;
 
-  pathname = NULL; // gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,   filename, TRUE, NULL);
+  pathname = NULL;
 
-  // interface.c patch
   if (!pathname)
     {
-	  // temporaray patch
-	  // should be reinserted everytime glade overwrites this file
-	  // the code can be found in tools/glade_reinsert.c 
 	  GString *str;
 	  str = g_string_new(PACKAGE_PIXMAPS_DIR);
 	  g_string_append(str, "/");
 	  g_string_append(str, filename);
 	  pathname = g_strdup(str->str);
 	  g_string_free(str, TRUE);
-      //g_warning (_("Couldn't find pixmap file: %s"), filename);
-      //return NULL;
     }
 
   pixbuf = gdk_pixbuf_new_from_file (pathname, &error);
+  if (!pixbuf)
+    {
+	  GString *str;
+          error = NULL;
+          pathname = NULL;
+          str = g_string_new("pixmaps/");
+          g_string_append(str, filename);
+          pathname = g_strdup(str->str);
+          g_string_free(str, TRUE);
+          pixbuf = gdk_pixbuf_new_from_file (pathname, &error);
+    }
   if (!pixbuf)
     {
       fprintf (stderr, "Failed to load pixbuf file: %s: %s\n",

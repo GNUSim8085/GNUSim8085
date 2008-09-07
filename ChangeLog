@@ -1,3 +1,10 @@
+2008-09-07  Onkar Shinde  <onkarshinde@gmail.com>
+	* pixmaps/gnusim8085_icon.ico: Add icon for Windows
+	* src/support.c: Additional logic for icon file lookup. Works when
+	running directly from svn and also in Windows.
+	* installer.nsi.in: Use .ico file as icon for installer. Use .ico
+	instead of .png for menu shortcut.
+
 2008-09-04  Onkar Shinde  <onkarshinde@gmail.com>
 	* configure.in: Add installer.nsi.in
 	* installer.nsi.in: Template for generating installer script to be

@@ -7,6 +7,7 @@
 # Define application name and installer file name
 Name @PACKAGE@
 OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
+Icon pixmaps/gnusim8085_icon.ico
 !define startmenu "$SMPROGRAMS\@PACKAGE@"
 !define uninstaller "uninstaller.exe"
 
@@ -51,7 +52,7 @@ Section "Install"
   File src/libgtksourceview-2.0-0.dll
   File src/libxml2.dll
   CreateDirectory ${startmenu}
-  CreateShortcut "${startmenu}\@PACKAGE@.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085_icon.png"
+  CreateShortcut "${startmenu}\@PACKAGE@.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085_icon.ico"
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
   !system 'rm -f src/libgtksourceview-2.0-0.dll'

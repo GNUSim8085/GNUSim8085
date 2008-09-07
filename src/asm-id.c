@@ -165,278 +165,278 @@ static IdOpcode id_opcode[] = {
   {0x3B, "DCX", 1, "SP", "X", 0, "Decrement register pair by 1"}
   ,
 
-  {0xF3, "DI", 0, "X", "X", 0}
+  {0xF3, "DI", 0, "X", "X", 0, "Disable Interrupts"}
   ,
-  {0xFB, "EI", 0, "X", "X", 0}
+  {0xFB, "EI", 0, "X", "X", 0, "Enable Interrupts"}
   ,
   {0x76, "HLT", 0, "X", "X", 0, "Halt and enter wait state"}
   ,
 
-  {0xDB, "IN", 0, "X", "X", 1}
+  {0xDB, "IN", 0, "X", "X", 1, "Input data to accumulator from a port with 8-bit address"}
   ,
 
-  {0x3C, "INR", 1, "A", "X", 0}
+  {0x3C, "INR", 1, "A", "X", 0, "Increment register or memory by 1"}
   ,
-  {0x04, "INR", 1, "B", "X", 0}
+  {0x04, "INR", 1, "B", "X", 0, "Increment register or memory by 1"}
   ,
-  {0x0C, "INR", 1, "C", "X", 0}
+  {0x0C, "INR", 1, "C", "X", 0, "Increment register or memory by 1"}
   ,
-  {0x14, "INR", 1, "D", "X", 0}
+  {0x14, "INR", 1, "D", "X", 0, "Increment register or memory by 1"}
   ,
-  {0x1C, "INR", 1, "E", "X", 0}
+  {0x1C, "INR", 1, "E", "X", 0, "Increment register or memory by 1"}
   ,
-  {0x24, "INR", 1, "H", "X", 0}
+  {0x24, "INR", 1, "H", "X", 0, "Increment register or memory by 1"}
   ,
-  {0x2C, "INR", 1, "L", "X", 0}
+  {0x2C, "INR", 1, "L", "X", 0, "Increment register or memory by 1"}
   ,
-  {0x34, "INR", 1, "M", "X", 0}
-  ,
-
-  {0x03, "INX", 1, "B", "X", 0}
-  ,
-  {0x13, "INX", 1, "D", "X", 0}
-  ,
-  {0x23, "INX", 1, "H", "X", 0}
-  ,
-  {0x33, "INX", 1, "SP", "X", 0}
+  {0x34, "INR", 1, "M", "X", 0, "Increment register or memory by 1"}
   ,
 
-  {0xDA, "JC", 0, "X", "X", 2}
+  {0x03, "INX", 1, "B", "X", 0, "Increment register pair by 1"}
   ,
-  {0xFA, "JM", 0, "X", "X", 2}
+  {0x13, "INX", 1, "D", "X", 0, "Increment register pair by 1"}
   ,
-  {0xC3, "JMP", 0, "X", "X", 2}
+  {0x23, "INX", 1, "H", "X", 0, "Increment register pair by 1"}
   ,
-  {0xD2, "JNC", 0, "X", "X", 2}
-  ,
-  {0xC2, "JNZ", 0, "X", "X", 2}
-  ,
-  {0xF2, "JP", 0, "X", "X", 2}
-  ,
-  {0xEA, "JPE", 0, "X", "X", 2}
-  ,
-  {0xE2, "JPO", 0, "X", "X", 2}
-  ,
-  {0xCA, "JZ", 0, "X", "X", 2}
+  {0x33, "INX", 1, "SP", "X", 0, "Increment register pair by 1"}
   ,
 
-  {0x3A, "LDA", 0, "X", "X", 2}
+  {0xDA, "JC", 0, "X", "X", 2, "Jump on Carry"}
+  ,
+  {0xFA, "JM", 0, "X", "X", 2, "Jump on minus"}
+  ,
+  {0xC3, "JMP", 0, "X", "X", 2, "Jump"}
+  ,
+  {0xD2, "JNC", 0, "X", "X", 2, "Jump on no Carry"}
+  ,
+  {0xC2, "JNZ", 0, "X", "X", 2, "Jump on no zero"}
+  ,
+  {0xF2, "JP", 0, "X", "X", 2, "Jump on positive"}
+  ,
+  {0xEA, "JPE", 0, "X", "X", 2, "Jump on parity even"}
+  ,
+  {0xE2, "JPO", 0, "X", "X", 2, "Jump on parity odd"}
+  ,
+  {0xCA, "JZ", 0, "X", "X", 2, "Jump on zero"}
   ,
 
-  {0x0A, "LDAX", 1, "B", "X", 0}
-  ,
-  {0x1A, "LDAX", 1, "D", "X", 0}
+  {0x3A, "LDA", 0, "X", "X", 2, "Load accumulator"}
   ,
 
-  {0x2A, "LHLD", 0, "X", "X", 2}
+  {0x0A, "LDAX", 1, "B", "X", 0, "Load accumulator indirect"}
+  ,
+  {0x1A, "LDAX", 1, "D", "X", 0, "Load accumulator indirect"}
   ,
 
-  {0x01, "LXI", 1, "B", "X", 2}
-  ,
-  {0x11, "LXI", 1, "D", "X", 2}
-  ,
-  {0x21, "LXI", 1, "H", "X", 2}
-  ,
-  {0x31, "LXI", 1, "SP", "X", 2}
+  {0x2A, "LHLD", 0, "X", "X", 2, "Load H and L registers direct"}
   ,
 
-  {0x7F, "MOV", 2, "A", "A", 0}
+  {0x01, "LXI", 1, "B", "X", 2, "Load register pair immediate"}
   ,
-  {0x78, "MOV", 2, "A", "B", 0}
+  {0x11, "LXI", 1, "D", "X", 2, "Load register pair immediate"}
   ,
-  {0x79, "MOV", 2, "A", "C", 0}
+  {0x21, "LXI", 1, "H", "X", 2, "Load register pair immediate"}
   ,
-  {0x7A, "MOV", 2, "A", "D", 0}
-  ,
-  {0x7B, "MOV", 2, "A", "E", 0}
-  ,
-  {0x7C, "MOV", 2, "A", "H", 0}
-  ,
-  {0x7D, "MOV", 2, "A", "L", 0}
-  ,
-  {0x7E, "MOV", 2, "A", "M", 0}
+  {0x31, "LXI", 1, "SP", "X", 2, "Load register pair immediate"}
   ,
 
-  {0x47, "MOV", 2, "B", "A", 0}
+  {0x7F, "MOV", 2, "A", "A", 0, "Copy from source to destination"}
   ,
-  {0x40, "MOV", 2, "B", "B", 0}
+  {0x78, "MOV", 2, "A", "B", 0, "Copy from source to destination"}
   ,
-  {0x41, "MOV", 2, "B", "C", 0}
+  {0x79, "MOV", 2, "A", "C", 0, "Copy from source to destination"}
   ,
-  {0x42, "MOV", 2, "B", "D", 0}
+  {0x7A, "MOV", 2, "A", "D", 0, "Copy from source to destination"}
   ,
-  {0x43, "MOV", 2, "B", "E", 0}
+  {0x7B, "MOV", 2, "A", "E", 0, "Copy from source to destination"}
   ,
-  {0x44, "MOV", 2, "B", "H", 0}
+  {0x7C, "MOV", 2, "A", "H", 0, "Copy from source to destination"}
   ,
-  {0x45, "MOV", 2, "B", "L", 0}
+  {0x7D, "MOV", 2, "A", "L", 0, "Copy from source to destination"}
   ,
-  {0x46, "MOV", 2, "B", "M", 0}
-  ,
-
-  {0x4F, "MOV", 2, "C", "A", 0}
-  ,
-  {0x48, "MOV", 2, "C", "B", 0}
-  ,
-  {0x49, "MOV", 2, "C", "C", 0}
-  ,
-  {0x4A, "MOV", 2, "C", "D", 0}
-  ,
-  {0x4B, "MOV", 2, "C", "E", 0}
-  ,
-  {0x4C, "MOV", 2, "C", "H", 0}
-  ,
-  {0x4D, "MOV", 2, "C", "L", 0}
-  ,
-  {0x4E, "MOV", 2, "C", "M", 0}
+  {0x7E, "MOV", 2, "A", "M", 0, "Copy from source to destination"}
   ,
 
-  {0x57, "MOV", 2, "D", "A", 0}
+  {0x47, "MOV", 2, "B", "A", 0, "Copy from source to destination"}
   ,
-  {0x50, "MOV", 2, "D", "B", 0}
+  {0x40, "MOV", 2, "B", "B", 0, "Copy from source to destination"}
   ,
-  {0x51, "MOV", 2, "D", "C", 0}
+  {0x41, "MOV", 2, "B", "C", 0, "Copy from source to destination"}
   ,
-  {0x52, "MOV", 2, "D", "D", 0}
+  {0x42, "MOV", 2, "B", "D", 0, "Copy from source to destination"}
   ,
-  {0x53, "MOV", 2, "D", "E", 0}
+  {0x43, "MOV", 2, "B", "E", 0, "Copy from source to destination"}
   ,
-  {0x54, "MOV", 2, "D", "H", 0}
+  {0x44, "MOV", 2, "B", "H", 0, "Copy from source to destination"}
   ,
-  {0x55, "MOV", 2, "D", "L", 0}
+  {0x45, "MOV", 2, "B", "L", 0, "Copy from source to destination"}
   ,
-  {0x56, "MOV", 2, "D", "M", 0}
-  ,
-
-  {0x5F, "MOV", 2, "E", "A", 0}
-  ,
-  {0x58, "MOV", 2, "E", "B", 0}
-  ,
-  {0x59, "MOV", 2, "E", "C", 0}
-  ,
-  {0x5A, "MOV", 2, "E", "D", 0}
-  ,
-  {0x5B, "MOV", 2, "E", "E", 0}
-  ,
-  {0x5C, "MOV", 2, "E", "H", 0}
-  ,
-  {0x5D, "MOV", 2, "E", "L", 0}
-  ,
-  {0x5E, "MOV", 2, "E", "M", 0}
+  {0x46, "MOV", 2, "B", "M", 0, "Copy from source to destination"}
   ,
 
-  {0x67, "MOV", 2, "H", "A", 0}
+  {0x4F, "MOV", 2, "C", "A", 0, "Copy from source to destination"}
   ,
-  {0x60, "MOV", 2, "H", "B", 0}
+  {0x48, "MOV", 2, "C", "B", 0, "Copy from source to destination"}
   ,
-  {0x61, "MOV", 2, "H", "C", 0}
+  {0x49, "MOV", 2, "C", "C", 0, "Copy from source to destination"}
   ,
-  {0x62, "MOV", 2, "H", "D", 0}
+  {0x4A, "MOV", 2, "C", "D", 0, "Copy from source to destination"}
   ,
-  {0x63, "MOV", 2, "H", "E", 0}
+  {0x4B, "MOV", 2, "C", "E", 0, "Copy from source to destination"}
   ,
-  {0x64, "MOV", 2, "H", "H", 0}
+  {0x4C, "MOV", 2, "C", "H", 0, "Copy from source to destination"}
   ,
-  {0x65, "MOV", 2, "H", "L", 0}
+  {0x4D, "MOV", 2, "C", "L", 0, "Copy from source to destination"}
   ,
-  {0x66, "MOV", 2, "H", "M", 0}
-  ,
-
-  {0x6F, "MOV", 2, "L", "A", 0}
-  ,
-  {0x68, "MOV", 2, "L", "B", 0}
-  ,
-  {0x69, "MOV", 2, "L", "C", 0}
-  ,
-  {0x6A, "MOV", 2, "L", "D", 0}
-  ,
-  {0x6B, "MOV", 2, "L", "E", 0}
-  ,
-  {0x6C, "MOV", 2, "L", "H", 0}
-  ,
-  {0x6D, "MOV", 2, "L", "L", 0}
-  ,
-  {0x6E, "MOV", 2, "L", "M", 0}
+  {0x4E, "MOV", 2, "C", "M", 0, "Copy from source to destination"}
   ,
 
-  {0x77, "MOV", 2, "M", "A", 0}
+  {0x57, "MOV", 2, "D", "A", 0, "Copy from source to destination"}
   ,
-  {0x70, "MOV", 2, "M", "B", 0}
+  {0x50, "MOV", 2, "D", "B", 0, "Copy from source to destination"}
   ,
-  {0x71, "MOV", 2, "M", "C", 0}
+  {0x51, "MOV", 2, "D", "C", 0, "Copy from source to destination"}
   ,
-  {0x72, "MOV", 2, "M", "D", 0}
+  {0x52, "MOV", 2, "D", "D", 0, "Copy from source to destination"}
   ,
-  {0x73, "MOV", 2, "M", "E", 0}
+  {0x53, "MOV", 2, "D", "E", 0, "Copy from source to destination"}
   ,
-  {0x74, "MOV", 2, "M", "H", 0}
+  {0x54, "MOV", 2, "D", "H", 0, "Copy from source to destination"}
   ,
-  {0x75, "MOV", 2, "M", "L", 0}
+  {0x55, "MOV", 2, "D", "L", 0, "Copy from source to destination"}
   ,
-
-  {0x3E, "MVI", 1, "A", "X", 1}
-  ,
-  {0x06, "MVI", 1, "B", "X", 1}
-  ,
-  {0x0E, "MVI", 1, "C", "X", 1}
-  ,
-  {0x16, "MVI", 1, "D", "X", 1}
-  ,
-  {0x1E, "MVI", 1, "E", "X", 1}
-  ,
-  {0x26, "MVI", 1, "H", "X", 1}
-  ,
-  {0x2E, "MVI", 1, "L", "X", 1}
-  ,
-  {0x36, "MVI", 1, "M", "X", 1}
+  {0x56, "MOV", 2, "D", "M", 0, "Copy from source to destination"}
   ,
 
-  {0x00, "NOP", 0, "M", "X", 0}
+  {0x5F, "MOV", 2, "E", "A", 0, "Copy from source to destination"}
+  ,
+  {0x58, "MOV", 2, "E", "B", 0, "Copy from source to destination"}
+  ,
+  {0x59, "MOV", 2, "E", "C", 0, "Copy from source to destination"}
+  ,
+  {0x5A, "MOV", 2, "E", "D", 0, "Copy from source to destination"}
+  ,
+  {0x5B, "MOV", 2, "E", "E", 0, "Copy from source to destination"}
+  ,
+  {0x5C, "MOV", 2, "E", "H", 0, "Copy from source to destination"}
+  ,
+  {0x5D, "MOV", 2, "E", "L", 0, "Copy from source to destination"}
+  ,
+  {0x5E, "MOV", 2, "E", "M", 0, "Copy from source to destination"}
   ,
 
-  {0xB7, "ORA", 1, "A", "X", 0}
+  {0x67, "MOV", 2, "H", "A", 0, "Copy from source to destination"}
   ,
-  {0xB0, "ORA", 1, "B", "X", 0}
+  {0x60, "MOV", 2, "H", "B", 0, "Copy from source to destination"}
   ,
-  {0xB1, "ORA", 1, "C", "X", 0}
+  {0x61, "MOV", 2, "H", "C", 0, "Copy from source to destination"}
   ,
-  {0xB2, "ORA", 1, "D", "X", 0}
+  {0x62, "MOV", 2, "H", "D", 0, "Copy from source to destination"}
   ,
-  {0xB3, "ORA", 1, "E", "X", 0}
+  {0x63, "MOV", 2, "H", "E", 0, "Copy from source to destination"}
   ,
-  {0xB4, "ORA", 1, "H", "X", 0}
+  {0x64, "MOV", 2, "H", "H", 0, "Copy from source to destination"}
   ,
-  {0xB5, "ORA", 1, "L", "X", 0}
+  {0x65, "MOV", 2, "H", "L", 0, "Copy from source to destination"}
   ,
-  {0xB6, "ORA", 1, "M", "X", 0}
-  ,
-
-  {0xF6, "ORI", 0, "M", "X", 1}
-  ,
-  {0xD3, "OUT", 0, "M", "X", 1}
+  {0x66, "MOV", 2, "H", "M", 0, "Copy from source to destination"}
   ,
 
-  {0xE9, "PCHL", 0, "M", "X", 0}
+  {0x6F, "MOV", 2, "L", "A", 0, "Copy from source to destination"}
+  ,
+  {0x68, "MOV", 2, "L", "B", 0, "Copy from source to destination"}
+  ,
+  {0x69, "MOV", 2, "L", "C", 0, "Copy from source to destination"}
+  ,
+  {0x6A, "MOV", 2, "L", "D", 0, "Copy from source to destination"}
+  ,
+  {0x6B, "MOV", 2, "L", "E", 0, "Copy from source to destination"}
+  ,
+  {0x6C, "MOV", 2, "L", "H", 0, "Copy from source to destination"}
+  ,
+  {0x6D, "MOV", 2, "L", "L", 0, "Copy from source to destination"}
+  ,
+  {0x6E, "MOV", 2, "L", "M", 0, "Copy from source to destination"}
   ,
 
-  {0xC0, "RNZ", 0, "B", "X", 0}
+  {0x77, "MOV", 2, "M", "A", 0, "Copy from source to destination"}
   ,
-  {0xC1, "POP", 1, "B", "X", 0}
+  {0x70, "MOV", 2, "M", "B", 0, "Copy from source to destination"}
   ,
-  {0xD1, "POP", 1, "D", "X", 0}
+  {0x71, "MOV", 2, "M", "C", 0, "Copy from source to destination"}
   ,
-  {0xE1, "POP", 1, "H", "X", 0}
+  {0x72, "MOV", 2, "M", "D", 0, "Copy from source to destination"}
   ,
-  {0xF1, "POP", 1, "PSW", "X", 0}
+  {0x73, "MOV", 2, "M", "E", 0, "Copy from source to destination"}
+  ,
+  {0x74, "MOV", 2, "M", "H", 0, "Copy from source to destination"}
+  ,
+  {0x75, "MOV", 2, "M", "L", 0, "Copy from source to destination"}
   ,
 
-  {0xC5, "PUSH", 1, "B", "X", 0}
+  {0x3E, "MVI", 1, "A", "X", 1, "Move immediate 8-bit"}
   ,
-  {0xD5, "PUSH", 1, "D", "X", 0}
+  {0x06, "MVI", 1, "B", "X", 1, "Move immediate 8-bit"}
   ,
-  {0xE5, "PUSH", 1, "H", "X", 0}
+  {0x0E, "MVI", 1, "C", "X", 1, "Move immediate 8-bit"}
   ,
-  {0xF5, "PUSH", 1, "PSW", "X", 0}
+  {0x16, "MVI", 1, "D", "X", 1, "Move immediate 8-bit"}
+  ,
+  {0x1E, "MVI", 1, "E", "X", 1, "Move immediate 8-bit"}
+  ,
+  {0x26, "MVI", 1, "H", "X", 1, "Move immediate 8-bit"}
+  ,
+  {0x2E, "MVI", 1, "L", "X", 1, "Move immediate 8-bit"}
+  ,
+  {0x36, "MVI", 1, "M", "X", 1, "Move immediate 8-bit"}
+  ,
+
+  {0x00, "NOP", 0, "M", "X", 0, "No operation"}
+  ,
+
+  {0xB7, "ORA", 1, "A", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+  {0xB0, "ORA", 1, "B", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+  {0xB1, "ORA", 1, "C", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+  {0xB2, "ORA", 1, "D", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+  {0xB3, "ORA", 1, "E", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+  {0xB4, "ORA", 1, "H", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+  {0xB5, "ORA", 1, "L", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+  {0xB6, "ORA", 1, "M", "X", 0, "Logical OR register or memory with accumulator"}
+  ,
+
+  {0xF6, "ORI", 0, "M", "X", 1, "Logical OR immediate with accumulator"}
+  ,
+  {0xD3, "OUT", 0, "M", "X", 1, "Output data from accumulator to a port with 8-bit address"}
+  ,
+
+  {0xE9, "PCHL", 0, "M", "X", 0, "Load program counter with HL contents"}
+  ,
+
+  {0xC0, "RNZ", 0, "B", "X", 0, "Return on no zero"}
+  ,
+  {0xC1, "POP", 1, "B", "X", 0, "Pop off stack to register pair"}
+  ,
+  {0xD1, "POP", 1, "D", "X", 0, "Pop off stack to register pair"}
+  ,
+  {0xE1, "POP", 1, "H", "X", 0, "Pop off stack to register pair"}
+  ,
+  {0xF1, "POP", 1, "PSW", "X", 0, "Pop off stack to register pair"}
+  ,
+
+  {0xC5, "PUSH", 1, "B", "X", 0, "Push register pair onto stack"}
+  ,
+  {0xD5, "PUSH", 1, "D", "X", 0, "Push register pair onto stack"}
+  ,
+  {0xE5, "PUSH", 1, "H", "X", 0, "Push register pair onto stack"}
+  ,
+  {0xF5, "PUSH", 1, "PSW", "X", 0, "Push register pair onto stack"}
   ,
 
   {0x17, "RAL", 0, "M", "X", 0, "Rotate accumulator left through carry"}

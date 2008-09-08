@@ -49,6 +49,8 @@ gui_editor_new (void)
 	
   self->lang_manager = gtk_source_language_manager_new ();
 
+  self->style_scheme_manager = gtk_source_style_scheme_manager_get_default ();
+
   dirs = g_ptr_array_new();
 
   current_search_path = gtk_source_language_manager_get_search_path(self->lang_manager);
@@ -67,6 +69,8 @@ gui_editor_new (void)
   lang_spec_search_path = (gchar **)g_ptr_array_free(dirs, FALSE);
 
   gtk_source_language_manager_set_search_path (self->lang_manager, lang_spec_search_path);
+  
+  gtk_source_style_scheme_manager_append_search_path (self->style_scheme_manager, "data");
 
   GdkPixbuf *pixbuf;
   pixbuf = gui_editor_get_stock_icon (GTK_WIDGET(self->widget), GTK_STOCK_NO, GTK_ICON_SIZE_MENU);
@@ -88,6 +92,7 @@ gui_editor_show (GUIEditor * self)
   self->language = gtk_source_language_manager_get_language(self->lang_manager,"8085_asm");
   if (self->language != NULL){
 	gtk_source_buffer_set_language (GTK_SOURCE_BUFFER(self->buffer), GTK_SOURCE_LANGUAGE(self->language));
+	gtk_source_buffer_set_style_scheme (GTK_SOURCE_BUFFER(self->buffer), gtk_source_style_scheme_manager_get_scheme(self->style_scheme_manager,"classic"));
 	gtk_source_buffer_set_highlight_syntax (GTK_SOURCE_BUFFER(self->buffer), TRUE);
   }
   self->mark = gtk_text_buffer_get_insert (GTK_TEXT_BUFFER(self->buffer));

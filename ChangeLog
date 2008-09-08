@@ -1,3 +1,8 @@
+2008-09-09  Onkar Shinde  <onkarshinde@gmail.com>
+	* src/gui-editor.[c,h]: Use style scheme manager to set style search
+	path and default style.
+	* installer.nsi.in: Include file for style scheme "classic".
+
 2008-09-07  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
 
 	* src/asm-id.c: Added mneumonic descriptions.

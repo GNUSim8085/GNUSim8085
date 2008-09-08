@@ -35,6 +35,7 @@
 #include <gtksourceview/gtksourcebuffer.h>
 #include <gtksourceview/gtksourcelanguage.h>
 #include <gtksourceview/gtksourcelanguagemanager.h>
+#include <gtksourceview/gtksourcestyleschememanager.h>
 #include <gtksourceview/gtksourcemark.h>
 
 #define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"
@@ -58,6 +59,7 @@ G_BEGIN_DECLS typedef struct
   GtkTextTag *hltag;
 
   GtkSourceLanguageManager *lang_manager;
+  GtkSourceStyleSchemeManager *style_scheme_manager;
 
   GtkSourceLanguage *language;
 

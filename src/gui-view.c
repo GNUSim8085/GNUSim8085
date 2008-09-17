@@ -206,7 +206,7 @@ gui_view_update_stack(void)
   gui_list_stack_reload ();
 }
 
-void gui_view_update_reg_flag (void)
+void gui_view_update_reg_flag (gboolean reset)
 {
   GUIViewTable *ptr;
   /* update reg_flag */
@@ -221,10 +221,13 @@ void gui_view_update_reg_flag (void)
 
 	  gui_util_gen_hex (*((eef_data_t *) (ptr->data)), str,
 						str + 1);
-
-	  /* put in label */
-	  gtk_label_set_text (label, str);
-
+          if (!g_str_equal(gtk_label_get_text(label), str) && !reset){
+                /* show updated register with bold font */
+	      gtk_label_set_markup (label, g_markup_printf_escaped("<b>%s</b>",str));
+          } else {
+	      gtk_label_set_markup (label, g_markup_printf_escaped("%s",str));
+          }
+          
 	  ptr++;
 	}
   /* update flag */
@@ -237,12 +240,14 @@ void gui_view_update_reg_flag (void)
 	  label = GTK_LABEL(lookup_widget (app->window_main, ptr->glade));
 	  g_assert (label);
 
-	  if ( _get_flag (GPOINTER_TO_INT(ptr->data)) )
+	  if ( _get_flag (GPOINTER_TO_INT(ptr->data)) && !reset){
 		str[0] = '1';
+                /* show updated flag with bold font */
+                gtk_label_set_markup (label, g_markup_printf_escaped("<b>%s</b>",str));
+          } else {
+	        gtk_label_set_markup (label, g_markup_printf_escaped("%s",str));
+          }
 		
-	  /* put in label */
-	  gtk_label_set_text (label, str);
-
 	  ptr++;
 	}
 }
@@ -251,7 +256,7 @@ void
 gui_view_update_all (void)
 {
   /* update reg, flag labels */
-  gui_view_update_reg_flag();
+  gui_view_update_reg_flag(FALSE);
 
   /* update io_mem text entries */
   gui_view_update_io_mem ();

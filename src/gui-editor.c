@@ -71,6 +71,7 @@ gui_editor_new (void)
   gtk_source_language_manager_set_search_path (self->lang_manager, lang_spec_search_path);
   
   gtk_source_style_scheme_manager_append_search_path (self->style_scheme_manager, "data");
+  gtk_source_style_scheme_manager_append_search_path (self->style_scheme_manager, ".");
 
   GdkPixbuf *pixbuf;
   pixbuf = gui_editor_get_stock_icon (GTK_WIDGET(self->widget), GTK_STOCK_NO, GTK_ICON_SIZE_MENU);

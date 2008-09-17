@@ -1,3 +1,22 @@
+2008-09-18  Onkar Shinde  <onkarshinde@gmail.com>
+	* src/file-op.c: Add file filter for extension .asm
+	* src/gui-editor.c: Additional search path  of current directory for
+	style file.
+	* src/gui-view.[c,h], src/callbacks.c: Show updated register and flag
+	with bold font, except when doing 'Reset All'.
+	Known issue - last updated register and flag stays bold even after
+	program has finished executing.
+	* src/interface.c: Set scrollbar policy to automatic. Scrollbar is
+	only shown when needed. Update icon for hex -> decimal conversion
+	button.
+	* data/8085asm.lang: Update the language definition as per
+	specification version 2.0.
+	* installer.nsi.in: Change installer title, start menu group and
+	shortcut, default installation directory. Update file list to
+	workaround problem with gtksourceview win32 distribution.
+	* WINDOWS-PORT.txt: Minor updates.
+	* NEWS: Update for yet unreleased 1.3.5 version.
+
 2008-09-09  Onkar Shinde  <onkarshinde@gmail.com>
 	* src/gui-editor.[c,h]: Use style scheme manager to set style search
 	path and default style.

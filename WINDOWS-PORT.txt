@@ -29,7 +29,7 @@ How to build installer (using nsis, on a linux system):
 How to install:
 
   1. Install GTK+ runtime for windows available at
-     http://www.gtk.org/download-windows.html
+     http://sourceforge.net/projects/gtk-win/
 
   2. Using installer
     a. Just run the installer. :-)
@@ -38,20 +38,18 @@ How to install:
     a. Copy gnusim8085.exe and 8085asm.lang files to windows machine.
     b. Copy libgtksourceview-2.0-0.dll and libxml2.dll to same directory
        as gnusim8085.exe.
-    c. Copy language.dtd file found in gtksourceview installation to same
-       directory as gnusim8085.exe.
+    c. Copy language2.rng, styles.rng and classic.xml file found in gtksourceview
+       installation to same directory as gnusim8085.exe.
 
 Status:
 
   gnusim8085.exe runs fine on Windows machine. :-)
 
-  Screenshot - http://tinyurl.com/32y7cz (Needs update)
+  Screenshot -
+  http://picasaweb.google.co.in/onkarshinde/BangaloreTrip#5240247021199955618
   
 
 TODO:
 
   0. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
-  
-  1. [Nearfar] support.c: Write replacement for gnome_program_locate_file(); to
-  make the ICON work.
 

@@ -1,84 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE language SYSTEM "language.dtd">
-<language id="8085_asm" _name="8085 Assembly" version="1.0" _section="Sources" mimetypes="text/plain">
-	<escape-char>\</escape-char>
-
-	<line-comment _name = "Line Comment" style= "Comment">
-		<start-regex>;</start-regex>
-	</line-comment>
-
-	<block-comment _name = "'#if 0' Comment" style = "Comment">
-		<start-regex>^[ \t]*#[ \t]*if[ \t]*0</start-regex>
-        	<end-regex>[ \t]*#[ \t]*(endif|else)</end-regex>
-	</block-comment>
-
-	<string _name = "String" style = "String" end-at-line-end = "TRUE">
-		<start-regex>&quot;</start-regex>
-		<end-regex>&quot;</end-regex>
-	</string>
-
-	<syntax-item _name = "Include/Pragma" style = "Preprocessor">
-		<start-regex>^#[ \t]*(include|pragma)</start-regex>
-	         <end-regex>\n</end-regex>
-	</syntax-item>
-	<keyword-list _name = "Keywords" style = "Keyword" case-sensitive="FALSE">
-		<keyword>aci</keyword>
-		<keyword>ad(c|d|i)</keyword>
-		<keyword>an(a|i)</keyword>
-		<keyword>call</keyword>
-		<keyword>c(c|m|p|z)</keyword>
-		<keyword>cm(a|c|p)</keyword>
-		<keyword>cn(c|z)</keyword>
-		<keyword>cp(e|i|o)</keyword>
-		<keyword>da(a|d)</keyword>
-		<keyword>dc(r|x)</keyword>
-		<keyword>d(b|s)</keyword>
-		<keyword>equ</keyword>
-		<keyword>(d|e)i</keyword>
-		<keyword>hlt</keyword>
-		<keyword>i(n|nr|nx)</keyword>
-      		<keyword>j(c|m|p|z|mp)</keyword>
-		<keyword>jn(c|z)</keyword>
-		<keyword>jp(e|o)</keyword>
-		<keyword>ld(a|ax)</keyword>
-		<keyword>(l|s)hld</keyword>
-		<keyword>lxi</keyword>
-		<keyword>m(ov|vi)</keyword>
-		<keyword>nop</keyword>
-		<keyword>o(ra|ri|ut)</keyword>
-		<keyword>(pc|xt)hl</keyword>
-		<keyword>push</keyword>
-		<keyword>pop</keyword>
-		<keyword>ra(l|r)</keyword>
-		<keyword>r(c|m|p|z)</keyword>
-		<keyword>ret</keyword>
-		<keyword>(r|s)im</keyword>
-		<keyword>rlc</keyword>
-		<keyword>rn(c|z)</keyword>
-		<keyword>rp(e|o)</keyword>
-		<keyword>rrc</keyword>
-		<keyword>rst</keyword>
-		<keyword>sb(b|i)</keyword>
-		<keyword>sphl</keyword>
-		<keyword>st(a|ax)</keyword>
-		<keyword>stc</keyword>
-		<keyword>su(b|i)</keyword>
-		<keyword>xchg</keyword>
-		<keyword>xr(a|i)</keyword>
-	</keyword-list>
-	<keyword-list _name = "Registers" style = "Data Type"
-		match-empty-string-at-beginning = "TRUE"
-		match-empty-string-at-end = "TRUE"
-		case-sensitive="FALSE">
-		<keyword>(a|b|c|d|d|e|h|l|m|psw)</keyword>
-	</keyword-list>
-
-	<pattern-item _name = "Decimal" style = "Decimal">
-		<regex>\b([1-9][0-9]*|0)([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?\b</regex>
-	</pattern-item>
-
-	<pattern-item _name = "Hex Number" style = "Base-N Integer">
-		<regex>\b[0-9a-fA-F]+([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?(h|H)\b</regex>
-	</pattern-item>
-
+<language id="8085_asm" _name="8085 Assembly" version="2.0" _section="Sources">
+    <styles>
+        <style id="comment" _name="Comment" map-to="def:comment"/>
+        <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+        <style id="register" _name="Register" map-to="def:type"/>
+        <style id="decimal" _name="Decimal" map-to="def:decimal"/>
+        <style id="hex" _name="Hex" map-to="def:base-n-integer"/>
+        <style id="label" _name="Label" map-to="def:preprocessor"/>
+    </styles>
+    <definitions>
+        <context id="8085_asm">
+            <include>
+                <context id="comment" style-ref="comment">
+                    <start>;</start>
+                    <end>$</end>
+                </context>
+                <context id="keywords" style-ref="keyword">
+                    <keyword>aci</keyword>
+                    <keyword>ad(c|d|i)</keyword>
+                    <keyword>an(a|i)</keyword>
+                    <keyword>call</keyword>
+                    <keyword>c(c|m|p|z)</keyword>
+                    <keyword>cm(a|c|p)</keyword>
+                    <keyword>cn(c|z)</keyword>
+                    <keyword>cp(e|i|o)</keyword>
+                    <keyword>da(a|d)</keyword>
+                    <keyword>dc(r|x)</keyword>
+                    <keyword>d(b|s)</keyword>
+                    <keyword>equ</keyword>
+                    <keyword>(d|e)i</keyword>
+                    <keyword>hlt</keyword>
+                    <keyword>i(n|nr|nx)</keyword>
+                    <keyword>j(c|m|p|z|mp)</keyword>
+                    <keyword>jn(c|z)</keyword>
+                    <keyword>jp(e|o)</keyword>
+                    <keyword>ld(a|ax)</keyword>
+                    <keyword>(l|s)hld</keyword>
+                    <keyword>lxi</keyword>
+                    <keyword>m(ov|vi)</keyword>
+                    <keyword>nop</keyword>
+                    <keyword>o(ra|ri|ut)</keyword>
+                    <keyword>(pc|xt)hl</keyword>
+                    <keyword>push</keyword>
+                    <keyword>pop</keyword>
+                    <keyword>ra(l|r)</keyword>
+                    <keyword>r(c|m|p|z)</keyword>
+                    <keyword>ret</keyword>
+                    <keyword>(r|s)im</keyword>
+                    <keyword>rlc</keyword>
+                    <keyword>rn(c|z)</keyword>
+                    <keyword>rp(e|o)</keyword>
+                    <keyword>rrc</keyword>
+                    <keyword>rst</keyword>
+                    <keyword>sb(b|i)</keyword>
+                    <keyword>sphl</keyword>
+                    <keyword>st(a|ax)</keyword>
+                    <keyword>stc</keyword>
+                    <keyword>su(b|i)</keyword>
+                    <keyword>xchg</keyword>
+                    <keyword>xr(a|i)</keyword>
+                </context>
+                <context id="registers" style-ref="register">
+                    <keyword>(a|b|c|d|d|e|h|l|m|psw)</keyword>
+                </context>
+                <context id="decimal" style-ref="decimal">
+                    <match>\b([1-9][0-9]*|0)([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?\b</match>
+                </context>
+                <context id="hex" style-ref="hex">
+                    <match>\b[0-9a-fA-F]+([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?(h|H)\b</match>
+                </context>
+                <context id="label" style-ref="label">
+                    <match>^\s*[0-9a-zA-Z]+:</match>
+                </context>
+            </include>
+        </context>
+    </definitions>
 </language>

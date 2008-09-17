@@ -5,15 +5,15 @@
 # NOTE: Tested with NSIS 2.37 only
 
 # Define application name and installer file name
-Name @PACKAGE@
+Name GNUSim8085
 OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
 Icon pixmaps/gnusim8085_icon.ico
-!define startmenu "$SMPROGRAMS\@PACKAGE@"
+!define startmenu "$SMPROGRAMS\GNUSim8085"
 !define uninstaller "uninstaller.exe"
 
 # Set default installation directory
 Function .onInit
-  StrCpy $INSTDIR "C:\@PACKAGE@"
+  StrCpy $INSTDIR "C:\Program Files\GNUSim8085"
 FunctionEnd
 
 # Show license page
@@ -39,8 +39,10 @@ Section "Install"
   !system 'make'
   !system 'cp /usr/i586-mingw32msvc/bin/libgtksourceview-2.0-0.dll src/'
   !system 'cp /usr/i586-mingw32msvc/bin/libxml2.dll src/'
-  !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/language.dtd data/'
-  !system 'cp /usr/share/gtksourceview-2.0/styles/classic.xml data/'
+  !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/language2.rng data/'
+  !system 'cp /usr/share/gtksourceview-2.0/language-specs/language2.rng data/'
+  !system 'cp /usr/share/gtksourceview-2.0/styles/styles.rng data/'
+  !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/styles/classic.xml data/'
   File AUTHORS
   File ChangeLog
   File COPYING
@@ -53,12 +55,13 @@ Section "Install"
   File src/libgtksourceview-2.0-0.dll
   File src/libxml2.dll
   CreateDirectory ${startmenu}
-  CreateShortcut "${startmenu}\@PACKAGE@.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085_icon.ico"
+  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085_icon.ico"
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
   !system 'rm -f src/libgtksourceview-2.0-0.dll'
   !system 'rm -f src/libxml2.dll'
-  !system 'rm -f data/language.dtd'
+  !system 'rm -f data/language2.rng'
+  !system 'rm -f data/styles.rng'
   !system 'rm -f data/classic.xml'
 SectionEnd
 

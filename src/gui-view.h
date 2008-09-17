@@ -34,7 +34,7 @@
 G_BEGIN_DECLS
 
 void gui_view_update_io_mem(void);
-void gui_view_update_reg_flag(void);
+void gui_view_update_reg_flag(gboolean reset);
 void gui_view_update_all(void);
 
 void

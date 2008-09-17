@@ -645,7 +645,7 @@ create_window_main (void)
   gtk_widget_show (hbox31);
   gtk_container_add (GTK_CONTAINER (alignment8), hbox31);
 
-  image294 = gtk_image_new_from_stock (GTK_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
+  image294 = gtk_image_new_from_stock (GTK_STOCK_GO_BACK, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image294);
   gtk_box_pack_start (GTK_BOX (hbox31), image294, FALSE, FALSE, 0);
 
@@ -843,6 +843,7 @@ create_window_main (void)
   gtk_widget_show (main_data_scroll);
   gtk_container_add (GTK_CONTAINER (main_frame_data), main_data_scroll);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_data_scroll), GTK_SHADOW_OUT);
+  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_data_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
   label150 = gtk_label_new (_("Variables"));
   gtk_widget_show (label150);
@@ -871,6 +872,7 @@ create_window_main (void)
   gtk_widget_show (main_stack_scroll);
   gtk_container_add (GTK_CONTAINER (frame11), main_stack_scroll);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_stack_scroll), GTK_SHADOW_OUT);
+  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_stack_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
   label152 = gtk_label_new (_("Stack Trace"));
   gtk_widget_show (label152);
@@ -899,6 +901,7 @@ create_window_main (void)
   gtk_widget_show (main_keypad_scroll);
   gtk_container_add (GTK_CONTAINER (frame14), main_keypad_scroll);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_keypad_scroll), GTK_SHADOW_OUT);
+  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_keypad_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
   hbox40 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox40);

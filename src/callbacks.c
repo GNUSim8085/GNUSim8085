@@ -123,7 +123,7 @@ void
 on_registers1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   eef_reset_reg ();
-  gui_view_update_reg_flag ();
+  gui_view_update_reg_flag (FALSE);
 }
 
 
@@ -131,7 +131,7 @@ void
 on_flags1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   eef_reset_flag ();
-  gui_view_update_reg_flag ();
+  gui_view_update_reg_flag (FALSE);
 }
 
 
@@ -155,7 +155,7 @@ void
 on_reset_all1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   eef_reset_all ();
-  gui_view_update_reg_flag ();
+  gui_view_update_reg_flag (TRUE);
   gui_view_update_io_mem ();
 }
 

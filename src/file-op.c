@@ -284,6 +284,13 @@ create_file_dialog(const gchar *title,
 	 NULL);
   
   file_filter = gtk_file_filter_new();
+  gtk_file_filter_set_name (file_filter, "ASM Files");
+  gtk_file_filter_add_pattern(file_filter, "*.asm");
+  gtk_file_chooser_add_filter
+	(GTK_FILE_CHOOSER(file_selector),
+	 GTK_FILE_FILTER(file_filter));
+
+  file_filter = gtk_file_filter_new();
   gtk_file_filter_set_name (file_filter, "All Files");
   gtk_file_filter_add_pattern(file_filter, "*");
   gtk_file_chooser_add_filter

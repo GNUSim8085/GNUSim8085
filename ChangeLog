@@ -1,3 +1,14 @@
+2008-09-22  Onkar Shinde  <onkarshinde@gmail.com>
+	* configure.in: Add AC_CANONICAL_HOST so --host option actually gets
+	used.
+	* configure: Auto updated.
+	* installer.nsi.in: We now don't need the workaround for gtksourceview
+	win32 distribution problem.
+	* NEWS: Add the release date and update features list.
+	* TODO: Minor update.
+	* WINDOWS-PORT.txt: Update the instructions to use gtksourceview 2.4.
+	Also we now don't need to add target=win32 to the .pc file.
+
 2008-09-18  Onkar Shinde  <onkarshinde@gmail.com>
 	* src/file-op.c: Add file filter for extension .asm
 	* src/gui-editor.c: Additional search path  of current directory for

@@ -4,6 +4,7 @@ dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
 AC_INIT(configure.in)
+AC_CANONICAL_HOST
 AM_INIT_AUTOMAKE(gnusim8085, 1.3.5)
 AM_CONFIG_HEADER(config.h)
 

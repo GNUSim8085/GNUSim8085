@@ -939,7 +939,8 @@ _eef_inst_func_39 (eef_addr_t opnd_addr)
   eef_data_t high;
 
   low = sys.reg.a & 0x0F;
-
+  high = sys.reg.a >> 4;
+  
   if (low > 9 || sys.flag.ac)
 	{
 	  sys.reg.a += 6;
@@ -948,7 +949,7 @@ _eef_inst_func_39 (eef_addr_t opnd_addr)
 	  else 
 		sys.flag.ac = 0;
 	}
-  high = sys.reg.a >> 4;
+
   if (high > 9 || sys.flag.c)
 	{
 	  sys.reg.a += (6 << 4);

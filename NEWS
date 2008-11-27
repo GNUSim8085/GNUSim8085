@@ -1,3 +1,8 @@
+GNUSim8085 1.3.6 (26 Nov 2008 - FOSS.IN 2008)
+Fix:     DAA Instruction bug. Thanks to Madhusudhan. C. S
+
+
+
 GNUSim8085 1.3.5 (22 Sep 2008)
 
 New:     Port to gtksourceview 2.

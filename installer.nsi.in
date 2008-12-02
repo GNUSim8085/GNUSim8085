@@ -40,6 +40,7 @@ Section "Install"
   !system 'cp /usr/i586-mingw32msvc/bin/libgtksourceview-2.0-0.dll src/'
   !system 'cp /usr/i586-mingw32msvc/bin/libxml2.dll src/'
   !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/language2.rng data/'
+  !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/def.lang data/'
   !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/styles/styles.rng data/'
   !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/styles/classic.xml data/'
   File AUTHORS
@@ -62,6 +63,7 @@ Section "Install"
   !system 'rm -f data/language2.rng'
   !system 'rm -f data/styles.rng'
   !system 'rm -f data/classic.xml'
+  !system 'rm -f data/def.lang'
 SectionEnd
 
 # Uninstall section

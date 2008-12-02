@@ -32,6 +32,8 @@
 #include "asm-listing.h"
 #include "file-op.h"
 
+#define DEFAULT_LOAD_ADDR 0x4200
+
 gint start_addr = 0x4200;
 
 GUIEditor *edit = NULL;
@@ -170,9 +172,10 @@ validate_start_addr (void)
   g_assert (entry);
 
   /* get load address */
-  asm_util_parse_number ((gchar *) gtk_entry_get_text (entry), &la);
-
-  start_addr = la;
+  if (asm_util_parse_number ((gchar *) gtk_entry_get_text (entry), &la))
+	start_addr = la;
+  else
+	start_addr = DEFAULT_LOAD_ADDR;
 
 
 }

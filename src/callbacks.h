@@ -27,92 +27,92 @@ gboolean
 on_window_main_delete_event (GtkWidget * widget,
 							 GdkEvent * event, gpointer user_data);
 
-void on_new1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_new1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_open1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_open1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_save1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_save1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_save_as1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_save_as1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_quit1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_quit1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_registers1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_registers1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_flags1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_flags1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_io_ports1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_io_ports1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_main_memory1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_main_memory1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_reset_all1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_reset_all1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_assemble1_activate (GtkMenuItem * menuitem, gpointer user_data);
-
-
-void on_execute1_activate (GtkMenuItem * menuitem, gpointer user_data);
-
-void on_step_in1_activate (GtkMenuItem * menuitem, gpointer user_data);
-
-void on_step_over1_activate (GtkMenuItem * menuitem, gpointer user_data);
-
-void on_step_out1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_assemble1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
 
-void
+G_MODULE_EXPORT void on_execute1_activate (GtkMenuItem * menuitem, gpointer user_data);
+
+G_MODULE_EXPORT void on_step_in1_activate (GtkMenuItem * menuitem, gpointer user_data);
+
+G_MODULE_EXPORT void on_step_over1_activate (GtkMenuItem * menuitem, gpointer user_data);
+
+G_MODULE_EXPORT void on_step_out1_activate (GtkMenuItem * menuitem, gpointer user_data);
+
+
+G_MODULE_EXPORT void
 on_toggle_breakpoint1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void
+G_MODULE_EXPORT void
 on_clear_all_breakpoints1_activate (GtkMenuItem * menuitem,
 									gpointer user_data);
 
-void on_stop_execution1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_stop_execution1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_help_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_help_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_8085_manual1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_8085_manual1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void
+G_MODULE_EXPORT void
 on_assembler_reference1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_about1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_about1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_main_io_monitor_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_io_monitor_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_io_set_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_io_set_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_io_spin_changed (GtkEditable * editable, gpointer user_data);
+G_MODULE_EXPORT void on_main_io_spin_changed (GtkEditable * editable, gpointer user_data);
 
-void on_main_io_update_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_io_update_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_mem_spin_changed (GtkEditable * editable, gpointer user_data);
+G_MODULE_EXPORT void on_main_mem_spin_changed (GtkEditable * editable, gpointer user_data);
 
-void on_main_mem_update_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_mem_update_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_io_spin_changed (GtkEditable * editable, gpointer user_data);
+G_MODULE_EXPORT void on_main_io_spin_changed (GtkEditable * editable, gpointer user_data);
 
-void on_main_io_update_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_io_update_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_mem_spin_changed (GtkEditable * editable, gpointer user_data);
+G_MODULE_EXPORT void on_main_mem_spin_changed (GtkEditable * editable, gpointer user_data);
 
-void on_main_mem_update_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_mem_update_clicked (GtkButton * button, gpointer user_data);
 
-void on_show_listing1_activate (GtkMenuItem * menuitem, gpointer user_data);
+G_MODULE_EXPORT void on_show_listing1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-void on_listing_save_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_listing_save_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_but_to_hex_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_but_to_hex_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_but_to_dec_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_main_but_to_dec_clicked (GtkButton * button, gpointer user_data);
 
-void on_main_entry_dec_activate (GtkEntry * entry, gpointer user_data);
+G_MODULE_EXPORT void on_main_entry_dec_activate (GtkEntry * entry, gpointer user_data);
 
-void on_main_entry_hex_activate (GtkEntry * entry, gpointer user_data);
+G_MODULE_EXPORT void on_main_entry_hex_activate (GtkEntry * entry, gpointer user_data);
 
-void on_start_but_tutorial_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_start_but_tutorial_clicked (GtkButton * button, gpointer user_data);
 
-void on_start_but_open_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_start_but_open_clicked (GtkButton * button, gpointer user_data);
 
-void on_start_but_close_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_start_but_close_clicked (GtkButton * button, gpointer user_data);
 
-void on_listing_save_clicked (GtkButton * button, gpointer user_data);
+G_MODULE_EXPORT void on_listing_save_clicked (GtkButton * button, gpointer user_data);

@@ -1,5 +1,6 @@
 GNUSim8085 1.3.6 (26 Nov 2008 - FOSS.IN 2008)
 Fix:     DAA Instruction bug. Thanks to Madhusudhan. C. S
+Fix:     Error message reports line number offset by 1. Thanks Aditya M.
 New:     Assembler now accepts Binary and octal arguments.
 
 

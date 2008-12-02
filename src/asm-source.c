@@ -417,7 +417,7 @@ asm_source_entry_parse_not_operand_but_this (AsmSourceEntry * entry,
 		  if (entry)
 			{
 			  asm_err_comm_send (entry->
-								 listing_buffer_line_no,
+								 listing_buffer_line_no+1,
 								 _("Expression error in symbol"),
 								 ASM_ERR_ERROR);
 			}
@@ -431,7 +431,7 @@ asm_source_entry_parse_not_operand_but_this (AsmSourceEntry * entry,
 		  if (entry)
 			{
 			  asm_err_comm_send (entry->
-								 listing_buffer_line_no,
+								 listing_buffer_line_no+1,
 								 _("Undefined symbol"),
 								 ASM_ERR_ERROR);
 			}

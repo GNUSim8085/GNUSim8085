@@ -79,7 +79,7 @@ asm_genobj_generate (AsmSource * src, gint sa)
   g_assert (src);
 
 #define SEND_ERR(ln, str)						\
-  asm_err_comm_send (ln, str, ASM_ERR_ERROR);	\
+  asm_err_comm_send (ln+1, str, ASM_ERR_ERROR);	\
   return NULL;
 
   /* create mem block */

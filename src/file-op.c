@@ -48,6 +48,7 @@ ori_open (gchar * fn, gboolean replace)
   GString *gstr;
   FILE *fp;
   char *nullstr = "NULLSTRING";
+  char *ret;
   if (!fn)
 	fn = nullstr;
 
@@ -67,7 +68,8 @@ ori_open (gchar * fn, gboolean replace)
   while (!feof (fp))
 	{
 	  gchar buf[300] = { 0 };
-	  fgets (buf, 100, fp);
+	  // return value stored just to avoid compiler warnings.
+	  ret = fgets (buf, 100, fp);
 	  g_string_append (gstr, buf);
 	}
 
@@ -117,6 +119,7 @@ ori_save (gchar * fn, gboolean replace)
   gchar *text;
   FILE *fp;
   char *nullstr = "NULLSTRING";
+  int ret;
   if (!fn)
 	fn = nullstr;
 
@@ -130,7 +133,8 @@ ori_save (gchar * fn, gboolean replace)
 	  gui_app_show_msg (GTK_MESSAGE_ERROR, errmsg);
 	  return;
 	}
-  fwrite (text, 1, strlen (text), fp);
+  // return value stored just to avoid compiler warnings.
+  ret = fwrite (text, 1, strlen (text), fp);
   /* debug */
   fclose (fp);
 
@@ -241,6 +245,7 @@ file_op_listing_save (gchar * text)
 {
   gchar *selected_filename;
   GtkWidget *file_selector;
+  int ret;
   FILE *fp;
 
   file_selector = create_file_dialog
@@ -257,7 +262,8 @@ file_op_listing_save (gchar * text)
 		  gui_app_show_msg (GTK_MESSAGE_ERROR, _("Failed to save listing file"));
 		  return;
 		}
-	  fwrite (text, 1, strlen (text), fp);
+	  // return value stored just to avoid compiler warnings.
+	  ret = fwrite (text, 1, strlen (text), fp);
 	  fclose (fp);
 
 	  g_free (selected_filename);
@@ -282,6 +288,8 @@ create_file_dialog(const gchar *title,
 	 GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 	 stock, GTK_RESPONSE_ACCEPT,
 	 NULL);
+
+  gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER(file_selector), TRUE);
   
   file_filter = gtk_file_filter_new();
   gtk_file_filter_set_name (file_filter, "ASM Files");

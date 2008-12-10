@@ -8,7 +8,6 @@ TODO
 * Descriptive assembler messages - no repetitions
 * "Load address" entry widget- not properly rendering and processing hex address! Bug in GtkEntry?
 * Data, Stack List view should restore state after reload/re-expand.
-* Colors for List views
 
 Features Pending
 =================

@@ -92,8 +92,6 @@ module.source.files=\
 	8085-asm.c\
 	gui-app.c\
 	gui-editor.c\
-	scintilla-interface.cc\
-	scintilla-marshal.c\
 	8085-link.c\
 	gui-view.c\
 	bridge.c\
@@ -176,8 +174,6 @@ module.source.files=\
 	gui-list-message.h\
 	gui-list-stack.h\
 	gui-view.h\
-	scintilla-interface.h\
-	scintilla-marshal.h\
 	gui-keypad.h\
 	gui-keypad.c\
 	gui-input-symbol.h\

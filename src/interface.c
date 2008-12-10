@@ -686,7 +686,7 @@ create_window_main (void)
   gtk_widget_show (hbox13);
   gtk_box_pack_start (GTK_BOX (vbox11), hbox13, TRUE, TRUE, 0);
 
-  main_io_spin_adj = gtk_adjustment_new (0, 0, 255, 1, 10, 10);
+  main_io_spin_adj = gtk_adjustment_new (0, 0, 255, 1, 10, 0);
   main_io_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_io_spin_adj), 1, 0);
   gtk_widget_show (main_io_spin);
   gtk_box_pack_start (GTK_BOX (hbox13), main_io_spin, TRUE, TRUE, 0);
@@ -750,7 +750,7 @@ create_window_main (void)
   gtk_widget_show (hbox14);
   gtk_box_pack_start (GTK_BOX (vbox12), hbox14, TRUE, TRUE, 0);
 
-  main_mem_spin_adj = gtk_adjustment_new (0, 0, 65535, 1, 10, 10);
+  main_mem_spin_adj = gtk_adjustment_new (0, 0, 65535, 1, 10, 0);
   main_mem_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_mem_spin_adj), 1, 0);
   gtk_widget_show (main_mem_spin);
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_spin, TRUE, TRUE, 0);

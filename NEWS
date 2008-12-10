@@ -1,18 +1,15 @@
-GNUSim8085 1.3.6 (26 Nov 2008 - FOSS.IN 2008)
-Fix:     DAA Instruction bug. Thanks to Madhusudhan. C. S
-Fix:     Error message reports line number offset by 1. Thanks Aditya M.
-New:     Assembler now accepts Binary and octal arguments.
-
-
-GNUSim8085 1.3.5 (22 Sep 2008)
+GNUSim8085 1.3.5 (15 Dec 2008)
 
 New:     Port to gtksourceview 2.
          Syntax highlighting works in non standard installation also.
 New:     Windows port with an installer.
          GTK+ runtime needs to be installed separately.
 New:     Updated registers and flags are shown in bold.
+New:     Assembler now accepts Binary and octal arguments.
 Fix:     Tooltips for the keypad buttons. Needs GTK+ >= 2.12.
 Fix:     Add file filter for .asm files.
+Fix:     DAA Instruction bug. Thanks to Madhusudhan. C. S
+Fix:     Error message reports line number offset by 1. Thanks Aditya M.
 
 GNUSim8085 1.3.2 (17 Oct 2007)
 

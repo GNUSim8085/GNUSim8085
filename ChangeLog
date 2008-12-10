@@ -1,3 +1,20 @@
+2008-12-11  Onkar Shinde  <onkarshinde@gmail.com>
+	* src/interface.c: Fix warnings about deprecated non-zero page size in
+	spin button.
+	* src/file-op.c: Set setting for overwrite confirmation. It will get
+	used for 'Save As' action. Fix compiler warnings because of the
+	ignored return values of some file related functions.
+	* src/callbacks.c: Call gui_editor_show for listing window so syntax
+	highlighting gets activated.
+	* data/8085asm.lang: Make syntax highlighting case insensitive. Fix
+	labels not getting highlighted in listing window. Fix hex opcodes or
+	addresses not getting highlighted in listing window.
+	* AUTHORS: Add Madhusudan and Aditya in list of patch contributors.
+	* NEWS: Fix news file. We have not yet released 1.3.5.
+	* TODO: Minor update.
+	* GNUSim8085.prj, src/asm-id.h: Remove irrelevant scintilla
+	references.
+
 2008-09-22  Onkar Shinde  <onkarshinde@gmail.com>
 	* configure.in: Add AC_CANONICAL_HOST so --host option actually gets
 	used.

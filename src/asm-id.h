@@ -72,7 +72,7 @@ typedef enum
 IdPseudo *asm_id_pseudo_lookup (gchar * op_name);
 
 /* returns space seperated list of all opcode names 
- * for use in scintilla (syntax highlighting)
+ * for use in syntax highlighting
  */
 gchar *asm_id_return_all_opcode_names(void);
 

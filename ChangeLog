@@ -1,3 +1,9 @@
+2008-12-20  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
+
+	* src/8085-instructions.c: fix DAD instruction carry set/reset
+	bug. Thanks to Aditya M for the patch.
+	* AUTHORS: Changed Onkar's email id.
+
 2008-12-11  Onkar Shinde  <onkarshinde@gmail.com>
 	* src/interface.c: Fix warnings about deprecated non-zero page size in
 	spin button.

@@ -409,7 +409,8 @@ _eef_inst_func_dad (eef_addr_t opnd_addr, gchar sec)
   h_data = eef_regpair_get ('H');
   sec_data = eef_join16 (*dst_h, *dst_l);
 
-  _eef_flag_check_and_set_c (h_data, sec_data, '+');
+  /* check for overflow and (re)set carry flag */
+  sys.flag.c = ( ( (int)h_data + (int)sec_data ) >= (1<<16) );
 
   eef_regpair_put ('H', h_data + sec_data);
 

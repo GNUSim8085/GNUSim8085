@@ -39,16 +39,9 @@ GtkAction*  lookup_action_widget              (GtkWidget       *widget,
  * Private Functions.
  */
 
-/* This is used to create the pixmaps used in the interface. */
-GtkWidget*  create_pixmap              (GtkWidget       *widget,
-                                        const gchar     *filename);
-
 /* This is used to create the pixbufs used in the interface. */
 GdkPixbuf*  create_pixbuf              (const gchar     *filename);
 
-/* This is used to set ATK action descriptions. */
-void        glade_set_atk_action_description (AtkAction       *action,
-                                              const gchar     *action_name,
-                                              const gchar     *description);
-
+/* This is used to read authors from AUTHORS file. */
+gchar**  read_authors ();
 

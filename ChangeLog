@@ -1,3 +1,14 @@
+2008-12-21  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* AUTHORS: Add Krishna Bharadwaj to list of patch contributors.
+	Modify Sridhar's email id.
+	* src/support.[c,h]: Add function to read authors list from AUTHORS
+	file. Remove unused functions.
+	* src/interface.c: Call function to read authors from AUTHORS file.
+	* po/gnusim8085.pot: Auto updated.
+	* debian/: There is no point of maintaining our own version of
+	packaging files. Hence remove the directory.
+
 2008-12-20  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
 
 	* src/8085-instructions.c: fix DAD instruction carry set/reset

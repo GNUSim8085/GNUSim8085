@@ -1105,15 +1105,7 @@ activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
 void
 create_dialog_about (void)
 {
-  const gchar *authors[] = {
-    "Main programmer and founder:",
-    "Sridhar Ratnakumar (srid@nearfar.org)",
-    "\n",
-    "Maintainers and Developers:",
-    "Aanjhan Ranganathan (aanjhan@tuxmaniac.com)",
-    "Onkar Shinde (onkarshinde@rediffmail.com)",
-    NULL
-  };
+  gchar **authors = read_authors();
   const gchar *documenters[] = {
     "Sridhar Ratnakumar (srid@nearfar.org)",
     NULL

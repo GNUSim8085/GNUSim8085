@@ -62,29 +62,6 @@ lookup_action_widget                          (GtkWidget       *widget,
 }
 
 /* This is an internally used function to create pixmaps. */
-GtkWidget*
-create_pixmap                          (GtkWidget       *widget,
-                                        const gchar     *filename)
-{
-  GtkWidget *pixmap;
-  gchar *pathname;
-
-  if (!filename || !filename[0])
-	return gtk_image_new ();
-
-  pathname = NULL; // gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,  filename, TRUE, NULL);
-  if (!pathname)
-    {
-      g_warning (_("Couldn't find pixmap file: %s"), filename);
-      return gtk_image_new ();
-    }
-
-  pixmap = gtk_image_new_from_file (pathname);
-  g_free (pathname);
-  return pixmap;
-}
-
-/* This is an internally used function to create pixmaps. */
 GdkPixbuf*
 create_pixbuf                          (const gchar     *filename)
 {
@@ -129,18 +106,58 @@ create_pixbuf                          (const gchar     *filename)
   return pixbuf;
 }
 
-/* This is used to set ATK action descriptions. */
-void
-glade_set_atk_action_description       (AtkAction       *action,
-                                        const gchar     *action_name,
-                                        const gchar     *description)
-{
-  gint n_actions, i;
+gchar**
+read_authors (){
+  gchar *pathname = NULL;
+  gchar **authors;
+  GError *error = NULL;
+  FILE *fp;
+  GString *gstr;
+  char *ret;
 
-  n_actions = atk_action_get_n_actions (action);
-  for (i = 0; i < n_actions; i++)
+  pathname = NULL;
+
+  if (!pathname)
     {
-      if (!strcmp (atk_action_get_name (action, i), action_name))
-        atk_action_set_description (action, i, description);
+	  GString *str;
+	  str = g_string_new(PACKAGE_DOC_DIR);
+	  g_string_append(str, "/");
+	  g_string_append(str, "AUTHORS");
+	  pathname = g_strdup(str->str);
+	  g_string_free(str, TRUE);
     }
+  fp = fopen (pathname, "r");
+
+  if (fp == NULL)
+    {
+	  GString *str;
+          error = NULL;
+          pathname = NULL;
+          str = g_string_new("");
+          g_string_append(str, "AUTHORS");
+          pathname = g_strdup(str->str);
+          g_string_free(str, TRUE);
+    }
+  fp = fopen (pathname, "r");
+
+  if (fp == NULL)
+    {
+      fprintf (stderr, "Failed to load authors file: %s: %s\n",
+               pathname, error->message);
+      g_error_free (error);
+      return NULL;
+    }
+  
+  gstr = g_string_new ("");
+  while (!feof (fp))
+    {
+      gchar buf[300] = { 0 };
+      // return value stored just to avoid compiler warnings.
+      ret = fgets (buf, 100, fp);
+      g_string_append (gstr, buf);
+    }
+  authors = g_strsplit(gstr->str, "\n", -1);
+  g_string_free (gstr, TRUE);
+  g_free (pathname);
+  return authors;
 }

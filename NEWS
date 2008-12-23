@@ -1,4 +1,4 @@
-GNUSim8085 1.3.5 (15 Dec 2008)
+GNUSim8085 1.3.5 (24 Dec 2008)
 
 New:     Port to gtksourceview 2.
          Syntax highlighting works in non standard installation also.
@@ -10,6 +10,7 @@ Fix:     Tooltips for the keypad buttons. Needs GTK+ >= 2.12.
 Fix:     Add file filter for .asm files.
 Fix:     DAA Instruction bug. Thanks to Madhusudhan. C. S
 Fix:     Error message reports line number offset by 1. Thanks Aditya M.
+Fix:     DAD Instruction bug. Thanks to Aditya M.
 
 GNUSim8085 1.3.2 (17 Oct 2007)
 

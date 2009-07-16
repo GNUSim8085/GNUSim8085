@@ -69,9 +69,9 @@ cb_clicked (GtkTreeView * listview, gpointer user_data)
   if (ln == 0)
 	return;
 
-  /* FIXME line number is not correct some times at which ln-1 will work */
-  gui_editor_goto_line (app->editor, ln /* -1 ? */);
   gtk_widget_grab_focus (app->editor->widget);
+  gui_editor_goto_line (app->editor, ln-1);
+
 }
 
 static void

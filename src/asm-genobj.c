@@ -157,7 +157,7 @@ asm_genobj_generate (AsmSource * src, gint sa)
 				  (entry, &val))
 				{
 				  SEND_ERR (line_no,
-							_("Invalid operand or symbol"));
+							_("Invalid operand or symbol. Check whether operands start with a number. e.g a0H should be 0a0H"));
 				}
 
 			  eef_split16 (val, &val_h, &val_l);

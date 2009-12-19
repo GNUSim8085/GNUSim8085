@@ -49,10 +49,10 @@ gui_app_new (void)
   //gtk_window_get_size(app->window_main, &w, &h);
 
   p_msg = GTK_PANED (lookup_widget
-					 (app->window_main, "main_vpaned_msg"));
+					 (app->window_main, "main_hpaned_msg"));
   g_assert (p_msg);
   p_data = GTK_PANED (lookup_widget
-					  (app->window_main, "main_hpaned_data"));
+					  (app->window_main, "main_vpaned_data"));
   g_assert (p_data);
 
   /* get screen 

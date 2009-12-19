@@ -222,8 +222,8 @@ create_window_main (void)
   GtkWidget *hbox37;
   GtkWidget *image368;
   GtkWidget *label165;
-  GtkWidget *main_vpaned_msg;
-  GtkWidget *main_hpaned_data;
+  GtkWidget *main_hpaned_msg;
+  GtkWidget *main_vpaned_data;
   GtkWidget *main_vbox_center;
   GtkWidget *hbox24;
   GtkWidget *label147;
@@ -302,7 +302,7 @@ create_window_main (void)
   main_hpaned_left = gtk_hpaned_new ();
   gtk_widget_show (main_hpaned_left);
   gtk_box_pack_start (GTK_BOX (vbox1), main_hpaned_left, TRUE, TRUE, 0);
-  gtk_paned_set_position (GTK_PANED (main_hpaned_left), 237);
+  gtk_paned_set_position (GTK_PANED (main_hpaned_left), 230);
 
   vbox9 = gtk_vbox_new (FALSE, 0);
   gtk_widget_show (vbox9);
@@ -800,19 +800,19 @@ create_window_main (void)
   gtk_label_set_use_markup (GTK_LABEL (label165), TRUE);
   gtk_label_set_justify (GTK_LABEL (label165), GTK_JUSTIFY_LEFT);
 
-  main_vpaned_msg = gtk_vpaned_new ();
-  gtk_widget_show (main_vpaned_msg);
-  gtk_paned_pack2 (GTK_PANED (main_hpaned_left), main_vpaned_msg, TRUE, FALSE);
-  gtk_paned_set_position (GTK_PANED (main_vpaned_msg), 400);
+  main_hpaned_msg = gtk_hpaned_new ();
+  gtk_widget_show (main_hpaned_msg);
+  gtk_paned_pack2 (GTK_PANED (main_hpaned_left), main_hpaned_msg, TRUE, FALSE);
+  gtk_paned_set_position (GTK_PANED (main_hpaned_msg), 400);
 
-  main_hpaned_data = gtk_hpaned_new ();
-  gtk_widget_show (main_hpaned_data);
-  gtk_paned_pack1 (GTK_PANED (main_vpaned_msg), main_hpaned_data, TRUE, FALSE);
-  gtk_paned_set_position (GTK_PANED (main_hpaned_data), 400);
+  main_vpaned_data = gtk_vpaned_new ();
+  gtk_widget_show (main_vpaned_data);
+  gtk_paned_pack2 (GTK_PANED (main_hpaned_msg), main_vpaned_data, FALSE, FALSE);
+  gtk_paned_set_position (GTK_PANED (main_vpaned_data), 400);
 
   main_vbox_center = gtk_vbox_new (FALSE, 0);
   gtk_widget_show (main_vbox_center);
-  gtk_paned_pack1 (GTK_PANED (main_hpaned_data), main_vbox_center, FALSE, FALSE);
+  gtk_paned_pack1 (GTK_PANED (main_hpaned_msg), main_vbox_center, FALSE, FALSE);
   gtk_container_set_border_width (GTK_CONTAINER (main_vbox_center), 5);
 
   hbox24 = gtk_hbox_new (FALSE, 0);
@@ -832,7 +832,7 @@ create_window_main (void)
 
   notebook5 = gtk_notebook_new ();
   gtk_widget_show (notebook5);
-  gtk_paned_pack2 (GTK_PANED (main_hpaned_data), notebook5, TRUE, TRUE);
+  gtk_paned_pack1 (GTK_PANED (main_vpaned_data), notebook5, TRUE, TRUE);
 
   main_frame_data = gtk_frame_new (NULL);
   gtk_widget_show (main_frame_data);
@@ -1053,8 +1053,8 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, hbox37, "hbox37");
   GLADE_HOOKUP_OBJECT (window_main, image368, "image368");
   GLADE_HOOKUP_OBJECT (window_main, label165, "label165");
-  GLADE_HOOKUP_OBJECT (window_main, main_vpaned_msg, "main_vpaned_msg");
-  GLADE_HOOKUP_OBJECT (window_main, main_hpaned_data, "main_hpaned_data");
+  GLADE_HOOKUP_OBJECT (window_main, main_hpaned_msg, "main_hpaned_msg");
+  GLADE_HOOKUP_OBJECT (window_main, main_vpaned_data, "main_vpaned_data");
   GLADE_HOOKUP_OBJECT (window_main, main_vbox_center, "main_vbox_center");
   GLADE_HOOKUP_OBJECT (window_main, hbox24, "hbox24");
   GLADE_HOOKUP_OBJECT (window_main, label147, "label147");

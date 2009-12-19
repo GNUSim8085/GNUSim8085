@@ -102,7 +102,7 @@ gui_list_message_attach_me (void)
 {
   GtkWidget *cont;
 
-  cont = lookup_widget (app->window_main, "main_vpaned_msg");
+  cont = lookup_widget (app->window_main, "main_vpaned_data");
   g_assert (cont);
 
   create_me ();

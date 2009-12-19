@@ -24,8 +24,8 @@
 #include "gui-input-symbol.h"
 
 static GtkWidget *table;
-#define TABLE_ROWS 14
-#define TABLE_COLS 6
+#define TABLE_ROWS 21
+#define TABLE_COLS 4
 
 IdOpcode *p_opcode;
 IdPseudo *p_pseudo;

@@ -224,7 +224,7 @@ gnusim8085doc_DATA = \
 	ABOUT-NLS
 
 EXTRA_DIST = config.rpath m4/ChangeLog  $(gnusim8085doc_DATA)
-gnomemenudir = $(prefix)/share/applications
+gnomemenudir = $(datadir)/applications
 gnomemenu_DATA = GNUSim8085.desktop
 ACLOCAL_AMFLAGS = -I m4
 all: config.h

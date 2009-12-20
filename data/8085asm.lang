@@ -62,7 +62,7 @@
                     <keyword>xr(a|i)</keyword>
                 </context>
                 <context id="registers" style-ref="register">
-                    <keyword>(a|b|c|d|d|e|h|l|m|psw)</keyword>
+                    <keyword>(a|b|c|d|d|e|h|l|m|psw|sp)</keyword>
                 </context>
                 <context id="decimal" style-ref="decimal">
                     <match>\b([1-9][0-9]*|0)([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?\b</match>

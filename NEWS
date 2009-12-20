@@ -1,6 +1,7 @@
 GNUSim8085 1.3.6 (UNRELEASED)
 
 Fix:     2462607 - Keypad should not insert instruction code while debugging
+Fix:     2582426 - syntax highlighting for sp register (stack pointer)
 
 GNUSim8085 1.3.5 (24 Dec 2008)
 

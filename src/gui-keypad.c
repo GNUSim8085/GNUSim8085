@@ -22,6 +22,7 @@
 #include "asm-id.h"
 #include "gui-app.h"
 #include "gui-input-symbol.h"
+#include "bridge.h"
 
 static GtkWidget *table;
 #define TABLE_ROWS 21
@@ -87,6 +88,7 @@ get_register (IdOpcode * opcode)
 static void
 cb_clicked (GtkButton * button, gpointer user_data)
 {
+  if (b_get_state() != B_STATE_DEBUG) {
   IdOpcode *opdata = (IdOpcode *) user_data;
   GString *line_buf;
   gchar *re, *re2;
@@ -142,6 +144,7 @@ cb_clicked (GtkButton * button, gpointer user_data)
  done:
   /* set focus */
   gui_editor_grab_focus (app->editor);
+  }
 }
 
 /* a generator for distinct opcodes, die after end */

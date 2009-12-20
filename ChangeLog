@@ -1,3 +1,8 @@
+2009-12-20  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/gui-keypad.c: Process keypad button events only when the mode is
+	not debug. Fixes SF #2462607.
+
 2009-12-19  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/gui-app.c, src/gui-keypad.c, src/gui-list-message.c,

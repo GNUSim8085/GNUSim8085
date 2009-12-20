@@ -1,5 +1,6 @@
 GNUSim8085 1.3.6 (UNRELEASED)
 
+Fix:     1942893 - Assembler listing window is too narrow
 Fix:     2462607 - Keypad should not insert instruction code while debugging
 Fix:     2582426 - syntax highlighting for sp register (stack pointer)
 

@@ -2,6 +2,8 @@
 
 	* src/gui-keypad.c: Process keypad button events only when the mode is
 	not debug. Fixes SF #2462607.
+	* src/interface.c: Add certain size to assembler listing window. Fixes
+	SF #1942893.
 	* data/8085asm.lang: Add sp to the list of registers. Fixes SF #2582426.
 
 2009-12-19  Onkar Shinde  <onkarshinde@gmail.com>

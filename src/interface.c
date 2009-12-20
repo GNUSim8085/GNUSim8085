@@ -1157,6 +1157,7 @@ create_window_listing (void)
   window_listing = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window_listing), _("Assembler Listing"));
   gtk_window_set_position (GTK_WINDOW (window_listing), GTK_WIN_POS_CENTER);
+  gtk_window_set_default_size (GTK_WINDOW (window_listing), 500, 400);
   window_listing_icon_pixbuf = create_pixbuf ("gnusim8085_icon.png");
   if (window_listing_icon_pixbuf)
     {

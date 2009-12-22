@@ -1,0 +1,13 @@
+*.[oa]
+*~
+config.h
+config.log
+config.status
+stamp*
+Makefile
+GNUSim8085.desktop
+installer.nsi
+src/gnusim8085
+src/.deps
+po/Makefile.in
+po/POTFILES

@@ -14,6 +14,12 @@
 	arrangement of widgets. Provides more vertical and slightly more
 	horizontal area to the editor.
 
+2009-07-16  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
+
+	* src/asm-genobj.c: iAdded more description invalid operand error
+	message.
+	* src/gui-list-message.c: Fixed wrong line highlight issue.
+
 2008-12-21  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* AUTHORS: Add Krishna Bharadwaj to list of patch contributors.

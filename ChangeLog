@@ -2,6 +2,9 @@
 
 	* src/callbacks.[c,h], src/gui-editor.[c,h], src/interface.c: Add basic
 	printing support to assembly listing window. Print settings are not saved.
+	* src/callbacks.c, src/asm-listing.c: Make the text view in assembly
+	listing read only. Update the message at the top accordingly.
+	* po/gnusim8085.pot: Auto updated with 'make dist'.
 
 2009-12-20  Onkar Shinde  <onkarshinde@gmail.com>
 

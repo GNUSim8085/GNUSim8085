@@ -203,7 +203,7 @@ asm_listing_generate (AsmSource * src)
   /* get max len */
   max_len = asm_listing_binary_array_max_len (bin);
 	
-  listing = g_string_new (_(";Assembler generated listing. Do not hand edit and assemble\n"));
+  listing = g_string_new (_(";Assembler generated listing. Not editable.\n"));
 	
   while ( bin[i] )
 	{

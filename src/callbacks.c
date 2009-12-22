@@ -435,6 +435,7 @@ on_show_listing1_activate (GtkMenuItem * menuitem, gpointer user_data)
   g_assert (edit);
   gui_editor_show (edit);
   gui_editor_set_text (edit, list->str);
+  gui_editor_set_readonly (edit, TRUE);
   gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);
   gtk_window_maximize (GTK_WINDOW (wind));
   gtk_widget_show_all (wind);

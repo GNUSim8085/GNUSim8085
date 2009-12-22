@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-21 00:41+0530\n"
+"POT-Creation-Date: 2009-12-23 00:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Enter a valid number within range"
 msgstr ""
 
-#: src/callbacks.c:521
+#: src/callbacks.c:529
 msgid ""
 "Do the following\n"
 "\n"
@@ -192,77 +192,77 @@ msgstr ""
 msgid "translator_credits"
 msgstr ""
 
-#: src/interface.c:1158
+#: src/interface.c:1159
 msgid "Assembler Listing"
 msgstr ""
 
-#: src/interface.c:1177
+#: src/interface.c:1180
 msgid "Save to file"
 msgstr ""
 
-#: src/interface.c:1215
+#: src/interface.c:1228
 msgid "GNUSim8085 start with dialog"
 msgstr ""
 
-#: src/interface.c:1245
+#: src/interface.c:1258
 msgid "1. How to use this simulator?"
 msgstr ""
 
-#: src/interface.c:1253
+#: src/interface.c:1266
 msgid "_Tutorial"
 msgstr ""
 
-#: src/interface.c:1257
+#: src/interface.c:1270
 msgid "A short tutorial on writing assembly code!"
 msgstr ""
 
-#: src/interface.c:1264
+#: src/interface.c:1277
 msgid "2. Open an existing assembly program."
 msgstr ""
 
-#: src/interface.c:1272
+#: src/interface.c:1285
 msgid "_Open program"
 msgstr ""
 
-#: src/interface.c:1276
+#: src/interface.c:1289
 msgid "Open an already saved program"
 msgstr ""
 
-#: src/interface.c:1278
+#: src/interface.c:1291
 msgid "What do you want to do now?"
 msgstr ""
 
-#: src/interface.c:1288
+#: src/interface.c:1301
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
 msgstr ""
 
-#: src/interface.c:1349
+#: src/interface.c:1362
 msgid "Choose a symbol"
 msgstr ""
 
-#: src/interface.c:1372
+#: src/interface.c:1385
 msgid "Enter a symbol or choose one from the lists"
 msgstr ""
 
-#: src/interface.c:1382
+#: src/interface.c:1395
 msgid "Enter Symbol"
 msgstr ""
 
-#: src/interface.c:1396
+#: src/interface.c:1409
 msgid "Variables List"
 msgstr ""
 
-#: src/interface.c:1417
+#: src/interface.c:1430
 msgid "Functions List"
 msgstr ""
 
-#: src/interface.c:1438
+#: src/interface.c:1451
 msgid "Macros List"
 msgstr ""
 
-#: src/interface.c:1494
+#: src/interface.c:1507
 msgid "Choose a register"
 msgstr ""
 
@@ -358,7 +358,9 @@ msgid "DB: Operand error"
 msgstr ""
 
 #: src/asm-genobj.c:160
-msgid "Invalid operand or symbol"
+msgid ""
+"Invalid operand or symbol. Check whether operands start with a number. e.g "
+"a0H should be 0a0H"
 msgstr ""
 
 #. show success message
@@ -413,7 +415,7 @@ msgid "Value(Decimal)"
 msgstr ""
 
 #: src/asm-listing.c:206
-msgid ";Assembler generated listing. Do not hand edit and assemble\n"
+msgid ";Assembler generated listing. Not editable.\n"
 msgstr ""
 
 #. debug

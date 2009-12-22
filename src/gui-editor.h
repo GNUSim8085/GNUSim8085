@@ -35,6 +35,7 @@
 #include <gtksourceview/gtksourcebuffer.h>
 #include <gtksourceview/gtksourcelanguage.h>
 #include <gtksourceview/gtksourcelanguagemanager.h>
+#include <gtksourceview/gtksourceprintcompositor.h>
 #include <gtksourceview/gtksourcestyleschememanager.h>
 #include <gtksourceview/gtksourcemark.h>
 
@@ -62,6 +63,9 @@ G_BEGIN_DECLS typedef struct
   GtkSourceStyleSchemeManager *style_scheme_manager;
 
   GtkSourceLanguage *language;
+
+  GtkPrintOperation *print_operation;
+  GtkSourcePrintCompositor *print_compositor;
 
 } GUIEditor;
 
@@ -95,6 +99,8 @@ void gui_editor_insert (GUIEditor *self, gchar *text);
 void gui_editor_grab_focus (GUIEditor *self);
 
 void gui_editor_set_font (GUIEditor *self, const gchar *font_name);
+
+void gui_editor_print (GUIEditor *self);
 
 GdkPixbuf *
 gui_editor_get_stock_icon (GtkWidget *widget, const gchar *stock_id, GtkIconSize size);

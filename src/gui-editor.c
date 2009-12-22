@@ -295,6 +295,59 @@ gui_editor_set_font (GUIEditor *self, const gchar *font_name)
   pango_font_description_free (font_desc);
 }
 
+static void
+gui_editor_begin_print (GtkPrintOperation *operation, GtkPrintContext *context, GUIEditor *editor)
+{
+  g_assert (editor->buffer);
+
+  /* Create a print compositor from the buffer */
+  editor->print_compositor = gtk_source_print_compositor_new (editor->buffer);
+
+  /* Set some formatting options for pages */
+  gtk_source_print_compositor_set_print_header (editor->print_compositor, TRUE);
+  gtk_source_print_compositor_set_header_format (editor->print_compositor, TRUE, NULL, "%N/%Q", NULL);
+  gtk_source_print_compositor_set_left_margin (editor->print_compositor, 15.0, GTK_UNIT_MM);
+  gtk_source_print_compositor_set_right_margin (editor->print_compositor, 15.0, GTK_UNIT_MM);
+  gtk_source_print_compositor_set_bottom_margin (editor->print_compositor, 20.0, GTK_UNIT_MM);
+
+  /* Pagination */
+  while (!gtk_source_print_compositor_paginate (editor->print_compositor, context));
+  gtk_print_operation_set_n_pages (operation, gtk_source_print_compositor_get_n_pages (editor->print_compositor));
+}
+
+static void
+gui_editor_draw_page (GtkPrintOperation *operation, GtkPrintContext *context, gint page_nr, GUIEditor *editor)
+{
+  gtk_source_print_compositor_draw_page (editor->print_compositor, context, page_nr);
+}
+
+void
+gui_editor_print (GUIEditor *editor)
+{
+  editor->print_operation = gtk_print_operation_new ();
+  GtkPrintOperationResult res;
+  GError *error;
+  GtkWidget *error_dialog;
+
+  g_signal_connect (editor->print_operation, "begin-print", G_CALLBACK (gui_editor_begin_print), editor);
+  g_signal_connect (editor->print_operation, "draw-page", G_CALLBACK (gui_editor_draw_page), editor);
+  gtk_print_operation_set_show_progress (editor->print_operation, TRUE);
+  res = gtk_print_operation_run (editor->print_operation, GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG, NULL, &error);
+  if (res == GTK_PRINT_OPERATION_RESULT_ERROR )
+  {
+    error_dialog = gtk_message_dialog_new (GTK_WINDOW (editor->scroll),
+						GTK_DIALOG_DESTROY_WITH_PARENT,
+						GTK_MESSAGE_ERROR,
+						GTK_BUTTONS_CLOSE,
+						"Error printing file:\n%s",
+						error->message);
+    gtk_widget_show (error_dialog);
+    g_error_free (error);
+  }
+
+  g_object_unref (editor->print_operation);
+}
+
 GdkPixbuf *
 gui_editor_get_stock_icon (GtkWidget *widget, const gchar *stock_id, GtkIconSize size)
 {

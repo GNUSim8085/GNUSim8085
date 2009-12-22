@@ -1153,6 +1153,7 @@ create_window_listing (void)
   GtkWidget *listing_vbox;
   GtkWidget *hbuttonbox1;
   GtkWidget *listing_save;
+  GtkWidget *listing_print;
 
   window_listing = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window_listing), _("Assembler Listing"));
@@ -1172,17 +1173,27 @@ create_window_listing (void)
 
   hbuttonbox1 = gtk_hbutton_box_new ();
   gtk_widget_show (hbuttonbox1);
+  gtk_button_box_set_layout (GTK_BUTTON_BOX (hbuttonbox1), GTK_BUTTONBOX_CENTER);
   gtk_box_pack_start (GTK_BOX (listing_vbox), hbuttonbox1, FALSE, FALSE, 0);
 
   listing_save = gtk_button_new ();
   gtk_button_set_label (GTK_BUTTON(listing_save), _("Save to file"));
   gtk_button_set_image (GTK_BUTTON(listing_save), gtk_image_new_from_stock (GTK_STOCK_SAVE_AS, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (listing_save);
-  gtk_container_add (GTK_CONTAINER (hbuttonbox1), listing_save);
+  gtk_box_pack_start (GTK_BOX (hbuttonbox1), listing_save, FALSE, FALSE, 0);
   GTK_WIDGET_SET_FLAGS (listing_save, GTK_CAN_DEFAULT);
 
   g_signal_connect ((gpointer) listing_save, "clicked",
                     G_CALLBACK (on_listing_save_clicked),
+                    NULL);
+
+  listing_print = gtk_button_new_from_stock (GTK_STOCK_PRINT);
+  gtk_widget_show (listing_print);
+  gtk_box_pack_start (GTK_BOX (hbuttonbox1), listing_print, FALSE, FALSE, 0);
+  GTK_WIDGET_SET_FLAGS (listing_print, GTK_CAN_DEFAULT);
+
+  g_signal_connect ((gpointer) listing_print, "clicked",
+                    G_CALLBACK (on_listing_print_clicked),
                     NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
@@ -1190,6 +1201,7 @@ create_window_listing (void)
   GLADE_HOOKUP_OBJECT (window_listing, listing_vbox, "listing_vbox");
   GLADE_HOOKUP_OBJECT (window_listing, hbuttonbox1, "hbuttonbox1");
   GLADE_HOOKUP_OBJECT (window_listing, listing_save, "listing_save");
+  GLADE_HOOKUP_OBJECT (window_listing, listing_save, "listing_print");
 
   return window_listing;
 }

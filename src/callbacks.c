@@ -456,6 +456,13 @@ on_listing_save_clicked (GtkButton * button, gpointer user_data)
 }
 
 void
+on_listing_print_clicked (GtkButton * button, gpointer user_data)
+{
+  g_assert (edit);
+  gui_editor_print (edit);
+}
+
+void
 on_main_but_to_hex_clicked (GtkButton * button, gpointer user_data)
 {
   GtkWidget *hex_entry, *dec_entry;

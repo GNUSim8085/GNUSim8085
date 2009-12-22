@@ -101,6 +101,8 @@ G_MODULE_EXPORT void on_show_listing1_activate (GtkMenuItem * menuitem, gpointer
 
 G_MODULE_EXPORT void on_listing_save_clicked (GtkButton * button, gpointer user_data);
 
+G_MODULE_EXPORT void on_listing_print_clicked (GtkButton * button, gpointer user_data);
+
 G_MODULE_EXPORT void on_main_but_to_hex_clicked (GtkButton * button, gpointer user_data);
 
 G_MODULE_EXPORT void on_main_but_to_dec_clicked (GtkButton * button, gpointer user_data);

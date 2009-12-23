@@ -14,11 +14,11 @@
 	jmp	start
 
 ;data
-hai:	db	34,56
-tmp:	equ	39h
+hai:	db 34,56
+tmp:	equ 39h
 
 ;code
-start:	mov	a,h
+start:	mov a,h
 	;push	b
 	
 ;Try hitting any of 3 debugging buttons
@@ -28,14 +28,14 @@ start:	mov	a,h
 ;breakpoints set automatically when this
 ;file is opened!)
 
-	call	func1	;call func1
+	call func1	;call func1
 	
-	pop	b
+	pop b
 
-	mov	a,h
-	call	func2	;call func2
-	call 	func3	;call func3
-	mov	m,a
+	mov a,h
+	call func2	;call func2
+	call func3	;call func3
+	mov m,a
 	
 
 	hlt
@@ -43,23 +43,23 @@ start:	mov	a,h
 func1:	nop
 	nop
 	nop
-	mvi	c,56
+	mvi c,56
 	ret
 
 func2:	nop
 	nop
-	mvi	b,45h
+	mvi b,45h
 	nop
 	ret
 
 func3:	nop
-	push	b
+	push b
 	nop
 ;@ (automatic break point)
-	mvi	d,34h
-	call 	func2
+	mvi d,34h
+	call func2
 	nop
 ;@
-	pop	b
+	pop b
 	
 	ret

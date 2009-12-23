@@ -5,6 +5,8 @@
 	* src/callbacks.c, src/asm-listing.c: Make the text view in assembly
 	listing read only. Update the message at the top accordingly.
 	* po/gnusim8085.pot: Auto updated with 'make dist'.
+	* doc/examples/*.asm: Replace unnecessary tabs with spaces. Makes
+	programs easy on eyes in the small editor area.
 
 2009-12-20  Onkar Shinde  <onkarshinde@gmail.com>
 

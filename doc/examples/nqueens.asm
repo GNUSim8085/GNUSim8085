@@ -13,22 +13,22 @@
 ;   doc/asm-guide.txt
 
 
-	jmp	start	;skip data
+	jmp start	;skip data
 
 ;data
-nqueen:	equ	8	;INPUT - N
+nqueen:	equ 8	;INPUT - N
 
-q_n:	db	nqueen	;no of queens
-sl_fd:	db	0	;solutions found
-board:	ds	nqueen	;max board size
+q_n:	db nqueen	;no of queens
+sl_fd:	db 0		;solutions found
+board:	ds nqueen	;max board size
 
 ;code
 start:	nop
 	
-	mvi	b,0
-	call	input	;input n
-	call	find_solution
-	call	output	;all sol found
+	mvi b,0
+	call input	;input n
+	call find_solution
+	call output	;all sol found
 	
 	hlt		;halt program
 
@@ -36,17 +36,17 @@ start:	nop
 ;set board[B] = C
 setb:	nop
 
-	push	h
+	push h
 
-	lxi	h, board ;load addr
-	mov	a,l
-	add	b	;add index to l base
-	mov	l,a	;restore l
-	jnc	sb_c	;check for carry
-	inr	h
-sb_c:	mov	m,c	;store in memory
+	lxi h, board	;load addr
+	mov a,l
+	add b		;add index to l base
+	mov l,a		;restore l
+	jnc sb_c	;check for carry
+	inr h
+sb_c:	mov m,c		;store in memory
 	
-	pop	h
+	pop h
 	
 	ret
 
@@ -57,17 +57,17 @@ sb_c:	mov	m,c	;store in memory
 ;get board[D] in A
 getb:	nop
 
-	push	h
+	push h
 
-	lxi	h, board ;load addr
-	mov	a,l
-	add	d	;add index to l base
-	mov	l,a	;restore l
-	jnc	gb_c	;check for carry
-	inr	h
-gb_c:	mov	a,m	;save return value
+	lxi h, board	;load addr
+	mov a,l
+	add d		;add index to l base
+	mov l,a		;restore l
+	jnc gb_c	;check for carry
+	inr h
+gb_c:	mov a,m		;save return value
 	
-	pop	h
+	pop h
 	
 	ret
 
@@ -81,58 +81,58 @@ gb_c:	mov	a,m	;save return value
 ; 	E - tmp
 ;	H - threats (bool)
 ; ret	A - 0 if not threatens
-threatens:	nop
+threatens: nop
 	
-	push	h
+	push h
 
-	mvi	d,0
-	mvi	h,0
+	mvi d,0
+	mvi h,0
 	;while cnt < x && h == 0
 t_lp:	nop
-	mov	a,d
-	cmp	b
-	jnc	t_lpb
-	mvi	a,1
-	cmp	h
-	jc	t_lpb
+	mov a,d
+	cmp b
+	jnc t_lpb
+	mvi a,1
+	cmp h
+	jc t_lpb
 
 	;get board[D] in A
-	call	getb
+	call getb
 	
-	cmp	c
-	jnz	t_a
-	mvi	h,1
+	cmp c
+	jnz t_a
+	mvi h,1
 t_a:	nop
 
-	mov	a,b
-	sub	d
-	mov	e,a
+	mov a,b
+	sub d
+	mov e,a
 	
 	;? y == board[i]-tmp
-	call	getb
-	sub	e
-	cmp	c
-	jz	t_c
+	call getb
+	sub e
+	cmp c
+	jz t_c
 	
 	;? y == board[i]+tmp
-	call	getb
-	add	e
-	cmp	c
-	jnz	t_b
+	call getb
+	add e
+	cmp c
+	jnz t_b
 
-t_c:	mvi	h,1
+t_c:	mvi h,1
 
 t_b:	nop
-	inr	d
+	inr d
 
 	;loop (while)
-	jmp	t_lp
+	jmp t_lp
 
 
 t_lpb:	nop	
 
-	mov 	a,h
-	pop	h
+	mov a,h
+	pop h
 	ret
 
 ;==============
@@ -143,50 +143,50 @@ t_lpb:	nop
 ; loc	C - counter
 
 find_solution:	nop
-	push	b
+	push b
 	
 	;init
-	lxi	h,q_n
+	lxi h,q_n
 	
 	;for c=0 to N-1
-	mvi	c,0
+	mvi c,0
 fs_lp:	nop
 
 	;check if threatens
-	call	threatens
-	cpi	1
-	jz	fs_c
+	call threatens
+	cpi 1
+	jz fs_c
 
 	;now not threatened
-	call	setb	;board[B] = C
+	call setb	;board[B] = C
 	
 	;if piecesplaced == n-1
-	mov	a,m
-	dcr	a
-	cmp	b
-	jnz	fs_a
+	mov a,m
+	dcr a
+	cmp b
+	jnz fs_a
 	
-	call	ps	;print solution
-	call	ask	;ask user (pause)
+	call ps		;print solution
+	call ask	;ask user (pause)
 	
 	;sl_fd++
-	push	h
-	lxi	h,sl_fd
-	inr	m
-	pop	h
+	push h
+	lxi h,sl_fd
+	inr m
+	pop h
 
-fs_a:	nop	;call recursively
-	inr	b
-	call	find_solution
-	dcr	b
+fs_a:	nop		;call recursively
+	inr b
+	call find_solution
+	dcr b
 
 	;jmp
-fs_c:	inr	c
-	mov	a,c
-	cmp	m
-	jc	fs_lp
+fs_c:	inr c
+	mov a,c
+	cmp m
+	jc fs_lp
 
-	pop	b
+	pop b
 	ret
 ;==============
 

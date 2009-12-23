@@ -155,7 +155,6 @@ create_window_main (void)
   GtkWidget *main_reg_int_reg;
   GtkWidget *label106;
   GtkWidget *registersbox;
-  GtkWidget *image365;
   GtkWidget *label96;
   GtkWidget *frame10;
   GtkWidget *table8;
@@ -170,7 +169,6 @@ create_window_main (void)
   GtkWidget *main_flag_p;
   GtkWidget *main_flag_c;
   GtkWidget *flagsbox;
-  GtkWidget *image366;
   GtkWidget *label163;
   GtkWidget *frame12;
   GtkWidget *hbox29;
@@ -468,10 +466,6 @@ create_window_main (void)
   gtk_widget_show (registersbox);
   gtk_frame_set_label_widget (GTK_FRAME (frame9), registersbox);
 
-  image365 = gtk_image_new_from_stock (GTK_STOCK_SORT_ASCENDING, GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image365);
-  gtk_box_pack_start (GTK_BOX (registersbox), image365, TRUE, TRUE, 0);
-
   label96 = gtk_label_new (_("<b>Registers</b>"));
   gtk_widget_show (label96);
   gtk_box_pack_start (GTK_BOX (registersbox), label96, FALSE, FALSE, 0);
@@ -558,10 +552,6 @@ create_window_main (void)
   flagsbox = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (flagsbox);
   gtk_frame_set_label_widget (GTK_FRAME (frame10), flagsbox);
-
-  image366 = gtk_image_new_from_stock (GTK_STOCK_SORT_ASCENDING, GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image366);
-  gtk_box_pack_start (GTK_BOX (flagsbox), image366, TRUE, TRUE, 0);
 
   label163 = gtk_label_new (_("<b>Flag</b>"));
   gtk_widget_show (label163);
@@ -988,7 +978,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_reg_int_reg, "main_reg_int_reg");
   GLADE_HOOKUP_OBJECT (window_main, label106, "label106");
   GLADE_HOOKUP_OBJECT (window_main, registersbox, "registersbox");
-  GLADE_HOOKUP_OBJECT (window_main, image365, "image365");
   GLADE_HOOKUP_OBJECT (window_main, label96, "label96");
   GLADE_HOOKUP_OBJECT (window_main, frame10, "frame10");
   GLADE_HOOKUP_OBJECT (window_main, table8, "table8");
@@ -1003,7 +992,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_flag_p, "main_flag_p");
   GLADE_HOOKUP_OBJECT (window_main, main_flag_c, "main_flag_c");
   GLADE_HOOKUP_OBJECT (window_main, flagsbox, "flagsbox");
-  GLADE_HOOKUP_OBJECT (window_main, image366, "image366");
   GLADE_HOOKUP_OBJECT (window_main, label163, "label163");
   GLADE_HOOKUP_OBJECT (window_main, frame12, "frame12");
   GLADE_HOOKUP_OBJECT (window_main, hbox29, "hbox29");

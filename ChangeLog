@@ -4,6 +4,8 @@
 	printing support to assembly listing window. Print settings are not saved.
 	* src/callbacks.c, src/asm-listing.c: Make the text view in assembly
 	listing read only. Update the message at the top accordingly.
+	* src/interface.c: Remove the images used in 'Registers' and 'Flag' boxes.
+	They really have no significance.
 	* po/gnusim8085.pot: Auto updated with 'make dist'.
 	* doc/examples/*.asm: Replace unnecessary tabs with spaces. Makes
 	programs easy on eyes in the small editor area.

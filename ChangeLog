@@ -1,5 +1,7 @@
 2009-12-24  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
 
+	* src/file-op.[c,h], src/callback.c: Fix SF bug #2356534 - basic file
+	handling errors (confirm before exit, etc..). Patch by Puneeth Bhat.
 	* src/asm-listing.c: Add project webpage to listing (for network
 	effects)
 

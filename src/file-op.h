@@ -37,7 +37,7 @@ G_BEGIN_DECLS
 
 /* funcs related to main editor */
 void file_op_editor_new (void);
-void file_op_editor_save (void);
+gboolean file_op_editor_save (void);
 void file_op_editor_save_as (void);
 void file_op_editor_open (void);
 
@@ -46,6 +46,9 @@ void file_op_listing_save (gchar *text);
 
 /* this is will be called from main.c passing argv[1] */
 void ori_open (gchar * fn, gboolean replace);
+
+/* to confirm saving the file */
+gboolean file_op_confirm_save (void);
 
 GtkWidget* create_file_dialog(const gchar *title,
 							  GtkFileChooserAction action,

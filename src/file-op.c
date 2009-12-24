@@ -74,6 +74,7 @@ ori_open (gchar * fn, gboolean replace)
 	}
 
   gui_editor_set_text (app->editor, gstr->str);
+  gtk_text_buffer_set_modified ((GtkTextBuffer *)app->editor->buffer, FALSE);
 
   /* Set breakpoints as instructed in the source */
   {
@@ -113,16 +114,38 @@ ori_open (gchar * fn, gboolean replace)
 	_set_file_name (fn);
 }
 
-static void
+static gboolean
 ori_save (gchar * fn, gboolean replace)
 {
   gchar *text;
   FILE *fp;
   char *nullstr = "NULLSTRING";
   int ret;
+
   if (!fn)
 	fn = nullstr;
 
+  if (replace)
+	{
+	  fp = fopen (fn, "r");
+	  if (fp != NULL)
+		{
+		  GtkWidget *dialog;
+		  GtkResponseType response;
+		  dialog = gtk_message_dialog_new (GTK_WINDOW(app->window_main),
+						   GTK_DIALOG_DESTROY_WITH_PARENT,
+						   GTK_MESSAGE_QUESTION, 
+						   GTK_BUTTONS_YES_NO,
+						   _("File already exists; overwrite it?"));
+		  response = gtk_dialog_run (GTK_DIALOG (dialog));
+		  gtk_widget_destroy (dialog);
+
+		  if (response == GTK_RESPONSE_NO)
+			return FALSE;
+
+		  fclose (fp);
+		}
+	}
   text = gui_editor_get_text (app->editor);
   fp = fopen (fn, "w");
   if (fp == NULL)
@@ -131,16 +154,20 @@ ori_save (gchar * fn, gboolean replace)
 	  g_snprintf (errmsg, MAX_ERR_MSG_SIZE, _("Failed to save <%s>"),
 				  fn);
 	  gui_app_show_msg (GTK_MESSAGE_ERROR, errmsg);
-	  return;
+	  return TRUE;
 	}
   // return value stored just to avoid compiler warnings.
   ret = fwrite (text, 1, strlen (text), fp);
+  gtk_text_buffer_set_modified ((GtkTextBuffer *)app->editor->buffer, FALSE);
+  
   /* debug */
   fclose (fp);
 
   g_free (text);
   if (replace)
 	_set_file_name (fn);
+
+  return TRUE;
 }
 
 void
@@ -161,6 +188,12 @@ start: nop\n\
 \n\
 hlt";
 
+  if (gtk_text_buffer_get_modified ((GtkTextBuffer *)app->editor->buffer))
+    {
+      if (!file_op_confirm_save())
+          return;
+    }
+  
   if (G_UNLIKELY (file_name))
 	{
 	  g_string_free (file_name, TRUE);
@@ -170,33 +203,37 @@ hlt";
   /* Set template text */
   gui_editor_set_text (app->editor, template);
   gui_editor_goto_line (app->editor, 11);
+  gtk_text_buffer_set_modified ((GtkTextBuffer *)app->editor->buffer, FALSE);
 }
 
 /* funcs related to main editor */
-void
+gboolean
 file_op_editor_save (void)
 {
   if (file_name)
-	{
-	  ori_save (file_name->str, FALSE);
-	  return;
-	}
+	return ori_save (file_name->str, FALSE);
 
   gchar *selected_filename;
   GtkWidget *file_selector;
+  gboolean is_saved = FALSE;
 
   file_selector = create_file_dialog
 	("Save File", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
-  
-  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
-	{
 
-	  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
-	  ori_save(selected_filename, TRUE);
-	  g_free (selected_filename);
+  while (!is_saved)
+	{
+	  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
+		{
+		  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		  is_saved = ori_save(selected_filename, TRUE);
+		  g_free (selected_filename);
+		}
+	  else
+		break;
 	}
 
   gtk_widget_destroy (file_selector);
+  return is_saved;
 }
 
 void
@@ -204,16 +241,21 @@ file_op_editor_save_as (void)
 {
   gchar *selected_filename;
   GtkWidget *file_selector;
+  gboolean is_saved = FALSE;
 
   file_selector = create_file_dialog
 	("Save File As", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
 
-  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
+  while (!is_saved)
 	{
-
-	  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
-	  ori_save(selected_filename, TRUE);
-	  g_free (selected_filename);
+	  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
+		{
+		  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		  is_saved = ori_save(selected_filename, TRUE);
+		  g_free (selected_filename);
+		}
+	  else
+		break;
 	}
 
   gtk_widget_destroy (file_selector);
@@ -222,6 +264,12 @@ file_op_editor_save_as (void)
 void
 file_op_editor_open (void)
 {
+  if (gtk_text_buffer_get_modified ((GtkTextBuffer *)app->editor->buffer))
+	{
+	  if (!file_op_confirm_save())
+		return;
+	}
+
   gchar *selected_filename;
   GtkWidget *file_selector;
 
@@ -306,4 +354,37 @@ create_file_dialog(const gchar *title,
 	 GTK_FILE_FILTER(file_filter));
   
   return file_selector;
+}
+
+/* to confirm saving the file */
+gboolean
+file_op_confirm_save (void)
+{
+  GtkWidget *dialog;
+  GtkResponseType response;
+  gchar *primary_msg;
+  gchar *secondary_msg;
+  primary_msg = g_strdup_printf ("Close the file without saving?");
+  secondary_msg = g_strdup_printf ("All the changes made will be lost if unsaved." );
+
+  dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_QUESTION,
+								   GTK_BUTTONS_NONE, "%s", primary_msg);
+  gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s", secondary_msg);
+  g_free (primary_msg);
+  g_free (secondary_msg);
+  gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+  gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_DISCARD, GTK_RESPONSE_CLOSE);
+  gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
+  gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_SAVE, GTK_RESPONSE_OK);
+  gtk_dialog_set_default_response	(GTK_DIALOG (dialog), GTK_RESPONSE_CANCEL);
+
+  response = gtk_dialog_run (GTK_DIALOG (dialog));
+  gtk_widget_destroy (dialog);
+
+  if (response == GTK_RESPONSE_CLOSE)
+	return TRUE;
+  if (response == GTK_RESPONSE_OK)
+	return file_op_editor_save ();
+
+  return FALSE;
 }

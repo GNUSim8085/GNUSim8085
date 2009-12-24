@@ -44,8 +44,12 @@ gboolean
 on_window_main_delete_event (GtkWidget * widget,
 							 GdkEvent * event, gpointer user_data)
 {
+  if (gtk_text_buffer_get_modified ((GtkTextBuffer *)app->editor->buffer))
+	{
+	  if (!file_op_confirm_save())
+		return TRUE;
+	}
   gui_app_destroy ();
-
   return FALSE;
 }
 
@@ -117,6 +121,11 @@ on_save_as1_activate (GtkMenuItem * menuitem, gpointer user_data)
 void
 on_quit1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
+  if (gtk_text_buffer_get_modified ((GtkTextBuffer *)app->editor->buffer))
+	{
+	  if (!file_op_confirm_save())
+		return;
+	}
   gtk_main_quit ();
 }
 

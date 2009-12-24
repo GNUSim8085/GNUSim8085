@@ -1253,6 +1253,7 @@ create_window_start (void)
   start_but_tutorial = gtk_button_new ();
   gtk_button_set_label (GTK_BUTTON(start_but_tutorial), _("_Tutorial"));
   gtk_button_set_image (GTK_BUTTON(start_but_tutorial), gtk_image_new_from_stock (GTK_STOCK_HELP, GTK_ICON_SIZE_BUTTON));
+  gtk_button_set_use_underline (GTK_BUTTON(start_but_tutorial), TRUE);
   gtk_widget_show (start_but_tutorial);
   gtk_box_pack_start (GTK_BOX (vbox17), start_but_tutorial, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (start_but_tutorial, _("A short tutorial on writing assembly code!"));
@@ -1272,6 +1273,7 @@ create_window_start (void)
   start_but_open = gtk_button_new ();
   gtk_button_set_label (GTK_BUTTON(start_but_open), _("_Open program"));
   gtk_button_set_image (GTK_BUTTON(start_but_open), gtk_image_new_from_stock (GTK_STOCK_OPEN, GTK_ICON_SIZE_BUTTON));
+  gtk_button_set_use_underline (GTK_BUTTON(start_but_open), TRUE);
   gtk_widget_show (start_but_open);
   gtk_box_pack_start (GTK_BOX (vbox18), start_but_open, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (start_but_open, _("Open an already saved program"));

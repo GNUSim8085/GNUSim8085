@@ -4,6 +4,8 @@
 	Remove exclusion of svn directories. We are not using svn anymore. :-)
 	* WINDOWS-PORT.txt: We need GTK+ 2.12 only. So modify download
 	instructions accordingly.
+	* src/interface.c: Fix button mnemonics not getting set on starting
+	dialog in latest GTK version.
 
 2009-12-23  Onkar Shinde  <onkarshinde@gmail.com>
 

@@ -5,6 +5,8 @@ How to build (using mingw cross compiler, on a linux system):
 
   Follow instructions at http://live.gnome.org/GTK%2B/Win32/Apps
   with following changes.
+  Make sure you download all in one bundle from following link.
+  http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.12/
 
   1. Before doing 'sed -f ...' command
     a. Download gtksourceview(-dev) zip files from

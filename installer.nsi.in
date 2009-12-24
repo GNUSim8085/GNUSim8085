@@ -49,11 +49,17 @@ Section "Install"
   File NEWS
   File TODO
   File src/gnusim8085.exe
-  File /r /x *svn* /x Makefile* data
-  File /r /x *svn* doc/examples
-  File /r /x *svn* /x Makefile* pixmaps
+  File /r /x Makefile* data
+  File /r doc/examples
+  File /r /x Makefile* pixmaps
   File src/libgtksourceview-2.0-0.dll
   File src/libxml2.dll
+  # Make example program files read only
+  SetFileAttributes $INSTDIR\examples\addwithcarry.asm READONLY
+  SetFileAttributes $INSTDIR\examples\bcd2bin.asm READONLY
+  SetFileAttributes $INSTDIR\examples\debugexample.asm READONLY
+  SetFileAttributes $INSTDIR\examples\nqueens.asm READONLY
+  SetFileAttributes $INSTDIR\examples\swaphex.asm READONLY
   CreateDirectory ${startmenu}
   CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085_icon.ico"
   WriteUninstaller $INSTDIR\${uninstaller}

@@ -1,3 +1,10 @@
+2009-12-24  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* installer.nsi.in: Add commands to make example files read only.
+	Remove exclusion of svn directories. We are not using svn anymore. :-)
+	* WINDOWS-PORT.txt: We need GTK+ 2.12 only. So modify download
+	instructions accordingly.
+
 2009-12-23  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/callbacks.[c,h], src/gui-editor.[c,h], src/interface.c: Add basic

@@ -517,11 +517,11 @@
 		  </child>
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="assembler_reference1">
+		    <widget class="GtkImageMenuItem" id="assembler_tutorial1">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">_Assembler reference</property>
+		      <property name="label" translatable="yes">_Assembler Tutorial</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_assembler_reference1_activate" last_modification_time="Mon, 21 Jul 2003 02:37:43 GMT"/>
+		      <signal name="activate" handler="on_assembler_tutorial1_activate" last_modification_time="Mon, 21 Jul 2003 02:37:43 GMT"/>
 		      <accelerator key="F1" modifiers="GDK_SHIFT_MASK" signal="activate"/>
 
 		      <child internal-child="image">

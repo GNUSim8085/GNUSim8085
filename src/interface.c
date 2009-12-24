@@ -49,7 +49,7 @@ static const GtkActionEntry entries[] = {
   { "StopExec", GTK_STOCK_STOP, "Stop execution", NULL, "Stop debugging", G_CALLBACK(on_stop_execution1_activate) },
   { "Help", GTK_STOCK_HELP, "_Contents", "F1", NULL, G_CALLBACK(on_help_activate) },
   { "Manual", GTK_STOCK_INFO, "8085 _Manual", "<control>M", NULL, G_CALLBACK(on_8085_manual1_activate) },
-  { "Reference", GTK_STOCK_DIALOG_INFO, "Assembler _Reference", "<control><shift>R", NULL, G_CALLBACK(on_assembler_reference1_activate) },
+  { "Tutorial", GTK_STOCK_DIALOG_INFO, "Assembler _Tutorial", "<control><shift>T", NULL, G_CALLBACK(on_assembler_tutorial1_activate) },
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(on_about1_activate) }
 };
 
@@ -95,7 +95,7 @@ static const char *ui_description =
   "      <menuitem action='Help'/>"
   "      <separator/>"
   "      <menuitem action='Manual'/>"
-  "      <menuitem action='Reference'/>"
+  "      <menuitem action='Tutorial'/>"
   "      <separator/>"
   "      <menuitem action='About'/>"
   "    </menu>"

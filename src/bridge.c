@@ -78,19 +78,9 @@ static void
 _update_gui_state (void)
 {
   gboolean bdebug = FALSE;
-  GtkWidget *widget;
   if (state == B_STATE_DEBUG)
 	bdebug = TRUE;
 
-#define DF(wstr, issen)								\
-  widget = lookup_widget (app->window_main, wstr);	\
-  g_assert (widget);								\
-  gtk_widget_set_sensitive (widget, issen);
-
-
-
-#undef DF
-	
   GtkAction *action_widget;
 #define DF_ACTION(wstr, issen)										\
   action_widget = lookup_action_widget (app->window_main, wstr);	\

@@ -99,7 +99,7 @@ gui_app_show_msg (GtkMessageType type, gchar *msg)
 								   GTK_DIALOG_DESTROY_WITH_PARENT,
 								   type, 
 								   GTK_BUTTONS_OK,
-								   msg);
+								   "%s", msg);
   gtk_dialog_run (GTK_DIALOG (dialog));
   gtk_widget_destroy (dialog);
 }

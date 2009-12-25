@@ -3,10 +3,11 @@ dnl Created by Anjuta - will be overwritten
 dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
-AC_INIT(configure.in)
+AC_INIT([gnusim8085], [1.3.6], [https://bugs.launchpad.net/gnusim8085])
 AC_CANONICAL_HOST
-AM_INIT_AUTOMAKE(gnusim8085, 1.3.5)
-AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE([check-news])
+AC_CONFIG_SRCDIR([src/main.c])
+AC_CONFIG_HEADERS([config.h])
 
 AC_ISC_POSIX
 AC_SUBST(CFLAGS,$CFLAGS)
@@ -14,6 +15,20 @@ AC_PROG_CC
 AM_PROG_CC_STDC
 AM_PROG_CC_C_O
 AC_HEADER_STDC
+
+dnl Checks for programs.
+
+dnl Checks for libraries.
+
+dnl Checks for header files.
+AC_CHECK_HEADERS([libintl.h stdlib.h string.h unistd.h])
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+
+dnl Checks for library functions.
+AC_CHECK_FUNCS([memset setlocale strtol strtoul])
+
+dnl Checks for Additional stuffs.
 
 case "${host}" in
         i[[3456789]]86-*-mingw32*) WIN32="yes" ;;
@@ -63,24 +78,6 @@ AC_SUBST(GTK_LIBS)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTKSOURCEVIEW2_LIBS)
 AC_SUBST(GTKSOURCEVIEW2_CFLAGS)
-
-dnl Checks for programs.
-
-
-dnl Checks for libraries.
-
-
-dnl Checks for header files.
-
-
-dnl Checks for typedefs, structures, and compiler characteristics.
-
-
-dnl Checks for library functions.
-
-
-dnl Checks for Additional stuffs.
-
 
 GETTEXT_PACKAGE=gnusim8085
 AC_SUBST(GETTEXT_PACKAGE)

@@ -2,36 +2,52 @@
 # AUTHOR - Onkar Shinde <onkarshinde@gmail.com>
 # LICENSE: Same as specified in COPYING file
 #
-# NOTE: Tested with NSIS 2.37 only
+# NOTE: Tested with NSIS 2.43 only. 2.43 is giving problem when trying to set
+# icon for installer. You may have to disable icon if you are trying to build
+# installer.
+
+# Use modern UI
+!include MUI2.nsh
 
 # Define application name and installer file name
 Name GNUSim8085
 OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
 Icon pixmaps/gnusim8085_icon.ico
+InstallDir "C:\Program Files\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"
 !define uninstaller "uninstaller.exe"
 
-# Set default installation directory
-Function .onInit
-  StrCpy $INSTDIR "C:\Program Files\GNUSim8085"
-FunctionEnd
-
 # Show license page
-Page license
-  LicenseData COPYING
-  LicenseForceSelection checkbox
+!define MUI_LICENSEPAGE_CHECKBOX
+!insertmacro MUI_PAGE_LICENSE COPYING
 
 # Show installation directory selector page
-Page directory
+!insertmacro MUI_PAGE_DIRECTORY
 
 # Show installation progress page
-Page instfiles
+!insertmacro MUI_PAGE_INSTFILES
+
+# Show finish page with an option to launch program
+!define MUI_FINISHPAGE_RUN $INSTDIR\gnusim8085.exe
+!insertmacro MUI_PAGE_FINISH
 
 # Show uninstall confirmation page
-UninstPage uninstConfirm
+!insertmacro MUI_UNPAGE_CONFIRM
 
 # Show uninstall progress page
-UninstPage instfiles
+!insertmacro MUI_UNPAGE_INSTFILES
+
+# Set available UI languages for installer
+!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "French"
+!insertmacro MUI_LANGUAGE "German"
+!insertmacro MUI_LANGUAGE "Italian"
+!insertmacro MUI_LANGUAGE "Spanish"
+
+# Show language selection dialog in installer
+Function .onInit
+  !insertmacro MUI_LANGDLL_DISPLAY
+FunctionEnd
 
 # Install section
 Section "Install"

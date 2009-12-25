@@ -2,6 +2,8 @@
 
 	* data/8085asm.lang: Add underscore ('_') to the regular expression for
 	label. Fixes SF #2580092.
+	* installer.nsi.in: First shot at installer with modern UI.
+	Adds multi-language interface and 'Run program' finish page.
 
 2009-12-24  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
 

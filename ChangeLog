@@ -4,6 +4,10 @@
 	label. Fixes SF #2580092.
 	* installer.nsi.in: First shot at installer with modern UI.
 	Adds multi-language interface and 'Run program' finish page.
+	* configure, autogen.sh, *Makefile.in: Delete the generated files that
+	should not be in repository. Going forward when compiling from VCS
+	./autogen.sh needs to be run first. Source tar balls will still contain
+	configure script.
 
 2009-12-24  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
 

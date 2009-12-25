@@ -71,7 +71,7 @@
                     <match>\b[0-9a-fA-F]+([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?(h|H)?\b</match>
                 </context>
                 <context id="label" style-ref="label">
-                    <match>\s*[0-9a-zA-Z]+:</match>
+                    <match>\s*[_0-9a-zA-Z]+:</match>
                 </context>
             </include>
         </context>

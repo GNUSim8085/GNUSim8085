@@ -1,3 +1,8 @@
+2009-12-26  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* Makefile.am, autoclean.sh: Move the deletion of certain generated files
+	to autoclean.sh. They should not be deleted in distclean target.
+
 2009-12-25  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/bridge.c: Remove a code block that was not being used.

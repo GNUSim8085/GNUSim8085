@@ -16,9 +16,7 @@ gnusim8085doc_DATA = \
 
 EXTRA_DIST = config.rpath m4/ChangeLog  $(gnusim8085doc_DATA)
 
-DISTCLEANFILES = aclocal.m4 config.h.in configure Makefile.in data/Makefile.in \
-		doc/Makefile.in macros/Makefile.in pixmaps/Makefile.in \
-		src/Makefile.in *.exe *.gz
+DISTCLEANFILES = *.exe *.gz
 
 gnomemenudir = $(datadir)/applications
 gnomemenu_DATA = GNUSim8085.desktop

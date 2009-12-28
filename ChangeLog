@@ -1,3 +1,15 @@
+2009-12-28  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.in: Gettext version updated to 0.17. Removed a bunch of
+	redundant declarations.
+	* src/main.c: Change variables in gettext calls to match changes in
+	configure.in.
+	* src/Makefile.am: Fix setting of variable LOCALEDIR.
+	* ABOUT-NLS, config.rpath, m4/*, po/Makefile.in.in, po/Makevars.template:
+	Added/updated by gettextize.
+	* src/interface.c: Fixed some translatable strings.
+	* po/gnusim8085.pot: Auto update. Also fixed copyright in header.
+
 2009-12-26  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* Makefile.am, autoclean.sh: Move the deletion of certain generated files

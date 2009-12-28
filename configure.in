@@ -82,23 +82,9 @@ AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTKSOURCEVIEW2_LIBS)
 AC_SUBST(GTKSOURCEVIEW2_CFLAGS)
 
-GETTEXT_PACKAGE=gnusim8085
-AC_SUBST(GETTEXT_PACKAGE)
-AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Package name for gettext])
-
-
 dnl Languages which your application supports
-ALL_LINGUAS=""
 AM_GNU_GETTEXT([external])
-AM_GNU_GETTEXT_VERSION([0.16.1])
-
-dnl Set PACKAGE_LOCALE_DIR in config.h.
-if test "x${prefix}" = "xNONE"; then
-  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${ac_default_prefix}/${DATADIRNAME}/locale")
-else
-  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${prefix}/${DATADIRNAME}/locale")
-fi
-
+AM_GNU_GETTEXT_VERSION([0.17])
 
 dnl Set PACKAGE SOURCE DIR in config.h.
 packagesrcdir=`cd $srcdir && pwd`

@@ -5,11 +5,12 @@
 ## 	Please disable it in the Anjuta project configuration
 
 INCLUDES = \
-        $(GTK_CFLAGS)\
+        -I$(top_srcdir) \
+        $(GTK_CFLAGS) \
         $(GTKSOURCEVIEW2_CFLAGS)
 
 gnusim8085_CFLAGS =\
-	 -DLOCALEDIR=$(localedir)\
+	 -DLOCALEDIR=\"$(localedir)\"\
 	 -Wall\
 	 -O1\
 	 -g

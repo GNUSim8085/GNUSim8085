@@ -3,7 +3,7 @@
  */
 
 #ifdef HAVE_CONFIG_H
-#  include <config.h>
+#include <config.h>
 #endif
 
 #include "callbacks.h"
@@ -364,7 +364,7 @@ create_window_main (void)
                     (GtkAttachOptions) (0), 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label112), TRUE);
 
-  label113 = gtk_label_new (("<i>Int-Reg</i>"));
+  label113 = gtk_label_new ("<i>Int-Reg</i>");
   gtk_widget_show (label113);
   gtk_table_attach (GTK_TABLE (table7), label113, 0, 1, 7, 8,
                     (GtkAttachOptions) (GTK_FILL),
@@ -466,7 +466,7 @@ create_window_main (void)
   gtk_widget_show (registersbox);
   gtk_frame_set_label_widget (GTK_FRAME (frame9), registersbox);
 
-  label96 = gtk_label_new (_("<b>Registers</b>"));
+  label96 = gtk_label_new (g_strconcat("<b>", _("Registers"), "</b>", NULL));
   gtk_widget_show (label96);
   gtk_box_pack_start (GTK_BOX (registersbox), label96, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label96), TRUE);
@@ -553,7 +553,7 @@ create_window_main (void)
   gtk_widget_show (flagsbox);
   gtk_frame_set_label_widget (GTK_FRAME (frame10), flagsbox);
 
-  label163 = gtk_label_new (_("<b>Flag</b>"));
+  label163 = gtk_label_new (g_strconcat("<b>", _("Flag"), "</b>", NULL));
   gtk_widget_show (label163);
   gtk_box_pack_start (GTK_BOX (flagsbox), label163, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label163), TRUE);

@@ -19,7 +19,7 @@
 */
 
 #ifdef HAVE_CONFIG_H
-#  include <config.h>
+#include <config.h>
 #endif
 
 #include <libintl.h>
@@ -40,8 +40,8 @@ main (int argc, char *argv[])
   GtkWidget *statusbar;
 
   setlocale (LC_ALL, "");
-  bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
-  textdomain (GETTEXT_PACKAGE);
+  bindtextdomain (PACKAGE, LOCALEDIR);
+  textdomain (PACKAGE);
 
   gtk_init (&argc, &argv);
 

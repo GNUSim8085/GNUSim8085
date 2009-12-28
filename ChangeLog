@@ -9,6 +9,9 @@
 	Added/updated by gettextize.
 	* src/interface.c: Fixed some translatable strings.
 	* po/gnusim8085.pot: Auto update. Also fixed copyright in header.
+	* po/LINGUAS, po/gu.po: Add initial Gujarati translation by Kartik Mistry.
+	* po/Makefile.in.in: Clean up .gmo files in distclean target.
+	* AUTHORS: Add Kartik to translators list.
 
 2009-12-26  Onkar Shinde  <onkarshinde@gmail.com>
 

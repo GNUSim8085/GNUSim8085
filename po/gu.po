@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: http://gnusim8085.sourceforge.net\n"
 "POT-Creation-Date: 2009-12-27 20:11+0530\n"
-"PO-Revision-Date: 2009-12-28 12:09+0000\n"
+"PO-Revision-Date: 2009-12-28 12:50+0000\n"
 "Last-Translator: Kartik Mistry <Unknown>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-12-28 12:16+0000\n"
+"X-Launchpad-Export-Date: 2009-12-28 13:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:208
@@ -181,7 +181,8 @@ msgstr "મને અહીં લાવો"
 
 #: src/interface.c:821
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr "કાર્યક્રમ સરનામું દાખલ કરો. જો એ હેક્સ સરનામું હોય તો 'h' સાથે તેનો અંત કરો."
+msgstr ""
+"કાર્યક્રમ સરનામું દાખલ કરો. જો એ હેક્સ સરનામું હોય તો 'h' સાથે તેનો અંત કરો."
 
 #: src/interface.c:839
 msgid "Variables"
@@ -223,7 +224,7 @@ msgstr "GNUSim8085 સંવાદ સાથે શરૂઆત"
 
 #: src/interface.c:1247
 msgid "1. How to use this simulator?"
-msgstr "૧. આ સિમ્યુલેટરનો ઉપયોગ કઈ રીતે કરવો?"
+msgstr "૧. આ સિમ્યુલેટરનો ઉપયોગ કઈ રીતે કરશો?"
 
 #: src/interface.c:1255
 msgid "_Tutorial"
@@ -308,7 +309,7 @@ msgstr "સૂચના 'SIM' અમલમાં મૂકેલ નથી"
 
 #: src/asm-source.c:110
 msgid "Assembling Aborted"
-msgstr "એસેમ્બલ બંધ કરવામાં આવ્યું"
+msgstr "એસેમ્બલ કરવાનું બંધ કરાયું"
 
 #: src/asm-source.c:178
 msgid "Label should be given to a code line"
@@ -380,8 +381,8 @@ msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
 msgstr ""
-"અયોગ્ય ઓપરન્ડ અથવા સંજ્ઞા. ચકાસો કે ઓપરન્ડ આંકડાથી શરૂ થાય છે. દા.ત. a0H એ 0a0H હોવુ "
-"જોઈએ"
+"અયોગ્ય ઓપરન્ડ અથવા સંજ્ઞા. ચકાસો કે ઓપરન્ડ આંકડાથી શરૂ થાય છે. દા.ત. a0H એ "
+"0a0H હોવુ જોઈએ"
 
 #: src/8085-asm.c:86
 msgid "Program assembled successfully"
@@ -402,12 +403,13 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
-"ચલાવવાનું અયોગ્ય મેમરી સ્થાન <%xH> પર ફંટાઈ ગયું. ચલાવવાનું બંધ કરવામાં આવશે!\n"
+"ચલાવવાનું અયોગ્ય મેમરી સ્થાન <%xH> પર ફંટાઈ ગયું. ચલાવવાનું બંધ કરવામાં "
+"આવશે!\n"
 "\n"
-"ચકાસો કે તમે તમારા કાર્યક્રમનાં અંતમાં \"hlt\" સૂચના ઉમેરી છે અને તમારો કાર્યક્રમ સ્ત્રોત "
-"ખાલી નથી. તમારા કાર્યક્રમનો તર્ક પણ ચકાસો. જો તમે ખૂબ જ ચોક્ક્સ હોવ તો, અહીં "
-"GNUSim8085 માં ક્ષતિ હોઈ શકે છે.જો તેમ હોય તો તમને તમારા સ્ત્રોત કાર્યક્રમની નકલ "
-"મોકલવાની સલાહ આપવામાં આવે છે."
+"ચકાસો કે તમે તમારા કાર્યક્રમનાં અંતમાં \"hlt\" સૂચના ઉમેરી છે અને તમારો "
+"કાર્યક્રમ સ્ત્રોત ખાલી નથી. તમારા કાર્યક્રમનો તર્ક પણ ચકાસો. જો તમે ખૂબ જ "
+"ચોક્ક્સ હોવ તો, અહીં GNUSim8085 માં ક્ષતિ હોઈ શકે છે.જો તેમ હોય તો તમને "
+"તમારા સ્ત્રોત કાર્યક્રમની નકલ મોકલવાની સલાહ આપવામાં આવે છે."
 
 #: src/bridge.c:288
 msgid "Assembler: running"
@@ -481,12 +483,12 @@ msgstr "પ્રકિયા/રજીસ્ટર"
 
 #: src/gui-list-stack.c:116
 msgid "Stack size exceeded.  Stop the execution"
-msgstr "સ્ટૅક કદ મર્યાદા ઓળંગી ગયું. ચલાવવાનું બંધ કરો"
+msgstr "સ્ટૅક કદે મર્યાદા ઓળંગી. ચલાવવાનું બંધ કરો"
 
 #: src/gui-list-stack.c:130
 msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
-"PUSH કરતાં વધુ સંખ્યામાં POP ચલાવવામાં આવ્યા છે. ચલાવવાનું બંધ કરો અને તમારા કાર્યક્રમનો "
-"તર્ક ચકાસો"
+"PUSH કરતાં વધુ સંખ્યામાં POP ચલાવવામાં આવ્યા છે. ચલાવવાનું બંધ કરો અને તમારા "
+"કાર્યક્રમનો તર્ક ચકાસો"

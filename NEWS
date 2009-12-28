@@ -3,7 +3,9 @@ GNUSim8085 1.3.6 (UNRELEASED)
 New:     Basic printing support for assembly listing window.
 New:     Better looking installer. Multi-language interface and finish screen
          with 'Run program' option.
-New:     The UI is now 'i18n'ized. We just need to test it with actual translations.
+New:     The UI is now 'i18n'ized.
+New:     Translations - Gujarati (gu).
+Fix:     1847830 - Make the UI i18n enabled
 Fix:     1942893 - Assembler listing window is too narrow
 Fix:     2356534 - Basic File handling errors
 Fix:     2462607 - Keypad should not insert instruction code while debugging

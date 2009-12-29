@@ -77,7 +77,7 @@ gui_editor_new (void)
   pixbuf = gui_editor_get_stock_icon (GTK_WIDGET(self->widget), GTK_STOCK_NO, GTK_ICON_SIZE_MENU);
   if (pixbuf)
 	{
-	  gtk_source_view_set_mark_category_pixbuf (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, pixbuf);
+	  gtk_source_view_set_mark_category_icon_from_pixbuf (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, pixbuf);
 	  g_object_unref (pixbuf);
 	}
 

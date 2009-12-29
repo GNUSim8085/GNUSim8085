@@ -1,3 +1,7 @@
+2009-12-28  Sridhar Ratnakumar <srid@nearfar.org>
+
+	* src/gui-editor.c: Fix deprecation warning from GtkSourceView
+
 2009-12-28  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* configure.in: Gettext version updated to 0.17. Removed a bunch of

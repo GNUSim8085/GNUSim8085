@@ -5,6 +5,7 @@ config.h*
 config.log
 config.status
 stamp*
+autom4te.cache
 aclocal.m4
 configure
 Makefile
@@ -15,5 +16,6 @@ src/gnusim8085
 src/.deps
 po/Makefile.in
 po/POTFILES
+po/gu.gmo
 *.gz
 *.exe

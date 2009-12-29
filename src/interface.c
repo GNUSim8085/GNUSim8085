@@ -1104,7 +1104,6 @@ create_dialog_about (void)
   gchar *copyright = "Copyright (C) 2003 Sridhar Ratnakumar";
   gchar *comments = "8085 Microprocessor Simulator";
   gchar *translators = _("translator_credits");
-  gchar *website = "http://gnusim8085.sourceforge.net/";
   GdkPixbuf *dialog_about_logo_pixbuf;
   GdkPixbuf *dialog_about_icon_pixbuf;
 
@@ -1118,7 +1117,7 @@ create_dialog_about (void)
 						 "version", VERSION,
 						 "comments", comments,
 						 "copyright", copyright,
-						 "website", website,
+						 "website", PACKAGE_URL,
 						 "logo", dialog_about_logo_pixbuf,
 						 "icon", dialog_about_icon_pixbuf,
 						 "authors", authors,

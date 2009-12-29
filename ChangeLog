@@ -5,6 +5,8 @@
 	methods based on gtksourceview version.
 	* src/interface.c: Use gtk_show_uri, in the hook for about dialog,
 	when available (GTK+ >= 2.14.0).
+	* configure.in, src/interface.c, src/asm-listing.c: Define website url
+	in configure.in and use it everywhere instead of hard coded value.
 
 2009-12-28  Sridhar Ratnakumar <srid@nearfar.org>
 

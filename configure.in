@@ -4,6 +4,10 @@ dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
 AC_INIT([gnusim8085], [1.3.6], [https://bugs.launchpad.net/gnusim8085])
+m4_ifdef([AC_PACKAGE_URL],
+	AC_PACKAGE_URL([http://gnusim8085.sourceforge.net/]),
+	AC_DEFINE([PACKAGE_URL],["http://gnusim8085.sourceforge.net/"],["Website URL"])
+	)
 AC_CANONICAL_HOST
 AM_INIT_AUTOMAKE([check-news])
 AC_CONFIG_SRCDIR([src/main.c])

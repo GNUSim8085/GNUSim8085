@@ -7,6 +7,8 @@
 	when available (GTK+ >= 2.14.0).
 	* configure.in, src/interface.c, src/asm-listing.c: Define website url
 	in configure.in and use it everywhere instead of hard coded value.
+	* src/gui-editor.c: Print website url in footer. Now that we have a footer
+	reduce bottom margin.
 
 2009-12-28  Sridhar Ratnakumar <srid@nearfar.org>
 

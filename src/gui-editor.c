@@ -309,10 +309,12 @@ gui_editor_begin_print (GtkPrintOperation *operation, GtkPrintContext *context, 
 
   /* Set some formatting options for pages */
   gtk_source_print_compositor_set_print_header (editor->print_compositor, TRUE);
+  gtk_source_print_compositor_set_print_footer (editor->print_compositor, TRUE);
   gtk_source_print_compositor_set_header_format (editor->print_compositor, TRUE, NULL, "%N/%Q", NULL);
+  gtk_source_print_compositor_set_footer_format (editor->print_compositor, TRUE, NULL, PACKAGE_URL, NULL);
   gtk_source_print_compositor_set_left_margin (editor->print_compositor, 15.0, GTK_UNIT_MM);
   gtk_source_print_compositor_set_right_margin (editor->print_compositor, 15.0, GTK_UNIT_MM);
-  gtk_source_print_compositor_set_bottom_margin (editor->print_compositor, 20.0, GTK_UNIT_MM);
+  gtk_source_print_compositor_set_bottom_margin (editor->print_compositor, 15.0, GTK_UNIT_MM);
 
   /* Pagination */
   while (!gtk_source_print_compositor_paginate (editor->print_compositor, context));

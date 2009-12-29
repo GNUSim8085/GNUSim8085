@@ -76,6 +76,11 @@ PKG_CHECK_MODULES(GTKSOURCEVIEW2, [gtksourceview-2.0 >= $gtksourceview2_required
            the development package.
     
     ])])
+PKG_CHECK_EXISTS([gtksourceview-2.0 >= 2.8], [have_gsv_2_8=yes], [have_gsv_2_8=no])
+if test "x$have_gsv_2_8" = "xyes"; then
+	AC_DEFINE([GSV_2_8], [1], [gtksourceview2 version >= 2.8])
+fi
+
 
 AC_SUBST(GTK_LIBS)
 AC_SUBST(GTK_CFLAGS)

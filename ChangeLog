@@ -1,3 +1,9 @@
+2009-12-29  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.in: Define a variable if gtksourceview version is >= 2.8.
+	* src/gui-editor.c: Improve the change by Sridhar to use different
+	methods based on gtksourceview version.
+
 2009-12-28  Sridhar Ratnakumar <srid@nearfar.org>
 
 	* src/gui-editor.c: Fix deprecation warning from GtkSourceView

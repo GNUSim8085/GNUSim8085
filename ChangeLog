@@ -9,6 +9,7 @@
 	in configure.in and use it everywhere instead of hard coded value.
 	* src/gui-editor.c: Print website url in footer. Now that we have a footer
 	reduce bottom margin.
+	* po/*: Updated as per latest changes in code.
 
 2009-12-28  Sridhar Ratnakumar <srid@nearfar.org>
 

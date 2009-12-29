@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: http://gnusim8085.sourceforge.net\n"
-"POT-Creation-Date: 2009-12-27 20:11+0530\n"
+"POT-Creation-Date: 2009-12-29 17:43+0530\n"
 "PO-Revision-Date: 2009-12-28 12:50+0000\n"
 "Last-Translator: Kartik Mistry <Unknown>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
@@ -77,130 +77,129 @@ msgstr ""
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr "GNUSim8085 - ૮૦૮૫ માઈક્રોપ્રોસેસર સિમ્યુલેટર"
 
-#: src/interface.c:375 src/interface.c:381 src/interface.c:387
-#: src/interface.c:393 src/interface.c:399 src/interface.c:405
-#: src/interface.c:411 src/interface.c:417 src/interface.c:423
-#: src/interface.c:429 src/interface.c:435 src/interface.c:441
-#: src/interface.c:447 src/interface.c:453
+#: src/interface.c:374 src/interface.c:380 src/interface.c:386
+#: src/interface.c:392 src/interface.c:398 src/interface.c:404
+#: src/interface.c:410 src/interface.c:416 src/interface.c:422
+#: src/interface.c:428 src/interface.c:434 src/interface.c:440
+#: src/interface.c:446 src/interface.c:452
 msgid "00"
 msgstr "00"
 
-#: src/interface.c:470
+#: src/interface.c:469
 msgid "Registers"
 msgstr "રજીસ્ટર્સ"
 
-#: src/interface.c:523 src/interface.c:529 src/interface.c:535
-#: src/interface.c:541 src/interface.c:547 src/interface.c:586
-#: src/interface.c:624 src/interface.c:692 src/interface.c:756
+#: src/interface.c:522 src/interface.c:528 src/interface.c:534
+#: src/interface.c:540 src/interface.c:546 src/interface.c:585
+#: src/interface.c:623 src/interface.c:691 src/interface.c:755
 msgid "0"
 msgstr "0"
 
-#: src/interface.c:557
+#: src/interface.c:556
 msgid "Flag"
 msgstr "સંકેત"
 
-#: src/interface.c:577
+#: src/interface.c:576
 msgid "Decimal"
 msgstr "દશાંશ"
 
-#: src/interface.c:585
+#: src/interface.c:584
 msgid "Enter a decimal number"
 msgstr "દશાંક આંકડો દાખલ કરો"
 
-#: src/interface.c:591
+#: src/interface.c:590
 msgid "Convert this number to hexadecimal"
 msgstr "આ આંકડાને હેક્સાડેસિમલમમાં ફેરવો"
 
-#: src/interface.c:605
+#: src/interface.c:604
 msgid "To Hex"
 msgstr "હેક્સ તરફ"
 
-#: src/interface.c:615
+#: src/interface.c:614
 msgid "Hex"
 msgstr "હેક્સ"
 
-#: src/interface.c:623
+#: src/interface.c:622
 msgid "Enter a hexadecimal number"
 msgstr "હેક્સાડેસિમલમ આંકડો દાખલ કરો"
 
-#: src/interface.c:629
+#: src/interface.c:628
 msgid "Convert this number to decimal"
 msgstr "આ આંકડાને દશાંકમાં ફેરવો"
 
-#: src/interface.c:643
+#: src/interface.c:642
 msgid "To Dec"
 msgstr "દશાંક તરફ"
 
-#: src/interface.c:656
+#: src/interface.c:655
 msgid "<b>Decimal - Hex Convertion</b>"
 msgstr "<b>દશાંશ - હેક્સ રુપાંતર</b>"
 
-#: src/interface.c:684
+#: src/interface.c:683
 msgid "Change the port address to view here"
 msgstr "અહીં દેખવા માટે પોર્ટનું સરનામું બદલો"
 
-#: src/interface.c:691
+#: src/interface.c:690
 msgid "Enter new port value and click Update"
 msgstr "નવું પોર્ટ સરનામું દાખલ કરો અને સુધારા પર ક્લિક કરો"
 
-#: src/interface.c:697
+#: src/interface.c:696
 msgid "Update the port value"
 msgstr "પોર્ટ કિંમત સુધારો"
 
-#: src/interface.c:711
+#: src/interface.c:710
 msgid "Update Port Value"
 msgstr "પોર્ટ કિંમત સુધારો"
 
-#: src/interface.c:724
+#: src/interface.c:723
 msgid "<b>I/O Ports</b>"
 msgstr "<b>I/O પોર્ટ્સ</b>"
 
-#: src/interface.c:748
+#: src/interface.c:747
 msgid "Change the memory location to view here"
 msgstr "અહીં દેખવા માટે મેમરી સ્થાન બદલો"
 
-#: src/interface.c:755
+#: src/interface.c:754
 msgid "Edit new value and click Update"
 msgstr "નવી કિંમત દાખલ કરો અને સુધારા પર ક્લિક કરો"
 
-#: src/interface.c:761
+#: src/interface.c:760
 msgid "Update the current memory location"
 msgstr "હાલનું મેમરી સ્થાન સુધારો"
 
-#: src/interface.c:775
+#: src/interface.c:774
 msgid "Update Memory"
 msgstr "મેમરી સુધારો"
 
-#: src/interface.c:788
+#: src/interface.c:787
 msgid "<b>Memory</b>"
 msgstr "<b>મેમરી</b>"
 
-#: src/interface.c:813
+#: src/interface.c:812
 msgid "Load me at"
 msgstr "મને અહીં લાવો"
 
-#: src/interface.c:821
+#: src/interface.c:820
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr ""
-"કાર્યક્રમ સરનામું દાખલ કરો. જો એ હેક્સ સરનામું હોય તો 'h' સાથે તેનો અંત કરો."
+msgstr "કાર્યક્રમ સરનામું દાખલ કરો. જો એ હેક્સ સરનામું હોય તો 'h' સાથે તેનો અંત કરો."
 
-#: src/interface.c:839
+#: src/interface.c:838
 msgid "Variables"
 msgstr "ચલો"
 
-#: src/interface.c:852
+#: src/interface.c:851
 msgid "Data"
 msgstr "માહિતી"
 
-#: src/interface.c:868
+#: src/interface.c:867
 msgid "Stack Trace"
 msgstr "સ્ટૅક ટ્રેસ"
 
-#: src/interface.c:881
+#: src/interface.c:880
 msgid "Stack"
 msgstr "સ્ટૅક"
 
-#: src/interface.c:905
+#: src/interface.c:904
 msgid "KeyPad"
 msgstr "કીપેડ"
 
@@ -210,47 +209,47 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Kartik Mistry https://launchpad.net/~kartik.mistry"
 
-#: src/interface.c:1148
+#: src/interface.c:1147
 msgid "Assembler Listing"
 msgstr "એસેમ્બર યાદી"
 
-#: src/interface.c:1169
+#: src/interface.c:1168
 msgid "Save to file"
 msgstr "ફાઈલમાં સંગ્રહો"
 
-#: src/interface.c:1217
+#: src/interface.c:1216
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 સંવાદ સાથે શરૂઆત"
 
-#: src/interface.c:1247
+#: src/interface.c:1246
 msgid "1. How to use this simulator?"
 msgstr "૧. આ સિમ્યુલેટરનો ઉપયોગ કઈ રીતે કરશો?"
 
-#: src/interface.c:1255
+#: src/interface.c:1254
 msgid "_Tutorial"
 msgstr "માર્ગદર્શિકા (_T)"
 
-#: src/interface.c:1260
+#: src/interface.c:1259
 msgid "A short tutorial on writing assembly code!"
 msgstr "એસેમ્બલી કોડ લખવા માટેની નાનકડી માર્ગદર્શિકા!"
 
-#: src/interface.c:1267
+#: src/interface.c:1266
 msgid "2. Open an existing assembly program."
 msgstr "૨. હાજર રહેલ એસેમ્બલી કાર્યક્રમ ખોલો."
 
-#: src/interface.c:1275
+#: src/interface.c:1274
 msgid "_Open program"
 msgstr "કાર્યક્રમ ખોલો (_O)"
 
-#: src/interface.c:1280
+#: src/interface.c:1279
 msgid "Open an already saved program"
 msgstr "પહેલેથી સંગ્રહ કરેલ કાર્યક્રમ ખોલો"
 
-#: src/interface.c:1282
+#: src/interface.c:1281
 msgid "What do you want to do now?"
 msgstr "તમે હવે શું કરવા માંગો છો?"
 
-#: src/interface.c:1292
+#: src/interface.c:1291
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -258,31 +257,31 @@ msgstr ""
 "\"doc\" ડિરેક્ટરીમાં આપેલ દસ્તાવેજને વાંચવાનું \n"
 "ભૂલશો નહી."
 
-#: src/interface.c:1353
+#: src/interface.c:1352
 msgid "Choose a symbol"
 msgstr "સંજ્ઞા પસંદ કરો"
 
-#: src/interface.c:1376
+#: src/interface.c:1375
 msgid "Enter a symbol or choose one from the lists"
 msgstr "સંજ્ઞા દાખલ કરો અથવા યાદીઓમાંથી એક પસંદ કરો"
 
-#: src/interface.c:1386
+#: src/interface.c:1385
 msgid "Enter Symbol"
 msgstr "સંજ્ઞા દાખલ કરો"
 
-#: src/interface.c:1400
+#: src/interface.c:1399
 msgid "Variables List"
 msgstr "ચલોની યાદી"
 
-#: src/interface.c:1421
+#: src/interface.c:1420
 msgid "Functions List"
 msgstr "વિધેયોની યાદી"
 
-#: src/interface.c:1442
+#: src/interface.c:1441
 msgid "Macros List"
 msgstr "મેક્રોસની યાદી"
 
-#: src/interface.c:1498
+#: src/interface.c:1497
 msgid "Choose a register"
 msgstr "રજીસ્ટર પસંદ કરો"
 
@@ -381,8 +380,8 @@ msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
 msgstr ""
-"અયોગ્ય ઓપરન્ડ અથવા સંજ્ઞા. ચકાસો કે ઓપરન્ડ આંકડાથી શરૂ થાય છે. દા.ત. a0H એ "
-"0a0H હોવુ જોઈએ"
+"અયોગ્ય ઓપરન્ડ અથવા સંજ્ઞા. ચકાસો કે ઓપરન્ડ આંકડાથી શરૂ થાય છે. દા.ત. a0H એ 0a0H હોવુ "
+"જોઈએ"
 
 #: src/8085-asm.c:86
 msgid "Program assembled successfully"
@@ -403,13 +402,12 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
-"ચલાવવાનું અયોગ્ય મેમરી સ્થાન <%xH> પર ફંટાઈ ગયું. ચલાવવાનું બંધ કરવામાં "
-"આવશે!\n"
+"ચલાવવાનું અયોગ્ય મેમરી સ્થાન <%xH> પર ફંટાઈ ગયું. ચલાવવાનું બંધ કરવામાં આવશે!\n"
 "\n"
-"ચકાસો કે તમે તમારા કાર્યક્રમનાં અંતમાં \"hlt\" સૂચના ઉમેરી છે અને તમારો "
-"કાર્યક્રમ સ્ત્રોત ખાલી નથી. તમારા કાર્યક્રમનો તર્ક પણ ચકાસો. જો તમે ખૂબ જ "
-"ચોક્ક્સ હોવ તો, અહીં GNUSim8085 માં ક્ષતિ હોઈ શકે છે.જો તેમ હોય તો તમને "
-"તમારા સ્ત્રોત કાર્યક્રમની નકલ મોકલવાની સલાહ આપવામાં આવે છે."
+"ચકાસો કે તમે તમારા કાર્યક્રમનાં અંતમાં \"hlt\" સૂચના ઉમેરી છે અને તમારો કાર્યક્રમ સ્ત્રોત "
+"ખાલી નથી. તમારા કાર્યક્રમનો તર્ક પણ ચકાસો. જો તમે ખૂબ જ ચોક્ક્સ હોવ તો, અહીં "
+"GNUSim8085 માં ક્ષતિ હોઈ શકે છે.જો તેમ હોય તો તમને તમારા સ્ત્રોત કાર્યક્રમની નકલ "
+"મોકલવાની સલાહ આપવામાં આવે છે."
 
 #: src/bridge.c:288
 msgid "Assembler: running"
@@ -444,8 +442,9 @@ msgid "; Assembler generated listing; Not editable.\n"
 msgstr "; એસેમ્બલર દ્વારા યાદી કરેલ; ફેરફાર કરી શકાશે નહી.\n"
 
 #: src/asm-listing.c:208
-msgid "; Generated by GNUSim8085: gnusim8085.sf.net\n"
-msgstr "; GNUSim8085 વડે બનાવેલ: gnusim8085.sf.net\n"
+#, fuzzy, c-format
+msgid "; Generated by GNUSim8085: %s\n"
+msgstr "; GNUSim8085 વડે બનાવેલ: %s\n"
 
 #: src/asm-listing.c:244
 msgid ""
@@ -490,5 +489,5 @@ msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
-"PUSH કરતાં વધુ સંખ્યામાં POP ચલાવવામાં આવ્યા છે. ચલાવવાનું બંધ કરો અને તમારા "
-"કાર્યક્રમનો તર્ક ચકાસો"
+"PUSH કરતાં વધુ સંખ્યામાં POP ચલાવવામાં આવ્યા છે. ચલાવવાનું બંધ કરો અને તમારા કાર્યક્રમનો "
+"તર્ક ચકાસો"

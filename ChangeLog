@@ -3,6 +3,8 @@
 	* configure.in: Define a variable if gtksourceview version is >= 2.8.
 	* src/gui-editor.c: Improve the change by Sridhar to use different
 	methods based on gtksourceview version.
+	* src/interface.c: Use gtk_show_uri, in the hook for about dialog,
+	when available (GTK+ >= 2.14.0).
 
 2009-12-28  Sridhar Ratnakumar <srid@nearfar.org>
 

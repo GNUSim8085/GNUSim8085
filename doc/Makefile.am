@@ -4,16 +4,13 @@
 ## If you don't want it to overwrite it,
 ## 	Please disable it in the Anjuta project configuration
 
-gnusim8085_docdir = $(prefix)/@NO_PREFIX_PACKAGE_DOC_DIR@
+gnusim8085_docdir = $(docdir)
+gnusim8085_doc_DATA = asm-guide.txt
 
-gnusim8085_doc_DATA = \
-	asm-guide.txt\
-	examples/README\
-	examples/swaphex.asm\
-	examples/nqueens.asm\
-	examples/debugexample.asm\
-	examples/bcd2bin.asm\
-	gnusim8085.1\
-	examples/addwithcarry.asm
+man_MANS = gnusim8085.1
+dist_man_MANS = gnusim8085.1
 
-EXTRA_DIST = $(gnusim8085_doc_DATA)
+gnusim8085_exampledir = $(docdir)/examples/
+gnusim8085_example_DATA = examples/*
+
+EXTRA_DIST = $(gnusim8085_doc_DATA) $(gnusim8085_example_DATA)

@@ -1,3 +1,7 @@
+2010-01-15  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* doc/Makefile.am: Better handling of installation of examples and manpage.
+
 2009-12-29  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* configure.in: Define a variable if gtksourceview version is >= 2.8.

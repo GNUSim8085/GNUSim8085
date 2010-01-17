@@ -11,6 +11,7 @@ INCLUDES = \
 
 gnusim8085_CFLAGS =\
 	 -DLOCALEDIR=\"$(localedir)\"\
+	 -DPACKAGE_DOC_DIR=\"$(docdir)\"\
 	 -Wall\
 	 -O1\
 	 -g

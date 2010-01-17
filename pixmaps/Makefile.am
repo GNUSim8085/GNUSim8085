@@ -4,7 +4,7 @@
 ## If you don't want it to overwrite it,
 ## 	Please disable it in the Anjuta project configuration
 
-gnusim8085_pixmapsdir = $(prefix)/@NO_PREFIX_PACKAGE_PIXMAPS_DIR@
+gnusim8085_pixmapsdir = @PACKAGE_PIXMAPS_DIR@
 
 gnusim8085_pixmaps_DATA = \
 	gnusim8085_icon.png

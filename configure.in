@@ -115,32 +115,18 @@ packagehelpdir=share/gnome/help/${PACKAGE}
 packagemenudir=share/gnome/apps
 
 dnl Subst PACKAGE_DATA_DIR.
-NO_PREFIX_PACKAGE_DATA_DIR="${packagedatadir}"
-AC_SUBST(NO_PREFIX_PACKAGE_DATA_DIR)
 PACKAGE_DATA_DIR="${packageprefix}/${packagedatadir}"
 AC_SUBST(PACKAGE_DATA_DIR)
 
-dnl Subst PACKAGE_DOC_DIR.
-NO_PREFIX_PACKAGE_DOC_DIR="${packagedocdir}"
-AC_SUBST(NO_PREFIX_PACKAGE_DOC_DIR)
-PACKAGE_DOC_DIR="${packageprefix}/${packagedocdir}"
-AC_SUBST(PACKAGE_DOC_DIR)
-
 dnl Subst PACKAGE_PIXMAPS_DIR.
-NO_PREFIX_PACKAGE_PIXMAPS_DIR="${packagepixmapsdir}"
-AC_SUBST(NO_PREFIX_PACKAGE_PIXMAPS_DIR)
 PACKAGE_PIXMAPS_DIR="${packageprefix}/${packagepixmapsdir}"
 AC_SUBST(PACKAGE_PIXMAPS_DIR)
 
 dnl Subst PACKAGE_HELP_DIR.
-NO_PREFIX_PACKAGE_HELP_DIR="${packagehelpdir}"
-AC_SUBST(NO_PREFIX_PACKAGE_HELP_DIR)
 PACKAGE_HELP_DIR="${packageprefix}/${packagehelpdir}"
 AC_SUBST(PACKAGE_HELP_DIR)
 
 dnl Subst PACKAGE_MENU_DIR.
-NO_PREFIX_PACKAGE_MENU_DIR="${packagemenudir}"
-AC_SUBST(NO_PREFIX_PACKAGE_MENU_DIR)
 PACKAGE_MENU_DIR="${packageprefix}/${packagemenudir}"
 AC_SUBST(PACKAGE_MENU_DIR)
 

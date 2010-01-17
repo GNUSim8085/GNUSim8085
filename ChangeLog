@@ -1,7 +1,8 @@
 2010-01-17  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* doc/Makefile.am: Fix a small problem in man page installation.
-	* configure.in: Remove some redundant path definitions.
+	* configure.in: Remove some redundant path definitions. Fix PACKAGE_URL
+	declaration.
 	* pixmaps/Makefile.am: Use PACKAGE_PIXMAPS_DIR directly.
 	* Makefile.am: Use docdir directly.
 	* src/Makefile.am: Move PACKAGE_DOC_DIR definition here. It is only used

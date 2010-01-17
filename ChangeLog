@@ -3,6 +3,7 @@
 	* doc/Makefile.am: Fix a small problem in man page installation.
 	* configure.in: Remove some redundant path definitions.
 	* pixmaps/Makefile.am: Use PACKAGE_PIXMAPS_DIR directly.
+	* Makefile.am: Use docdir directly.
 
 2010-01-15  Onkar Shinde  <onkarshinde@gmail.com>
 

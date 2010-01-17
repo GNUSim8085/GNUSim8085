@@ -5,8 +5,8 @@
 
 SUBDIRS = po src pixmaps doc data
 
-gnusim8085docdir = ${prefix}/share/doc/gnusim8085
-gnusim8085doc_DATA = \
+gnusim8085_docdir = $(docdir)
+gnusim8085_doc_DATA = \
 	README\
 	AUTHORS\
 	ChangeLog\

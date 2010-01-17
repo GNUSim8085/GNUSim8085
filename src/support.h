@@ -11,6 +11,7 @@
 #include <gtk/gtk.h>
 
 #define _(String) gettext (String)
+#define N_(String) (String)
 
 /*
  * Public Functions.

@@ -8,6 +8,8 @@
 	* src/Makefile.am: Move PACKAGE_DOC_DIR definition here. It is only used
 	in source code and no other place.
 	* .gitignore: Ignore all .gmo files.
+	* src/8085.h, src/interface.c, src/support.h: Mark menu labels and tooltips
+	for translation. Call the GTK+ helper function for translation.
 
 2010-01-15  Onkar Shinde  <onkarshinde@gmail.com>
 

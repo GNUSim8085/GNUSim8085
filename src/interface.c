@@ -22,34 +22,34 @@
   g_object_set_data (G_OBJECT (component), name, widget)
 
 static const GtkActionEntry entries[] = {
-  { "FileMenu", NULL, "_File" },
-  { "ResetMenu", NULL, "_Reset" },
-  { "AssemblerMenu", NULL, "_Assembler" },
-  { "DebugMenu", NULL, "_Debug" },
-  { "BreakPointMenu", NULL, "_Breakpoints" },
-  { "HelpMenu", NULL, "_Help" },
-  { "New", GTK_STOCK_NEW, NULL, NULL, "New source file", G_CALLBACK(on_new1_activate) },
-  { "Open", GTK_STOCK_OPEN, NULL, NULL, "Open a file", G_CALLBACK(on_open1_activate) },
-  { "Save", GTK_STOCK_SAVE, NULL, NULL, "Save file", G_CALLBACK(on_save1_activate) },
-  { "SaveAs", GTK_STOCK_SAVE_AS, NULL, "<shift><control>S", "Save file as", G_CALLBACK(on_save_as1_activate) },
+  { "FileMenu", NULL, N_("_File") },
+  { "ResetMenu", NULL, N_("_Reset") },
+  { "AssemblerMenu", NULL, N_("_Assembler") },
+  { "DebugMenu", NULL, N_("_Debug") },
+  { "BreakPointMenu", NULL, N_("_Breakpoints") },
+  { "HelpMenu", NULL, N_("_Help") },
+  { "New", GTK_STOCK_NEW, NULL, NULL, N_("New source file"), G_CALLBACK(on_new1_activate) },
+  { "Open", GTK_STOCK_OPEN, NULL, NULL, N_("Open a file"), G_CALLBACK(on_open1_activate) },
+  { "Save", GTK_STOCK_SAVE, NULL, NULL, N_("Save file"), G_CALLBACK(on_save1_activate) },
+  { "SaveAs", GTK_STOCK_SAVE_AS, NULL, "<shift><control>S", N_("Save file as"), G_CALLBACK(on_save_as1_activate) },
   { "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK(on_quit1_activate) },
-  { "Registers", NULL, "_Registers", NULL, "Reset Registers", G_CALLBACK(on_registers1_activate) },
-  { "Flags", NULL, "_Flags", NULL, "Reset Flags", G_CALLBACK(on_flags1_activate) },
-  { "IOPorts", NULL, "_IO Ports", NULL, "Reset IO Ports", G_CALLBACK(on_io_ports1_activate) },
-  { "Memory", NULL, "_Memory", NULL, "Reset Memory", G_CALLBACK(on_main_memory1_activate) },
-  { "ResetAll", GTK_STOCK_REFRESH, "Reset _All", "<control>R", "Reset All", G_CALLBACK(on_reset_all1_activate) },
-  { "Assemble", GTK_STOCK_CONVERT, "A_ssemble", "F8", "Only assemble program", G_CALLBACK(on_assemble1_activate) },
-  { "Execute", GTK_STOCK_EXECUTE, NULL, "F9", "Execute assembled and loaded program", G_CALLBACK(on_execute1_activate) },
-  { "Listing", GTK_STOCK_EDIT, "Show _listing", "<control>L", "Show the source code along with opcodes and operands in hex numbers", G_CALLBACK(on_show_listing1_activate) },
-  { "StepIn", GTK_STOCK_GO_FORWARD, "Step _in", "F5", "Step in the code", G_CALLBACK(on_step_in1_activate) },
-  { "StepOver", GTK_STOCK_GO_UP, "Step o_ver", "F6", "Step over the code without calling functions", G_CALLBACK(on_step_over1_activate) },
-  { "StepOut", GTK_STOCK_GO_BACK, "Step _out", "F7", "Step out of the current function", G_CALLBACK(on_step_out1_activate) },
-  { "ToggleBreak", GTK_STOCK_NO, "Toggle _breakpoint", "<control>B", "Toggles breakpoint at current line", G_CALLBACK(on_toggle_breakpoint1_activate) },
-  { "ClearBreak", NULL, "_Clear all breakpoints", "<control><shift>B", "Remove all breakpoints", G_CALLBACK(on_clear_all_breakpoints1_activate) },
-  { "StopExec", GTK_STOCK_STOP, "Stop execution", NULL, "Stop debugging", G_CALLBACK(on_stop_execution1_activate) },
-  { "Help", GTK_STOCK_HELP, "_Contents", "F1", NULL, G_CALLBACK(on_help_activate) },
-  { "Manual", GTK_STOCK_INFO, "8085 _Manual", "<control>M", NULL, G_CALLBACK(on_8085_manual1_activate) },
-  { "Tutorial", GTK_STOCK_DIALOG_INFO, "Assembler _Tutorial", "<control><shift>T", NULL, G_CALLBACK(on_assembler_tutorial1_activate) },
+  { "Registers", NULL, N_("_Registers"), NULL, N_("Reset Registers"), G_CALLBACK(on_registers1_activate) },
+  { "Flags", NULL, N_("_Flags"), NULL, N_("Reset Flags"), G_CALLBACK(on_flags1_activate) },
+  { "IOPorts", NULL, N_("_IO Ports"), NULL, N_("Reset IO Ports"), G_CALLBACK(on_io_ports1_activate) },
+  { "Memory", NULL, N_("_Memory"), NULL, N_("Reset Memory"), G_CALLBACK(on_main_memory1_activate) },
+  { "ResetAll", GTK_STOCK_REFRESH, N_("Reset _All"), "<control>R", N_("Reset All"), G_CALLBACK(on_reset_all1_activate) },
+  { "Assemble", GTK_STOCK_CONVERT, N_("A_ssemble"), "F8", N_("Only assemble program"), G_CALLBACK(on_assemble1_activate) },
+  { "Execute", GTK_STOCK_EXECUTE, NULL, "F9", N_("Execute assembled and loaded program"), G_CALLBACK(on_execute1_activate) },
+  { "Listing", GTK_STOCK_EDIT, N_("Show _listing"), "<control>L", N_("Show the source code along with opcodes and operands in hex numbers"), G_CALLBACK(on_show_listing1_activate) },
+  { "StepIn", GTK_STOCK_GO_FORWARD, N_("Step _in"), "F5", N_("Step in the code"), G_CALLBACK(on_step_in1_activate) },
+  { "StepOver", GTK_STOCK_GO_UP, N_("Step o_ver"), "F6", N_("Step over the code without calling functions"), G_CALLBACK(on_step_over1_activate) },
+  { "StepOut", GTK_STOCK_GO_BACK, N_("Step _out"), "F7", N_("Step out of the current function"), G_CALLBACK(on_step_out1_activate) },
+  { "ToggleBreak", GTK_STOCK_NO, N_("Toggle _breakpoint"), "<control>B", N_("Toggles breakpoint at current line"), G_CALLBACK(on_toggle_breakpoint1_activate) },
+  { "ClearBreak", NULL, N_("_Clear all breakpoints"), "<control><shift>B", N_("Remove all breakpoints"), G_CALLBACK(on_clear_all_breakpoints1_activate) },
+  { "StopExec", GTK_STOCK_STOP, N_("Stop execution"), NULL, N_("Stop debugging"), G_CALLBACK(on_stop_execution1_activate) },
+  { "Help", GTK_STOCK_HELP, N_("_Contents"), "F1", NULL, G_CALLBACK(on_help_activate) },
+  { "Manual", GTK_STOCK_INFO, N_("8085 _Manual"), "<control>M", NULL, G_CALLBACK(on_8085_manual1_activate) },
+  { "Tutorial", GTK_STOCK_DIALOG_INFO, N_("Assembler _Tutorial"), "<control><shift>T", NULL, G_CALLBACK(on_assembler_tutorial1_activate) },
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(on_about1_activate) }
 };
 
@@ -268,6 +268,7 @@ create_window_main (void)
   gtk_container_add (GTK_CONTAINER (window_main), vbox1);
 
   action_group = gtk_action_group_new ("MenuActions");
+  gtk_action_group_set_translation_domain (action_group, NULL);
   gtk_action_group_add_actions (action_group, entries, G_N_ELEMENTS (entries), window_main);
 
   ui_manager = gtk_ui_manager_new ();

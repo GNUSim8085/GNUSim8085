@@ -10,6 +10,7 @@
 	* .gitignore: Ignore all .gmo files.
 	* src/8085.h, src/interface.c, src/support.h: Mark menu labels and tooltips
 	for translation. Call the GTK+ helper function for translation.
+	* po/*.po, po/gnusim8085.pot: Update as per code changes.
 
 2010-01-15  Onkar Shinde  <onkarshinde@gmail.com>
 

@@ -6,6 +6,7 @@
 	* Makefile.am: Use docdir directly.
 	* src/Makefile.am: Move PACKAGE_DOC_DIR definition here. It is only used
 	in source code and no other place.
+	* .gitignore: Ignore all .gmo files.
 
 2010-01-15  Onkar Shinde  <onkarshinde@gmail.com>
 

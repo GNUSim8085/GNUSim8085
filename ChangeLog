@@ -1,3 +1,7 @@
+2010-01-24  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* po/fr.po, po/LINGUAS, AUTHORS: French translation.
+
 2010-01-17  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* doc/Makefile.am: Fix a small problem in man page installation.

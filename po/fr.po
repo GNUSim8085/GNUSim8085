@@ -1,0 +1,658 @@
+# French translation for gnusim8085
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the BSD (3-Clause) license.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnusim8085\n"
+"Report-Msgid-Bugs-To: http://gnusim8085.sourceforge.net\n"
+"POT-Creation-Date: 2010-01-17 23:33+0530\n"
+"PO-Revision-Date: 2010-01-22 12:41+0000\n"
+"Last-Translator: Adnane Belmadiaf <Unknown>\n"
+"Language-Team: French <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-24 15:04+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/callbacks.c:208
+msgid "Program has errors. Check the Message pane."
+msgstr "Programme comporte des erreurs. Vérifier le volet Message."
+
+#: src/callbacks.c:229
+msgid "Error executing program"
+msgstr "Erreur d'exécution du programme"
+
+#: src/callbacks.c:249
+msgid "Error in step in"
+msgstr "Erreur dans l'étape en"
+
+#: src/callbacks.c:264
+msgid "Error in step over"
+msgstr "Erreur dans le bloc d'instructions suivant"
+
+#: src/callbacks.c:279
+msgid "Error in step out"
+msgstr "Erreur dans la sortie du bloc"
+
+#: src/callbacks.c:365
+msgid "Enter a valid number within range"
+msgstr "Entrez un numéro valide dans la marge"
+
+#: src/callbacks.c:538
+msgid ""
+"Do the following\n"
+"\n"
+"1. Read \"asm-guide.txt\" for assembler tutorial\n"
+"2. Open \"examples/nqueens.asm\" and simulate it.\n"
+"\n"
+"Usually these files will be found in your system document directory,\n"
+"which can be one of the following\n"
+"\n"
+"/usr/local/doc/GNUSim8085\n"
+"/usr/local/share/doc/GNUSim8085\n"
+"/usr/share/doc/GNUSim8085\n"
+"\n"
+"These files are also available in \"doc\" directory\n"
+"of GNUSim8085 source tarball (tar.gz file)\n"
+msgstr ""
+"1. Lire \"asm-guide.txt\" pour le tutorial d'assembleur\n"
+"2. Ouvrir \"examples/nqueens.asm\" et simuler le.\n"
+"\n"
+"Généralement, ces fichiers se trouvent dans votre répertoire de documents du "
+"système,\n"
+"qui peut être un des suivants\n"
+"\n"
+"/usr/local/doc/GNUSim8085\n"
+"/usr/local/share/doc/GNUSim8085\n"
+"/usr/share/doc/GNUSim8085\n"
+"\n"
+"Ces fichiers sont aussi disponible  dans le répertoire \"doc\"\n"
+"des sources tarball (fichier tar.gz) de GNUSim8085\n"
+
+#: src/interface.c:25
+msgid "_File"
+msgstr "_Fichier"
+
+#: src/interface.c:26
+msgid "_Reset"
+msgstr "_Réinitialiser"
+
+#: src/interface.c:27
+msgid "_Assembler"
+msgstr "_Assembleur"
+
+#: src/interface.c:28
+msgid "_Debug"
+msgstr "_Débogage"
+
+#: src/interface.c:29
+msgid "_Breakpoints"
+msgstr "_Points d'arrêt"
+
+#: src/interface.c:30
+msgid "_Help"
+msgstr "_Aide"
+
+#: src/interface.c:31
+msgid "New source file"
+msgstr "Nouveau fichier source"
+
+#: src/interface.c:32
+msgid "Open a file"
+msgstr "Ouvrir un fichier"
+
+#: src/interface.c:33
+msgid "Save file"
+msgstr "Sauvegarder le fichier"
+
+#: src/interface.c:34
+msgid "Save file as"
+msgstr "Enregistrer le fichier sous"
+
+#: src/interface.c:36
+msgid "_Registers"
+msgstr "_Registres"
+
+#: src/interface.c:36
+msgid "Reset Registers"
+msgstr "Réinitialiser les registres"
+
+#: src/interface.c:37
+msgid "_Flags"
+msgstr "_Drapeaux"
+
+#: src/interface.c:37
+msgid "Reset Flags"
+msgstr "Réinitialiser les drapeaux"
+
+#: src/interface.c:38
+msgid "_IO Ports"
+msgstr "_Ports d'E/S"
+
+#: src/interface.c:38
+msgid "Reset IO Ports"
+msgstr "Réinitialiser les ports d'E/S"
+
+#: src/interface.c:39
+msgid "_Memory"
+msgstr "_Mémoire"
+
+#: src/interface.c:39
+msgid "Reset Memory"
+msgstr "Réinitialiser la mémoire"
+
+#: src/interface.c:40
+msgid "Reset _All"
+msgstr "_Tout réinitialiser"
+
+#: src/interface.c:40
+msgid "Reset All"
+msgstr "Tout réinitialiser"
+
+#: src/interface.c:41
+msgid "A_ssemble"
+msgstr "A_ssembler"
+
+#: src/interface.c:41
+msgid "Only assemble program"
+msgstr "Seulement assembler le programme"
+
+#: src/interface.c:42
+msgid "Execute assembled and loaded program"
+msgstr "Exécuter le programme chargé et assemblé"
+
+#: src/interface.c:43
+msgid "Show _listing"
+msgstr "Afficher le _listing"
+
+#: src/interface.c:43
+msgid "Show the source code along with opcodes and operands in hex numbers"
+msgstr ""
+"Afficher le code source avec des opcodes et opérandes en nombre hexadécimal"
+
+#: src/interface.c:44
+msgid "Step _in"
+msgstr ""
+
+#: src/interface.c:44
+msgid "Step in the code"
+msgstr ""
+
+#: src/interface.c:45
+msgid "Step o_ver"
+msgstr "Bloc d'instructions _suivant"
+
+#: src/interface.c:45
+msgid "Step over the code without calling functions"
+msgstr "Bloc d'instructions suivant sans appeler les fonctions"
+
+#: src/interface.c:46
+msgid "Step _out"
+msgstr "_Sortie du bloc"
+
+#: src/interface.c:46
+msgid "Step out of the current function"
+msgstr "Sortie de la fonction courante"
+
+#: src/interface.c:47
+msgid "Toggle _breakpoint"
+msgstr "(Dés)Activer le point d'arrêt"
+
+#: src/interface.c:47
+msgid "Toggles breakpoint at current line"
+msgstr "(Dés)Activer les point d'arrêt à la ligne courante"
+
+#: src/interface.c:48
+msgid "_Clear all breakpoints"
+msgstr "Nettoyer les points d'arrêts"
+
+#: src/interface.c:48
+msgid "Remove all breakpoints"
+msgstr "Supprimer tous les points d'arrêt"
+
+#: src/interface.c:49
+msgid "Stop execution"
+msgstr "Arrêter l'exécution"
+
+#: src/interface.c:49
+msgid "Stop debugging"
+msgstr "Arrêter le débogage"
+
+#: src/interface.c:50
+msgid "_Contents"
+msgstr "_Contenu"
+
+#: src/interface.c:51
+msgid "8085 _Manual"
+msgstr "_Manuel 8085"
+
+#: src/interface.c:52
+msgid "Assembler _Tutorial"
+msgstr "_Tutoriel en Assembleur"
+
+#: src/interface.c:256
+msgid "GNUSim8085 - 8085 Microprocessor Simulator"
+msgstr "GNUSim8085 - Simulateur de Microprocesseur 8085"
+
+#: src/interface.c:375 src/interface.c:381 src/interface.c:387
+#: src/interface.c:393 src/interface.c:399 src/interface.c:405
+#: src/interface.c:411 src/interface.c:417 src/interface.c:423
+#: src/interface.c:429 src/interface.c:435 src/interface.c:441
+#: src/interface.c:447 src/interface.c:453
+msgid "00"
+msgstr "00"
+
+#: src/interface.c:470
+msgid "Registers"
+msgstr "Registres"
+
+#: src/interface.c:523 src/interface.c:529 src/interface.c:535
+#: src/interface.c:541 src/interface.c:547 src/interface.c:586
+#: src/interface.c:624 src/interface.c:692 src/interface.c:756
+msgid "0"
+msgstr "0"
+
+#: src/interface.c:557
+msgid "Flag"
+msgstr "Drapeau"
+
+#: src/interface.c:577
+msgid "Decimal"
+msgstr "Décimal"
+
+#: src/interface.c:585
+msgid "Enter a decimal number"
+msgstr "Entrez un nombre décimal"
+
+#: src/interface.c:591
+msgid "Convert this number to hexadecimal"
+msgstr "Convertir ce nombre en hexadécimal"
+
+#: src/interface.c:605
+msgid "To Hex"
+msgstr "À Hex"
+
+#: src/interface.c:615
+msgid "Hex"
+msgstr "Hex"
+
+#: src/interface.c:623
+msgid "Enter a hexadecimal number"
+msgstr "Entrez un nombre hexadécimal"
+
+#: src/interface.c:629
+msgid "Convert this number to decimal"
+msgstr "Convertir ce nombre en décimal"
+
+#: src/interface.c:643
+msgid "To Dec"
+msgstr "À décimal"
+
+#: src/interface.c:656
+msgid "<b>Decimal - Hex Convertion</b>"
+msgstr "<b>Conversion Décimale -  Hex</b>"
+
+#: src/interface.c:684
+msgid "Change the port address to view here"
+msgstr "Changer l'adresse du port pour afficher ici"
+
+#: src/interface.c:691
+msgid "Enter new port value and click Update"
+msgstr "Entrer la valeur du nouveau port et cliquez sur mettre à jour"
+
+#: src/interface.c:697
+msgid "Update the port value"
+msgstr "Mettre à jour la valeur du port"
+
+#: src/interface.c:711
+msgid "Update Port Value"
+msgstr "Mise à jour de la valeur du port"
+
+#: src/interface.c:724
+msgid "<b>I/O Ports</b>"
+msgstr "<b>I/O Ports</b>"
+
+#: src/interface.c:748
+msgid "Change the memory location to view here"
+msgstr "Changer l'emplacement de mémoire pour afficher ici"
+
+#: src/interface.c:755
+msgid "Edit new value and click Update"
+msgstr "Modifier la nouvelle valeur et cliquez sur mettre à jour"
+
+#: src/interface.c:761
+msgid "Update the current memory location"
+msgstr "Mettre à jour l'emplacement mémoire actuel"
+
+#: src/interface.c:775
+msgid "Update Memory"
+msgstr "Mettre à jour de la mémoire"
+
+#: src/interface.c:788
+msgid "<b>Memory</b>"
+msgstr "<b>Mémoire</b>"
+
+#: src/interface.c:813
+msgid "Load me at"
+msgstr "Me charger à"
+
+#: src/interface.c:821
+msgid "Enter the program address.  End with a 'h' if it is a hex address."
+msgstr ""
+"Entrez l'adresse du programme. Terminer avec un 'h' si c'est une adresse "
+"hexadécimale."
+
+#: src/interface.c:839
+msgid "Variables"
+msgstr "Variables"
+
+#: src/interface.c:852
+msgid "Data"
+msgstr "Donnée"
+
+#: src/interface.c:868
+msgid "Stack Trace"
+msgstr "Trace de pile"
+
+#: src/interface.c:881
+msgid "Stack"
+msgstr "Pile"
+
+#: src/interface.c:905
+msgid "KeyPad"
+msgstr "Clavier numérique"
+
+#: src/interface.c:1107
+msgid "translator_credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Adnane Belmadiaf https://launchpad.net/~adnane002\n"
+"  Hassan El Jacifi https://launchpad.net/~waver\n"
+"  Nizar Kerkeni https://launchpad.net/~nizarus\n"
+"  shahinaz.b https://launchpad.net/~shahiwestcoast"
+
+#: src/interface.c:1148
+msgid "Assembler Listing"
+msgstr "Liste d'assembleur"
+
+#: src/interface.c:1169
+msgid "Save to file"
+msgstr "Enregistrer sous"
+
+#: src/interface.c:1217
+msgid "GNUSim8085 start with dialog"
+msgstr "GNUSim8085 démarre avec une boîte de dialogue"
+
+#: src/interface.c:1247
+msgid "1. How to use this simulator?"
+msgstr "Comment utiliser ce simulateur ?"
+
+#: src/interface.c:1255
+msgid "_Tutorial"
+msgstr "_Tutoriel"
+
+#: src/interface.c:1260
+msgid "A short tutorial on writing assembly code!"
+msgstr "Un petit tutoriel sur l'écriture de code en assembleur!"
+
+#: src/interface.c:1267
+msgid "2. Open an existing assembly program."
+msgstr "2. Ouvrir un programme assembleur existant."
+
+#: src/interface.c:1275
+msgid "_Open program"
+msgstr "_Ouvrir le programme"
+
+#: src/interface.c:1280
+msgid "Open an already saved program"
+msgstr "Ouvrir un programme déjà enregistré"
+
+#: src/interface.c:1282
+msgid "What do you want to do now?"
+msgstr "Que voulez-vous faire maintenant ?"
+
+#: src/interface.c:1292
+msgid ""
+"Don't forget to read the documentation \n"
+"given in \"doc\" directory."
+msgstr ""
+"N'oubliez pas de lire la documentation \n"
+"donnée dans le répertoire \"doc\"."
+
+#: src/interface.c:1353
+msgid "Choose a symbol"
+msgstr "Choisir un symbole"
+
+#: src/interface.c:1376
+msgid "Enter a symbol or choose one from the lists"
+msgstr "Entrez un symbole ou choisissez un à partir des listes"
+
+#: src/interface.c:1386
+msgid "Enter Symbol"
+msgstr "Entrer un symbole"
+
+#: src/interface.c:1400
+msgid "Variables List"
+msgstr "Liste des variables"
+
+#: src/interface.c:1421
+msgid "Functions List"
+msgstr "List des fonctions"
+
+#: src/interface.c:1442
+msgid "Macros List"
+msgstr "Liste des macros"
+
+#: src/interface.c:1498
+msgid "Choose a register"
+msgstr "Choisir un registre"
+
+#: src/main.c:69
+msgid "Simulator: Idle"
+msgstr "Simulateur: au repos"
+
+#: src/8085.c:250
+#, c-format
+msgid "Unwanted %c reached"
+msgstr "Indésirable %c atteint"
+
+#: src/8085-instructions.c:28
+msgid "Invalid Opcode"
+msgstr "Opcode invalide"
+
+#: src/8085-instructions.c:884
+msgid "Instruction 'RIM' Not implemented"
+msgstr "Instruction 'RIM' non implémenté"
+
+#: src/8085-instructions.c:1038
+msgid "Instruction 'SIM' Not implemented"
+msgstr "Instruction 'SIM' non implémenté"
+
+#: src/asm-source.c:110
+msgid "Assembling Aborted"
+msgstr "Assemblage annulé"
+
+#: src/asm-source.c:178
+msgid "Label should be given to a code line"
+msgstr "Une étiquette doit être donnée à une ligne de code"
+
+#: src/asm-source.c:208 src/asm-source.c:215 src/asm-source.c:222
+msgid "Incomplete opcode"
+msgstr "Opcode incomplet"
+
+#: src/asm-source.c:237
+#, c-format
+msgid ""
+"\n"
+"Neither Op not PsOp: [%s]"
+msgstr ""
+
+#: src/asm-source.c:238
+msgid "Invalid Opcode or Pseudo op"
+msgstr "Opcode ou Pseudo op invalide"
+
+#: src/asm-source.c:247
+msgid "Opcode needs an user argument"
+msgstr "Opcode a besoin d'un argument utilisateur"
+
+#: src/asm-source.c:255
+msgid "Extra characters in line"
+msgstr "Extra caractère en line"
+
+#: src/asm-source.c:421
+msgid "Expression error in symbol"
+msgstr "Erreur d'expression dans le symbole"
+
+#: src/asm-source.c:435
+msgid "Undefined symbol"
+msgstr "Symbole indéfini"
+
+#: src/asm-gensym.c:74
+msgid "Redundant label"
+msgstr "Label redondante"
+
+#: src/asm-gensym.c:89
+msgid "Invalid Operand in EQU"
+msgstr "Opérande invalide dans EQU"
+
+#: src/asm-gensym.c:101 src/asm-gensym.c:123
+msgid "Invalid operand"
+msgstr "Opérande invalide"
+
+#: src/asm-gensym.c:113
+msgid "Redefinition of symbol"
+msgstr "Redéfinition du symbole"
+
+#: src/asm-genobj.c:110
+msgid "Invalid data size"
+msgstr "Taille de données invalide"
+
+#: src/asm-genobj.c:115
+msgid "DS: Exceeded limit"
+msgstr "DS : Limite dépasséé"
+
+#: src/asm-genobj.c:130
+msgid "DB: Operand error"
+msgstr "DB: Erreur d'opérande"
+
+#: src/asm-genobj.c:160
+msgid ""
+"Invalid operand or symbol. Check whether operands start with a number. e.g "
+"a0H should be 0a0H"
+msgstr ""
+"Opérande ou symbole invalide. Vérifiez si les opérandes commencent par un "
+"nombre. ex : a0H devrait être 0a0H"
+
+#: src/8085-asm.c:86
+msgid "Program assembled successfully"
+msgstr "Programme assemblé avec succès"
+
+#: src/bridge.c:36
+msgid "Simulator: Program running"
+msgstr "Simulateur: Programme en cours d'exécution"
+
+#: src/bridge.c:186
+#, c-format
+msgid ""
+"Execution branched to invalid memory location <%xH>. Execution will be "
+"stopped!\n"
+"\n"
+"Check whether you've included the \"hlt\" instruction at the end of your "
+"program and your source program is not empty.  Also check your program "
+"logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
+"advised to send a copy of your source progam."
+msgstr ""
+"Exécution ramifié à un emplacement mémoire non valide <%xH>. L'exécution "
+"sera arrêtée!\n"
+"\n"
+"Vérifiez si vous avez inclus l'l'instruction \"hlt\" à la fin de votre "
+"programme et que votre source de programme n'est pas vide. Vérifiez "
+"également la logique de votre programme. Si vous êtes très sûr, il pourrait "
+"y avoir un bug dans GNUSim8085.Si c'est le cas, vous êtes invité à envoyer "
+"une copie de la source votre progamme."
+
+#: src/bridge.c:288
+msgid "Assembler: running"
+msgstr "Assembleur: en exécution"
+
+#: src/gui-list-message.c:92
+msgid "Line No"
+msgstr "Ligne N°"
+
+#: src/gui-list-message.c:93
+msgid "Assembler Message"
+msgstr "Message de l'assembleur"
+
+#: src/gui-list-data.c:75
+msgid "Address"
+msgstr "Adresse"
+
+#: src/gui-list-data.c:76
+msgid "Variable"
+msgstr "Variable"
+
+#: src/gui-list-data.c:77 src/gui-list-stack.c:82
+msgid "Value"
+msgstr "Valeur"
+
+#: src/gui-list-data.c:78 src/gui-list-stack.c:83
+msgid "Value(Decimal)"
+msgstr "Valeur(Décimale)"
+
+#: src/asm-listing.c:207
+msgid "; Assembler generated listing; Not editable.\n"
+msgstr "; Assembleur a généré le listing; Non modifiable\n"
+
+#: src/asm-listing.c:208
+#, c-format
+msgid "; Generated by GNUSim8085: %s\n"
+msgstr "; Généré par GNUSim8085: %s\n"
+
+#: src/asm-listing.c:244
+msgid ""
+";Assembler Listing (Do Not assemble)\n"
+"\n"
+msgstr ""
+";Assembleur listing (Ne pas assembler)\n"
+"\n"
+
+#: src/file-op.c:60
+#, c-format
+msgid "Failed to open <%s>"
+msgstr "Impossible d'ouvrir <% s>"
+
+#: src/file-op.c:139
+msgid "File already exists; overwrite it?"
+msgstr "Le fichier existe déjà; Voulez-vous le remplacer?"
+
+#: src/file-op.c:154
+#, c-format
+msgid "Failed to save <%s>"
+msgstr "Impossible d'enregistrer <% s>"
+
+#: src/file-op.c:310
+msgid "Failed to save listing file"
+msgstr "Echec de sauvegarde du listing de fichier"
+
+#: src/gui-list-stack.c:80
+msgid "Stack Loc"
+msgstr "Position de la Pile"
+
+#: src/gui-list-stack.c:81
+msgid "Proc/Reg"
+msgstr "Proc/Reg"
+
+#: src/gui-list-stack.c:116
+msgid "Stack size exceeded.  Stop the execution"
+msgstr "La taille de la pile a été dépassé. Arrêtez l'execution"
+
+#: src/gui-list-stack.c:130
+msgid ""
+"More number of POP are executed than PUSH. Stop the execution and check the "
+"logic of your program"
+msgstr ""
+"Plus de nombre de dépilement sont exécutés que d'empilement. Arrêtez "
+"l'exécution et vérifiez la logique de votre programme"

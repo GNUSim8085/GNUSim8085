@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: http://gnusim8085.sourceforge.net\n"
 "POT-Creation-Date: 2010-01-17 23:33+0530\n"
-"PO-Revision-Date: 2009-12-28 12:50+0000\n"
+"PO-Revision-Date: 2010-01-20 07:50+0000\n"
 "Last-Translator: Kartik Mistry <Unknown>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-12-28 13:20+0000\n"
+"X-Launchpad-Export-Date: 2010-01-25 04:32+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:208
@@ -75,11 +75,11 @@ msgstr ""
 
 #: src/interface.c:25
 msgid "_File"
-msgstr ""
+msgstr "ફાઇલ (_F)"
 
 #: src/interface.c:26
 msgid "_Reset"
-msgstr ""
+msgstr "ફરી સુયોજીત કરો (_R)"
 
 #: src/interface.c:27
 msgid "_Assembler"
@@ -87,43 +87,39 @@ msgstr "એસેમ્બર (_A)"
 
 #: src/interface.c:28
 msgid "_Debug"
-msgstr ""
+msgstr "ભૂલ શોધો (_D)"
 
 #: src/interface.c:29
 msgid "_Breakpoints"
-msgstr ""
+msgstr "ભંગાણચિહ્નો (_B)"
 
 #: src/interface.c:30
 msgid "_Help"
-msgstr ""
+msgstr "મદદ (_H)"
 
 #: src/interface.c:31
 msgid "New source file"
-msgstr ""
+msgstr "નવી સ્ત્રોત ફાઈલ"
 
 #: src/interface.c:32
-#, fuzzy
 msgid "Open a file"
-msgstr "ફાઈલમાં સંગ્રહો"
+msgstr "ફાઈલ ખોલો"
 
 #: src/interface.c:33
-#, fuzzy
 msgid "Save file"
-msgstr "ફાઈલમાં સંગ્રહો"
+msgstr "ફાઈલ સંગ્રહો"
 
 #: src/interface.c:34
-#, fuzzy
 msgid "Save file as"
-msgstr "ફાઈલમાં સંગ્રહો"
+msgstr "ફાઇલ આ રીતે સંગ્રહો"
 
 #: src/interface.c:36
 msgid "_Registers"
 msgstr "રજીસ્ટર્સ (_R)"
 
 #: src/interface.c:36
-#, fuzzy
 msgid "Reset Registers"
-msgstr "રજીસ્ટર્સ"
+msgstr "રજીસ્ટર્સ ફરી ગોઠવો"
 
 #: src/interface.c:37
 msgid "_Flags"
@@ -146,9 +142,8 @@ msgid "_Memory"
 msgstr "મેમરી (_M)"
 
 #: src/interface.c:39
-#, fuzzy
 msgid "Reset Memory"
-msgstr "મેમરી સુધારો"
+msgstr ""
 
 #: src/interface.c:40
 msgid "Reset _All"
@@ -159,14 +154,12 @@ msgid "Reset All"
 msgstr ""
 
 #: src/interface.c:41
-#, fuzzy
 msgid "A_ssemble"
-msgstr "એસેમ્બર યાદી"
+msgstr ""
 
 #: src/interface.c:41
-#, fuzzy
 msgid "Only assemble program"
-msgstr "૨. હાજર રહેલ એસેમ્બલી કાર્યક્રમ ખોલો."
+msgstr ""
 
 #: src/interface.c:42
 msgid "Execute assembled and loaded program"
@@ -182,11 +175,11 @@ msgstr ""
 
 #: src/interface.c:44
 msgid "Step _in"
-msgstr ""
+msgstr "અંદર જાવ"
 
 #: src/interface.c:44
 msgid "Step in the code"
-msgstr ""
+msgstr "કોડમાં અંદર જાવ"
 
 #: src/interface.c:45
 msgid "Step o_ver"
@@ -198,12 +191,11 @@ msgstr ""
 
 #: src/interface.c:46
 msgid "Step _out"
-msgstr ""
+msgstr "બહાર નીકળો"
 
 #: src/interface.c:46
-#, fuzzy
 msgid "Step out of the current function"
-msgstr "હાલનું મેમરી સ્થાન સુધારો"
+msgstr "હાલનાં વિધેયમાંથી બહાર નીકળો"
 
 #: src/interface.c:47
 msgid "Toggle _breakpoint"
@@ -215,11 +207,11 @@ msgstr ""
 
 #: src/interface.c:48
 msgid "_Clear all breakpoints"
-msgstr ""
+msgstr "બધાં ભંગાણબિંદુઓ સાફ કરો (_C)"
 
 #: src/interface.c:48
 msgid "Remove all breakpoints"
-msgstr ""
+msgstr "બધાં ભંગાણબિંદુઓ દૂર કરો"
 
 #: src/interface.c:49
 msgid "Stop execution"
@@ -231,16 +223,15 @@ msgstr ""
 
 #: src/interface.c:50
 msgid "_Contents"
-msgstr ""
+msgstr "વિષયસૂચી (_C)"
 
 #: src/interface.c:51
 msgid "8085 _Manual"
-msgstr ""
+msgstr "૮૦૮૫ માર્ગદર્શિકા (_M)"
 
 #: src/interface.c:52
-#, fuzzy
 msgid "Assembler _Tutorial"
-msgstr "એસેમ્બર યાદી"
+msgstr "એસેમ્બલર માર્ગદર્શિકા"
 
 #: src/interface.c:256
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
@@ -350,7 +341,8 @@ msgstr "મને અહીં લાવો"
 
 #: src/interface.c:821
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr "કાર્યક્રમ સરનામું દાખલ કરો. જો એ હેક્સ સરનામું હોય તો 'h' સાથે તેનો અંત કરો."
+msgstr ""
+"કાર્યક્રમ સરનામું દાખલ કરો. જો એ હેક્સ સરનામું હોય તો 'h' સાથે તેનો અંત કરો."
 
 #: src/interface.c:839
 msgid "Variables"
@@ -376,6 +368,7 @@ msgstr "કીપેડ"
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  GNUSim8085 Administrators https://launchpad.net/~gnusim8085-admins\n"
 "  Kartik Mistry https://launchpad.net/~kartik.mistry"
 
 #: src/interface.c:1148
@@ -549,8 +542,8 @@ msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
 msgstr ""
-"અયોગ્ય ઓપરન્ડ અથવા સંજ્ઞા. ચકાસો કે ઓપરન્ડ આંકડાથી શરૂ થાય છે. દા.ત. a0H એ 0a0H હોવુ "
-"જોઈએ"
+"અયોગ્ય ઓપરન્ડ અથવા સંજ્ઞા. ચકાસો કે ઓપરન્ડ આંકડાથી શરૂ થાય છે. દા.ત. a0H એ "
+"0a0H હોવુ જોઈએ"
 
 #: src/8085-asm.c:86
 msgid "Program assembled successfully"
@@ -571,12 +564,13 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
-"ચલાવવાનું અયોગ્ય મેમરી સ્થાન <%xH> પર ફંટાઈ ગયું. ચલાવવાનું બંધ કરવામાં આવશે!\n"
+"ચલાવવાનું અયોગ્ય મેમરી સ્થાન <%xH> પર ફંટાઈ ગયું. ચલાવવાનું બંધ કરવામાં "
+"આવશે!\n"
 "\n"
-"ચકાસો કે તમે તમારા કાર્યક્રમનાં અંતમાં \"hlt\" સૂચના ઉમેરી છે અને તમારો કાર્યક્રમ સ્ત્રોત "
-"ખાલી નથી. તમારા કાર્યક્રમનો તર્ક પણ ચકાસો. જો તમે ખૂબ જ ચોક્ક્સ હોવ તો, અહીં "
-"GNUSim8085 માં ક્ષતિ હોઈ શકે છે.જો તેમ હોય તો તમને તમારા સ્ત્રોત કાર્યક્રમની નકલ "
-"મોકલવાની સલાહ આપવામાં આવે છે."
+"ચકાસો કે તમે તમારા કાર્યક્રમનાં અંતમાં \"hlt\" સૂચના ઉમેરી છે અને તમારો "
+"કાર્યક્રમ સ્ત્રોત ખાલી નથી. તમારા કાર્યક્રમનો તર્ક પણ ચકાસો. જો તમે ખૂબ જ "
+"ચોક્ક્સ હોવ તો, અહીં GNUSim8085 માં ક્ષતિ હોઈ શકે છે.જો તેમ હોય તો તમને "
+"તમારા સ્ત્રોત કાર્યક્રમની નકલ મોકલવાની સલાહ આપવામાં આવે છે."
 
 #: src/bridge.c:288
 msgid "Assembler: running"
@@ -658,5 +652,5 @@ msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
-"PUSH કરતાં વધુ સંખ્યામાં POP ચલાવવામાં આવ્યા છે. ચલાવવાનું બંધ કરો અને તમારા કાર્યક્રમનો "
-"તર્ક ચકાસો"
+"PUSH કરતાં વધુ સંખ્યામાં POP ચલાવવામાં આવ્યા છે. ચલાવવાનું બંધ કરો અને તમારા "
+"કાર્યક્રમનો તર્ક ચકાસો"

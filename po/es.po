@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: http://gnusim8085.sourceforge.net\n"
 "POT-Creation-Date: 2010-01-17 23:33+0530\n"
-"PO-Revision-Date: 2010-01-14 01:13+0000\n"
+"PO-Revision-Date: 2010-01-23 16:54+0000\n"
 "Last-Translator: Fernando Muñoz <munozferna@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-01-15 17:00+0000\n"
+"X-Launchpad-Export-Date: 2010-01-25 04:28+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:208
@@ -76,11 +76,11 @@ msgstr ""
 
 #: src/interface.c:25
 msgid "_File"
-msgstr ""
+msgstr "_Archivo"
 
 #: src/interface.c:26
 msgid "_Reset"
-msgstr ""
+msgstr "_Reiniciar"
 
 #: src/interface.c:27
 msgid "_Assembler"
@@ -88,43 +88,39 @@ msgstr "Ens_amblador"
 
 #: src/interface.c:28
 msgid "_Debug"
-msgstr ""
+msgstr "_Depurar"
 
 #: src/interface.c:29
 msgid "_Breakpoints"
-msgstr ""
+msgstr "Puntos de interrupción"
 
 #: src/interface.c:30
 msgid "_Help"
-msgstr ""
+msgstr "_Ayuda"
 
 #: src/interface.c:31
 msgid "New source file"
-msgstr ""
+msgstr "Nuevo archivo fuente"
 
 #: src/interface.c:32
-#, fuzzy
 msgid "Open a file"
-msgstr "Guardar a archivo"
+msgstr "Abrir un archivo"
 
 #: src/interface.c:33
-#, fuzzy
 msgid "Save file"
-msgstr "Guardar a archivo"
+msgstr "Guardar archivo"
 
 #: src/interface.c:34
-#, fuzzy
 msgid "Save file as"
-msgstr "Guardar a archivo"
+msgstr "Guardar archivo como"
 
 #: src/interface.c:36
 msgid "_Registers"
 msgstr "_Registros"
 
 #: src/interface.c:36
-#, fuzzy
 msgid "Reset Registers"
-msgstr "Registros"
+msgstr "Restablecer Registros"
 
 #: src/interface.c:37
 msgid "_Flags"
@@ -132,7 +128,7 @@ msgstr "_Bandera"
 
 #: src/interface.c:37
 msgid "Reset Flags"
-msgstr ""
+msgstr "Restablecer Banderas"
 
 #: src/interface.c:38
 msgid "_IO Ports"
@@ -140,43 +136,39 @@ msgstr "Puertos _I/O"
 
 #: src/interface.c:38
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "Restablecer puertos de E/S"
 
 #: src/interface.c:39
-#, fuzzy
 msgid "_Memory"
-msgstr "Actualizar memoria"
+msgstr "_Memoria"
 
 #: src/interface.c:39
-#, fuzzy
 msgid "Reset Memory"
-msgstr "Actualizar memoria"
+msgstr "Restablecer la Memoria"
 
 #: src/interface.c:40
 msgid "Reset _All"
-msgstr ""
+msgstr "Restablecer _Todo"
 
 #: src/interface.c:40
 msgid "Reset All"
-msgstr ""
+msgstr "Restablecer Todo"
 
 #: src/interface.c:41
-#, fuzzy
 msgid "A_ssemble"
-msgstr "Listado de ensamblador"
+msgstr "En_samblar"
 
 #: src/interface.c:41
-#, fuzzy
 msgid "Only assemble program"
-msgstr "2. Abrir un programa ensamblador existente."
+msgstr "Solo ensamblar el programa"
 
 #: src/interface.c:42
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "Ejecutar el programa ensamblado y cargado"
 
 #: src/interface.c:43
 msgid "Show _listing"
-msgstr ""
+msgstr "Mostrar _listado"
 
 #: src/interface.c:43
 msgid "Show the source code along with opcodes and operands in hex numbers"
@@ -203,9 +195,8 @@ msgid "Step _out"
 msgstr ""
 
 #: src/interface.c:46
-#, fuzzy
 msgid "Step out of the current function"
-msgstr "Actualizar ubicación de memoria actual"
+msgstr ""
 
 #: src/interface.c:47
 msgid "Toggle _breakpoint"
@@ -217,32 +208,31 @@ msgstr ""
 
 #: src/interface.c:48
 msgid "_Clear all breakpoints"
-msgstr ""
+msgstr "Borrar los puntos de interrup_ción"
 
 #: src/interface.c:48
 msgid "Remove all breakpoints"
-msgstr ""
+msgstr "Eliminar todos los puntos de ruptura"
 
 #: src/interface.c:49
 msgid "Stop execution"
-msgstr ""
+msgstr "Detener la ejecución"
 
 #: src/interface.c:49
 msgid "Stop debugging"
-msgstr ""
+msgstr "Detener el depurado"
 
 #: src/interface.c:50
 msgid "_Contents"
-msgstr ""
+msgstr "_Índice"
 
 #: src/interface.c:51
 msgid "8085 _Manual"
-msgstr ""
+msgstr "_Manual del 8085"
 
 #: src/interface.c:52
-#, fuzzy
 msgid "Assembler _Tutorial"
-msgstr "Listado de ensamblador"
+msgstr "_Tutorial de Ensamblador"
 
 #: src/interface.c:256
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
@@ -383,6 +373,7 @@ msgstr ""
 "  Aitor Pazos https://launchpad.net/~mail-aitorpazos\n"
 "  Fernando Muñoz https://launchpad.net/~munozferna\n"
 "  Gonzalo L. Campos Medina https://launchpad.net/~gcamposm\n"
+"  Jaime Rave https://launchpad.net/~jaimerave\n"
 "  Luis Esteban Guerra Cardona https://launchpad.net/~lguerra80\n"
 "  Takmadeus https://launchpad.net/~takmadeus"
 

@@ -2,6 +2,7 @@
 
 	* configure.in, src/file-op-gio.*, src/Makefile.am: Experimental file
 	handling with GIO APIs, disabled by default.
+	* configure.in: Change website URL to www.gnusim8085.org.
 
 2010-01-25  Onkar Shinde  <onkarshinde@gmail.com>
 

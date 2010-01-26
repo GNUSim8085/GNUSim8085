@@ -22,6 +22,7 @@ AM_PROG_CC_C_O
 AC_HEADER_STDC
 
 dnl Checks for programs.
+PKG_PROG_PKG_CONFIG
 
 dnl Checks for libraries.
 

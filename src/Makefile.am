@@ -51,7 +51,6 @@ gnusim8085_SOURCES = \
 	gui-list-message.c\
 	gui-list-data.c\
 	asm-listing.c\
-	file-op.c\
 	gui-list-stack.c\
 	8085-asm.h\
 	8085-instructions.h\
@@ -68,7 +67,6 @@ gnusim8085_SOURCES = \
 	asm-source.h\
 	asm-token.h\
 	bridge.h\
-	file-op.h\
 	gui-app.h\
 	gui-editor.h\
 	gui-list-data.h\
@@ -87,5 +85,21 @@ gnusim8085_LDFLAGS =
 gnusim8085_LDADD =  \
         $(GTK_LIBS)\
         $(GTKSOURCEVIEW2_LIBS)
+
+if USE_GIO
+INCLUDES += \
+        $(GIO_CFLAGS)
+
+gnusim8085_SOURCES += \
+	file-op-gio.h\
+	file-op-gio.c
+
+gnusim8085_LDADD +=  \
+        $(GIO_LIBS)
+else
+gnusim8085_SOURCES += \
+	file-op.h\
+	file-op.c
+endif
 
 LDADD = @LIBINTL@

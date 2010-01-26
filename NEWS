@@ -4,6 +4,8 @@ New:     Basic printing support for assembly listing window.
 New:     Better looking installer. Multi-language interface and finish screen
          with 'Run program' option.
 New:     The UI is now 'i18n'ized.
+New:     Experimental file handling with GIO APIs. Disabled by default.
+         Use --enable-gio configure option.
 Fix:     1847830 - Make the UI i18n enabled
 Fix:     1942893 - Assembler listing window is too narrow
 Fix:     2356534 - Basic File handling errors

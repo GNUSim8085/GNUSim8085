@@ -1,6 +1,7 @@
 2010-01-28  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* po/de.po, po/LINGUAS, AUTHORS: German translation.
+	* src/file-op-gio.c: Use GIO APIs for saving assembly listing.
 
 2010-01-26  Onkar Shinde  <onkarshinde@gmail.com>
 

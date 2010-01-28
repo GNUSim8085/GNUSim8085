@@ -286,10 +286,12 @@ file_op_editor_open (void)
 void
 file_op_listing_save (gchar * text)
 {
-  gchar *selected_filename;
+  gchar *selected_file;
   GtkWidget *file_selector;
-  int ret;
-  FILE *fp;
+  GFile *fp;
+  GFileOutputStream *file_out;
+  GError *error = NULL;
+  gssize bytes;
 
   file_selector = create_file_dialog
 	("Save Op Listing", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
@@ -297,18 +299,28 @@ file_op_listing_save (gchar * text)
   if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 	{
 
-	  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+	  selected_file = gtk_file_chooser_get_uri (GTK_FILE_CHOOSER (file_selector));
 
-	  fp = fopen (selected_filename, "w");
-	  if (fp == NULL)
+	  fp = g_file_new_for_uri (selected_file);
+	  file_out = g_file_create (fp, G_FILE_CREATE_NONE, NULL, &error);
+
+	  if ((file_out == NULL) && (error->code == G_IO_ERROR_EXISTS))
 		{
+                  g_error_free (error);
+                /* replace file */
+                  file_out = g_file_replace (fp, NULL, TRUE, G_FILE_CREATE_NONE, NULL, &error);
+		}
+
+	  if (file_out == NULL)
+	        {
 		  gui_app_show_msg (GTK_MESSAGE_ERROR, _("Failed to save listing file"));
 		  return;
 		}
-	  ret = fwrite (text, 1, strlen (text), fp);
-	  fclose (fp);
+	  bytes = g_output_stream_write (G_OUTPUT_STREAM (file_out), text, strlen (text), NULL, NULL);
 
-	  g_free (selected_filename);
+	  g_output_stream_close (G_OUTPUT_STREAM (file_out), NULL, NULL);
+
+	  g_free (selected_file);
 	}
 
   gtk_widget_destroy (file_selector);

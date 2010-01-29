@@ -4,6 +4,7 @@
 	the data pane. This allows the user to have more screen space for program
 	editing.
 	* po/gnusim8085.pot: Update to include the tooltip for newly added button.
+	* po/ast.po, po/LINGUAS, AUTHORS: French translation.
 
 2010-01-28  Onkar Shinde  <onkarshinde@gmail.com>
 

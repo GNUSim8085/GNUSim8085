@@ -15,7 +15,7 @@ Fix:     2580092 - syntax highlighting for labels with underscore in symbol
 Fix:     2582426 - syntax highlighting for sp register (stack pointer)
 
 Translations:
-         New - Asturian (ast), French (fr), German (de), Gujarati (gu), Spanish (es).
+         New - Asturian (ast), Esperanto (eo), French (fr), German (de), Gujarati (gu), Spanish (es).
 
 GNUSim8085 1.3.5 (24 Dec 2008)
 

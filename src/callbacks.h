@@ -77,6 +77,8 @@ on_assembler_tutorial1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
 G_MODULE_EXPORT void on_about1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
+G_MODULE_EXPORT void show_hide_side_pane (GtkToggleAction * menuitem, gpointer user_data);
+
 G_MODULE_EXPORT void on_main_io_monitor_clicked (GtkButton * button, gpointer user_data);
 
 G_MODULE_EXPORT void on_main_io_set_clicked (GtkButton * button, gpointer user_data);

@@ -53,6 +53,10 @@ static const GtkActionEntry entries[] = {
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(on_about1_activate) }
 };
 
+static const GtkToggleActionEntry toggle_entries[] = {
+  { "SidePane", GTK_STOCK_FULLSCREEN, NULL, NULL, N_("Show/Hide side pane"), G_CALLBACK (show_hide_side_pane) }
+};
+
 static const char *ui_description =
   "<ui>"
   "  <menubar name='MainMenu'>"
@@ -115,6 +119,8 @@ static const char *ui_description =
   "    <separator/>"
   "    <toolitem action='ToggleBreak'/>"
   "    <toolitem action='StopExec'/>"
+  "    <separator/>"
+  "    <toolitem action='SidePane'/>"
   "  </toolbar>"
   "</ui>";
 
@@ -270,6 +276,7 @@ create_window_main (void)
   action_group = gtk_action_group_new ("MenuActions");
   gtk_action_group_set_translation_domain (action_group, NULL);
   gtk_action_group_add_actions (action_group, entries, G_N_ELEMENTS (entries), window_main);
+  gtk_action_group_add_toggle_actions (action_group, toggle_entries, G_N_ELEMENTS (toggle_entries), window_main);
 
   ui_manager = gtk_ui_manager_new ();
   gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);

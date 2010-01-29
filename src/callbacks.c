@@ -333,6 +333,17 @@ on_about1_activate (GtkMenuItem * menuitem, gpointer user_data)
 }
 
 
+void
+show_hide_side_pane (GtkToggleAction * menuitem, gpointer user_data)
+{
+  GtkWidget *side_pane;
+  side_pane = lookup_widget (app->window_main, "main_vpaned_data");
+  if (gtk_toggle_action_get_active (menuitem))
+	  gtk_widget_hide (side_pane);
+  else
+	  gtk_widget_show (side_pane);
+}
+
 
 void
 on_main_io_set_clicked (GtkButton * button, gpointer user_data)

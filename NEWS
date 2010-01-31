@@ -1,6 +1,6 @@
 GNUSim8085 1.3.6 (UNRELEASED)
 
-New:     Basic printing support for assembly listing window.
+New:     Basic printing support for program editor and assembly listing window.
 New:     Better looking installer. Multi-language interface and finish screen
          with 'Run program' option.
 New:     The UI is now 'i18n'ized.

@@ -119,6 +119,14 @@ on_save_as1_activate (GtkMenuItem * menuitem, gpointer user_data)
 
 
 void
+on_print_activate (GtkAction * menuitem, gpointer user_data)
+{
+  g_assert (app->editor);
+  gui_editor_print (app->editor);
+}
+
+
+void
 on_quit1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   if (gtk_text_buffer_get_modified ((GtkTextBuffer *)app->editor->buffer))

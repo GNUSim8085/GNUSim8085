@@ -2,6 +2,7 @@
 
 	* src/interface.c, src/callbacks.*: Add basic printing support for program
 	editor as well.
+	* po/gnusim8085.pot: Update to include the tooltip for newly added button.
 
 2010-01-30  Onkar Shinde  <onkarshinde@gmail.com>
 

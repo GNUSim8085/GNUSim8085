@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="48"
+   height="48"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47pre4 r22446"
+   version="1.0"
+   sodipodi:docname="gnusim8085.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/projects/design/gnusim8085/workspace/renders/logo-gnusim.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <title
+     id="title2843">GNUSim8085 Logo</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.0119534"
+     inkscape:cx="53.072959"
+     inkscape:cy="4.7619625"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1018"
+     inkscape:window-height="692"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3644"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>GNUSim8085 Logo</dc:title>
+        <dc:date>Feb 04, 2010</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Kamaleshwar Morjal</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:publisher>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>GNUSim8085</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-482.6622)">
+    <rect
+       style="color:#000000;fill:#005700;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="green_base"
+       width="48"
+       height="48"
+       x="0"
+       y="482.6622"
+       rx="1.2799999"
+       ry="1.2799999" />
+    <path
+       style="color:#000000;fill-opacity:1;stroke:none;stroke-width:5.58199978;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 9.717496,487.12221 -3.3424961,3.3425 0,28.56499 3.3424961,3.34251 28.565007,0 3.342495,-3.34251 0,-28.56499 -3.342495,-3.3425 -28.565007,0 z"
+       id="black_base" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#black_base"
+       id="use6043"
+       style="fill:#000000;fill-opacity:1"
+       transform="matrix(1.1347518,0,0,1.1347518,-2.4129857,-66.100595)"
+       width="600"
+       height="600" />
+    <use
+       style="fill:#3d3d3d;fill-opacity:1"
+       id="use6041"
+       xlink:href="#black_base"
+       y="0"
+       x="0"
+       transform="matrix(1.1347518,0,0,1.1347518,-2.8961317,-66.100595)"
+       width="600"
+       height="600" />
+    <use
+       height="600"
+       width="600"
+       x="0"
+       y="0"
+       xlink:href="#black_base"
+       id="use6039"
+       style="fill:#131313;fill-opacity:1"
+       transform="matrix(1.1256738,0,0,1.1256738,-2.4011691,-61.514086)" />
+    <path
+       style="color:#000000;fill:#ffcc00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 38.079236,491.4772 c -0.399643,0 -0.724815,0.32518 -0.724815,0.72482 0,0.25614 0.133733,0.47884 0.33453,0.60744 l 0,7.24228 -5.590177,0 0,0.73656 5.959921,0 0.366809,0 0,-0.36681 0,-7.58562 c 0.222931,-0.12331 0.378548,-0.36106 0.378548,-0.63385 0,-0.39964 -0.325173,-0.72482 -0.724816,-0.72482 z m -11.265452,6.09198 c -0.260443,0 -0.466583,0.212 -0.466583,0.47245 l 0,3.79134 c -0.0016,0.0159 0,0.0307 0,0.047 l 0,0.96251 c 0,0.0162 -0.0016,0.0311 0,0.0469 l 0,0.97131 2.341712,0 c 0.124813,-0.15658 0.312834,-0.25823 0.528206,-0.25823 0.375362,0 0.680799,0.30251 0.680799,0.67787 0,0.37536 -0.305437,0.6808 -0.680799,0.6808 -0.234603,0 -0.438044,-0.11895 -0.560485,-0.29932 l -2.309433,0 0,2.01892 c 0,0.26044 0.209074,0.46951 0.469516,0.46951 l 4.800803,0 c 0.260443,0 0.469517,-0.20907 0.469517,-0.46951 l 0,-3.8383 0,-0.9625 0,-1.05935 -2.309433,0 c -0.12244,0.18038 -0.328817,0.29932 -0.56342,0.29932 -0.375362,0 -0.677864,-0.3025 -0.677864,-0.67787 0,-0.37536 0.302502,-0.6808 0.677864,-0.6808 0.215373,0 0.403393,0.10165 0.528207,0.25824 l 2.344646,0 0,-1.97784 c 0,-0.26044 -0.212009,-0.47245 -0.472451,-0.47245 l -4.800802,0 z m -7.101433,5.23217 c -0.260442,0 -0.469516,0.20907 -0.469516,0.46951 l 0,4.80081 c 0,0.26044 0.209074,0.46952 0.469516,0.46952 l 4.803738,0 c 0.260442,0 0.469516,-0.20908 0.469516,-0.46952 l 0,-4.80081 c 0,-0.26044 -0.209074,-0.46951 -0.469516,-0.46951 l -4.803738,0 z m 2.400402,2.19206 c 0.375362,0 0.680799,0.30543 0.680799,0.68079 0,0.37536 -0.305437,0.67786 -0.680799,0.67786 -0.375362,0 -0.677864,-0.3025 -0.677864,-0.67786 0,-0.37536 0.302502,-0.68079 0.677864,-0.68079 z m 3.433336,3.54778 c -0.260442,0 -0.469516,0.20907 -0.469516,0.46951 l 0,4.80374 c 0,0.26044 0.209074,0.46951 0.469516,0.46951 l 4.803738,0 c 0.260442,0 0.469515,-0.20907 0.469515,-0.46951 l 0,-4.80374 c 0,-0.26044 -0.209073,-0.46951 -0.469515,-0.46951 l -4.803738,0 z m -7.028069,1.43789 c -0.260443,0 -0.469516,0.20907 -0.469516,0.46951 l 0,4.80081 c 0,0.26044 0.209073,0.47244 0.469516,0.47244 l 4.803737,0 c 0.260443,0 0.469517,-0.212 0.469517,-0.47244 l 0,-4.80081 c 0,-0.26044 -0.209074,-0.46951 -0.469517,-0.46951 l -4.803737,0 z m 9.428471,0.75416 c 0.375362,0 0.680799,0.30544 0.680799,0.6808 0,0.37536 -0.305437,0.67786 -0.680799,0.67786 -0.375362,0 -0.677864,-0.3025 -0.677864,-0.67786 0,-0.37536 0.302502,-0.6808 0.677864,-0.6808 z m -16.459476,0.45191 c -0.260442,0 -0.469516,0.21201 -0.469516,0.47245 l 0,4.8008 c 0,0.26044 0.209074,0.46952 0.469516,0.46952 l 4.800804,0 c 0.260442,0 0.47245,-0.20908 0.47245,-0.46952 l 0,-4.8008 c 0,-0.26044 -0.212008,-0.47245 -0.47245,-0.47245 l -4.800804,0 z m 9.431406,0.98598 c 0.375363,0 0.680798,0.30544 0.680798,0.6808 0,0.37536 -0.305435,0.67787 -0.680798,0.67787 -0.375362,0 -0.677864,-0.30251 -0.677864,-0.67787 0,-0.37536 0.302502,-0.6808 0.677864,-0.6808 z m -7.031005,1.20607 c 0.375364,0 0.680799,0.30543 0.680799,0.6808 0,0.37536 -0.305435,0.67786 -0.680799,0.67786 -0.375362,0 -0.677863,-0.3025 -0.677863,-0.67786 0,-0.37537 0.302501,-0.6808 0.677863,-0.6808 z m 3.386385,3.55072 c -0.237632,0.024 -0.422563,0.22535 -0.422563,0.46951 l 0,4.80081 c 0,0.26043 0.209073,0.46951 0.469516,0.46951 l 4.800802,0 c 0.260443,0 0.472451,-0.20908 0.472451,-0.46951 l 0,-4.80081 c 0,-0.26044 -0.212008,-0.46951 -0.472451,-0.46951 l -4.800802,0 c -0.01628,0 -0.03111,-0.002 -0.04695,0 z m 2.447354,2.18912 c 0.375362,0 0.680799,0.30543 0.680799,0.68079 0,0.37537 -0.305437,0.67787 -0.680799,0.67787 -0.375362,0 -0.677864,-0.3025 -0.677864,-0.67787 0,-0.37536 0.302502,-0.68079 0.677864,-0.68079 z"
+       id="the_emblem" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.63199985px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="7.754715"
+       y="493.00415"
+       id="text3075"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3077"
+         x="7.754715"
+         y="493.00415">AN OPEN SOURCE INTEL 8085</tspan><tspan
+         sodipodi:role="line"
+         x="7.754715"
+         y="495.04416"
+         id="tspan3079">MICROPROCESSOR SIMULATOR</tspan></text>
+  </g>
+</svg>

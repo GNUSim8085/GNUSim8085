@@ -12,7 +12,7 @@
 # Define application name and installer file name
 Name GNUSim8085
 OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
-Icon pixmaps/gnusim8085_icon.ico
+Icon pixmaps/gnusim8085.ico
 InstallDir "C:\Program Files\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"
 !define uninstaller "uninstaller.exe"
@@ -77,7 +77,7 @@ Section "Install"
   SetFileAttributes $INSTDIR\examples\nqueens.asm READONLY
   SetFileAttributes $INSTDIR\examples\swaphex.asm READONLY
   CreateDirectory ${startmenu}
-  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085_icon.ico"
+  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085.ico"
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
   !system 'rm -f src/libgtksourceview-2.0-0.dll'

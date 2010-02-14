@@ -1,3 +1,8 @@
+2010-02-14  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.in pixmaps/*, GNUSim8085.desktop.in, installer.nsi.in,
+	src/interface.c, AUTHORS: New icon.
+
 2010-01-31  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/interface.c, src/callbacks.*: Add basic printing support for program

@@ -1,0 +1,648 @@
+# Kannada translation for gnusim8085
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the BSD (3-Clause) license.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnusim8085\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2010-01-31 16:59+0530\n"
+"PO-Revision-Date: 2010-02-17 00:29+0000\n"
+"Last-Translator: aniceberg <bharath.s.jois@gmail.com>\n"
+"Language-Team: Kannada <kn@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-02-27 14:16+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/callbacks.c:216
+msgid "Program has errors. Check the Message pane."
+msgstr "ಕ್ರಮದಲ್ಲಿ ತಪ್ಪುಗಳುಂಟು. ಬಲಭಾಗದಲ್ಲಿರುವ ವಿವರ ಪಟ್ಟಿಯನ್ನು ನೋಡಿ"
+
+#: src/callbacks.c:237
+msgid "Error executing program"
+msgstr "ಕ್ರಮವನ್ನು ನಡೆಸುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
+
+#: src/callbacks.c:257
+msgid "Error in step in"
+msgstr "ಕ್ರಮದ ಒಳಗೆ ನುಗ್ಗುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
+
+#: src/callbacks.c:272
+msgid "Error in step over"
+msgstr "ಕ್ರಮವನ್ನು ನಿರ್ವಹಿಸುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
+
+#: src/callbacks.c:287
+msgid "Error in step out"
+msgstr "ಕ್ರಮದ ಹೊರಗೆ ಹೋಗುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
+
+#: src/callbacks.c:384
+msgid "Enter a valid number within range"
+msgstr "ಕ್ರಮದ ಹೊರಗೆ ಹೋಗುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
+
+#: src/callbacks.c:557
+msgid ""
+"Do the following\n"
+"\n"
+"1. Read \"asm-guide.txt\" for assembler tutorial\n"
+"2. Open \"examples/nqueens.asm\" and simulate it.\n"
+"\n"
+"Usually these files will be found in your system document directory,\n"
+"which can be one of the following\n"
+"\n"
+"/usr/local/doc/GNUSim8085\n"
+"/usr/local/share/doc/GNUSim8085\n"
+"/usr/share/doc/GNUSim8085\n"
+"\n"
+"These files are also available in \"doc\" directory\n"
+"of GNUSim8085 source tarball (tar.gz file)\n"
+msgstr ""
+"ಕೆಳ ಕಂಡಂತೆ ಮಾಡಿ\n"
+"\n"
+"೧. \"asm-guide.txt\" ಯನ್ನು ಓದಿ\n"
+"೨. \"examples/nqueens.asm\" ಯನ್ನು ಓಡಿಸಿರಿ\n"
+"\n"
+"ಇವನ್ನು ನೀವೂ ನಿಮ್ಮ ಯಂತ್ರದ ಕೋಶದಲ್ಲಿ ಕಾಣಬಹುದು,\n"
+"ಕೆಳಕಂಡ ಜಾಗದಲ್ಲಿ ಕಾಣಬಹುದು\n"
+"\n"
+"/usr/local/doc/GNUSim8085\n"
+"/usr/local/share/doc/GNUSim8085\n"
+"/usr/share/doc/GNUSim8085\n"
+"\n"
+"ಇವುಗಳನ್ನು GNUSim8085ಇನ ಆಧರದಲ್ಲಿ ಇರುವ\n"
+"\"doc\" ಕೋಶದಲ್ಲೂ ಪಡೆಯಬಹುದು\n"
+
+#: src/interface.c:25
+msgid "_File"
+msgstr "ಕಟ್ಟು(_F)"
+
+#: src/interface.c:26
+msgid "_Reset"
+msgstr "ಮರುಹೊಂದಿಸು(_R)"
+
+#: src/interface.c:27
+msgid "_Assembler"
+msgstr "ನಿರ್ವಾಹಕ(_A)"
+
+#: src/interface.c:28
+msgid "_Debug"
+msgstr "ದೋಷ ನಿವಾರಣೆ(_D)"
+
+#: src/interface.c:29
+msgid "_Breakpoints"
+msgstr "ತಡೆಗಳು"
+
+#: src/interface.c:30
+msgid "_Help"
+msgstr "ನೆರವು(_H)"
+
+#: src/interface.c:31
+msgid "New source file"
+msgstr "ಹೊಸ ಕಟ್ಟು ತೆರೆ"
+
+#: src/interface.c:32
+msgid "Open a file"
+msgstr "ಕಟ್ಟನ್ನು ತೆರೆ"
+
+#: src/interface.c:33
+msgid "Save file"
+msgstr "ಕಟ್ಟನ್ನು ಉಳಿಸು"
+
+#: src/interface.c:34
+msgid "Save file as"
+msgstr "ಕಟ್ಟನ್ನು ಹೀಗೆ ಉಳಿಸು"
+
+#: src/interface.c:35
+msgid "Print program"
+msgstr "ಕಟ್ಟನ್ನು ಛಾಪಿಸು"
+
+#: src/interface.c:37
+msgid "_Registers"
+msgstr "ಧಾಕಲೆಗಳು(_R)"
+
+#: src/interface.c:37
+msgid "Reset Registers"
+msgstr "ಢಾಕಲೆಗಳನ್ನು ಮರು ಹೊಂದಿಸು"
+
+#: src/interface.c:38
+msgid "_Flags"
+msgstr "ಬಾವುಟಗಳು"
+
+#: src/interface.c:38
+msgid "Reset Flags"
+msgstr "ಬಾವುಟಗಳನ್ನು ಮರು ಹೊಂದಿಸು"
+
+#: src/interface.c:39
+msgid "_IO Ports"
+msgstr "ಒಳ ಹೊರ ಕಿಂಡಿಗಳು"
+
+#: src/interface.c:39
+msgid "Reset IO Ports"
+msgstr "ಒಳ ಹೊರ ಕಿಂಡಿಗಳನ್ನು ಮರು ಹೊಂದಿಸು"
+
+#: src/interface.c:40
+msgid "_Memory"
+msgstr "ಸ್ಮೃತಿ(_M)"
+
+#: src/interface.c:40
+msgid "Reset Memory"
+msgstr "ಸ್ಮೃತಿಯನ್ನಿ ಮರು ಹೊಂದಿಸು"
+
+#: src/interface.c:41
+msgid "Reset _All"
+msgstr "ಎಲ್ಲವನ್ನು ಮರು ಹೊಂದಿಸು(_A)"
+
+#: src/interface.c:41
+msgid "Reset All"
+msgstr "ಎಲ್ಲವನ್ನು ಮರು ಹೊಂದಿಸು"
+
+#: src/interface.c:42
+msgid "A_ssemble"
+msgstr "ಒಟ್ಟು ಗೂಡಿಸು(_S)"
+
+#: src/interface.c:42
+msgid "Only assemble program"
+msgstr "ಬರಿ ಒಟ್ಟು ಗೂಡಿಸು"
+
+#: src/interface.c:43
+msgid "Execute assembled and loaded program"
+msgstr "ಒಟ್ಟು ಗೂಡಿಸಿರುವ ಕ್ರಿಯೆಯನ್ನು ಚಲಿಸು"
+
+#: src/interface.c:44
+msgid "Show _listing"
+msgstr "ವಿವರಗಳನ್ನು ತೋರಿಸು(_l)"
+
+#: src/interface.c:44
+msgid "Show the source code along with opcodes and operands in hex numbers"
+msgstr "ಅಧಿಯನ್ನು ಒಪ್‌ಕೋದ್ ಮತ್ತು ಓಪೆರಾಂಡ್ ಸಹಿತ ತೋರಿಸುಬೇಸ್ ೧೬ ಅಲ್ಲಿ"
+
+#: src/interface.c:45
+msgid "Step _in"
+msgstr "ಒಳ ನುಗ್ಗು(_i)"
+
+#: src/interface.c:45
+msgid "Step in the code"
+msgstr "ಅಧಿಯಲ್ಲಿ ಒಳ ನುಗ್ಗು"
+
+#: src/interface.c:46
+msgid "Step o_ver"
+msgstr "ಮೇಲೆ ಜಿಗಿ"
+
+#: src/interface.c:46
+msgid "Step over the code without calling functions"
+msgstr "ಕ್ರಿಯೆಯನ್ನು ಕರೆಯದೆ ಮೇಲೆ ಜಿಗಿ"
+
+#: src/interface.c:47
+msgid "Step _out"
+msgstr "ಹೊರ ಹೋಗು(_o)"
+
+#: src/interface.c:47
+msgid "Step out of the current function"
+msgstr "ಪ್ರಸ್ತುತ ಕ್ರಿಯೆಇಂದಹೊರ ಹೋಗು"
+
+#: src/interface.c:48
+msgid "Toggle _breakpoint"
+msgstr "ತಡೆಯನ್ನು ತಿರುಗಿಸು(_b)"
+
+#: src/interface.c:48
+msgid "Toggles breakpoint at current line"
+msgstr "ಪ್ರಸ್ತುತ ಆವಳಿಯಲ್ಲಿ ತಡೆಯನ್ನು ತಿರುಗಿಸುತ್ತದೆ"
+
+#: src/interface.c:49
+msgid "_Clear all breakpoints"
+msgstr "ಎಲ್ಲ ತಡೆಗಳನ್ನು ತೆರೆ(_C)"
+
+#: src/interface.c:49
+msgid "Remove all breakpoints"
+msgstr "ಎಲ್ಲ ತಡೆಗಳನ್ನು ತೆರೆ"
+
+#: src/interface.c:50
+msgid "Stop execution"
+msgstr "ನಿರ್ವಹಣೆಯನ್ನು ನಿಲ್ಲಿಸು"
+
+#: src/interface.c:50
+msgid "Stop debugging"
+msgstr "ತಪ್ಪು ಕಂಡು ಹಿಡಿಯುವುದನ್ನು ನಿಲ್ಲಿಸು"
+
+#: src/interface.c:51
+msgid "_Contents"
+msgstr "ವಿಷಯಗಳು (_C)"
+
+#: src/interface.c:52
+msgid "8085 _Manual"
+msgstr "೮೦೮೫ ಕ್ರಿಯ ಪುಸ್ತಕ(_M)"
+
+#: src/interface.c:53
+msgid "Assembler _Tutorial"
+msgstr "ಒಟ್ಟುಗೂಡುವುದರ ಬಗ್ಗೆ ಶಿಕ್ಷಣ(_T)"
+
+#: src/interface.c:58
+msgid "Show/Hide side pane"
+msgstr "ಪಕ್ಕದ ಪುಟಿಪನ್ನು ತೋರಿಸು / ಮುಚ್ಚು"
+
+#: src/interface.c:265
+msgid "GNUSim8085 - 8085 Microprocessor Simulator"
+msgstr "GNUSim8085 - ೮೦೮೫ ಕೃತಕ ಯಂತ್ರ"
+
+#: src/interface.c:385 src/interface.c:391 src/interface.c:397
+#: src/interface.c:403 src/interface.c:409 src/interface.c:415
+#: src/interface.c:421 src/interface.c:427 src/interface.c:433
+#: src/interface.c:439 src/interface.c:445 src/interface.c:451
+#: src/interface.c:457 src/interface.c:463
+msgid "00"
+msgstr "೦೦"
+
+#: src/interface.c:480
+msgid "Registers"
+msgstr "ದಾಖಲೆಗಳು"
+
+#: src/interface.c:533 src/interface.c:539 src/interface.c:545
+#: src/interface.c:551 src/interface.c:557 src/interface.c:596
+#: src/interface.c:634 src/interface.c:702 src/interface.c:766
+msgid "0"
+msgstr "0"
+
+#: src/interface.c:567
+msgid "Flag"
+msgstr "ಬಾವುಟ"
+
+#: src/interface.c:587
+msgid "Decimal"
+msgstr "ದಶಮಾಂಶ"
+
+#: src/interface.c:595
+msgid "Enter a decimal number"
+msgstr "ದಶಮಾಂಶವನ್ನು ನೀಡಿರಿ"
+
+#: src/interface.c:601
+msgid "Convert this number to hexadecimal"
+msgstr "ಶೂಡಶಾಂಶಕ್ಕೆ ಬದಲಿಸು"
+
+#: src/interface.c:615
+msgid "To Hex"
+msgstr "ಶೂಡಶಾಂಶಕ್ಕೆ"
+
+#: src/interface.c:625
+msgid "Hex"
+msgstr "ಶೂಡಶಾಂಶ"
+
+#: src/interface.c:633
+msgid "Enter a hexadecimal number"
+msgstr "ಶೂಡಶಾಂಶ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ"
+
+#: src/interface.c:639
+msgid "Convert this number to decimal"
+msgstr "ದಶಾಂಶಕ್ಕೆ ಪರಿವರ್ತಿಸು"
+
+#: src/interface.c:653
+msgid "To Dec"
+msgstr "ದಶಾಂಶಕ್ಕೆ"
+
+#: src/interface.c:666
+msgid "<b>Decimal - Hex Convertion</b>"
+msgstr "ದಶಾಂಶದಿಂದ ಷೋಡಶಾಂಶಕ್ಕೆ"
+
+#: src/interface.c:694
+msgid "Change the port address to view here"
+msgstr "ಪೋರ್ಟನ್ನು ನೋಡಲುಪೋರ್ಟಿನ ವಿಳಾಸವನ್ನು ಬದಲಿಸಿ"
+
+#: src/interface.c:701
+msgid "Enter new port value and click Update"
+msgstr "ಪೋರ್ಟ್‌ಗೆ ಹೊಸ ಮೌಲ್ಯ ಭರ್ತಿ ಮಾಡಿ ನವೀನಗೊಳಿಸಿ"
+
+#: src/interface.c:707
+msgid "Update the port value"
+msgstr "ಪೋರ್ಟಿನ ಮೌಲ್ಯವನ್ನು ನವೀನಗೊಳಿಸಿ"
+
+#: src/interface.c:721
+msgid "Update Port Value"
+msgstr "ಪೋರ್ಟಿನ ಮೌಲ್ಯವನ್ನು ನವೀನಗೊಳಿಸಿ"
+
+#: src/interface.c:734
+msgid "<b>I/O Ports</b>"
+msgstr "ಒಳ ಹೊರ ಕಿಂಡಿಗಳು"
+
+#: src/interface.c:758
+msgid "Change the memory location to view here"
+msgstr "ಸ್ಮೃತಿ ವಿಳಾಸವನ್ನು ಬದಲಾಯಿಸಿ"
+
+#: src/interface.c:765
+msgid "Edit new value and click Update"
+msgstr "ಹೊಸ ಮೌಲ್ಯವನ್ನು ಭಾರ್ತಿ ಮಾಡಿ ನವೀನಹೊಳಿಸಿ"
+
+#: src/interface.c:771
+msgid "Update the current memory location"
+msgstr "ಪ್ರಸ್ತುತ ಸ್ಮೃತಿ ವಿಳಾಸವನ್ನು ನವೀನಗೊಳಿಸು"
+
+#: src/interface.c:785
+msgid "Update Memory"
+msgstr "ಸ್ಮೃತಿಯನ್ನು ನವೀನಗೊಳಿಸು"
+
+#: src/interface.c:798
+msgid "<b>Memory</b>"
+msgstr "<b>ಸ್ಮೃತಿ</b>"
+
+#: src/interface.c:823
+msgid "Load me at"
+msgstr "ನನ್ನನ್ನು ಈ ವಿಳಾಸದಲ್ಲಿ ಹಾಕಿ"
+
+#: src/interface.c:831
+msgid "Enter the program address.  End with a 'h' if it is a hex address."
+msgstr ""
+"ಕ್ರಿಯೆಯ ವಿಳಾಸವನ್ನು ಭರ್ತಿ ಮಾಡಿ. ಷೋಡಶಾಂಶ ಸಂಖ್ಯೆಯಂದರೆ 'ಏಚ್' ಇಂದ ಮುಕ್ತಗೊಳಿಸಿ."
+
+#: src/interface.c:849
+msgid "Variables"
+msgstr "ಮಾರ್ಪಡಿಸಲಾಗುವ"
+
+#: src/interface.c:862
+msgid "Data"
+msgstr "ಪ್ರಮಾಣ"
+
+#: src/interface.c:878
+msgid "Stack Trace"
+msgstr ""
+
+#: src/interface.c:891
+msgid "Stack"
+msgstr ""
+
+#: src/interface.c:915
+msgid "KeyPad"
+msgstr ""
+
+#: src/interface.c:1117
+msgid "translator_credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  aniceberg https://launchpad.net/~aniceberg"
+
+#: src/interface.c:1158
+msgid "Assembler Listing"
+msgstr ""
+
+#: src/interface.c:1179
+msgid "Save to file"
+msgstr ""
+
+#: src/interface.c:1227
+msgid "GNUSim8085 start with dialog"
+msgstr ""
+
+#: src/interface.c:1257
+msgid "1. How to use this simulator?"
+msgstr ""
+
+#: src/interface.c:1265
+msgid "_Tutorial"
+msgstr "ಶಿಕ್ಷಣೆ(_T)"
+
+#: src/interface.c:1270
+msgid "A short tutorial on writing assembly code!"
+msgstr "ಅಧಿಯನ್ನು ಬರೆಯಲುಒಂದು ಸಣ್ಣ ತರಬೇತಿ!"
+
+#: src/interface.c:1277
+msgid "2. Open an existing assembly program."
+msgstr "ಮುಂಚಿನಿಂದಲೂ ಇರುವ ಅಧಿಯನ್ನು ತೆರೆ"
+
+#: src/interface.c:1285
+msgid "_Open program"
+msgstr "ಪ್ರಕಾರವನ್ನು ತೆರೆ"
+
+#: src/interface.c:1290
+msgid "Open an already saved program"
+msgstr "ಮುಂಚೆ ಉಳಿಸಿದ ಪ್ರಕಾರವನ್ನು ತೆರೆ"
+
+#: src/interface.c:1292
+msgid "What do you want to do now?"
+msgstr "ಈಗ ಏನು ಮಾಡಬೇಕೆಂದು ಅಭಿಪ್ರಾಯ?"
+
+#: src/interface.c:1302
+msgid ""
+"Don't forget to read the documentation \n"
+"given in \"doc\" directory."
+msgstr ""
+"\"doc\" ಕೋಶಕದಲ್ಲಿರುವ ವಿವರಗಳನ್ನು ಓದಲು \n"
+"ಮರೆಯದಿರಿ"
+
+#: src/interface.c:1363
+msgid "Choose a symbol"
+msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ಆರಿಸಿ"
+
+#: src/interface.c:1386
+msgid "Enter a symbol or choose one from the lists"
+msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ಆರಿಸಿ ಅಥವಾ ನೀವೇ ಸ್ವತಹ ಭಾರ್ತಿ ಮಾಡಿ"
+
+#: src/interface.c:1396
+msgid "Enter Symbol"
+msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ನೀವೇ ಸ್ವತಹ ಭಾರ್ತಿ ಮಾಡಿ"
+
+#: src/interface.c:1410
+msgid "Variables List"
+msgstr ""
+
+#: src/interface.c:1431
+msgid "Functions List"
+msgstr "ಕಾರ್ಯ ಪಟ್ಟಿ"
+
+#: src/interface.c:1452
+msgid "Macros List"
+msgstr "ಚಿನ್ಹೆ ಪಟ್ಟಿ"
+
+#: src/interface.c:1508
+msgid "Choose a register"
+msgstr "ಒಂದು ಧಾಕಲೆಯನ್ನು ಆರಿಸಿರಿ"
+
+#: src/main.c:69
+msgid "Simulator: Idle"
+msgstr ""
+
+#: src/8085.c:250
+#, c-format
+msgid "Unwanted %c reached"
+msgstr "ಬೇಡವಿಲ್ಲದ %c ತಳಪಿದ್ದೇವೆ"
+
+#: src/8085-instructions.c:28
+msgid "Invalid Opcode"
+msgstr ""
+
+#: src/8085-instructions.c:884
+msgid "Instruction 'RIM' Not implemented"
+msgstr ""
+
+#: src/8085-instructions.c:1038
+msgid "Instruction 'SIM' Not implemented"
+msgstr ""
+
+#: src/asm-source.c:110
+msgid "Assembling Aborted"
+msgstr "ಒಟ್ಟುಗೂಡಿಸುವುದನ್ನು ನಿಲ್ಲಿಸಲಾಗಿದೆ"
+
+#: src/asm-source.c:178
+msgid "Label should be given to a code line"
+msgstr "ಸೂಚಕವನ್ನು ಕೋಡ್ ಇರುವ ರೇಖೆಯಲ್ಲೇ ಕೊಡಬೇಕು"
+
+#: src/asm-source.c:208 src/asm-source.c:215 src/asm-source.c:222
+msgid "Incomplete opcode"
+msgstr "ಅಪೂರ್ಣ ಚಿನ್ಹೆ"
+
+#: src/asm-source.c:237
+#, c-format
+msgid ""
+"\n"
+"Neither Op not PsOp: [%s]"
+msgstr ""
+
+#: src/asm-source.c:238
+msgid "Invalid Opcode or Pseudo op"
+msgstr ""
+
+#: src/asm-source.c:247
+msgid "Opcode needs an user argument"
+msgstr ""
+
+#: src/asm-source.c:255
+msgid "Extra characters in line"
+msgstr "ಬೇಕಾಗಿಲ್ಲದ ಚಿನ್ಹೆಗಲು ಇವೆ"
+
+#: src/asm-source.c:421
+msgid "Expression error in symbol"
+msgstr "ಚಿನ್ಹೆಯನ್ನು ವ್ಯಕ್ತಪಡಿಸಿರುವ ರೀತಿ ಸರಿ ಇಲ್ಲ"
+
+#: src/asm-source.c:435
+msgid "Undefined symbol"
+msgstr "ಗುರ್ಟು ಹಿಡಿಯಲಾರದ ಚಿನ್ಹೆ"
+
+#: src/asm-gensym.c:74
+msgid "Redundant label"
+msgstr "ಬೇಕಾಗಿಲ್ಲದ ಚಿನ್ಹೆ"
+
+#: src/asm-gensym.c:89
+msgid "Invalid Operand in EQU"
+msgstr ""
+
+#: src/asm-gensym.c:101 src/asm-gensym.c:123
+msgid "Invalid operand"
+msgstr ""
+
+#: src/asm-gensym.c:113
+msgid "Redefinition of symbol"
+msgstr ""
+
+#: src/asm-genobj.c:110
+msgid "Invalid data size"
+msgstr ""
+
+#: src/asm-genobj.c:115
+msgid "DS: Exceeded limit"
+msgstr "DS:ಮಿತಿ ಮೀರಿದೆ"
+
+#: src/asm-genobj.c:130
+msgid "DB: Operand error"
+msgstr ""
+
+#: src/asm-genobj.c:160
+msgid ""
+"Invalid operand or symbol. Check whether operands start with a number. e.g "
+"a0H should be 0a0H"
+msgstr ""
+
+#: src/8085-asm.c:86
+msgid "Program assembled successfully"
+msgstr ""
+
+#: src/bridge.c:36
+msgid "Simulator: Program running"
+msgstr ""
+
+#: src/bridge.c:186
+#, c-format
+msgid ""
+"Execution branched to invalid memory location <%xH>. Execution will be "
+"stopped!\n"
+"\n"
+"Check whether you've included the \"hlt\" instruction at the end of your "
+"program and your source program is not empty.  Also check your program "
+"logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
+"advised to send a copy of your source progam."
+msgstr ""
+
+#: src/bridge.c:288
+msgid "Assembler: running"
+msgstr ""
+
+#: src/gui-list-message.c:92
+msgid "Line No"
+msgstr "ರೇಖಾ ಸಂಖ್ಯೆ"
+
+#: src/gui-list-message.c:93
+msgid "Assembler Message"
+msgstr ""
+
+#: src/gui-list-data.c:75
+msgid "Address"
+msgstr "ವಿಳಾಸ"
+
+#: src/gui-list-data.c:76
+msgid "Variable"
+msgstr "ಮಾರ್ಪಡಿಸಬಹುದಾದ"
+
+#: src/gui-list-data.c:77 src/gui-list-stack.c:82
+msgid "Value"
+msgstr "ಮೌಲ್ಯ"
+
+#: src/gui-list-data.c:78 src/gui-list-stack.c:83
+msgid "Value(Decimal)"
+msgstr "ಮೌಲ್ಯ(ದಶಾಂಶ)"
+
+#: src/asm-listing.c:207
+msgid "; Assembler generated listing; Not editable.\n"
+msgstr ""
+
+#: src/asm-listing.c:208
+#, c-format
+msgid "; Generated by GNUSim8085: %s\n"
+msgstr ""
+
+#: src/asm-listing.c:244
+msgid ""
+";Assembler Listing (Do Not assemble)\n"
+"\n"
+msgstr ""
+
+#: src/file-op.c:60
+#, c-format
+msgid "Failed to open <%s>"
+msgstr "ತೆರೆಯುವುದರಲ್ಲಿ ಸಂಕಟ <%s>"
+
+#: src/file-op.c:139
+msgid "File already exists; overwrite it?"
+msgstr ""
+
+#: src/file-op.c:154
+#, c-format
+msgid "Failed to save <%s>"
+msgstr "ಉಳಿಸಿವುದರಲ್ಲಿ ಸಂಕಟ <%s>"
+
+#: src/file-op.c:310
+msgid "Failed to save listing file"
+msgstr "ವಿವರಪಟ್ಟಿಯನ್ನು ಉಳಿಸುವುದರಲ್ಲಿ ಸಂಕಟ"
+
+#: src/gui-list-stack.c:80
+msgid "Stack Loc"
+msgstr ""
+
+#: src/gui-list-stack.c:81
+msgid "Proc/Reg"
+msgstr ""
+
+#: src/gui-list-stack.c:116
+msgid "Stack size exceeded.  Stop the execution"
+msgstr ""
+
+#: src/gui-list-stack.c:130
+msgid ""
+"More number of POP are executed than PUSH. Stop the execution and check the "
+"logic of your program"
+msgstr ""

@@ -1,4 +1,4 @@
-GNUSim8085 1.3.6 (UNRELEASED)
+GNUSim8085 1.3.6 (27 Feb 2010)
 
 New:     Basic printing support for program editor and assembly listing window.
 New:     Better looking installer. Multi-language interface and finish screen

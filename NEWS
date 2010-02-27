@@ -7,13 +7,13 @@ New:     The UI is now 'i18n'ized.
 New:     Experimental file handling with GIO APIs. Disabled by default.
          Use --enable-gio configure option.
 New:     New icon.
-Fix:     1847830 - Make the UI i18n enabled
-Fix:     1942893 - Assembler listing window is too narrow
-Fix:     2356534 - Basic File handling errors
-Fix:     2462607 - Keypad should not insert instruction code while debugging
-Fix:     2462657 - Example programs must be read-only on Windows
-Fix:     2580092 - syntax highlighting for labels with underscore in symbol
-Fix:     2582426 - syntax highlighting for sp register (stack pointer)
+Fix:     SF#1847830 - Make the UI i18n enabled
+Fix:     SF#1942893 - Assembler listing window is too narrow
+Fix:     SF#2356534 - Basic File handling errors
+Fix:     SF#2462607 - Keypad should not insert instruction code while debugging
+Fix:     SF#2462657 - Example programs must be read-only on Windows
+Fix:     SF#2580092 - syntax highlighting for labels with underscore in symbol
+Fix:     SF#2582426 - syntax highlighting for sp register (stack pointer)
 
 Translations:
          New - Arabic (ar), Asturian (ast), Esperanto (eo), French (fr),

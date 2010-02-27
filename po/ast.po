@@ -1,6 +1,6 @@
 # Asturian translation for gnusim8085
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the gnusim8085 package.
+# This file is distributed under the BSD (3-Clause) license.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""

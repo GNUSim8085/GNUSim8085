@@ -6,6 +6,7 @@
 	* po/Makefile.in.in: Don't update pot file when doing make dist to avoid
 	the pot file header being overwritten. Don't include gmo files in
 	distribution. Instead generate them at install time.
+	* po/*.po: Add BSD (3-Clause) license header where it was missing.
 	* NEWS: Add prefix to bug numbers to indicate they are from sourceforge.net.
 
 2010-02-14  Onkar Shinde  <onkarshinde@gmail.com>

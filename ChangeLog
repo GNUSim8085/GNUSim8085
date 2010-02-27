@@ -1,3 +1,8 @@
+2010-02-27  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* po/Makevars*: Change the bug reporting address in Makevars. Delete
+	redundant Makevars.template.
+
 2010-02-14  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* configure.in pixmaps/*, GNUSim8085.desktop.in, installer.nsi.in,

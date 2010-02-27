@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-01-31 16:59+0530\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
+"POT-Creation-Date: 2010-02-27 19:35+0530\n"
 "PO-Revision-Date: 2010-02-17 00:29+0000\n"
 "Last-Translator: aniceberg <bharath.s.jois@gmail.com>\n"
 "Language-Team: Kannada <kn@li.org>\n"
@@ -349,8 +349,7 @@ msgstr "ನನ್ನನ್ನು ಈ ವಿಳಾಸದಲ್ಲಿ ಹಾಕಿ
 
 #: src/interface.c:831
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr ""
-"ಕ್ರಿಯೆಯ ವಿಳಾಸವನ್ನು ಭರ್ತಿ ಮಾಡಿ. ಷೋಡಶಾಂಶ ಸಂಖ್ಯೆಯಂದರೆ 'ಏಚ್' ಇಂದ ಮುಕ್ತಗೊಳಿಸಿ."
+msgstr "ಕ್ರಿಯೆಯ ವಿಳಾಸವನ್ನು ಭರ್ತಿ ಮಾಡಿ. ಷೋಡಶಾಂಶ ಸಂಖ್ಯೆಯಂದರೆ 'ಏಚ್' ಇಂದ ಮುಕ್ತಗೊಳಿಸಿ."
 
 #: src/interface.c:849
 msgid "Variables"

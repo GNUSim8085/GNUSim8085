@@ -3,7 +3,8 @@
 	* po/Makevars*: Change the bug reporting address in Makevars. Delete
 	redundant Makevars.template.
 	* po/gnusim8085.pot: Update to reflect the new bug reporting address.
-	* po/*.po: Add BSD (3-Clause) license header where it was missing.
+	* po/*.po: Add BSD (3-Clause) license header where it was missing. Auto update
+	of all files as per latest source.
 	* po/Makefile.in.in: Don't update pot file when doing make dist to avoid
 	the pot file header being overwritten. Don't include gmo files in
 	distribution. Instead generate them at install time. Include COPYING file

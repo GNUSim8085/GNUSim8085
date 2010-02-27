@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
-"Report-Msgid-Bugs-To: http://gnusim8085.sourceforge.net\n"
-"POT-Creation-Date: 2010-01-17 23:33+0530\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
+"POT-Creation-Date: 2010-02-27 19:35+0530\n"
 "PO-Revision-Date: 2010-01-23 16:54+0000\n"
 "Last-Translator: Fernando Muñoz <munozferna@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -17,31 +17,31 @@ msgstr ""
 "X-Launchpad-Export-Date: 2010-01-25 04:28+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: src/callbacks.c:208
+#: src/callbacks.c:216
 msgid "Program has errors. Check the Message pane."
 msgstr "El programa tiene errores. Compruebe el panel de mensajes."
 
-#: src/callbacks.c:229
+#: src/callbacks.c:237
 msgid "Error executing program"
 msgstr "Error al ejecutar el programa"
 
-#: src/callbacks.c:249
+#: src/callbacks.c:257
 msgid "Error in step in"
 msgstr "Error en el paso"
 
-#: src/callbacks.c:264
+#: src/callbacks.c:272
 msgid "Error in step over"
 msgstr "Error al saltar"
 
-#: src/callbacks.c:279
+#: src/callbacks.c:287
 msgid "Error in step out"
 msgstr "Error en el paso a"
 
-#: src/callbacks.c:365
+#: src/callbacks.c:384
 msgid "Enter a valid number within range"
 msgstr "Ingrese un número válido dentro del rango"
 
-#: src/callbacks.c:538
+#: src/callbacks.c:557
 msgid ""
 "Do the following\n"
 "\n"
@@ -114,259 +114,268 @@ msgstr "Guardar archivo"
 msgid "Save file as"
 msgstr "Guardar archivo como"
 
-#: src/interface.c:36
+#: src/interface.c:35
+#, fuzzy
+msgid "Print program"
+msgstr "Abrir pr_ograma"
+
+#: src/interface.c:37
 msgid "_Registers"
 msgstr "_Registros"
 
-#: src/interface.c:36
+#: src/interface.c:37
 msgid "Reset Registers"
 msgstr "Restablecer Registros"
 
-#: src/interface.c:37
+#: src/interface.c:38
 msgid "_Flags"
 msgstr "_Bandera"
 
-#: src/interface.c:37
+#: src/interface.c:38
 msgid "Reset Flags"
 msgstr "Restablecer Banderas"
 
-#: src/interface.c:38
+#: src/interface.c:39
 msgid "_IO Ports"
 msgstr "Puertos _I/O"
 
-#: src/interface.c:38
+#: src/interface.c:39
 msgid "Reset IO Ports"
 msgstr "Restablecer puertos de E/S"
 
-#: src/interface.c:39
+#: src/interface.c:40
 msgid "_Memory"
 msgstr "_Memoria"
 
-#: src/interface.c:39
+#: src/interface.c:40
 msgid "Reset Memory"
 msgstr "Restablecer la Memoria"
 
-#: src/interface.c:40
+#: src/interface.c:41
 msgid "Reset _All"
 msgstr "Restablecer _Todo"
 
-#: src/interface.c:40
+#: src/interface.c:41
 msgid "Reset All"
 msgstr "Restablecer Todo"
 
-#: src/interface.c:41
+#: src/interface.c:42
 msgid "A_ssemble"
 msgstr "En_samblar"
 
-#: src/interface.c:41
+#: src/interface.c:42
 msgid "Only assemble program"
 msgstr "Solo ensamblar el programa"
 
-#: src/interface.c:42
+#: src/interface.c:43
 msgid "Execute assembled and loaded program"
 msgstr "Ejecutar el programa ensamblado y cargado"
 
-#: src/interface.c:43
+#: src/interface.c:44
 msgid "Show _listing"
 msgstr "Mostrar _listado"
 
-#: src/interface.c:43
+#: src/interface.c:44
 msgid "Show the source code along with opcodes and operands in hex numbers"
 msgstr ""
 
-#: src/interface.c:44
+#: src/interface.c:45
 msgid "Step _in"
 msgstr ""
 
-#: src/interface.c:44
+#: src/interface.c:45
 msgid "Step in the code"
 msgstr ""
 
-#: src/interface.c:45
+#: src/interface.c:46
 msgid "Step o_ver"
 msgstr ""
 
-#: src/interface.c:45
+#: src/interface.c:46
 msgid "Step over the code without calling functions"
 msgstr ""
 
-#: src/interface.c:46
+#: src/interface.c:47
 msgid "Step _out"
 msgstr ""
 
-#: src/interface.c:46
+#: src/interface.c:47
 msgid "Step out of the current function"
 msgstr ""
 
-#: src/interface.c:47
+#: src/interface.c:48
 msgid "Toggle _breakpoint"
 msgstr ""
 
-#: src/interface.c:47
+#: src/interface.c:48
 msgid "Toggles breakpoint at current line"
 msgstr ""
 
-#: src/interface.c:48
+#: src/interface.c:49
 msgid "_Clear all breakpoints"
 msgstr "Borrar los puntos de interrup_ción"
 
-#: src/interface.c:48
+#: src/interface.c:49
 msgid "Remove all breakpoints"
 msgstr "Eliminar todos los puntos de ruptura"
 
-#: src/interface.c:49
+#: src/interface.c:50
 msgid "Stop execution"
 msgstr "Detener la ejecución"
 
-#: src/interface.c:49
+#: src/interface.c:50
 msgid "Stop debugging"
 msgstr "Detener el depurado"
 
-#: src/interface.c:50
+#: src/interface.c:51
 msgid "_Contents"
 msgstr "_Índice"
 
-#: src/interface.c:51
+#: src/interface.c:52
 msgid "8085 _Manual"
 msgstr "_Manual del 8085"
 
-#: src/interface.c:52
+#: src/interface.c:53
 msgid "Assembler _Tutorial"
 msgstr "_Tutorial de Ensamblador"
 
-#: src/interface.c:256
+#: src/interface.c:58
+msgid "Show/Hide side pane"
+msgstr ""
+
+#: src/interface.c:265
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr "GNUSim8085 - Simulador del Microprocesador 8085"
 
-#: src/interface.c:375 src/interface.c:381 src/interface.c:387
-#: src/interface.c:393 src/interface.c:399 src/interface.c:405
-#: src/interface.c:411 src/interface.c:417 src/interface.c:423
-#: src/interface.c:429 src/interface.c:435 src/interface.c:441
-#: src/interface.c:447 src/interface.c:453
+#: src/interface.c:385 src/interface.c:391 src/interface.c:397
+#: src/interface.c:403 src/interface.c:409 src/interface.c:415
+#: src/interface.c:421 src/interface.c:427 src/interface.c:433
+#: src/interface.c:439 src/interface.c:445 src/interface.c:451
+#: src/interface.c:457 src/interface.c:463
 msgid "00"
 msgstr "00"
 
-#: src/interface.c:470
+#: src/interface.c:480
 msgid "Registers"
 msgstr "Registros"
 
-#: src/interface.c:523 src/interface.c:529 src/interface.c:535
-#: src/interface.c:541 src/interface.c:547 src/interface.c:586
-#: src/interface.c:624 src/interface.c:692 src/interface.c:756
+#: src/interface.c:533 src/interface.c:539 src/interface.c:545
+#: src/interface.c:551 src/interface.c:557 src/interface.c:596
+#: src/interface.c:634 src/interface.c:702 src/interface.c:766
 msgid "0"
 msgstr "0"
 
-#: src/interface.c:557
+#: src/interface.c:567
 msgid "Flag"
 msgstr "Bandera"
 
-#: src/interface.c:577
+#: src/interface.c:587
 msgid "Decimal"
 msgstr "Decimal"
 
-#: src/interface.c:585
+#: src/interface.c:595
 msgid "Enter a decimal number"
 msgstr "Ingrese un número decimal"
 
-#: src/interface.c:591
+#: src/interface.c:601
 msgid "Convert this number to hexadecimal"
 msgstr "Convertir este número a hexadecimal"
 
-#: src/interface.c:605
+#: src/interface.c:615
 msgid "To Hex"
 msgstr "A Hex"
 
-#: src/interface.c:615
+#: src/interface.c:625
 msgid "Hex"
 msgstr "Hexadecimal"
 
-#: src/interface.c:623
+#: src/interface.c:633
 msgid "Enter a hexadecimal number"
 msgstr "Ingrese un número hexadecimal"
 
-#: src/interface.c:629
+#: src/interface.c:639
 msgid "Convert this number to decimal"
 msgstr "Convertir este número a decimal"
 
-#: src/interface.c:643
+#: src/interface.c:653
 msgid "To Dec"
 msgstr "A Dec"
 
-#: src/interface.c:656
+#: src/interface.c:666
 msgid "<b>Decimal - Hex Convertion</b>"
 msgstr "<b>Conversión decimal - hexadecimal</b>"
 
-#: src/interface.c:684
+#: src/interface.c:694
 msgid "Change the port address to view here"
 msgstr "Cambie la dirección del puerto para ver aquí"
 
-#: src/interface.c:691
+#: src/interface.c:701
 msgid "Enter new port value and click Update"
 msgstr "Ingrese un nuevo valor de puerto y haga clic en actualizar"
 
-#: src/interface.c:697
+#: src/interface.c:707
 msgid "Update the port value"
 msgstr "Actualice el valor del puerto"
 
-#: src/interface.c:711
+#: src/interface.c:721
 msgid "Update Port Value"
 msgstr "Actualice valor del puerto"
 
-#: src/interface.c:724
+#: src/interface.c:734
 msgid "<b>I/O Ports</b>"
 msgstr "<b>Puertos I/O</b>"
 
-#: src/interface.c:748
+#: src/interface.c:758
 msgid "Change the memory location to view here"
 msgstr "Cambiar la ubicación de la memoria para ver aquí"
 
-#: src/interface.c:755
+#: src/interface.c:765
 msgid "Edit new value and click Update"
 msgstr "Edite el nuevo valor y haga clic en Actualizar"
 
-#: src/interface.c:761
+#: src/interface.c:771
 msgid "Update the current memory location"
 msgstr "Actualizar ubicación de memoria actual"
 
-#: src/interface.c:775
+#: src/interface.c:785
 msgid "Update Memory"
 msgstr "Actualizar memoria"
 
-#: src/interface.c:788
+#: src/interface.c:798
 msgid "<b>Memory</b>"
 msgstr "<b>Memoria</b>"
 
-#: src/interface.c:813
+#: src/interface.c:823
 msgid "Load me at"
 msgstr "Cargar en"
 
-#: src/interface.c:821
+#: src/interface.c:831
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr ""
 "Ingrese la dirección del programa. Finalice con una «h» si es una dirección "
 "hexadecimal."
 
-#: src/interface.c:839
+#: src/interface.c:849
 msgid "Variables"
 msgstr "Variables"
 
-#: src/interface.c:852
+#: src/interface.c:862
 msgid "Data"
 msgstr "Datos"
 
-#: src/interface.c:868
+#: src/interface.c:878
 msgid "Stack Trace"
 msgstr "Seguimiento de la pila"
 
-#: src/interface.c:881
+#: src/interface.c:891
 msgid "Stack"
 msgstr "Pila"
 
-#: src/interface.c:905
+#: src/interface.c:915
 msgid "KeyPad"
 msgstr "Teclado"
 
-#: src/interface.c:1107
+#: src/interface.c:1117
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
@@ -377,47 +386,47 @@ msgstr ""
 "  Luis Esteban Guerra Cardona https://launchpad.net/~lguerra80\n"
 "  Takmadeus https://launchpad.net/~takmadeus"
 
-#: src/interface.c:1148
+#: src/interface.c:1158
 msgid "Assembler Listing"
 msgstr "Listado de ensamblador"
 
-#: src/interface.c:1169
+#: src/interface.c:1179
 msgid "Save to file"
 msgstr "Guardar a archivo"
 
-#: src/interface.c:1217
+#: src/interface.c:1227
 msgid "GNUSim8085 start with dialog"
 msgstr "Iniciar GNUSim8085 con el diálogo"
 
-#: src/interface.c:1247
+#: src/interface.c:1257
 msgid "1. How to use this simulator?"
 msgstr "¿Cómo utilizar este simulador?"
 
-#: src/interface.c:1255
+#: src/interface.c:1265
 msgid "_Tutorial"
 msgstr "_Tutorial"
 
-#: src/interface.c:1260
+#: src/interface.c:1270
 msgid "A short tutorial on writing assembly code!"
 msgstr "¡Un breve tutorial sobre cómo escribir código en ensamblador!"
 
-#: src/interface.c:1267
+#: src/interface.c:1277
 msgid "2. Open an existing assembly program."
 msgstr "2. Abrir un programa ensamblador existente."
 
-#: src/interface.c:1275
+#: src/interface.c:1285
 msgid "_Open program"
 msgstr "Abrir pr_ograma"
 
-#: src/interface.c:1280
+#: src/interface.c:1290
 msgid "Open an already saved program"
 msgstr "Abrir un programa ya guardado"
 
-#: src/interface.c:1282
+#: src/interface.c:1292
 msgid "What do you want to do now?"
 msgstr "¿Qué desea hacer ahora?"
 
-#: src/interface.c:1292
+#: src/interface.c:1302
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -425,31 +434,31 @@ msgstr ""
 "No olvide leer la documentación \n"
 "contenida en el directorio «doc»."
 
-#: src/interface.c:1353
+#: src/interface.c:1363
 msgid "Choose a symbol"
 msgstr "Elija un símbolo"
 
-#: src/interface.c:1376
+#: src/interface.c:1386
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Ingrese un símbolo o elija uno desde las listas"
 
-#: src/interface.c:1386
+#: src/interface.c:1396
 msgid "Enter Symbol"
 msgstr "Ingrese símbolo"
 
-#: src/interface.c:1400
+#: src/interface.c:1410
 msgid "Variables List"
 msgstr "Lista de variables"
 
-#: src/interface.c:1421
+#: src/interface.c:1431
 msgid "Functions List"
 msgstr "Lista de funciones"
 
-#: src/interface.c:1442
+#: src/interface.c:1452
 msgid "Macros List"
 msgstr "Lista de macros"
 
-#: src/interface.c:1498
+#: src/interface.c:1508
 msgid "Choose a register"
 msgstr "Elija un registro"
 

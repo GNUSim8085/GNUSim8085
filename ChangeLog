@@ -2,6 +2,8 @@
 
 	* po/Makevars*: Change the bug reporting address in Makevars. Delete
 	redundant Makevars.template.
+	* po/Makefile.in.in: Don't update pot file when doing make dist to avoid
+	the pot file header being overwritten.
 
 2010-02-14  Onkar Shinde  <onkarshinde@gmail.com>
 

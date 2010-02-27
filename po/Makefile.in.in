@@ -376,7 +376,7 @@ dist2: stamp-po $(DISTFILES)
 	done
 
 update-po: Makefile
-	$(MAKE) $(DOMAIN).pot-update
+#	$(MAKE) $(DOMAIN).pot-update
 	test -z "$(UPDATEPOFILES)" || $(MAKE) $(UPDATEPOFILES)
 	$(MAKE) update-gmo
 

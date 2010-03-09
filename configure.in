@@ -3,7 +3,7 @@ dnl Created by Anjuta - will be overwritten
 dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
-AC_INIT([gnusim8085], [1.3.6], [https://bugs.launchpad.net/gnusim8085])
+AC_INIT([gnusim8085], [1.3.7], [https://bugs.launchpad.net/gnusim8085])
 AC_DEFINE([PACKAGE_URL],["http://www.gnusim8085.org/"],[Website URL])
 
 AC_CANONICAL_HOST

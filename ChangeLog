@@ -1,6 +1,7 @@
 2010-03-09  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* configure.in, NEWS: Start working on new release.
+	* po/*.po, AUTHORS: Updated translations from launchpad.
 
 2010-02-27  Onkar Shinde  <onkarshinde@gmail.com>
 

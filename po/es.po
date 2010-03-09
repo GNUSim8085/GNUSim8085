@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-02-27 19:35+0530\n"
-"PO-Revision-Date: 2010-01-23 16:54+0000\n"
-"Last-Translator: Fernando Muñoz <munozferna@gmail.com>\n"
+"PO-Revision-Date: 2010-03-08 20:33+0000\n"
+"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-01-25 04:28+0000\n"
+"X-Launchpad-Export-Date: 2010-03-09 15:52+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:216
@@ -115,9 +115,8 @@ msgid "Save file as"
 msgstr "Guardar archivo como"
 
 #: src/interface.c:35
-#, fuzzy
 msgid "Print program"
-msgstr "Abrir pr_ograma"
+msgstr "Imprimir programa"
 
 #: src/interface.c:37
 msgid "_Registers"
@@ -178,38 +177,40 @@ msgstr "Mostrar _listado"
 #: src/interface.c:44
 msgid "Show the source code along with opcodes and operands in hex numbers"
 msgstr ""
+"Mostrar el codigo fuente junto con los codigos de operación y operandos en "
+"numeros hexadecimales"
 
 #: src/interface.c:45
 msgid "Step _in"
-msgstr ""
+msgstr "_Entrar"
 
 #: src/interface.c:45
 msgid "Step in the code"
-msgstr ""
+msgstr "Entrar en el código"
 
 #: src/interface.c:46
 msgid "Step o_ver"
-msgstr ""
+msgstr "Sa_ltar"
 
 #: src/interface.c:46
 msgid "Step over the code without calling functions"
-msgstr ""
+msgstr "Saltar sobre el código sin llamar a las funciones"
 
 #: src/interface.c:47
 msgid "Step _out"
-msgstr ""
+msgstr "S_alir"
 
 #: src/interface.c:47
 msgid "Step out of the current function"
-msgstr ""
+msgstr "Salir de la función actual"
 
 #: src/interface.c:48
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "Activar/Desactivar punto de interrupción"
 
 #: src/interface.c:48
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "Activa/Desactiva el punto de interrupción en la línea actual"
 
 #: src/interface.c:49
 msgid "_Clear all breakpoints"
@@ -241,7 +242,7 @@ msgstr "_Tutorial de Ensamblador"
 
 #: src/interface.c:58
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "Mostrar/ocultar panel lateral"
 
 #: src/interface.c:265
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
@@ -380,6 +381,7 @@ msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Aitor Pazos https://launchpad.net/~mail-aitorpazos\n"
+"  DiegoJ https://launchpad.net/~diegojromerolopez\n"
 "  Fernando Muñoz https://launchpad.net/~munozferna\n"
 "  Gonzalo L. Campos Medina https://launchpad.net/~gcamposm\n"
 "  Jaime Rave https://launchpad.net/~jaimerave\n"

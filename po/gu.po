@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-02-27 19:35+0530\n"
-"PO-Revision-Date: 2010-01-20 07:50+0000\n"
+"PO-Revision-Date: 2010-03-02 09:36+0000\n"
 "Last-Translator: Kartik Mistry <Unknown>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-01-25 04:32+0000\n"
+"X-Launchpad-Export-Date: 2010-03-09 15:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:216
@@ -114,9 +114,8 @@ msgid "Save file as"
 msgstr "ફાઇલ આ રીતે સંગ્રહો"
 
 #: src/interface.c:35
-#, fuzzy
 msgid "Print program"
-msgstr "કાર્યક્રમ ખોલો (_O)"
+msgstr "કાર્યક્રમ છાપો"
 
 #: src/interface.c:37
 msgid "_Registers"
@@ -132,7 +131,7 @@ msgstr "સંકેત (_F)"
 
 #: src/interface.c:38
 msgid "Reset Flags"
-msgstr ""
+msgstr "સંજ્ઞાઓ ફરી ગોઠવો"
 
 #: src/interface.c:39
 msgid "_IO Ports"
@@ -140,7 +139,7 @@ msgstr "_I/O પોર્ટ્સ"
 
 #: src/interface.c:39
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "IO પોર્ટસ ફરી ગોઠવો"
 
 #: src/interface.c:40
 msgid "_Memory"
@@ -148,35 +147,35 @@ msgstr "મેમરી (_M)"
 
 #: src/interface.c:40
 msgid "Reset Memory"
-msgstr ""
+msgstr "મેમરી ફરી ગોઠવો"
 
 #: src/interface.c:41
 msgid "Reset _All"
-msgstr ""
+msgstr "બધું ફરી ગોઠવો (_A)"
 
 #: src/interface.c:41
 msgid "Reset All"
-msgstr ""
+msgstr "બધું ફરી ગોઠવો"
 
 #: src/interface.c:42
 msgid "A_ssemble"
-msgstr ""
+msgstr "એસેમ્બલ (_s)"
 
 #: src/interface.c:42
 msgid "Only assemble program"
-msgstr ""
+msgstr "કાર્યક્રમ માત્ર એસેમ્બલ કરો"
 
 #: src/interface.c:43
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "એસેમ્બલ કરેલ અને લાવેલ કાર્યક્રમ ચલાવો"
 
 #: src/interface.c:44
 msgid "Show _listing"
-msgstr ""
+msgstr "યાદી બતાવો (_l)"
 
 #: src/interface.c:44
 msgid "Show the source code along with opcodes and operands in hex numbers"
-msgstr ""
+msgstr "સ્ત્રોત કોડ ઓપકોડ્સ અને ઓપરન્ડ્સ સાથે હેક્સ આંકડાઓમાં બતાવો"
 
 #: src/interface.c:45
 msgid "Step _in"
@@ -188,11 +187,11 @@ msgstr "કોડમાં અંદર જાવ"
 
 #: src/interface.c:46
 msgid "Step o_ver"
-msgstr ""
+msgstr "કૂદકો મારો (_v)"
 
 #: src/interface.c:46
 msgid "Step over the code without calling functions"
-msgstr ""
+msgstr "વિધેયોને બોલાવ્યા વગર કોડમાં કૂદકો મારો"
 
 #: src/interface.c:47
 msgid "Step _out"
@@ -204,11 +203,11 @@ msgstr "હાલનાં વિધેયમાંથી બહાર નીક
 
 #: src/interface.c:48
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "ભંગાણબિંદુઓ બંધ/ચાલુ કરો (_b)"
 
 #: src/interface.c:48
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "હાલની લીટી પર ભંગાણબિંદુઓ બંધ/ચાલુ કરો"
 
 #: src/interface.c:49
 msgid "_Clear all breakpoints"
@@ -220,11 +219,11 @@ msgstr "બધાં ભંગાણબિંદુઓ દૂર કરો"
 
 #: src/interface.c:50
 msgid "Stop execution"
-msgstr ""
+msgstr "ચલાવવાનું બંધ કરો"
 
 #: src/interface.c:50
 msgid "Stop debugging"
-msgstr ""
+msgstr "ડિબગીંગ બંધ કરો"
 
 #: src/interface.c:51
 msgid "_Contents"
@@ -240,7 +239,7 @@ msgstr "એસેમ્બલર માર્ગદર્શિકા"
 
 #: src/interface.c:58
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "બાજુ પટ્ટી બતાવો/છુપાવો"
 
 #: src/interface.c:265
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"

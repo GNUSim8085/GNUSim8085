@@ -12,7 +12,7 @@
 # Define application name and installer file name
 Name GNUSim8085
 OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
-Icon pixmaps/gnusim8085.ico
+!define MUI_ICON pixmaps/gnusim8085.ico
 InstallDir "C:\Program Files\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"
 !define uninstaller "uninstaller.exe"

@@ -1,6 +1,7 @@
 2010-03-12  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* installer.nsi.in: Use the MUI method for setting icon for installer.
+	* pixmaps/gnusim8085_icon*: Do not include old icon files.
 
 2010-03-09  Onkar Shinde  <onkarshinde@gmail.com>
 

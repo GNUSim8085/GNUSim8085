@@ -6,12 +6,23 @@
 # icon for installer. You may have to disable icon if you are trying to build
 # installer.
 
+# Pass -DINC_GTK to makensis to enable inclusion of GTK+ runtime.
+
 # Use modern UI
 !include MUI2.nsh
+# Use logic and version functions
+!include LogicLib.nsh
+!include WordFunc.nsh
 
 # Define application name and installer file name
 Name GNUSim8085
-OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
+!ifdef INC_GTK
+  OutFile @PACKAGE@-@VERSION@-installer.exe
+!else
+  OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
+!endif
+!define GTK_INSTALLER_EXE "gtk2-runtime-2.12.11-2008-07-25-ash.exe"
+!define GTK_VERSION_REQ "2.12.0"
 !define MUI_ICON pixmaps/gnusim8085.ico
 InstallDir "C:\Program Files\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"
@@ -20,6 +31,12 @@ InstallDir "C:\Program Files\GNUSim8085"
 # Show license page
 !define MUI_LICENSEPAGE_CHECKBOX
 !insertmacro MUI_PAGE_LICENSE COPYING
+
+!ifdef INC_GTK
+  # Show components page
+  !define MUI_PAGE_CUSTOMFUNCTION_LEAVE on_components_page_leave
+  !insertmacro MUI_PAGE_COMPONENTS
+!endif
 
 # Show installation directory selector page
 !insertmacro MUI_PAGE_DIRECTORY
@@ -46,13 +63,28 @@ InstallDir "C:\Program Files\GNUSim8085"
 !insertmacro MUI_LANGUAGE "Italian"
 !insertmacro MUI_LANGUAGE "Spanish"
 
+!ifdef INC_GTK
+  var gtk_mode  ; "public" or "none"
+  var gtk_tmp  ; temporary variable
+!endif
+
 # Show language selection dialog in installer
 Function .onInit
   !insertmacro MUI_LANGDLL_DISPLAY
+
+# ask for gtk only if it's a non-gtk installer.
+!ifndef INC_GTK
+  Call AskForGtk
+!endif
+
+!ifdef INC_GTK
+  StrCpy $gtk_mode "public" ; default
+!endif
 FunctionEnd
 
 # Install section
-Section "Install"
+Section "!GNUSim8085" SecMain
+SectionIn RO
   SetOutPath $INSTDIR
   !system 'make'
   !system 'cp /usr/i586-mingw32msvc/bin/libgtksourceview-2.0-0.dll src/'
@@ -90,6 +122,17 @@ Section "Install"
   !system 'rm -f data/def.lang'
 SectionEnd
 
+!ifdef INC_GTK
+Section "GTK+ (shared installation)" SecGtkPublic
+  SetShellVarContext all  ; use all user variables as opposed to current user
+  AddSize 12200  ; ~ size of unpacked gtk
+  SetOutPath "$INSTDIR"
+  File "${GTK_INSTALLER_EXE}"
+  ExecWait '"${GTK_INSTALLER_EXE}"'
+  Delete "$INSTDIR\${GTK_INSTALLER_EXE}"
+SectionEnd
+!endif  ; !INC_GTK
+
 # Uninstall section
 Section "Uninstall"
   Delete $INSTDIR\uninstaller.exe
@@ -97,3 +140,73 @@ Section "Uninstall"
   RMDir /r $INSTDIR
 SectionEnd
 
+; Section descriptions
+!ifdef INC_GTK  ; this page is shown only when using gtk
+!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecMain} "GNUSim8085 - Intel 8085 microprocessor simulator"
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecGtkPublic} "GTK+ libraries, needed by GNUSim8085. \
+    This will install a system-wide version of GTK+, shareable with other programs."
+!insertmacro MUI_FUNCTION_DESCRIPTION_END
+!endif
+
+!ifdef INC_GTK
+Function on_components_page_leave
+  StrCmp $gtk_mode "none" "" noabort
+  Call AskForGtk
+  noabort:
+FunctionEnd
+!endif  ; INC_GTK
+
+Function .onselchange
+!ifdef INC_GTK
+  ; store the current mode
+  StrCpy $gtk_mode "none"
+
+  SectionGetFlags ${SecGtkPublic} $gtk_tmp
+  IntOp $gtk_tmp $gtk_tmp & ${SF_SELECTED}
+  IntCmp $gtk_tmp ${SF_SELECTED} "" mode_end_public mode_end_public
+  StrCpy $gtk_mode "public"
+  mode_end_public:
+
+!endif  ; INC_GTK
+FunctionEnd
+
+; detect GTK installation, version >= 2.12
+Function AskForGtk
+  SetShellVarContext all  ; use all user variables as opposed to current user
+  push $R0
+  push $R1
+
+  ReadRegStr $R0 HKLM "SOFTWARE\GTK\2.0" "Version"
+  ${VersionCompare} $R0 ${GTK_VERSION_REQ} $R1
+  ${If} $R1 == "2"
+    goto no_gtk
+  ${Else}
+    goto have_gtk
+  ${EndIf}
+
+  no_gtk:
+    !ifdef INC_GTK
+      MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION \
+      "GTK2 Runtime (>= 2.12) is not installed. GNUSIM8085 needs it to function properly.$\n$\n\
+      Click 'Cancel' to modify selection or 'OK' to continue anyway." \
+      /SD IDOK IDOK have_gtk
+      Abort
+    !else
+      MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION \
+      "GTK2 Runtime (>= 2.12) is not installed. GNUSIM8085 needs it to function properly.$\n\
+      Please install GTK2-Runtime from http://gtk-win.sf.net/ first.$\n$\n\
+      Click 'Cancel' to abort installation or 'OK' to continue anyway." \
+      /SD IDOK IDOK have_gtk
+      Quit
+    !endif
+    goto end_gtk_check
+
+    have_gtk:
+      ; do nothing
+
+    end_gtk_check:
+
+    pop $R1
+    pop $R0
+FunctionEnd

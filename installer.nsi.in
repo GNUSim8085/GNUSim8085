@@ -14,6 +14,9 @@
 !include LogicLib.nsh
 !include WordFunc.nsh
 
+# Required for proper handling of start menu on Windows Vista
+RequestExecutionLevel admin
+
 # Define application name and installer file name
 Name GNUSim8085
 !ifdef INC_GTK

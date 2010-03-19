@@ -188,13 +188,13 @@ Function AskForGtk
   no_gtk:
     !ifdef INC_GTK
       MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION \
-      "GTK2 Runtime (>= 2.12) is not installed. GNUSIM8085 needs it to function properly.$\n$\n\
+      "GTK2 Runtime (>= ${GTK_VERSION_REQ}) is not installed. GNUSIM8085 needs it to function properly.$\n$\n\
       Click 'Cancel' to modify selection or 'OK' to continue anyway." \
       /SD IDOK IDOK have_gtk
       Abort
     !else
       MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION \
-      "GTK2 Runtime (>= 2.12) is not installed. GNUSIM8085 needs it to function properly.$\n\
+      "GTK2 Runtime (>= ${GTK_VERSION_REQ}) is not installed. GNUSIM8085 needs it to function properly.$\n\
       Please install GTK2-Runtime from http://gtk-win.sf.net/ first.$\n$\n\
       Click 'Cancel' to abort installation or 'OK' to continue anyway." \
       /SD IDOK IDOK have_gtk

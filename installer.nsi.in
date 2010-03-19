@@ -67,11 +67,14 @@ InstallDir "C:\Program Files\GNUSim8085"
   var gtk_mode  ; "public" or "none"
   var gtk_tmp  ; temporary variable
 !endif
+var have_gtk  ; "1" or "0"
 
 # Show language selection dialog in installer
 Function .onInit
   !insertmacro MUI_LANGDLL_DISPLAY
 
+# Check for existing GTK installation
+Call CheckGtk
 # ask for gtk only if it's a non-gtk installer.
 !ifndef INC_GTK
   Call AskForGtk
@@ -169,6 +172,24 @@ Function .onselchange
   mode_end_public:
 
 !endif  ; INC_GTK
+FunctionEnd
+
+; detect GTK installation, version >= GTK_VERSION_REQ
+Function CheckGtk
+  SetShellVarContext all  ; use all user variables as opposed to current user
+  push $R0
+  push $R1
+
+  ReadRegStr $R0 HKLM "SOFTWARE\GTK\2.0" "Version"
+  ${VersionCompare} $R0 ${GTK_VERSION_REQ} $R1
+  ${If} $R1 == "2"
+    StrCpy $have_gtk "0"
+  ${Else}
+    StrCpy $have_gtk "1"
+  ${EndIf}
+
+  pop $R1
+  pop $R0
 FunctionEnd
 
 ; detect GTK installation, version >= 2.12

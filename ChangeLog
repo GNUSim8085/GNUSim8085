@@ -2,7 +2,9 @@
 
 	* installer.nsi.in: Don't use hard coded GTK version in message boxes.
 	Add a generic function for checking existing GTK installations. Call it
-	from init function.
+	from init function. Add a function to uncheck the GTK checkbox on
+	components page depending on existing GTK installation. Modify the
+	AskForGtk function to use variables set by CheckGtk.
 
 2010-03-12  Onkar Shinde  <onkarshinde@gmail.com>
 

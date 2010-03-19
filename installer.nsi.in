@@ -34,6 +34,7 @@ InstallDir "C:\Program Files\GNUSim8085"
 
 !ifdef INC_GTK
   # Show components page
+  !define MUI_PAGE_CUSTOMFUNCTION_PRE on_components_page_pre
   !define MUI_PAGE_CUSTOMFUNCTION_LEAVE on_components_page_leave
   !insertmacro MUI_PAGE_COMPONENTS
 !endif
@@ -192,15 +193,22 @@ Function CheckGtk
   pop $R0
 FunctionEnd
 
-; detect GTK installation, version >= 2.12
-Function AskForGtk
-  SetShellVarContext all  ; use all user variables as opposed to current user
-  push $R0
-  push $R1
+!ifdef INC_GTK
+Function on_components_page_pre
+  push $R2
+  ${If} $have_gtk == "0"
+    ; we don't have gtk installed, do nothing
+  ${Else}
+    ; we have gtk installed, uncheck the runtime box
+    IntOp $R2 ${SF_SELECTED} & 0
+    SectionSetFlags ${SecGtkPublic} $R2
+  ${EndIf}
+  pop $R2
+FunctionEnd
+!endif  ; INC_GTK
 
-  ReadRegStr $R0 HKLM "SOFTWARE\GTK\2.0" "Version"
-  ${VersionCompare} $R0 ${GTK_VERSION_REQ} $R1
-  ${If} $R1 == "2"
+Function AskForGtk
+  ${If} $have_gtk == "0"
     goto no_gtk
   ${Else}
     goto have_gtk
@@ -223,11 +231,9 @@ Function AskForGtk
     !endif
     goto end_gtk_check
 
-    have_gtk:
-      ; do nothing
+  have_gtk:
+    ; do nothing
 
-    end_gtk_check:
+  end_gtk_check:
 
-    pop $R1
-    pop $R0
 FunctionEnd

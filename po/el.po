@@ -1,0 +1,668 @@
+# Greek translation for gnusim8085
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the BSD (3-Clause) license.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnusim8085\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
+"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"PO-Revision-Date: 2010-04-29 12:58+0000\n"
+"Last-Translator: Richard Drakoulis <Unknown>\n"
+"Language-Team: Greek <el@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-05-23 05:36+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/callbacks.c:216
+msgid "Program has errors. Check the Message pane."
+msgstr "Το πρόγραμμα έχει σφάλματα. Ελέγξτε το παράθυρο Μηνυμάτων."
+
+#: src/callbacks.c:237
+msgid "Error executing program"
+msgstr "Σφάλμα κατά την εκτέλεση του προγράμματος"
+
+#: src/callbacks.c:257
+msgid "Error in step in"
+msgstr ""
+
+#: src/callbacks.c:272
+msgid "Error in step over"
+msgstr ""
+
+#: src/callbacks.c:287
+msgid "Error in step out"
+msgstr ""
+
+#: src/callbacks.c:384
+msgid "Enter a valid number within range"
+msgstr "Εισάγετε ένα έγκυρο αριθμό εντός ορίων"
+
+#: src/callbacks.c:557
+msgid ""
+"Do the following\n"
+"\n"
+"1. Read \"asm-guide.txt\" for assembler tutorial\n"
+"2. Open \"examples/nqueens.asm\" and simulate it.\n"
+"\n"
+"Usually these files will be found in your system document directory,\n"
+"which can be one of the following\n"
+"\n"
+"/usr/local/doc/GNUSim8085\n"
+"/usr/local/share/doc/GNUSim8085\n"
+"/usr/share/doc/GNUSim8085\n"
+"\n"
+"These files are also available in \"doc\" directory\n"
+"of GNUSim8085 source tarball (tar.gz file)\n"
+msgstr ""
+"Κάντε τα ακόλουθα\n"
+"\n"
+"1. Διαβάστε το \"asm-guide.txt\" για εκμάθηση του assembler\n"
+"2. Ανοίξτε το \"examples/nqueens.asm\" και προσωμοιώστε το.\n"
+"\n"
+"Συνήθως αυτά τα αρχεία θα βρίσκονται στο φάκελο κειμένων συστήματός σας,\n"
+"που μπορεί ένας από τους παρακάτω\n"
+"\n"
+"/usr/local/doc/GNUSim8085\n"
+"/usr/local/share/doc/GNUSim8085\n"
+"/usr/share/doc/GNUSim8085\n"
+"\n"
+"Αυτά τα αρχεία είναι επίσης διαθέσιμα στο φάκελο \"doc\"\n"
+"του πηγαίου GNUSim8085 tarball (αρχείο tar.gz)\n"
+
+#: src/interface.c:25
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: src/interface.c:26
+msgid "_Reset"
+msgstr "_Αρχικοποίηση"
+
+#: src/interface.c:27
+msgid "_Assembler"
+msgstr "_Συμβολομεταφραστής"
+
+#: src/interface.c:28
+msgid "_Debug"
+msgstr "_Αποσφαλμάτωση"
+
+#: src/interface.c:29
+msgid "_Breakpoints"
+msgstr "_Σημεία Διακοπής"
+
+#: src/interface.c:30
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: src/interface.c:31
+msgid "New source file"
+msgstr "Νέο πηγαίο αρχείο"
+
+#: src/interface.c:32
+msgid "Open a file"
+msgstr "Άνοιγμα αρχείου"
+
+#: src/interface.c:33
+msgid "Save file"
+msgstr "Αποθήκευση αρχείου"
+
+#: src/interface.c:34
+msgid "Save file as"
+msgstr "Αποθήκευση αρχείου ως"
+
+#: src/interface.c:35
+msgid "Print program"
+msgstr "Εκτύπωση προγράμματος"
+
+#: src/interface.c:37
+msgid "_Registers"
+msgstr "_Καταχωρητές"
+
+#: src/interface.c:37
+msgid "Reset Registers"
+msgstr "Μηδενισμός Καταχωρητών"
+
+#: src/interface.c:38
+msgid "_Flags"
+msgstr "_Σημαίες"
+
+#: src/interface.c:38
+msgid "Reset Flags"
+msgstr "Μηδενισμός Σημαίων"
+
+#: src/interface.c:39
+msgid "_IO Ports"
+msgstr "Θύρες _ΙΟ"
+
+#: src/interface.c:39
+msgid "Reset IO Ports"
+msgstr "Αρχικοποίηση IO Θυρών"
+
+#: src/interface.c:40
+msgid "_Memory"
+msgstr "_Μνήμη"
+
+#: src/interface.c:40
+msgid "Reset Memory"
+msgstr "Καθάρισμα Μνήμης"
+
+#: src/interface.c:41
+msgid "Reset _All"
+msgstr "_Αρχικοποίηση Όλων"
+
+#: src/interface.c:41
+msgid "Reset All"
+msgstr "Αρχικοποίηση Όλων"
+
+#: src/interface.c:42
+msgid "A_ssemble"
+msgstr "_Συμβολομετάφραση"
+
+#: src/interface.c:42
+msgid "Only assemble program"
+msgstr "Συμβολομετάφρασε μόνο το πρόγραμμα"
+
+#: src/interface.c:43
+msgid "Execute assembled and loaded program"
+msgstr "Εκτέλεση συμβολομεταφρασμένου και φορτωμένου προγράμματος"
+
+#: src/interface.c:44
+msgid "Show _listing"
+msgstr "Εμφάνιση _λίστας"
+
+#: src/interface.c:44
+msgid "Show the source code along with opcodes and operands in hex numbers"
+msgstr ""
+"Εμφάνιση του πηγαίου κώδικα με κώδικες εντολής και ορισμάτων σε "
+"δεκαεξαδικούς αριθμούς"
+
+#: src/interface.c:45
+msgid "Step _in"
+msgstr ""
+
+#: src/interface.c:45
+msgid "Step in the code"
+msgstr ""
+
+#: src/interface.c:46
+msgid "Step o_ver"
+msgstr ""
+
+#: src/interface.c:46
+msgid "Step over the code without calling functions"
+msgstr ""
+
+#: src/interface.c:47
+msgid "Step _out"
+msgstr ""
+
+#: src/interface.c:47
+msgid "Step out of the current function"
+msgstr ""
+
+#: src/interface.c:48
+msgid "Toggle _breakpoint"
+msgstr "Εναλλαγή σημείου διακοπής"
+
+#: src/interface.c:48
+msgid "Toggles breakpoint at current line"
+msgstr ""
+
+#: src/interface.c:49
+msgid "_Clear all breakpoints"
+msgstr "_Καθαρισμός όλων των σημείων διακοπής"
+
+#: src/interface.c:49
+msgid "Remove all breakpoints"
+msgstr "Αφαίρεση όλων των σημείων διακοπής"
+
+#: src/interface.c:50
+msgid "Stop execution"
+msgstr "Παύση εκτέλεσης"
+
+#: src/interface.c:50
+msgid "Stop debugging"
+msgstr "Παύση αποσφαλμάτωσης"
+
+#: src/interface.c:51
+msgid "_Contents"
+msgstr "_Περιεχόμενα"
+
+#: src/interface.c:52
+msgid "8085 _Manual"
+msgstr "8085 _Εγχειρίδιο"
+
+#: src/interface.c:53
+msgid "Assembler _Tutorial"
+msgstr "Εκμά_θηση Συμβολομεταφραστή"
+
+#: src/interface.c:58
+msgid "Show/Hide side pane"
+msgstr "Εμφάνιση/Απόκρυψη πλαϊνού παραθύρου"
+
+#: src/interface.c:265
+msgid "GNUSim8085 - 8085 Microprocessor Simulator"
+msgstr "GNUSim8085 - Προσομοιωτής Μικροεπεξεργαστή 8085"
+
+#: src/interface.c:385 src/interface.c:391 src/interface.c:397
+#: src/interface.c:403 src/interface.c:409 src/interface.c:415
+#: src/interface.c:421 src/interface.c:427 src/interface.c:433
+#: src/interface.c:439 src/interface.c:445 src/interface.c:451
+#: src/interface.c:457 src/interface.c:463
+msgid "00"
+msgstr "00"
+
+#: src/interface.c:480
+msgid "Registers"
+msgstr "Καταχωρητές"
+
+#: src/interface.c:533 src/interface.c:539 src/interface.c:545
+#: src/interface.c:551 src/interface.c:557 src/interface.c:596
+#: src/interface.c:634 src/interface.c:702 src/interface.c:766
+msgid "0"
+msgstr "0"
+
+#: src/interface.c:567
+msgid "Flag"
+msgstr "Σημαία"
+
+#: src/interface.c:587
+msgid "Decimal"
+msgstr "Δεκαδικό"
+
+#: src/interface.c:595
+msgid "Enter a decimal number"
+msgstr "Εισάγετε ένα δεκαδικό αριθμό"
+
+#: src/interface.c:601
+msgid "Convert this number to hexadecimal"
+msgstr "Μετατροπή αυτού του αριθμού σε δεκαεξαδικό"
+
+#: src/interface.c:615
+msgid "To Hex"
+msgstr "Σε Δεκαεξαδικό"
+
+#: src/interface.c:625
+msgid "Hex"
+msgstr "Δεκαεξαδικό"
+
+#: src/interface.c:633
+msgid "Enter a hexadecimal number"
+msgstr "Εισάγετε ένα δεκαεξαδικό αριθμό"
+
+#: src/interface.c:639
+msgid "Convert this number to decimal"
+msgstr "Μετατροπή αυτού του αριθμού σε δεκαδικό"
+
+#: src/interface.c:653
+msgid "To Dec"
+msgstr "Σε Δεκαδικό"
+
+#: src/interface.c:666
+msgid "<b>Decimal - Hex Convertion</b>"
+msgstr "<b> Μετατροπή Δεκαδικό - Δεκαεξαδικό </b>"
+
+#: src/interface.c:694
+msgid "Change the port address to view here"
+msgstr "Αλλαγή της διεύθυνσης θύρας για εμφάνισή της εδώ"
+
+#: src/interface.c:701
+msgid "Enter new port value and click Update"
+msgstr "Εισάγετε νέα τιμή θύρας και πατήστε Ανανέωση"
+
+#: src/interface.c:707
+msgid "Update the port value"
+msgstr "Ανανέωση της τιμής θύρας"
+
+#: src/interface.c:721
+msgid "Update Port Value"
+msgstr "Ανανέωση Τιμής Θύρας"
+
+#: src/interface.c:734
+msgid "<b>I/O Ports</b>"
+msgstr "<b>Θύρες I/O</b>"
+
+#: src/interface.c:758
+msgid "Change the memory location to view here"
+msgstr "Αλλαγή της θέσης μνήμης για εμφάνισή της εδώ"
+
+#: src/interface.c:765
+msgid "Edit new value and click Update"
+msgstr "Επεξεργαστείτε τη νέα τιμή και πατήστε Ανανέωση"
+
+#: src/interface.c:771
+msgid "Update the current memory location"
+msgstr "Ανανέωση της τρέχουσας θέσης μνήμης"
+
+#: src/interface.c:785
+msgid "Update Memory"
+msgstr "Ανανέωση Μνήμης"
+
+#: src/interface.c:798
+msgid "<b>Memory</b>"
+msgstr "<b>Μνήμη</b>"
+
+#: src/interface.c:823
+msgid "Load me at"
+msgstr ""
+
+#: src/interface.c:831
+msgid "Enter the program address.  End with a 'h' if it is a hex address."
+msgstr ""
+"Εισάγετε τη διεύθυνση του προγράμματος.  Τελειώστε με ένα 'h' αν είναι "
+"δεκαεξαδική διεύθυνση."
+
+#: src/interface.c:849
+msgid "Variables"
+msgstr "Μεταβλητές"
+
+#: src/interface.c:862
+msgid "Data"
+msgstr "Δεδομένα"
+
+#: src/interface.c:878
+msgid "Stack Trace"
+msgstr "Παρακολούθηση Στοίβας"
+
+#: src/interface.c:891
+msgid "Stack"
+msgstr "Στοίβα"
+
+#: src/interface.c:915
+msgid "KeyPad"
+msgstr "Πληκτρολόγιο"
+
+#: src/interface.c:1117
+msgid "translator_credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Richard Drakoulis https://launchpad.net/~richardos89\n"
+"  Thanos Kakarountas https://launchpad.net/~a-kakarountas"
+
+#: src/interface.c:1158
+msgid "Assembler Listing"
+msgstr ""
+
+#: src/interface.c:1179
+msgid "Save to file"
+msgstr "Αποθήκευση σε αρχείο"
+
+#: src/interface.c:1227
+msgid "GNUSim8085 start with dialog"
+msgstr "Εκκίνηση GNUSim8085 με διάλογο"
+
+#: src/interface.c:1257
+msgid "1. How to use this simulator?"
+msgstr "1. Πως να χρησιμοποιηθεί αυτός ο προσομοιωτής;"
+
+#: src/interface.c:1265
+msgid "_Tutorial"
+msgstr "Ε_κμάθηση"
+
+#: src/interface.c:1270
+msgid "A short tutorial on writing assembly code!"
+msgstr "Σύντομη εκμάθηση στη συγγραφή κώδικα μηχανής!"
+
+#: src/interface.c:1277
+msgid "2. Open an existing assembly program."
+msgstr "2. Άνοιγμα ενός υπάρχοντος προγράμματος μηχανής."
+
+#: src/interface.c:1285
+msgid "_Open program"
+msgstr "_Άνοιγμα προγράμματος"
+
+#: src/interface.c:1290
+msgid "Open an already saved program"
+msgstr "Άνοιγμα ενός ήδη αποθηκευμένου προγράμματος"
+
+#: src/interface.c:1292
+msgid "What do you want to do now?"
+msgstr "Τι επιθυμείτε να κάνετε τώρα;"
+
+#: src/interface.c:1302
+msgid ""
+"Don't forget to read the documentation \n"
+"given in \"doc\" directory."
+msgstr ""
+"Μην ξεχάσετε να διαβάσετε την τεκμηρίωση \n"
+"που βρίσκεται στο φάκελο\"doc\"."
+
+#: src/interface.c:1363
+msgid "Choose a symbol"
+msgstr "Επιλέξτε ένα σύμβολο"
+
+#: src/interface.c:1386
+msgid "Enter a symbol or choose one from the lists"
+msgstr "Εισάγετε ένα σύμβολο ή επιλέξτε ένα από τις λίστες"
+
+#: src/interface.c:1396
+msgid "Enter Symbol"
+msgstr "Εισαγωγή Συμβόλου"
+
+#: src/interface.c:1410
+msgid "Variables List"
+msgstr "Λίστα Μεταβλητών"
+
+#: src/interface.c:1431
+msgid "Functions List"
+msgstr "Λίστα Συναρτήσεων"
+
+#: src/interface.c:1452
+msgid "Macros List"
+msgstr "Λίστα Μακροεντολών"
+
+#: src/interface.c:1508
+msgid "Choose a register"
+msgstr "Επιλέξτε ένα καταχωρητή"
+
+#: src/main.c:69
+msgid "Simulator: Idle"
+msgstr "Προσομοιωτής: Ανενεργός"
+
+#: src/8085.c:250
+#, c-format
+msgid "Unwanted %c reached"
+msgstr ""
+
+#: src/8085-instructions.c:28
+msgid "Invalid Opcode"
+msgstr "Μη Έγκυρος Κωδικός Εντολής"
+
+#: src/8085-instructions.c:884
+msgid "Instruction 'RIM' Not implemented"
+msgstr "Η εντολή 'RIM' δεν έχει υλοποιηθεί"
+
+#: src/8085-instructions.c:1038
+msgid "Instruction 'SIM' Not implemented"
+msgstr "Η εντολή 'SIM' δεν έχει υλοποιηθεί"
+
+#: src/asm-source.c:110
+msgid "Assembling Aborted"
+msgstr "Ματαίωση Συμβολομετάφρασης"
+
+#: src/asm-source.c:178
+msgid "Label should be given to a code line"
+msgstr "Μια ετικέτα θα πρέπει να δίνεται σε μια γραμμή κώδικα"
+
+#: src/asm-source.c:208 src/asm-source.c:215 src/asm-source.c:222
+msgid "Incomplete opcode"
+msgstr "Ημιτελής κώδικας εντολής"
+
+#: src/asm-source.c:237
+#, c-format
+msgid ""
+"\n"
+"Neither Op not PsOp: [%s]"
+msgstr ""
+"\n"
+"Ούτε Op ή PsOp: [%s]"
+
+#: src/asm-source.c:238
+msgid "Invalid Opcode or Pseudo op"
+msgstr "Μη έγκυρος Κωδικός εντολής ή Ψευδο εντολή"
+
+#: src/asm-source.c:247
+msgid "Opcode needs an user argument"
+msgstr "Ο κωδικός εντολής απαιτεί ένα όρισμα χρήστη"
+
+#: src/asm-source.c:255
+msgid "Extra characters in line"
+msgstr "Επιπλέον χαρακτήρες στη γραμμή"
+
+#: src/asm-source.c:421
+msgid "Expression error in symbol"
+msgstr "Σφάλμα έκφρασης στο σύμβολο"
+
+#: src/asm-source.c:435
+msgid "Undefined symbol"
+msgstr "Μη ορισμένο σύμβολο"
+
+#: src/asm-gensym.c:74
+msgid "Redundant label"
+msgstr "Πλεονάζουσα ετικέτα"
+
+#: src/asm-gensym.c:89
+msgid "Invalid Operand in EQU"
+msgstr "Μη έγκυρο Όρισμα στην EQU"
+
+#: src/asm-gensym.c:101 src/asm-gensym.c:123
+msgid "Invalid operand"
+msgstr "Μη έγκυρο όρισμα"
+
+#: src/asm-gensym.c:113
+msgid "Redefinition of symbol"
+msgstr "Επαναπροσδιορισμός του συμβόλου"
+
+#: src/asm-genobj.c:110
+msgid "Invalid data size"
+msgstr "Μη έγκυρο μέγεθος δεδομένων"
+
+#: src/asm-genobj.c:115
+msgid "DS: Exceeded limit"
+msgstr "DS: Υπέρβαση ορίου"
+
+#: src/asm-genobj.c:130
+msgid "DB: Operand error"
+msgstr "DB: Σφάλμα ορίσματος"
+
+#: src/asm-genobj.c:160
+msgid ""
+"Invalid operand or symbol. Check whether operands start with a number. e.g "
+"a0H should be 0a0H"
+msgstr ""
+"Μη έγκυρο όρισμα ή σύμβολο. Ελέγξτε αν τα ορίσματα εκκινούν με ένα αριθμό. "
+"π.χ. το a0H θα έπρεπε να είναι 0a0H"
+
+#: src/8085-asm.c:86
+msgid "Program assembled successfully"
+msgstr "Το πρόγραμμα συμβολομεταφράστηκε επιτυχώς"
+
+#: src/bridge.c:36
+msgid "Simulator: Program running"
+msgstr "Προσομοιωτής: Το πρόγραμμα εκτελείται"
+
+#: src/bridge.c:186
+#, c-format
+msgid ""
+"Execution branched to invalid memory location <%xH>. Execution will be "
+"stopped!\n"
+"\n"
+"Check whether you've included the \"hlt\" instruction at the end of your "
+"program and your source program is not empty.  Also check your program "
+"logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
+"advised to send a copy of your source progam."
+msgstr ""
+"Η εκτέλεση διακλαδώθηκε σε μη έγκυρη θέση μνήμης <%xH>. Η εκτέλεση θα "
+"σταματήσει!\n"
+"\n"
+"Ελέγξτε αν έχετε συμπεριλάβει την \"hlt\" εντολή στο τέλος του προγράμματος "
+"και ότι το πηγαίο πρόγραμμα σεν είναι κενό.  Επίσης ελέγξτε τη λογική του "
+"προγράμματός σας. Αν είστε απόλυτα σίγουροι, ίσως να υπάρχει πρόβλημα του "
+"GNUSim8085. Σε αυτή την περίπτωση, σας παροτρύνω να στείλετε ένα αντίγραφο "
+"του πηγαίου προγράμματος."
+
+#: src/bridge.c:288
+msgid "Assembler: running"
+msgstr "Συμβολομεταφραστής: εκτελείται"
+
+#: src/gui-list-message.c:92
+msgid "Line No"
+msgstr "Γραμμή Νο"
+
+#: src/gui-list-message.c:93
+msgid "Assembler Message"
+msgstr "Μήνυμα Συμβολομεταφραστή"
+
+#: src/gui-list-data.c:75
+msgid "Address"
+msgstr "Διεύθυνση"
+
+#: src/gui-list-data.c:76
+msgid "Variable"
+msgstr "Μεταβλητή"
+
+#: src/gui-list-data.c:77 src/gui-list-stack.c:82
+msgid "Value"
+msgstr "Τιμή"
+
+#: src/gui-list-data.c:78 src/gui-list-stack.c:83
+msgid "Value(Decimal)"
+msgstr "Τιμή(Δεκαδική)"
+
+#: src/asm-listing.c:207
+msgid "; Assembler generated listing; Not editable.\n"
+msgstr "; Λίστα παραγόμενη από το συμβολομεταφραστή. Δεν τροποποιείται.\n"
+
+#: src/asm-listing.c:208
+#, c-format
+msgid "; Generated by GNUSim8085: %s\n"
+msgstr "; Παραγόμενο από το GNUSim8085: %s\n"
+
+#: src/asm-listing.c:244
+msgid ""
+";Assembler Listing (Do Not assemble)\n"
+"\n"
+msgstr ""
+";Λίστα Συμβολομεταφραστή (Να μην Συμβολομεταφραστεί)\n"
+"\n"
+
+#: src/file-op.c:60
+#, c-format
+msgid "Failed to open <%s>"
+msgstr "Αποτυχία να ανοίξει <%s>"
+
+#: src/file-op.c:139
+msgid "File already exists; overwrite it?"
+msgstr "Το αρχείο ήδη υπάρχει, να αντικατασταθεί;"
+
+#: src/file-op.c:154
+#, c-format
+msgid "Failed to save <%s>"
+msgstr "Αποτυχία να αποθηκευτεί <%s>"
+
+#: src/file-op.c:310
+msgid "Failed to save listing file"
+msgstr "Αποτυχία να αποθηκευτεί το αρχείο λίστας"
+
+#: src/gui-list-stack.c:80
+msgid "Stack Loc"
+msgstr "Θέση Στοίβας"
+
+#: src/gui-list-stack.c:81
+msgid "Proc/Reg"
+msgstr "Proc/Reg"
+
+#: src/gui-list-stack.c:116
+msgid "Stack size exceeded.  Stop the execution"
+msgstr "Υπέρβαση μεγέθους στοίβας. Παύση εκτέλεσης"
+
+#: src/gui-list-stack.c:130
+msgid ""
+"More number of POP are executed than PUSH. Stop the execution and check the "
+"logic of your program"
+msgstr ""
+"Περισσότερα POP εκτελούνται από PUSH. Διακόψτε την εκτέλεση και ελέγξτε τη "
+"λογική του προγράμματος"

@@ -110,7 +110,6 @@ gchar**
 read_authors (){
   gchar *pathname = NULL;
   gchar **authors;
-  GError *error = NULL;
   FILE *fp;
   GString *gstr;
   char *ret;
@@ -131,7 +130,6 @@ read_authors (){
   if (fp == NULL)
     {
 	  GString *str;
-          error = NULL;
           pathname = NULL;
           str = g_string_new("");
           g_string_append(str, "AUTHORS");
@@ -142,9 +140,8 @@ read_authors (){
 
   if (fp == NULL)
     {
-      fprintf (stderr, "Failed to load authors file: %s: %s\n",
-               pathname, error->message);
-      g_error_free (error);
+      fprintf (stderr, "Failed to load authors file: %s\n",
+               pathname);
       return NULL;
     }
   

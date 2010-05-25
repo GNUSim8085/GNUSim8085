@@ -1,5 +1,7 @@
 GNUSim8085 1.3.7 (UNRELEASED)
 
+Fix:     LP: #579319 - Help -> about = crash
+
 Translations:
          New - Brazilian Portuguese (pt_BR), Greek (el).
          Updated - Gujarati (gu), Kannada (kn), Italian (it), Spanish (es).

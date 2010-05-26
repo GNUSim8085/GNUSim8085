@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-02-27 19:35+0530\n"
-"PO-Revision-Date: 2010-01-26 19:35+0000\n"
-"Last-Translator: The Escapist <Unknown>\n"
+"PO-Revision-Date: 2010-05-07 22:19+0000\n"
+"Last-Translator: Florian Sievers <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-01-28 15:52+0000\n"
+"X-Launchpad-Export-Date: 2010-05-26 16:36+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:216
@@ -109,9 +109,8 @@ msgid "Save file as"
 msgstr "Datei speichern unter"
 
 #: src/interface.c:35
-#, fuzzy
 msgid "Print program"
-msgstr "_Programm öffnen"
+msgstr "Programm ausdrucken"
 
 #: src/interface.c:37
 msgid "_Registers"
@@ -127,7 +126,7 @@ msgstr "_Markierungen"
 
 #: src/interface.c:38
 msgid "Reset Flags"
-msgstr "Flags zurücksetzen"
+msgstr "Markierungen zurücksetzen"
 
 #: src/interface.c:39
 msgid "_IO Ports"
@@ -167,7 +166,7 @@ msgstr "Ausführen von assemblierten und geladenen Programm"
 
 #: src/interface.c:44
 msgid "Show _listing"
-msgstr "_listing anzeigen"
+msgstr "_Listing anzeigen"
 
 #: src/interface.c:44
 msgid "Show the source code along with opcodes and operands in hex numbers"
@@ -187,7 +186,7 @@ msgstr ""
 
 #: src/interface.c:46
 msgid "Step over the code without calling functions"
-msgstr "Code ausführen, one Funktionen aufzurufen"
+msgstr "Code ausführen, ohne Funktionen aufzurufen"
 
 #: src/interface.c:47
 msgid "Step _out"
@@ -199,7 +198,7 @@ msgstr "Aus der aktuellen Funktion zurückspringen"
 
 #: src/interface.c:48
 msgid "Toggle _breakpoint"
-msgstr "Breakpoint umschalten"
+msgstr "_Breakpoint umschalten"
 
 #: src/interface.c:48
 msgid "Toggles breakpoint at current line"
@@ -235,7 +234,7 @@ msgstr "Assembler _Tutorial"
 
 #: src/interface.c:58
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "Seitenleiste ein-/ausblenden"
 
 #: src/interface.c:265
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
@@ -247,7 +246,7 @@ msgstr "GNUSim8085 - 8085 Mikroprozessor-Simulator"
 #: src/interface.c:439 src/interface.c:445 src/interface.c:451
 #: src/interface.c:457 src/interface.c:463
 msgid "00"
-msgstr ""
+msgstr "00"
 
 #: src/interface.c:480
 msgid "Registers"
@@ -257,7 +256,7 @@ msgstr "Register"
 #: src/interface.c:551 src/interface.c:557 src/interface.c:596
 #: src/interface.c:634 src/interface.c:702 src/interface.c:766
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: src/interface.c:567
 msgid "Flag"
@@ -297,7 +296,7 @@ msgstr "Nach Dezimal"
 
 #: src/interface.c:666
 msgid "<b>Decimal - Hex Convertion</b>"
-msgstr "Dezimal - Hexadezimal-Umwandlung"
+msgstr "<b>Dezimal - Hexadezimal-Umwandlung</b>"
 
 #: src/interface.c:694
 msgid "Change the port address to view here"
@@ -346,7 +345,7 @@ msgstr "Laden bei"
 #: src/interface.c:831
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr ""
-"Geben Sie die Programm-Adresse ein. Bei Hex-Adressen müssen mit 'h' enden."
+"Geben Sie die Programm-Adresse ein. Hex-Adressen müssen mit 'h' enden."
 
 #: src/interface.c:849
 msgid "Variables"
@@ -366,14 +365,16 @@ msgstr "Stapel (Stack)"
 
 #: src/interface.c:915
 msgid "KeyPad"
-msgstr ""
+msgstr "Ziffernblock"
 
 #: src/interface.c:1117
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Florian Sievers https://launchpad.net/~florian-sievers\n"
 "  Johannes Möller https://launchpad.net/~jojo-moeller\n"
-"  The Escapist https://launchpad.net/~wisd00m"
+"  The Escapist https://launchpad.net/~wisd00m\n"
+"  Tommy Hartmann https://launchpad.net/~ahrak"
 
 #: src/interface.c:1158
 msgid "Assembler Listing"
@@ -401,7 +402,7 @@ msgstr "Eine kurze Einführung zur Programmierung in Assemblersprache"
 
 #: src/interface.c:1277
 msgid "2. Open an existing assembly program."
-msgstr "Öffnen eines existierenden Programmes"
+msgstr "2. Öffnen eines existierenden Programmes"
 
 #: src/interface.c:1285
 msgid "_Open program"
@@ -470,7 +471,7 @@ msgstr "Instruktion 'RIM' ist bisher noch nicht implementiert"
 
 #: src/8085-instructions.c:1038
 msgid "Instruction 'SIM' Not implemented"
-msgstr "Instruktion 'SIM' bisher noch nicht implementiert"
+msgstr "Instruktion 'SIM' ist bisher noch nicht implementiert"
 
 #: src/asm-source.c:110
 msgid "Assembling Aborted"
@@ -547,7 +548,7 @@ msgid ""
 "a0H should be 0a0H"
 msgstr ""
 "Ungültiger Operand oder Symbol. Prüfen Sie, ob Operanden mit einer Ziffer "
-"starten. Hex-Konstanten sollten eine führende Null haben, z.B. 0a0H statt "
+"starten. Hex-Konstanten müssen eine führende Null haben, z.B. 0a0H statt "
 "a0hH."
 
 #: src/8085-asm.c:86
@@ -570,7 +571,13 @@ msgid ""
 "advised to send a copy of your source progam."
 msgstr ""
 "Ausführung hat zu einer ungültigen Speicherstelle verzweigt <%xH>. "
-"Ausführung wird gestoppt!"
+"Ausführung wird gestoppt!\n"
+"\n"
+"Überprüfen Sie, ob Sie die \"hlt\" Anweisung am Programmende eingefügt haben "
+"oder dass Ihr Programm nicht leer ist. Überprüfen Sie auch die "
+"Programmlogik. Wenn Sie sich sicher sind, dass diese Bedingungen erfüllt "
+"sind, kann es sein, dass GNUSim8085 einen Fehler enthält. Bitte Senden Sie "
+"in diesem Fall eine Kopie Ihres Quelltext an uns."
 
 #: src/bridge.c:288
 msgid "Assembler: running"

@@ -5,7 +5,8 @@ Fix:     LP: #579319 - Help -> about = crash
 
 Translations:
          New - Brazilian Portuguese (pt_BR), Greek (el).
-         Updated - Gujarati (gu), Kannada (kn), Italian (it), Spanish (es).
+         Updated - German (de), Gujarati (gu), Kannada (kn), Italian (it),
+         Spanish (es).
 
 GNUSim8085 1.3.6 (27 Feb 2010)
 

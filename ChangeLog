@@ -5,6 +5,7 @@
 	* po/de.po, AUTHORS: Updated German translation from launchpad.
 	* src/interface.c, po/gnusim8085.pot: Move format tags outside
 	translatable strings. Update pot file accordingly.
+	* po/*.po: Semi-auto update of translations as per latest pot file.
 
 2010-05-25  Onkar Shinde  <onkarshinde@gmail.com>
 

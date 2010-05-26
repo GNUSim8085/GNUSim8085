@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"POT-Creation-Date: 2010-05-26 22:45+0530\n"
 "PO-Revision-Date: 2009-12-29 00:26+0000\n"
 "Last-Translator: Colin Dean <cad@cad.cx>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -301,8 +301,8 @@ msgid "To Dec"
 msgstr "Al 10ume"
 
 #: src/interface.c:666
-msgid "<b>Decimal - Hex Convertion</b>"
-msgstr "<b>Dekuma - Deksesuma Konvertiĝo</b>"
+msgid "Decimal - Hex Convertion"
+msgstr "Dekuma - Deksesuma Konvertiĝo"
 
 #: src/interface.c:694
 msgid "Change the port address to view here"
@@ -321,8 +321,8 @@ msgid "Update Port Value"
 msgstr "Ĝisdatigu Pordan Valoron"
 
 #: src/interface.c:734
-msgid "<b>I/O Ports</b>"
-msgstr "<b>Eneliga Pordoj</b>"
+msgid "I/O Ports"
+msgstr "Eneliga Pordoj"
 
 #: src/interface.c:758
 msgid "Change the memory location to view here"
@@ -341,8 +341,8 @@ msgid "Update Memory"
 msgstr "Ĝisdatigu Memoron"
 
 #: src/interface.c:798
-msgid "<b>Memory</b>"
-msgstr "<b>Memoro</b>"
+msgid "Memory"
+msgstr "Memoro"
 
 #: src/interface.c:823
 msgid "Load me at"
@@ -390,35 +390,35 @@ msgstr "Konsevi kiel"
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 komencu kun dialogo"
 
-#: src/interface.c:1257
+#: src/interface.c:1255
 msgid "1. How to use this simulator?"
 msgstr "1. Kiel uzi ĉi tiu simulilo?"
 
-#: src/interface.c:1265
+#: src/interface.c:1263
 msgid "_Tutorial"
 msgstr "_Lernilo"
 
-#: src/interface.c:1270
+#: src/interface.c:1268
 msgid "A short tutorial on writing assembly code!"
 msgstr "Mallonga lernilo pri skibado asemblilkodo!"
 
-#: src/interface.c:1277
+#: src/interface.c:1275
 msgid "2. Open an existing assembly program."
 msgstr "2. Malfermu ekzisadan asemblilan programon."
 
-#: src/interface.c:1285
+#: src/interface.c:1283
 msgid "_Open program"
 msgstr "Malfermu pr_ogramon"
 
-#: src/interface.c:1290
+#: src/interface.c:1288
 msgid "Open an already saved program"
 msgstr "Malfermu jam savitan programon"
 
-#: src/interface.c:1292
+#: src/interface.c:1290
 msgid "What do you want to do now?"
 msgstr "Kio vi deziras fari nun?"
 
-#: src/interface.c:1302
+#: src/interface.c:1300
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -426,31 +426,31 @@ msgstr ""
 "Ne forgesu legi la dokumentado\n"
 "en \"doc\" dosierujo."
 
-#: src/interface.c:1363
+#: src/interface.c:1361
 msgid "Choose a symbol"
 msgstr "Elektu simbolon"
 
-#: src/interface.c:1386
+#: src/interface.c:1384
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Tajpu simbolon aŭ elektu unu el la listoj"
 
-#: src/interface.c:1396
+#: src/interface.c:1394
 msgid "Enter Symbol"
 msgstr "Tajpu simbolon"
 
-#: src/interface.c:1410
+#: src/interface.c:1408
 msgid "Variables List"
 msgstr "Listo de variabloj"
 
-#: src/interface.c:1431
+#: src/interface.c:1429
 msgid "Functions List"
 msgstr "Listo de funkcioj"
 
-#: src/interface.c:1452
+#: src/interface.c:1450
 msgid "Macros List"
 msgstr "Listo de makrooj"
 
-#: src/interface.c:1508
+#: src/interface.c:1506
 msgid "Choose a register"
 msgstr "Elektu adresreĝistron"
 

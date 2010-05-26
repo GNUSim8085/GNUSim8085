@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"POT-Creation-Date: 2010-05-26 22:45+0530\n"
 "PO-Revision-Date: 2010-01-17 13:07+0000\n"
 "Last-Translator: Adnane Belmadiaf <Unknown>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -287,7 +287,7 @@ msgid "To Dec"
 msgstr ""
 
 #: src/interface.c:666
-msgid "<b>Decimal - Hex Convertion</b>"
+msgid "Decimal - Hex Convertion"
 msgstr ""
 
 #: src/interface.c:694
@@ -307,7 +307,7 @@ msgid "Update Port Value"
 msgstr ""
 
 #: src/interface.c:734
-msgid "<b>I/O Ports</b>"
+msgid "I/O Ports"
 msgstr ""
 
 #: src/interface.c:758
@@ -327,8 +327,8 @@ msgid "Update Memory"
 msgstr "تحديث الذاكرة"
 
 #: src/interface.c:798
-msgid "<b>Memory</b>"
-msgstr "<b>الذاكرة</b>"
+msgid "Memory"
+msgstr "الذاكرة"
 
 #: src/interface.c:823
 msgid "Load me at"
@@ -376,35 +376,35 @@ msgstr "إحفظ في ملف"
 msgid "GNUSim8085 start with dialog"
 msgstr ""
 
-#: src/interface.c:1257
+#: src/interface.c:1255
 msgid "1. How to use this simulator?"
 msgstr "1. كيف تستعمل هذا المحاكي ؟"
 
-#: src/interface.c:1265
+#: src/interface.c:1263
 msgid "_Tutorial"
 msgstr "_درس خصوصي"
 
-#: src/interface.c:1270
+#: src/interface.c:1268
 msgid "A short tutorial on writing assembly code!"
 msgstr "درس خصوصي حول كيفية كتابة كود التجميع!"
 
-#: src/interface.c:1277
+#: src/interface.c:1275
 msgid "2. Open an existing assembly program."
 msgstr ""
 
-#: src/interface.c:1285
+#: src/interface.c:1283
 msgid "_Open program"
 msgstr "_فتح برنامج"
 
-#: src/interface.c:1290
+#: src/interface.c:1288
 msgid "Open an already saved program"
 msgstr "فتح برنامج محفوظ قبلا"
 
-#: src/interface.c:1292
+#: src/interface.c:1290
 msgid "What do you want to do now?"
 msgstr "ماذا تريد أن تفعل الآن؟"
 
-#: src/interface.c:1302
+#: src/interface.c:1300
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -412,31 +412,31 @@ msgstr ""
 "لا تنسى قراءة الوثائق\n"
 "الموضوعة في المجلد \"doc\""
 
-#: src/interface.c:1363
+#: src/interface.c:1361
 msgid "Choose a symbol"
 msgstr "اختر رمزا"
 
-#: src/interface.c:1386
+#: src/interface.c:1384
 msgid "Enter a symbol or choose one from the lists"
 msgstr "أدخل رمزا أو إختر واحدا من القوائم"
 
-#: src/interface.c:1396
+#: src/interface.c:1394
 msgid "Enter Symbol"
 msgstr "أدخل رمزا"
 
-#: src/interface.c:1410
+#: src/interface.c:1408
 msgid "Variables List"
 msgstr "قائمة المتغيرات"
 
-#: src/interface.c:1431
+#: src/interface.c:1429
 msgid "Functions List"
 msgstr ""
 
-#: src/interface.c:1452
+#: src/interface.c:1450
 msgid "Macros List"
 msgstr "قائمة وحدات الماكرو"
 
-#: src/interface.c:1508
+#: src/interface.c:1506
 msgid "Choose a register"
 msgstr ""
 

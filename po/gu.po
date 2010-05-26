@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"POT-Creation-Date: 2010-05-26 22:45+0530\n"
 "PO-Revision-Date: 2010-03-02 09:36+0000\n"
 "Last-Translator: Kartik Mistry <Unknown>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
@@ -300,8 +300,8 @@ msgid "To Dec"
 msgstr "દશાંક તરફ"
 
 #: src/interface.c:666
-msgid "<b>Decimal - Hex Convertion</b>"
-msgstr "<b>દશાંશ - હેક્સ રુપાંતર</b>"
+msgid "Decimal - Hex Convertion"
+msgstr "દશાંશ - હેક્સ રુપાંતર"
 
 #: src/interface.c:694
 msgid "Change the port address to view here"
@@ -320,8 +320,8 @@ msgid "Update Port Value"
 msgstr "પોર્ટ કિંમત સુધારો"
 
 #: src/interface.c:734
-msgid "<b>I/O Ports</b>"
-msgstr "<b>I/O પોર્ટ્સ</b>"
+msgid "I/O Ports"
+msgstr "I/O પોર્ટ્સ"
 
 #: src/interface.c:758
 msgid "Change the memory location to view here"
@@ -340,8 +340,8 @@ msgid "Update Memory"
 msgstr "મેમરી સુધારો"
 
 #: src/interface.c:798
-msgid "<b>Memory</b>"
-msgstr "<b>મેમરી</b>"
+msgid "Memory"
+msgstr "મેમરી"
 
 #: src/interface.c:823
 msgid "Load me at"
@@ -390,35 +390,35 @@ msgstr "ફાઈલમાં સંગ્રહો"
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 સંવાદ સાથે શરૂઆત"
 
-#: src/interface.c:1257
+#: src/interface.c:1255
 msgid "1. How to use this simulator?"
 msgstr "૧. આ સિમ્યુલેટરનો ઉપયોગ કઈ રીતે કરશો?"
 
-#: src/interface.c:1265
+#: src/interface.c:1263
 msgid "_Tutorial"
 msgstr "માર્ગદર્શિકા (_T)"
 
-#: src/interface.c:1270
+#: src/interface.c:1268
 msgid "A short tutorial on writing assembly code!"
 msgstr "એસેમ્બલી કોડ લખવા માટેની નાનકડી માર્ગદર્શિકા!"
 
-#: src/interface.c:1277
+#: src/interface.c:1275
 msgid "2. Open an existing assembly program."
 msgstr "૨. હાજર રહેલ એસેમ્બલી કાર્યક્રમ ખોલો."
 
-#: src/interface.c:1285
+#: src/interface.c:1283
 msgid "_Open program"
 msgstr "કાર્યક્રમ ખોલો (_O)"
 
-#: src/interface.c:1290
+#: src/interface.c:1288
 msgid "Open an already saved program"
 msgstr "પહેલેથી સંગ્રહ કરેલ કાર્યક્રમ ખોલો"
 
-#: src/interface.c:1292
+#: src/interface.c:1290
 msgid "What do you want to do now?"
 msgstr "તમે હવે શું કરવા માંગો છો?"
 
-#: src/interface.c:1302
+#: src/interface.c:1300
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -426,31 +426,31 @@ msgstr ""
 "\"doc\" ડિરેક્ટરીમાં આપેલ દસ્તાવેજને વાંચવાનું \n"
 "ભૂલશો નહી."
 
-#: src/interface.c:1363
+#: src/interface.c:1361
 msgid "Choose a symbol"
 msgstr "સંજ્ઞા પસંદ કરો"
 
-#: src/interface.c:1386
+#: src/interface.c:1384
 msgid "Enter a symbol or choose one from the lists"
 msgstr "સંજ્ઞા દાખલ કરો અથવા યાદીઓમાંથી એક પસંદ કરો"
 
-#: src/interface.c:1396
+#: src/interface.c:1394
 msgid "Enter Symbol"
 msgstr "સંજ્ઞા દાખલ કરો"
 
-#: src/interface.c:1410
+#: src/interface.c:1408
 msgid "Variables List"
 msgstr "ચલોની યાદી"
 
-#: src/interface.c:1431
+#: src/interface.c:1429
 msgid "Functions List"
 msgstr "વિધેયોની યાદી"
 
-#: src/interface.c:1452
+#: src/interface.c:1450
 msgid "Macros List"
 msgstr "મેક્રોસની યાદી"
 
-#: src/interface.c:1508
+#: src/interface.c:1506
 msgid "Choose a register"
 msgstr "રજીસ્ટર પસંદ કરો"
 

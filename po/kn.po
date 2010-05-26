@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"POT-Creation-Date: 2010-05-26 22:45+0530\n"
 "PO-Revision-Date: 2010-02-27 23:22+0000\n"
 "Last-Translator: aniceberg <bharath.s.jois@gmail.com>\n"
 "Language-Team: Kannada <kn@li.org>\n"
@@ -300,7 +300,7 @@ msgid "To Dec"
 msgstr "ದಶಾಂಶಕ್ಕೆ"
 
 #: src/interface.c:666
-msgid "<b>Decimal - Hex Convertion</b>"
+msgid "Decimal - Hex Convertion"
 msgstr "ದಶಾಂಶದಿಂದ ಷೋಡಶಾಂಶಕ್ಕೆ ಪರಿವರ್ತನೆ"
 
 #: src/interface.c:694
@@ -320,7 +320,7 @@ msgid "Update Port Value"
 msgstr "ಪೋರ್ಟಿನ ಮೌಲ್ಯವನ್ನು ನವೀನಗೊಳಿಸಿ"
 
 #: src/interface.c:734
-msgid "<b>I/O Ports</b>"
+msgid "I/O Ports"
 msgstr "ಒಳ ಹೊರ ಕಿಂಡಿಗಳು"
 
 #: src/interface.c:758
@@ -340,8 +340,8 @@ msgid "Update Memory"
 msgstr "ಸ್ಮೃತಿಯನ್ನು ನವೀನಗೊಳಿಸು"
 
 #: src/interface.c:798
-msgid "<b>Memory</b>"
-msgstr "<b>ಸ್ಮೃತಿ</b>"
+msgid "Memory"
+msgstr "ಸ್ಮೃತಿ"
 
 #: src/interface.c:823
 msgid "Load me at"
@@ -389,35 +389,35 @@ msgstr "ಉಳಿಸು"
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim೮೦೮೫ ಸೂಚನೆಯೊಂದಿಗೆ ಪ್ರಾರಂಭಗೊಳಿಸು"
 
-#: src/interface.c:1257
+#: src/interface.c:1255
 msgid "1. How to use this simulator?"
 msgstr "೧. ಕೃತಕ ಯಂತ್ರವನ್ನು ಹೇಗೆ ಉಪಯೋಗಿಸುವುದು"
 
-#: src/interface.c:1265
+#: src/interface.c:1263
 msgid "_Tutorial"
 msgstr "ಶಿಕ್ಷಣೆ(_T)"
 
-#: src/interface.c:1270
+#: src/interface.c:1268
 msgid "A short tutorial on writing assembly code!"
 msgstr "ಮೂಲವನ್ನು ಬರೆಯಲು ಒಂದು ಸಣ್ಣ ತರಬೇತಿ!"
 
-#: src/interface.c:1277
+#: src/interface.c:1275
 msgid "2. Open an existing assembly program."
 msgstr "ಮುಂಚಿನಿಂದಲೂ ಇರುವ ಮೂಲವನ್ನು ತೆರೆ"
 
-#: src/interface.c:1285
+#: src/interface.c:1283
 msgid "_Open program"
 msgstr "ಪ್ರಕಾರವನ್ನು ತೆರೆ"
 
-#: src/interface.c:1290
+#: src/interface.c:1288
 msgid "Open an already saved program"
 msgstr "ಮುಂಚೆ ಉಳಿಸಿದ ಪ್ರಕಾರವನ್ನು ತೆರೆ"
 
-#: src/interface.c:1292
+#: src/interface.c:1290
 msgid "What do you want to do now?"
 msgstr "ಈಗ ಏನು ಮಾಡಬೇಕೆಂದು ಅಭಿಪ್ರಾಯ?"
 
-#: src/interface.c:1302
+#: src/interface.c:1300
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -425,31 +425,31 @@ msgstr ""
 "\"doc\" ಕೋಶಕದಲ್ಲಿರುವ ವಿವರಗಳನ್ನು ಓದಲು \n"
 "ಮರೆಯದಿರಿ"
 
-#: src/interface.c:1363
+#: src/interface.c:1361
 msgid "Choose a symbol"
 msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ಆರಿಸಿ"
 
-#: src/interface.c:1386
+#: src/interface.c:1384
 msgid "Enter a symbol or choose one from the lists"
 msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ಆರಿಸಿ ಅಥವಾ ನೀವೇ ಸ್ವತಹ ಭರ್ತಿ ಮಾಡಿ"
 
-#: src/interface.c:1396
+#: src/interface.c:1394
 msgid "Enter Symbol"
 msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ನೀವೇ ಸ್ವತಹ ಭರ್ತಿ ಮಾಡಿ"
 
-#: src/interface.c:1410
+#: src/interface.c:1408
 msgid "Variables List"
 msgstr "ಮಾರ್ಪಡಿಸಬಹುದಾದ ವಸ್ತುಗಳ ಪಟ್ಟಿ"
 
-#: src/interface.c:1431
+#: src/interface.c:1429
 msgid "Functions List"
 msgstr "ಕಾರ್ಯ ಪಟ್ಟಿ"
 
-#: src/interface.c:1452
+#: src/interface.c:1450
 msgid "Macros List"
 msgstr "ಚಿನ್ಹೆ ಪಟ್ಟಿ"
 
-#: src/interface.c:1508
+#: src/interface.c:1506
 msgid "Choose a register"
 msgstr "ಒಂದು ಧಾಕಲೆಯನ್ನು ಆರಿಸಿರಿ"
 
@@ -547,8 +547,7 @@ msgstr "DB: ಓಪೆರಾಂಡ್ ನಲ್ಲಿ ದೋಷವುಂಟು"
 msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
-msgstr ""
-"ನಿರರ್ಥಕ ಓಪೆರಾಂಡ್ ಅಥವಾ ಚಿನ್ಹೇ. ಸಂಖ್ಯೆಯಿಂದ ಆರಂಭಗೊಳಿಸಬೇಕೇನೆಂದು ಪರೀಕ್ಷಿಸಿ"
+msgstr "ನಿರರ್ಥಕ ಓಪೆರಾಂಡ್ ಅಥವಾ ಚಿನ್ಹೇ. ಸಂಖ್ಯೆಯಿಂದ ಆರಂಭಗೊಳಿಸಬೇಕೇನೆಂದು ಪರೀಕ್ಷಿಸಿ"
 
 #: src/8085-asm.c:86
 msgid "Program assembled successfully"
@@ -569,13 +568,12 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
-"ನಿರರ್ಥಕವಾದ ಆದೇಶವನ್ನು ಓಡಿಸಲು ಪ್ರಯತ್ನ <%xH> ನಲ್ಲಿ. ನಿರ್ವಾಹನೆಯನ್ನು "
-"ನಿಲ್ಲಿಸಲಾಗುವುದು!\n"
+"ನಿರರ್ಥಕವಾದ ಆದೇಶವನ್ನು ಓಡಿಸಲು ಪ್ರಯತ್ನ <%xH> ನಲ್ಲಿ. ನಿರ್ವಾಹನೆಯನ್ನು ನಿಲ್ಲಿಸಲಾಗುವುದು!\n"
 "\n"
-"ನಿಮ್ಮ ಕ್ರಮದ ಅಂತ್ಯದಲ್ಲಿ  ಆದೇಶವನ್ನು ಉಪಯೋಗಿಸಿದ್ದೀರೆಂದು ಪರೀಕ್ಷಿಸಿ. ನಿಮ್ಮ ಮೂಲ "
-"ಕ್ರಮ ಖಾಲಿ ಇಲ್ಲವೆಂದು ಪರೀಕ್ಷಿಸಿ. ಒಮ್ಮೆ ಕ್ರಮವನ್ನು ಕೂಡ ಪರೀಕ್ಷಿಸಿ. ನೀವು ಖಂಡಿತವಾಗಿ "
-"ಸರಿಯನ್ನಿಸಿದರಲ್ಲಿ ನಿಮ್ಮ ಮೂಲ(ಕೋಡ್)ವನ್ನು ನಮಗೆ ನೀಡಿರಿ. ನಾವೊಮ್ಮೆ ಪರೀಕ್ಷಿಸುತ್ತೇವೆ. "
-"GNUSim೮೦೮೫ ನಲಿ ದೋಷವಿರಬಹುದು."
+"ನಿಮ್ಮ ಕ್ರಮದ ಅಂತ್ಯದಲ್ಲಿ  ಆದೇಶವನ್ನು ಉಪಯೋಗಿಸಿದ್ದೀರೆಂದು ಪರೀಕ್ಷಿಸಿ. ನಿಮ್ಮ ಮೂಲ ಕ್ರಮ ಖಾಲಿ "
+"ಇಲ್ಲವೆಂದು ಪರೀಕ್ಷಿಸಿ. ಒಮ್ಮೆ ಕ್ರಮವನ್ನು ಕೂಡ ಪರೀಕ್ಷಿಸಿ. ನೀವು ಖಂಡಿತವಾಗಿ ಸರಿಯನ್ನಿಸಿದರಲ್ಲಿ "
+"ನಿಮ್ಮ ಮೂಲ(ಕೋಡ್)ವನ್ನು ನಮಗೆ ನೀಡಿರಿ. ನಾವೊಮ್ಮೆ ಪರೀಕ್ಷಿಸುತ್ತೇವೆ. GNUSim೮೦೮೫ ನಲಿ "
+"ದೋಷವಿರಬಹುದು."
 
 #: src/bridge.c:288
 msgid "Assembler: running"
@@ -657,5 +655,4 @@ msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
-"POPಆದೇಶವನ್ನು PUSHಗಿಂತಲು ಹೆಚ್ಚು ಉಪಯೋಗಿಸಲು ಪ್ರಯತ್ನ. ಒಮ್ಮೆ ನಿಮ್ಮ ಪ್ರಕಾರವನ್ನು "
-"ಪರಿಶೀಲಿಸಿ"
+"POPಆದೇಶವನ್ನು PUSHಗಿಂತಲು ಹೆಚ್ಚು ಉಪಯೋಗಿಸಲು ಪ್ರಯತ್ನ. ಒಮ್ಮೆ ನಿಮ್ಮ ಪ್ರಕಾರವನ್ನು ಪರಿಶೀಲಿಸಿ"

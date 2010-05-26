@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"POT-Creation-Date: 2010-05-26 22:45+0530\n"
 "PO-Revision-Date: 2010-04-22 15:12+0000\n"
 "Last-Translator: José Roberto <tickbrown@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -302,8 +302,8 @@ msgid "To Dec"
 msgstr "Para decimal"
 
 #: src/interface.c:666
-msgid "<b>Decimal - Hex Convertion</b>"
-msgstr "<b>Decimal - Hex Conversão</b>"
+msgid "Decimal - Hex Convertion"
+msgstr "Decimal - Hex Conversão"
 
 #: src/interface.c:694
 msgid "Change the port address to view here"
@@ -322,8 +322,8 @@ msgid "Update Port Value"
 msgstr "Atualiza o valor do Porto"
 
 #: src/interface.c:734
-msgid "<b>I/O Ports</b>"
-msgstr "Portos de I/O"
+msgid "I/O Ports"
+msgstr "Portas IO"
 
 #: src/interface.c:758
 msgid "Change the memory location to view here"
@@ -342,8 +342,8 @@ msgid "Update Memory"
 msgstr "Atualizar memória"
 
 #: src/interface.c:798
-msgid "<b>Memory</b>"
-msgstr "<b>Memória</b>"
+msgid "Memory"
+msgstr "Memória"
 
 #: src/interface.c:823
 msgid "Load me at"
@@ -394,35 +394,35 @@ msgstr "Salvar para o arquivo"
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 começa com diálogo"
 
-#: src/interface.c:1257
+#: src/interface.c:1255
 msgid "1. How to use this simulator?"
 msgstr "Como usar esse simulador?"
 
-#: src/interface.c:1265
+#: src/interface.c:1263
 msgid "_Tutorial"
 msgstr "_Tutorial"
 
-#: src/interface.c:1270
+#: src/interface.c:1268
 msgid "A short tutorial on writing assembly code!"
 msgstr "Um modesto tutorial sobre comoprogramar em assembly!"
 
-#: src/interface.c:1277
+#: src/interface.c:1275
 msgid "2. Open an existing assembly program."
 msgstr "Abrir um programa"
 
-#: src/interface.c:1285
+#: src/interface.c:1283
 msgid "_Open program"
 msgstr "_Abrir programa"
 
-#: src/interface.c:1290
+#: src/interface.c:1288
 msgid "Open an already saved program"
 msgstr "Abrir um programa já salvo"
 
-#: src/interface.c:1292
+#: src/interface.c:1290
 msgid "What do you want to do now?"
 msgstr "O que você deseja fazer agora?"
 
-#: src/interface.c:1302
+#: src/interface.c:1300
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -430,31 +430,31 @@ msgstr ""
 "Não esqueça de ler a documentação \n"
 "dada no diretório \"doc\"."
 
-#: src/interface.c:1363
+#: src/interface.c:1361
 msgid "Choose a symbol"
 msgstr "Escolha um símbolo"
 
-#: src/interface.c:1386
+#: src/interface.c:1384
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Insira um símbolo ou escolha um da lista"
 
-#: src/interface.c:1396
+#: src/interface.c:1394
 msgid "Enter Symbol"
 msgstr "Insira símbolo"
 
-#: src/interface.c:1410
+#: src/interface.c:1408
 msgid "Variables List"
 msgstr "Lista de variáveis"
 
-#: src/interface.c:1431
+#: src/interface.c:1429
 msgid "Functions List"
 msgstr "Lista de Funções"
 
-#: src/interface.c:1452
+#: src/interface.c:1450
 msgid "Macros List"
 msgstr "Lista de Macros"
 
-#: src/interface.c:1508
+#: src/interface.c:1506
 msgid "Choose a register"
 msgstr "Escolha um registro"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"POT-Creation-Date: 2010-05-26 22:45+0530\n"
 "PO-Revision-Date: 2010-01-29 02:25+0000\n"
 "Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
@@ -302,8 +302,8 @@ msgid "To Dec"
 msgstr "A Dec"
 
 #: src/interface.c:666
-msgid "<b>Decimal - Hex Convertion</b>"
-msgstr "<b>Conversión decimal - hexadecimal</b>"
+msgid "Decimal - Hex Convertion"
+msgstr "Conversión decimal - hexadecimal"
 
 #: src/interface.c:694
 msgid "Change the port address to view here"
@@ -322,8 +322,8 @@ msgid "Update Port Value"
 msgstr "Actualizar valor del puertu"
 
 #: src/interface.c:734
-msgid "<b>I/O Ports</b>"
-msgstr "<b>Puertos E/S</b>"
+msgid "I/O Ports"
+msgstr "Puertos E/S"
 
 #: src/interface.c:758
 msgid "Change the memory location to view here"
@@ -342,8 +342,8 @@ msgid "Update Memory"
 msgstr "Actualizar memoria"
 
 #: src/interface.c:798
-msgid "<b>Memory</b>"
-msgstr "<b>Memoria</b>"
+msgid "Memory"
+msgstr "_Memoria"
 
 #: src/interface.c:823
 msgid "Load me at"
@@ -393,35 +393,35 @@ msgstr "Guardar a ficheru"
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 entama con diálogu"
 
-#: src/interface.c:1257
+#: src/interface.c:1255
 msgid "1. How to use this simulator?"
 msgstr "¿Cómo usar esti simulador?"
 
-#: src/interface.c:1265
+#: src/interface.c:1263
 msgid "_Tutorial"
 msgstr "_Tutorial"
 
-#: src/interface.c:1270
+#: src/interface.c:1268
 msgid "A short tutorial on writing assembly code!"
 msgstr "¡Un tutorial curtiu sobro la escritura de códigu n'ensamblador!"
 
-#: src/interface.c:1277
+#: src/interface.c:1275
 msgid "2. Open an existing assembly program."
 msgstr "2. Abrir un programa ensamblador esistente."
 
-#: src/interface.c:1285
+#: src/interface.c:1283
 msgid "_Open program"
 msgstr "Abrir pr_ograma"
 
-#: src/interface.c:1290
+#: src/interface.c:1288
 msgid "Open an already saved program"
 msgstr "Abrir un programa yá guardáu"
 
-#: src/interface.c:1292
+#: src/interface.c:1290
 msgid "What do you want to do now?"
 msgstr "¿Qué quier facer agora?"
 
-#: src/interface.c:1302
+#: src/interface.c:1300
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -429,31 +429,31 @@ msgstr ""
 "Nun escaeza lleer la documentación \n"
 "que s'ufre nel direutoriu «doc»."
 
-#: src/interface.c:1363
+#: src/interface.c:1361
 msgid "Choose a symbol"
 msgstr "Escueya un símbolu"
 
-#: src/interface.c:1386
+#: src/interface.c:1384
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Amestar un símbolu o escoyer unu de les llistes"
 
-#: src/interface.c:1396
+#: src/interface.c:1394
 msgid "Enter Symbol"
 msgstr "Amestar símbolu"
 
-#: src/interface.c:1410
+#: src/interface.c:1408
 msgid "Variables List"
 msgstr "Llista de variables"
 
-#: src/interface.c:1431
+#: src/interface.c:1429
 msgid "Functions List"
 msgstr "Llista de funciones"
 
-#: src/interface.c:1452
+#: src/interface.c:1450
 msgid "Macros List"
 msgstr "Llista de macros"
 
-#: src/interface.c:1508
+#: src/interface.c:1506
 msgid "Choose a register"
 msgstr "Escoyer un rexistru"
 

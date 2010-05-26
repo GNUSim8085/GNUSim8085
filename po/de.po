@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2010-02-27 19:35+0530\n"
+"POT-Creation-Date: 2010-05-26 22:45+0530\n"
 "PO-Revision-Date: 2010-05-07 22:19+0000\n"
 "Last-Translator: Florian Sievers <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
@@ -295,8 +295,8 @@ msgid "To Dec"
 msgstr "Nach Dezimal"
 
 #: src/interface.c:666
-msgid "<b>Decimal - Hex Convertion</b>"
-msgstr "<b>Dezimal - Hexadezimal-Umwandlung</b>"
+msgid "Decimal - Hex Convertion"
+msgstr "Dezimal - Hexadezimal-Umwandlung"
 
 #: src/interface.c:694
 msgid "Change the port address to view here"
@@ -315,8 +315,8 @@ msgid "Update Port Value"
 msgstr "Port-Wert aktualisieren"
 
 #: src/interface.c:734
-msgid "<b>I/O Ports</b>"
-msgstr "<b>Ein- / Ausgabeports</b>"
+msgid "I/O Ports"
+msgstr "Ein- / Ausgabeports"
 
 #: src/interface.c:758
 msgid "Change the memory location to view here"
@@ -335,8 +335,8 @@ msgid "Update Memory"
 msgstr "Speicher aktualisieren"
 
 #: src/interface.c:798
-msgid "<b>Memory</b>"
-msgstr "<b>Speicher</b>"
+msgid "Memory"
+msgstr "Speicher"
 
 #: src/interface.c:823
 msgid "Load me at"
@@ -344,8 +344,7 @@ msgstr "Laden bei"
 
 #: src/interface.c:831
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr ""
-"Geben Sie die Programm-Adresse ein. Hex-Adressen müssen mit 'h' enden."
+msgstr "Geben Sie die Programm-Adresse ein. Hex-Adressen müssen mit 'h' enden."
 
 #: src/interface.c:849
 msgid "Variables"
@@ -388,35 +387,35 @@ msgstr "In Datei speichern"
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 starten mit Dialog"
 
-#: src/interface.c:1257
+#: src/interface.c:1255
 msgid "1. How to use this simulator?"
 msgstr "1. Benutzung des Simulators"
 
-#: src/interface.c:1265
+#: src/interface.c:1263
 msgid "_Tutorial"
 msgstr "_Einführung"
 
-#: src/interface.c:1270
+#: src/interface.c:1268
 msgid "A short tutorial on writing assembly code!"
 msgstr "Eine kurze Einführung zur Programmierung in Assemblersprache"
 
-#: src/interface.c:1277
+#: src/interface.c:1275
 msgid "2. Open an existing assembly program."
 msgstr "2. Öffnen eines existierenden Programmes"
 
-#: src/interface.c:1285
+#: src/interface.c:1283
 msgid "_Open program"
 msgstr "_Programm öffnen"
 
-#: src/interface.c:1290
+#: src/interface.c:1288
 msgid "Open an already saved program"
 msgstr "Öffnen eines bereits gespeicherten Programmes"
 
-#: src/interface.c:1292
+#: src/interface.c:1290
 msgid "What do you want to do now?"
 msgstr "Was möchten Sie nun tun?"
 
-#: src/interface.c:1302
+#: src/interface.c:1300
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -424,31 +423,31 @@ msgstr ""
 "Bitten versäumen Sie es nicht, auch die Dokumentation zu lesen,\n"
 "die sich im Unterverzeichnis \"doc\" befindet."
 
-#: src/interface.c:1363
+#: src/interface.c:1361
 msgid "Choose a symbol"
 msgstr "Symbol auswählen"
 
-#: src/interface.c:1386
+#: src/interface.c:1384
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Symbol eingeben oder aus einer der Listen wählen"
 
-#: src/interface.c:1396
+#: src/interface.c:1394
 msgid "Enter Symbol"
 msgstr "Symbol eingeben"
 
-#: src/interface.c:1410
+#: src/interface.c:1408
 msgid "Variables List"
 msgstr "Variablenliste"
 
-#: src/interface.c:1431
+#: src/interface.c:1429
 msgid "Functions List"
 msgstr "Funktionsliste"
 
-#: src/interface.c:1452
+#: src/interface.c:1450
 msgid "Macros List"
 msgstr "Makroliste"
 
-#: src/interface.c:1508
+#: src/interface.c:1506
 msgid "Choose a register"
 msgstr "Ein Register wählen"
 

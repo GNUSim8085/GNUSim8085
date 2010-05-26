@@ -1223,7 +1223,7 @@ create_window_start (void)
   GtkWidget *start_but_close;
   GtkWidget *label166;
 
-  window_start = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  window_start = gtk_dialog_new ();
   gtk_window_set_title (GTK_WINDOW (window_start), _("GNUSim8085 start with dialog"));
   gtk_window_set_position (GTK_WINDOW (window_start), GTK_WIN_POS_CENTER);
   gtk_window_set_modal (GTK_WINDOW (window_start), TRUE);
@@ -1235,9 +1235,7 @@ create_window_start (void)
       gdk_pixbuf_unref (window_start_icon_pixbuf);
     }
 
-  vbox15 = gtk_vbox_new (FALSE, 0);
-  gtk_widget_show (vbox15);
-  gtk_container_add (GTK_CONTAINER (window_start), vbox15);
+  vbox15 = GTK_DIALOG (window_start)-> vbox;
   gtk_container_set_border_width (GTK_CONTAINER (vbox15), 5);
 
   frame13 = gtk_frame_new (NULL);

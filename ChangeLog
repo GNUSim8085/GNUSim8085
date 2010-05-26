@@ -1,3 +1,8 @@
+2010-05-26  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/interface.c: Change startup dialog from GtkWindow to GtkDialog.
+	The 'modal' behaviour works as expected. Fixes LP: #519828.
+
 2010-05-25  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/support.c: Fix stupid mistake - trying to access message from

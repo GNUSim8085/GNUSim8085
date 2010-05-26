@@ -1,5 +1,6 @@
 GNUSim8085 1.3.7 (UNRELEASED)
 
+Fix:     LP: #519828 - Start-up dialog should not be minimised
 Fix:     LP: #579319 - Help -> about = crash
 
 Translations:

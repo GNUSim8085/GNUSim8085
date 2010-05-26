@@ -663,7 +663,7 @@ create_window_main (void)
   gtk_widget_show (image369);
   gtk_box_pack_start (GTK_BOX (hbox38), image369, TRUE, TRUE, 0);
 
-  label153 = gtk_label_new (_("<b>Decimal - Hex Convertion</b>"));
+  label153 = gtk_label_new (g_strconcat("<b>", _("Decimal - Hex Convertion"), "</b>", NULL));
   gtk_widget_show (label153);
   gtk_box_pack_start (GTK_BOX (hbox38), label153, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label153), TRUE);
@@ -731,7 +731,7 @@ create_window_main (void)
   gtk_widget_show (image367);
   gtk_box_pack_start (GTK_BOX (hbox36), image367, TRUE, TRUE, 0);
 
-  label164 = gtk_label_new (_("<b>I/O Ports</b>"));
+  label164 = gtk_label_new (g_strconcat("<b>", _("I/O Ports"), "</b>", NULL));
   gtk_widget_show (label164);
   gtk_box_pack_start (GTK_BOX (hbox36), label164, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label164), TRUE);
@@ -795,7 +795,7 @@ create_window_main (void)
   gtk_widget_show (image368);
   gtk_box_pack_start (GTK_BOX (hbox37), image368, TRUE, TRUE, 0);
 
-  label165 = gtk_label_new (_("<b>Memory</b>"));
+  label165 = gtk_label_new (g_strconcat("<b>", _("Memory"), "</b>", NULL));
   gtk_widget_show (label165);
   gtk_box_pack_start (GTK_BOX (hbox37), label165, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label165), TRUE);

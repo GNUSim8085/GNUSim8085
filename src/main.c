@@ -30,6 +30,7 @@
 #include "gui-list-data.h"
 #include "gui-list-stack.h"
 #include "gui-keypad.h"
+#include "gui-list-memory.h"
 #include "bridge.h"
 #include "callbacks.h"
 #include "file-op.h"
@@ -55,6 +56,8 @@ main (int argc, char *argv[])
   gui_list_data_attach_me ();
   gui_list_stack_attach_me ();
   gui_keypad_attach_me ();
+  gui_list_memory_attach_me ();
+  gui_list_memory_initialize ();
   b_init ();
 
   /* Start with NEW file */

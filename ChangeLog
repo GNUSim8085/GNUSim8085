@@ -1,3 +1,9 @@
+2010-05-31  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/*.c, src/*.h, src/Makefile.am, AUTHORS: Add editable memory
+	listing as a tab, thanks to Debajit for the huge patch. :-)
+	Fixes: LP: #579341.
+
 2010-05-26  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/interface.c: Change startup dialog from GtkWindow to GtkDialog.

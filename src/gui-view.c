@@ -23,6 +23,7 @@
 #include "asm-source.h"
 #include "gui-list-data.h"
 #include "gui-list-stack.h"
+#include "gui-list-memory.h"
 #include "asm-ds-symtable.h"
 
 typedef struct
@@ -264,4 +265,5 @@ gui_view_update_all (void)
   /* update data, stack lists */
   gui_view_update_data ();
   gui_view_update_stack ();
+  gui_list_memory_update ();
 }

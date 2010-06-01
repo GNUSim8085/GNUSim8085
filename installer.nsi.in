@@ -2,8 +2,8 @@
 # AUTHOR - Onkar Shinde <onkarshinde@gmail.com>
 # LICENSE: Same as specified in COPYING file
 #
-# NOTE: Tested with NSIS 2.43 only. 2.43 is giving problem when trying to set
-# icon for installer. You may have to disable icon if you are trying to build
+# NOTE: Tested with NSIS 2.43 and 2.46 only. 2.43 is giving problem when trying to
+# set icon for installer. You may have to disable icon if you are trying to build
 # installer.
 
 # Pass -DINC_GTK to makensis to enable inclusion of GTK+ runtime.
@@ -16,6 +16,9 @@
 
 # Required for proper handling of start menu on Windows Vista
 RequestExecutionLevel admin
+
+# Better compression, hence smaller size for installer
+SetCompressor /SOLID lzma
 
 # Define application name and installer file name
 Name GNUSim8085

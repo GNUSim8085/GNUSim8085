@@ -94,8 +94,9 @@ Section "!GNUSim8085" SecMain
 SectionIn RO
   SetOutPath $INSTDIR
   !system 'make'
-  !system 'cp /usr/i586-mingw32msvc/bin/libgtksourceview-2.0-0.dll src/'
-  !system 'cp /usr/i586-mingw32msvc/bin/libxml2.dll src/'
+  !system 'make DESTDIR=`pwd`/win32'
+  !system 'cp /usr/i586-mingw32msvc/bin/libgtksourceview-2.0-0.dll win32/bin/'
+  !system 'cp /usr/i586-mingw32msvc/bin/libxml2.dll win32/bin/'
   !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/language2.rng data/'
   !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/def.lang data/'
   !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/styles/styles.rng data/'
@@ -105,12 +106,11 @@ SectionIn RO
   File COPYING
   File NEWS
   File TODO
-  File src/gnusim8085.exe
+  File win32/bin/*
   File /r /x Makefile* data
-  File /r doc/examples
+  File /r win32/share/doc/gnusim8085/examples
+  File /r win32/share/locale
   File /r /x Makefile* pixmaps
-  File src/libgtksourceview-2.0-0.dll
-  File src/libxml2.dll
   # Make example program files read only
   SetFileAttributes $INSTDIR\examples\addwithcarry.asm READONLY
   SetFileAttributes $INSTDIR\examples\bcd2bin.asm READONLY
@@ -121,12 +121,11 @@ SectionIn RO
   CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085.ico"
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
-  !system 'rm -f src/libgtksourceview-2.0-0.dll'
-  !system 'rm -f src/libxml2.dll'
   !system 'rm -f data/language2.rng'
   !system 'rm -f data/styles.rng'
   !system 'rm -f data/classic.xml'
   !system 'rm -f data/def.lang'
+  !system 'rm -rf win32'
 SectionEnd
 
 !ifdef INC_GTK

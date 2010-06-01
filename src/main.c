@@ -39,9 +39,18 @@ int
 main (int argc, char *argv[])
 {
   GtkWidget *statusbar;
+  gchar *root, *localedir = LOCALEDIR;
+  if (!strcmp(localedir, "locale"))
+  {
+    root = g_win32_get_package_installation_directory_of_module (NULL);
+    localedir = g_build_filename (root, "locale", NULL);
+    g_free (root);
+  }
 
   setlocale (LC_ALL, "");
-  bindtextdomain (PACKAGE, LOCALEDIR);
+  bindtextdomain (PACKAGE, localedir);
+  g_free (localedir);
+  bind_textdomain_codeset (PACKAGE, "UTF-8");
   textdomain (PACKAGE);
 
   gtk_init (&argc, &argv);

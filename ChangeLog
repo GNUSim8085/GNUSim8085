@@ -1,6 +1,8 @@
 2010-06-01  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* po/*.po, AUTHORS: Updated translations from Launchpad.
+	* src/main.c, src/Makefile.am, installer.nsi.in, WINDOWS-PORT.txt: Some
+	modifications to make i18n support work on Windows.
 
 2010-05-31  Onkar Shinde  <onkarshinde@gmail.com>
 

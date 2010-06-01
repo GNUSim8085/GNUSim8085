@@ -10,7 +10,6 @@ INCLUDES = \
         $(GTKSOURCEVIEW2_CFLAGS)
 
 gnusim8085_CFLAGS =\
-	 -DLOCALEDIR=\"$(localedir)\"\
 	 -DPACKAGE_DOC_DIR=\"$(docdir)\"\
 	 -Wall\
 	 -O1\
@@ -18,8 +17,11 @@ gnusim8085_CFLAGS =\
 
 if WIN32
 gnusim8085_CFLAGS += \
+	 -DLOCALEDIR=\"locale\"\
         -mms-bitfields  \
         -mwindows
+else
+	 -DLOCALEDIR=\"$(localedir)\"
 endif
 
 bin_PROGRAMS = gnusim8085

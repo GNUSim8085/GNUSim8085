@@ -15,15 +15,21 @@ How to build (using mingw cross compiler, on a linux system):
     b. Download libxml2 zip file from http://www.zlatkovic.com/pub/libxml/
        and extract it in mingw directory.
 
-  2. Before doing "./configure --target=i586-mingw32msvc ..."
+  2. Before doing "./configure --host=i586-mingw32msvc ..."
     a. Comment out Requires.private from gtksourceview-2.0.pc. This needs to
        be done to workaround problem in libxml2 distribution.
+    b. Modify the configure script and delete any lines containing word
+       '_nl_expand_alias'. This needs to be done to workaround a bug in autoconf
+       macro for gettext detection.
+
+  3. Use configure command as follows
+     ./configure --host=i586-mingw32msvc --prefix=/
 
 How to build installer (using nsis, on a linux system):
 
   1. Make sure you have nsis installed.
 
-  2. After doing "./configure --target=i586-mingw32msvc ..."
+  2. After doing "./configure --host=i586-mingw32msvc ..."
     a. Execute command "makensis installer.nsi".
        This builds the application and then installer.
 

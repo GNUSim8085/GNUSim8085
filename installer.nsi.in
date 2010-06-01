@@ -94,7 +94,7 @@ Section "!GNUSim8085" SecMain
 SectionIn RO
   SetOutPath $INSTDIR
   !system 'make'
-  !system 'make DESTDIR=`pwd`/win32'
+  !system 'make DESTDIR=`pwd`/win32 install'
   !system 'cp /usr/i586-mingw32msvc/bin/libgtksourceview-2.0-0.dll win32/bin/'
   !system 'cp /usr/i586-mingw32msvc/bin/libxml2.dll win32/bin/'
   !system 'cp /usr/i586-mingw32msvc/share/gtksourceview-2.0/language-specs/language2.rng data/'

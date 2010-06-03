@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-05-26 22:45+0530\n"
-"PO-Revision-Date: 2010-05-07 22:19+0000\n"
-"Last-Translator: Florian Sievers <Unknown>\n"
+"PO-Revision-Date: 2010-06-01 10:36+0000\n"
+"Last-Translator: Michael Konrad <Nephelyn@arcor.de>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-05-26 16:36+0000\n"
+"X-Launchpad-Export-Date: 2010-06-02 06:40+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:216
@@ -182,7 +182,7 @@ msgstr "Schritt in den code"
 
 #: src/interface.c:46
 msgid "Step o_ver"
-msgstr ""
+msgstr "Ü_berspringen"
 
 #: src/interface.c:46
 msgid "Step over the code without calling functions"
@@ -372,6 +372,7 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Florian Sievers https://launchpad.net/~florian-sievers\n"
 "  Johannes Möller https://launchpad.net/~jojo-moeller\n"
+"  Michael Konrad https://launchpad.net/~nephelyn\n"
 "  The Escapist https://launchpad.net/~wisd00m\n"
 "  Tommy Hartmann https://launchpad.net/~ahrak"
 

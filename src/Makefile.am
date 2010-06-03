@@ -21,6 +21,7 @@ gnusim8085_CFLAGS += \
         -mms-bitfields  \
         -mwindows
 else
+gnusim8085_CFLAGS += \
 	 -DLOCALEDIR=\"$(localedir)\"
 endif
 

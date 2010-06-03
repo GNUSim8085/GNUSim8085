@@ -80,7 +80,7 @@ create_me (void)
   _add_column (view, C_ADDR, _("Stack Loc"));
   _add_column (view, C_NAME, _("Proc/Reg"));
   _add_column (view, C_VAL_HEX, _("Value"));
-  _add_column (view, C_VAL, _("Value(Decimal)"));
+  _add_column (view, C_VAL, g_strconcat(_("Value"), " (", _("Decimal"), ")", NULL));
 }
 
 void

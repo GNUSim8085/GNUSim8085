@@ -4,6 +4,8 @@
 	* src/main.c: Fix crash on linux.
 	* installer.nsi.in: Add more languages to installer.
 	* po/de.po, AUTHORS: Updated German translation from launchpad.
+	* src/src/gui-list-data.c, src/gui-list-stack.c: Split translatable
+	string into two. Makes reuse of translations.
 
 2010-06-01  Onkar Shinde  <onkarshinde@gmail.com>
 

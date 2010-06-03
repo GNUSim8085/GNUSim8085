@@ -49,7 +49,6 @@ main (int argc, char *argv[])
 
   setlocale (LC_ALL, "");
   bindtextdomain (PACKAGE, localedir);
-  g_free (localedir);
   bind_textdomain_codeset (PACKAGE, "UTF-8");
   textdomain (PACKAGE);
 

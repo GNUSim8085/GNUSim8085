@@ -1,6 +1,7 @@
 2010-06-03  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/Makefile.am: Unbreak linux build. Stupid mistake about CFLAGS.
+	* src/main.c: Fix crash on linux.
 
 2010-06-01  Onkar Shinde  <onkarshinde@gmail.com>
 

@@ -1,6 +1,8 @@
 2010-06-04  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/interface.c: Fix icon loading on Windows by using fallback icon.
+	* tools/: Remove files from initial stages of development. Not needed
+	anymore.
 
 2010-06-03  Onkar Shinde  <onkarshinde@gmail.com>
 

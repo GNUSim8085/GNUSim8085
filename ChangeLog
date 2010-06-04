@@ -4,6 +4,7 @@
 	* tools/: Remove files from initial stages of development. Not needed
 	anymore.
 	* GNUSim8085.prj: Remove because none of the maintainers use Anjuta.
+	* GNUSim8085.glade: Remove as discussed on mailing list.
 
 2010-06-03  Onkar Shinde  <onkarshinde@gmail.com>
 

@@ -276,6 +276,9 @@ create_window_main (void)
   gtk_window_set_position (GTK_WINDOW (window_main), GTK_WIN_POS_CENTER);
   gtk_window_set_default_size (GTK_WINDOW (window_main), 500, 400);
   window_main_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!window_main_icon_pixbuf)
+    window_main_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+
   if (window_main_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_main), window_main_icon_pixbuf);
@@ -1191,8 +1194,13 @@ create_dialog_about (void)
   if (!strcmp (translators, "translator_credits"))
     translators = NULL;
   dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!dialog_about_logo_pixbuf)
+    dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085.ico");
 
   dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!dialog_about_icon_pixbuf)
+    dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+
   gtk_show_about_dialog (NULL,
 						 "name", name,
 						 "version", VERSION,
@@ -1229,6 +1237,9 @@ create_window_listing (void)
   gtk_window_set_position (GTK_WINDOW (window_listing), GTK_WIN_POS_CENTER);
   gtk_window_set_default_size (GTK_WINDOW (window_listing), 500, 400);
   window_listing_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!window_listing_icon_pixbuf)
+    window_listing_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+
   if (window_listing_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_listing), window_listing_icon_pixbuf);
@@ -1299,6 +1310,9 @@ create_window_start (void)
   gtk_window_set_modal (GTK_WINDOW (window_start), TRUE);
   gtk_window_set_resizable (GTK_WINDOW (window_start), FALSE);
   window_start_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!window_start_icon_pixbuf)
+    window_start_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+
   if (window_start_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_start), window_start_icon_pixbuf);
@@ -1437,6 +1451,9 @@ create_dialog_isymbol (void)
   gtk_window_set_position (GTK_WINDOW (dialog_isymbol), GTK_WIN_POS_MOUSE);
   gtk_window_set_resizable (GTK_WINDOW (dialog_isymbol), FALSE);
   dialog_isymbol_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!dialog_isymbol_icon_pixbuf)
+    dialog_isymbol_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+
   if (dialog_isymbol_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (dialog_isymbol), dialog_isymbol_icon_pixbuf);
@@ -1582,6 +1599,9 @@ create_dialog_ireg (void)
   gtk_window_set_position (GTK_WINDOW (dialog_ireg), GTK_WIN_POS_MOUSE);
   gtk_window_set_resizable (GTK_WINDOW (dialog_ireg), FALSE);
   dialog_ireg_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!dialog_ireg_icon_pixbuf)
+    dialog_ireg_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+
   if (dialog_ireg_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (dialog_ireg), dialog_ireg_icon_pixbuf);

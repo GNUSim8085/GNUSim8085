@@ -1,3 +1,7 @@
+2010-06-04  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/interface.c: Fix icon loading on Windows by using fallback icon.
+
 2010-06-03  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/Makefile.am: Unbreak linux build. Stupid mistake about CFLAGS.

@@ -1180,7 +1180,7 @@ create_dialog_about (void)
 {
   gchar **authors = read_authors();
   const gchar *documenters[] = {
-    "Sridhar Ratnakumar (srid@nearfar.org)",
+    "Sridhar Ratnakumar (sridhar.ratna@gmail.com)",
     NULL
   };
   /* TRANSLATORS: Replace this string with your names, one name per line. */

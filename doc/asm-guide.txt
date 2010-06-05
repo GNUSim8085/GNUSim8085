@@ -3,7 +3,7 @@ GNUSim8085 Assembly Language Guide
 
 :Date: 2003-10
 :Version: 1.0
-:Authors: Sridhar Ratnakumar <srid@nearfar.org>
+:Authors: Sridhar Ratnakumar <sridhar.ratna@gmail.com>
 
 
 Introduction

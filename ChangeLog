@@ -3,6 +3,8 @@
 	* src/file-op.c, src/file-op-gio.c: Add files opened/saved to recently
 	used file list. This way they show up in 'Recently Used' section of
 	file chooser dialog.
+	* src/interface.[c,h], src/support.[c,h]: Add copyright header since
+	the files are not 'generated' for long time.
 
 2010-06-04  Onkar Shinde  <onkarshinde@gmail.com>
 

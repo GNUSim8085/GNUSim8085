@@ -7,6 +7,7 @@
 	the files are not 'generated' for long time.
 	* src/gui-list-memory.[c,h]: Allocate copyright to Debajit Biswas as
 	these files were created from scratch for a new functionality.
+	* src/installer.nsi.in: Clear copyright statement.
 
 2010-06-04  Onkar Shinde  <onkarshinde@gmail.com>
 

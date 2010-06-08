@@ -1,5 +1,5 @@
 # NSIS installer script for for gnusim8085
-# AUTHOR - Onkar Shinde <onkarshinde@gmail.com>
+# Copyright (C) 2008  Onkar Shinde <onkarshinde@gmail.com>
 # LICENSE: Same as specified in COPYING file
 #
 # NOTE: Tested with NSIS 2.43 and 2.46 only. 2.43 is giving problem when trying to

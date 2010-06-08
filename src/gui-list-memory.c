@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2003  Sridhar Ratnakumar <sridhar.ratna@gmail.com>
+  Copyright (C) 2010  Debajit Biswas <http://launchpad.net/~debjitbis08>
 	
   This file is part of GNUSim8085.
 

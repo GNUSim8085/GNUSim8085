@@ -5,6 +5,8 @@
 	file chooser dialog.
 	* src/interface.[c,h], src/support.[c,h]: Add copyright header since
 	the files are not 'generated' for long time.
+	* src/gui-list-memory.[c,h]: Allocate copyright to Debajit Biswas as
+	these files were created from scratch for a new functionality.
 
 2010-06-04  Onkar Shinde  <onkarshinde@gmail.com>
 

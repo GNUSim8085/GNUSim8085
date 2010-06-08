@@ -30,7 +30,7 @@
 #define MAX_ERR_MSG_SIZE 512
 
 static GString *file_name = NULL;
-//static GtkFileSelection *file_selection = NULL;
+static GtkRecentManager *recent_manager = NULL;
 
 static void
 _set_file_name (gchar * name)
@@ -225,6 +225,9 @@ file_op_editor_save (void)
 	  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 		{
 		  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		  if (recent_manager == NULL)
+		    recent_manager = gtk_recent_manager_get_default ();
+		  gtk_recent_manager_add_item (recent_manager, g_strconcat ("file://", selected_filename, NULL));
 		  is_saved = ori_save(selected_filename, TRUE);
 		  g_free (selected_filename);
 		}
@@ -251,6 +254,9 @@ file_op_editor_save_as (void)
 	  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 		{
 		  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		  if (recent_manager == NULL)
+		    recent_manager = gtk_recent_manager_get_default ();
+		  gtk_recent_manager_add_item (recent_manager, g_strconcat ("file://", selected_filename, NULL));
 		  is_saved = ori_save(selected_filename, TRUE);
 		  g_free (selected_filename);
 		}
@@ -280,6 +286,9 @@ file_op_editor_open (void)
 	{
 
 	  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+	  if (recent_manager == NULL)
+	    recent_manager = gtk_recent_manager_get_default ();
+	  gtk_recent_manager_add_item (recent_manager, g_strconcat ("file://", selected_filename, NULL));
 	  ori_open(selected_filename, TRUE);
 	  g_free (selected_filename);
 	}
@@ -303,6 +312,9 @@ file_op_listing_save (gchar * text)
 	{
 
 	  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+	  if (recent_manager == NULL)
+	    recent_manager = gtk_recent_manager_get_default ();
+	  gtk_recent_manager_add_item (recent_manager, g_strconcat ("file://", selected_filename, NULL));
 
 	  fp = fopen (selected_filename, "w");
 	  if (fp == NULL)

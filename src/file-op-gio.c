@@ -30,7 +30,7 @@
 #define MAX_ERR_MSG_SIZE 512
 
 static GString *file_name = NULL;
-//static GtkFileSelection *file_selection = NULL;
+static GtkRecentManager *recent_manager = NULL;
 
 static void
 _set_file_name (gchar * name)
@@ -220,6 +220,9 @@ file_op_editor_save (void)
 	  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 		{
 		  selected_file = gtk_file_chooser_get_uri (GTK_FILE_CHOOSER (file_selector));
+		  if (recent_manager == NULL)
+		    recent_manager = gtk_recent_manager_get_default ();
+		  gtk_recent_manager_add_item (recent_manager, selected_file);
 		  is_saved = ori_save(selected_file, TRUE);
 		  g_free (selected_file);
 		}
@@ -246,6 +249,9 @@ file_op_editor_save_as (void)
 	  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 		{
 		  selected_file = gtk_file_chooser_get_uri (GTK_FILE_CHOOSER (file_selector));
+		  if (recent_manager == NULL)
+		    recent_manager = gtk_recent_manager_get_default ();
+		  gtk_recent_manager_add_item (recent_manager, selected_file);
 		  is_saved = ori_save(selected_file, TRUE);
 		  g_free (selected_file);
 		}
@@ -275,6 +281,9 @@ file_op_editor_open (void)
 	{
 
 	  selected_file = gtk_file_chooser_get_uri (GTK_FILE_CHOOSER (file_selector));
+	  if (recent_manager == NULL)
+	    recent_manager = gtk_recent_manager_get_default ();
+	  gtk_recent_manager_add_item (recent_manager, selected_file);
 	  ori_open(selected_file, TRUE);
 	  g_free (selected_file);
 	}
@@ -300,6 +309,9 @@ file_op_listing_save (gchar * text)
 	{
 
 	  selected_file = gtk_file_chooser_get_uri (GTK_FILE_CHOOSER (file_selector));
+	  if (recent_manager == NULL)
+	    recent_manager = gtk_recent_manager_get_default ();
+	  gtk_recent_manager_add_item (recent_manager, selected_file);
 
 	  fp = g_file_new_for_uri (selected_file);
 	  file_out = g_file_create (fp, G_FILE_CREATE_NONE, NULL, &error);

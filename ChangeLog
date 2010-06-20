@@ -1,6 +1,8 @@
 2010-06-20  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* po/pt_BR.po: Updated Brazilian Portuguese translation from launchpad.
+	* src/gui-list-message.c: Wrap assembler messages in the table cells.
+	Fixes UI problems when messages or translations are too long.
 
 2010-06-08  Onkar Shinde  <onkarshinde@gmail.com>
 

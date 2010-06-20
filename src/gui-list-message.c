@@ -43,9 +43,10 @@ _add_column (GtkTreeView * view, gint id, gchar * title)
   g_assert (view);
 
   renderer = gtk_cell_renderer_text_new ();
+  g_object_set (renderer, "wrap-mode", PANGO_WRAP_WORD, "wrap-width", 250, NULL);
   column = gtk_tree_view_column_new_with_attributes (title,
-													 renderer,
-													 "text", id, NULL);
+							 renderer,
+							 "text", id, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (view), column);
 }
 

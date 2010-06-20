@@ -1,3 +1,7 @@
+2010-06-20  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* po/pt_BR.po: Updated Brazilian Portuguese translation from launchpad.
+
 2010-06-08  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/file-op.c, src/file-op-gio.c: Add files opened/saved to recently

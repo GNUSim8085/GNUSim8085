@@ -224,7 +224,7 @@ asm_listing_generate (AsmSource * src)
 		
 	  g_assert (diff >= 0);
 		
-	  g_string_append_printf (listing, "%*s ", (max_len+1)%4 - diff + 1, " ");
+	  g_string_append_printf (listing, "%*s ", (max_len+1)%4 - diff + 1, "\t");
 	  g_assert (src->listing_buffer[i]->str);
 	  g_string_append ( listing, src->listing_buffer[i]->str);
 	  g_string_append ( listing, "\n");

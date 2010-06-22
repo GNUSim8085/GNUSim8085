@@ -9,7 +9,6 @@ gnusim8085_docdir = $(docdir)
 gnusim8085_doc_DATA = \
 	README\
 	AUTHORS\
-	ChangeLog\
 	NEWS\
 	TODO\
 	ABOUT-NLS

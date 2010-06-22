@@ -6,6 +6,8 @@
 	Includes address change ans other minor formatting changes.
 	* data/8085asm.lang: Add copyright/license information.
 	* config.guess, config.sub: Update to a bit recent copy of the files.
+	* Makefile.am: Do not install ChangeLog. Let distributions decide if
+	it should be included in binary packages.
 
 2010-06-20  Onkar Shinde  <onkarshinde@gmail.com>
 

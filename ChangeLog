@@ -1,3 +1,10 @@
+2010-06-22  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/*.[c,h]: Fix postal adress of FSF in file headers. Makes
+	licensecheck program in Debian happy.
+	* COPYING: Include exact text of license as available on FSF's website.
+	Includes address change ans other minor formatting changes.
+
 2010-06-20  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* po/pt_BR.po: Updated Brazilian Portuguese translation from launchpad.

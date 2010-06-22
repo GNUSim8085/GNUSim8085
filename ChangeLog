@@ -4,6 +4,7 @@
 	licensecheck program in Debian happy.
 	* COPYING: Include exact text of license as available on FSF's website.
 	Includes address change ans other minor formatting changes.
+	* data/8085asm.lang: Add copyright/license information.
 
 2010-06-20  Onkar Shinde  <onkarshinde@gmail.com>
 

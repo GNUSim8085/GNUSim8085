@@ -1,3 +1,9 @@
+2010-08-17  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/*.c, src/*.h, src/Makefile.am: Add editable I/O listing as a tab.
+	This is based on Debajit's work for memory editing. Hence copyright of
+	new files stays with him. Fixes LP: #579324.
+
 2010-06-22  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/*.[c,h]: Fix postal adress of FSF in file headers. Makes

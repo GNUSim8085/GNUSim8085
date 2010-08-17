@@ -51,6 +51,7 @@ gnusim8085_SOURCES = \
 	8085-link.c\
 	gui-view.c\
 	bridge.c\
+	gui-list-io.c\
 	gui-list-memory.c\
 	gui-list-message.c\
 	gui-list-data.c\
@@ -74,6 +75,7 @@ gnusim8085_SOURCES = \
 	gui-app.h\
 	gui-editor.h\
 	gui-list-data.h\
+	gui-list-io.h\
 	gui-list-memory.h\
 	gui-list-message.h\
 	gui-list-stack.h\

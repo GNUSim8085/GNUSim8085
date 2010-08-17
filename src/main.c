@@ -32,6 +32,7 @@
 #include "gui-list-stack.h"
 #include "gui-keypad.h"
 #include "gui-list-memory.h"
+#include "gui-list-io.h"
 #include "bridge.h"
 #include "callbacks.h"
 #include "file-op.h"
@@ -67,6 +68,8 @@ main (int argc, char *argv[])
   gui_keypad_attach_me ();
   gui_list_memory_attach_me ();
   gui_list_memory_initialize ();
+  gui_list_io_attach_me ();
+  gui_list_io_initialize ();
   b_init ();
 
   /* Start with NEW file */

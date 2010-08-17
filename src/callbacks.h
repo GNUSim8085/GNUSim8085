@@ -128,3 +128,7 @@ G_MODULE_EXPORT void on_mem_list_start_clicked (GtkButton * button, gpointer use
 
 G_MODULE_EXPORT void on_mem_list_start_changed (GtkEntry *entry, gpointer user_data);
 
+G_MODULE_EXPORT void on_io_list_start_clicked (GtkButton * button, gpointer user_data);
+
+G_MODULE_EXPORT void on_io_list_start_changed (GtkEntry * entry, gpointer user_data);
+

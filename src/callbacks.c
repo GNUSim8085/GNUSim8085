@@ -33,6 +33,7 @@
 #include "asm-listing.h"
 #include "file-op.h"
 #include "gui-list-memory.h"
+#include "gui-list-io.h"
 
 #define DEFAULT_LOAD_ADDR 0x4200
 
@@ -390,6 +391,8 @@ entry_to_mm (gchar * entry_name, gchar * spin_name, guint8 * base)
   base[(gint) gtk_spin_button_get_value (sb)] = val;
   if (!strcmp (entry_name,"main_mem_entry"))
     gui_list_memory_update_single (gtk_spin_button_get_value_as_int (sb));
+  if (!strcmp (entry_name,"main_io_entry"))
+    gui_list_io_update_single (gtk_spin_button_get_value_as_int (sb));
 }
 
 static void
@@ -626,6 +629,45 @@ on_mem_list_start_changed (GtkEntry *entry, gpointer user_data)
   }
   gui_list_memory_set_start (start_addr);
   gui_list_memory_update ();
+  text[strlen (text)] = 'h';
+  gtk_entry_set_text (GTK_ENTRY (entry), text);
+}
+
+void
+on_io_list_start_clicked (GtkButton * button, gpointer user_data)
+{
+  GtkWidget *start_entry;
+  gint start_addr;
+  gchar *text;
+
+  start_entry = lookup_widget (app->window_main, "io_list_start");
+  g_assert (start_entry);
+
+  if (!asm_util_parse_number (text = (gchar *)gtk_entry_get_text (GTK_ENTRY (start_entry)), &start_addr))
+  {
+    gui_app_show_msg (GTK_MESSAGE_INFO, _("Enter a valid number within range (0-255 / 0h-00FFh)"));
+    return;
+  }
+  gui_list_io_set_start (start_addr);
+  gui_list_io_update ();
+  text[strlen (text)] = 'h';
+  gtk_entry_set_text (GTK_ENTRY (start_entry), text);
+}
+
+void
+on_io_list_start_changed (GtkEntry *entry, gpointer user_data)
+{
+  gint start_addr;
+  gchar *text;
+  g_assert (entry);
+
+  if (!asm_util_parse_number (text = (gchar *)gtk_entry_get_text (GTK_ENTRY (entry)),&start_addr))
+  {
+    gui_app_show_msg (GTK_MESSAGE_INFO, _("Enter a valid number within range (0-255 / 0h-00FFh)"));
+    return;
+  }
+  gui_list_io_set_start (start_addr);
+  gui_list_io_update ();
   text[strlen (text)] = 'h';
   gtk_entry_set_text (GTK_ENTRY (entry), text);
 }

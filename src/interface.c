@@ -283,6 +283,16 @@ create_window_main (void)
   GtkWidget *label179;
   GtkWidget *mem_list_start;
   GtkWidget *button12;
+  GtkWidget *main_io_frame;
+  GtkWidget *label180;
+  GtkWidget *label181;
+  GtkWidget *alignment13;
+  GtkWidget *main_io_scroll;
+  GtkWidget *vbox20;
+  GtkWidget *hbox49;
+  GtkWidget *label182;
+  GtkWidget *io_list_start;
+  GtkWidget *button13;
   GtkActionGroup *action_group;
   GtkUIManager *ui_manager;
   GtkAccelGroup *accel_group;
@@ -991,6 +1001,50 @@ create_window_main (void)
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_memory_scroll), GTK_SHADOW_OUT);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_memory_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
+  main_io_frame = gtk_frame_new (NULL);
+  gtk_widget_show (main_io_frame);
+  gtk_container_add (GTK_CONTAINER (notebook5), main_io_frame);
+  gtk_container_set_border_width (GTK_CONTAINER (main_io_frame), 5);
+
+  label180 = gtk_label_new (_("I/O Ports"));
+  gtk_widget_show (label180);
+  gtk_frame_set_label_widget (GTK_FRAME (main_io_frame), label180);
+  gtk_label_set_justify (GTK_LABEL (label178), GTK_JUSTIFY_LEFT);
+  
+  label181 = gtk_label_new (_("I/O Ports"));
+  gtk_widget_show (label181);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 4), label181);
+  
+  alignment13 = gtk_alignment_new (0.50, 0.50, 1.00, 1.00);
+  gtk_widget_show (alignment13);
+  gtk_container_add (GTK_CONTAINER (main_io_frame), alignment13);
+  
+  vbox20 = gtk_vbox_new (FALSE, 2);
+  gtk_widget_show (vbox20);
+  gtk_container_add (GTK_CONTAINER (alignment13), vbox20);
+  
+  hbox49 = gtk_hbox_new (FALSE, 3);
+  gtk_widget_show (hbox49);
+  gtk_box_pack_start (GTK_BOX (vbox20), hbox49, FALSE, TRUE, 0);
+  
+  label182 = gtk_label_new (_("Start"));
+  gtk_widget_show (label182);
+  gtk_box_pack_start (GTK_BOX (hbox49), label182, FALSE, FALSE, 3);
+  
+  io_list_start = gtk_entry_new ();
+  gtk_widget_show (io_list_start);
+  gtk_box_pack_start (GTK_BOX (hbox49), io_list_start, TRUE, TRUE, 5);
+  
+  button13 = gtk_button_new_from_stock (GTK_STOCK_OK);
+  gtk_widget_show (button13);
+  gtk_box_pack_start (GTK_BOX (hbox49), button13, FALSE, FALSE, 5);
+  
+  main_io_scroll = gtk_scrolled_window_new (NULL, NULL);
+  gtk_widget_show (main_io_scroll);
+  gtk_container_add (GTK_CONTAINER (vbox20), main_io_scroll);
+  gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_io_scroll), GTK_SHADOW_OUT);
+  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_io_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
+
   main_progressbar = gtk_progress_bar_new();
   main_statusbar = gtk_statusbar_new();
   gtk_widget_show (main_progressbar);
@@ -1033,6 +1087,12 @@ create_window_main (void)
                     NULL);
   g_signal_connect ((gpointer) mem_list_start, "activate",
                     G_CALLBACK (on_mem_list_start_changed),
+                    NULL);
+  g_signal_connect ((gpointer) button13, "clicked",
+                    G_CALLBACK (on_io_list_start_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) io_list_start, "activate",
+                    G_CALLBACK (on_io_list_start_changed),
                     NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
@@ -1166,6 +1226,16 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_memory_scroll, "main_memory_scroll");
   GLADE_HOOKUP_OBJECT (window_main, label178, "label178");
   GLADE_HOOKUP_OBJECT (window_main, label177, "label177");
+  GLADE_HOOKUP_OBJECT (window_main, main_io_frame, "main_io_frame");
+  GLADE_HOOKUP_OBJECT (window_main, alignment13, "alignment13");
+  GLADE_HOOKUP_OBJECT (window_main, vbox20, "vbox20");
+  GLADE_HOOKUP_OBJECT (window_main, hbox49, "hbox49");
+  GLADE_HOOKUP_OBJECT (window_main, label182, "label182");
+  GLADE_HOOKUP_OBJECT (window_main, io_list_start, "io_list_start");
+  GLADE_HOOKUP_OBJECT (window_main, button13, "button13");
+  GLADE_HOOKUP_OBJECT (window_main, main_io_scroll, "main_io_scroll");
+  GLADE_HOOKUP_OBJECT (window_main, label181, "label181");
+  GLADE_HOOKUP_OBJECT (window_main, label180, "label180");
   GLADE_HOOKUP_OBJECT (window_main, main_progressbar, "main_progressbar");
   GLADE_HOOKUP_OBJECT (window_main, main_statusbar, "main_statusbar");
   GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/New"), "newfile"); 

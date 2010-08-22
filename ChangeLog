@@ -9,6 +9,7 @@
 	* src/callbacks.[c,h]: Add function to display tutorial text. Modify
 	callback functions to show the tutorial instead of just pointing to it.
 	Fixes LP: #579317.
+	* po/gnusim8085.pot, po/*.po: Updated as per latest UI changes.
 
 2010-08-17  Onkar Shinde  <onkarshinde@gmail.com>
 

@@ -209,6 +209,17 @@ read_tutorial (){
 
   if (fp == NULL)
     {
+          GString *str;
+          pathname = NULL;
+          str = g_string_new("");
+          g_string_append(str, "doc/asm-guide.txt");
+          pathname = g_strdup(str->str);
+          g_string_free(str, TRUE);
+    }
+  fp = fopen (pathname, "r");
+
+  if (fp == NULL)
+    {
       fprintf (stderr, "Failed to load tutorial file: %s\n",
                pathname);
       return NULL;

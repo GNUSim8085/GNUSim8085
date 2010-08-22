@@ -1,7 +1,8 @@
 2010-08-22  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* installer.nsi.in: Allow specifying mingw home directory via command
-	line arguments when creating installer.
+	line arguments when creating installer. Split translations in separate
+	component so that users can choose not to install them.
 
 2010-08-17  Onkar Shinde  <onkarshinde@gmail.com>
 

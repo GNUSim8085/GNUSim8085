@@ -45,8 +45,8 @@ InstallDir "C:\Program Files\GNUSim8085"
   # Show components page
   !define MUI_PAGE_CUSTOMFUNCTION_PRE on_components_page_pre
   !define MUI_PAGE_CUSTOMFUNCTION_LEAVE on_components_page_leave
-  !insertmacro MUI_PAGE_COMPONENTS
 !endif
+!insertmacro MUI_PAGE_COMPONENTS
 
 # Show installation directory selector page
 !insertmacro MUI_PAGE_DIRECTORY
@@ -117,7 +117,6 @@ SectionIn RO
   File win32/bin/*
   File /r /x Makefile* data
   File /r win32/share/doc/gnusim8085/examples
-  File /r win32/share/locale
   File /r /x Makefile* pixmaps
   # Make example program files read only
   SetFileAttributes $INSTDIR\examples\addwithcarry.asm READONLY
@@ -133,7 +132,6 @@ SectionIn RO
   !system 'rm -f data/styles.rng'
   !system 'rm -f data/classic.xml'
   !system 'rm -f data/def.lang'
-  !system 'rm -rf win32'
 SectionEnd
 
 !ifdef INC_GTK
@@ -147,6 +145,11 @@ Section "GTK+ (shared installation)" SecGtkPublic
 SectionEnd
 !endif  ; !INC_GTK
 
+Section "Translations" SecI18N
+  File /r win32/share/locale
+  !system 'rm -rf win32'
+SectionEnd
+
 # Uninstall section
 Section "Uninstall"
   Delete $INSTDIR\uninstaller.exe
@@ -155,13 +158,14 @@ Section "Uninstall"
 SectionEnd
 
 ; Section descriptions
-!ifdef INC_GTK  ; this page is shown only when using gtk
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SecMain} "GNUSim8085 - Intel 8085 microprocessor simulator"
+!ifdef INC_GTK  ; this component is shown only when using gtk
   !insertmacro MUI_DESCRIPTION_TEXT ${SecGtkPublic} "GTK+ libraries, needed by GNUSim8085. \
     This will install a system-wide version of GTK+, shareable with other programs."
-!insertmacro MUI_FUNCTION_DESCRIPTION_END
 !endif
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecI18N} "Additional translations for the application UI (some may be incomplete)"
+!insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 !ifdef INC_GTK
 Function on_components_page_leave

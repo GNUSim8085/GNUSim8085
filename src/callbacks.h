@@ -132,3 +132,4 @@ G_MODULE_EXPORT void on_io_list_start_clicked (GtkButton * button, gpointer user
 
 G_MODULE_EXPORT void on_io_list_start_changed (GtkEntry * entry, gpointer user_data);
 
+G_MODULE_EXPORT void show_tutorial ();

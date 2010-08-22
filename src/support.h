@@ -63,3 +63,5 @@ GdkPixbuf*  create_pixbuf              (const gchar     *filename);
 /* This is used to read authors from AUTHORS file. */
 gchar**  read_authors ();
 
+/* This is used to read tutorial from asm-guide.txt file. */
+GString*  read_tutorial ();

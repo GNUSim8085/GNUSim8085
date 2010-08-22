@@ -1374,6 +1374,39 @@ create_window_listing (void)
 }
 
 GtkWidget*
+create_window_tutorial (void)
+{
+  GtkWidget *window_tutorial;
+  GdkPixbuf *window_tutorial_icon_pixbuf;
+  GtkWidget *tutorial_vbox;
+
+  window_tutorial = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (window_tutorial), _("Assembler Listing"));
+  gtk_window_set_position (GTK_WINDOW (window_tutorial), GTK_WIN_POS_CENTER);
+  gtk_window_set_default_size (GTK_WINDOW (window_tutorial), 500, 400);
+  window_tutorial_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
+  if (!window_tutorial_icon_pixbuf)
+    window_tutorial_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+
+  if (window_tutorial_icon_pixbuf)
+    {
+      gtk_window_set_icon (GTK_WINDOW (window_tutorial), window_tutorial_icon_pixbuf);
+      gdk_pixbuf_unref (window_tutorial_icon_pixbuf);
+    }
+
+  tutorial_vbox = gtk_vbox_new (FALSE, 2);
+  gtk_widget_show (tutorial_vbox);
+  gtk_container_add (GTK_CONTAINER (window_tutorial), tutorial_vbox);
+  gtk_container_set_border_width (GTK_CONTAINER (tutorial_vbox), 5);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (window_tutorial, window_tutorial, "window_tutorial");
+  GLADE_HOOKUP_OBJECT (window_tutorial, tutorial_vbox, "tutorial_vbox");
+
+  return window_tutorial;
+}
+
+GtkWidget*
 create_window_start (void)
 {
   GtkWidget *window_start;

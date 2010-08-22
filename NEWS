@@ -9,6 +9,7 @@ New:     LP: #579324 - Memory/IO Ports Grid Inspector
 New:     Files opened/saved are added to recently used file list using
          GtkRecentManager APIs.
 Fix:     LP: #519828 - Start-up dialog should not be minimised
+Fix:     LP: #579317 - Modify the 'Help' dialog to point to actual tutorial
 Fix:     LP: #579319 - Help -> about = crash
 
 Translations:

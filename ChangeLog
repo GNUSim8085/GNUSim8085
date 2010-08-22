@@ -3,6 +3,12 @@
 	* installer.nsi.in: Allow specifying mingw home directory via command
 	line arguments when creating installer. Split translations in separate
 	component so that users can choose not to install them.
+	* src/support.[c,h]: Add function to load tutorial from asm-guide.txt.
+	* src/interface.[c,h]: Add function to create interface to display
+	tutorial.
+	* src/callbacks.[c,h]: Add function to display tutorial text. Modify
+	callback functions to show the tutorial instead of just pointing to it.
+	Fixes LP: #579317.
 
 2010-08-17  Onkar Shinde  <onkarshinde@gmail.com>
 

@@ -41,6 +41,7 @@ gint start_addr = 0x4200;
 
 GUIEditor *edit = NULL;
 GtkWidget *wind = NULL;
+GtkWidget *tutorial = NULL;
 GtkWidget *filew = NULL;
 
 gboolean
@@ -332,7 +333,7 @@ on_8085_manual1_activate (GtkMenuItem * menuitem, gpointer user_data)
 void
 on_assembler_tutorial1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
-  gtk_widget_show (create_window_start ());
+  show_tutorial ();
 }
 
 
@@ -560,19 +561,7 @@ on_main_entry_hex_activate (GtkEntry * entry, gpointer user_data)
 void
 on_start_but_tutorial_clicked (GtkButton * button, gpointer user_data)
 {
-  gchar *msg =
-	_("Do the following\n\n\
-1. Read \"asm-guide.txt\" for assembler tutorial\n\
-2. Open \"examples/nqueens.asm\" and simulate it.\n\n\
-Usually these files will be found in your system document directory,\n\
-which can be one of the following\n\n\
-/usr/local/doc/GNUSim8085\n\
-/usr/local/share/doc/GNUSim8085\n\
-/usr/share/doc/GNUSim8085\n\n\
-These files are also available in \"doc\" directory\n\
-of GNUSim8085 source tarball (tar.gz file)\n");
-	
-  gui_app_show_msg (GTK_MESSAGE_INFO, msg);
+  show_tutorial ();
   on_start_but_close_clicked (button, NULL);
 }
 
@@ -670,4 +659,27 @@ on_io_list_start_changed (GtkEntry *entry, gpointer user_data)
   gui_list_io_update ();
   text[strlen (text)] = 'h';
   gtk_entry_set_text (GTK_ENTRY (entry), text);
+}
+
+void
+show_tutorial ()
+{
+  GString* tutorial_text = read_tutorial ();
+  GtkWidget *cont;
+
+  /* show */
+  tutorial = create_window_tutorial ();
+  cont = lookup_widget (tutorial, "tutorial_vbox");
+  g_assert (cont);
+  edit = gui_editor_new ();
+  g_assert (edit);
+  gui_editor_show (edit);
+  gui_editor_set_text (edit, tutorial_text->str);
+  gui_editor_set_readonly (edit, TRUE);
+  gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);
+  gtk_window_maximize (GTK_WINDOW (tutorial));
+  gtk_widget_show_all (tutorial);
+
+  /* clean up */
+  g_string_free (tutorial_text, TRUE);
 }

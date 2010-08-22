@@ -175,3 +175,53 @@ read_authors (){
   g_free (pathname);
   return authors;
 }
+
+GString*
+read_tutorial (){
+  gchar *pathname = NULL;
+  FILE *fp;
+  GString *gstr;
+  char *ret;
+
+  pathname = NULL;
+
+  if (!pathname)
+    {
+	  GString *str;
+	  str = g_string_new(PACKAGE_DOC_DIR);
+	  g_string_append(str, "/");
+	  g_string_append(str, "asm-guide.txt");
+	  pathname = g_strdup(str->str);
+	  g_string_free(str, TRUE);
+    }
+  fp = fopen (pathname, "r");
+
+  if (fp == NULL)
+    {
+	  GString *str;
+          pathname = NULL;
+          str = g_string_new("");
+          g_string_append(str, "asm-guide.txt");
+          pathname = g_strdup(str->str);
+          g_string_free(str, TRUE);
+    }
+  fp = fopen (pathname, "r");
+
+  if (fp == NULL)
+    {
+      fprintf (stderr, "Failed to load tutorial file: %s\n",
+               pathname);
+      return NULL;
+    }
+  
+  gstr = g_string_new ("");
+  while (!feof (fp))
+    {
+      gchar buf[300] = { 0 };
+      // return value stored just to avoid compiler warnings.
+      ret = fgets (buf, 100, fp);
+      g_string_append (gstr, buf);
+    }
+  g_free (pathname);
+  return gstr;
+}

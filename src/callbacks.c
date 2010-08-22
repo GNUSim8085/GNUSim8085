@@ -674,7 +674,8 @@ show_tutorial ()
   edit = gui_editor_new ();
   g_assert (edit);
   gui_editor_show (edit);
-  gui_editor_set_text (edit, tutorial_text->str);
+  if (tutorial_text != NULL)
+    gui_editor_set_text (edit, tutorial_text->str);
   gui_editor_set_readonly (edit, TRUE);
   gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);
   gtk_window_maximize (GTK_WINDOW (tutorial));

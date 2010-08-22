@@ -3,7 +3,9 @@
 	* installer.nsi.in: Allow specifying mingw home directory via command
 	line arguments when creating installer. Split translations in separate
 	component so that users can choose not to install them. Add
-	asm-guide.txt file to the list of files to be installed.
+	asm-guide.txt file to the list of files to be installed. Add iconv.dll
+	file as well to make the application work with default install of
+	latest GTK+ runtime.
 	* src/support.[c,h]: Add function to load tutorial from asm-guide.txt.
 	* src/interface.[c,h]: Add function to create interface to display
 	tutorial.

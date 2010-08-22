@@ -116,6 +116,7 @@ SectionIn RO
   File TODO
   File win32/bin/*
   File /r /x Makefile* data
+  File win32/share/doc/gnusim8085/asm-guide.txt
   File /r win32/share/doc/gnusim8085/examples
   File /r /x Makefile* pixmaps
   # Make example program files read only

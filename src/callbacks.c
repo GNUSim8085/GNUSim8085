@@ -677,6 +677,7 @@ show_tutorial ()
   if (tutorial_text != NULL)
     gui_editor_set_text (edit, tutorial_text->str);
   gui_editor_set_readonly (edit, TRUE);
+  gui_editor_set_show_line_numbers (edit, FALSE);
   gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);
   gtk_window_maximize (GTK_WINDOW (tutorial));
   gtk_widget_show_all (tutorial);

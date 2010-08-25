@@ -279,6 +279,12 @@ gui_editor_set_readonly (GUIEditor * self, gboolean val)
 }
 
 void
+gui_editor_set_show_line_numbers (GUIEditor * self, gboolean val)
+{
+  gtk_source_view_set_show_line_numbers (GTK_SOURCE_VIEW(self->widget), val);
+}
+
+void
 gui_editor_grab_focus (GUIEditor * self)
 {
   gtk_widget_grab_focus (self->widget);

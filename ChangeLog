@@ -1,6 +1,9 @@
 2010-08-25  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* README, TODO, doc/asm-guide.txt, doc/gnusim8085.1: Update website URL.
+	* src/gui-editor.[c,h]: Add function to toggle display of line numbers.
+	* src/callbacks.c: Use new function to not display line numbers in
+	tutorial window.
 
 2010-08-22  Onkar Shinde  <onkarshinde@gmail.com>
 

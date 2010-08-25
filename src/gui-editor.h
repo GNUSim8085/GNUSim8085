@@ -95,6 +95,8 @@ gint gui_editor_get_line (GUIEditor *self);
 
 void gui_editor_set_readonly (GUIEditor *self, gboolean val);
 
+void gui_editor_set_show_line_numbers (GUIEditor *self, gboolean val);
+
 void gui_editor_insert (GUIEditor *self, gchar *text);
 
 void gui_editor_grab_focus (GUIEditor *self);

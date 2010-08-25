@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <gtk/gtk.h>
+#include <gtksourceview/gtksourceview.h>
 
 
 gboolean
@@ -133,3 +134,6 @@ G_MODULE_EXPORT void on_io_list_start_clicked (GtkButton * button, gpointer user
 G_MODULE_EXPORT void on_io_list_start_changed (GtkEntry * entry, gpointer user_data);
 
 G_MODULE_EXPORT void show_tutorial ();
+
+G_MODULE_EXPORT void on_line_mark_activated (GtkSourceView * view, GtkTextIter * iter,
+                                             GdkEventButton * event, gpointer editor);

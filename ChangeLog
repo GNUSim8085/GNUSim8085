@@ -2,8 +2,13 @@
 
 	* README, TODO, doc/asm-guide.txt, doc/gnusim8085.1: Update website URL.
 	* src/gui-editor.[c,h]: Add function to toggle display of line numbers.
+	Add function to toggle mark at certain line. Add function to allow
+	marks to be toggled by clicking left margin.
 	* src/callbacks.c: Use new function to not display line numbers in
-	tutorial window.
+	tutorial window. Add callback function to detect button click on margin
+	and toggle mark accordingly. Fixes LP: #519836.
+	* src/gui-app.h: Use new function to allow mark to be toggled by
+	clicking on left margin only in case of editor component.
 
 2010-08-22  Onkar Shinde  <onkarshinde@gmail.com>
 

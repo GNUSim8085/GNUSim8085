@@ -195,6 +195,45 @@ gui_editor_toggle_mark (GUIEditor * self)
 }
 
 void
+gui_editor_toggle_mark_at_line (GUIEditor * self, gint line_no)
+{
+  g_assert (self);
+
+  GtkTextIter line_start, line_end;
+  GSList *marker_list;
+  GtkSourceMark *marker;
+
+  /* get line bounds */
+  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (self->buffer), &line_start, line_no);
+  line_end = line_start;
+  gtk_text_iter_forward_to_line_end (&line_end);
+
+  /* get the breakpoint markers already in the line */
+  marker_list = gtk_source_buffer_get_source_marks_at_line (self->buffer, line_no, MARKER_BREAKPOINT);
+
+  if (marker_list != NULL && g_slist_length(marker_list)!=0)
+	{
+	  /* markers were found, so delete them */
+	  gtk_source_buffer_remove_source_marks (self->buffer,  &line_start, &line_end, MARKER_BREAKPOINT);
+	}
+  else
+	{
+	  /* no marker found -> create one */
+	  marker = gtk_source_buffer_create_source_mark (self->buffer, NULL, MARKER_BREAKPOINT, &(line_start));
+	}
+  g_slist_free (marker_list);
+	
+}
+
+void
+gui_editor_set_margin_toggle_mark (GUIEditor * self)
+{
+  g_signal_connect ((gpointer) self->widget, "line-mark-activated",
+                    G_CALLBACK (on_line_mark_activated),
+                    self);
+}
+
+void
 gui_editor_clear_all_highlights (GUIEditor * self)
 {
   GtkTextIter buffer_start, buffer_end;

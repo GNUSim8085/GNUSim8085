@@ -37,6 +37,7 @@ gui_app_new (void)
   gtk_window_maximize (GTK_WINDOW (app->window_main));
 
   app->editor = gui_editor_new ();
+  gui_editor_set_margin_toggle_mark (app->editor);
   gui_editor_show (app->editor);
 
   /* add editor */

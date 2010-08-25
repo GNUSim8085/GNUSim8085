@@ -39,6 +39,7 @@
 #include <gtksourceview/gtksourceprintcompositor.h>
 #include <gtksourceview/gtksourcestyleschememanager.h>
 #include <gtksourceview/gtksourcemark.h>
+#include "callbacks.h"
 
 #define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"
 #define MARKER_BREAKPOINT   (const gchar*) "breakpoint"
@@ -82,6 +83,10 @@ void gui_editor_set_mark (GUIEditor * self, guint line_no, gboolean set);
 void gui_editor_set_highlight (GUIEditor * self, guint line_no, gboolean set);
 
 void gui_editor_toggle_mark (GUIEditor * self);
+
+void gui_editor_toggle_mark_at_line (GUIEditor * self, gint line_no);
+
+void gui_editor_set_margin_toggle_mark (GUIEditor * self);
 
 void gui_editor_clear_all_highlights(GUIEditor *self);
 

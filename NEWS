@@ -8,6 +8,9 @@ New:     LP: #579324 - Memory/IO Ports Grid Inspector
          is shown in a tab similar to Data/Stack content shown currently.
 New:     Files opened/saved are added to recently used file list using
          GtkRecentManager APIs.
+New:     LP: #519836 - Breakpoint Toggling
+         It is now possible to toggle breakpoint by clicking on left margin of
+         editor component.
 Fix:     LP: #519828 - Start-up dialog should not be minimised
 Fix:     LP: #579317 - Modify the 'Help' dialog to point to actual tutorial
 Fix:     LP: #579319 - Help -> about = crash

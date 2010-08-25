@@ -685,3 +685,15 @@ show_tutorial ()
   /* clean up */
   g_string_free (tutorial_text, TRUE);
 }
+
+void
+on_line_mark_activated (GtkSourceView *view, GtkTextIter *iter,
+                        GdkEventButton *event, gpointer editor)
+{
+  if ((event->button == 1) && (event->type == GDK_BUTTON_PRESS))
+  {
+    gint line_no = gtk_text_iter_get_line (iter);
+    gui_editor_toggle_mark_at_line ((GUIEditor *) editor, line_no);
+  }
+}
+

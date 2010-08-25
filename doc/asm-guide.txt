@@ -156,4 +156,4 @@ Final notes
 
 
 Thats all for now folks!
-http://gnusim8085.sourceforge.net/
+http://www.gnusim8085.org/

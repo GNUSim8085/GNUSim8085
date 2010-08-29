@@ -5,6 +5,8 @@
 	* src/bridge.c: Clear all highlighting when assembling program.
 	* doc/example/*.asm: Add copyright and license information to existing
 	sample programs.
+	* doc/examples/sorting.asm, doc/examples/sumofnumbers.asm: Add sample
+	programs submitted by Kirantej.
 
 2010-08-25  Onkar Shinde  <onkarshinde@gmail.com>
 

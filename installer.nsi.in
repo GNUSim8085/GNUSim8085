@@ -125,6 +125,8 @@ SectionIn RO
   SetFileAttributes $INSTDIR\examples\bcd2bin.asm READONLY
   SetFileAttributes $INSTDIR\examples\debugexample.asm READONLY
   SetFileAttributes $INSTDIR\examples\nqueens.asm READONLY
+  SetFileAttributes $INSTDIR\examples\sorting.asm READONLY
+  SetFileAttributes $INSTDIR\examples\sumofnumbers.asm READONLY
   SetFileAttributes $INSTDIR\examples\swaphex.asm READONLY
   CreateDirectory ${startmenu}
   CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085.ico"

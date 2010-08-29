@@ -8,7 +8,7 @@
 	* doc/examples/sorting.asm, doc/examples/sumofnumbers.asm: Add sample
 	programs submitted by Kirantej.
 	* installer.nsi.in: Use better (easily understandable) names for
-	installers.
+	installers. Add new sample programs to the list of 'read only' files.
 
 2010-08-25  Onkar Shinde  <onkarshinde@gmail.com>
 

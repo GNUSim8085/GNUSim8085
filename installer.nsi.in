@@ -26,9 +26,9 @@ Name GNUSim8085
   !define MINGW_HOME "/usr/i586-mingw32msvc"
 !endif
 !ifdef INC_GTK
-  OutFile @PACKAGE@-@VERSION@-installer.exe
+  OutFile @PACKAGE@-@VERSION@-with-gtk-installer.exe
 !else
-  OutFile @PACKAGE@-@VERSION@-no-gtk-installer.exe
+  OutFile @PACKAGE@-@VERSION@-without-gtk-installer.exe
 !endif
 !define GTK_INSTALLER_EXE "gtk2-runtime-2.12.11-2008-07-25-ash.exe"
 !define GTK_VERSION_REQ "2.12.0"

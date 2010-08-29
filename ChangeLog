@@ -7,6 +7,8 @@
 	sample programs.
 	* doc/examples/sorting.asm, doc/examples/sumofnumbers.asm: Add sample
 	programs submitted by Kirantej.
+	* installer.nsi.in: Use better (easily understandable) names for
+	installers.
 
 2010-08-25  Onkar Shinde  <onkarshinde@gmail.com>
 

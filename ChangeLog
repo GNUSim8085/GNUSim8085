@@ -3,6 +3,8 @@
 	* src/gui-list-message.c: Highlight the line containing error when
 	selecting the error message from message pane. Fixes bug LP: #519834.
 	* src/bridge.c: Clear all highlighting when assembling program.
+	* doc/example/*.asm: Add copyright and license information to existing
+	sample programs.
 
 2010-08-25  Onkar Shinde  <onkarshinde@gmail.com>
 

@@ -1,3 +1,7 @@
+;Copyright (C) 2003  Sridhar Ratnakumar <sridhar.ratna@gmail.com>
+;Distributed under same license as rest of the program i.e. GPL v2 or later.
+;See COPYING file for license text.
+
 ;See docs/asm-guide.txt before
 ;continuing
 

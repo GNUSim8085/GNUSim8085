@@ -73,6 +73,8 @@ cb_clicked (GtkTreeView * listview, gpointer user_data)
 
   gtk_widget_grab_focus (app->editor->widget);
   gui_editor_goto_line (app->editor, ln-1);
+  gui_editor_clear_all_highlights (app->editor);
+  gui_editor_set_highlight (app->editor, ln-1, TRUE);
 
 }
 

@@ -14,6 +14,7 @@ New:     LP: #519836 - Breakpoint Toggling
 Fix:     LP: #519828 - Start-up dialog should not be minimised
 Fix:     LP: #579317 - Modify the 'Help' dialog to point to actual tutorial
 Fix:     LP: #579319 - Help -> about = crash
+Fix:     LP: #519834 - Assembler Error: No line highlighting
 
 Translations:
          New - Brazilian Portuguese (pt_BR), Greek (el).

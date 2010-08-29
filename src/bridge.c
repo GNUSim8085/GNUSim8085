@@ -287,6 +287,7 @@ b_assemble (char *text, guint16 start_addr)
   sys.reg.sph = 0xff;
   sys.reg.spl = 0xff;
   gtk_statusbar_push (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT),  _("Assembler: running"));
+  gui_editor_clear_all_highlights (app->editor);
   saved_and_assembled_successfully =
 	eef_asm_assemble (text, start_addr, &ds_source, &ds_memblock);
   gtk_statusbar_pop (GTK_STATUSBAR(statusbar), gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar), SIM_CONTEXT));

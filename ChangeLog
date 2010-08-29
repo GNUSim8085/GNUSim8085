@@ -1,3 +1,9 @@
+2010-08-29  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/gui-list-message.c: Highlight the line containing error when
+	selecting the error message from message pane. Fixes bug LP: #519834.
+	* src/bridge.c: Clear all highlighting when assembling program.
+
 2010-08-25  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* README, TODO, doc/asm-guide.txt, doc/gnusim8085.1: Update website URL.

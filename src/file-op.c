@@ -255,10 +255,10 @@ file_op_editor_save_as (void)
 	  if (gtk_dialog_run (GTK_DIALOG (file_selector)) == GTK_RESPONSE_ACCEPT)
 		{
 		  selected_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (file_selector));
+		  is_saved = ori_save(selected_filename, TRUE);
 		  if (recent_manager == NULL)
 		    recent_manager = gtk_recent_manager_get_default ();
 		  gtk_recent_manager_add_item (recent_manager, g_strconcat ("file://", selected_filename, NULL));
-		  is_saved = ori_save(selected_filename, TRUE);
 		  g_free (selected_filename);
 		}
 	  else

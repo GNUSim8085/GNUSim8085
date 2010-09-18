@@ -39,6 +39,8 @@ G_MODULE_EXPORT void on_save_as1_activate (GtkMenuItem * menuitem, gpointer user
 
 G_MODULE_EXPORT void on_print_activate (GtkAction * menuitem, gpointer user_data);
 
+G_MODULE_EXPORT void on_font_select_activate (GtkAction * menuitem, gpointer user_data);
+
 G_MODULE_EXPORT void on_quit1_activate (GtkMenuItem * menuitem, gpointer user_data);
 
 G_MODULE_EXPORT void on_registers1_activate (GtkMenuItem * menuitem, gpointer user_data);

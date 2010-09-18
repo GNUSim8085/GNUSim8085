@@ -50,6 +50,7 @@ static const GtkActionEntry entries[] = {
   { "Save", GTK_STOCK_SAVE, NULL, NULL, N_("Save file"), G_CALLBACK(on_save1_activate) },
   { "SaveAs", GTK_STOCK_SAVE_AS, NULL, "<shift><control>S", N_("Save file as"), G_CALLBACK(on_save_as1_activate) },
   { "Print", GTK_STOCK_PRINT, NULL, "<control>P", N_("Print program"), G_CALLBACK(on_print_activate) },
+  { "Font", GTK_STOCK_SELECT_FONT, NULL, "<control>f", N_("Select font"), G_CALLBACK(on_font_select_activate) },
   { "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK(on_quit1_activate) },
   { "Registers", NULL, N_("_Registers"), NULL, N_("Reset Registers"), G_CALLBACK(on_registers1_activate) },
   { "Flags", NULL, N_("_Flags"), NULL, N_("Reset Flags"), G_CALLBACK(on_flags1_activate) },
@@ -84,6 +85,8 @@ static const char *ui_description =
   "      <menuitem action='Save'/>"
   "      <menuitem action='SaveAs'/>"
   "      <menuitem action='Print'/>"
+  "      <separator/>"
+  "      <menuitem action='Font'/>"
   "      <separator/>"
   "      <menuitem action='Quit'/>"
   "    </menu>"

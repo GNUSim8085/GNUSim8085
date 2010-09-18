@@ -2,6 +2,8 @@
 
 	* src/gui-editor.[c,h]: Add variable to save current font. Add function
 	to get current editor font.
+	* src/interface.c, src/callbacks.[c,h]: Add ability to change editor 
+	font. Thanks to Ramanathan for patch. Fixes bug LP: #579322.
 
 2010-08-29  Onkar Shinde  <onkarshinde@gmail.com>
 

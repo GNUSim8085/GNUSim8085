@@ -129,6 +129,30 @@ on_print_activate (GtkAction * menuitem, gpointer user_data)
   gui_editor_print (app->editor);
 }
 
+void on_font_select_activate (GtkAction * menuitem, gpointer user_data)
+{
+  GtkWidget *font_selection_dialog = NULL;
+  const gchar *font_name = gui_editor_get_font (app->editor);
+  gint action = 0;
+  g_assert (app->editor);
+  font_selection_dialog = gtk_font_selection_dialog_new (("Select font"));
+  gtk_font_selection_dialog_set_font_name (GTK_FONT_SELECTION_DIALOG (font_selection_dialog), font_name);
+  action = gtk_dialog_run (GTK_DIALOG (font_selection_dialog));
+  switch (action) 
+  {
+    case GTK_RESPONSE_OK:
+      font_name = gtk_font_selection_dialog_get_font_name (GTK_FONT_SELECTION_DIALOG (font_selection_dialog));
+      if (font_name)
+      {
+        gui_editor_set_font (app->editor, font_name);
+      }
+      break;
+    default:
+      break;
+  }
+  
+  gtk_widget_destroy(font_selection_dialog);
+}
 
 void
 on_quit1_activate (GtkMenuItem * menuitem, gpointer user_data)

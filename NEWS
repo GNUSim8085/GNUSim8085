@@ -11,6 +11,9 @@ New:     Files opened/saved are added to recently used file list using
 New:     LP: #519836 - Breakpoint Toggling
          It is now possible to toggle breakpoint by clicking on left margin of
          editor component.
+New:     LP: #579322 - Choosing a font in editor
+         This allows setting a font in editor component. But the preference is
+         not saved on application exit.
 Fix:     LP: #519828 - Start-up dialog should not be minimised
 Fix:     LP: #579317 - Modify the 'Help' dialog to point to actual tutorial
 Fix:     LP: #579319 - Help -> about = crash

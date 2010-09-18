@@ -7,6 +7,7 @@
 	* po/ar.po, po/es.po: Updated translations from launchpad.
 	* src/file-op.c, src/file-op-gio.c: Fix file not getting added to recent
 	list when saving under different name.
+	* src/callbacks.c: Update the memory and I/O views when doing resets.
 
 2010-08-29  Onkar Shinde  <onkarshinde@gmail.com>
 

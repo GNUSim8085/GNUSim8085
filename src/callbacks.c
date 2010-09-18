@@ -187,6 +187,7 @@ on_io_ports1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   eef_reset_io ();
   gui_view_update_io_mem ();
+  gui_list_io_update ();
 }
 
 
@@ -195,6 +196,7 @@ on_main_memory1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   eef_reset_mem ();
   gui_view_update_io_mem ();
+  gui_list_memory_update ();
 }
 
 
@@ -204,6 +206,8 @@ on_reset_all1_activate (GtkMenuItem * menuitem, gpointer user_data)
   eef_reset_all ();
   gui_view_update_reg_flag (TRUE);
   gui_view_update_io_mem ();
+  gui_list_io_update ();
+  gui_list_memory_update ();
 }
 
 

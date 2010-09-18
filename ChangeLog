@@ -1,3 +1,8 @@
+2010-09-18  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/gui-editor.[c,h]: Add variable to save current font. Add function
+	to get current editor font.
+
 2010-08-29  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/gui-list-message.c: Highlight the line containing error when

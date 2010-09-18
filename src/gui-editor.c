@@ -329,6 +329,12 @@ gui_editor_grab_focus (GUIEditor * self)
   gtk_widget_grab_focus (self->widget);
 }
 
+const gchar *
+gui_editor_get_font (GUIEditor *self)
+{
+  return self->current_font;
+}
+
 void
 gui_editor_set_font (GUIEditor *self, const gchar *font_name)
 {
@@ -341,6 +347,8 @@ gui_editor_set_font (GUIEditor *self, const gchar *font_name)
   g_return_if_fail (font_desc != NULL);
 
   gtk_widget_modify_font (GTK_WIDGET (self->widget), font_desc);
+
+  self->current_font = font_name;
 
   pango_font_description_free (font_desc);
 }

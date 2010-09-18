@@ -52,6 +52,8 @@ G_BEGIN_DECLS typedef struct
   GtkWidget *widget;
 
   GtkWidget *scroll;
+
+  const gchar* current_font;
 	
   GtkSourceBuffer *buffer;
 
@@ -105,6 +107,8 @@ void gui_editor_set_show_line_numbers (GUIEditor *self, gboolean val);
 void gui_editor_insert (GUIEditor *self, gchar *text);
 
 void gui_editor_grab_focus (GUIEditor *self);
+
+const gchar *gui_editor_get_font (GUIEditor *self);
 
 void gui_editor_set_font (GUIEditor *self, const gchar *font_name);
 

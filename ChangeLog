@@ -1,3 +1,11 @@
+2010-09-24  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
+
+	* src/8085-instructions.c: Fixed the long standing DAA
+	bug. Followed http://www.ray.masmcode.com/BCDdaa.html plus had to
+	ensure the addition operation on the accumulator must be done
+	using the _eef_inst_func_add_i function so as to ensure setting of
+	the carry and other flags. Fixes bug LP: #584093.
+
 2010-09-18  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/gui-editor.[c,h]: Add variable to save current font. Add function

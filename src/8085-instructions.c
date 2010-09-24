@@ -937,30 +937,27 @@ _eef_inst_func_38 (eef_addr_t opnd_addr)
 static gint
 _eef_inst_func_39 (eef_addr_t opnd_addr)
 {
-  eef_data_t low;
-  eef_data_t high;
+  eef_data_t ac_low;
+  gboolean c_old;
 
-  low = sys.reg.a & 0x0F;
-  high = sys.reg.a >> 4;
+  c_old = sys.flag.c;
+  ac_low = sys.reg.a & 0x0F;
   
-  if (low > 9 || sys.flag.ac)
+  if (ac_low > 9 || sys.flag.ac)
 	{
-	  sys.reg.a += 6;
-	  if((low + 6) > 9)
-		sys.flag.ac = 1;     
-	  else 
-		sys.flag.ac = 0;
-	}
+    _eef_inst_func_add_i (opnd_addr, 6, '+');
+    sys.flag.c = (sys.flag.c || c_old);
+    sys.flag.ac = 1;
+  }
 
-  if (high > 9 || sys.flag.c)
-	{
-	  sys.reg.a += (6 << 4);
-	  if((high + 6) > 9)
-		sys.flag.c = 1;
-	  else 
-		sys.flag.c = 0;
-	}
+  if (sys.reg.a > 0x99 || sys.flag.c)
+  {
+    sys.reg.a = sys.reg.a + 0x60;
+    sys.flag.c = 1;
+  }
+
   return 0;
+  
 }
 
 static gint

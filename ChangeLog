@@ -1,5 +1,10 @@
 2010-09-24  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
 
+	* src/8085-instructions.c: CMP instruction should not check and
+	set S, P and AC flags as there is no result that is computed. It
+	affects only C and Z flags. Hence removed most code in that
+	function. Fixes bug LP: #579320.
+
 	* src/8085-instructions.c: Fixed the long standing DAA
 	bug. Followed http://www.ray.masmcode.com/BCDdaa.html plus had to
 	ensure the addition operation on the accumulator must be done

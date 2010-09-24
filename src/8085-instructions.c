@@ -502,19 +502,16 @@ _eef_inst_func_xra (eef_addr_t opnd_addr, gchar sec)
 static gint
 _eef_inst_func_cmp_i (eef_addr_t opnd_addr, eef_data_t data)
 {
-  _eef_find_and_set_flags (sys.reg.a);
 
-  sys.flag.s = (sys.reg.a < data);
-
-  _eef_flag_check_and_set_aux_c (sys.reg.a, data, '-');
-
+  /* Since this is just comparison, there is no "result"
+     that affects the S, P and AC flags is present. Hence
+     no need to check and set flags */
   if (sys.reg.a < data)
-	sys.flag.c = 1, sys.flag.z = 0;
+    sys.flag.c = 1, sys.flag.z = 0;
   else if (sys.reg.a > data)
-	sys.flag.c = 0, sys.flag.z = 0;
+	  sys.flag.c = 0, sys.flag.z = 0;
   else
-	sys.flag.c = 0, sys.flag.z = 1;
-
+	  sys.flag.c = 0, sys.flag.z = 1;
   return 0;
 }
 

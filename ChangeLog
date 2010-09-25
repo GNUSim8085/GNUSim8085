@@ -1,3 +1,9 @@
+2010-09-25  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.in, src/main.c: Use autoconf variable to specify windows
+	build. Use this variable to decide when to set 'localedir' to apprpriate
+	windows directory. Fixes compiler warning on non-windows build.
+
 2010-09-24  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
 
 	* src/8085-instructions.c: CMP instruction should not check and

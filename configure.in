@@ -42,6 +42,9 @@ case "${host}" in
         *) WIN32="no" ;;
 esac
 AM_CONDITIONAL([WIN32], test "$WIN32" = "yes")
+if test "x$WIN32" = "xyes"; then
+    AC_DEFINE(WINDOWS, 1, [Defines if the build is for Windows])
+fi
 
 gtk_required="2.12.0"
 gtksourceview2_required="2.2.0"

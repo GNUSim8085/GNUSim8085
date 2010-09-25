@@ -41,13 +41,12 @@ int
 main (int argc, char *argv[])
 {
   GtkWidget *statusbar;
-  gchar *root, *localedir = LOCALEDIR;
-  if (!strcmp(localedir, "locale"))
-  {
-    root = g_win32_get_package_installation_directory_of_module (NULL);
-    localedir = g_build_filename (root, "locale", NULL);
-    g_free (root);
-  }
+  gchar *localedir = LOCALEDIR;
+#ifdef WINDOWS
+  gchar *root = g_win32_get_package_installation_directory_of_module (NULL);
+  localedir = g_build_filename (root, "locale", NULL);
+  g_free (root);
+#endif
 
   setlocale (LC_ALL, "");
   bindtextdomain (PACKAGE, localedir);

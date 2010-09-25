@@ -509,9 +509,9 @@ _eef_inst_func_cmp_i (eef_addr_t opnd_addr, eef_data_t data)
   if (sys.reg.a < data)
     sys.flag.c = 1, sys.flag.z = 0;
   else if (sys.reg.a > data)
-	  sys.flag.c = 0, sys.flag.z = 0;
+    sys.flag.c = 0, sys.flag.z = 0;
   else
-	  sys.flag.c = 0, sys.flag.z = 1;
+    sys.flag.c = 0, sys.flag.z = 1;
   return 0;
 }
 

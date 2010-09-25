@@ -3,6 +3,9 @@
 	* configure.in, src/main.c: Use autoconf variable to specify windows
 	build. Use this variable to decide when to set 'localedir' to apprpriate
 	windows directory. Fixes compiler warning on non-windows build.
+	* installer.nsi.in: Show 'Run Program' checkbox in installer finish
+	screen only when GTK+ installer is not embedded. This avoids an error
+	being shown about dll loading. 
 
 2010-09-24  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
 

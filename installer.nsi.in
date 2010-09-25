@@ -55,7 +55,9 @@ InstallDir "C:\Program Files\GNUSim8085"
 !insertmacro MUI_PAGE_INSTFILES
 
 # Show finish page with an option to launch program
+!ifndef INC_GTK
 !define MUI_FINISHPAGE_RUN $INSTDIR\gnusim8085.exe
+!endif
 !insertmacro MUI_PAGE_FINISH
 
 # Show uninstall confirmation page

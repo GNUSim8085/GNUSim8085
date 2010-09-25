@@ -219,7 +219,16 @@ If so you're advised to send a copy of your source progam."), addr);
 				  ess_trace_mode_over_stack_cont =
 					eef_regpair_get ('S') + 2;
 				  prev_is_call_instr = FALSE;
-				  return TRUE;
+				  if (break_pt)
+				  {
+					bridge_debug_this_line (addr, ln);
+					return FALSE;
+				  }
+				  else
+				  {
+					return TRUE;  
+				  }
+					
 				}
 
 			  bridge_debug_this_line (addr, ln);
@@ -234,7 +243,17 @@ If so you're advised to send a copy of your source progam."), addr);
 			  bridge_debug_this_line (addr, ln);
 			  return FALSE;
 			}
-		  return TRUE;	/* finish the func */
+			
+			if (break_pt)
+			{
+				bridge_debug_this_line (addr, ln);
+				return FALSE;
+			}
+			else
+			{
+				return TRUE;	/* finish the func */
+			}
+		  
 		}
 	  else if (ess_trace_mode == B_TRACE_OUT)
 		{
@@ -243,7 +262,7 @@ If so you're advised to send a copy of your source progam."), addr);
 			ess_trace_mode_out_callret++;
 		  if (eef_is_ret_instr (eef_get_op_at_addr (prev_addr)))
 			ess_trace_mode_out_callret--;
-		  if (ess_trace_mode_out_callret < 0)
+		  if ((ess_trace_mode_out_callret < 0) || (break_pt))
 			{
 			  bridge_debug_this_line (addr, ln);
 			  return FALSE;

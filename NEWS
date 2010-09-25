@@ -17,7 +17,9 @@ New:     LP: #579322 - Choosing a font in editor
 Fix:     LP: #519828 - Start-up dialog should not be minimised
 Fix:     LP: #579317 - Modify the 'Help' dialog to point to actual tutorial
 Fix:     LP: #579319 - Help -> about = crash
+Fix:     LP: #579320 - CMP flags not working like SUB with signed numbers
 Fix:     LP: #519834 - Assembler Error: No line highlighting
+Fix:     LP: #584093 - 78+88 in BCD addition missed carry
 
 Translations:
          New - Brazilian Portuguese (pt_BR), Greek (el).

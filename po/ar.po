@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-09-26 22:54+0530\n"
-"PO-Revision-Date: 2010-09-11 04:06+0000\n"
+"PO-Revision-Date: 2010-09-25 12:08+0000\n"
 "Last-Translator: Ahmed Mohammed <Unknown>\n"
 "Language-Team: Arabic <ar@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-18 13:36+0000\n"
+"X-Launchpad-Export-Date: 2010-09-26 17:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:138 src/interface.c:53
@@ -31,11 +31,11 @@ msgstr "خطأ في تنفيذ البرنامج"
 
 #: src/callbacks.c:289
 msgid "Error in step in"
-msgstr ""
+msgstr "خطأ في خطوة للأمام"
 
 #: src/callbacks.c:304
 msgid "Error in step over"
-msgstr ""
+msgstr "خطأ في خطوة للخلف"
 
 #: src/callbacks.c:319
 msgid "Error in step out"

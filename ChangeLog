@@ -4,6 +4,7 @@
 	tutorial file is not found. Mark 'Select font' string for translation.
 	* po/gnusim8085.pot: Update to include latest strings.
 	* po/*.po: Auto update.
+	* po/ar.po: Updated Arabic translation from launchpad.
 
 2010-09-25  Onkar Shinde  <onkarshinde@gmail.com>
 

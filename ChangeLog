@@ -2,6 +2,7 @@
 
 	* src/callbacks.c: Add an error message to be shown when assembly
 	tutorial file is not found. Mark 'Select font' string for translation.
+	* po/gnusim8085.pot: Update to include latest strings.
 
 2010-09-25  Onkar Shinde  <onkarshinde@gmail.com>
 

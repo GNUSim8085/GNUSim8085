@@ -135,7 +135,7 @@ void on_font_select_activate (GtkAction * menuitem, gpointer user_data)
   const gchar *font_name = gui_editor_get_font (app->editor);
   gint action = 0;
   g_assert (app->editor);
-  font_selection_dialog = gtk_font_selection_dialog_new (("Select font"));
+  font_selection_dialog = gtk_font_selection_dialog_new (_("Select font"));
   gtk_font_selection_dialog_set_font_name (GTK_FONT_SELECTION_DIALOG (font_selection_dialog), font_name);
   action = gtk_dialog_run (GTK_DIALOG (font_selection_dialog));
   switch (action) 
@@ -702,8 +702,12 @@ show_tutorial ()
   edit = gui_editor_new ();
   g_assert (edit);
   gui_editor_show (edit);
-  if (tutorial_text != NULL)
-    gui_editor_set_text (edit, tutorial_text->str);
+  if (tutorial_text == NULL)
+  {
+    tutorial_text = g_string_new (_("The tutorial file, asm-guide.txt, was not found. It should be present in directory - "));
+    g_string_append (tutorial_text, PACKAGE_DOC_DIR);  
+  }
+  gui_editor_set_text (edit, tutorial_text->str);
   gui_editor_set_readonly (edit, TRUE);
   gui_editor_set_show_line_numbers (edit, FALSE);
   gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);

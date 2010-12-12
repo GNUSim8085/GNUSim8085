@@ -31,6 +31,8 @@
 #define MAX_ERR_MSG_SIZE 512
 
 static GString *file_name = NULL;
+static const gchar *default_dir = NULL;
+static gchar *last_open_save_dir = NULL;
 static GtkRecentManager *recent_manager = NULL;
 
 static void
@@ -225,6 +227,7 @@ file_op_editor_save (void)
 		    recent_manager = gtk_recent_manager_get_default ();
 		  gtk_recent_manager_add_item (recent_manager, selected_file);
 		  is_saved = ori_save(selected_file, TRUE);
+		  last_open_save_dir = gtk_file_chooser_get_current_folder_uri (GTK_FILE_CHOOSER (file_selector));
 		  g_free (selected_file);
 		}
 	  else
@@ -254,6 +257,7 @@ file_op_editor_save_as (void)
 		  if (recent_manager == NULL)
 		    recent_manager = gtk_recent_manager_get_default ();
 		  gtk_recent_manager_add_item (recent_manager, selected_file);
+		  last_open_save_dir = gtk_file_chooser_get_current_folder_uri (GTK_FILE_CHOOSER (file_selector));
 		  g_free (selected_file);
 		}
 	  else
@@ -285,6 +289,7 @@ file_op_editor_open (void)
 	  if (recent_manager == NULL)
 	    recent_manager = gtk_recent_manager_get_default ();
 	  gtk_recent_manager_add_item (recent_manager, selected_file);
+	  last_open_save_dir = gtk_file_chooser_get_current_folder_uri (GTK_FILE_CHOOSER (file_selector));
 	  ori_open(selected_file, TRUE);
 	  g_free (selected_file);
 	}
@@ -333,6 +338,7 @@ file_op_listing_save (gchar * text)
 
 	  g_output_stream_close (G_OUTPUT_STREAM (file_out), NULL, NULL);
 
+	  last_open_save_dir = gtk_file_chooser_get_current_folder_uri (GTK_FILE_CHOOSER (file_selector));
 	  g_free (selected_file);
 	}
 
@@ -348,7 +354,11 @@ create_file_dialog(const gchar *title,
 {
   GtkWidget *file_selector;
   GtkFileFilter *file_filter;
-  
+
+  if (default_dir == NULL)
+  {
+    default_dir = g_get_user_special_dir (G_USER_DIRECTORY_DOCUMENTS);
+  }
   file_selector = gtk_file_chooser_dialog_new
 	(title, NULL,
 	 action,
@@ -356,6 +366,10 @@ create_file_dialog(const gchar *title,
 	 stock, GTK_RESPONSE_ACCEPT,
 	 NULL);
 
+  if (last_open_save_dir == NULL)
+    gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER(file_selector), g_strconcat("file://", default_dir, NULL));
+  else
+    gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER(file_selector), last_open_save_dir);
   gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER(file_selector), TRUE);
   gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER(file_selector), FALSE);
   

@@ -1,6 +1,8 @@
 2010-12-12  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/interface.c: Fix incorrect use of 'GTK_CHECK_VERSION' macro.
+	* src/file-op.c, src/file-op-gio.c: Added code to save last directory
+	from/to where file was opened/saved. Fixes bug LP:#680100.
 
 2010-10-11  Aanjhan Ranganathan  <aanjhan@tuxmaniac.com>
 

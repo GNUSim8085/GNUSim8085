@@ -1,4 +1,4 @@
-GNUSim8085 1.3.7 (XX Sep 2010)
+GNUSim8085 1.3.7 (XX Dec 2010)
 
 New:     LP: #579341 - Editable memory listing as a tab.
          This allows easy viewing/editing of memory contents in a table. The
@@ -14,6 +14,11 @@ New:     LP: #519836 - Breakpoint Toggling
 New:     LP: #579322 - Choosing a font in editor
          This allows setting a font in editor component. But the preference is
          not saved on application exit.
+New:     LP: #680100 - doesn't retain current working directory
+         The last accessed directory by the file selection dialogs is saved.
+         Also the default open/save directory is 'Documents' directory whose
+         value depends on OS and user settings.
+         The working directory preference is not saved on application exit.
 Fix:     LP: #519828 - Start-up dialog should not be minimised
 Fix:     LP: #519834 - Assembler Error: No line highlighting
 Fix:     LP: #579317 - Modify the 'Help' dialog to point to actual tutorial

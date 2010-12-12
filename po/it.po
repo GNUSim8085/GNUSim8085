@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-09-26 22:54+0530\n"
-"PO-Revision-Date: 2010-05-03 07:01+0000\n"
-"Last-Translator: Federico Foschini <undicizeri@gmail.com>\n"
+"PO-Revision-Date: 2010-10-08 17:55+0000\n"
+"Last-Translator: simone.sandri <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-05-23 05:40+0000\n"
+"X-Launchpad-Export-Date: 2010-12-12 14:28+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/callbacks.c:138 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "Seleziona carattere"
 
 #: src/callbacks.c:248
 msgid "Program has errors. Check the Message pane."
@@ -133,27 +133,27 @@ msgstr "_Memoria"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr ""
+msgstr "Resetta Memoria"
 
 #: src/interface.c:59
 msgid "Reset _All"
-msgstr ""
+msgstr "Resetta_Tutto"
 
 #: src/interface.c:59
 msgid "Reset All"
-msgstr ""
+msgstr "Resetta Tutto"
 
 #: src/interface.c:60
 msgid "A_ssemble"
-msgstr ""
+msgstr "A_ssembla"
 
 #: src/interface.c:60
 msgid "Only assemble program"
-msgstr ""
+msgstr "Assembla solo il programma"
 
 #: src/interface.c:61
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "Esegui, assembla e carica il programma"
 
 #: src/interface.c:62
 msgid "Show _listing"
@@ -213,11 +213,11 @@ msgstr ""
 
 #: src/interface.c:69
 msgid "_Contents"
-msgstr ""
+msgstr "_Contenuti"
 
 #: src/interface.c:70
 msgid "8085 _Manual"
-msgstr ""
+msgstr "8085 _Manuale"
 
 #: src/interface.c:71
 msgid "Assembler _Tutorial"
@@ -357,19 +357,19 @@ msgstr "Stack"
 
 #: src/interface.c:958
 msgid "KeyPad"
-msgstr ""
+msgstr "Tastierino numerico"
 
 #: src/interface.c:989 src/interface.c:1033
-#, fuzzy
 msgid "Start"
-msgstr "Stack"
+msgstr "Avvio"
 
 #: src/interface.c:1280
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Federico Foschini https://launchpad.net/~undicizeri\n"
-"  giorgio130 https://launchpad.net/~gm89"
+"  giorgio130 https://launchpad.net/~gm89\n"
+"  simone.sandri https://launchpad.net/~lexluxsox"
 
 #: src/interface.c:1326 src/interface.c:1387
 msgid "Assembler Listing"
@@ -543,11 +543,11 @@ msgstr ""
 
 #: src/8085-asm.c:87
 msgid "Program assembled successfully"
-msgstr ""
+msgstr "Programma assemblato con successo"
 
 #: src/bridge.c:37
 msgid "Simulator: Program running"
-msgstr ""
+msgstr "Simulatore: il programma sta andando"
 
 #: src/bridge.c:187
 #, c-format
@@ -575,16 +575,16 @@ msgstr ""
 
 #: src/gui-list-data.c:76
 msgid "Address"
-msgstr ""
+msgstr "Indirizzo"
 
 #: src/gui-list-data.c:77
 msgid "Variable"
-msgstr ""
+msgstr "Variabile"
 
 #: src/gui-list-data.c:78 src/gui-list-data.c:79 src/gui-list-stack.c:83
 #: src/gui-list-stack.c:84
 msgid "Value"
-msgstr ""
+msgstr "Valore"
 
 #: src/asm-listing.c:208
 msgid "; Assembler generated listing; Not editable.\n"
@@ -608,7 +608,7 @@ msgstr ""
 
 #: src/file-op.c:140
 msgid "File already exists; overwrite it?"
-msgstr ""
+msgstr "Il file è già esistente; sovrascriverlo?"
 
 #: src/file-op.c:155
 #, c-format
@@ -625,7 +625,7 @@ msgstr ""
 
 #: src/gui-list-stack.c:82
 msgid "Proc/Reg"
-msgstr ""
+msgstr "Proc/Reg"
 
 #: src/gui-list-stack.c:117
 msgid "Stack size exceeded.  Stop the execution"

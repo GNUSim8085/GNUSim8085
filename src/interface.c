@@ -1261,8 +1261,9 @@ create_window_main (void)
 void
 activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
 {
-  if GTK_CHECK_VERSION (2, 14, 0)
+#if GTK_CHECK_VERSION (2, 14, 0)
     gtk_show_uri (NULL, url, GDK_CURRENT_TIME, NULL);
+#endif
 }
 
 void

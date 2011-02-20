@@ -1,3 +1,8 @@
+2011-02-20  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* po/ta.po, po/LINGUAS, AUTHORS, NEWS: New Tamil translation from
+	launchpad. Ready for release.
+
 2010-12-12  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/interface.c: Fix incorrect use of 'GTK_CHECK_VERSION' macro.

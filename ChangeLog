@@ -1,6 +1,8 @@
 2011-05-12  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* configure.in: Back to development, version bumped.
+	* Makefile.am, configure.in, doc/Makefile.am, pixmaps/Makefile.am,
+	po/POTFILES.in, src/Makefile.am: Remove references to Anjuta.
 
 2011-02-20  Onkar Shinde  <onkarshinde@gmail.com>
 

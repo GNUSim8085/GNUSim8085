@@ -1382,7 +1382,7 @@ create_window_tutorial (void)
   GtkWidget *tutorial_vbox;
 
   window_tutorial = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title (GTK_WINDOW (window_tutorial), _("Assembler Listing"));
+  gtk_window_set_title (GTK_WINDOW (window_tutorial), _("Assembler Tutorial"));
   gtk_window_set_position (GTK_WINDOW (window_tutorial), GTK_WIN_POS_CENTER);
   gtk_window_set_default_size (GTK_WINDOW (window_tutorial), 500, 400);
   window_tutorial_icon_pixbuf = create_pixbuf ("gnusim8085.svg");

@@ -3,6 +3,7 @@
 	* po/kn.po, po/el.po, AUTHORS: Updated translations from launchpad.
 	* src/callbacks.[c,h], src/interface.c: Remove '8085 Manual' menu as it
 	provides same functionality as Help -> Contents menu.
+	* src/interface.c: Fix title of window that shows tutorial.
 
 2011-05-12  Onkar Shinde  <onkarshinde@gmail.com>
 

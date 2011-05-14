@@ -4,6 +4,8 @@
 	* src/callbacks.[c,h], src/interface.c: Remove '8085 Manual' menu as it
 	provides same functionality as Help -> Contents menu.
 	* src/interface.c: Fix title of window that shows tutorial.
+	* po/gnusim8085.pot, po/*.po: Updated translatable strings due to the
+	recent code changes.
 
 2011-05-12  Onkar Shinde  <onkarshinde@gmail.com>
 

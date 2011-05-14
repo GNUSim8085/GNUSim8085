@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-09-26 22:54+0530\n"
-"PO-Revision-Date: 2010-04-29 12:58+0000\n"
-"Last-Translator: Richard Drakoulis <Unknown>\n"
+"PO-Revision-Date: 2011-02-27 10:21+0000\n"
+"Last-Translator: Stathis Iosifidis <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-05-23 05:36+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2011-05-14 03:04+0000\n"
+"X-Generator: Launchpad (build 13037)\n"
 
 #: src/callbacks.c:138 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "Επιλογή γραμματοσειράς"
 
 #: src/callbacks.c:248
 msgid "Program has errors. Check the Message pane."
@@ -46,20 +46,20 @@ msgid "Enter a valid number within range"
 msgstr "Εισάγετε ένα έγκυρο αριθμό εντός ορίων"
 
 #: src/callbacks.c:626 src/callbacks.c:644
-#, fuzzy
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr "Εισάγετε ένα έγκυρο αριθμό εντός ορίων"
+msgstr "Εισάγετε ένα έγκυρο αριθμό με εύρος μεταξύ (0-65535 ή 0h-FFFFh)"
 
 #: src/callbacks.c:665 src/callbacks.c:683
-#, fuzzy
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr "Εισάγετε ένα έγκυρο αριθμό εντός ορίων"
+msgstr "Εισάγετε ένα έγκυρο αριθμό με εύρος μεταξύ (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:707
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
+"Το αρχείο εγχειριδίου χρήσης, asm-guide.txt, δεν βρέθηκε. Θα βρίσκεται στον "
+"κατάλογο - "
 
 #: src/interface.c:42
 msgid "_File"
@@ -364,15 +364,15 @@ msgid "KeyPad"
 msgstr "Πληκτρολόγιο"
 
 #: src/interface.c:989 src/interface.c:1033
-#, fuzzy
 msgid "Start"
-msgstr "Στοίβα"
+msgstr "Έναρξη"
 
 #: src/interface.c:1280
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Richard Drakoulis https://launchpad.net/~richardos89\n"
+"  Stathis Iosifidis https://launchpad.net/~diamond-gr\n"
 "  Thanos Kakarountas https://launchpad.net/~a-kakarountas"
 
 #: src/interface.c:1326 src/interface.c:1387
@@ -546,8 +546,8 @@ msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
 msgstr ""
-"Μη έγκυρο όρισμα ή σύμβολο. Ελέγξτε αν τα ορίσματα εκκινούν με ένα αριθμό. π."
-"χ. το a0H θα έπρεπε να είναι 0a0H"
+"Μη έγκυρο όρισμα ή σύμβολο. Ελέγξτε αν τα ορίσματα εκκινούν με ένα αριθμό. "
+"π.χ. το a0H θα έπρεπε να είναι 0a0H"
 
 #: src/8085-asm.c:87
 msgid "Program assembled successfully"

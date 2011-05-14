@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2010-09-26 22:54+0530\n"
-"PO-Revision-Date: 2010-02-27 23:22+0000\n"
+"PO-Revision-Date: 2011-03-30 07:40+0000\n"
 "Last-Translator: aniceberg <bharath.s.jois@gmail.com>\n"
 "Language-Team: Kannada <kn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-03-09 15:48+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2011-05-14 03:00+0000\n"
+"X-Generator: Launchpad (build 13037)\n"
 
 #: src/callbacks.c:138 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "ಲಿಪಿಯನ್ನು ಆರಿಸಿರಿ"
 
 #: src/callbacks.c:248
 msgid "Program has errors. Check the Message pane."
@@ -46,24 +46,22 @@ msgid "Enter a valid number within range"
 msgstr "ಮಿತಿಯಲ್ಲಿ ಬರುವ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ"
 
 #: src/callbacks.c:626 src/callbacks.c:644
-#, fuzzy
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr "ಮಿತಿಯಲ್ಲಿ ಬರುವ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ"
+msgstr "ಸಪ್ರಮಾಣವಾದ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ (0-65535 or 0h-FFFFh)"
 
 #: src/callbacks.c:665 src/callbacks.c:683
-#, fuzzy
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr "ಮಿತಿಯಲ್ಲಿ ಬರುವ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ"
+msgstr "ಸಪ್ರಮಾಣವಾದ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:707
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
-msgstr ""
+msgstr "ಶಿಕ್ಷಣ ನೀಡುವದಾಖಲೆ ದೊರಕುತ್ತಿಲ್ಲ. ಅದು ಈ ಕೋಶದಲ್ಲಿ ಇರಬೇಕು - "
 
 #: src/interface.c:42
 msgid "_File"
-msgstr "ಕಟ್ಟು(_F)"
+msgstr "ದಾಖಲೆ(_F)"
 
 #: src/interface.c:43
 msgid "_Reset"
@@ -87,19 +85,19 @@ msgstr "ನೆರವು(_H)"
 
 #: src/interface.c:48
 msgid "New source file"
-msgstr "ಹೊಸ ಕಟ್ಟು ತೆರೆ"
+msgstr "ಹೊಸ ದಾಖಲೆ ತೆರೆ"
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr "ಕಟ್ಟನ್ನು ತೆರೆ"
+msgstr "ದಾಖಲೆಯೊಂದನ್ನು ತೆರೆ"
 
 #: src/interface.c:50
 msgid "Save file"
-msgstr "ಕಟ್ಟನ್ನು ಉಳಿಸು"
+msgstr "ದಾಖಲೆಯನ್ನು ಉಳಿಸು"
 
 #: src/interface.c:51
 msgid "Save file as"
-msgstr "ಕಟ್ಟನ್ನು ಹೀಗೆ ಉಳಿಸು"
+msgstr "ದಾಖಲೆಯನ್ನು ಹೀಗೂಉಳಿಸು"
 
 #: src/interface.c:52
 msgid "Print program"
@@ -337,7 +335,8 @@ msgstr "ನನ್ನನ್ನು ಈ ವಿಳಾಸದಲ್ಲಿ ಹಾಕಿ
 
 #: src/interface.c:874
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr "ಕ್ರಿಯೆಯ ವಿಳಾಸವನ್ನು ಭರ್ತಿ ಮಾಡಿ. ಷೋಡಶಾಂಶ ಸಂಖ್ಯೆಯಂದರೆ 'ಏಚ್' ಇಂದ ಮುಕ್ತಗೊಳಿಸಿ."
+msgstr ""
+"ಕ್ರಿಯೆಯ ವಿಳಾಸವನ್ನು ಭರ್ತಿ ಮಾಡಿ. ಷೋಡಶಾಂಶ ಸಂಖ್ಯೆಯಂದರೆ 'ಏಚ್' ಇಂದ ಮುಕ್ತಗೊಳಿಸಿ."
 
 #: src/interface.c:892
 msgid "Variables"
@@ -360,14 +359,14 @@ msgid "KeyPad"
 msgstr "ಹೂಡುವಳಿ ಯಂತ್ರ"
 
 #: src/interface.c:989 src/interface.c:1033
-#, fuzzy
 msgid "Start"
-msgstr "ಬಣಿವೆ"
+msgstr "ಪ್ರಾರಂಭಿಸು"
 
 #: src/interface.c:1280
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Vinay https://launchpad.net/~vinaykumar-mr\n"
 "  aniceberg https://launchpad.net/~aniceberg"
 
 #: src/interface.c:1326 src/interface.c:1387
@@ -540,7 +539,8 @@ msgstr "DB: ಓಪೆರಾಂಡ್ ನಲ್ಲಿ ದೋಷವುಂಟು"
 msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
-msgstr "ನಿರರ್ಥಕ ಓಪೆರಾಂಡ್ ಅಥವಾ ಚಿನ್ಹೇ. ಸಂಖ್ಯೆಯಿಂದ ಆರಂಭಗೊಳಿಸಬೇಕೇನೆಂದು ಪರೀಕ್ಷಿಸಿ"
+msgstr ""
+"ನಿರರ್ಥಕ ಓಪೆರಾಂಡ್ ಅಥವಾ ಚಿನ್ಹೇ. ಸಂಖ್ಯೆಯಿಂದ ಆರಂಭಗೊಳಿಸಬೇಕೇನೆಂದು ಪರೀಕ್ಷಿಸಿ"
 
 #: src/8085-asm.c:87
 msgid "Program assembled successfully"
@@ -561,12 +561,13 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
-"ನಿರರ್ಥಕವಾದ ಆದೇಶವನ್ನು ಓಡಿಸಲು ಪ್ರಯತ್ನ <%xH> ನಲ್ಲಿ. ನಿರ್ವಾಹನೆಯನ್ನು ನಿಲ್ಲಿಸಲಾಗುವುದು!\n"
+"ನಿರರ್ಥಕವಾದ ಆದೇಶವನ್ನು ಓಡಿಸಲು ಪ್ರಯತ್ನ <%xH> ನಲ್ಲಿ. ನಿರ್ವಾಹನೆಯನ್ನು "
+"ನಿಲ್ಲಿಸಲಾಗುವುದು!\n"
 "\n"
-"ನಿಮ್ಮ ಕ್ರಮದ ಅಂತ್ಯದಲ್ಲಿ  ಆದೇಶವನ್ನು ಉಪಯೋಗಿಸಿದ್ದೀರೆಂದು ಪರೀಕ್ಷಿಸಿ. ನಿಮ್ಮ ಮೂಲ ಕ್ರಮ ಖಾಲಿ "
-"ಇಲ್ಲವೆಂದು ಪರೀಕ್ಷಿಸಿ. ಒಮ್ಮೆ ಕ್ರಮವನ್ನು ಕೂಡ ಪರೀಕ್ಷಿಸಿ. ನೀವು ಖಂಡಿತವಾಗಿ ಸರಿಯನ್ನಿಸಿದರಲ್ಲಿ "
-"ನಿಮ್ಮ ಮೂಲ(ಕೋಡ್)ವನ್ನು ನಮಗೆ ನೀಡಿರಿ. ನಾವೊಮ್ಮೆ ಪರೀಕ್ಷಿಸುತ್ತೇವೆ. GNUSim೮೦೮೫ ನಲಿ "
-"ದೋಷವಿರಬಹುದು."
+"ನಿಮ್ಮ ಕ್ರಮದ ಅಂತ್ಯದಲ್ಲಿ  ಆದೇಶವನ್ನು ಉಪಯೋಗಿಸಿದ್ದೀರೆಂದು ಪರೀಕ್ಷಿಸಿ. ನಿಮ್ಮ ಮೂಲ "
+"ಕ್ರಮ ಖಾಲಿ ಇಲ್ಲವೆಂದು ಪರೀಕ್ಷಿಸಿ. ಒಮ್ಮೆ ಕ್ರಮವನ್ನು ಕೂಡ ಪರೀಕ್ಷಿಸಿ. ನೀವು ಖಂಡಿತವಾಗಿ "
+"ಸರಿಯನ್ನಿಸಿದರಲ್ಲಿ ನಿಮ್ಮ ಮೂಲ(ಕೋಡ್)ವನ್ನು ನಮಗೆ ನೀಡಿರಿ. ನಾವೊಮ್ಮೆ ಪರೀಕ್ಷಿಸುತ್ತೇವೆ. "
+"GNUSim೮೦೮೫ ನಲಿ ದೋಷವಿರಬಹುದು."
 
 #: src/bridge.c:308
 msgid "Assembler: running"
@@ -645,4 +646,5 @@ msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
-"POPಆದೇಶವನ್ನು PUSHಗಿಂತಲು ಹೆಚ್ಚು ಉಪಯೋಗಿಸಲು ಪ್ರಯತ್ನ. ಒಮ್ಮೆ ನಿಮ್ಮ ಪ್ರಕಾರವನ್ನು ಪರಿಶೀಲಿಸಿ"
+"POPಆದೇಶವನ್ನು PUSHಗಿಂತಲು ಹೆಚ್ಚು ಉಪಯೋಗಿಸಲು ಪ್ರಯತ್ನ. ಒಮ್ಮೆ ನಿಮ್ಮ ಪ್ರಕಾರವನ್ನು "
+"ಪರಿಶೀಲಿಸಿ"

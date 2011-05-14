@@ -352,13 +352,6 @@ on_help_activate (GtkMenuItem * menuitem, gpointer user_data)
 
 
 void
-on_8085_manual1_activate (GtkMenuItem * menuitem, gpointer user_data)
-{
-  gtk_widget_show (create_window_start ());
-}
-
-
-void
 on_assembler_tutorial1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   show_tutorial ();

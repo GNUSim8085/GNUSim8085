@@ -67,7 +67,6 @@ static const GtkActionEntry entries[] = {
   { "ClearBreak", NULL, N_("_Clear all breakpoints"), "<control><shift>B", N_("Remove all breakpoints"), G_CALLBACK(on_clear_all_breakpoints1_activate) },
   { "StopExec", GTK_STOCK_STOP, N_("Stop execution"), NULL, N_("Stop debugging"), G_CALLBACK(on_stop_execution1_activate) },
   { "Help", GTK_STOCK_HELP, N_("_Contents"), "F1", NULL, G_CALLBACK(on_help_activate) },
-  { "Manual", GTK_STOCK_INFO, N_("8085 _Manual"), "<control>M", NULL, G_CALLBACK(on_8085_manual1_activate) },
   { "Tutorial", GTK_STOCK_DIALOG_INFO, N_("Assembler _Tutorial"), "<control><shift>T", NULL, G_CALLBACK(on_assembler_tutorial1_activate) },
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(on_about1_activate) }
 };
@@ -119,8 +118,6 @@ static const char *ui_description =
   "    </menu>"
   "    <menu action='HelpMenu'>"
   "      <menuitem action='Help'/>"
-  "      <separator/>"
-  "      <menuitem action='Manual'/>"
   "      <menuitem action='Tutorial'/>"
   "      <separator/>"
   "      <menuitem action='About'/>"

@@ -197,7 +197,6 @@ gui_input_reg (gchar * set)
   gchar d5[] = "5", d6[] = "6", d7[] = "7", d0[] = "0";
   GtkWidget *combo_reg;
   GtkWidget *dig;
-  GList *items = NULL;
   gchar *symbol_name = NULL;
 
   g_assert (set);
@@ -239,25 +238,17 @@ gui_input_reg (gchar * set)
 		}
 	  i++;
 
-	  items = g_list_append (items, to);
+	  gtk_combo_box_prepend_text (GTK_COMBO_BOX (combo_reg), to);
 		
 	}
-  gtk_combo_set_popdown_strings (GTK_COMBO (combo_reg), items);
 	
   if (gtk_dialog_run (GTK_DIALOG (dig)) == GTK_RESPONSE_OK)
 	{
-	  GtkWidget *entry;
-
-	  entry = lookup_widget (dig, "ireg_entry");
-	  g_assert (entry);
-
 	  symbol_name =
-		g_strdup (gtk_entry_get_text (GTK_ENTRY (entry)));
-
+		g_strdup (gtk_combo_box_get_active_text (GTK_COMBO_BOX (combo_reg)));
 	}
 
   gtk_widget_destroy (GTK_WIDGET (dig));
-  g_list_free (items);
 	
   return symbol_name;
 }

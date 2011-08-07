@@ -1708,7 +1708,6 @@ create_dialog_ireg (void)
   GdkPixbuf *dialog_ireg_icon_pixbuf;
   GtkWidget *dialog_vbox2;
   GtkWidget *ireg;
-  GtkWidget *ireg_entry;
   GtkWidget *dialog_action_area2;
 
   dialog_ireg = gtk_dialog_new_with_buttons (_("Choose a register"),
@@ -1732,15 +1731,9 @@ create_dialog_ireg (void)
   dialog_vbox2 = gtk_dialog_get_content_area (GTK_DIALOG (dialog_ireg));
   gtk_widget_show (dialog_vbox2);
 
-  ireg = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (ireg)->popwin),
-                     "GladeParentKey", ireg);
+  ireg = gtk_combo_box_new_text ();
   gtk_widget_show (ireg);
   gtk_box_pack_start (GTK_BOX (dialog_vbox2), ireg, FALSE, FALSE, 0);
-  gtk_combo_set_value_in_list (GTK_COMBO (ireg), TRUE, FALSE);
-
-  ireg_entry = GTK_COMBO (ireg)->entry;
-  gtk_widget_show (ireg_entry);
 
   dialog_action_area2 = gtk_dialog_get_action_area (GTK_DIALOG (dialog_ireg));
   gtk_widget_show (dialog_action_area2);
@@ -1750,7 +1743,6 @@ create_dialog_ireg (void)
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_ireg, "dialog_ireg");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_vbox2, "dialog_vbox2");
   GLADE_HOOKUP_OBJECT (dialog_ireg, ireg, "ireg");
-  GLADE_HOOKUP_OBJECT (dialog_ireg, ireg_entry, "ireg_entry");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_action_area2, "dialog_action_area2");
 
   return dialog_ireg;

@@ -1,3 +1,10 @@
+2011-08-07  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/interface.c, src/support.c: Use accessor function instead of direct
+	access to various struct members. Compiler flag 'GSEAL_ENABLE' is used
+	to detect such direct access.
+	* configure.in: Bumped required GTK version as per above changes.
+
 2011-05-14  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* po/kn.po, po/el.po, AUTHORS: Updated translations from launchpad.

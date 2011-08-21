@@ -7,6 +7,8 @@
 	src/gui-app.c: Replace deprecated API calls with those available in
 	recent GTK versions.
 	* configure.in: Bumped required GTK version as per above changes.
+	* installer.nsi.in, WINDOWS-PORT.txt: Updated Windows specific files as per
+	recent changes.
 
 2011-05-14  Onkar Shinde  <onkarshinde@gmail.com>
 

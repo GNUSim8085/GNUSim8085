@@ -6,7 +6,7 @@ How to build (using mingw cross compiler, on a linux system):
   Follow instructions at http://live.gnome.org/GTK%2B/Win32/Apps
   with following changes.
   Make sure you download all in one bundle from following link.
-  http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.12/
+  http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.18/
 
   1. Before doing 'sed -f ...' command
     a. Download gtksourceview(-dev) zip files from
@@ -52,11 +52,11 @@ Status:
 
   gnusim8085.exe runs fine on Windows machine. :-)
 
-  Screenshot -
-  http://picasaweb.google.co.in/onkarshinde/BangaloreTrip#5240247021199955618
+  Screenshots -
+  http://www.gnusim8085.org/screenshots.php
   
 
 TODO:
 
-  0. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
+  1. Create makefile for native Mingw installation.
 

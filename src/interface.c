@@ -1550,15 +1550,12 @@ create_dialog_isymbol (void)
   GtkWidget *hbox45;
   GtkWidget *label174;
   GtkWidget *isymbol_variables;
-  GtkWidget *isymbol_variables_entry;
   GtkWidget *hbox46;
   GtkWidget *label175;
   GtkWidget *isymbol_labels;
-  GtkWidget *isymbol_functions_entry;
   GtkWidget *hbox47;
   GtkWidget *label176;
   GtkWidget *isymbol_macros;
-  GtkWidget *isymbol_macros_entry;
   GtkWidget *dialog_action_area1;
 
   dialog_isymbol = gtk_dialog_new_with_buttons (_("Choose a symbol"),
@@ -1616,16 +1613,9 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox45), label174, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label174), GTK_JUSTIFY_LEFT);
 
-  isymbol_variables = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (isymbol_variables)->popwin),
-                     "GladeParentKey", isymbol_variables);
+  isymbol_variables = gtk_combo_box_new_text ();
   gtk_widget_show (isymbol_variables);
   gtk_box_pack_start (GTK_BOX (hbox45), isymbol_variables, TRUE, TRUE, 0);
-  gtk_combo_set_case_sensitive (GTK_COMBO (isymbol_variables), TRUE);
-
-  isymbol_variables_entry = GTK_COMBO (isymbol_variables)->entry;
-  gtk_widget_show (isymbol_variables_entry);
-  gtk_editable_set_editable (GTK_EDITABLE (isymbol_variables_entry), FALSE);
 
   hbox46 = gtk_hbox_new (TRUE, 5);
   gtk_widget_show (hbox46);
@@ -1637,16 +1627,9 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox46), label175, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label175), GTK_JUSTIFY_LEFT);
 
-  isymbol_labels = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (isymbol_labels)->popwin),
-                     "GladeParentKey", isymbol_labels);
+  isymbol_labels = gtk_combo_box_new_text ();
   gtk_widget_show (isymbol_labels);
   gtk_box_pack_start (GTK_BOX (hbox46), isymbol_labels, TRUE, TRUE, 0);
-  gtk_combo_set_case_sensitive (GTK_COMBO (isymbol_labels), TRUE);
-
-  isymbol_functions_entry = GTK_COMBO (isymbol_labels)->entry;
-  gtk_widget_show (isymbol_functions_entry);
-  gtk_editable_set_editable (GTK_EDITABLE (isymbol_functions_entry), FALSE);
 
   hbox47 = gtk_hbox_new (TRUE, 5);
   gtk_widget_show (hbox47);
@@ -1658,16 +1641,9 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox47), label176, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label176), GTK_JUSTIFY_LEFT);
 
-  isymbol_macros = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (isymbol_macros)->popwin),
-                     "GladeParentKey", isymbol_macros);
+  isymbol_macros = gtk_combo_box_new_text ();
   gtk_widget_show (isymbol_macros);
   gtk_box_pack_start (GTK_BOX (hbox47), isymbol_macros, TRUE, TRUE, 0);
-  gtk_combo_set_case_sensitive (GTK_COMBO (isymbol_macros), TRUE);
-
-  isymbol_macros_entry = GTK_COMBO (isymbol_macros)->entry;
-  gtk_widget_show (isymbol_macros_entry);
-  gtk_editable_set_editable (GTK_EDITABLE (isymbol_macros_entry), FALSE);
 
   dialog_action_area1 = gtk_dialog_get_action_area (GTK_DIALOG (dialog_isymbol));
   gtk_widget_show (dialog_action_area1);
@@ -1684,15 +1660,12 @@ create_dialog_isymbol (void)
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox45, "hbox45");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label174, "label174");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_variables, "isymbol_variables");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_variables_entry, "isymbol_variables_entry");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox46, "hbox46");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label175, "label175");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_labels, "isymbol_labels");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_functions_entry, "isymbol_functions_entry");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox47, "hbox47");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label176, "label176");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros, "isymbol_macros");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros_entry, "isymbol_macros_entry");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_action_area1, "dialog_action_area1");
 
   gtk_widget_grab_focus (entry1);

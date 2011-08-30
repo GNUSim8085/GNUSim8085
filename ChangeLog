@@ -4,6 +4,8 @@
 	anymore.
 	* configure.in, src/gui-editor.c: Bump GtkSourceView requirement,
 	remove corresponding ifdef.
+	* configure.in, src/Makefile.am: Some generalization from point of view
+	migration to GTK+ 3.
 
 2011-08-21  Onkar Shinde  <onkarshinde@gmail.com>
 

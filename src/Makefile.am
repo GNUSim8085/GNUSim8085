@@ -3,7 +3,7 @@
 INCLUDES = \
         -I$(top_srcdir) \
         $(GTK_CFLAGS) \
-        $(GTKSOURCEVIEW2_CFLAGS)
+        $(GTKSOURCEVIEW_CFLAGS)
 
 gnusim8085_CFLAGS =\
 	 -DPACKAGE_DOC_DIR=\"$(docdir)\"\
@@ -87,7 +87,7 @@ gnusim8085_LDFLAGS =
 
 gnusim8085_LDADD =  \
         $(GTK_LIBS)\
-        $(GTKSOURCEVIEW2_LIBS)
+        $(GTKSOURCEVIEW_LIBS)
 
 if USE_GIO
 INCLUDES += \

@@ -43,8 +43,10 @@ if test "x$WIN32" = "xyes"; then
     AC_DEFINE(WINDOWS, 1, [Defines if the build is for Windows])
 fi
 
+gtk_api="gtk+-2.0"
+gtksourceview_api="gtksourceview-2.0"
 gtk_required="2.18.0"
-gtksourceview2_required="2.8.0"
+gtksourceview_required="2.8.0"
 
 AC_ARG_ENABLE([gio],
 	AS_HELP_STRING([--enable-gio],[Enable gio based file handling (default: disabled)]),
@@ -70,35 +72,35 @@ if test "x$enable_gio" = "xyes"; then
 fi
 AM_CONDITIONAL(USE_GIO, test "x$enable_gio" = "xyes")
 
-PKG_CHECK_MODULES(GTK, [gtk+-2.0 >= $gtk_required],, [
+PKG_CHECK_MODULES(GTK, [$gtk_api >= $gtk_required],, [
     AC_MSG_ERROR(
     [
-    Cannot find libgtk2.0 >= $gtk_required
+    Cannot find $gtk_api >= $gtk_required
     
         Please check the following:
     
-         * Do you have the gtk+ development package installed?
-           (usually called gtk2-devel for rpm based distros or
-            libgtk2.0-dev for deb based distros or similar)
+         * Do you have the $gtk_api development package installed?
+           (usually called $gtk_api-devel for rpm based distros or
+            lib$gtk_api-dev for deb based distros or similar)
            If
-               ls -l /usr/lib/pkgconfig/gtk+-2.0.pc
+               ls -l /usr/lib/pkgconfig/$gtk_api.pc
            reports that the file does not exist, then you are missing
            the development package.
     
     ])])
 
-PKG_CHECK_MODULES(GTKSOURCEVIEW2, [gtksourceview-2.0 >= $gtksourceview2_required],, [
+PKG_CHECK_MODULES(GTKSOURCEVIEW, [$gtksourceview_api >= $gtksourceview_required],, [
     AC_MSG_ERROR(
     [
-    Cannot find gtksourceview2 >= $gtksourceview2_required
+    Cannot find $gtksourceview_api >= $gtksourceview_required
     
         Please check the following:
     
-         * Do you have the gtksourceview2 development package installed?
-           (usually called gtksourceview2-devel for rpm based distros or
-            libgtksourceview2.0-dev for deb based distros or similar)
+         * Do you have the $gtksourceview_api development package installed?
+           (usually called $gtksourceview_api-devel for rpm based distros or
+            lib$gtksourceview_api-dev for deb based distros or similar)
            If
-               ls -l /usr/lib/pkgconfig/gtksourceview-2.0.pc
+               ls -l /usr/lib/pkgconfig/$gtksourceview_api.pc
            reports that the file does not exist, then you are missing
            the development package.
     
@@ -106,8 +108,8 @@ PKG_CHECK_MODULES(GTKSOURCEVIEW2, [gtksourceview-2.0 >= $gtksourceview2_required
 
 AC_SUBST(GTK_LIBS)
 AC_SUBST(GTK_CFLAGS)
-AC_SUBST(GTKSOURCEVIEW2_LIBS)
-AC_SUBST(GTKSOURCEVIEW2_CFLAGS)
+AC_SUBST(GTKSOURCEVIEW_LIBS)
+AC_SUBST(GTKSOURCEVIEW_CFLAGS)
 
 dnl Languages which your application supports
 AM_GNU_GETTEXT([external])

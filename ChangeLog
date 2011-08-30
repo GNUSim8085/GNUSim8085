@@ -1,3 +1,8 @@
+2011-08-30  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/main.c, src/interface.[c,h]: Remove url activation hook. Not needed
+	anymore.
+
 2011-08-21  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/interface.c, src/support.c: Use accessor function instead of direct

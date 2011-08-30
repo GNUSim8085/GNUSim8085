@@ -1256,12 +1256,6 @@ create_window_main (void)
 }
 
 void
-activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
-{
-    gtk_show_uri (NULL, url, GDK_CURRENT_TIME, NULL);
-}
-
-void
 create_dialog_about (void)
 {
   gchar **authors = read_authors();

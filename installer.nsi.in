@@ -107,7 +107,7 @@ SectionIn RO
   !system 'make DESTDIR=`pwd`/win32 install'
   !system 'cp ${MINGW_HOME}/bin/iconv.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/libgtksourceview-2.0-0.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libxml2.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libxml2.dll win32/bin/libxml2-2.dll'
   !system 'cp ${MINGW_HOME}/share/gtksourceview-2.0/language-specs/language2.rng data/'
   !system 'cp ${MINGW_HOME}/share/gtksourceview-2.0/language-specs/def.lang data/'
   !system 'cp ${MINGW_HOME}/share/gtksourceview-2.0/styles/styles.rng data/'

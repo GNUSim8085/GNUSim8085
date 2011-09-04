@@ -10,10 +10,10 @@ How to build (using mingw cross compiler, on a linux system):
 
   1. Before doing 'sed -f ...' command
     a. Download gtksourceview(-dev) zip files from
-       http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.4/
+       http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.8/
        and extract them in mingw directory.
     b. Download libxml2 zip file from http://www.zlatkovic.com/pub/libxml/
-       and extract it in mingw directory.
+       and extract it in mingw directory (version >= 2.7.7 required).
 
   2. Before doing "./configure --host=i586-mingw32msvc ..."
     a. Comment out Requires.private from gtksourceview-2.0.pc. This needs to

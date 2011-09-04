@@ -2,6 +2,8 @@
 
 	* installer.nsi.in, WINDOWS-PORT.txt: Updated Windows specific files as per
 	recent changes.
+	* src/gui-editor.c: Set appropriate unit for print operation. This is Windows
+	specific change. Fixes printing on Windows.
 
 2011-08-30  Onkar Shinde  <onkarshinde@gmail.com>
 

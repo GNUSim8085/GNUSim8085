@@ -143,7 +143,7 @@ gui_editor_set_highlight (GUIEditor * self, guint line_no, gboolean set)
   GtkTextIter line_start, line_end;
 
   /* get line bounds */
-  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (self->buffer), &line_start, line_no);
+  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (self->buffer), &line_start, (line_no -1));
   line_end = line_start;
   gtk_text_iter_forward_to_line_end (&line_end);
 
@@ -283,7 +283,7 @@ gui_editor_clear_all_marks (GUIEditor * self)
 void
 gui_editor_goto_line (GUIEditor * self, gint ln)
 {
-  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER(self->buffer), &(self->iter), ln);
+  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER(self->buffer), &(self->iter), (ln -1));
 
   gtk_text_buffer_place_cursor (GTK_TEXT_BUFFER(self->buffer), &(self->iter));
 

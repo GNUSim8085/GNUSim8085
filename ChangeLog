@@ -1,3 +1,7 @@
+2011-09-11  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/gui-editor.h: Use only top level headers for gtksourceview.
+
 2011-09-05  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* installer.nsi.in, WINDOWS-PORT.txt: Updated Windows specific files as per

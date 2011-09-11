@@ -3,6 +3,7 @@
 	* src/gui-editor.h: Use only top level headers for gtksourceview.
 	* src/gui-editor.c, src/gui-list-message.c: In GtkTextBuffer line
 	numbers start from 0. Take this into account when highlighting line.
+	* src/file-op*.c: Fix cursor position as per sample program length.
 
 2011-09-05  Onkar Shinde  <onkarshinde@gmail.com>
 

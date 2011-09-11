@@ -205,7 +205,7 @@ hlt";
 
   /* Set template text */
   gui_editor_set_text (app->editor, template);
-  gui_editor_goto_line (app->editor, 11);
+  gui_editor_goto_line (app->editor, 13);
   gtk_text_buffer_set_modified ((GtkTextBuffer *)app->editor->buffer, FALSE);
 }
 

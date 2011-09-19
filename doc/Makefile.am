@@ -1,5 +1,7 @@
 ## Process this file with automake to produce Makefile.in
 
+SUBDIRS = help
+
 gnusim8085_docdir = $(docdir)
 gnusim8085_doc_DATA = asm-guide.txt
 

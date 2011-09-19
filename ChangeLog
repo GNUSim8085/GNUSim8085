@@ -1,3 +1,8 @@
+2011-09-19  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.in, doc/Makefile.am, doc/help/*, autoclean.sh: Build system
+	changes for providing HTML help pages converted from docbook files.
+
 2011-09-11  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/gui-editor.h: Use only top level headers for gtksourceview.

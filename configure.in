@@ -21,6 +21,24 @@ AC_HEADER_STDC
 dnl Checks for programs.
 PKG_PROG_PKG_CONFIG
 
+can_build_documentation=yes
+
+AC_PATH_PROG([xsltproc],[xsltproc])
+if test -z "$xsltproc" ; then
+	AC_MSG_WARN([xsltproc was not found. If you want to change and compile the documentation, \
+please install libxslt (http://xmlsoft.org/XSLT/)])
+	can_build_documentation=no
+fi
+
+xsl_path=/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl
+AC_CHECK_FILE([$xsl_path],AC_SUBST(xsl_path), [AC_MSG_WARN([xhtml sytle sheet was not found. \
+If you want to change and compile the documentation, please install docbook-xsl \
+(http://docbook.sourceforge.net/)]) ; can_build_documentation=no])
+
+AC_MSG_CHECKING([whether documentation can be changed and compiled])
+AC_MSG_RESULT($can_build_documentation)
+AM_CONDITIONAL([BUILD_HELP], test "$can_build_documentation" = "yes")
+
 dnl Checks for libraries.
 
 dnl Checks for header files.
@@ -162,6 +180,7 @@ po/Makefile.in
 src/Makefile
 pixmaps/Makefile
 doc/Makefile
+doc/help/Makefile
 data/Makefile
 GNUSim8085.desktop
 installer.nsi

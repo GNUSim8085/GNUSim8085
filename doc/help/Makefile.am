@@ -1,4 +1,4 @@
-images =
+images = *.png
 source_tarball_files = *.xml
 
 htmlhelpdir = $(htmldir)/help

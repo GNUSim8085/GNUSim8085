@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-INCLUDES = \
+AM_CPPFLAGS = \
         -I$(top_srcdir) \
         $(GTK_CFLAGS) \
         $(GTKSOURCEVIEW_CFLAGS)
@@ -90,7 +90,7 @@ gnusim8085_LDADD =  \
         $(GTKSOURCEVIEW_LIBS)
 
 if USE_GIO
-INCLUDES += \
+AM_CPPFLAGS += \
         $(GIO_CFLAGS)
 
 gnusim8085_SOURCES += \

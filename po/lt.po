@@ -1,234 +1,234 @@
-# Tamil translation for gnusim8085
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the BSD (3-Clause) license.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# Lithuanian translation for gnusim8085
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the gnusim8085 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
+"Project-Id-Version: gnusim8085\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-14 09:54+0530\n"
-"PO-Revision-Date: 2014-01-05 13:04+0000\n"
-"Last-Translator: Shanthakumar <mail@shanth.tk>\n"
-"Language-Team: Kenneth Gonsalves <lawgon@thenilgiris.com>\n"
+"PO-Revision-Date: 2013-05-29 09:22+0000\n"
+"Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-02-11 06:24+0000\n"
 "X-Generator: Launchpad (build 17923)\n"
-"X-Poedit-Country: INDIA\n"
-"X-Poedit-Language: Tamil\n"
 
 #: src/callbacks.c:138 src/interface.c:53
 msgid "Select font"
-msgstr "எழுத்துருவைத் தேர்ந்தெடுக்கவும்"
+msgstr "Pasirinkti šriftą"
 
 #: src/callbacks.c:248
 msgid "Program has errors. Check the Message pane."
-msgstr "பிழைகள் உள்ளன. செயதி பகுதியைப் பார்க்கவும்"
+msgstr "Programoje yra klaidų. Patikrinkite pranešimų skydelį."
 
 #: src/callbacks.c:269
 msgid "Error executing program"
-msgstr "வடிகட்டியை இயக்கும் போது பிழை"
+msgstr "Įvyko klaida vykdant programą"
 
 #: src/callbacks.c:289
 msgid "Error in step in"
-msgstr "உள்ளே அடி வைத்தலில் பிழை"
+msgstr "Įvyko klaida žengiant žingsnį į priekį"
 
 #: src/callbacks.c:304
 msgid "Error in step over"
-msgstr "தாண்டி அடி வைத்தலில் பிழை"
+msgstr "Įvyko klaida peržengiant"
 
 #: src/callbacks.c:319
 msgid "Error in step out"
-msgstr "வெளியே அடி வைத்தலில் பிழை"
+msgstr "Įvyko klaida grįžtant žingsnį atgal"
 
 #: src/callbacks.c:409
 msgid "Enter a valid number within range"
-msgstr "வரையறைக்குட்பட்ட செல்லத்தக்க எண்ணை உள்ளிடவும்"
+msgstr "Įveskite tinkamą skaičių intervale"
 
 #: src/callbacks.c:619 src/callbacks.c:637
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr "(0-65535 or 0h-FFFFh) என்ற வரையறைக்குட்பட்ட செல்லத்தக்க எண்ணை உள்ளிடவும்"
+msgstr "Įveskite reikalingą skaičių intervale (0-65535 or 0h-FFFFh)"
 
 #: src/callbacks.c:658 src/callbacks.c:676
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr "(0-255 / 0h-00FFh)  எல்லைக்குள் உள்ள சரியான எண்ணை கொடுக்கவும்"
+msgstr "Įveskite reikalingą skaičių intervale (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:700
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
-"பயிற்சி கோப்பு, asm-guide.txt, காணவில்லை . அது  அடைவில் இருக்க வேண்டும் - "
+"Nerasta žinyno rinkmena asm-guide.txt. Ji turėtų būti pateikta aplankale - "
 
 #: src/interface.c:42
 msgid "_File"
-msgstr "(_F)கோப்பு"
+msgstr "_Failas"
 
 #: src/interface.c:43
 msgid "_Reset"
-msgstr "நிலை மீள்"
+msgstr "_Atstatyti"
 
 #: src/interface.c:44
 msgid "_Assembler"
-msgstr "_ தொகுப்பி"
+msgstr "Su_rinkti"
 
 #: src/interface.c:45
 msgid "_Debug"
-msgstr "_பிழை நீக்கு"
+msgstr "_Derinti"
 
 #: src/interface.c:46
 msgid "_Breakpoints"
-msgstr "நிறுத்தல் புள்ளிகள்"
+msgstr "_Lūžio taškai"
 
 #: src/interface.c:47
 msgid "_Help"
-msgstr "(_H)உதவி"
+msgstr "_Pagalba"
 
 #: src/interface.c:48
 msgid "New source file"
-msgstr "புதிய மூல கோப்பு"
+msgstr "Nauja rinkmena"
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr "கோப்பை திறக்கவும்"
+msgstr "Atverti rinkmeną"
 
 #: src/interface.c:50
 msgid "Save file"
-msgstr "கோப்பை சேமி"
+msgstr "Išsaugoti rinkmeną"
 
 #: src/interface.c:51
 msgid "Save file as"
-msgstr "என்று கோப்பை சேமி"
+msgstr "Išsaugoti rinkmeną kaip"
 
 #: src/interface.c:52
 msgid "Print program"
-msgstr "நிரல் அச்சிடு"
+msgstr "Spausdinti programą"
 
 #: src/interface.c:55
 msgid "_Registers"
-msgstr ""
+msgstr "_Registrai"
 
 #: src/interface.c:55
 msgid "Reset Registers"
-msgstr ""
+msgstr "Atstatyti registrus"
 
 #: src/interface.c:56
 msgid "_Flags"
-msgstr ""
+msgstr "_Požymiai"
 
 #: src/interface.c:56
 msgid "Reset Flags"
-msgstr ""
+msgstr "Atstatyti požymius"
 
 #: src/interface.c:57
 msgid "_IO Ports"
-msgstr ""
+msgstr "Įv. / Išv. prievadai"
 
 #: src/interface.c:57
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "Atstatyti Įv. / Išv. prievadus"
 
 #: src/interface.c:58
 msgid "_Memory"
-msgstr "நினைவகம்"
+msgstr "_Atmintis"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr "நினைவகத்தை நிலை மீள்"
+msgstr "Atstatyti atmintį"
 
 #: src/interface.c:59
 msgid "Reset _All"
-msgstr ""
+msgstr "Atstatyti _Viską"
 
 #: src/interface.c:59
 msgid "Reset All"
-msgstr "அனைத்தையும்  மீட்டமைக்கவும்"
+msgstr "Atstatyti viską"
 
 #: src/interface.c:60
 msgid "A_ssemble"
-msgstr ""
+msgstr "Su_rinkti"
 
 #: src/interface.c:60
 msgid "Only assemble program"
-msgstr ""
+msgstr "Tik surinkti programą"
 
 #: src/interface.c:61
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "Vykdyti surinktą ir įkeltą programą"
 
 #: src/interface.c:62
 msgid "Show _listing"
-msgstr ""
+msgstr "Rodyti sąrašą"
 
 #: src/interface.c:62
 msgid "Show the source code along with opcodes and operands in hex numbers"
 msgstr ""
+"Rodyti programos kodą kartu su šešioliktainiais operacijos kodais ir "
+"operandais"
 
 #: src/interface.c:63
 msgid "Step _in"
-msgstr ""
+msgstr "Žingsnis į _priekį"
 
 #: src/interface.c:63
 msgid "Step in the code"
-msgstr ""
+msgstr "Vienas žingsnis į priekį"
 
 #: src/interface.c:64
 msgid "Step o_ver"
-msgstr ""
+msgstr "_Peržengti"
 
 #: src/interface.c:64
 msgid "Step over the code without calling functions"
-msgstr ""
+msgstr "Peržengti kodą neiškviečiant funkcijos"
 
 #: src/interface.c:65
 msgid "Step _out"
-msgstr ""
+msgstr "Žingsnis _atgal"
 
 #: src/interface.c:65
 msgid "Step out of the current function"
-msgstr ""
+msgstr "Žingsnis atgal iš esamos funkcijos"
 
 #: src/interface.c:66
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "Pažymėti lūžio tašką"
 
 #: src/interface.c:66
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "Pažymėti lūžio tašką ant pasirinktos eilutės"
 
 #: src/interface.c:67
 msgid "_Clear all breakpoints"
-msgstr ""
+msgstr "_Išvalyti visus lūžio taškus"
 
 #: src/interface.c:67
 msgid "Remove all breakpoints"
-msgstr "அனைத்து நிறுத்தல் புள்ளிகளையும் நீக்குக"
+msgstr "Pašalinti visus lūžio taškus"
 
 #: src/interface.c:68
 msgid "Stop execution"
-msgstr "செயற்படுத்தம் நிறுத்து"
+msgstr "Sustabdyti vykdymą"
 
 #: src/interface.c:68
 msgid "Stop debugging"
-msgstr "பிழை நிக்குதலை நிறுத்து"
+msgstr "Stabdyti derinimą"
 
 #: src/interface.c:69
 msgid "_Contents"
-msgstr "உள்ளடக்கங்கள் (_C)"
+msgstr "_Turinys"
 
 #: src/interface.c:70
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "Asemblerio _žinynas"
 
 #: src/interface.c:75
 msgid "Show/Hide side pane"
-msgstr "பக்க பலகத்தை கட்டு / மறை"
+msgstr "Rodyti / Paslėpti šoninį skydelį"
 
 #: src/interface.c:302
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
-msgstr "கனுசிம்8085 - 8085 நுண்செயலி பாவனையாக்கி"
+msgstr "GNUSim8085 - 8085 mikroprocesoriaus imitatorius"
 
 #: src/interface.c:425 src/interface.c:431 src/interface.c:437
 #: src/interface.c:443 src/interface.c:449 src/interface.c:455
@@ -240,7 +240,7 @@ msgstr "00"
 
 #: src/interface.c:520
 msgid "Registers"
-msgstr "பதிவு"
+msgstr "Registrai"
 
 #: src/interface.c:573 src/interface.c:579 src/interface.c:585
 #: src/interface.c:591 src/interface.c:597 src/interface.c:636
@@ -250,234 +250,237 @@ msgstr "0"
 
 #: src/interface.c:607
 msgid "Flag"
-msgstr "குறி"
+msgstr "Požymis"
 
 #: src/interface.c:627 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
-msgstr "தசமம்"
+msgstr "Dešimtainis"
 
 #: src/interface.c:635
 msgid "Enter a decimal number"
-msgstr "பத்தின கூறான எண்ணை நுழைக்கவும்"
+msgstr "Įveskite dešimtainį skaičių"
 
 #: src/interface.c:641
 msgid "Convert this number to hexadecimal"
-msgstr ""
+msgstr "Konvertuoti į šešioliktainį skaičių"
 
 #: src/interface.c:655
 msgid "To Hex"
-msgstr "பதினாறுக்கு"
+msgstr "Į Hex"
 
 #: src/interface.c:665
 msgid "Hex"
-msgstr "பதின்அறும"
+msgstr "Šešioliktainis"
 
 #: src/interface.c:673
 msgid "Enter a hexadecimal number"
-msgstr "ஒரு பதினாறாம் எண்ணை எழுதவும்"
+msgstr "Įveskite šešioliktainį skaičių"
 
 #: src/interface.c:679
 msgid "Convert this number to decimal"
-msgstr "இந்த எண்ணை தசமமாக மாற்றவும்"
+msgstr "Konvertuoti į dešimtainį skaičių"
 
 #: src/interface.c:693
 msgid "To Dec"
-msgstr "தசமத்திற்கு"
+msgstr "Į Dec"
 
 #: src/interface.c:706
 msgid "Decimal - Hex Convertion"
-msgstr ""
+msgstr "Dex- Hex konvertavimas"
 
 #: src/interface.c:734
 msgid "Change the port address to view here"
-msgstr ""
+msgstr "Pakeisto prievado adresas"
 
 #: src/interface.c:741
 msgid "Enter new port value and click Update"
-msgstr ""
+msgstr "Įveskite naują prievado reikšmę ir paspauskite Atnaujinti"
 
 #: src/interface.c:747
 msgid "Update the port value"
-msgstr "துறையின் மதிப்பை புதுபக்கவும்"
+msgstr "Atnaujinti prievado reikšmę"
 
 #: src/interface.c:761
 msgid "Update Port Value"
-msgstr "துறையின் மதிப்பை புதுபக்கவும்"
+msgstr "Atnaujinti prievado reikšmę"
 
 #: src/interface.c:774 src/interface.c:1009 src/interface.c:1014
 msgid "I/O Ports"
-msgstr ""
+msgstr "Įv. / Išv. prievadai"
 
 #: src/interface.c:798
 msgid "Change the memory location to view here"
-msgstr ""
+msgstr "Pakeistos atminties vieta"
 
 #: src/interface.c:805
 msgid "Edit new value and click Update"
-msgstr ""
+msgstr "Pakeiskite į naują reikšmę ir paspauskite Atnaujinti"
 
 #: src/interface.c:811
 msgid "Update the current memory location"
-msgstr "தற்காலிக நினைவின் இடத்தைப் பதுபிக்கவும்"
+msgstr "Atnaujinti dabartinės atminties vietą"
 
 #: src/interface.c:825
 msgid "Update Memory"
-msgstr "நினைவகத்தினை புதுப்பிக்கவும்"
+msgstr "Atnaujinti atmintį"
 
 #: src/interface.c:838 src/interface.c:965 src/interface.c:970
 msgid "Memory"
-msgstr "நினைவகம்"
+msgstr "Atmintis"
 
 #: src/interface.c:863
 msgid "Load me at"
-msgstr "ஆம் இடத்தில் என்னை ஏற்கவும்"
+msgstr "Nukelti mane į"
 
 #: src/interface.c:871
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr ""
+"Įveskite programos adresą. Pabaigoje parašykite \"h\", jeigu tai yra "
+"šešioliktainis adresas."
 
 #: src/interface.c:889
 msgid "Variables"
-msgstr "மாறிகள்"
+msgstr "Kintamieji"
 
 #: src/interface.c:902
 msgid "Data"
-msgstr "தகவல்"
+msgstr "Duomenys"
 
 #: src/interface.c:918
 msgid "Stack Trace"
-msgstr ""
+msgstr "Steko rodyklė"
 
 #: src/interface.c:931
 msgid "Stack"
-msgstr ""
+msgstr "Stekas"
 
 #: src/interface.c:955
 msgid "KeyPad"
-msgstr "விசைப்பலகை"
+msgstr "Komandos"
 
 #: src/interface.c:986 src/interface.c:1030
 msgid "Start"
-msgstr "தொடங்கு"
+msgstr "Pradžia"
 
 #: src/interface.c:1278
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Shanthakumar https://launchpad.net/~shanth\n"
-"  donatello https://launchpad.net/~aditya.mmy\n"
-"  kenneth gonsalves https://launchpad.net/~lawgon"
+"  Mantas Kriaučiūnas https://launchpad.net/~mantas\n"
+"  Tadas Masiulionis https://launchpad.net/~tadzikaz"
 
 #: src/interface.c:1324
 msgid "Assembler Listing"
-msgstr ""
+msgstr "Asemblerio programa"
 
 #: src/interface.c:1348
 msgid "Save to file"
-msgstr "கோப்பில் சேமி"
+msgstr "Išsaugoti į rinkmeną"
 
 #: src/interface.c:1385
 msgid "Assembler Tutorial"
-msgstr ""
+msgstr "Asemblerio žinynas"
 
 #: src/interface.c:1429
 msgid "GNUSim8085 start with dialog"
-msgstr "உரையாடலுடன் GNUSim8085 யை துவக்கவும்"
+msgstr "Įkelti  GNUSim8085 su dialogo langu"
 
 #: src/interface.c:1460
 msgid "1. How to use this simulator?"
-msgstr "1. இந்த பாவனையகத்தை எப்படி பயன்படுத்துவது"
+msgstr "1. Kaip naudotis šiuo imitatoriumi?"
 
 #: src/interface.c:1468
 msgid "_Tutorial"
-msgstr "(T) பயிற்சி நூல்"
+msgstr "_Žinynas"
 
 #: src/interface.c:1473
 msgid "A short tutorial on writing assembly code!"
-msgstr ""
+msgstr "Trumpas žinynas, kaip rašyti asemblerio kodą!"
 
 #: src/interface.c:1480
 msgid "2. Open an existing assembly program."
-msgstr ""
+msgstr "2. Atverti jau parašytą asemblerio programą."
 
 #: src/interface.c:1488
 msgid "_Open program"
-msgstr "(O) நிரலைத் திறக்கவும்"
+msgstr "_Atverti programą"
 
 #: src/interface.c:1493
 msgid "Open an already saved program"
-msgstr "ஏற்கனவே சேமிக்கப்பட்ட நிரலைத் திறக்கவும்"
+msgstr "Atverti išsaugotą programą"
 
 #: src/interface.c:1495
 msgid "What do you want to do now?"
-msgstr "இப்போது என்ன செய்ய வேண்டும்?"
+msgstr "Ką norėtumėte daryti?"
 
 #: src/interface.c:1505
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
 msgstr ""
+"Nepamirškite skaityti dokumentacijos,\n"
+"kuri pateikta \"doc\" aplankale."
 
 #: src/interface.c:1566
 msgid "Choose a symbol"
-msgstr "சின்னத்தைத் தேர்ந்தெடு"
+msgstr "Pasirinkite simbolį"
 
 #: src/interface.c:1592
 msgid "Enter a symbol or choose one from the lists"
-msgstr "சின்னத்தை உள்ளிடவும் அல்லது பட்டியல்களிலிருந்து ஒன்றைத் தேர்ந்தெடுக்கவும்"
+msgstr "Įveskite simbolį arba pasirinkite vieną iš sąrašo"
 
 #: src/interface.c:1602
 msgid "Enter Symbol"
-msgstr "சின்னத்தை உள்ளிடவும்"
+msgstr "Įveskite simbolį"
 
 #: src/interface.c:1616
 msgid "Variables List"
-msgstr "மாறிகளின் பட்டியல்"
+msgstr "Kintamųjų sąrašas"
 
 #: src/interface.c:1637
 msgid "Functions List"
-msgstr "செயல்பாடுகளின் பட்டயல்"
+msgstr "Funkcijų sąrašas"
 
 #: src/interface.c:1658
 msgid "Macros List"
-msgstr ""
+msgstr "Makro komandų sąrašas"
 
 #: src/interface.c:1714
 msgid "Choose a register"
-msgstr ""
+msgstr "Pasirinkite registrą"
 
 #: src/main.c:83
 msgid "Simulator: Idle"
-msgstr "பாவனையாக்கி : சும்மா இருக்கிறது"
+msgstr "Imitatorius: pasirengęs darbui"
 
 #: src/8085.c:251
 #, c-format
 msgid "Unwanted %c reached"
-msgstr ""
+msgstr "Atsirado nepageidaujamas %c"
 
 #: src/8085-instructions.c:29
 msgid "Invalid Opcode"
-msgstr ""
+msgstr "Netinkamas operacijos kodas"
 
 #: src/8085-instructions.c:878
 msgid "Instruction 'RIM' Not implemented"
-msgstr ""
+msgstr "Instrukcija \"RIM\" neįvykdyta"
 
 #: src/8085-instructions.c:1029
 msgid "Instruction 'SIM' Not implemented"
-msgstr ""
+msgstr "Instrukcija \"SIM\" neįvykdyta"
 
 #: src/asm-source.c:111
 msgid "Assembling Aborted"
-msgstr ""
+msgstr "Surinkimas nutrauktas"
 
 #: src/asm-source.c:179
 msgid "Label should be given to a code line"
-msgstr ""
+msgstr "Kodo eilutei turi būti suteikta etiketė"
 
 #: src/asm-source.c:209 src/asm-source.c:216 src/asm-source.c:223
 msgid "Incomplete opcode"
-msgstr ""
+msgstr "Nepilnas operacijos kodas"
 
 #: src/asm-source.c:238
 #, c-format
@@ -485,68 +488,72 @@ msgid ""
 "\n"
 "Neither Op not PsOp: [%s]"
 msgstr ""
+"\n"
+"Nei OP ne PsOP: [%s]"
 
 #: src/asm-source.c:239
 msgid "Invalid Opcode or Pseudo op"
-msgstr ""
+msgstr "Netinkamas operacijos arba pseudo operacijos kodas"
 
 #: src/asm-source.c:248
 msgid "Opcode needs an user argument"
-msgstr ""
+msgstr "Operacijos kodui reikalingas vartotojo argumentas"
 
 #: src/asm-source.c:256
 msgid "Extra characters in line"
-msgstr ""
+msgstr "Papildomi simboliai eilutėje"
 
 #: src/asm-source.c:422
 msgid "Expression error in symbol"
-msgstr ""
+msgstr "Simbolio išraiškos klaida"
 
 #: src/asm-source.c:436
 msgid "Undefined symbol"
-msgstr ""
+msgstr "Nežinomas simbolis"
 
 #: src/asm-gensym.c:75
 msgid "Redundant label"
-msgstr ""
+msgstr "Nereikalinga etiketė"
 
 #: src/asm-gensym.c:90
 msgid "Invalid Operand in EQU"
-msgstr ""
+msgstr "Netinkamas operandas komandoje EQU"
 
 #: src/asm-gensym.c:102 src/asm-gensym.c:124
 msgid "Invalid operand"
-msgstr ""
+msgstr "Netinkamas operandas"
 
 #: src/asm-gensym.c:114
 msgid "Redefinition of symbol"
-msgstr ""
+msgstr "Naujas simbolio apibrėžimas"
 
 #: src/asm-genobj.c:111
 msgid "Invalid data size"
-msgstr "தகவல் அளவு செல்லாது"
+msgstr "Negalimas duomenų dydis"
 
 #: src/asm-genobj.c:116
 msgid "DS: Exceeded limit"
-msgstr "DS: எல்லை மீறியது"
+msgstr "DS: viršytas limitas"
 
 #: src/asm-genobj.c:131
 msgid "DB: Operand error"
-msgstr ""
+msgstr "DB: Operando klaida"
 
 #: src/asm-genobj.c:161
 msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
 msgstr ""
+"Netinkamas operandas arba simbolis. Patikrinkite ar operandai prasideda "
+"tokiais skaičiais, pavyzdžiui,  a0H turėtų būti 0a0H"
 
 #: src/8085-asm.c:87
 msgid "Program assembled successfully"
-msgstr ""
+msgstr "Programa sėkmingai surinkta"
 
 #: src/bridge.c:37
 msgid "Simulator: Program running"
-msgstr ""
+msgstr "Imitatorius: programa vykdoma"
 
 #: src/bridge.c:187
 #, c-format
@@ -559,79 +566,90 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
+"Vykdymas perėjo į neegzistuojančią atminties vietą <%xH>. Vykdymas bus "
+"sustabdytas!\n"
+"\n"
+"Patikrinkite ar įrašėte programos gale komandą \"hlt\" ir ar programos kodas "
+"nėra tuščias. Taip pat patikrinkite programos logiškumą. Jei tikrai esate "
+"įsitikinę, kad tai galėtų būti GNUSim8085 klaida, patariame atsiųsti savo "
+"programos kopiją."
 
 #: src/bridge.c:308
 msgid "Assembler: running"
-msgstr ""
+msgstr "Asembleris: vykdoma"
 
 #: src/gui-list-message.c:96
 msgid "Line No"
-msgstr "வரி எண்"
+msgstr "Eilės nr."
 
 #: src/gui-list-message.c:97
 msgid "Assembler Message"
-msgstr ""
+msgstr "Asemblerio pranešimas"
 
 #: src/gui-list-data.c:76
 msgid "Address"
-msgstr "முகவரி"
+msgstr "Adresas"
 
 #: src/gui-list-data.c:77
 msgid "Variable"
-msgstr "மாறி"
+msgstr "Kintamasis"
 
 #: src/gui-list-data.c:78 src/gui-list-data.c:79 src/gui-list-stack.c:83
 #: src/gui-list-stack.c:84
 msgid "Value"
-msgstr "மதிப்பு"
+msgstr "Reikšmė"
 
 #: src/asm-listing.c:208
 msgid "; Assembler generated listing; Not editable.\n"
-msgstr ""
+msgstr ";Asemblerio sukurtas sąrašas; Neredaguojamas.\n"
 
 #: src/asm-listing.c:209
 #, c-format
 msgid "; Generated by GNUSim8085: %s\n"
-msgstr ""
+msgstr "; Sukurta su GNUSim8085: %s\n"
 
 #: src/asm-listing.c:245
 msgid ""
 ";Assembler Listing (Do Not assemble)\n"
 "\n"
 msgstr ""
+";Asemblerio sąrašas (nesurinktas)\n"
+"\n"
 
 #: src/file-op.c:63
 #, c-format
 msgid "Failed to open <%s>"
-msgstr "திறக்க முடியவில்லை: <%s>"
+msgstr "Nepavyko atverti <%s>"
 
 #: src/file-op.c:142
 msgid "File already exists; overwrite it?"
-msgstr ""
+msgstr "Tokia rimkmena jau yra. Perrašyti?"
 
 #: src/file-op.c:157
 #, c-format
 msgid "Failed to save <%s>"
-msgstr "சேமிக்க முடியவில்லை <%s>"
+msgstr "Nepavyko išssaugoti <%s>"
 
 #: src/file-op.c:328
 msgid "Failed to save listing file"
-msgstr "பட்டியலின் கோப்பைச் சேமிக்க முடியவில்லை"
+msgstr "Nepavyko išsaugoti sąrašo rinkmenos"
 
 #: src/gui-list-stack.c:81
 msgid "Stack Loc"
-msgstr ""
+msgstr "Steko vieta"
 
 #: src/gui-list-stack.c:82
 msgid "Proc/Reg"
-msgstr ""
+msgstr "Proc/Reg"
 
 #: src/gui-list-stack.c:117
 msgid "Stack size exceeded.  Stop the execution"
-msgstr ""
+msgstr "Seko dydis viršytas. Stabdyti vykdymą"
 
 #: src/gui-list-stack.c:131
 msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
+"Įvykdyta daugiau POP skaičių, negu PUSH. Sustabdykite vykdymą ir "
+"patikrinkite savo programos logiškumą."

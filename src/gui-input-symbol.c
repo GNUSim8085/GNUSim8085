@@ -69,7 +69,7 @@ combo_vars_invalidate (gboolean only_combo)
 static void
 add_to_combo (gpointer item, gpointer combo)
 {
-  gtk_combo_box_prepend_text (GTK_COMBO_BOX (combo), item);  
+  gtk_combo_box_text_prepend_text (GTK_COMBO_BOX_TEXT (combo), item);
 }
 
 static void
@@ -133,7 +133,7 @@ _connect_cb_callback (GtkWidget * combo)
   g_assert (entry);
 
   gtk_entry_set_text (GTK_ENTRY (entry),
-					  gtk_combo_box_get_active_text (GTK_COMBO_BOX (combo)));
+			  gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (combo)));
 }
 
 static void
@@ -241,14 +241,14 @@ gui_input_reg (gchar * set)
 		}
 	  i++;
 
-	  gtk_combo_box_prepend_text (GTK_COMBO_BOX (combo_reg), to);
+	  gtk_combo_box_text_prepend_text (GTK_COMBO_BOX_TEXT (combo_reg), to);
 		
 	}
 	
   if (gtk_dialog_run (GTK_DIALOG (dig)) == GTK_RESPONSE_OK)
 	{
 	  symbol_name =
-		g_strdup (gtk_combo_box_get_active_text (GTK_COMBO_BOX (combo_reg)));
+		g_strdup (gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (combo_reg)));
 	}
 
   gtk_widget_destroy (GTK_WIDGET (dig));

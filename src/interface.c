@@ -221,7 +221,6 @@ create_window_main (void)
   GtkWidget *frame6;
   GtkWidget *vbox11;
   GtkWidget *hbox13;
-  GtkObject *main_io_spin_adj;
   GtkWidget *main_io_spin;
   GtkWidget *main_io_entry;
   GtkWidget *main_io_update;
@@ -235,7 +234,6 @@ create_window_main (void)
   GtkWidget *frame8;
   GtkWidget *vbox12;
   GtkWidget *hbox14;
-  GtkObject *main_mem_spin_adj;
   GtkWidget *main_mem_spin;
   GtkWidget *main_mem_entry;
   GtkWidget *main_mem_update;
@@ -309,7 +307,7 @@ create_window_main (void)
   if (window_main_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_main), window_main_icon_pixbuf);
-      gdk_pixbuf_unref (window_main_icon_pixbuf);
+      g_object_unref (window_main_icon_pixbuf);
     }
 
   vbox1 = gtk_vbox_new (FALSE, 0);
@@ -727,8 +725,7 @@ create_window_main (void)
   gtk_widget_show (hbox13);
   gtk_box_pack_start (GTK_BOX (vbox11), hbox13, TRUE, TRUE, 0);
 
-  main_io_spin_adj = gtk_adjustment_new (0, 0, 255, 1, 10, 0);
-  main_io_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_io_spin_adj), 1, 0);
+  main_io_spin = gtk_spin_button_new_with_range (0, 255, 1);
   gtk_widget_show (main_io_spin);
   gtk_box_pack_start (GTK_BOX (hbox13), main_io_spin, TRUE, TRUE, 0);
   gtk_widget_set_tooltip_text (main_io_spin, _("Change the port address to view here"));
@@ -791,8 +788,7 @@ create_window_main (void)
   gtk_widget_show (hbox14);
   gtk_box_pack_start (GTK_BOX (vbox12), hbox14, TRUE, TRUE, 0);
 
-  main_mem_spin_adj = gtk_adjustment_new (0, 0, 65535, 1, 10, 0);
-  main_mem_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_mem_spin_adj), 1, 0);
+  main_mem_spin = gtk_spin_button_new_with_range (0, 255, 1);
   gtk_widget_show (main_mem_spin);
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_spin, TRUE, TRUE, 0);
   gtk_widget_set_tooltip_text (main_mem_spin, _("Change the memory location to view here"));
@@ -1323,7 +1319,7 @@ create_window_listing (void)
   if (window_listing_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_listing), window_listing_icon_pixbuf);
-      gdk_pixbuf_unref (window_listing_icon_pixbuf);
+      g_object_unref (window_listing_icon_pixbuf);
     }
 
   listing_vbox = gtk_vbox_new (FALSE, 2);
@@ -1384,7 +1380,7 @@ create_window_tutorial (void)
   if (window_tutorial_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_tutorial), window_tutorial_icon_pixbuf);
-      gdk_pixbuf_unref (window_tutorial_icon_pixbuf);
+      g_object_unref (window_tutorial_icon_pixbuf);
     }
 
   tutorial_vbox = gtk_vbox_new (FALSE, 2);
@@ -1429,7 +1425,7 @@ create_window_start (void)
   if (window_start_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_start), window_start_icon_pixbuf);
-      gdk_pixbuf_unref (window_start_icon_pixbuf);
+      g_object_unref (window_start_icon_pixbuf);
     }
 
   vbox15 = gtk_dialog_get_content_area (GTK_DIALOG (window_start));
@@ -1567,7 +1563,7 @@ create_dialog_isymbol (void)
   if (dialog_isymbol_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (dialog_isymbol), dialog_isymbol_icon_pixbuf);
-      gdk_pixbuf_unref (dialog_isymbol_icon_pixbuf);
+      g_object_unref (dialog_isymbol_icon_pixbuf);
     }
 
   dialog_vbox1 = gtk_dialog_get_content_area (GTK_DIALOG (dialog_isymbol));
@@ -1607,7 +1603,7 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox45), label174, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label174), GTK_JUSTIFY_LEFT);
 
-  isymbol_variables = gtk_combo_box_new_text ();
+  isymbol_variables = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_variables);
   gtk_box_pack_start (GTK_BOX (hbox45), isymbol_variables, TRUE, TRUE, 0);
 
@@ -1621,7 +1617,7 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox46), label175, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label175), GTK_JUSTIFY_LEFT);
 
-  isymbol_labels = gtk_combo_box_new_text ();
+  isymbol_labels = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_labels);
   gtk_box_pack_start (GTK_BOX (hbox46), isymbol_labels, TRUE, TRUE, 0);
 
@@ -1635,7 +1631,7 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox47), label176, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label176), GTK_JUSTIFY_LEFT);
 
-  isymbol_macros = gtk_combo_box_new_text ();
+  isymbol_macros = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_macros);
   gtk_box_pack_start (GTK_BOX (hbox47), isymbol_macros, TRUE, TRUE, 0);
 
@@ -1690,13 +1686,13 @@ create_dialog_ireg (void)
   if (dialog_ireg_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (dialog_ireg), dialog_ireg_icon_pixbuf);
-      gdk_pixbuf_unref (dialog_ireg_icon_pixbuf);
+      g_object_unref (dialog_ireg_icon_pixbuf);
     }
 
   dialog_vbox2 = gtk_dialog_get_content_area (GTK_DIALOG (dialog_ireg));
   gtk_widget_show (dialog_vbox2);
 
-  ireg = gtk_combo_box_new_text ();
+  ireg = gtk_combo_box_text_new ();
   gtk_widget_show (ireg);
   gtk_box_pack_start (GTK_BOX (dialog_vbox2), ireg, FALSE, FALSE, 0);
 

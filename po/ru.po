@@ -1,170 +1,171 @@
-# Tamil translation for gnusim8085
+# Russian translation for gnusim8085
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the BSD (3-Clause) license.
+# This file is distributed under the same license as the gnusim8085 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
+"Project-Id-Version: gnusim8085\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-14 09:54+0530\n"
-"PO-Revision-Date: 2014-01-05 13:04+0000\n"
-"Last-Translator: Shanthakumar <mail@shanth.tk>\n"
-"Language-Team: Kenneth Gonsalves <lawgon@thenilgiris.com>\n"
+"PO-Revision-Date: 2014-09-10 17:47+0000\n"
+"Last-Translator: Anton Mukovozov <graalogosh@gmail.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-02-11 06:24+0000\n"
 "X-Generator: Launchpad (build 17923)\n"
-"X-Poedit-Country: INDIA\n"
-"X-Poedit-Language: Tamil\n"
 
 #: src/callbacks.c:138 src/interface.c:53
 msgid "Select font"
-msgstr "எழுத்துருவைத் தேர்ந்தெடுக்கவும்"
+msgstr "Выберите шрифт"
 
 #: src/callbacks.c:248
 msgid "Program has errors. Check the Message pane."
-msgstr "பிழைகள் உள்ளன. செயதி பகுதியைப் பார்க்கவும்"
+msgstr "В программе обнаружены ошибки. Проверьте Панель сообщений."
 
 #: src/callbacks.c:269
 msgid "Error executing program"
-msgstr "வடிகட்டியை இயக்கும் போது பிழை"
+msgstr "Ошибка запуска программы"
 
 #: src/callbacks.c:289
 msgid "Error in step in"
-msgstr "உள்ளே அடி வைத்தலில் பிழை"
+msgstr ""
 
 #: src/callbacks.c:304
 msgid "Error in step over"
-msgstr "தாண்டி அடி வைத்தலில் பிழை"
+msgstr ""
 
 #: src/callbacks.c:319
 msgid "Error in step out"
-msgstr "வெளியே அடி வைத்தலில் பிழை"
+msgstr ""
 
 #: src/callbacks.c:409
 msgid "Enter a valid number within range"
-msgstr "வரையறைக்குட்பட்ட செல்லத்தக்க எண்ணை உள்ளிடவும்"
+msgstr "Введите число в допустимых пределах"
 
 #: src/callbacks.c:619 src/callbacks.c:637
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr "(0-65535 or 0h-FFFFh) என்ற வரையறைக்குட்பட்ட செல்லத்தக்க எண்ணை உள்ளிடவும்"
+msgstr "Введите правильный номер в дапазоне (0-65535 или 0h-FFFFh)"
 
 #: src/callbacks.c:658 src/callbacks.c:676
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr "(0-255 / 0h-00FFh)  எல்லைக்குள் உள்ள சரியான எண்ணை கொடுக்கவும்"
+msgstr "Введите правильный номер в дапазоне (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:700
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
-"பயிற்சி கோப்பு, asm-guide.txt, காணவில்லை . அது  அடைவில் இருக்க வேண்டும் - "
+"Файл с материалом для обучения, asm-guide.txt, не был найден. Он должен "
+"находиться в папке - "
 
 #: src/interface.c:42
 msgid "_File"
-msgstr "(_F)கோப்பு"
+msgstr "_Файл"
 
 #: src/interface.c:43
 msgid "_Reset"
-msgstr "நிலை மீள்"
+msgstr "_Сбросить"
 
 #: src/interface.c:44
 msgid "_Assembler"
-msgstr "_ தொகுப்பி"
+msgstr "_Ассемблер"
 
 #: src/interface.c:45
 msgid "_Debug"
-msgstr "_பிழை நீக்கு"
+msgstr "_Отладка"
 
 #: src/interface.c:46
 msgid "_Breakpoints"
-msgstr "நிறுத்தல் புள்ளிகள்"
+msgstr "_Точки прерывания"
 
 #: src/interface.c:47
 msgid "_Help"
-msgstr "(_H)உதவி"
+msgstr "_Помощь"
 
 #: src/interface.c:48
 msgid "New source file"
-msgstr "புதிய மூல கோப்பு"
+msgstr "Новый исходный файл"
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr "கோப்பை திறக்கவும்"
+msgstr "Открыть Файл"
 
 #: src/interface.c:50
 msgid "Save file"
-msgstr "கோப்பை சேமி"
+msgstr "Сохранить файл"
 
 #: src/interface.c:51
 msgid "Save file as"
-msgstr "என்று கோப்பை சேமி"
+msgstr "Сохранить файл как"
 
 #: src/interface.c:52
 msgid "Print program"
-msgstr "நிரல் அச்சிடு"
+msgstr "Программа печати"
 
 #: src/interface.c:55
 msgid "_Registers"
-msgstr ""
+msgstr "_Регистры"
 
 #: src/interface.c:55
 msgid "Reset Registers"
-msgstr ""
+msgstr "Сбросить регистры"
 
 #: src/interface.c:56
 msgid "_Flags"
-msgstr ""
+msgstr "_Флаги"
 
 #: src/interface.c:56
 msgid "Reset Flags"
-msgstr ""
+msgstr "Сбросить флаги"
 
 #: src/interface.c:57
 msgid "_IO Ports"
-msgstr ""
+msgstr "_Порты ввода/вывода"
 
 #: src/interface.c:57
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "Сбросить порты ввода/вывода"
 
 #: src/interface.c:58
 msgid "_Memory"
-msgstr "நினைவகம்"
+msgstr "Па_мять"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr "நினைவகத்தை நிலை மீள்"
+msgstr "Сбросить память"
 
 #: src/interface.c:59
 msgid "Reset _All"
-msgstr ""
+msgstr "Сбросить _Все"
 
 #: src/interface.c:59
 msgid "Reset All"
-msgstr "அனைத்தையும்  மீட்டமைக்கவும்"
+msgstr "Сбросить всё"
 
 #: src/interface.c:60
 msgid "A_ssemble"
-msgstr ""
+msgstr "А_ссемблировать"
 
 #: src/interface.c:60
 msgid "Only assemble program"
-msgstr ""
+msgstr "Только ассемблировать программу"
 
 #: src/interface.c:61
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "Выполнить ассемблированную и загруженную программу"
 
 #: src/interface.c:62
 msgid "Show _listing"
-msgstr ""
+msgstr "Показать _листинг"
 
 #: src/interface.c:62
 msgid "Show the source code along with opcodes and operands in hex numbers"
 msgstr ""
+"Показать исходный код вместе с опкодами и операндами в шестнадцатиричном "
+"формате"
 
 #: src/interface.c:63
 msgid "Step _in"
@@ -192,11 +193,11 @@ msgstr ""
 
 #: src/interface.c:66
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "Включить/выключить точку останова"
 
 #: src/interface.c:66
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "Поставить точку остановки на текущей строке"
 
 #: src/interface.c:67
 msgid "_Clear all breakpoints"
@@ -204,31 +205,31 @@ msgstr ""
 
 #: src/interface.c:67
 msgid "Remove all breakpoints"
-msgstr "அனைத்து நிறுத்தல் புள்ளிகளையும் நீக்குக"
+msgstr "Убрать все точки остановки"
 
 #: src/interface.c:68
 msgid "Stop execution"
-msgstr "செயற்படுத்தம் நிறுத்து"
+msgstr "Остановить выполнение"
 
 #: src/interface.c:68
 msgid "Stop debugging"
-msgstr "பிழை நிக்குதலை நிறுத்து"
+msgstr "Остановить отладку"
 
 #: src/interface.c:69
 msgid "_Contents"
-msgstr "உள்ளடக்கங்கள் (_C)"
+msgstr ""
 
 #: src/interface.c:70
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "Руководство по Assembler"
 
 #: src/interface.c:75
 msgid "Show/Hide side pane"
-msgstr "பக்க பலகத்தை கட்டு / மறை"
+msgstr "Показать/Скрыть боковую панель"
 
 #: src/interface.c:302
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
-msgstr "கனுசிம்8085 - 8085 நுண்செயலி பாவனையாக்கி"
+msgstr "GNUSim8085 - Симулятор Микропроцессора 8085"
 
 #: src/interface.c:425 src/interface.c:431 src/interface.c:437
 #: src/interface.c:443 src/interface.c:449 src/interface.c:455
@@ -236,57 +237,57 @@ msgstr "கனுசிம்8085 - 8085 நுண்செயலி பாவ�
 #: src/interface.c:479 src/interface.c:485 src/interface.c:491
 #: src/interface.c:497 src/interface.c:503
 msgid "00"
-msgstr "00"
+msgstr ""
 
 #: src/interface.c:520
 msgid "Registers"
-msgstr "பதிவு"
+msgstr "Регистры"
 
 #: src/interface.c:573 src/interface.c:579 src/interface.c:585
 #: src/interface.c:591 src/interface.c:597 src/interface.c:636
 #: src/interface.c:674 src/interface.c:742 src/interface.c:806
 msgid "0"
-msgstr "0"
+msgstr ""
 
 #: src/interface.c:607
 msgid "Flag"
-msgstr "குறி"
+msgstr "Флаг"
 
 #: src/interface.c:627 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
-msgstr "தசமம்"
+msgstr ""
 
 #: src/interface.c:635
 msgid "Enter a decimal number"
-msgstr "பத்தின கூறான எண்ணை நுழைக்கவும்"
+msgstr "Введите десятичное число"
 
 #: src/interface.c:641
 msgid "Convert this number to hexadecimal"
-msgstr ""
+msgstr "Преобразовать в шестнадцатиричное"
 
 #: src/interface.c:655
 msgid "To Hex"
-msgstr "பதினாறுக்கு"
+msgstr ""
 
 #: src/interface.c:665
 msgid "Hex"
-msgstr "பதின்அறும"
+msgstr ""
 
 #: src/interface.c:673
 msgid "Enter a hexadecimal number"
-msgstr "ஒரு பதினாறாம் எண்ணை எழுதவும்"
+msgstr "Введите шестандцатиричное число"
 
 #: src/interface.c:679
 msgid "Convert this number to decimal"
-msgstr "இந்த எண்ணை தசமமாக மாற்றவும்"
+msgstr "Преобразовать в десятичное"
 
 #: src/interface.c:693
 msgid "To Dec"
-msgstr "தசமத்திற்கு"
+msgstr "В десятичную"
 
 #: src/interface.c:706
 msgid "Decimal - Hex Convertion"
-msgstr ""
+msgstr "Dec - Hex конвертер"
 
 #: src/interface.c:734
 msgid "Change the port address to view here"
@@ -298,15 +299,15 @@ msgstr ""
 
 #: src/interface.c:747
 msgid "Update the port value"
-msgstr "துறையின் மதிப்பை புதுபக்கவும்"
+msgstr ""
 
 #: src/interface.c:761
 msgid "Update Port Value"
-msgstr "துறையின் மதிப்பை புதுபக்கவும்"
+msgstr ""
 
 #: src/interface.c:774 src/interface.c:1009 src/interface.c:1014
 msgid "I/O Ports"
-msgstr ""
+msgstr "Порты Ввода/Вывода"
 
 #: src/interface.c:798
 msgid "Change the memory location to view here"
@@ -314,23 +315,23 @@ msgstr ""
 
 #: src/interface.c:805
 msgid "Edit new value and click Update"
-msgstr ""
+msgstr "Введите новое значение и нажмите Обновить"
 
 #: src/interface.c:811
 msgid "Update the current memory location"
-msgstr "தற்காலிக நினைவின் இடத்தைப் பதுபிக்கவும்"
+msgstr ""
 
 #: src/interface.c:825
 msgid "Update Memory"
-msgstr "நினைவகத்தினை புதுப்பிக்கவும்"
+msgstr ""
 
 #: src/interface.c:838 src/interface.c:965 src/interface.c:970
 msgid "Memory"
-msgstr "நினைவகம்"
+msgstr "Память"
 
 #: src/interface.c:863
 msgid "Load me at"
-msgstr "ஆம் இடத்தில் என்னை ஏற்கவும்"
+msgstr ""
 
 #: src/interface.c:871
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
@@ -338,35 +339,35 @@ msgstr ""
 
 #: src/interface.c:889
 msgid "Variables"
-msgstr "மாறிகள்"
+msgstr "Переменные"
 
 #: src/interface.c:902
 msgid "Data"
-msgstr "தகவல்"
+msgstr "Данные"
 
 #: src/interface.c:918
 msgid "Stack Trace"
-msgstr ""
+msgstr "Трассировка стека"
 
 #: src/interface.c:931
 msgid "Stack"
-msgstr ""
+msgstr "Стек"
 
 #: src/interface.c:955
 msgid "KeyPad"
-msgstr "விசைப்பலகை"
+msgstr ""
 
 #: src/interface.c:986 src/interface.c:1030
 msgid "Start"
-msgstr "தொடங்கு"
+msgstr ""
 
 #: src/interface.c:1278
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Shanthakumar https://launchpad.net/~shanth\n"
-"  donatello https://launchpad.net/~aditya.mmy\n"
-"  kenneth gonsalves https://launchpad.net/~lawgon"
+"  Anton Mukovozov https://launchpad.net/~graalogosh\n"
+"  Sergey Murzin https://launchpad.net/~formenel\n"
+"  Vyacheslav Sharmanov https://launchpad.net/~vsharmanov"
 
 #: src/interface.c:1324
 msgid "Assembler Listing"
@@ -374,7 +375,7 @@ msgstr ""
 
 #: src/interface.c:1348
 msgid "Save to file"
-msgstr "கோப்பில் சேமி"
+msgstr "Сохранить в файл"
 
 #: src/interface.c:1385
 msgid "Assembler Tutorial"
@@ -382,35 +383,35 @@ msgstr ""
 
 #: src/interface.c:1429
 msgid "GNUSim8085 start with dialog"
-msgstr "உரையாடலுடன் GNUSim8085 யை துவக்கவும்"
+msgstr ""
 
 #: src/interface.c:1460
 msgid "1. How to use this simulator?"
-msgstr "1. இந்த பாவனையகத்தை எப்படி பயன்படுத்துவது"
+msgstr "1. Как использовать симулятор?"
 
 #: src/interface.c:1468
 msgid "_Tutorial"
-msgstr "(T) பயிற்சி நூல்"
+msgstr ""
 
 #: src/interface.c:1473
 msgid "A short tutorial on writing assembly code!"
-msgstr ""
+msgstr "Короткое обучение по кодированию в ассемблере!"
 
 #: src/interface.c:1480
 msgid "2. Open an existing assembly program."
-msgstr ""
+msgstr "2. Открыть существующую программу"
 
 #: src/interface.c:1488
 msgid "_Open program"
-msgstr "(O) நிரலைத் திறக்கவும்"
+msgstr ""
 
 #: src/interface.c:1493
 msgid "Open an already saved program"
-msgstr "ஏற்கனவே சேமிக்கப்பட்ட நிரலைத் திறக்கவும்"
+msgstr ""
 
 #: src/interface.c:1495
 msgid "What do you want to do now?"
-msgstr "இப்போது என்ன செய்ய வேண்டும்?"
+msgstr ""
 
 #: src/interface.c:1505
 msgid ""
@@ -420,23 +421,23 @@ msgstr ""
 
 #: src/interface.c:1566
 msgid "Choose a symbol"
-msgstr "சின்னத்தைத் தேர்ந்தெடு"
+msgstr ""
 
 #: src/interface.c:1592
 msgid "Enter a symbol or choose one from the lists"
-msgstr "சின்னத்தை உள்ளிடவும் அல்லது பட்டியல்களிலிருந்து ஒன்றைத் தேர்ந்தெடுக்கவும்"
+msgstr ""
 
 #: src/interface.c:1602
 msgid "Enter Symbol"
-msgstr "சின்னத்தை உள்ளிடவும்"
+msgstr ""
 
 #: src/interface.c:1616
 msgid "Variables List"
-msgstr "மாறிகளின் பட்டியல்"
+msgstr ""
 
 #: src/interface.c:1637
 msgid "Functions List"
-msgstr "செயல்பாடுகளின் பட்டயல்"
+msgstr ""
 
 #: src/interface.c:1658
 msgid "Macros List"
@@ -448,7 +449,7 @@ msgstr ""
 
 #: src/main.c:83
 msgid "Simulator: Idle"
-msgstr "பாவனையாக்கி : சும்மா இருக்கிறது"
+msgstr ""
 
 #: src/8085.c:251
 #, c-format
@@ -524,11 +525,11 @@ msgstr ""
 
 #: src/asm-genobj.c:111
 msgid "Invalid data size"
-msgstr "தகவல் அளவு செல்லாது"
+msgstr ""
 
 #: src/asm-genobj.c:116
 msgid "DS: Exceeded limit"
-msgstr "DS: எல்லை மீறியது"
+msgstr ""
 
 #: src/asm-genobj.c:131
 msgid "DB: Operand error"
@@ -566,7 +567,7 @@ msgstr ""
 
 #: src/gui-list-message.c:96
 msgid "Line No"
-msgstr "வரி எண்"
+msgstr ""
 
 #: src/gui-list-message.c:97
 msgid "Assembler Message"
@@ -574,16 +575,16 @@ msgstr ""
 
 #: src/gui-list-data.c:76
 msgid "Address"
-msgstr "முகவரி"
+msgstr ""
 
 #: src/gui-list-data.c:77
 msgid "Variable"
-msgstr "மாறி"
+msgstr ""
 
 #: src/gui-list-data.c:78 src/gui-list-data.c:79 src/gui-list-stack.c:83
 #: src/gui-list-stack.c:84
 msgid "Value"
-msgstr "மதிப்பு"
+msgstr ""
 
 #: src/asm-listing.c:208
 msgid "; Assembler generated listing; Not editable.\n"
@@ -603,7 +604,7 @@ msgstr ""
 #: src/file-op.c:63
 #, c-format
 msgid "Failed to open <%s>"
-msgstr "திறக்க முடியவில்லை: <%s>"
+msgstr ""
 
 #: src/file-op.c:142
 msgid "File already exists; overwrite it?"
@@ -612,11 +613,11 @@ msgstr ""
 #: src/file-op.c:157
 #, c-format
 msgid "Failed to save <%s>"
-msgstr "சேமிக்க முடியவில்லை <%s>"
+msgstr ""
 
 #: src/file-op.c:328
 msgid "Failed to save listing file"
-msgstr "பட்டியலின் கோப்பைச் சேமிக்க முடியவில்லை"
+msgstr ""
 
 #: src/gui-list-stack.c:81
 msgid "Stack Loc"

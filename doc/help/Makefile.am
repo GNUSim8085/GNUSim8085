@@ -2,7 +2,10 @@ images = *.png
 source_tarball_files = *.xml
 
 htmlhelpdir = $(htmldir)/help
-htmlhelp_DATA = $(images) $(PACKAGE).htm
+htmlhelp_DATA =
+if BUILD_HELP
+htmlhelp_DATA += $(images) $(PACKAGE).htm
+endif
 
 EXTRA_DIST = $(source_tarball_files) $(images)
 

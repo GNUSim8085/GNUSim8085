@@ -4,7 +4,7 @@ AC_INIT([gnusim8085], [1.3.8], [https://bugs.launchpad.net/gnusim8085])
 AC_DEFINE([PACKAGE_URL],["http://www.gnusim8085.org/"],[Website URL])
 
 AC_CANONICAL_HOST
-AM_INIT_AUTOMAKE([check-news])
+AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS([config.h])
 
@@ -22,22 +22,6 @@ dnl Checks for programs.
 PKG_PROG_PKG_CONFIG
 
 can_build_documentation=yes
-
-AC_PATH_PROG([xsltproc],[xsltproc])
-if test -z "$xsltproc" ; then
-	AC_MSG_WARN([xsltproc was not found. If you want to change and compile the documentation, \
-please install libxslt (http://xmlsoft.org/XSLT/)])
-	can_build_documentation=no
-fi
-
-xsl_path=/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl
-AC_CHECK_FILE([$xsl_path],AC_SUBST(xsl_path), [AC_MSG_WARN([xhtml sytle sheet was not found. \
-If you want to change and compile the documentation, please install docbook-xsl \
-(http://docbook.sourceforge.net/)]) ; can_build_documentation=no])
-
-AC_MSG_CHECKING([whether documentation can be changed and compiled])
-AC_MSG_RESULT($can_build_documentation)
-AM_CONDITIONAL([BUILD_HELP], test "$can_build_documentation" = "yes")
 
 dnl Checks for libraries.
 
@@ -61,16 +45,34 @@ if test "x$WIN32" = "xyes"; then
     AC_DEFINE(WINDOWS, 1, [Defines if the build is for Windows])
 fi
 
+AC_PATH_PROG([xsltproc],[xsltproc])
+if test -z "$xsltproc" ; then
+	AC_MSG_WARN([xsltproc was not found. If you want to change and compile the documentation, \
+please install libxslt (http://xmlsoft.org/XSLT/)])
+	can_build_documentation=no
+fi
+
+xsl_path=/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl
+if test "x$WIN32" = "xno"; then
+AC_CHECK_FILE([$xsl_path],AC_SUBST(xsl_path), [AC_MSG_WARN([xhtml sytle sheet was not found. \
+If you want to change and compile the documentation, please install docbook-xsl \
+(http://docbook.sourceforge.net/)]) ; can_build_documentation=no])
+fi
+
+AC_MSG_CHECKING([whether documentation can be changed and compiled])
+AC_MSG_RESULT($can_build_documentation)
+AM_CONDITIONAL([BUILD_HELP], test "$can_build_documentation" = "yes")
+
 gtk_api="gtk+-2.0"
 gtksourceview_api="gtksourceview-2.0"
-gtk_required="2.18.0"
-gtksourceview_required="2.8.0"
+gtk_required="2.24.0"
+gtksourceview_required="2.10.0"
 
 AC_ARG_ENABLE([gio],
-	AS_HELP_STRING([--enable-gio],[Enable gio based file handling (default: disabled)]),
+	AS_HELP_STRING([--enable-gio],[Enable gio based file handling (default: enabled)]),
 	[enable_gio=$enableval],
-	[enable_gio=no])
-if test "x$enable_gio" = "xyes"; then
+	[enable_gio=yes])
+if test "x$enable_gio" != "xno"; then
 	PKG_CHECK_MODULES(GIO, [gio-2.0],, [
     AC_MSG_ERROR(
     [

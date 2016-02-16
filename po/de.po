@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
 "POT-Creation-Date: 2011-05-14 09:54+0530\n"
-"PO-Revision-Date: 2010-11-26 15:21+0000\n"
-"Last-Translator: The Escapist <Unknown>\n"
+"PO-Revision-Date: 2012-05-12 14:17+0000\n"
+"Last-Translator: Dennis Baudys <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-12-12 14:32+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2016-02-09 06:40+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 
 #: src/callbacks.c:138 src/interface.c:53
 msgid "Select font"
@@ -58,8 +58,8 @@ msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
-"Die Datei mit dem Tutorial \"asm-guide.txt\" konnte nicht gefunden werden. "
-"Die Datei sollte sich im folgenden Verzeichnis befinden- "
+"Die Datei »asm-guide.txt« mit der Anleitung konnte nicht gefunden werden. "
+"Sie sollte sich in folgendem Ordner befinden – "
 
 #: src/interface.c:42
 msgid "_File"
@@ -219,7 +219,7 @@ msgstr "_Inhalte"
 
 #: src/interface.c:70
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "Assembler _Tutorial"
 
 #: src/interface.c:75
 msgid "Show/Hide side pane"
@@ -293,7 +293,7 @@ msgstr "Anzuzeigende Portadresse ändern"
 
 #: src/interface.c:741
 msgid "Enter new port value and click Update"
-msgstr "Geben Sie einen neuen Port-Wert ein und klicken Sie \"Aktualisieren\""
+msgstr "Geben Sie einen neuen Port ein und klicken Sie auf »Aktualisieren«"
 
 #: src/interface.c:747
 msgid "Update the port value"
@@ -363,10 +363,12 @@ msgstr "Start"
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Dennis Baudys https://launchpad.net/~thecondordb\n"
 "  Florian Sievers https://launchpad.net/~florian-sievers\n"
 "  Johannes Möller https://launchpad.net/~jojo-moeller\n"
 "  Michael Konrad https://launchpad.net/~nephelyn\n"
 "  The Escapist https://launchpad.net/~wisd00m\n"
+"  Thomas Worofsky https://launchpad.net/~thowo\n"
 "  Tommy Hartmann https://launchpad.net/~ahrak"
 
 #: src/interface.c:1324
@@ -379,7 +381,7 @@ msgstr "In Datei speichern"
 
 #: src/interface.c:1385
 msgid "Assembler Tutorial"
-msgstr ""
+msgstr "Assembler Tutorial"
 
 #: src/interface.c:1429
 msgid "GNUSim8085 start with dialog"
@@ -419,7 +421,7 @@ msgid ""
 "given in \"doc\" directory."
 msgstr ""
 "Bitten versäumen Sie es nicht, auch die Dokumentation zu lesen,\n"
-"die sich im Unterverzeichnis \"doc\" befindet."
+"die sich im Unterordner \"doc\" befindet."
 
 #: src/interface.c:1566
 msgid "Choose a symbol"
@@ -567,14 +569,14 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
-"Ausführung hat zu einer ungültigen Speicherstelle verzweigt <%xH>. "
+"Beim Ausführen wurde auf einen ungültigen Speicherbereich <%xH> verwiesen. "
 "Ausführung wird gestoppt!\n"
 "\n"
-"Überprüfen Sie, ob Sie die \"hlt\" Anweisung am Programmende eingefügt haben "
-"oder dass Ihr Programm nicht leer ist. Überprüfen Sie auch die "
+"Überprüfen Sie, ob Sie den »hlt«-Befehl am Programmende eingefügt haben und "
+"der Quelltext Ihres Programms nicht leer ist. Überprüfen Sie auch die "
 "Programmlogik. Wenn Sie sich sicher sind, dass diese Bedingungen erfüllt "
 "sind, kann es sein, dass GNUSim8085 einen Fehler enthält. Bitte Senden Sie "
-"in diesem Fall eine Kopie Ihres Quelltext an uns."
+"uns in diesem Fall eine Kopie Ihres Quelltextes."
 
 #: src/bridge.c:308
 msgid "Assembler: running"
@@ -655,6 +657,3 @@ msgid ""
 msgstr ""
 "Die Anzahl von POP Instruktionen übersteigt die Anzahl an vorhergehenden "
 "PUSH Anweisungen. Ausführung stoppen und Logik des Programmes prüfen!"
-
-#~ msgid "8085 _Manual"
-#~ msgstr "8085 Manual"

@@ -352,13 +352,6 @@ on_help_activate (GtkMenuItem * menuitem, gpointer user_data)
 
 
 void
-on_8085_manual1_activate (GtkMenuItem * menuitem, gpointer user_data)
-{
-  gtk_widget_show (create_window_start ());
-}
-
-
-void
 on_assembler_tutorial1_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   show_tutorial ();
@@ -500,7 +493,7 @@ on_show_listing1_activate (GtkMenuItem * menuitem, gpointer user_data)
   gui_editor_show (edit);
   gui_editor_set_text (edit, list->str);
   gui_editor_set_readonly (edit, TRUE);
-  gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);
+  gtk_box_pack_end (GTK_BOX (cont), edit->scroll, TRUE, TRUE, 0);
   gtk_window_maximize (GTK_WINDOW (wind));
   gtk_widget_show_all (wind);
   /* TODO clean up of listing window editor on delete event */
@@ -710,7 +703,7 @@ show_tutorial ()
   gui_editor_set_text (edit, tutorial_text->str);
   gui_editor_set_readonly (edit, TRUE);
   gui_editor_set_show_line_numbers (edit, FALSE);
-  gtk_box_pack_end_defaults (GTK_BOX (cont), edit->scroll);
+  gtk_box_pack_end (GTK_BOX (cont), edit->scroll, TRUE, TRUE, 0);
   gtk_window_maximize (GTK_WINDOW (tutorial));
   gtk_widget_show_all (tutorial);
 

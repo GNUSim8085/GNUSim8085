@@ -1,0 +1,85 @@
+<sect1 id="ui">
+	<title>User Interface</title>
+	<para>The user interface of GNUSim8085 consists of following components currently.</para>
+	<para>
+		<itemizedlist>
+			<listitem>
+				<para>Program Editor</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="editor.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>User can create new or edit existing program in editor. The editor has syntax highlighting to distinguish between between instructions, operands, comments etc. The 'Load me at' input allows specifying the start address of the assembled program.</para>
+			</listitem>
+			<listitem>
+				<para>Assembler Messages</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="assembler_messages.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>When program is assembled the status or any error messages are displayed in this section. When user clicks on any error message the editor highlights corresponding line.</para>
+			</listitem>
+			<listitem>
+				<para>Registers and Flag</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="registers_flag.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>Values in various registers are displayed here. Also the status of flags such as carry flag is displayed.</para>
+			</listitem>
+			<listitem>
+				<para>Data conversion and access</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="io.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>User can easily convert data between decimal and hexadecimal format. The I/O ports and memory contents can be accessed by specifying the address. To update the contents enter new value and click appropriate update button.</para>
+			</listitem>
+			<listitem>
+				<para>Data details</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="tab_data.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>This tab lets you inspect values of various variables defined in the program.</para>
+			</listitem>
+			<listitem>
+				<para>Stack details</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="tab_stack.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>This tab lets you inspect values at various stack locations.</para>
+			</listitem>
+			<listitem>
+				<para>Keypad</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="tab_keypad.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>Keypad provides easy way to insert assembly instructions in case the syntax of an instruction is not known.</para>
+			</listitem>
+			<listitem>
+				<para>Memory details</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="tab_memory.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>This tab provides easy access to the memory contents. By default only first 1000 locations are shown. To see next locations, enter address in 'Start' text box and press 'OK' button.</para>
+			</listitem>
+			<listitem>
+				<para>I/O details</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="tab_io.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>This tab provides easy access to the I/O contents. User can also manipulate the values by simply editing the cell contents.</para>
+			</listitem>
+			<listitem>
+				<para>Toolbar</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="toolbar.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>Toolbar provides quick access to various actions such as open/save/print program, assemble/execute program, debugging actions etc.</para>
+			</listitem>
+			<listitem>
+				<para>Assembler Listing</para>
+				<para>
+					<inlinemediaobject><imageobject><imagedata fileref="assembler_listing.png" format="PNG" /></imageobject></inlinemediaobject>
+				</para>
+				<para>The assembler listing window (accessed through menu Assembler -> Show listing) provides the hexadecimal opcodes of the program. These opcodes can be used to run the program on actual hardware.</para>
+			</listitem>
+		</itemizedlist>
+	</para>
+</sect1>

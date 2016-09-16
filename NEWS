@@ -1,3 +1,14 @@
+GNUSim8085 1.3.8 (UNRELEASED)
+
+Fix:     Printing fix for Windows
+Translations:
+         New - Lithuanian (lt), Russian (ru).
+         Updated - Arabic (ar), French (fr), German (de), Greek (el),
+         Kannada (kn), Spanish (es), Tamil (ta).
+Note to packagers:
+         Updated dependency: GTK+ >= 2.24, GtkSourceView >= 2.10
+         New dependency: docbook-xsl
+
 GNUSim8085 1.3.7 (20 Feb 2011)
 
 New:     LP: #579341 - Editable memory listing as a tab.

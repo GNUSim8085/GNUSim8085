@@ -1,37 +1,106 @@
 Windows Port Notes
 ==================
 
-How to build (using mingw cross compiler, on a linux system):
+How to build and create installer using mingw cross compiler and nsis, on a
+linux system
+Notes:
+1. Following instructions are derived from
+https://wiki.gnome.org/Projects/GTK%2B/Win32/Apps
+2. They have been only tested on Ubuntu installation. They should work on any
+Debian derivative.
 
-  Follow instructions at http://live.gnome.org/GTK%2B/Win32/Apps
-  with following changes.
-  Make sure you download all in one bundle from following link.
-  http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.12/
 
-  1. Before doing 'sed -f ...' command
-    a. Download gtksourceview(-dev) zip files from
-       http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.4/
-       and extract them in mingw directory.
-    b. Download libxml2 zip file from http://www.zlatkovic.com/pub/libxml/
-       and extract it in mingw directory.
+64 bit Ubuntu installation:
+Pre-requisites:
+1. Install package mingw-w64 and nsis
+2. Install the package docbook-xsl to make following file available
+   /usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl
+3. Create an executable script i686-w64-mingw32-pkg-config in /usr/local/bin
+   containing following
+==================
+#!/bin/sh
 
-  2. Before doing "./configure --host=i586-mingw32msvc ..."
-    a. Comment out Requires.private from gtksourceview-2.0.pc. This needs to
-       be done to workaround problem in libxml2 distribution.
-    b. Modify the configure script and delete any lines containing word
-       '_nl_expand_alias'. This needs to be done to workaround a bug in autoconf
-       macro for gettext detection.
+PKG_CONFIG_LIBDIR=/usr/i686-w64-mingw32/lib/pkgconfig \
+PKG_CONFIG_PATH=/usr/i686-w64-mingw32/lib/pkgconfig pkg-config $*
+==================
+4. Download GTK+ all in one bundle from
+   http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.24/
+5. Download gtksourceview(-dev) zip files from
+   http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.8/
+6. Download libxml2 zip files from http://www.zlatkovic.com/pub/libxml/
+   (version >= 2.7.7 required).
 
-  3. Use configure command as follows
-     ./configure --host=i586-mingw32msvc --prefix=/
+Setting up development environment:
+1. Extract the GTK+ all in one bundle in /usr/i686-w64-mingw32/ directory.
+2. Extract the GtkSourceView zip files in /usr/i686-w64-mingw32/ directory.
+3. Extract the libxml2 zip files in /usr/i686-w64-mingw32/ directory.
+4. Run following commands to make the files suitable for development.
+==================
+cd /usr/i686-w64-mingw32
+sed -i 's|^prefix=.*$|prefix=/usr/i686-w64-mingw32|g' lib/pkgconfig/*.pc
+cd ./lib
+for f in *.lib; do mv $f lib${f%%lib}a; done
+==================
+5. Comment out Requires.private from
+   /usr/i686-w64-mingw32/lib/pkgconfig/gtksourceview-2.0.pc.
+   This needs to be done to workaround problem in libxml2 distribution.
+6. Modify the configure script and delete any lines containing word
+   '_nl_expand_alias'. This needs to be done to workaround a bug in autoconf
+   macro for gettext detection.
 
-How to build installer (using nsis, on a linux system):
+Build:
+1. Use configure command as follows
+   ./configure --host=i686-w64-mingw32 --prefix=/
+2. Execute command "make". This builds the application.
+3. Execute command "makensis -DMINGW_HOME=/usr/i686-w64-mingw32 installer.nsi".
+   This builds the installer.
 
-  1. Make sure you have nsis installed.
 
-  2. After doing "./configure --host=i586-mingw32msvc ..."
-    a. Execute command "makensis installer.nsi".
-       This builds the application and then installer.
+32 bit Ubuntu installation:
+Pre-requisites:
+1. Install package mingw32 and nsis
+2. Install the package docbook-xsl to make following file available
+   /usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl
+3. Create an executable script i586-mingw32msvc-pkg-config in /usr/local/bin
+   containing following
+==================
+#!/bin/sh
+
+PKG_CONFIG_LIBDIR=/usr/i586-mingw32msvc/lib/pkgconfig \
+PKG_CONFIG_PATH=/usr/i586-mingw32msvc/lib/pkgconfig pkg-config $*
+==================
+4. Download GTK+ all in one bundle from
+   http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.24/
+5. Download gtksourceview(-dev) zip files from
+   http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.8/
+6. Download libxml2 zip files from http://www.zlatkovic.com/pub/libxml/
+   (version >= 2.7.7 required).
+
+Setting up development environment:
+1. Extract the GTK+ all in one bundle in /usr/i586-mingw32msvc/ directory.
+2. Extract the GtkSourceView zip files in /usr/i586-mingw32msvc/ directory.
+3. Extract the libxml2 zip files in /usr/i586-mingw32msvc/ directory.
+4. Run following commands to make the files suitable for development.
+==================
+cd /usr/i586-mingw32msvc
+sed -i 's|^prefix=.*$|prefix=/usr/i586-mingw32msvc|g' lib/pkgconfig/*.pc
+cd ./lib
+for f in *.lib; do mv $f lib${f%%lib}a; done
+==================
+5. Comment out Requires.private from
+   /usr/i586-mingw32msvc/lib/pkgconfig/gtksourceview-2.0.pc.
+   This needs to be done to workaround problem in libxml2 distribution.
+6. Modify the configure script and delete any lines containing word
+   '_nl_expand_alias'. This needs to be done to workaround a bug in autoconf
+   macro for gettext detection.
+
+Build:
+1. Use configure command as follows
+   ./configure --host=i586-mingw32msvc --prefix=/
+2. Execute command "make". This builds the application.
+3. Execute command "makensis installer.nsi". This builds the installer.
+
+
 
 How to install:
 
@@ -52,11 +121,11 @@ Status:
 
   gnusim8085.exe runs fine on Windows machine. :-)
 
-  Screenshot -
-  http://picasaweb.google.co.in/onkarshinde/BangaloreTrip#5240247021199955618
+  Screenshots -
+  http://www.gnusim8085.org/screenshots.php
   
 
 TODO:
 
-  0. [Nearfar] interface.c: Write replacement for gnome_url_show_on_screen();
+  1. Create makefile for native Mingw installation.
 

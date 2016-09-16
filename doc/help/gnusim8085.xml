@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+	<!ENTITY intro SYSTEM "intro.xml">
+	<!ENTITY ui SYSTEM "ui.xml">
+	]>
+<article lang="en">
+	<articleinfo>
+		<title>GNUSim8085 User Guide</title>
+                <copyright>
+                        <year>2011</year>
+                        <holder>Onkar Shinde</holder>
+                </copyright>
+		<legalnotice>
+			<para>
+                                Permission is granted to copy, distribute and/or modify
+                                this document under the terms of the Creative Commons
+				Attribution ShareAlike license, version 3.0.
+                                A copy of the license can be found at
+                                <ulink url="http://creativecommons.org/licenses/by-sa/3.0/"
+                                        type="http">
+                                        http://creativecommons.org/licenses/by-sa/3.0/
+                                </ulink>
+			</para>
+		</legalnotice>
+		<author>
+			<firstname>Onkar</firstname>
+			<surname>Shinde</surname>
+		</author>
+	</articleinfo>
+&intro;
+&ui;
+</article>

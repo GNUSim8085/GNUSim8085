@@ -1,3 +1,71 @@
+2016-02-16  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* po/*.po, PO/LINGUAS: New/Updated translations.
+	* configure.ac, src/*: Bumped required GTK+ version, replaced use of
+	deprecatd APIs, file handling using gio made default.
+	* doc/help/Makefile.am: Install help files only if they are built.
+	* WINDOWS-PORT.TXT, installer.nsi.in: Updated instructions, installer.
+
+2016-01-30  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.ac, config.sub, config.guess, src/Makefile.am: Updates to
+	make autotools happy.
+
+2011-09-19  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.in, doc/Makefile.am, doc/help/*, autoclean.sh: Build system
+	changes for providing HTML help pages converted from docbook files.
+
+2011-09-11  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/gui-editor.h: Use only top level headers for gtksourceview.
+	* src/gui-editor.c, src/gui-list-message.c: In GtkTextBuffer line
+	numbers start from 0. Take this into account when highlighting line.
+	* src/file-op*.c: Fix cursor position as per sample program length.
+
+2011-09-05  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* installer.nsi.in, WINDOWS-PORT.txt: Updated Windows specific files as per
+	recent changes.
+	* src/gui-editor.c: Set appropriate unit for print operation. This is Windows
+	specific change. Fixes printing on Windows.
+
+2011-08-30  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/main.c, src/interface.[c,h]: Remove url activation hook. Not needed
+	anymore.
+	* configure.in, src/gui-editor.c: Bump GtkSourceView requirement,
+	remove corresponding ifdef.
+	* configure.in, src/Makefile.am: Some generalization from point of view
+	migration to GTK+ 3.
+
+2011-08-21  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/interface.c, src/support.c: Use accessor function instead of direct
+	access to various struct members. Compiler flag 'GSEAL_ENABLE' is used
+	to detect such direct access.
+	* src/callbacks.c, src/interface.c, src/gui-input-symbol.c,
+	src/gui-app.c: Replace deprecated API calls with those available in
+	recent GTK versions.
+	* configure.in: Bumped required GTK version as per above changes.
+	* installer.nsi.in, WINDOWS-PORT.txt: Updated Windows specific files as per
+	recent changes.
+
+2011-05-14  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* po/kn.po, po/el.po, AUTHORS: Updated translations from launchpad.
+	* src/callbacks.[c,h], src/interface.c: Remove '8085 Manual' menu as it
+	provides same functionality as Help -> Contents menu.
+	* src/interface.c: Fix title of window that shows tutorial.
+	* po/gnusim8085.pot, po/*.po: Updated translatable strings due to the
+	recent code changes.
+
+2011-05-12  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.in: Back to development, version bumped.
+	* Makefile.am, configure.in, doc/Makefile.am, pixmaps/Makefile.am,
+	po/POTFILES.in, src/Makefile.am: Remove references to Anjuta.
+
 2011-02-20  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* po/ta.po, po/LINGUAS, AUTHORS, NEWS: New Tamil translation from

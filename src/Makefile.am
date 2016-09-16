@@ -1,13 +1,9 @@
 ## Process this file with automake to produce Makefile.in
 
-## Created by Anjuta - will be overwritten
-## If you don't want it to overwrite it,
-## 	Please disable it in the Anjuta project configuration
-
-INCLUDES = \
+AM_CPPFLAGS = \
         -I$(top_srcdir) \
         $(GTK_CFLAGS) \
-        $(GTKSOURCEVIEW2_CFLAGS)
+        $(GTKSOURCEVIEW_CFLAGS)
 
 gnusim8085_CFLAGS =\
 	 -DPACKAGE_DOC_DIR=\"$(docdir)\"\
@@ -91,10 +87,10 @@ gnusim8085_LDFLAGS =
 
 gnusim8085_LDADD =  \
         $(GTK_LIBS)\
-        $(GTKSOURCEVIEW2_LIBS)
+        $(GTKSOURCEVIEW_LIBS)
 
 if USE_GIO
-INCLUDES += \
+AM_CPPFLAGS += \
         $(GIO_CFLAGS)
 
 gnusim8085_SOURCES += \

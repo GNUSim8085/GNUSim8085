@@ -67,17 +67,20 @@ combo_vars_invalidate (gboolean only_combo)
 }
 
 static void
+add_to_combo (gpointer item, gpointer combo)
+{
+  gtk_combo_box_text_prepend_text (GTK_COMBO_BOX_TEXT (combo), item);
+}
+
+static void
 combo_vars_flush (void)
 {
   if (list_macros)
-	gtk_combo_set_popdown_strings (GTK_COMBO (combo_macros),
-								   list_macros);
+	g_list_foreach (list_macros, add_to_combo, combo_macros);
   if (list_variables)
-	gtk_combo_set_popdown_strings (GTK_COMBO (combo_variables),
-								   list_variables);
+	g_list_foreach (list_variables, add_to_combo, combo_variables);
   if (list_labels)
-	gtk_combo_set_popdown_strings (GTK_COMBO (combo_labels),
-								   list_labels);
+	g_list_foreach (list_labels, add_to_combo, combo_labels);
 }
 
 static void
@@ -121,7 +124,7 @@ _fill_symbols (GtkWidget * dig)
 }
 
 static void
-_connect_cb_callback (GtkWidget * list, GtkEntry * centry)
+_connect_cb_callback (GtkWidget * combo)
 {
   /* set entry text */
   GtkWidget *entry;
@@ -130,7 +133,7 @@ _connect_cb_callback (GtkWidget * list, GtkEntry * centry)
   g_assert (entry);
 
   gtk_entry_set_text (GTK_ENTRY (entry),
-					  gtk_entry_get_text (GTK_ENTRY (centry)));
+			  gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (combo)));
 }
 
 static void
@@ -140,10 +143,10 @@ _connect_cb (GtkWidget * dig)
   combo_vars_validate (dig);
 
   /* connect signal */
-#define CBCON(comb) g_signal_connect ((gpointer) (GTK_COMBO (comb)->list), \
-									  "selection-changed",				\
+#define CBCON(comb) g_signal_connect ((gpointer) (GTK_COMBO_BOX (comb)), \
+									  "changed",				\
 									  (GCallback) _connect_cb_callback, \
-									  (gpointer) (GTK_COMBO (comb)->entry));
+									  NULL);
 
   CBCON (combo_macros);
   CBCON (combo_labels);
@@ -197,7 +200,6 @@ gui_input_reg (gchar * set)
   gchar d5[] = "5", d6[] = "6", d7[] = "7", d0[] = "0";
   GtkWidget *combo_reg;
   GtkWidget *dig;
-  GList *items = NULL;
   gchar *symbol_name = NULL;
 
   g_assert (set);
@@ -239,25 +241,17 @@ gui_input_reg (gchar * set)
 		}
 	  i++;
 
-	  items = g_list_append (items, to);
+	  gtk_combo_box_text_prepend_text (GTK_COMBO_BOX_TEXT (combo_reg), to);
 		
 	}
-  gtk_combo_set_popdown_strings (GTK_COMBO (combo_reg), items);
 	
   if (gtk_dialog_run (GTK_DIALOG (dig)) == GTK_RESPONSE_OK)
 	{
-	  GtkWidget *entry;
-
-	  entry = lookup_widget (dig, "ireg_entry");
-	  g_assert (entry);
-
 	  symbol_name =
-		g_strdup (gtk_entry_get_text (GTK_ENTRY (entry)));
-
+		g_strdup (gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (combo_reg)));
 	}
 
   gtk_widget_destroy (GTK_WIDGET (dig));
-  g_list_free (items);
 	
   return symbol_name;
 }

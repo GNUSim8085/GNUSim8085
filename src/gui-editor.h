@@ -33,12 +33,9 @@
 #include <string.h>
 #include <gtk/gtk.h>
 #include <gtksourceview/gtksourceview.h>
-#include <gtksourceview/gtksourcebuffer.h>
-#include <gtksourceview/gtksourcelanguage.h>
 #include <gtksourceview/gtksourcelanguagemanager.h>
 #include <gtksourceview/gtksourceprintcompositor.h>
 #include <gtksourceview/gtksourcestyleschememanager.h>
-#include <gtksourceview/gtksourcemark.h>
 #include "callbacks.h"
 
 #define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"

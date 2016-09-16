@@ -31,9 +31,9 @@ gui_editor_new (void)
 
   self = g_malloc0 (sizeof (GUIEditor));
 
-  self->buffer = GTK_SOURCE_BUFFER (gtk_source_buffer_new (NULL));
+  self->buffer = gtk_source_buffer_new (NULL);
 
-  self->widget = gtk_source_view_new_with_buffer (GTK_SOURCE_BUFFER(self->buffer));
+  self->widget = gtk_source_view_new_with_buffer (self->buffer);
 
   self->scroll = gtk_scrolled_window_new (NULL, NULL);
 
@@ -78,11 +78,7 @@ gui_editor_new (void)
   pixbuf = gui_editor_get_stock_icon (GTK_WIDGET(self->widget), GTK_STOCK_NO, GTK_ICON_SIZE_MENU);
   if (pixbuf)
 	{
-#ifdef GSV_2_8
 	  gtk_source_view_set_mark_category_icon_from_pixbuf (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, pixbuf);
-#else
-	  gtk_source_view_set_mark_category_pixbuf (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, pixbuf);
-#endif
 	  g_object_unref (pixbuf);
 	}
 
@@ -97,9 +93,9 @@ gui_editor_show (GUIEditor * self)
   gtk_source_view_set_show_line_numbers (GTK_SOURCE_VIEW(self->widget), TRUE);
   self->language = gtk_source_language_manager_get_language(self->lang_manager,"8085_asm");
   if (self->language != NULL){
-	gtk_source_buffer_set_language (GTK_SOURCE_BUFFER(self->buffer), GTK_SOURCE_LANGUAGE(self->language));
-	gtk_source_buffer_set_style_scheme (GTK_SOURCE_BUFFER(self->buffer), gtk_source_style_scheme_manager_get_scheme(self->style_scheme_manager,"classic"));
-	gtk_source_buffer_set_highlight_syntax (GTK_SOURCE_BUFFER(self->buffer), TRUE);
+	gtk_source_buffer_set_language (self->buffer, self->language);
+	gtk_source_buffer_set_style_scheme (self->buffer, gtk_source_style_scheme_manager_get_scheme(self->style_scheme_manager,"classic"));
+	gtk_source_buffer_set_highlight_syntax (self->buffer, TRUE);
   }
   self->mark = gtk_text_buffer_get_insert (GTK_TEXT_BUFFER(self->buffer));
   gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW(self->widget), TRUE);
@@ -136,7 +132,7 @@ void
 gui_editor_set_mark (GUIEditor * self, guint line_no, gboolean set)
 {
   gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER(self->buffer), &(self->iter), line_no);
-  gtk_source_buffer_create_source_mark (GTK_SOURCE_BUFFER(self->buffer), NULL, MARKER_BREAKPOINT, &(self->iter));
+  gtk_source_buffer_create_source_mark (self->buffer, NULL, MARKER_BREAKPOINT, &(self->iter));
   g_assert (self);
 }
 
@@ -147,7 +143,7 @@ gui_editor_set_highlight (GUIEditor * self, guint line_no, gboolean set)
   GtkTextIter line_start, line_end;
 
   /* get line bounds */
-  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (self->buffer), &line_start, line_no);
+  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (self->buffer), &line_start, (line_no -1));
   line_end = line_start;
   gtk_text_iter_forward_to_line_end (&line_end);
 
@@ -287,7 +283,7 @@ gui_editor_clear_all_marks (GUIEditor * self)
 void
 gui_editor_goto_line (GUIEditor * self, gint ln)
 {
-  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER(self->buffer), &(self->iter), ln);
+  gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER(self->buffer), &(self->iter), (ln -1));
 
   gtk_text_buffer_place_cursor (GTK_TEXT_BUFFER(self->buffer), &(self->iter));
 
@@ -385,6 +381,9 @@ void
 gui_editor_print (GUIEditor *editor)
 {
   editor->print_operation = gtk_print_operation_new ();
+#ifdef WINDOWS
+  gtk_print_operation_set_unit (editor->print_operation, GTK_UNIT_POINTS);
+#endif
   GtkPrintOperationResult res;
   GError *error;
   GtkWidget *error_dialog;

@@ -82,9 +82,6 @@ main (int argc, char *argv[])
 
   gtk_statusbar_push (GTK_STATUSBAR (statusbar), gtk_statusbar_get_context_id (GTK_STATUSBAR(statusbar), "Simulator"), _("Simulator: Idle"));
 
-  /* hook up url handler */
-  gtk_about_dialog_set_url_hook (activate_url, NULL, NULL);
-
   /* open file specified in command line if any */
   if (argc > 1)
 	ori_open (argv[1], TRUE);

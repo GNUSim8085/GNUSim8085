@@ -1,13 +1,10 @@
 dnl Process this file with autoconf to produce a configure script.
-dnl Created by Anjuta - will be overwritten
-dnl If you don't want it to overwrite it,
-dnl 	Please disable it in the Anjuta project configuration
 
-AC_INIT([gnusim8085], [1.3.7], [https://bugs.launchpad.net/gnusim8085])
+AC_INIT([gnusim8085], [1.3.8], [https://bugs.launchpad.net/gnusim8085])
 AC_DEFINE([PACKAGE_URL],["http://www.gnusim8085.org/"],[Website URL])
 
 AC_CANONICAL_HOST
-AM_INIT_AUTOMAKE([check-news])
+AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS([config.h])
 
@@ -23,6 +20,8 @@ AC_HEADER_STDC
 
 dnl Checks for programs.
 PKG_PROG_PKG_CONFIG
+
+can_build_documentation=yes
 
 dnl Checks for libraries.
 
@@ -46,14 +45,34 @@ if test "x$WIN32" = "xyes"; then
     AC_DEFINE(WINDOWS, 1, [Defines if the build is for Windows])
 fi
 
-gtk_required="2.12.0"
-gtksourceview2_required="2.2.0"
+AC_PATH_PROG([xsltproc],[xsltproc])
+if test -z "$xsltproc" ; then
+	AC_MSG_WARN([xsltproc was not found. If you want to change and compile the documentation, \
+please install libxslt (http://xmlsoft.org/XSLT/)])
+	can_build_documentation=no
+fi
+
+xsl_path=/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl
+if test "x$WIN32" = "xno"; then
+AC_CHECK_FILE([$xsl_path],AC_SUBST(xsl_path), [AC_MSG_WARN([xhtml sytle sheet was not found. \
+If you want to change and compile the documentation, please install docbook-xsl \
+(http://docbook.sourceforge.net/)]) ; can_build_documentation=no])
+fi
+
+AC_MSG_CHECKING([whether documentation can be changed and compiled])
+AC_MSG_RESULT($can_build_documentation)
+AM_CONDITIONAL([BUILD_HELP], test "$can_build_documentation" = "yes")
+
+gtk_api="gtk+-2.0"
+gtksourceview_api="gtksourceview-2.0"
+gtk_required="2.24.0"
+gtksourceview_required="2.10.0"
 
 AC_ARG_ENABLE([gio],
-	AS_HELP_STRING([--enable-gio],[Enable gio based file handling (default: disabled)]),
+	AS_HELP_STRING([--enable-gio],[Enable gio based file handling (default: enabled)]),
 	[enable_gio=$enableval],
-	[enable_gio=no])
-if test "x$enable_gio" = "xyes"; then
+	[enable_gio=yes])
+if test "x$enable_gio" != "xno"; then
 	PKG_CHECK_MODULES(GIO, [gio-2.0],, [
     AC_MSG_ERROR(
     [
@@ -73,49 +92,44 @@ if test "x$enable_gio" = "xyes"; then
 fi
 AM_CONDITIONAL(USE_GIO, test "x$enable_gio" = "xyes")
 
-PKG_CHECK_MODULES(GTK, [gtk+-2.0 >= $gtk_required],, [
+PKG_CHECK_MODULES(GTK, [$gtk_api >= $gtk_required],, [
     AC_MSG_ERROR(
     [
-    Cannot find libgtk2.0 >= $gtk_required
+    Cannot find $gtk_api >= $gtk_required
     
         Please check the following:
     
-         * Do you have the gtk+ development package installed?
-           (usually called gtk2-devel for rpm based distros or
-            libgtk2.0-dev for deb based distros or similar)
+         * Do you have the $gtk_api development package installed?
+           (usually called $gtk_api-devel for rpm based distros or
+            lib$gtk_api-dev for deb based distros or similar)
            If
-               ls -l /usr/lib/pkgconfig/gtk+-2.0.pc
+               ls -l /usr/lib/pkgconfig/$gtk_api.pc
            reports that the file does not exist, then you are missing
            the development package.
     
     ])])
 
-PKG_CHECK_MODULES(GTKSOURCEVIEW2, [gtksourceview-2.0 >= $gtksourceview2_required],, [
+PKG_CHECK_MODULES(GTKSOURCEVIEW, [$gtksourceview_api >= $gtksourceview_required],, [
     AC_MSG_ERROR(
     [
-    Cannot find gtksourceview2 >= $gtksourceview2_required
+    Cannot find $gtksourceview_api >= $gtksourceview_required
     
         Please check the following:
     
-         * Do you have the gtksourceview2 development package installed?
-           (usually called gtksourceview2-devel for rpm based distros or
-            libgtksourceview2.0-dev for deb based distros or similar)
+         * Do you have the $gtksourceview_api development package installed?
+           (usually called $gtksourceview_api-devel for rpm based distros or
+            lib$gtksourceview_api-dev for deb based distros or similar)
            If
-               ls -l /usr/lib/pkgconfig/gtksourceview-2.0.pc
+               ls -l /usr/lib/pkgconfig/$gtksourceview_api.pc
            reports that the file does not exist, then you are missing
            the development package.
     
     ])])
-
-PKG_CHECK_EXISTS([gtksourceview-2.0 >= 2.8], [have_gsv_2_8=yes], [have_gsv_2_8=no])
-if test "x$have_gsv_2_8" = "xyes"; then
-	AC_DEFINE([GSV_2_8], [1], [gtksourceview2 version >= 2.8])
-fi
 
 AC_SUBST(GTK_LIBS)
 AC_SUBST(GTK_CFLAGS)
-AC_SUBST(GTKSOURCEVIEW2_LIBS)
-AC_SUBST(GTKSOURCEVIEW2_CFLAGS)
+AC_SUBST(GTKSOURCEVIEW_LIBS)
+AC_SUBST(GTKSOURCEVIEW_CFLAGS)
 
 dnl Languages which your application supports
 AM_GNU_GETTEXT([external])
@@ -168,6 +182,7 @@ po/Makefile.in
 src/Makefile
 pixmaps/Makefile
 doc/Makefile
+doc/help/Makefile
 data/Makefile
 GNUSim8085.desktop
 installer.nsi

@@ -76,8 +76,6 @@ G_MODULE_EXPORT void on_stop_execution1_activate (GtkMenuItem * menuitem, gpoint
 
 G_MODULE_EXPORT void on_help_activate (GtkMenuItem * menuitem, gpointer user_data);
 
-G_MODULE_EXPORT void on_8085_manual1_activate (GtkMenuItem * menuitem, gpointer user_data);
-
 G_MODULE_EXPORT void
 on_assembler_tutorial1_activate (GtkMenuItem * menuitem, gpointer user_data);
 

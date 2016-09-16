@@ -30,10 +30,10 @@ Name GNUSim8085
 !else
   OutFile @PACKAGE@-@VERSION@-without-gtk-installer.exe
 !endif
-!define GTK_INSTALLER_EXE "gtk2-runtime-2.12.11-2008-07-25-ash.exe"
-!define GTK_VERSION_REQ "2.12.0"
+!define GTK_INSTALLER_EXE "gtk2-runtime-2.24.10-2012-10-10-ash.exe"
+!define GTK_VERSION_REQ "2.24.0"
 !define MUI_ICON pixmaps/gnusim8085.ico
-InstallDir "C:\Program Files\GNUSim8085"
+InstallDir "$PROGRAMFILES\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"
 !define uninstaller "uninstaller.exe"
 
@@ -107,7 +107,7 @@ SectionIn RO
   !system 'make DESTDIR=`pwd`/win32 install'
   !system 'cp ${MINGW_HOME}/bin/iconv.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/libgtksourceview-2.0-0.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libxml2.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libxml2.dll win32/bin/libxml2-2.dll'
   !system 'cp ${MINGW_HOME}/share/gtksourceview-2.0/language-specs/language2.rng data/'
   !system 'cp ${MINGW_HOME}/share/gtksourceview-2.0/language-specs/def.lang data/'
   !system 'cp ${MINGW_HOME}/share/gtksourceview-2.0/styles/styles.rng data/'
@@ -121,6 +121,7 @@ SectionIn RO
   File /r /x Makefile* data
   File win32/share/doc/gnusim8085/asm-guide.txt
   File /r win32/share/doc/gnusim8085/examples
+  File /r win32/share/doc/gnusim8085/help
   File /r /x Makefile* pixmaps
   # Make example program files read only
   SetFileAttributes $INSTDIR\examples\addwithcarry.asm READONLY

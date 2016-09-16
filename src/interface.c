@@ -29,7 +29,7 @@
 
 #define GLADE_HOOKUP_OBJECT(component,widget,name)						\
   g_object_set_data_full (G_OBJECT (component), name,					\
-						  gtk_widget_ref (widget), (GDestroyNotify) gtk_widget_unref)
+						  g_object_ref (widget), (GDestroyNotify) g_object_unref)
 
 #define GLADE_HOOKUP_ACTION_OBJECT(component,widget,name)				\
   g_object_set_data_full (G_OBJECT (component), name,					\
@@ -67,7 +67,6 @@ static const GtkActionEntry entries[] = {
   { "ClearBreak", NULL, N_("_Clear all breakpoints"), "<control><shift>B", N_("Remove all breakpoints"), G_CALLBACK(on_clear_all_breakpoints1_activate) },
   { "StopExec", GTK_STOCK_STOP, N_("Stop execution"), NULL, N_("Stop debugging"), G_CALLBACK(on_stop_execution1_activate) },
   { "Help", GTK_STOCK_HELP, N_("_Contents"), "F1", NULL, G_CALLBACK(on_help_activate) },
-  { "Manual", GTK_STOCK_INFO, N_("8085 _Manual"), "<control>M", NULL, G_CALLBACK(on_8085_manual1_activate) },
   { "Tutorial", GTK_STOCK_DIALOG_INFO, N_("Assembler _Tutorial"), "<control><shift>T", NULL, G_CALLBACK(on_assembler_tutorial1_activate) },
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(on_about1_activate) }
 };
@@ -119,8 +118,6 @@ static const char *ui_description =
   "    </menu>"
   "    <menu action='HelpMenu'>"
   "      <menuitem action='Help'/>"
-  "      <separator/>"
-  "      <menuitem action='Manual'/>"
   "      <menuitem action='Tutorial'/>"
   "      <separator/>"
   "      <menuitem action='About'/>"
@@ -224,7 +221,6 @@ create_window_main (void)
   GtkWidget *frame6;
   GtkWidget *vbox11;
   GtkWidget *hbox13;
-  GtkObject *main_io_spin_adj;
   GtkWidget *main_io_spin;
   GtkWidget *main_io_entry;
   GtkWidget *main_io_update;
@@ -238,7 +234,6 @@ create_window_main (void)
   GtkWidget *frame8;
   GtkWidget *vbox12;
   GtkWidget *hbox14;
-  GtkObject *main_mem_spin_adj;
   GtkWidget *main_mem_spin;
   GtkWidget *main_mem_entry;
   GtkWidget *main_mem_update;
@@ -312,7 +307,7 @@ create_window_main (void)
   if (window_main_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_main), window_main_icon_pixbuf);
-      gdk_pixbuf_unref (window_main_icon_pixbuf);
+      g_object_unref (window_main_icon_pixbuf);
     }
 
   vbox1 = gtk_vbox_new (FALSE, 0);
@@ -730,8 +725,7 @@ create_window_main (void)
   gtk_widget_show (hbox13);
   gtk_box_pack_start (GTK_BOX (vbox11), hbox13, TRUE, TRUE, 0);
 
-  main_io_spin_adj = gtk_adjustment_new (0, 0, 255, 1, 10, 0);
-  main_io_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_io_spin_adj), 1, 0);
+  main_io_spin = gtk_spin_button_new_with_range (0, 255, 1);
   gtk_widget_show (main_io_spin);
   gtk_box_pack_start (GTK_BOX (hbox13), main_io_spin, TRUE, TRUE, 0);
   gtk_widget_set_tooltip_text (main_io_spin, _("Change the port address to view here"));
@@ -794,8 +788,7 @@ create_window_main (void)
   gtk_widget_show (hbox14);
   gtk_box_pack_start (GTK_BOX (vbox12), hbox14, TRUE, TRUE, 0);
 
-  main_mem_spin_adj = gtk_adjustment_new (0, 0, 65535, 1, 10, 0);
-  main_mem_spin = gtk_spin_button_new (GTK_ADJUSTMENT (main_mem_spin_adj), 1, 0);
+  main_mem_spin = gtk_spin_button_new_with_range (0, 255, 1);
   gtk_widget_show (main_mem_spin);
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_spin, TRUE, TRUE, 0);
   gtk_widget_set_tooltip_text (main_mem_spin, _("Change the memory location to view here"));
@@ -1259,14 +1252,6 @@ create_window_main (void)
 }
 
 void
-activate_url (GtkAboutDialog *about, const gchar *url, gpointer data)
-{
-#if GTK_CHECK_VERSION (2, 14, 0)
-    gtk_show_uri (NULL, url, GDK_CURRENT_TIME, NULL);
-#endif
-}
-
-void
 create_dialog_about (void)
 {
   gchar **authors = read_authors();
@@ -1334,7 +1319,7 @@ create_window_listing (void)
   if (window_listing_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_listing), window_listing_icon_pixbuf);
-      gdk_pixbuf_unref (window_listing_icon_pixbuf);
+      g_object_unref (window_listing_icon_pixbuf);
     }
 
   listing_vbox = gtk_vbox_new (FALSE, 2);
@@ -1352,7 +1337,7 @@ create_window_listing (void)
   gtk_button_set_image (GTK_BUTTON(listing_save), gtk_image_new_from_stock (GTK_STOCK_SAVE_AS, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (listing_save);
   gtk_box_pack_start (GTK_BOX (hbuttonbox1), listing_save, FALSE, FALSE, 0);
-  GTK_WIDGET_SET_FLAGS (listing_save, GTK_CAN_DEFAULT);
+  gtk_widget_set_can_default (listing_save, TRUE);
 
   g_signal_connect ((gpointer) listing_save, "clicked",
                     G_CALLBACK (on_listing_save_clicked),
@@ -1361,7 +1346,7 @@ create_window_listing (void)
   listing_print = gtk_button_new_from_stock (GTK_STOCK_PRINT);
   gtk_widget_show (listing_print);
   gtk_box_pack_start (GTK_BOX (hbuttonbox1), listing_print, FALSE, FALSE, 0);
-  GTK_WIDGET_SET_FLAGS (listing_print, GTK_CAN_DEFAULT);
+  gtk_widget_set_can_default (listing_print, TRUE);
 
   g_signal_connect ((gpointer) listing_print, "clicked",
                     G_CALLBACK (on_listing_print_clicked),
@@ -1385,7 +1370,7 @@ create_window_tutorial (void)
   GtkWidget *tutorial_vbox;
 
   window_tutorial = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title (GTK_WINDOW (window_tutorial), _("Assembler Listing"));
+  gtk_window_set_title (GTK_WINDOW (window_tutorial), _("Assembler Tutorial"));
   gtk_window_set_position (GTK_WINDOW (window_tutorial), GTK_WIN_POS_CENTER);
   gtk_window_set_default_size (GTK_WINDOW (window_tutorial), 500, 400);
   window_tutorial_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
@@ -1395,7 +1380,7 @@ create_window_tutorial (void)
   if (window_tutorial_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_tutorial), window_tutorial_icon_pixbuf);
-      gdk_pixbuf_unref (window_tutorial_icon_pixbuf);
+      g_object_unref (window_tutorial_icon_pixbuf);
     }
 
   tutorial_vbox = gtk_vbox_new (FALSE, 2);
@@ -1440,10 +1425,10 @@ create_window_start (void)
   if (window_start_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (window_start), window_start_icon_pixbuf);
-      gdk_pixbuf_unref (window_start_icon_pixbuf);
+      g_object_unref (window_start_icon_pixbuf);
     }
 
-  vbox15 = GTK_DIALOG (window_start)-> vbox;
+  vbox15 = gtk_dialog_get_content_area (GTK_DIALOG (window_start));
   gtk_container_set_border_width (GTK_CONTAINER (vbox15), 5);
 
   frame13 = gtk_frame_new (NULL);
@@ -1503,7 +1488,7 @@ create_window_start (void)
   start_but_close = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
   gtk_widget_show (start_but_close);
   gtk_box_pack_end (GTK_BOX (vbox15), start_but_close, FALSE, FALSE, 0);
-  GTK_WIDGET_SET_FLAGS (start_but_close, GTK_CAN_DEFAULT);
+  gtk_widget_set_can_default (GTK_WIDGET (start_but_close), TRUE);
 
   label166 = gtk_label_new (_("Don't forget to read the documentation \ngiven in \"doc\" directory."));
   gtk_widget_show (label166);
@@ -1555,15 +1540,12 @@ create_dialog_isymbol (void)
   GtkWidget *hbox45;
   GtkWidget *label174;
   GtkWidget *isymbol_variables;
-  GtkWidget *isymbol_variables_entry;
   GtkWidget *hbox46;
   GtkWidget *label175;
   GtkWidget *isymbol_labels;
-  GtkWidget *isymbol_functions_entry;
   GtkWidget *hbox47;
   GtkWidget *label176;
   GtkWidget *isymbol_macros;
-  GtkWidget *isymbol_macros_entry;
   GtkWidget *dialog_action_area1;
 
   dialog_isymbol = gtk_dialog_new_with_buttons (_("Choose a symbol"),
@@ -1581,10 +1563,10 @@ create_dialog_isymbol (void)
   if (dialog_isymbol_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (dialog_isymbol), dialog_isymbol_icon_pixbuf);
-      gdk_pixbuf_unref (dialog_isymbol_icon_pixbuf);
+      g_object_unref (dialog_isymbol_icon_pixbuf);
     }
 
-  dialog_vbox1 = GTK_DIALOG (dialog_isymbol)->vbox;
+  dialog_vbox1 = gtk_dialog_get_content_area (GTK_DIALOG (dialog_isymbol));
   gtk_widget_show (dialog_vbox1);
 
   isymbol_vbox = gtk_vbox_new (FALSE, 2);
@@ -1621,16 +1603,9 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox45), label174, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label174), GTK_JUSTIFY_LEFT);
 
-  isymbol_variables = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (isymbol_variables)->popwin),
-                     "GladeParentKey", isymbol_variables);
+  isymbol_variables = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_variables);
   gtk_box_pack_start (GTK_BOX (hbox45), isymbol_variables, TRUE, TRUE, 0);
-  gtk_combo_set_case_sensitive (GTK_COMBO (isymbol_variables), TRUE);
-
-  isymbol_variables_entry = GTK_COMBO (isymbol_variables)->entry;
-  gtk_widget_show (isymbol_variables_entry);
-  gtk_editable_set_editable (GTK_EDITABLE (isymbol_variables_entry), FALSE);
 
   hbox46 = gtk_hbox_new (TRUE, 5);
   gtk_widget_show (hbox46);
@@ -1642,16 +1617,9 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox46), label175, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label175), GTK_JUSTIFY_LEFT);
 
-  isymbol_labels = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (isymbol_labels)->popwin),
-                     "GladeParentKey", isymbol_labels);
+  isymbol_labels = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_labels);
   gtk_box_pack_start (GTK_BOX (hbox46), isymbol_labels, TRUE, TRUE, 0);
-  gtk_combo_set_case_sensitive (GTK_COMBO (isymbol_labels), TRUE);
-
-  isymbol_functions_entry = GTK_COMBO (isymbol_labels)->entry;
-  gtk_widget_show (isymbol_functions_entry);
-  gtk_editable_set_editable (GTK_EDITABLE (isymbol_functions_entry), FALSE);
 
   hbox47 = gtk_hbox_new (TRUE, 5);
   gtk_widget_show (hbox47);
@@ -1663,18 +1631,11 @@ create_dialog_isymbol (void)
   gtk_box_pack_start (GTK_BOX (hbox47), label176, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label176), GTK_JUSTIFY_LEFT);
 
-  isymbol_macros = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (isymbol_macros)->popwin),
-                     "GladeParentKey", isymbol_macros);
+  isymbol_macros = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_macros);
   gtk_box_pack_start (GTK_BOX (hbox47), isymbol_macros, TRUE, TRUE, 0);
-  gtk_combo_set_case_sensitive (GTK_COMBO (isymbol_macros), TRUE);
 
-  isymbol_macros_entry = GTK_COMBO (isymbol_macros)->entry;
-  gtk_widget_show (isymbol_macros_entry);
-  gtk_editable_set_editable (GTK_EDITABLE (isymbol_macros_entry), FALSE);
-
-  dialog_action_area1 = GTK_DIALOG (dialog_isymbol)->action_area;
+  dialog_action_area1 = gtk_dialog_get_action_area (GTK_DIALOG (dialog_isymbol));
   gtk_widget_show (dialog_action_area1);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (dialog_action_area1), GTK_BUTTONBOX_END);
 
@@ -1689,15 +1650,12 @@ create_dialog_isymbol (void)
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox45, "hbox45");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label174, "label174");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_variables, "isymbol_variables");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_variables_entry, "isymbol_variables_entry");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox46, "hbox46");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label175, "label175");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_labels, "isymbol_labels");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_functions_entry, "isymbol_functions_entry");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox47, "hbox47");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label176, "label176");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros, "isymbol_macros");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros_entry, "isymbol_macros_entry");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_action_area1, "dialog_action_area1");
 
   gtk_widget_grab_focus (entry1);
@@ -1711,7 +1669,6 @@ create_dialog_ireg (void)
   GdkPixbuf *dialog_ireg_icon_pixbuf;
   GtkWidget *dialog_vbox2;
   GtkWidget *ireg;
-  GtkWidget *ireg_entry;
   GtkWidget *dialog_action_area2;
 
   dialog_ireg = gtk_dialog_new_with_buttons (_("Choose a register"),
@@ -1729,23 +1686,17 @@ create_dialog_ireg (void)
   if (dialog_ireg_icon_pixbuf)
     {
       gtk_window_set_icon (GTK_WINDOW (dialog_ireg), dialog_ireg_icon_pixbuf);
-      gdk_pixbuf_unref (dialog_ireg_icon_pixbuf);
+      g_object_unref (dialog_ireg_icon_pixbuf);
     }
 
-  dialog_vbox2 = GTK_DIALOG (dialog_ireg)->vbox;
+  dialog_vbox2 = gtk_dialog_get_content_area (GTK_DIALOG (dialog_ireg));
   gtk_widget_show (dialog_vbox2);
 
-  ireg = gtk_combo_new ();
-  g_object_set_data (G_OBJECT (GTK_COMBO (ireg)->popwin),
-                     "GladeParentKey", ireg);
+  ireg = gtk_combo_box_text_new ();
   gtk_widget_show (ireg);
   gtk_box_pack_start (GTK_BOX (dialog_vbox2), ireg, FALSE, FALSE, 0);
-  gtk_combo_set_value_in_list (GTK_COMBO (ireg), TRUE, FALSE);
 
-  ireg_entry = GTK_COMBO (ireg)->entry;
-  gtk_widget_show (ireg_entry);
-
-  dialog_action_area2 = GTK_DIALOG (dialog_ireg)->action_area;
+  dialog_action_area2 = gtk_dialog_get_action_area (GTK_DIALOG (dialog_ireg));
   gtk_widget_show (dialog_action_area2);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (dialog_action_area2), GTK_BUTTONBOX_END);
 
@@ -1753,7 +1704,6 @@ create_dialog_ireg (void)
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_ireg, "dialog_ireg");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_vbox2, "dialog_vbox2");
   GLADE_HOOKUP_OBJECT (dialog_ireg, ireg, "ireg");
-  GLADE_HOOKUP_OBJECT (dialog_ireg, ireg_entry, "ireg_entry");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_action_area2, "dialog_action_area2");
 
   return dialog_ireg;

@@ -44,8 +44,7 @@ gui_app_new (void)
   container = lookup_widget (app->window_main, "main_vbox_center");
   g_assert (container);
 
-  gtk_box_pack_start_defaults (GTK_BOX (container),
-							   app->editor->scroll);
+  gtk_box_pack_start (GTK_BOX (container), app->editor->scroll, TRUE, TRUE, 0);
 
   /* dim */
   //gtk_window_get_size(app->window_main, &w, &h);

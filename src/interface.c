@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2003  Sridhar Ratnakumar <sridhar.ratna@gmail.com>
+  Copyright (C) 2003  Sridhar Ratnakumar <srid@srid.ca>
         
   This file is part of GNUSim8085.
 
@@ -1256,7 +1256,7 @@ create_dialog_about (void)
 {
   gchar **authors = read_authors();
   const gchar *documenters[] = {
-    "Sridhar Ratnakumar (sridhar.ratna@gmail.com)",
+    "Sridhar Ratnakumar (srid@srid.ca)",
     NULL
   };
   /* TRANSLATORS: Replace this string with your names, one name per line. */

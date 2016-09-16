@@ -294,7 +294,7 @@
 	reduce bottom margin.
 	* po/*: Updated as per latest changes in code.
 
-2009-12-28  Sridhar Ratnakumar <sridhar.ratna@gmail.com>
+2009-12-28  Sridhar Ratnakumar <srid@srid.ca>
 
 	* src/gui-editor.c: Fix deprecation warning from GtkSourceView
 
@@ -337,7 +337,7 @@
 	distclean target.
 	* .gitignore: Add appropriate files to the ignore list.
 
-2009-12-24  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2009-12-24  Sridhar Ratnakumar  <srid@srid.ca>
 
 	* src/file-op.[c,h], src/callback.c: Fix SF bug #2356534 - basic file
 	handling errors (confirm before exit, etc..). Patch by Puneeth Bhat.
@@ -514,7 +514,7 @@
 	* Bump application version to 1.3.3
 	* Merge changes for Windows port done by Srid
 
-2008-02-07  Sridhar Ratnakumar <sridhar.ratna@gmail.com>
+2008-02-07  Sridhar Ratnakumar <srid@srid.ca>
 
 	* file-op.[c,h] - Fix the file selectors to show ALL files.
 	* 8085.c,interface.[c,h],main.c,support.[c,h] - Removed GNOME
@@ -704,17 +704,17 @@
 	* Update to scintilla 1.66
 	* Updated build scripts
 
-2004-01-25  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2004-01-25  Sridhar Ratnakumar  <srid@srid.ca>
 	* 8085-instructions.h: removed 'extern' just before
 	G_END_DECLS (fixes string.h bug)
 	* *.*: _() macro, now working
 	* glade: icon for all dialogs
 
-2004-01-01  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2004-01-01  Sridhar Ratnakumar  <srid@srid.ca>
 	* gui-app.c: removed gdk* functions
 	* *.c: encapsulated all strings in _() macro for translation
 
-2003-12-30  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-12-30  Sridhar Ratnakumar  <srid@srid.ca>
 	* 8085-instructions.c: In _eef_inst_func_47, fixed ~(instead of !)
 	* 8085-instructions.c: In _eef_is_carry, return value of op '-'
 	changed
@@ -727,16 +727,16 @@
 	* glade: Hacked glade sources and saved the changes in
 	tools/glade_reinsert.c
 
-2003-12-28  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-12-28  Sridhar Ratnakumar  <srid@srid.ca>
 	* asm-id.c: Fixed *ACI* bug
 	* 8085-instructions.c: ACI int-len 1 -> 2
 	* 8085-instructions.c: Fixed add(sub)-with-carry function
 
-2003-12-07  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-12-07  Sridhar Ratnakumar  <srid@srid.ca>
 	* 8085-instructions.c: Added warning messages for unimplemented
 	instructions
 
-2003-12-07  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-12-07  Sridhar Ratnakumar  <srid@srid.ca>
 	* gui-keypad.c: fixed crash bug in cb_clicked (which is why that
 	large gap!)
 	* gui-editor.*: added gui_editor_grab_focus
@@ -744,7 +744,7 @@
 	* *: modified all files to reflect the new mail-id
 	* asm-ds-limits.h: opcode length = 5 (smaller size!)
 	
-2003-11-21  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-11-21  Sridhar Ratnakumar  <srid@srid.ca>
 	* gui-input-symbol.c: added gui_input_reg()
 	* asm-id.*: added util funcs
 	* gui-keypad.c: 90% completed
@@ -752,37 +752,37 @@
 	* project: added dependency "libiconv" - otherwise i get linker
 	error FIXME
 
-2003-11-11  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-11-11  Sridhar Ratnakumar  <srid@srid.ca>
 	* asm-id.c: removed double semi-colon (thanks Shaun)
 
-2003-11-04  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-11-04  Sridhar Ratnakumar  <srid@srid.ca>
 	* *: Fixed anjuta project to include doc files
 	
-2003-11-03  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-11-03  Sridhar Ratnakumar  <srid@srid.ca>
 	* file-op.c: on creating new file template code is set
 	* *.*: autoconf is working properly in slackware
 
-2003-11-02  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-11-02  Sridhar Ratnakumar  <srid@srid.ca>
 	* file-op.c: dialogs will now be modal
 	* callbacks.c: removed funcs file_ok_sel, i_save
 	* warnings: suppressed all warnings (platform: slackware 9)
 	* *.c: changed g_sprintf to g_snprinf, so more stable software!
 	* main.c: filename can be passed in command line!
 
-2003-10-24  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-10-24  Sridhar Ratnakumar  <srid@srid.ca>
 	* gui-input-symbol.c: made it working ;-)g
 	* file-op.c: changed error messages format
 
-2003-10-09  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-10-09  Sridhar Ratnakumar  <srid@srid.ca>
 	* gui-keypad.[ch]: added files
 
-2003-10-04  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-10-04  Sridhar Ratnakumar  <srid@srid.ca>
 	* :moved all *.h files in include/ to src/
 
-2003-09-31  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-09-31  Sridhar Ratnakumar  <srid@srid.ca>
 	* 8085-instructions.c: shld, ral, rar, stc - modified
 
-2003-08-26  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-08-26  Sridhar Ratnakumar  <srid@srid.ca>
 	* bridge.c: clear the stack
 	* gui-list-stack.c: stack view is working (in beta)
 	* gui-list-stack.c: <-- started working after beta release -->
@@ -797,19 +797,19 @@
 	* [*].c: replaced "gnome_error_dialog" with "gtk_message_dialog"
 	* gui-list-stack.c: fixed add() 8bit - 16bit data
 
-2003-08-13  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-08-13  Sridhar Ratnakumar  <srid@srid.ca>
 
 	* 8085-asm.c: Show success msg after assembling
 	* gui-list-data.c: changed globals to static
 	* 8085-[ins*].c: added support for stack change callback
 
-2003-08-04  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-08-04  Sridhar Ratnakumar  <srid@srid.ca>
 
 	* file-op.c: Each file-selection dialog has its own title
 	* bridge.c: addes statusbar information display
 	* gui-view.c: fixed io-mem-update bug.
 
-2003-08-03  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-08-03  Sridhar Ratnakumar  <srid@srid.ca>
 
 	* asm-gen[sym,obj].c: fixed assembler syntax - "equ" symbol - used
 	with pseudo ops also
@@ -822,7 +822,7 @@
 	* bridge.c: fixed: breakpoints are considered only when not
 	stepping!
 
-2003-07-31  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-07-31  Sridhar Ratnakumar  <srid@srid.ca>
 
 	* bridge.c: Implemented "step in", "step out"
 	* callbacks.c: glade update
@@ -838,7 +838,7 @@
 	* scintilla: archives (binaries) are replaced with sources (lesser
 	package size!)
 
-2003-07-25  Sridhar Ratnakumar  <sridhar.ratna@gmail.com>
+2003-07-25  Sridhar Ratnakumar  <srid@srid.ca>
 
 	* :Released 1.1 (first stable release) with lot of bugs, of
 	course! (coded in just 2 days!)

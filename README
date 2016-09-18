@@ -1,11 +1,12 @@
-# GNUSim8085
+GNUSim8085 (http://www.gnusim8085.org/)
+==========
 
 GNUSim8085 is a graphical cross platform simulator plus assembler with
 debugger for the Intel 8085 microprocessor. 
 
 You have to enter assembly code in order to use the simulator.  The
 assembly syntax is not too hard to learn. For more information see
-`doc/asm-guide.txt`.
+"asm-guide.txt" in the doc/ directory.
 
 Variable declarations are supported in assembler.  You have
 a seperate Data view widget to show variable values during debugging.
@@ -18,17 +19,15 @@ Contents of memory, IO ports can be modified during program execution.
 Modification of registers, flag are being planned, but they are not
 necessary always.
 
-A lot of examples can be found in the `docs` directory! Try them.
+A lot of examples can be found in the docs directory! Try them.
 
 Also don't forget to take a tutorial, when you will be asked during
 the program startup.
 
 To install from source, run the following commands
 
-```
-$ ./configure
-$ make
-$ sudo make install
-```
+  $ ./configure
+  $ make
+  $ sudo make install
 
-OR, see the `INSTALL` file.
+OR, see the INSTALL file.

@@ -133,7 +133,7 @@ AC_SUBST(GTKSOURCEVIEW_CFLAGS)
 
 dnl Languages which your application supports
 AM_GNU_GETTEXT([external])
-AM_GNU_GETTEXT_VERSION([0.17])
+AM_GNU_GETTEXT_VERSION([0.18.1])
 
 dnl Set PACKAGE SOURCE DIR in config.h.
 packagesrcdir=`cd $srcdir && pwd`

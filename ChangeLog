@@ -1,3 +1,8 @@
+2016-09-22  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* m4/*, po/*, ABOUT-NLS, config.rpath, configure.ac: Updates to gettext
+	macros and other related files to version 0.18.1.
+
 2016-02-16  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* po/*.po, PO/LINGUAS: New/Updated translations.

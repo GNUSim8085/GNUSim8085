@@ -4,12 +4,10 @@ AC_INIT([gnusim8085], [1.3.8], [https://bugs.launchpad.net/gnusim8085])
 AC_DEFINE([PACKAGE_URL],["http://www.gnusim8085.org/"],[Website URL])
 
 AC_CANONICAL_HOST
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([1.11 silent-rules])
+AM_SILENT_RULES([yes])
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS([config.h])
-
-# Enable silent build when available (Automake 1.11)
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 AC_ISC_POSIX
 AC_SUBST(CFLAGS,$CFLAGS)

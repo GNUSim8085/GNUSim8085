@@ -202,18 +202,12 @@ create_window_main (void)
   GtkWidget *label154;
   GtkWidget *main_entry_dec;
   GtkWidget *main_but_to_hex;
-  GtkWidget *alignment7;
-  GtkWidget *hbox30;
   GtkWidget *image293;
-  GtkWidget *label156;
   GtkWidget *vbox14;
   GtkWidget *label155;
   GtkWidget *main_entry_hex;
   GtkWidget *main_but_to_dec;
-  GtkWidget *alignment8;
-  GtkWidget *hbox31;
   GtkWidget *image294;
-  GtkWidget *label157;
   GtkWidget *hbox38;
   GtkWidget *image369;
   GtkWidget *label153;
@@ -224,10 +218,7 @@ create_window_main (void)
   GtkWidget *main_io_spin;
   GtkWidget *main_io_entry;
   GtkWidget *main_io_update;
-  GtkWidget *alignment4;
-  GtkWidget *hbox16;
   GtkWidget *image226;
-  GtkWidget *label139;
   GtkWidget *hbox36;
   GtkWidget *image367;
   GtkWidget *label164;
@@ -237,10 +228,7 @@ create_window_main (void)
   GtkWidget *main_mem_spin;
   GtkWidget *main_mem_entry;
   GtkWidget *main_mem_update;
-  GtkWidget *alignment5;
-  GtkWidget *hbox17;
   GtkWidget *image227;
-  GtkWidget *label140;
   GtkWidget *hbox37;
   GtkWidget *image368;
   GtkWidget *label165;
@@ -633,27 +621,13 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_entry_dec, _("Enter a decimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_dec), _("0"));
 
-  main_but_to_hex = gtk_button_new ();
+  main_but_to_hex = gtk_button_new_with_label (_("To Hex"));
   gtk_widget_show (main_but_to_hex);
   gtk_box_pack_start (GTK_BOX (vbox13), main_but_to_hex, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_but_to_hex, _("Convert this number to hexadecimal"));
 
-  alignment7 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment7);
-  gtk_container_add (GTK_CONTAINER (main_but_to_hex), alignment7);
-
-  hbox30 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox30);
-  gtk_container_add (GTK_CONTAINER (alignment7), hbox30);
-
   image293 = gtk_image_new_from_stock (GTK_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image293);
-  gtk_box_pack_start (GTK_BOX (hbox30), image293, FALSE, FALSE, 0);
-
-  label156 = gtk_label_new_with_mnemonic (_("To Hex"));
-  gtk_widget_show (label156);
-  gtk_box_pack_start (GTK_BOX (hbox30), label156, FALSE, FALSE, 0);
-  gtk_label_set_justify (GTK_LABEL (label156), GTK_JUSTIFY_LEFT);
+  gtk_button_set_image (GTK_BUTTON (main_but_to_hex), image293);
 
   vbox14 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox14);
@@ -671,27 +645,13 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_entry_hex, _("Enter a hexadecimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_hex), _("0"));
 
-  main_but_to_dec = gtk_button_new ();
+  main_but_to_dec = gtk_button_new_with_label (_("To Dec"));
   gtk_widget_show (main_but_to_dec);
   gtk_box_pack_start (GTK_BOX (vbox14), main_but_to_dec, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_but_to_dec, _("Convert this number to decimal"));
 
-  alignment8 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment8);
-  gtk_container_add (GTK_CONTAINER (main_but_to_dec), alignment8);
-
-  hbox31 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox31);
-  gtk_container_add (GTK_CONTAINER (alignment8), hbox31);
-
   image294 = gtk_image_new_from_stock (GTK_STOCK_GO_BACK, GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image294);
-  gtk_box_pack_start (GTK_BOX (hbox31), image294, FALSE, FALSE, 0);
-
-  label157 = gtk_label_new_with_mnemonic (_("To Dec"));
-  gtk_widget_show (label157);
-  gtk_box_pack_start (GTK_BOX (hbox31), label157, FALSE, FALSE, 0);
-  gtk_label_set_justify (GTK_LABEL (label157), GTK_JUSTIFY_LEFT);
+  gtk_button_set_image (GTK_BUTTON (main_but_to_dec), image294);
 
   hbox38 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox38);
@@ -738,27 +698,13 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_io_entry, _("Enter new port value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_io_entry), _("0"));
 
-  main_io_update = gtk_button_new ();
+  main_io_update = gtk_button_new_with_label (_("Update Port Value"));
   gtk_widget_show (main_io_update);
   gtk_box_pack_start (GTK_BOX (vbox11), main_io_update, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_io_update, _("Update the port value"));
 
-  alignment4 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment4);
-  gtk_container_add (GTK_CONTAINER (main_io_update), alignment4);
-
-  hbox16 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox16);
-  gtk_container_add (GTK_CONTAINER (alignment4), hbox16);
-
   image226 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image226);
-  gtk_box_pack_start (GTK_BOX (hbox16), image226, FALSE, FALSE, 0);
-
-  label139 = gtk_label_new_with_mnemonic (_("Update Port Value"));
-  gtk_widget_show (label139);
-  gtk_box_pack_start (GTK_BOX (hbox16), label139, FALSE, FALSE, 0);
-  gtk_label_set_justify (GTK_LABEL (label139), GTK_JUSTIFY_LEFT);
+  gtk_button_set_image (GTK_BUTTON (main_io_update), image226);
 
   hbox36 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox36);
@@ -788,7 +734,7 @@ create_window_main (void)
   gtk_widget_show (hbox14);
   gtk_box_pack_start (GTK_BOX (vbox12), hbox14, TRUE, TRUE, 0);
 
-  main_mem_spin = gtk_spin_button_new_with_range (0, 255, 1);
+  main_mem_spin = gtk_spin_button_new_with_range (0, 65535, 1);
   gtk_widget_show (main_mem_spin);
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_spin, TRUE, TRUE, 0);
   gtk_widget_set_tooltip_text (main_mem_spin, _("Change the memory location to view here"));
@@ -801,27 +747,13 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_mem_entry, _("Edit new value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_mem_entry), _("0"));
 
-  main_mem_update = gtk_button_new ();
+  main_mem_update = gtk_button_new_with_label (_("Update Memory"));
   gtk_widget_show (main_mem_update);
   gtk_box_pack_start (GTK_BOX (vbox12), main_mem_update, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_mem_update, _("Update the current memory location"));
 
-  alignment5 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment5);
-  gtk_container_add (GTK_CONTAINER (main_mem_update), alignment5);
-
-  hbox17 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox17);
-  gtk_container_add (GTK_CONTAINER (alignment5), hbox17);
-
   image227 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image227);
-  gtk_box_pack_start (GTK_BOX (hbox17), image227, FALSE, FALSE, 0);
-
-  label140 = gtk_label_new_with_mnemonic (_("Update Memory"));
-  gtk_widget_show (label140);
-  gtk_box_pack_start (GTK_BOX (hbox17), label140, FALSE, FALSE, 0);
-  gtk_label_set_justify (GTK_LABEL (label140), GTK_JUSTIFY_LEFT);
+  gtk_button_set_image (GTK_BUTTON (main_mem_update), image227);
 
   hbox37 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox37);
@@ -1146,18 +1078,12 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label154, "label154");
   GLADE_HOOKUP_OBJECT (window_main, main_entry_dec, "main_entry_dec");
   GLADE_HOOKUP_OBJECT (window_main, main_but_to_hex, "main_but_to_hex");
-  GLADE_HOOKUP_OBJECT (window_main, alignment7, "alignment7");
-  GLADE_HOOKUP_OBJECT (window_main, hbox30, "hbox30");
   GLADE_HOOKUP_OBJECT (window_main, image293, "image293");
-  GLADE_HOOKUP_OBJECT (window_main, label156, "label156");
   GLADE_HOOKUP_OBJECT (window_main, vbox14, "vbox14");
   GLADE_HOOKUP_OBJECT (window_main, label155, "label155");
   GLADE_HOOKUP_OBJECT (window_main, main_entry_hex, "main_entry_hex");
   GLADE_HOOKUP_OBJECT (window_main, main_but_to_dec, "main_but_to_dec");
-  GLADE_HOOKUP_OBJECT (window_main, alignment8, "alignment8");
-  GLADE_HOOKUP_OBJECT (window_main, hbox31, "hbox31");
   GLADE_HOOKUP_OBJECT (window_main, image294, "image294");
-  GLADE_HOOKUP_OBJECT (window_main, label157, "label157");
   GLADE_HOOKUP_OBJECT (window_main, hbox38, "hbox38");
   GLADE_HOOKUP_OBJECT (window_main, image369, "image369");
   GLADE_HOOKUP_OBJECT (window_main, label153, "label153");
@@ -1168,10 +1094,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_io_spin, "main_io_spin");
   GLADE_HOOKUP_OBJECT (window_main, main_io_entry, "main_io_entry");
   GLADE_HOOKUP_OBJECT (window_main, main_io_update, "main_io_update");
-  GLADE_HOOKUP_OBJECT (window_main, alignment4, "alignment4");
-  GLADE_HOOKUP_OBJECT (window_main, hbox16, "hbox16");
   GLADE_HOOKUP_OBJECT (window_main, image226, "image226");
-  GLADE_HOOKUP_OBJECT (window_main, label139, "label139");
   GLADE_HOOKUP_OBJECT (window_main, hbox36, "hbox36");
   GLADE_HOOKUP_OBJECT (window_main, image367, "image367");
   GLADE_HOOKUP_OBJECT (window_main, label164, "label164");
@@ -1181,10 +1104,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_mem_spin, "main_mem_spin");
   GLADE_HOOKUP_OBJECT (window_main, main_mem_entry, "main_mem_entry");
   GLADE_HOOKUP_OBJECT (window_main, main_mem_update, "main_mem_update");
-  GLADE_HOOKUP_OBJECT (window_main, alignment5, "alignment5");
-  GLADE_HOOKUP_OBJECT (window_main, hbox17, "hbox17");
   GLADE_HOOKUP_OBJECT (window_main, image227, "image227");
-  GLADE_HOOKUP_OBJECT (window_main, label140, "label140");
   GLADE_HOOKUP_OBJECT (window_main, hbox37, "hbox37");
   GLADE_HOOKUP_OBJECT (window_main, image368, "image368");
   GLADE_HOOKUP_OBJECT (window_main, label165, "label165");

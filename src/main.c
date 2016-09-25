@@ -54,6 +54,8 @@ main (int argc, char *argv[])
   textdomain (PACKAGE);
 
   gtk_init (&argc, &argv);
+  g_type_class_unref (g_type_class_ref (GTK_TYPE_BUTTON));
+  g_object_set (gtk_settings_get_default (), "gtk-button-images", TRUE, NULL);
 
   /* create app */
   gui_app_new ();

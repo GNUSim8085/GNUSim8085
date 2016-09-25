@@ -66,6 +66,17 @@ gtksourceview_api="gtksourceview-2.0"
 gtk_required="2.24.0"
 gtksourceview_required="2.10.0"
 
+AC_ARG_WITH([gtk3],
+	AS_HELP_STRING([--with-gtk3],[Build with GTK3 (default: no)]),
+	[with_gtk3=$withval],
+	[with_gtk3=no])
+if test "x$with_gtk3" = "xyes"; then
+gtk_api="gtk+-3.0"
+gtksourceview_api="gtksourceview-3.0"
+gtk_required="3.0.0"
+gtksourceview_required="3.0.0"
+fi
+
 AC_ARG_ENABLE([gio],
 	AS_HELP_STRING([--enable-gio],[Enable gio based file handling (default: enabled)]),
 	[enable_gio=$enableval],

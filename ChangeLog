@@ -1,3 +1,8 @@
+2016-09-26  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.ac, src/gui-editor.*, src/interface.c: Made it possible to
+	build with GTK3 APIs. Use --with-gtk3 option of configure script.
+
 2016-09-22  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* m4/*, po/*, ABOUT-NLS, config.rpath, configure.ac: Updates to gettext

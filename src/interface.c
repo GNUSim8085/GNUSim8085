@@ -628,6 +628,9 @@ create_window_main (void)
 
   image293 = gtk_image_new_from_stock (GTK_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_but_to_hex), image293);
+#if GTK_CHECK_VERSION (3, 6, 0)
+  gtk_button_set_always_show_image (GTK_BUTTON (main_but_to_hex), TRUE);
+#endif
 
   vbox14 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox14);
@@ -652,6 +655,9 @@ create_window_main (void)
 
   image294 = gtk_image_new_from_stock (GTK_STOCK_GO_BACK, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_but_to_dec), image294);
+#if GTK_CHECK_VERSION (3, 6, 0)
+  gtk_button_set_always_show_image (GTK_BUTTON (main_but_to_dec), TRUE);
+#endif
 
   hbox38 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox38);
@@ -705,6 +711,9 @@ create_window_main (void)
 
   image226 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_io_update), image226);
+#if GTK_CHECK_VERSION (3, 6, 0)
+  gtk_button_set_always_show_image (GTK_BUTTON (main_io_update), TRUE);
+#endif
 
   hbox36 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox36);
@@ -754,6 +763,9 @@ create_window_main (void)
 
   image227 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_mem_update), image227);
+#if GTK_CHECK_VERSION (3, 6, 0)
+  gtk_button_set_always_show_image (GTK_BUTTON (main_mem_update), TRUE);
+#endif
 
   hbox37 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox37);

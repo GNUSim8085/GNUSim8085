@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
-"Report-Msgid-Bugs-To: https://bugs.launchpad.net/gnusim8085\n"
-"POT-Creation-Date: 2011-05-14 09:54+0530\n"
+"Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
+"POT-Creation-Date: 2016-09-29 01:26+0530\n"
 "PO-Revision-Date: 2010-03-02 09:36+0000\n"
 "Last-Translator: Kartik Mistry <Unknown>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
+"Language: gu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -225,193 +226,193 @@ msgstr "એસેમ્બલર માર્ગદર્શિકા"
 msgid "Show/Hide side pane"
 msgstr "બાજુ પટ્ટી બતાવો/છુપાવો"
 
-#: src/interface.c:302
+#: src/interface.c:288
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr "GNUSim8085 - ૮૦૮૫ માઈક્રોપ્રોસેસર સિમ્યુલેટર"
 
-#: src/interface.c:425 src/interface.c:431 src/interface.c:437
-#: src/interface.c:443 src/interface.c:449 src/interface.c:455
-#: src/interface.c:461 src/interface.c:467 src/interface.c:473
-#: src/interface.c:479 src/interface.c:485 src/interface.c:491
-#: src/interface.c:497 src/interface.c:503
+#: src/interface.c:411 src/interface.c:417 src/interface.c:423
+#: src/interface.c:429 src/interface.c:435 src/interface.c:441
+#: src/interface.c:447 src/interface.c:453 src/interface.c:459
+#: src/interface.c:465 src/interface.c:471 src/interface.c:477
+#: src/interface.c:483 src/interface.c:489
 msgid "00"
 msgstr "00"
 
-#: src/interface.c:520
+#: src/interface.c:506
 msgid "Registers"
 msgstr "રજીસ્ટર્સ"
 
-#: src/interface.c:573 src/interface.c:579 src/interface.c:585
-#: src/interface.c:591 src/interface.c:597 src/interface.c:636
-#: src/interface.c:674 src/interface.c:742 src/interface.c:806
+#: src/interface.c:559 src/interface.c:565 src/interface.c:571
+#: src/interface.c:577 src/interface.c:583 src/interface.c:622
+#: src/interface.c:649 src/interface.c:705 src/interface.c:757
 msgid "0"
 msgstr "0"
 
-#: src/interface.c:607
+#: src/interface.c:593
 msgid "Flag"
 msgstr "સંકેત"
 
-#: src/interface.c:627 src/gui-list-data.c:79 src/gui-list-stack.c:84
+#: src/interface.c:613 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
 msgstr "દશાંશ"
 
-#: src/interface.c:635
+#: src/interface.c:621
 msgid "Enter a decimal number"
 msgstr "દશાંક આંકડો દાખલ કરો"
 
-#: src/interface.c:641
-msgid "Convert this number to hexadecimal"
-msgstr "આ આંકડાને હેક્સાડેસિમલમમાં ફેરવો"
-
-#: src/interface.c:655
+#: src/interface.c:624
 msgid "To Hex"
 msgstr "હેક્સ તરફ"
 
-#: src/interface.c:665
+#: src/interface.c:627
+msgid "Convert this number to hexadecimal"
+msgstr "આ આંકડાને હેક્સાડેસિમલમમાં ફેરવો"
+
+#: src/interface.c:640
 msgid "Hex"
 msgstr "હેક્સ"
 
-#: src/interface.c:673
+#: src/interface.c:648
 msgid "Enter a hexadecimal number"
 msgstr "હેક્સાડેસિમલમ આંકડો દાખલ કરો"
 
-#: src/interface.c:679
-msgid "Convert this number to decimal"
-msgstr "આ આંકડાને દશાંકમાં ફેરવો"
-
-#: src/interface.c:693
+#: src/interface.c:651
 msgid "To Dec"
 msgstr "દશાંક તરફ"
 
-#: src/interface.c:706
+#: src/interface.c:654
+msgid "Convert this number to decimal"
+msgstr "આ આંકડાને દશાંકમાં ફેરવો"
+
+#: src/interface.c:670
 msgid "Decimal - Hex Convertion"
 msgstr "દશાંશ - હેક્સ રુપાંતર"
 
-#: src/interface.c:734
+#: src/interface.c:697
 msgid "Change the port address to view here"
 msgstr "અહીં દેખવા માટે પોર્ટનું સરનામું બદલો"
 
-#: src/interface.c:741
+#: src/interface.c:704
 msgid "Enter new port value and click Update"
 msgstr "નવું પોર્ટ સરનામું દાખલ કરો અને સુધારા પર ક્લિક કરો"
 
-#: src/interface.c:747
-msgid "Update the port value"
-msgstr "પોર્ટ કિંમત સુધારો"
-
-#: src/interface.c:761
+#: src/interface.c:707
 msgid "Update Port Value"
 msgstr "પોર્ટ કિંમત સુધારો"
 
-#: src/interface.c:774 src/interface.c:1009 src/interface.c:1014
+#: src/interface.c:710
+msgid "Update the port value"
+msgstr "પોર્ટ કિંમત સુધારો"
+
+#: src/interface.c:726 src/interface.c:949 src/interface.c:954
 msgid "I/O Ports"
 msgstr "I/O પોર્ટ્સ"
 
-#: src/interface.c:798
+#: src/interface.c:749
 msgid "Change the memory location to view here"
 msgstr "અહીં દેખવા માટે મેમરી સ્થાન બદલો"
 
-#: src/interface.c:805
+#: src/interface.c:756
 msgid "Edit new value and click Update"
 msgstr "નવી કિંમત દાખલ કરો અને સુધારા પર ક્લિક કરો"
 
-#: src/interface.c:811
-msgid "Update the current memory location"
-msgstr "હાલનું મેમરી સ્થાન સુધારો"
-
-#: src/interface.c:825
+#: src/interface.c:759
 msgid "Update Memory"
 msgstr "મેમરી સુધારો"
 
-#: src/interface.c:838 src/interface.c:965 src/interface.c:970
+#: src/interface.c:762
+msgid "Update the current memory location"
+msgstr "હાલનું મેમરી સ્થાન સુધારો"
+
+#: src/interface.c:778 src/interface.c:905 src/interface.c:910
 msgid "Memory"
 msgstr "મેમરી"
 
-#: src/interface.c:863
+#: src/interface.c:803
 msgid "Load me at"
 msgstr "મને અહીં લાવો"
 
-#: src/interface.c:871
+#: src/interface.c:811
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr "કાર્યક્રમ સરનામું દાખલ કરો. જો એ હેક્સ સરનામું હોય તો 'h' સાથે તેનો અંત કરો."
 
-#: src/interface.c:889
+#: src/interface.c:829
 msgid "Variables"
 msgstr "ચલો"
 
-#: src/interface.c:902
+#: src/interface.c:842
 msgid "Data"
 msgstr "માહિતી"
 
-#: src/interface.c:918
+#: src/interface.c:858
 msgid "Stack Trace"
 msgstr "સ્ટૅક ટ્રેસ"
 
-#: src/interface.c:931
+#: src/interface.c:871
 msgid "Stack"
 msgstr "સ્ટૅક"
 
-#: src/interface.c:955
+#: src/interface.c:895
 msgid "KeyPad"
 msgstr "કીપેડ"
 
-#: src/interface.c:986 src/interface.c:1030
+#: src/interface.c:926 src/interface.c:970
 #, fuzzy
 msgid "Start"
 msgstr "સ્ટૅક"
 
-#: src/interface.c:1278
+#: src/interface.c:1198
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  GNUSim8085 Administrators https://launchpad.net/~gnusim8085-admins\n"
 "  Kartik Mistry https://launchpad.net/~kartik.mistry"
 
-#: src/interface.c:1324
+#: src/interface.c:1244
 msgid "Assembler Listing"
 msgstr "એસેમ્બર યાદી"
 
-#: src/interface.c:1348
+#: src/interface.c:1268
 msgid "Save to file"
 msgstr "ફાઈલમાં સંગ્રહો"
 
-#: src/interface.c:1385
+#: src/interface.c:1305
 msgid "Assembler Tutorial"
 msgstr "એસેમ્બલર માર્ગદર્શિકા"
 
-#: src/interface.c:1429
+#: src/interface.c:1349
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 સંવાદ સાથે શરૂઆત"
 
-#: src/interface.c:1460
+#: src/interface.c:1380
 msgid "1. How to use this simulator?"
 msgstr "૧. આ સિમ્યુલેટરનો ઉપયોગ કઈ રીતે કરશો?"
 
-#: src/interface.c:1468
+#: src/interface.c:1388
 msgid "_Tutorial"
 msgstr "માર્ગદર્શિકા (_T)"
 
-#: src/interface.c:1473
+#: src/interface.c:1393
 msgid "A short tutorial on writing assembly code!"
 msgstr "એસેમ્બલી કોડ લખવા માટેની નાનકડી માર્ગદર્શિકા!"
 
-#: src/interface.c:1480
+#: src/interface.c:1400
 msgid "2. Open an existing assembly program."
 msgstr "૨. હાજર રહેલ એસેમ્બલી કાર્યક્રમ ખોલો."
 
-#: src/interface.c:1488
+#: src/interface.c:1408
 msgid "_Open program"
 msgstr "કાર્યક્રમ ખોલો (_O)"
 
-#: src/interface.c:1493
+#: src/interface.c:1413
 msgid "Open an already saved program"
 msgstr "પહેલેથી સંગ્રહ કરેલ કાર્યક્રમ ખોલો"
 
-#: src/interface.c:1495
+#: src/interface.c:1415
 msgid "What do you want to do now?"
 msgstr "તમે હવે શું કરવા માંગો છો?"
 
-#: src/interface.c:1505
+#: src/interface.c:1425
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -419,35 +420,35 @@ msgstr ""
 "\"doc\" ડિરેક્ટરીમાં આપેલ દસ્તાવેજને વાંચવાનું \n"
 "ભૂલશો નહી."
 
-#: src/interface.c:1566
+#: src/interface.c:1483
 msgid "Choose a symbol"
 msgstr "સંજ્ઞા પસંદ કરો"
 
-#: src/interface.c:1592
+#: src/interface.c:1509
 msgid "Enter a symbol or choose one from the lists"
 msgstr "સંજ્ઞા દાખલ કરો અથવા યાદીઓમાંથી એક પસંદ કરો"
 
-#: src/interface.c:1602
+#: src/interface.c:1519
 msgid "Enter Symbol"
 msgstr "સંજ્ઞા દાખલ કરો"
 
-#: src/interface.c:1616
+#: src/interface.c:1533
 msgid "Variables List"
 msgstr "ચલોની યાદી"
 
-#: src/interface.c:1637
+#: src/interface.c:1547
 msgid "Functions List"
 msgstr "વિધેયોની યાદી"
 
-#: src/interface.c:1658
+#: src/interface.c:1561
 msgid "Macros List"
 msgstr "મેક્રોસની યાદી"
 
-#: src/interface.c:1714
+#: src/interface.c:1606
 msgid "Choose a register"
 msgstr "રજીસ્ટર પસંદ કરો"
 
-#: src/main.c:83
+#: src/main.c:85
 msgid "Simulator: Idle"
 msgstr "સિમ્યુલેટર: નિષ્ક્રિય"
 

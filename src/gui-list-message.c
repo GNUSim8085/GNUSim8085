@@ -106,12 +106,12 @@ gui_list_message_attach_me (void)
 {
   GtkWidget *cont;
 
-  cont = lookup_widget (app->window_main, "main_vpaned_data");
+  cont = lookup_widget (app->window_main, "vbox_data");
   g_assert (cont);
 
   create_me ();
 
-  gtk_paned_add2 (GTK_PANED (cont), GTK_WIDGET (view));
+  gtk_box_pack_end (GTK_BOX (cont), GTK_WIDGET (view), TRUE, TRUE, 0);
 
 }
 

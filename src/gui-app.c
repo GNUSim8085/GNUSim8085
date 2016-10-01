@@ -28,7 +28,7 @@ GtkWidget *container = NULL;
 void
 gui_app_new (void)
 {
-  GtkPaned *p_msg, *p_data;
+  GtkBox *p_msg, *p_data;
   /*GdkScreen *screen;*/
   g_assert (app == NULL);
   app = g_malloc0 (sizeof (GUIApp));
@@ -49,11 +49,11 @@ gui_app_new (void)
   /* dim */
   //gtk_window_get_size(app->window_main, &w, &h);
 
-  p_msg = GTK_PANED (lookup_widget
-					 (app->window_main, "main_hpaned_msg"));
+  p_msg = GTK_BOX (lookup_widget
+					 (app->window_main, "hbox_main"));
   g_assert (p_msg);
-  p_data = GTK_PANED (lookup_widget
-					  (app->window_main, "main_vpaned_data"));
+  p_data = GTK_BOX (lookup_widget
+					  (app->window_main, "vbox_data"));
   g_assert (p_data);
 
   /* get screen 
@@ -67,9 +67,6 @@ gui_app_new (void)
   /* maximize window FIXME - not working in other wms say IceWM */
   gtk_window_maximize (GTK_WINDOW (app->window_main));
 
-  //FIXME properly allocate spaces to widgets?
-  //gtk_paned_set_position (p_data, w);
-  //gtk_paned_set_position (p_msg, h/2);
 }
 
 void

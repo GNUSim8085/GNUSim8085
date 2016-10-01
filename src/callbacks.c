@@ -370,7 +370,7 @@ void
 show_hide_side_pane (GtkToggleAction * menuitem, gpointer user_data)
 {
   GtkWidget *side_pane;
-  side_pane = lookup_widget (app->window_main, "main_vpaned_data");
+  side_pane = lookup_widget (app->window_main, "vbox_data");
   if (gtk_toggle_action_get_active (menuitem))
 	  gtk_widget_hide (side_pane);
   else

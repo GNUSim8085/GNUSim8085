@@ -1,3 +1,9 @@
+2016-10-02  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* src/callbacks.c, src/gui-app.c, src/gui-list-message.c,
+	src/interface.c: Cleaned up the code to reduce the widgets and made it
+	more readable.
+
 2016-09-26  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* configure.ac, src/gui-editor.*, src/interface.c: Made it possible to

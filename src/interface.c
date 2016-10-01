@@ -149,14 +149,13 @@ create_window_main (void)
 {
   GtkWidget *window_main;
   GdkPixbuf *window_main_icon_pixbuf;
-  GtkWidget *vbox1;
+  GtkWidget *vbox_main;
   GtkWidget *menubar1;
-  GtkWidget *handlebox1;
   GtkWidget *toolbar1;
-  GtkWidget *main_hpaned_left;
-  GtkWidget *vbox9;
+  GtkWidget *hbox_main;
+  GtkWidget *vbox_left;
   GtkWidget *hbox15;
-  GtkWidget *frame9;
+  GtkWidget *frame_registers;
   GtkWidget *table7;
   GtkWidget *label107;
   GtkWidget *label108;
@@ -180,9 +179,8 @@ create_window_main (void)
   GtkWidget *main_reg_spl;
   GtkWidget *main_reg_int_reg;
   GtkWidget *label106;
-  GtkWidget *registersbox;
   GtkWidget *label96;
-  GtkWidget *frame10;
+  GtkWidget *frame_flags;
   GtkWidget *table8;
   GtkWidget *label129;
   GtkWidget *label130;
@@ -194,9 +192,8 @@ create_window_main (void)
   GtkWidget *main_flag_ac;
   GtkWidget *main_flag_p;
   GtkWidget *main_flag_c;
-  GtkWidget *flagsbox;
   GtkWidget *label163;
-  GtkWidget *frame12;
+  GtkWidget *frame_dec_hex;
   GtkWidget *hbox29;
   GtkWidget *vbox13;
   GtkWidget *label154;
@@ -211,8 +208,7 @@ create_window_main (void)
   GtkWidget *hbox38;
   GtkWidget *image369;
   GtkWidget *label153;
-  GtkWidget *vbox10;
-  GtkWidget *frame6;
+  GtkWidget *frame_io_ports;
   GtkWidget *vbox11;
   GtkWidget *hbox13;
   GtkWidget *main_io_spin;
@@ -222,7 +218,7 @@ create_window_main (void)
   GtkWidget *hbox36;
   GtkWidget *image367;
   GtkWidget *label164;
-  GtkWidget *frame8;
+  GtkWidget *frame_memory;
   GtkWidget *vbox12;
   GtkWidget *hbox14;
   GtkWidget *main_mem_spin;
@@ -232,8 +228,7 @@ create_window_main (void)
   GtkWidget *hbox37;
   GtkWidget *image368;
   GtkWidget *label165;
-  GtkWidget *main_hpaned_msg;
-  GtkWidget *main_vpaned_data;
+  GtkWidget *vbox_data;
   GtkWidget *main_vbox_center;
   GtkWidget *hbox24;
   GtkWidget *label147;
@@ -298,9 +293,9 @@ create_window_main (void)
       g_object_unref (window_main_icon_pixbuf);
     }
 
-  vbox1 = gtk_vbox_new (FALSE, 0);
-  gtk_widget_show (vbox1);
-  gtk_container_add (GTK_CONTAINER (window_main), vbox1);
+  vbox_main = gtk_vbox_new (FALSE, 0);
+  gtk_widget_show (vbox_main);
+  gtk_container_add (GTK_CONTAINER (window_main), vbox_main);
 
   action_group = gtk_action_group_new ("MenuActions");
   gtk_action_group_set_translation_domain (action_group, NULL);
@@ -322,39 +317,34 @@ create_window_main (void)
     }
 
   menubar1 = gtk_ui_manager_get_widget (ui_manager, "/MainMenu"); 
-  gtk_box_pack_start (GTK_BOX (vbox1), menubar1, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox_main), menubar1, FALSE, FALSE, 0);
   gtk_widget_show (menubar1);
-
-  handlebox1 = gtk_handle_box_new ();
-  gtk_widget_show (handlebox1);
-  gtk_box_pack_start (GTK_BOX (vbox1), handlebox1, FALSE, TRUE, 0);
 
   toolbar1 = gtk_ui_manager_get_widget (ui_manager, "/MainToolBar");
   gtk_widget_show (toolbar1);
-  gtk_container_add (GTK_CONTAINER (handlebox1), toolbar1);
+  gtk_box_pack_start (GTK_BOX (vbox_main), toolbar1, FALSE, FALSE, 0);
   gtk_toolbar_set_style (GTK_TOOLBAR (toolbar1), GTK_TOOLBAR_ICONS);
 
-  main_hpaned_left = gtk_hpaned_new ();
-  gtk_widget_show (main_hpaned_left);
-  gtk_box_pack_start (GTK_BOX (vbox1), main_hpaned_left, TRUE, TRUE, 0);
-  gtk_paned_set_position (GTK_PANED (main_hpaned_left), 230);
+  hbox_main = gtk_hbox_new (FALSE, 0);
+  gtk_widget_show (hbox_main);
+  gtk_box_pack_start (GTK_BOX (vbox_main), hbox_main, TRUE, TRUE, 0);
 
-  vbox9 = gtk_vbox_new (FALSE, 0);
-  gtk_widget_show (vbox9);
-  gtk_paned_pack1 (GTK_PANED (main_hpaned_left), vbox9, FALSE, TRUE);
+  vbox_left = gtk_vbox_new (FALSE, 0);
+  gtk_widget_show (vbox_left);
+  gtk_box_pack_start (GTK_BOX (hbox_main), vbox_left, FALSE, FALSE, 0);
 
   hbox15 = gtk_hbox_new (FALSE, 0);
   gtk_widget_show (hbox15);
-  gtk_box_pack_start (GTK_BOX (vbox9), hbox15, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox_left), hbox15, FALSE, FALSE, 0);
 
-  frame9 = gtk_frame_new (NULL);
-  gtk_widget_show (frame9);
-  gtk_box_pack_start (GTK_BOX (hbox15), frame9, TRUE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (frame9), 5);
+  frame_registers = gtk_frame_new (NULL);
+  gtk_widget_show (frame_registers);
+  gtk_box_pack_start (GTK_BOX (hbox15), frame_registers, FALSE, FALSE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (frame_registers), 5);
 
   table7 = gtk_table_new (8, 3, TRUE);
   gtk_widget_show (table7);
-  gtk_container_add (GTK_CONTAINER (frame9), table7);
+  gtk_container_add (GTK_CONTAINER (frame_registers), table7);
   gtk_container_set_border_width (GTK_CONTAINER (table7), 5);
   gtk_table_set_row_spacings (GTK_TABLE (table7), 10);
   gtk_table_set_col_spacings (GTK_TABLE (table7), 6);
@@ -499,24 +489,20 @@ create_window_main (void)
                     (GtkAttachOptions) (0), 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label106), TRUE);
 
-  registersbox = gtk_hbox_new (FALSE, 5);
-  gtk_widget_show (registersbox);
-  gtk_frame_set_label_widget (GTK_FRAME (frame9), registersbox);
-
   label96 = gtk_label_new (g_strconcat("<b>", _("Registers"), "</b>", NULL));
   gtk_widget_show (label96);
-  gtk_box_pack_start (GTK_BOX (registersbox), label96, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label96), TRUE);
   gtk_label_set_justify (GTK_LABEL (label96), GTK_JUSTIFY_LEFT);
+  gtk_frame_set_label_widget (GTK_FRAME (frame_registers), label96);
 
-  frame10 = gtk_frame_new (NULL);
-  gtk_widget_show (frame10);
-  gtk_box_pack_start (GTK_BOX (hbox15), frame10, TRUE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (frame10), 5);
+  frame_flags = gtk_frame_new (NULL);
+  gtk_widget_show (frame_flags);
+  gtk_box_pack_start (GTK_BOX (hbox15), frame_flags, FALSE, FALSE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (frame_flags), 5);
 
   table8 = gtk_table_new (5, 2, TRUE);
   gtk_widget_show (table8);
-  gtk_container_add (GTK_CONTAINER (frame10), table8);
+  gtk_container_add (GTK_CONTAINER (frame_flags), table8);
   gtk_container_set_border_width (GTK_CONTAINER (table8), 5);
   gtk_table_set_row_spacings (GTK_TABLE (table8), 10);
   gtk_table_set_col_spacings (GTK_TABLE (table8), 5);
@@ -586,28 +572,24 @@ create_window_main (void)
                     (GtkAttachOptions) (GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
-  flagsbox = gtk_hbox_new (FALSE, 5);
-  gtk_widget_show (flagsbox);
-  gtk_frame_set_label_widget (GTK_FRAME (frame10), flagsbox);
-
   label163 = gtk_label_new (g_strconcat("<b>", _("Flag"), "</b>", NULL));
   gtk_widget_show (label163);
-  gtk_box_pack_start (GTK_BOX (flagsbox), label163, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label163), TRUE);
   gtk_label_set_justify (GTK_LABEL (label163), GTK_JUSTIFY_LEFT);
+  gtk_frame_set_label_widget (GTK_FRAME (frame_flags), label163);
 
-  frame12 = gtk_frame_new (NULL);
-  gtk_widget_show (frame12);
-  gtk_box_pack_start (GTK_BOX (vbox9), frame12, FALSE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (frame12), 5);
+  frame_dec_hex = gtk_frame_new (NULL);
+  gtk_widget_show (frame_dec_hex);
+  gtk_box_pack_start (GTK_BOX (vbox_left), frame_dec_hex, FALSE, FALSE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (frame_dec_hex), 5);
 
   hbox29 = gtk_hbox_new (FALSE, 0);
   gtk_widget_show (hbox29);
-  gtk_container_add (GTK_CONTAINER (frame12), hbox29);
+  gtk_container_add (GTK_CONTAINER (frame_dec_hex), hbox29);
 
   vbox13 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox13);
-  gtk_box_pack_start (GTK_BOX (hbox29), vbox13, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox29), vbox13, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (vbox13), 5);
 
   label154 = gtk_label_new (_("Decimal"));
@@ -618,6 +600,7 @@ create_window_main (void)
   main_entry_dec = gtk_entry_new ();
   gtk_widget_show (main_entry_dec);
   gtk_box_pack_start (GTK_BOX (vbox13), main_entry_dec, FALSE, FALSE, 0);
+  gtk_entry_set_width_chars (GTK_ENTRY (main_entry_dec), 12);
   gtk_widget_set_tooltip_text (main_entry_dec, _("Enter a decimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_dec), _("0"));
 
@@ -634,7 +617,7 @@ create_window_main (void)
 
   vbox14 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox14);
-  gtk_box_pack_start (GTK_BOX (hbox29), vbox14, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox29), vbox14, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (vbox14), 5);
 
   label155 = gtk_label_new (_("Hex"));
@@ -645,6 +628,7 @@ create_window_main (void)
   main_entry_hex = gtk_entry_new ();
   gtk_widget_show (main_entry_hex);
   gtk_box_pack_start (GTK_BOX (vbox14), main_entry_hex, FALSE, FALSE, 0);
+  gtk_entry_set_width_chars (GTK_ENTRY (main_entry_hex), 12);
   gtk_widget_set_tooltip_text (main_entry_hex, _("Enter a hexadecimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_hex), _("0"));
 
@@ -661,11 +645,11 @@ create_window_main (void)
 
   hbox38 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox38);
-  gtk_frame_set_label_widget (GTK_FRAME (frame12), hbox38);
+  gtk_frame_set_label_widget (GTK_FRAME (frame_dec_hex), hbox38);
 
   image369 = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image369);
-  gtk_box_pack_start (GTK_BOX (hbox38), image369, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox38), image369, FALSE, FALSE, 0);
 
   label153 = gtk_label_new (g_strconcat("<b>", _("Decimal - Hex Convertion"), "</b>", NULL));
   gtk_widget_show (label153);
@@ -673,34 +657,31 @@ create_window_main (void)
   gtk_label_set_use_markup (GTK_LABEL (label153), TRUE);
   gtk_label_set_justify (GTK_LABEL (label153), GTK_JUSTIFY_LEFT);
 
-  vbox10 = gtk_vbox_new (FALSE, 0);
-  gtk_widget_show (vbox10);
-  gtk_box_pack_start (GTK_BOX (vbox9), vbox10, FALSE, TRUE, 0);
-
-  frame6 = gtk_frame_new (NULL);
-  gtk_widget_show (frame6);
-  gtk_box_pack_start (GTK_BOX (vbox10), frame6, FALSE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (frame6), 5);
+  frame_io_ports = gtk_frame_new (NULL);
+  gtk_widget_show (frame_io_ports);
+  gtk_box_pack_start (GTK_BOX (vbox_left), frame_io_ports, FALSE, FALSE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (frame_io_ports), 5);
 
   vbox11 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox11);
-  gtk_container_add (GTK_CONTAINER (frame6), vbox11);
+  gtk_container_add (GTK_CONTAINER (frame_io_ports), vbox11);
   gtk_container_set_border_width (GTK_CONTAINER (vbox11), 5);
 
   hbox13 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox13);
-  gtk_box_pack_start (GTK_BOX (vbox11), hbox13, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox11), hbox13, FALSE, FALSE, 0);
 
   main_io_spin = gtk_spin_button_new_with_range (0, 255, 1);
   gtk_widget_show (main_io_spin);
-  gtk_box_pack_start (GTK_BOX (hbox13), main_io_spin, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox13), main_io_spin, FALSE, FALSE, 0);
+  gtk_entry_set_width_chars (GTK_ENTRY (main_io_spin), 5);
   gtk_widget_set_tooltip_text (main_io_spin, _("Change the port address to view here"));
   gtk_spin_button_set_numeric (GTK_SPIN_BUTTON (main_io_spin), TRUE);
   gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (main_io_spin), TRUE);
 
   main_io_entry = gtk_entry_new ();
   gtk_widget_show (main_io_entry);
-  gtk_box_pack_start (GTK_BOX (hbox13), main_io_entry, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox13), main_io_entry, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_io_entry, _("Enter new port value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_io_entry), _("0"));
 
@@ -717,11 +698,11 @@ create_window_main (void)
 
   hbox36 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox36);
-  gtk_frame_set_label_widget (GTK_FRAME (frame6), hbox36);
+  gtk_frame_set_label_widget (GTK_FRAME (frame_io_ports), hbox36);
 
   image367 = gtk_image_new_from_stock (GTK_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image367);
-  gtk_box_pack_start (GTK_BOX (hbox36), image367, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox36), image367, FALSE, FALSE, 0);
 
   label164 = gtk_label_new (g_strconcat("<b>", _("I/O Ports"), "</b>", NULL));
   gtk_widget_show (label164);
@@ -729,30 +710,31 @@ create_window_main (void)
   gtk_label_set_use_markup (GTK_LABEL (label164), TRUE);
   gtk_label_set_justify (GTK_LABEL (label164), GTK_JUSTIFY_LEFT);
 
-  frame8 = gtk_frame_new (NULL);
-  gtk_widget_show (frame8);
-  gtk_box_pack_start (GTK_BOX (vbox10), frame8, FALSE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (frame8), 5);
+  frame_memory = gtk_frame_new (NULL);
+  gtk_widget_show (frame_memory);
+  gtk_box_pack_start (GTK_BOX (vbox_left), frame_memory, FALSE, FALSE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (frame_memory), 5);
 
   vbox12 = gtk_vbox_new (FALSE, 5);
   gtk_widget_show (vbox12);
-  gtk_container_add (GTK_CONTAINER (frame8), vbox12);
+  gtk_container_add (GTK_CONTAINER (frame_memory), vbox12);
   gtk_container_set_border_width (GTK_CONTAINER (vbox12), 5);
 
   hbox14 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox14);
-  gtk_box_pack_start (GTK_BOX (vbox12), hbox14, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox12), hbox14, FALSE, FALSE, 0);
 
   main_mem_spin = gtk_spin_button_new_with_range (0, 65535, 1);
   gtk_widget_show (main_mem_spin);
-  gtk_box_pack_start (GTK_BOX (hbox14), main_mem_spin, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox14), main_mem_spin, FALSE, FALSE, 0);
+  gtk_entry_set_width_chars (GTK_ENTRY (main_mem_spin), 5);
   gtk_widget_set_tooltip_text (main_mem_spin, _("Change the memory location to view here"));
   gtk_spin_button_set_numeric (GTK_SPIN_BUTTON (main_mem_spin), TRUE);
   gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (main_mem_spin), TRUE);
 
   main_mem_entry = gtk_entry_new ();
   gtk_widget_show (main_mem_entry);
-  gtk_box_pack_start (GTK_BOX (hbox14), main_mem_entry, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox14), main_mem_entry, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_mem_entry, _("Edit new value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_mem_entry), _("0"));
 
@@ -769,11 +751,11 @@ create_window_main (void)
 
   hbox37 = gtk_hbox_new (FALSE, 5);
   gtk_widget_show (hbox37);
-  gtk_frame_set_label_widget (GTK_FRAME (frame8), hbox37);
+  gtk_frame_set_label_widget (GTK_FRAME (frame_memory), hbox37);
 
   image368 = gtk_image_new_from_stock (GTK_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image368);
-  gtk_box_pack_start (GTK_BOX (hbox37), image368, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox37), image368, FALSE, FALSE, 0);
 
   label165 = gtk_label_new (g_strconcat("<b>", _("Memory"), "</b>", NULL));
   gtk_widget_show (label165);
@@ -781,19 +763,13 @@ create_window_main (void)
   gtk_label_set_use_markup (GTK_LABEL (label165), TRUE);
   gtk_label_set_justify (GTK_LABEL (label165), GTK_JUSTIFY_LEFT);
 
-  main_hpaned_msg = gtk_hpaned_new ();
-  gtk_widget_show (main_hpaned_msg);
-  gtk_paned_pack2 (GTK_PANED (main_hpaned_left), main_hpaned_msg, TRUE, FALSE);
-  gtk_paned_set_position (GTK_PANED (main_hpaned_msg), 400);
-
-  main_vpaned_data = gtk_vpaned_new ();
-  gtk_widget_show (main_vpaned_data);
-  gtk_paned_pack2 (GTK_PANED (main_hpaned_msg), main_vpaned_data, FALSE, FALSE);
-  gtk_paned_set_position (GTK_PANED (main_vpaned_data), 400);
+  vbox_data = gtk_vbox_new (FALSE, 0);
+  gtk_widget_show (vbox_data);
+  gtk_box_pack_end (GTK_BOX (hbox_main), vbox_data, FALSE, FALSE, 0);
 
   main_vbox_center = gtk_vbox_new (FALSE, 0);
   gtk_widget_show (main_vbox_center);
-  gtk_paned_pack1 (GTK_PANED (main_hpaned_msg), main_vbox_center, FALSE, FALSE);
+  gtk_box_pack_start (GTK_BOX (hbox_main), main_vbox_center, TRUE, TRUE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (main_vbox_center), 5);
 
   hbox24 = gtk_hbox_new (FALSE, 0);
@@ -813,7 +789,7 @@ create_window_main (void)
 
   notebook5 = gtk_notebook_new ();
   gtk_widget_show (notebook5);
-  gtk_paned_pack1 (GTK_PANED (main_vpaned_data), notebook5, TRUE, TRUE);
+  gtk_box_pack_start (GTK_BOX (vbox_data), notebook5, TRUE, TRUE, 0);
 
   main_frame_data = gtk_frame_new (NULL);
   gtk_widget_show (main_frame_data);
@@ -991,7 +967,7 @@ create_window_main (void)
   gtk_widget_show (main_statusbar);
   status_box = gtk_hbox_new(FALSE, 2);
   gtk_widget_show (status_box);
-  gtk_box_pack_end (GTK_BOX (vbox1), status_box, FALSE, TRUE, 0);
+  gtk_box_pack_end (GTK_BOX (vbox_main), status_box, FALSE, TRUE, 0);
   gtk_box_pack_start (GTK_BOX (status_box), main_progressbar, FALSE, TRUE, 2);
   gtk_box_pack_start (GTK_BOX (status_box), main_statusbar, TRUE, TRUE, 2);
 
@@ -1037,14 +1013,13 @@ create_window_main (void)
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (window_main, window_main, "window_main");
-  GLADE_HOOKUP_OBJECT (window_main, vbox1, "vbox1");
+  GLADE_HOOKUP_OBJECT (window_main, vbox_main, "vbox_main");
   GLADE_HOOKUP_OBJECT (window_main, menubar1, "menubar1");
-  GLADE_HOOKUP_OBJECT (window_main, handlebox1, "handlebox1");
   GLADE_HOOKUP_OBJECT (window_main, toolbar1, "toolbar1");
-  GLADE_HOOKUP_OBJECT (window_main, main_hpaned_left, "main_hpaned_left");
-  GLADE_HOOKUP_OBJECT (window_main, vbox9, "vbox9");
+  GLADE_HOOKUP_OBJECT (window_main, hbox_main, "hbox_main");
+  GLADE_HOOKUP_OBJECT (window_main, vbox_left, "vbox_left");
   GLADE_HOOKUP_OBJECT (window_main, hbox15, "hbox15");
-  GLADE_HOOKUP_OBJECT (window_main, frame9, "frame9");
+  GLADE_HOOKUP_OBJECT (window_main, frame_registers, "frame_registers");
   GLADE_HOOKUP_OBJECT (window_main, table7, "table7");
   GLADE_HOOKUP_OBJECT (window_main, label107, "label107");
   GLADE_HOOKUP_OBJECT (window_main, label108, "label108");
@@ -1068,9 +1043,8 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_reg_spl, "main_reg_spl");
   GLADE_HOOKUP_OBJECT (window_main, main_reg_int_reg, "main_reg_int_reg");
   GLADE_HOOKUP_OBJECT (window_main, label106, "label106");
-  GLADE_HOOKUP_OBJECT (window_main, registersbox, "registersbox");
   GLADE_HOOKUP_OBJECT (window_main, label96, "label96");
-  GLADE_HOOKUP_OBJECT (window_main, frame10, "frame10");
+  GLADE_HOOKUP_OBJECT (window_main, frame_flags, "frame_flags");
   GLADE_HOOKUP_OBJECT (window_main, table8, "table8");
   GLADE_HOOKUP_OBJECT (window_main, label129, "label129");
   GLADE_HOOKUP_OBJECT (window_main, label130, "label130");
@@ -1082,9 +1056,8 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_flag_ac, "main_flag_ac");
   GLADE_HOOKUP_OBJECT (window_main, main_flag_p, "main_flag_p");
   GLADE_HOOKUP_OBJECT (window_main, main_flag_c, "main_flag_c");
-  GLADE_HOOKUP_OBJECT (window_main, flagsbox, "flagsbox");
   GLADE_HOOKUP_OBJECT (window_main, label163, "label163");
-  GLADE_HOOKUP_OBJECT (window_main, frame12, "frame12");
+  GLADE_HOOKUP_OBJECT (window_main, frame_dec_hex, "frame_dec_hex");
   GLADE_HOOKUP_OBJECT (window_main, hbox29, "hbox29");
   GLADE_HOOKUP_OBJECT (window_main, vbox13, "vbox13");
   GLADE_HOOKUP_OBJECT (window_main, label154, "label154");
@@ -1099,8 +1072,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, hbox38, "hbox38");
   GLADE_HOOKUP_OBJECT (window_main, image369, "image369");
   GLADE_HOOKUP_OBJECT (window_main, label153, "label153");
-  GLADE_HOOKUP_OBJECT (window_main, vbox10, "vbox10");
-  GLADE_HOOKUP_OBJECT (window_main, frame6, "frame6");
+  GLADE_HOOKUP_OBJECT (window_main, frame_io_ports, "frame_io_ports");
   GLADE_HOOKUP_OBJECT (window_main, vbox11, "vbox11");
   GLADE_HOOKUP_OBJECT (window_main, hbox13, "hbox13");
   GLADE_HOOKUP_OBJECT (window_main, main_io_spin, "main_io_spin");
@@ -1110,7 +1082,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, hbox36, "hbox36");
   GLADE_HOOKUP_OBJECT (window_main, image367, "image367");
   GLADE_HOOKUP_OBJECT (window_main, label164, "label164");
-  GLADE_HOOKUP_OBJECT (window_main, frame8, "frame8");
+  GLADE_HOOKUP_OBJECT (window_main, frame_memory, "frame_memory");
   GLADE_HOOKUP_OBJECT (window_main, vbox12, "vbox12");
   GLADE_HOOKUP_OBJECT (window_main, hbox14, "hbox14");
   GLADE_HOOKUP_OBJECT (window_main, main_mem_spin, "main_mem_spin");
@@ -1120,8 +1092,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, hbox37, "hbox37");
   GLADE_HOOKUP_OBJECT (window_main, image368, "image368");
   GLADE_HOOKUP_OBJECT (window_main, label165, "label165");
-  GLADE_HOOKUP_OBJECT (window_main, main_hpaned_msg, "main_hpaned_msg");
-  GLADE_HOOKUP_OBJECT (window_main, main_vpaned_data, "main_vpaned_data");
+  GLADE_HOOKUP_OBJECT (window_main, vbox_data, "vbox_data");
   GLADE_HOOKUP_OBJECT (window_main, main_vbox_center, "main_vbox_center");
   GLADE_HOOKUP_OBJECT (window_main, hbox24, "hbox24");
   GLADE_HOOKUP_OBJECT (window_main, label147, "label147");
@@ -1478,7 +1449,6 @@ create_dialog_isymbol (void)
   GtkWidget *hbox47;
   GtkWidget *label176;
   GtkWidget *isymbol_macros;
-  GtkWidget *dialog_action_area1;
 
   dialog_isymbol = gtk_dialog_new_with_buttons (_("Choose a symbol"),
 												NULL,
@@ -1567,10 +1537,6 @@ create_dialog_isymbol (void)
   gtk_widget_show (isymbol_macros);
   gtk_box_pack_start (GTK_BOX (hbox47), isymbol_macros, TRUE, TRUE, 0);
 
-  dialog_action_area1 = gtk_dialog_get_action_area (GTK_DIALOG (dialog_isymbol));
-  gtk_widget_show (dialog_action_area1);
-  gtk_button_box_set_layout (GTK_BUTTON_BOX (dialog_action_area1), GTK_BUTTONBOX_END);
-
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_isymbol, "dialog_isymbol");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_vbox1, "dialog_vbox1");
@@ -1588,7 +1554,6 @@ create_dialog_isymbol (void)
   GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox47, "hbox47");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label176, "label176");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros, "isymbol_macros");
-  GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_action_area1, "dialog_action_area1");
 
   gtk_widget_grab_focus (entry1);
   return dialog_isymbol;
@@ -1601,7 +1566,6 @@ create_dialog_ireg (void)
   GdkPixbuf *dialog_ireg_icon_pixbuf;
   GtkWidget *dialog_vbox2;
   GtkWidget *ireg;
-  GtkWidget *dialog_action_area2;
 
   dialog_ireg = gtk_dialog_new_with_buttons (_("Choose a register"),
 											 NULL,
@@ -1628,15 +1592,10 @@ create_dialog_ireg (void)
   gtk_widget_show (ireg);
   gtk_box_pack_start (GTK_BOX (dialog_vbox2), ireg, FALSE, FALSE, 0);
 
-  dialog_action_area2 = gtk_dialog_get_action_area (GTK_DIALOG (dialog_ireg));
-  gtk_widget_show (dialog_action_area2);
-  gtk_button_box_set_layout (GTK_BUTTON_BOX (dialog_action_area2), GTK_BUTTONBOX_END);
-
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_ireg, "dialog_ireg");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_vbox2, "dialog_vbox2");
   GLADE_HOOKUP_OBJECT (dialog_ireg, ireg, "ireg");
-  GLADE_HOOKUP_OBJECT_NO_REF (dialog_ireg, dialog_action_area2, "dialog_action_area2");
 
   return dialog_ireg;
 }

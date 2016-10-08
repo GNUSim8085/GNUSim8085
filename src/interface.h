@@ -33,3 +33,15 @@ GtkWidget* create_window_start (void);
 GtkWidget* create_window_tutorial (void);
 GtkWidget* create_dialog_isymbol (void);
 GtkWidget* create_dialog_ireg (void);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define HBOX(spacing) \
+gtk_box_new (GTK_ORIENTATION_HORIZONTAL, spacing)
+#define VBOX(spacing) \
+gtk_box_new (GTK_ORIENTATION_VERTICAL, spacing)
+#else
+#define HBOX(spacing) \
+gtk_hbox_new (FALSE, spacing)
+#define VBOX(spacing) \
+gtk_vbox_new (FALSE, spacing)
+#endif

@@ -156,7 +156,7 @@ create_window_main (void)
   GtkWidget *vbox_left;
   GtkWidget *hbox15;
   GtkWidget *frame_registers;
-  GtkWidget *table7;
+  GtkWidget *table_registers;
   GtkWidget *label107;
   GtkWidget *label108;
   GtkWidget *label109;
@@ -181,7 +181,7 @@ create_window_main (void)
   GtkWidget *label106;
   GtkWidget *label96;
   GtkWidget *frame_flags;
-  GtkWidget *table8;
+  GtkWidget *table_flags;
   GtkWidget *label129;
   GtkWidget *label130;
   GtkWidget *label131;
@@ -257,7 +257,6 @@ create_window_main (void)
   GtkWidget *main_memory_frame;
   GtkWidget *label177;
   GtkWidget *label178;
-  GtkWidget *alignment12;
   GtkWidget *main_memory_scroll;
   GtkWidget *vbox19;
   GtkWidget *hbox48;
@@ -267,7 +266,6 @@ create_window_main (void)
   GtkWidget *main_io_frame;
   GtkWidget *label180;
   GtkWidget *label181;
-  GtkWidget *alignment13;
   GtkWidget *main_io_scroll;
   GtkWidget *vbox20;
   GtkWidget *hbox49;
@@ -342,151 +340,151 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox15), frame_registers, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (frame_registers), 5);
 
-  table7 = gtk_table_new (8, 3, TRUE);
-  gtk_widget_show (table7);
-  gtk_container_add (GTK_CONTAINER (frame_registers), table7);
-  gtk_container_set_border_width (GTK_CONTAINER (table7), 5);
-  gtk_table_set_row_spacings (GTK_TABLE (table7), 10);
-  gtk_table_set_col_spacings (GTK_TABLE (table7), 6);
+  table_registers = gtk_table_new (8, 3, TRUE);
+  gtk_widget_show (table_registers);
+  gtk_container_add (GTK_CONTAINER (frame_registers), table_registers);
+  gtk_container_set_border_width (GTK_CONTAINER (table_registers), 5);
+  gtk_table_set_row_spacings (GTK_TABLE (table_registers), 10);
+  gtk_table_set_col_spacings (GTK_TABLE (table_registers), 6);
 
   label107 = gtk_label_new ("<i>BC</i>");
   gtk_widget_show (label107);
-  gtk_table_attach (GTK_TABLE (table7), label107, 0, 1, 1, 2,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label107, 0, 1, 1, 2,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label107), TRUE);
 
   label108 = gtk_label_new ("<i>DE</i>");
   gtk_widget_show (label108);
-  gtk_table_attach (GTK_TABLE (table7), label108, 0, 1, 2, 3,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label108, 0, 1, 2, 3,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label108), TRUE);
 
   label109 = gtk_label_new ("<i>HL</i>");
   gtk_widget_show (label109);
-  gtk_table_attach (GTK_TABLE (table7), label109, 0, 1, 3, 4,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label109, 0, 1, 3, 4,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label109), TRUE);
 
   label110 = gtk_label_new ("<i>PSW</i>");
   gtk_widget_show (label110);
-  gtk_table_attach (GTK_TABLE (table7), label110, 0, 1, 4, 5,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label110, 0, 1, 4, 5,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label110), TRUE);
 
   label111 = gtk_label_new ("<i>PC</i>");
   gtk_widget_show (label111);
-  gtk_table_attach (GTK_TABLE (table7), label111, 0, 1, 5, 6,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label111, 0, 1, 5, 6,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label111), TRUE);
 
   label112 = gtk_label_new ("<i>SP</i>");
   gtk_widget_show (label112);
-  gtk_table_attach (GTK_TABLE (table7), label112, 0, 1, 6, 7,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label112, 0, 1, 6, 7,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label112), TRUE);
 
   label113 = gtk_label_new ("<i>Int-Reg</i>");
   gtk_widget_show (label113);
-  gtk_table_attach (GTK_TABLE (table7), label113, 0, 1, 7, 8,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label113, 0, 1, 7, 8,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label113), TRUE);
 
   main_reg_a = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_a);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_a, 1, 3, 0, 1,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_a, 1, 3, 0, 1,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_b = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_b);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_b, 1, 2, 1, 2,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_b, 1, 2, 1, 2,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_c = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_c);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_c, 2, 3, 1, 2,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_c, 2, 3, 1, 2,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_d = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_d);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_d, 1, 2, 2, 3,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_d, 1, 2, 2, 3,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_e = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_e);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_e, 2, 3, 2, 3,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_e, 2, 3, 2, 3,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_h = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_h);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_h, 1, 2, 3, 4,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_h, 1, 2, 3, 4,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_l = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_l);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_l, 2, 3, 3, 4,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_l, 2, 3, 3, 4,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_pswh = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_pswh);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_pswh, 1, 2, 4, 5,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pswh, 1, 2, 4, 5,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_pswl = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_pswl);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_pswl, 2, 3, 4, 5,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pswl, 2, 3, 4, 5,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_pch = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_pch);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_pch, 1, 2, 5, 6,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pch, 1, 2, 5, 6,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_pcl = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_pcl);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_pcl, 2, 3, 5, 6,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pcl, 2, 3, 5, 6,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_sph = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_sph);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_sph, 1, 2, 6, 7,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_sph, 1, 2, 6, 7,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_spl = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_spl);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_spl, 2, 3, 6, 7,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_spl, 2, 3, 6, 7,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_reg_int_reg = gtk_label_new (_("00"));
   gtk_widget_show (main_reg_int_reg);
-  gtk_table_attach (GTK_TABLE (table7), main_reg_int_reg, 1, 3, 7, 8,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), main_reg_int_reg, 1, 3, 7, 8,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   label106 = gtk_label_new ("<i>A</i>");
   gtk_widget_show (label106);
-  gtk_table_attach (GTK_TABLE (table7), label106, 0, 1, 0, 1,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_registers), label106, 0, 1, 0, 1,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label106), TRUE);
 
   label96 = gtk_label_new (g_strconcat("<b>", _("Registers"), "</b>", NULL));
@@ -500,77 +498,77 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox15), frame_flags, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (frame_flags), 5);
 
-  table8 = gtk_table_new (5, 2, TRUE);
-  gtk_widget_show (table8);
-  gtk_container_add (GTK_CONTAINER (frame_flags), table8);
-  gtk_container_set_border_width (GTK_CONTAINER (table8), 5);
-  gtk_table_set_row_spacings (GTK_TABLE (table8), 10);
-  gtk_table_set_col_spacings (GTK_TABLE (table8), 5);
+  table_flags = gtk_table_new (5, 2, TRUE);
+  gtk_widget_show (table_flags);
+  gtk_container_add (GTK_CONTAINER (frame_flags), table_flags);
+  gtk_container_set_border_width (GTK_CONTAINER (table_flags), 5);
+  gtk_table_set_row_spacings (GTK_TABLE (table_flags), 10);
+  gtk_table_set_col_spacings (GTK_TABLE (table_flags), 5);
 
   label129 = gtk_label_new ("<i>S</i>");
   gtk_widget_show (label129);
-  gtk_table_attach (GTK_TABLE (table8), label129, 0, 1, 0, 1,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), label129, 0, 1, 0, 1,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label129), TRUE);
 
   label130 = gtk_label_new ("<i>Z</i>");
   gtk_widget_show (label130);
-  gtk_table_attach (GTK_TABLE (table8), label130, 0, 1, 1, 2,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), label130, 0, 1, 1, 2,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label130), TRUE);
 
   label131 = gtk_label_new ("<i>AC</i>");
   gtk_widget_show (label131);
-  gtk_table_attach (GTK_TABLE (table8), label131, 0, 1, 2, 3,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), label131, 0, 1, 2, 3,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label131), TRUE);
 
   label132 = gtk_label_new ("<i>P</i>");
   gtk_widget_show (label132);
-  gtk_table_attach (GTK_TABLE (table8), label132, 0, 1, 3, 4,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), label132, 0, 1, 3, 4,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label132), TRUE);
 
   label133 = gtk_label_new ("<i>C</i>");
   gtk_widget_show (label133);
-  gtk_table_attach (GTK_TABLE (table8), label133, 0, 1, 4, 5,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), label133, 0, 1, 4, 5,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label133), TRUE);
 
   main_flag_s = gtk_label_new (_("0"));
   gtk_widget_show (main_flag_s);
-  gtk_table_attach (GTK_TABLE (table8), main_flag_s, 1, 2, 0, 1,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), main_flag_s, 1, 2, 0, 1,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_flag_z = gtk_label_new (_("0"));
   gtk_widget_show (main_flag_z);
-  gtk_table_attach (GTK_TABLE (table8), main_flag_z, 1, 2, 1, 2,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), main_flag_z, 1, 2, 1, 2,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_flag_ac = gtk_label_new (_("0"));
   gtk_widget_show (main_flag_ac);
-  gtk_table_attach (GTK_TABLE (table8), main_flag_ac, 1, 2, 2, 3,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), main_flag_ac, 1, 2, 2, 3,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_flag_p = gtk_label_new (_("0"));
   gtk_widget_show (main_flag_p);
-  gtk_table_attach (GTK_TABLE (table8), main_flag_p, 1, 2, 3, 4,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), main_flag_p, 1, 2, 3, 4,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   main_flag_c = gtk_label_new (_("0"));
   gtk_widget_show (main_flag_c);
-  gtk_table_attach (GTK_TABLE (table8), main_flag_c, 1, 2, 4, 5,
-                    (GtkAttachOptions) (GTK_FILL),
-                    (GtkAttachOptions) (0), 0, 0);
+  gtk_table_attach (GTK_TABLE (table_flags), main_flag_c, 1, 2, 4, 5,
+                    GTK_FILL,
+                    GTK_EXPAND, 0, 0);
 
   label163 = gtk_label_new (g_strconcat("<b>", _("Flag"), "</b>", NULL));
   gtk_widget_show (label163);
@@ -887,13 +885,9 @@ create_window_main (void)
   gtk_widget_show (label177);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 3), label177);
   
-  alignment12 = gtk_alignment_new (0.50, 0.50, 1.00, 1.00);
-  gtk_widget_show (alignment12);
-  gtk_container_add (GTK_CONTAINER (main_memory_frame), alignment12);
-  
   vbox19 = VBOX (2);
   gtk_widget_show (vbox19);
-  gtk_container_add (GTK_CONTAINER (alignment12), vbox19);
+  gtk_container_add (GTK_CONTAINER (main_memory_frame), vbox19);
   
   hbox48 = HBOX (3);
   gtk_widget_show (hbox48);
@@ -913,7 +907,7 @@ create_window_main (void)
   
   main_memory_scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_widget_show (main_memory_scroll);
-  gtk_container_add (GTK_CONTAINER (vbox19), main_memory_scroll);
+  gtk_box_pack_start (GTK_BOX (vbox19), main_memory_scroll, TRUE, TRUE, 0);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_memory_scroll), GTK_SHADOW_OUT);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_memory_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
@@ -931,13 +925,9 @@ create_window_main (void)
   gtk_widget_show (label181);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 4), label181);
   
-  alignment13 = gtk_alignment_new (0.50, 0.50, 1.00, 1.00);
-  gtk_widget_show (alignment13);
-  gtk_container_add (GTK_CONTAINER (main_io_frame), alignment13);
-  
   vbox20 = VBOX (2);
   gtk_widget_show (vbox20);
-  gtk_container_add (GTK_CONTAINER (alignment13), vbox20);
+  gtk_container_add (GTK_CONTAINER (main_io_frame), vbox20);
   
   hbox49 = HBOX (3);
   gtk_widget_show (hbox49);
@@ -957,7 +947,7 @@ create_window_main (void)
   
   main_io_scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_widget_show (main_io_scroll);
-  gtk_container_add (GTK_CONTAINER (vbox20), main_io_scroll);
+  gtk_box_pack_start (GTK_BOX (vbox20), main_io_scroll, TRUE, TRUE, 0);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_io_scroll), GTK_SHADOW_OUT);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_io_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
@@ -1020,7 +1010,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, vbox_left, "vbox_left");
   GLADE_HOOKUP_OBJECT (window_main, hbox15, "hbox15");
   GLADE_HOOKUP_OBJECT (window_main, frame_registers, "frame_registers");
-  GLADE_HOOKUP_OBJECT (window_main, table7, "table7");
+  GLADE_HOOKUP_OBJECT (window_main, table_registers, "table_registers");
   GLADE_HOOKUP_OBJECT (window_main, label107, "label107");
   GLADE_HOOKUP_OBJECT (window_main, label108, "label108");
   GLADE_HOOKUP_OBJECT (window_main, label109, "label109");
@@ -1045,7 +1035,7 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label106, "label106");
   GLADE_HOOKUP_OBJECT (window_main, label96, "label96");
   GLADE_HOOKUP_OBJECT (window_main, frame_flags, "frame_flags");
-  GLADE_HOOKUP_OBJECT (window_main, table8, "table8");
+  GLADE_HOOKUP_OBJECT (window_main, table_flags, "table_flags");
   GLADE_HOOKUP_OBJECT (window_main, label129, "label129");
   GLADE_HOOKUP_OBJECT (window_main, label130, "label130");
   GLADE_HOOKUP_OBJECT (window_main, label131, "label131");
@@ -1116,7 +1106,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, image371, "image371");
   GLADE_HOOKUP_OBJECT (window_main, label168, "label168");
   GLADE_HOOKUP_OBJECT (window_main, main_memory_frame, "main_memory_frame");
-  GLADE_HOOKUP_OBJECT (window_main, alignment12, "alignment12");
   GLADE_HOOKUP_OBJECT (window_main, vbox19, "vbox19");
   GLADE_HOOKUP_OBJECT (window_main, hbox48, "hbox48");
   GLADE_HOOKUP_OBJECT (window_main, label179, "label179");
@@ -1126,7 +1115,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label178, "label178");
   GLADE_HOOKUP_OBJECT (window_main, label177, "label177");
   GLADE_HOOKUP_OBJECT (window_main, main_io_frame, "main_io_frame");
-  GLADE_HOOKUP_OBJECT (window_main, alignment13, "alignment13");
   GLADE_HOOKUP_OBJECT (window_main, vbox20, "vbox20");
   GLADE_HOOKUP_OBJECT (window_main, hbox49, "hbox49");
   GLADE_HOOKUP_OBJECT (window_main, label182, "label182");

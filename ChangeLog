@@ -1,7 +1,7 @@
 2016-10-08  Onkar Shinde  <onkarshinde@gmail.com>
 
-	* src/interface.[c,h]: Use correct box widgets depending on GTK version.
-	* src/callbacks.c: Use correct font dialog depending on GTK version.
+	* src/interface.[c,h], src/callbacks.c: Used correct widgets depending
+	on GTK version. Code clean up.
 
 2016-10-02  Onkar Shinde  <onkarshinde@gmail.com>
 

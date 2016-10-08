@@ -135,13 +135,22 @@ void on_font_select_activate (GtkAction * menuitem, gpointer user_data)
   const gchar *font_name = gui_editor_get_font (app->editor);
   gint action = 0;
   g_assert (app->editor);
+#if GTK_CHECK_VERSION (3, 2, 0)
+  font_selection_dialog = gtk_font_chooser_dialog_new (_("Select font"), NULL);
+  gtk_font_chooser_set_font (GTK_FONT_CHOOSER (font_selection_dialog), font_name);
+#else
   font_selection_dialog = gtk_font_selection_dialog_new (_("Select font"));
   gtk_font_selection_dialog_set_font_name (GTK_FONT_SELECTION_DIALOG (font_selection_dialog), font_name);
+#endif
   action = gtk_dialog_run (GTK_DIALOG (font_selection_dialog));
   switch (action) 
   {
     case GTK_RESPONSE_OK:
+#if GTK_CHECK_VERSION (3, 2, 0)
+      font_name = gtk_font_chooser_get_font (GTK_FONT_CHOOSER (font_selection_dialog));
+#else
       font_name = gtk_font_selection_dialog_get_font_name (GTK_FONT_SELECTION_DIALOG (font_selection_dialog));
+#endif
       if (font_name)
       {
         gui_editor_set_font (app->editor, font_name);

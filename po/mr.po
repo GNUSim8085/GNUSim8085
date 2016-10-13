@@ -8,17 +8,20 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.3.8\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-09-29 01:26+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-10-13 21:00+0000\n"
+"Last-Translator: Onkar <onkarshinde@gmail.com>\n"
+"Language-Team: Marathi "
+"<https://hosted.weblate.org/projects/gnusim8085/translations/mr/>\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 #: src/callbacks.c:138 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "फॉंट निवडा"
 
 #: src/callbacks.c:248
 msgid "Program has errors. Check the Message pane."
@@ -88,11 +91,11 @@ msgstr ""
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr ""
+msgstr "फाइल उघडा"
 
 #: src/interface.c:50
 msgid "Save file"
-msgstr ""
+msgstr "फाइल साठवा"
 
 #: src/interface.c:51
 msgid "Save file as"
@@ -100,7 +103,7 @@ msgstr ""
 
 #: src/interface.c:52
 msgid "Print program"
-msgstr ""
+msgstr "प्रोग्राम प्रिंट करा"
 
 #: src/interface.c:55
 msgid "_Registers"
@@ -232,7 +235,7 @@ msgstr ""
 #: src/interface.c:465 src/interface.c:471 src/interface.c:477
 #: src/interface.c:483 src/interface.c:489
 msgid "00"
-msgstr ""
+msgstr "००"
 
 #: src/interface.c:506
 msgid "Registers"
@@ -242,7 +245,7 @@ msgstr ""
 #: src/interface.c:577 src/interface.c:583 src/interface.c:622
 #: src/interface.c:649 src/interface.c:705 src/interface.c:757
 msgid "0"
-msgstr ""
+msgstr "०"
 
 #: src/interface.c:593
 msgid "Flag"
@@ -595,7 +598,7 @@ msgstr ""
 #: src/file-op.c:63
 #, c-format
 msgid "Failed to open <%s>"
-msgstr ""
+msgstr "<%s> उघडण्यात अपयश"
 
 #: src/file-op.c:142
 msgid "File already exists; overwrite it?"
@@ -604,7 +607,7 @@ msgstr ""
 #: src/file-op.c:157
 #, c-format
 msgid "Failed to save <%s>"
-msgstr ""
+msgstr "<%s> साठवण्यात अपयश"
 
 #: src/file-op.c:328
 msgid "Failed to save listing file"

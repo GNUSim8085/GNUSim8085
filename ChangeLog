@@ -1,6 +1,7 @@
 2016-10-14  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* configure.ac, src/callbacks.c: Launch HTML help from menu.
+	* doc/help/gnusim8085.xml: Added correct links for license text.
 
 2016-10-08  Onkar Shinde  <onkarshinde@gmail.com>
 

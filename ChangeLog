@@ -1,3 +1,7 @@
+2016-10-14  Onkar Shinde  <onkarshinde@gmail.com>
+
+	* configure.ac, src/callbacks.c: Launch HTML help from menu.
+
 2016-10-08  Onkar Shinde  <onkarshinde@gmail.com>
 
 	* src/interface.[c,h], src/callbacks.c: Used correct widgets depending

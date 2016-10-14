@@ -355,8 +355,10 @@ on_stop_execution1_activate (GtkMenuItem * menuitem, gpointer user_data)
 void
 on_help_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
-  //TODO: gnome-help
-  gtk_widget_show (create_window_start ());
+  // Show the HTML help.
+  gchar * html_help_uri = g_strconcat ("file://", PACKAGE_HELP_DIR, "/", PACKAGE, ".htm", NULL);
+  gtk_show_uri (gdk_screen_get_default(), html_help_uri, GDK_CURRENT_TIME, NULL);
+  g_free (html_help_uri);
 }
 
 

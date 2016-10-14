@@ -1150,10 +1150,10 @@ create_dialog_about (void)
     "Sridhar Ratnakumar (srid@srid.ca)",
     NULL
   };
-  /* TRANSLATORS: Replace this string with your names, one name per line. */
   gchar *name = "GNUSim8085";
   gchar *copyright = "Copyright (C) 2003 Sridhar Ratnakumar";
   gchar *comments = "8085 Microprocessor Simulator";
+  // TRANSLATORS: Replace this string with your names, one name per line.
   gchar *translators = _("translator_credits");
   GdkPixbuf *dialog_about_logo_pixbuf;
   GdkPixbuf *dialog_about_icon_pixbuf;

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
-"POT-Creation-Date: 2016-09-29 01:26+0530\n"
+"POT-Creation-Date: 2016-10-15 09:40+0530\n"
 "PO-Revision-Date: 2011-03-30 07:40+0000\n"
 "Last-Translator: aniceberg <bharath.s.jois@gmail.com>\n"
 "Language-Team: Kannada <kn@li.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-05-14 03:00+0000\n"
 "X-Generator: Launchpad (build 13037)\n"
 
-#: src/callbacks.c:138 src/interface.c:53
+#: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
 msgid "Select font"
 msgstr "ಲಿಪಿಯನ್ನು ಆರಿಸಿರಿ"
 
-#: src/callbacks.c:248
+#: src/callbacks.c:257
 msgid "Program has errors. Check the Message pane."
 msgstr "ಕ್ರಮದಲ್ಲಿ ತಪ್ಪುಗಳುಂಟು. ಬಲಭಾಗದಲ್ಲಿರುವ ವಿವರ ಪಟ್ಟಿಯನ್ನು ನೋಡಿ"
 
-#: src/callbacks.c:269
+#: src/callbacks.c:278
 msgid "Error executing program"
 msgstr "ಕ್ರಮವನ್ನು ನಡೆಸುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
 
-#: src/callbacks.c:289
+#: src/callbacks.c:298
 msgid "Error in step in"
 msgstr "ಕ್ರಮದ ಒಳಗೆ ನುಗ್ಗುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
 
-#: src/callbacks.c:304
+#: src/callbacks.c:313
 msgid "Error in step over"
 msgstr "ಕ್ರಮವನ್ನು ನಿರ್ವಹಿಸುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
 
-#: src/callbacks.c:319
+#: src/callbacks.c:328
 msgid "Error in step out"
 msgstr "ಕ್ರಮದ ಹೊರಗೆ ಹೋಗುವುದರಲ್ಲಿ ಪ್ರಮಾದವುಂಟು"
 
-#: src/callbacks.c:409
+#: src/callbacks.c:420
 msgid "Enter a valid number within range"
 msgstr "ಮಿತಿಯಲ್ಲಿ ಬರುವ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ"
 
-#: src/callbacks.c:619 src/callbacks.c:637
+#: src/callbacks.c:630 src/callbacks.c:648
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
 msgstr "ಸಪ್ರಮಾಣವಾದ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ (0-65535 or 0h-FFFFh)"
 
-#: src/callbacks.c:658 src/callbacks.c:676
+#: src/callbacks.c:669 src/callbacks.c:687
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
 msgstr "ಸಪ್ರಮಾಣವಾದ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ (0-255 / 0h-00FFh)"
 
-#: src/callbacks.c:700
+#: src/callbacks.c:711
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
@@ -224,192 +224,179 @@ msgstr "ಸಂಯೋಜನೆಯ ಬಗ್ಗೆ ಶಿಕ್ಷಣ(_T)"
 msgid "Show/Hide side pane"
 msgstr "ಪಕ್ಕದ ಪುಟಿಪನ್ನು ತೋರಿಸು / ಮರೆಗೊಳಿಸು"
 
-#: src/interface.c:288
+#: src/interface.c:281
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr "GNUSim8085 - ೮೦೮೫ ಕೃತಕ ಯಂತ್ರ"
 
-#: src/interface.c:411 src/interface.c:417 src/interface.c:423
-#: src/interface.c:429 src/interface.c:435 src/interface.c:441
-#: src/interface.c:447 src/interface.c:453 src/interface.c:459
-#: src/interface.c:465 src/interface.c:471 src/interface.c:477
-#: src/interface.c:483 src/interface.c:489
-msgid "00"
-msgstr "೦೦"
-
-#: src/interface.c:506
+#: src/interface.c:490
 msgid "Registers"
 msgstr "ದಾಖಲೆಗಳು"
 
-#: src/interface.c:559 src/interface.c:565 src/interface.c:571
-#: src/interface.c:577 src/interface.c:583 src/interface.c:622
-#: src/interface.c:649 src/interface.c:705 src/interface.c:757
-msgid "0"
-msgstr "0"
-
-#: src/interface.c:593
+#: src/interface.c:573
 msgid "Flag"
 msgstr "ಬಾವುಟ"
 
-#: src/interface.c:613 src/gui-list-data.c:79 src/gui-list-stack.c:84
+#: src/interface.c:593 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
 msgstr "ದಶಾಂಶ"
 
-#: src/interface.c:621
+#: src/interface.c:602
 msgid "Enter a decimal number"
 msgstr "ದಶಾಂಶ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ"
 
-#: src/interface.c:624
+#: src/interface.c:605
 msgid "To Hex"
 msgstr "ಶೂಡಶಾಂಶಕ್ಕೆ"
 
-#: src/interface.c:627
+#: src/interface.c:608
 msgid "Convert this number to hexadecimal"
 msgstr "ಶೂಡಶಾಂಶಕ್ಕೆ ಬದಲಿಸು"
 
-#: src/interface.c:640
+#: src/interface.c:621
 msgid "Hex"
 msgstr "ಶೂಡಶಾಂಶ"
 
-#: src/interface.c:648
+#: src/interface.c:630
 msgid "Enter a hexadecimal number"
 msgstr "ಶೂಡಶಾಂಶ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿರಿ"
 
-#: src/interface.c:651
+#: src/interface.c:633
 msgid "To Dec"
 msgstr "ದಶಾಂಶಕ್ಕೆ"
 
-#: src/interface.c:654
+#: src/interface.c:636
 msgid "Convert this number to decimal"
 msgstr "ದಶಾಂಶಕ್ಕೆ ಪರಿವರ್ತಿಸು"
 
-#: src/interface.c:670
+#: src/interface.c:652
 msgid "Decimal - Hex Convertion"
 msgstr "ದಶಾಂಶದಿಂದ ಷೋಡಶಾಂಶಕ್ಕೆ ಪರಿವರ್ತನೆ"
 
-#: src/interface.c:697
+#: src/interface.c:676
 msgid "Change the port address to view here"
 msgstr "ಪೋರ್ಟನ್ನು ನೋಡಲುಪೋರ್ಟಿನ ವಿಳಾಸವನ್ನು ಬದಲಿಸಿ"
 
-#: src/interface.c:704
+#: src/interface.c:683
 msgid "Enter new port value and click Update"
 msgstr "ಪೋರ್ಟ್‌ಗೆ ಹೊಸ ಮೌಲ್ಯ ಭರ್ತಿ ಮಾಡಿ ನವೀನಗೊಳಿಸಿ"
 
-#: src/interface.c:707
+#: src/interface.c:686
 msgid "Update Port Value"
 msgstr "ಪೋರ್ಟಿನ ಮೌಲ್ಯವನ್ನು ನವೀನಗೊಳಿಸಿ"
 
-#: src/interface.c:710
+#: src/interface.c:689
 msgid "Update the port value"
 msgstr "ಪೋರ್ಟಿನ ಮೌಲ್ಯವನ್ನು ನವೀನಗೊಳಿಸಿ"
 
-#: src/interface.c:726 src/interface.c:949 src/interface.c:954
+#: src/interface.c:705 src/interface.c:919 src/interface.c:924
 msgid "I/O Ports"
 msgstr "ಒಳ ಹೊರ ಕಿಂಡಿಗಳು"
 
-#: src/interface.c:749
+#: src/interface.c:729
 msgid "Change the memory location to view here"
 msgstr "ಸ್ಮೃತಿ ವಿಳಾಸವನ್ನು ಬದಲಾಯಿಸಿ"
 
-#: src/interface.c:756
+#: src/interface.c:736
 msgid "Edit new value and click Update"
 msgstr "ಹೊಸ ಮೌಲ್ಯವನ್ನು ಭರ್ತಿ ಮಾಡಿ ನವೀನಗೊಳಿಸು"
 
-#: src/interface.c:759
+#: src/interface.c:739
 msgid "Update Memory"
 msgstr "ಸ್ಮೃತಿಯನ್ನು ನವೀನಗೊಳಿಸು"
 
-#: src/interface.c:762
+#: src/interface.c:742
 msgid "Update the current memory location"
 msgstr "ಪ್ರಸ್ತುತ ಸ್ಮೃತಿ ವಿಳಾಸವನ್ನು ನವೀನಗೊಳಿಸು"
 
-#: src/interface.c:778 src/interface.c:905 src/interface.c:910
+#: src/interface.c:758 src/interface.c:879 src/interface.c:884
 msgid "Memory"
 msgstr "ಸ್ಮೃತಿ"
 
-#: src/interface.c:803
+#: src/interface.c:777
 msgid "Load me at"
 msgstr "ನನ್ನನ್ನು ಈ ವಿಳಾಸದಲ್ಲಿ ಹಾಕಿ"
 
-#: src/interface.c:811
+#: src/interface.c:785
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr "ಕ್ರಿಯೆಯ ವಿಳಾಸವನ್ನು ಭರ್ತಿ ಮಾಡಿ. ಷೋಡಶಾಂಶ ಸಂಖ್ಯೆಯಂದರೆ 'ಏಚ್' ಇಂದ ಮುಕ್ತಗೊಳಿಸಿ."
 
-#: src/interface.c:829
+#: src/interface.c:803
 msgid "Variables"
 msgstr "ಮಾರ್ಪಡಿಸಬಹುದಾದ"
 
-#: src/interface.c:842
+#: src/interface.c:816
 msgid "Data"
 msgstr "ಪ್ರಮಾಣ"
 
-#: src/interface.c:858
+#: src/interface.c:832
 msgid "Stack Trace"
 msgstr "ಬಣಿವೆಯ ಸುಳಿವು"
 
-#: src/interface.c:871
+#: src/interface.c:845
 msgid "Stack"
 msgstr "ಬಣಿವೆ"
 
-#: src/interface.c:895
+#: src/interface.c:869
 msgid "KeyPad"
 msgstr "ಹೂಡುವಳಿ ಯಂತ್ರ"
 
-#: src/interface.c:926 src/interface.c:970
+#: src/interface.c:896 src/interface.c:936
 msgid "Start"
 msgstr "ಪ್ರಾರಂಭಿಸು"
 
-#: src/interface.c:1198
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: src/interface.c:1157
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Vinay https://launchpad.net/~vinaykumar-mr\n"
 "  aniceberg https://launchpad.net/~aniceberg"
 
-#: src/interface.c:1244
+#: src/interface.c:1203
 msgid "Assembler Listing"
 msgstr "ಸಂಯೋಜಕ ಪಟ್ಟಿ"
 
-#: src/interface.c:1268
+#: src/interface.c:1227
 msgid "Save to file"
 msgstr "ಉಳಿಸು"
 
-#: src/interface.c:1305
+#: src/interface.c:1264
 msgid "Assembler Tutorial"
 msgstr "ಸಂಯೋಜನೆಯ ಬಗ್ಗೆ ಶಿಕ್ಷಣ"
 
-#: src/interface.c:1349
+#: src/interface.c:1308
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim೮೦೮೫ ಸೂಚನೆಯೊಂದಿಗೆ ಪ್ರಾರಂಭಗೊಳಿಸು"
 
-#: src/interface.c:1380
+#: src/interface.c:1339
 msgid "1. How to use this simulator?"
 msgstr "೧. ಕೃತಕ ಯಂತ್ರವನ್ನು ಹೇಗೆ ಉಪಯೋಗಿಸುವುದು"
 
-#: src/interface.c:1388
+#: src/interface.c:1347
 msgid "_Tutorial"
 msgstr "ಶಿಕ್ಷಣೆ(_T)"
 
-#: src/interface.c:1393
+#: src/interface.c:1352
 msgid "A short tutorial on writing assembly code!"
 msgstr "ಮೂಲವನ್ನು ಬರೆಯಲು ಒಂದು ಸಣ್ಣ ತರಬೇತಿ!"
 
-#: src/interface.c:1400
+#: src/interface.c:1359
 msgid "2. Open an existing assembly program."
 msgstr "ಮುಂಚಿನಿಂದಲೂ ಇರುವ ಮೂಲವನ್ನು ತೆರೆ"
 
-#: src/interface.c:1408
+#: src/interface.c:1367
 msgid "_Open program"
 msgstr "ಪ್ರಕಾರವನ್ನು ತೆರೆ"
 
-#: src/interface.c:1413
+#: src/interface.c:1372
 msgid "Open an already saved program"
 msgstr "ಮುಂಚೆ ಉಳಿಸಿದ ಪ್ರಕಾರವನ್ನು ತೆರೆ"
 
-#: src/interface.c:1415
+#: src/interface.c:1374
 msgid "What do you want to do now?"
 msgstr "ಈಗ ಏನು ಮಾಡಬೇಕೆಂದು ಅಭಿಪ್ರಾಯ?"
 
-#: src/interface.c:1425
+#: src/interface.c:1384
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -417,31 +404,31 @@ msgstr ""
 "\"doc\" ಕೋಶಕದಲ್ಲಿರುವ ವಿವರಗಳನ್ನು ಓದಲು \n"
 "ಮರೆಯದಿರಿ"
 
-#: src/interface.c:1483
+#: src/interface.c:1441
 msgid "Choose a symbol"
 msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ಆರಿಸಿ"
 
-#: src/interface.c:1509
+#: src/interface.c:1467
 msgid "Enter a symbol or choose one from the lists"
 msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ಆರಿಸಿ ಅಥವಾ ನೀವೇ ಸ್ವತಹ ಭರ್ತಿ ಮಾಡಿ"
 
-#: src/interface.c:1519
+#: src/interface.c:1477
 msgid "Enter Symbol"
 msgstr "ಒಂದು ಚಿನ್ಹೆಯನ್ನು ನೀವೇ ಸ್ವತಹ ಭರ್ತಿ ಮಾಡಿ"
 
-#: src/interface.c:1533
+#: src/interface.c:1492
 msgid "Variables List"
 msgstr "ಮಾರ್ಪಡಿಸಬಹುದಾದ ವಸ್ತುಗಳ ಪಟ್ಟಿ"
 
-#: src/interface.c:1547
+#: src/interface.c:1507
 msgid "Functions List"
 msgstr "ಕಾರ್ಯ ಪಟ್ಟಿ"
 
-#: src/interface.c:1561
+#: src/interface.c:1522
 msgid "Macros List"
 msgstr "ಚಿನ್ಹೆ ಪಟ್ಟಿ"
 
-#: src/interface.c:1606
+#: src/interface.c:1561
 msgid "Choose a register"
 msgstr "ಒಂದು ಧಾಕಲೆಯನ್ನು ಆರಿಸಿರಿ"
 
@@ -645,6 +632,12 @@ msgid ""
 "logic of your program"
 msgstr ""
 "POPಆದೇಶವನ್ನು PUSHಗಿಂತಲು ಹೆಚ್ಚು ಉಪಯೋಗಿಸಲು ಪ್ರಯತ್ನ. ಒಮ್ಮೆ ನಿಮ್ಮ ಪ್ರಕಾರವನ್ನು ಪರಿಶೀಲಿಸಿ"
+
+#~ msgid "00"
+#~ msgstr "೦೦"
+
+#~ msgid "0"
+#~ msgstr "0"
 
 #~ msgid "8085 _Manual"
 #~ msgstr "೮೦೮೫ ಕ್ರಿಯ ಪುಸ್ತಕ(_M)"

@@ -24,6 +24,14 @@ A lot of examples can be found in the docs directory! Try them.
 Also don't forget to take a tutorial, when you will be asked during
 the program startup.
 
+Build dependencies (Mandatory)
+* GTK2 (>= 2.24) or GTK3 (>= 3.0.0) development package
+* GtkSourceView2 (>= 2.10) or GtkSourceView3 (>= 3.0) development package
+
+Build dependencies (Optional)
+* gettext (>= 0.18)
+* docbook-xsl
+
 To install from source, run the following commands
 
   $ ./configure

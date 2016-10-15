@@ -396,85 +396,85 @@ create_window_main (void)
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label113), TRUE);
 
-  main_reg_a = gtk_label_new (_("00"));
+  main_reg_a = gtk_label_new ("00");
   gtk_widget_show (main_reg_a);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_a, 1, 3, 0, 1,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_b = gtk_label_new (_("00"));
+  main_reg_b = gtk_label_new ("00");
   gtk_widget_show (main_reg_b);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_b, 1, 2, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_c = gtk_label_new (_("00"));
+  main_reg_c = gtk_label_new ("00");
   gtk_widget_show (main_reg_c);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_c, 2, 3, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_d = gtk_label_new (_("00"));
+  main_reg_d = gtk_label_new ("00");
   gtk_widget_show (main_reg_d);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_d, 1, 2, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_e = gtk_label_new (_("00"));
+  main_reg_e = gtk_label_new ("00");
   gtk_widget_show (main_reg_e);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_e, 2, 3, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_h = gtk_label_new (_("00"));
+  main_reg_h = gtk_label_new ("00");
   gtk_widget_show (main_reg_h);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_h, 1, 2, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_l = gtk_label_new (_("00"));
+  main_reg_l = gtk_label_new ("00");
   gtk_widget_show (main_reg_l);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_l, 2, 3, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_pswh = gtk_label_new (_("00"));
+  main_reg_pswh = gtk_label_new ("00");
   gtk_widget_show (main_reg_pswh);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_pswh, 1, 2, 4, 5,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_pswl = gtk_label_new (_("00"));
+  main_reg_pswl = gtk_label_new ("00");
   gtk_widget_show (main_reg_pswl);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_pswl, 2, 3, 4, 5,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_pch = gtk_label_new (_("00"));
+  main_reg_pch = gtk_label_new ("00");
   gtk_widget_show (main_reg_pch);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_pch, 1, 2, 5, 6,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_pcl = gtk_label_new (_("00"));
+  main_reg_pcl = gtk_label_new ("00");
   gtk_widget_show (main_reg_pcl);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_pcl, 2, 3, 5, 6,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_sph = gtk_label_new (_("00"));
+  main_reg_sph = gtk_label_new ("00");
   gtk_widget_show (main_reg_sph);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_sph, 1, 2, 6, 7,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_spl = gtk_label_new (_("00"));
+  main_reg_spl = gtk_label_new ("00");
   gtk_widget_show (main_reg_spl);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_spl, 2, 3, 6, 7,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_reg_int_reg = gtk_label_new (_("00"));
+  main_reg_int_reg = gtk_label_new ("00");
   gtk_widget_show (main_reg_int_reg);
   gtk_table_attach (GTK_TABLE (table_registers), main_reg_int_reg, 1, 3, 7, 8,
                     GTK_FILL,
@@ -540,31 +540,31 @@ create_window_main (void)
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label133), TRUE);
 
-  main_flag_s = gtk_label_new (_("0"));
+  main_flag_s = gtk_label_new ("0");
   gtk_widget_show (main_flag_s);
   gtk_table_attach (GTK_TABLE (table_flags), main_flag_s, 1, 2, 0, 1,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_flag_z = gtk_label_new (_("0"));
+  main_flag_z = gtk_label_new ("0");
   gtk_widget_show (main_flag_z);
   gtk_table_attach (GTK_TABLE (table_flags), main_flag_z, 1, 2, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_flag_ac = gtk_label_new (_("0"));
+  main_flag_ac = gtk_label_new ("0");
   gtk_widget_show (main_flag_ac);
   gtk_table_attach (GTK_TABLE (table_flags), main_flag_ac, 1, 2, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_flag_p = gtk_label_new (_("0"));
+  main_flag_p = gtk_label_new ("0");
   gtk_widget_show (main_flag_p);
   gtk_table_attach (GTK_TABLE (table_flags), main_flag_p, 1, 2, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
-  main_flag_c = gtk_label_new (_("0"));
+  main_flag_c = gtk_label_new ("0");
   gtk_widget_show (main_flag_c);
   gtk_table_attach (GTK_TABLE (table_flags), main_flag_c, 1, 2, 4, 5,
                     GTK_FILL,
@@ -600,7 +600,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (vbox13), main_entry_dec, FALSE, FALSE, 0);
   gtk_entry_set_width_chars (GTK_ENTRY (main_entry_dec), 12);
   gtk_widget_set_tooltip_text (main_entry_dec, _("Enter a decimal number"));
-  gtk_entry_set_text (GTK_ENTRY (main_entry_dec), _("0"));
+  gtk_entry_set_text (GTK_ENTRY (main_entry_dec), "0");
 
   main_but_to_hex = gtk_button_new_with_label (_("To Hex"));
   gtk_widget_show (main_but_to_hex);
@@ -628,7 +628,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (vbox14), main_entry_hex, FALSE, FALSE, 0);
   gtk_entry_set_width_chars (GTK_ENTRY (main_entry_hex), 12);
   gtk_widget_set_tooltip_text (main_entry_hex, _("Enter a hexadecimal number"));
-  gtk_entry_set_text (GTK_ENTRY (main_entry_hex), _("0"));
+  gtk_entry_set_text (GTK_ENTRY (main_entry_hex), "0");
 
   main_but_to_dec = gtk_button_new_with_label (_("To Dec"));
   gtk_widget_show (main_but_to_dec);
@@ -681,7 +681,7 @@ create_window_main (void)
   gtk_widget_show (main_io_entry);
   gtk_box_pack_start (GTK_BOX (hbox13), main_io_entry, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_io_entry, _("Enter new port value and click Update"));
-  gtk_entry_set_text (GTK_ENTRY (main_io_entry), _("0"));
+  gtk_entry_set_text (GTK_ENTRY (main_io_entry), "0");
 
   main_io_update = gtk_button_new_with_label (_("Update Port Value"));
   gtk_widget_show (main_io_update);
@@ -734,7 +734,7 @@ create_window_main (void)
   gtk_widget_show (main_mem_entry);
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_entry, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_mem_entry, _("Edit new value and click Update"));
-  gtk_entry_set_text (GTK_ENTRY (main_mem_entry), _("0"));
+  gtk_entry_set_text (GTK_ENTRY (main_mem_entry), "0");
 
   main_mem_update = gtk_button_new_with_label (_("Update Memory"));
   gtk_widget_show (main_mem_update);

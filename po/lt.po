@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
-"POT-Creation-Date: 2016-10-15 09:40+0530\n"
+"POT-Creation-Date: 2016-10-21 10:44+0530\n"
 "PO-Revision-Date: 2013-05-29 09:22+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -93,11 +93,11 @@ msgstr "Nauja rinkmena"
 msgid "Open a file"
 msgstr "Atverti rinkmeną"
 
-#: src/interface.c:50
+#: src/interface.c:50 src/file-op.c:224 src/file-op-gio.c:219
 msgid "Save file"
 msgstr "Išsaugoti rinkmeną"
 
-#: src/interface.c:51
+#: src/interface.c:51 src/file-op.c:254 src/file-op-gio.c:249
 msgid "Save file as"
 msgstr "Išsaugoti rinkmeną kaip"
 
@@ -227,181 +227,173 @@ msgstr "Asemblerio _žinynas"
 msgid "Show/Hide side pane"
 msgstr "Rodyti / Paslėpti šoninį skydelį"
 
-#: src/interface.c:281
+#: src/interface.c:270
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr "GNUSim8085 - 8085 mikroprocesoriaus imitatorius"
 
-#: src/interface.c:490
+#: src/interface.c:479
 msgid "Registers"
 msgstr "Registrai"
 
-#: src/interface.c:573
+#: src/interface.c:562
 msgid "Flag"
 msgstr "Požymis"
 
-#: src/interface.c:593 src/gui-list-data.c:79 src/gui-list-stack.c:84
+#: src/interface.c:582 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
 msgstr "Dešimtainis"
 
-#: src/interface.c:602
+#: src/interface.c:591
 msgid "Enter a decimal number"
 msgstr "Įveskite dešimtainį skaičių"
 
-#: src/interface.c:605
+#: src/interface.c:594
 msgid "To Hex"
 msgstr "Į Hex"
 
-#: src/interface.c:608
+#: src/interface.c:597
 msgid "Convert this number to hexadecimal"
 msgstr "Konvertuoti į šešioliktainį skaičių"
 
-#: src/interface.c:621
+#: src/interface.c:610
 msgid "Hex"
 msgstr "Šešioliktainis"
 
-#: src/interface.c:630
+#: src/interface.c:619
 msgid "Enter a hexadecimal number"
 msgstr "Įveskite šešioliktainį skaičių"
 
-#: src/interface.c:633
+#: src/interface.c:622
 msgid "To Dec"
 msgstr "Į Dec"
 
-#: src/interface.c:636
+#: src/interface.c:625
 msgid "Convert this number to decimal"
 msgstr "Konvertuoti į dešimtainį skaičių"
 
-#: src/interface.c:652
+#: src/interface.c:641
 msgid "Decimal - Hex Convertion"
 msgstr "Dex- Hex konvertavimas"
 
-#: src/interface.c:676
+#: src/interface.c:665
 msgid "Change the port address to view here"
 msgstr "Pakeisto prievado adresas"
 
-#: src/interface.c:683
+#: src/interface.c:672
 msgid "Enter new port value and click Update"
 msgstr "Įveskite naują prievado reikšmę ir paspauskite Atnaujinti"
 
-#: src/interface.c:686
+#: src/interface.c:675
 msgid "Update Port Value"
 msgstr "Atnaujinti prievado reikšmę"
 
-#: src/interface.c:689
+#: src/interface.c:678
 msgid "Update the port value"
 msgstr "Atnaujinti prievado reikšmę"
 
-#: src/interface.c:705 src/interface.c:919 src/interface.c:924
+#: src/interface.c:694 src/interface.c:873
 msgid "I/O Ports"
 msgstr "Įv. / Išv. prievadai"
 
-#: src/interface.c:729
+#: src/interface.c:718
 msgid "Change the memory location to view here"
 msgstr "Pakeistos atminties vieta"
 
-#: src/interface.c:736
+#: src/interface.c:725
 msgid "Edit new value and click Update"
 msgstr "Pakeiskite į naują reikšmę ir paspauskite Atnaujinti"
 
-#: src/interface.c:739
+#: src/interface.c:728
 msgid "Update Memory"
 msgstr "Atnaujinti atmintį"
 
-#: src/interface.c:742
+#: src/interface.c:731
 msgid "Update the current memory location"
 msgstr "Atnaujinti dabartinės atminties vietą"
 
-#: src/interface.c:758 src/interface.c:879 src/interface.c:884
+#: src/interface.c:747 src/interface.c:845
 msgid "Memory"
 msgstr "Atmintis"
 
-#: src/interface.c:777
+#: src/interface.c:766
 msgid "Load me at"
 msgstr "Nukelti mane į"
 
-#: src/interface.c:785
+#: src/interface.c:774
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr ""
 "Įveskite programos adresą. Pabaigoje parašykite \"h\", jeigu tai yra "
 "šešioliktainis adresas."
 
-#: src/interface.c:803
-msgid "Variables"
-msgstr "Kintamieji"
-
-#: src/interface.c:816
+#: src/interface.c:796
 msgid "Data"
 msgstr "Duomenys"
 
-#: src/interface.c:832
-msgid "Stack Trace"
-msgstr "Steko rodyklė"
-
-#: src/interface.c:845
+#: src/interface.c:816
 msgid "Stack"
 msgstr "Stekas"
 
-#: src/interface.c:869
+#: src/interface.c:836
 msgid "KeyPad"
 msgstr "Komandos"
 
-#: src/interface.c:896 src/interface.c:936
+#: src/interface.c:851 src/interface.c:879
 msgid "Start"
 msgstr "Pradžia"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: src/interface.c:1157
+#: src/interface.c:1089
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Mantas Kriaučiūnas https://launchpad.net/~mantas\n"
 "  Tadas Masiulionis https://launchpad.net/~tadzikaz"
 
-#: src/interface.c:1203
+#: src/interface.c:1135
 msgid "Assembler Listing"
 msgstr "Asemblerio programa"
 
-#: src/interface.c:1227
+#: src/interface.c:1159
 msgid "Save to file"
 msgstr "Išsaugoti į rinkmeną"
 
-#: src/interface.c:1264
+#: src/interface.c:1196
 msgid "Assembler Tutorial"
 msgstr "Asemblerio žinynas"
 
-#: src/interface.c:1308
+#: src/interface.c:1240
 msgid "GNUSim8085 start with dialog"
 msgstr "Įkelti  GNUSim8085 su dialogo langu"
 
-#: src/interface.c:1339
+#: src/interface.c:1271
 msgid "1. How to use this simulator?"
 msgstr "1. Kaip naudotis šiuo imitatoriumi?"
 
-#: src/interface.c:1347
+#: src/interface.c:1279
 msgid "_Tutorial"
 msgstr "_Žinynas"
 
-#: src/interface.c:1352
+#: src/interface.c:1284
 msgid "A short tutorial on writing assembly code!"
 msgstr "Trumpas žinynas, kaip rašyti asemblerio kodą!"
 
-#: src/interface.c:1359
+#: src/interface.c:1291
 msgid "2. Open an existing assembly program."
 msgstr "2. Atverti jau parašytą asemblerio programą."
 
-#: src/interface.c:1367
+#: src/interface.c:1299
 msgid "_Open program"
 msgstr "_Atverti programą"
 
-#: src/interface.c:1372
+#: src/interface.c:1304
 msgid "Open an already saved program"
 msgstr "Atverti išsaugotą programą"
 
-#: src/interface.c:1374
+#: src/interface.c:1306
 msgid "What do you want to do now?"
 msgstr "Ką norėtumėte daryti?"
 
-#: src/interface.c:1384
+#: src/interface.c:1316
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -409,31 +401,31 @@ msgstr ""
 "Nepamirškite skaityti dokumentacijos,\n"
 "kuri pateikta \"doc\" aplankale."
 
-#: src/interface.c:1441
+#: src/interface.c:1373
 msgid "Choose a symbol"
 msgstr "Pasirinkite simbolį"
 
-#: src/interface.c:1467
+#: src/interface.c:1399
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Įveskite simbolį arba pasirinkite vieną iš sąrašo"
 
-#: src/interface.c:1477
+#: src/interface.c:1409
 msgid "Enter Symbol"
 msgstr "Įveskite simbolį"
 
-#: src/interface.c:1492
+#: src/interface.c:1424
 msgid "Variables List"
 msgstr "Kintamųjų sąrašas"
 
-#: src/interface.c:1507
+#: src/interface.c:1439
 msgid "Functions List"
 msgstr "Funkcijų sąrašas"
 
-#: src/interface.c:1522
+#: src/interface.c:1454
 msgid "Macros List"
 msgstr "Makro komandų sąrašas"
 
-#: src/interface.c:1561
+#: src/interface.c:1493
 msgid "Choose a register"
 msgstr "Pasirinkite registrą"
 
@@ -604,7 +596,7 @@ msgstr ""
 ";Asemblerio sąrašas (nesurinktas)\n"
 "\n"
 
-#: src/file-op.c:63
+#: src/file-op.c:63 src/file-op-gio.c:65
 #, c-format
 msgid "Failed to open <%s>"
 msgstr "Nepavyko atverti <%s>"
@@ -613,12 +605,12 @@ msgstr "Nepavyko atverti <%s>"
 msgid "File already exists; overwrite it?"
 msgstr "Tokia rimkmena jau yra. Perrašyti?"
 
-#: src/file-op.c:157
+#: src/file-op.c:157 src/file-op-gio.c:152
 #, c-format
 msgid "Failed to save <%s>"
 msgstr "Nepavyko išssaugoti <%s>"
 
-#: src/file-op.c:328
+#: src/file-op.c:328 src/file-op-gio.c:334
 msgid "Failed to save listing file"
 msgstr "Nepavyko išsaugoti sąrašo rinkmenos"
 
@@ -641,6 +633,12 @@ msgid ""
 msgstr ""
 "Įvykdyta daugiau POP skaičių, negu PUSH. Sustabdykite vykdymą ir "
 "patikrinkite savo programos logiškumą."
+
+#~ msgid "Variables"
+#~ msgstr "Kintamieji"
+
+#~ msgid "Stack Trace"
+#~ msgstr "Steko rodyklė"
 
 #~ msgid "00"
 #~ msgstr "00"

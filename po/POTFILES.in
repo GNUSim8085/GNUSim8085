@@ -28,6 +28,7 @@ src/gui-list-message.c
 src/gui-list-data.c
 src/asm-listing.c
 src/file-op.c
+src/file-op-gio.c
 src/gui-list-stack.c
 src/asm-ds-limits.h
 src/asm-ds-symtable.h
@@ -40,6 +41,7 @@ src/asm-source.h
 src/asm-token.h
 src/bridge.h
 src/file-op.h
+src/file-op-gio.h
 src/gui-app.h
 src/gui-editor.h
 src/gui-list-data.h

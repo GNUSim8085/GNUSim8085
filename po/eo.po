@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
-"POT-Creation-Date: 2016-10-15 09:40+0530\n"
+"POT-Creation-Date: 2016-10-21 10:44+0530\n"
 "PO-Revision-Date: 2009-12-29 00:26+0000\n"
 "Last-Translator: Colin Dean <cad@cad.cx>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -94,11 +94,11 @@ msgstr ""
 msgid "Open a file"
 msgstr ""
 
-#: src/interface.c:50
+#: src/interface.c:50 src/file-op.c:224 src/file-op-gio.c:219
 msgid "Save file"
 msgstr ""
 
-#: src/interface.c:51
+#: src/interface.c:51 src/file-op.c:254 src/file-op-gio.c:249
 msgid "Save file as"
 msgstr ""
 
@@ -227,179 +227,171 @@ msgstr ""
 msgid "Show/Hide side pane"
 msgstr ""
 
-#: src/interface.c:281
+#: src/interface.c:270
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr "GNUSim8085 - 8085 mikroprocesorsimulilo"
 
-#: src/interface.c:490
+#: src/interface.c:479
 msgid "Registers"
 msgstr "Adresreĝistroj"
 
-#: src/interface.c:573
+#: src/interface.c:562
 msgid "Flag"
 msgstr "Flago"
 
-#: src/interface.c:593 src/gui-list-data.c:79 src/gui-list-stack.c:84
+#: src/interface.c:582 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
 msgstr "Dekuma"
 
-#: src/interface.c:602
+#: src/interface.c:591
 msgid "Enter a decimal number"
 msgstr "Tajpu dekuma numero"
 
-#: src/interface.c:605
+#: src/interface.c:594
 msgid "To Hex"
 msgstr "Al 16ume"
 
-#: src/interface.c:608
+#: src/interface.c:597
 msgid "Convert this number to hexadecimal"
 msgstr "Konveru ĉi tiu numero al deksesuma"
 
-#: src/interface.c:621
+#: src/interface.c:610
 msgid "Hex"
 msgstr "16ume"
 
-#: src/interface.c:630
+#: src/interface.c:619
 msgid "Enter a hexadecimal number"
 msgstr "Tajpu deksesuma numero"
 
-#: src/interface.c:633
+#: src/interface.c:622
 msgid "To Dec"
 msgstr "Al 10ume"
 
-#: src/interface.c:636
+#: src/interface.c:625
 msgid "Convert this number to decimal"
 msgstr "Konvertu ĉi tiu numero al dekuma"
 
-#: src/interface.c:652
+#: src/interface.c:641
 msgid "Decimal - Hex Convertion"
 msgstr "Dekuma - Deksesuma Konvertiĝo"
 
-#: src/interface.c:676
+#: src/interface.c:665
 msgid "Change the port address to view here"
 msgstr "Ŝanĝu la pordadreson vidu ĉi"
 
-#: src/interface.c:683
+#: src/interface.c:672
 msgid "Enter new port value and click Update"
 msgstr "Tajpu novan pordan valoron kaj klaku \"Ĝisdatigu\""
 
-#: src/interface.c:686
+#: src/interface.c:675
 msgid "Update Port Value"
 msgstr "Ĝisdatigu Pordan Valoron"
 
-#: src/interface.c:689
+#: src/interface.c:678
 msgid "Update the port value"
 msgstr "Ĝisdatigu la pordan valoron"
 
-#: src/interface.c:705 src/interface.c:919 src/interface.c:924
+#: src/interface.c:694 src/interface.c:873
 msgid "I/O Ports"
 msgstr "Eneliga Pordoj"
 
-#: src/interface.c:729
+#: src/interface.c:718
 msgid "Change the memory location to view here"
 msgstr "Ŝanĝu la memorlokon vidi ĉi"
 
-#: src/interface.c:736
+#: src/interface.c:725
 msgid "Edit new value and click Update"
 msgstr "Redaktu novan valoron kaj klaku Ĝisdatigu"
 
-#: src/interface.c:739
+#: src/interface.c:728
 msgid "Update Memory"
 msgstr "Ĝisdatigu Memoron"
 
-#: src/interface.c:742
+#: src/interface.c:731
 msgid "Update the current memory location"
 msgstr "Ĝisdatigu la nuntempan memorlokon"
 
-#: src/interface.c:758 src/interface.c:879 src/interface.c:884
+#: src/interface.c:747 src/interface.c:845
 msgid "Memory"
 msgstr "Memoro"
 
-#: src/interface.c:777
+#: src/interface.c:766
 msgid "Load me at"
 msgstr "Ŝargi min ĉe"
 
-#: src/interface.c:785
+#: src/interface.c:774
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr "Tajpu la programadreso. Finu kun 'h' se ĝi estas deksesuma adreso."
 
-#: src/interface.c:803
-msgid "Variables"
-msgstr "Variabloj"
-
-#: src/interface.c:816
+#: src/interface.c:796
 msgid "Data"
 msgstr "Datumoj"
 
-#: src/interface.c:832
-msgid "Stack Trace"
-msgstr "Stakspurado"
-
-#: src/interface.c:845
+#: src/interface.c:816
 msgid "Stack"
 msgstr "Stako"
 
-#: src/interface.c:869
+#: src/interface.c:836
 msgid "KeyPad"
 msgstr "Cifera klavaro"
 
-#: src/interface.c:896 src/interface.c:936
+#: src/interface.c:851 src/interface.c:879
 #, fuzzy
 msgid "Start"
 msgstr "Stako"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: src/interface.c:1157
+#: src/interface.c:1089
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Colin Dean https://launchpad.net/~colindean"
 
-#: src/interface.c:1203
+#: src/interface.c:1135
 msgid "Assembler Listing"
 msgstr "Asemblila listo"
 
-#: src/interface.c:1227
+#: src/interface.c:1159
 msgid "Save to file"
 msgstr "Konsevi kiel"
 
-#: src/interface.c:1264
+#: src/interface.c:1196
 msgid "Assembler Tutorial"
 msgstr ""
 
-#: src/interface.c:1308
+#: src/interface.c:1240
 msgid "GNUSim8085 start with dialog"
 msgstr "GNUSim8085 komencu kun dialogo"
 
-#: src/interface.c:1339
+#: src/interface.c:1271
 msgid "1. How to use this simulator?"
 msgstr "1. Kiel uzi ĉi tiu simulilo?"
 
-#: src/interface.c:1347
+#: src/interface.c:1279
 msgid "_Tutorial"
 msgstr "_Lernilo"
 
-#: src/interface.c:1352
+#: src/interface.c:1284
 msgid "A short tutorial on writing assembly code!"
 msgstr "Mallonga lernilo pri skibado asemblilkodo!"
 
-#: src/interface.c:1359
+#: src/interface.c:1291
 msgid "2. Open an existing assembly program."
 msgstr "2. Malfermu ekzisadan asemblilan programon."
 
-#: src/interface.c:1367
+#: src/interface.c:1299
 msgid "_Open program"
 msgstr "Malfermu pr_ogramon"
 
-#: src/interface.c:1372
+#: src/interface.c:1304
 msgid "Open an already saved program"
 msgstr "Malfermu jam savitan programon"
 
-#: src/interface.c:1374
+#: src/interface.c:1306
 msgid "What do you want to do now?"
 msgstr "Kio vi deziras fari nun?"
 
-#: src/interface.c:1384
+#: src/interface.c:1316
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -407,31 +399,31 @@ msgstr ""
 "Ne forgesu legi la dokumentado\n"
 "en \"doc\" dosierujo."
 
-#: src/interface.c:1441
+#: src/interface.c:1373
 msgid "Choose a symbol"
 msgstr "Elektu simbolon"
 
-#: src/interface.c:1467
+#: src/interface.c:1399
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Tajpu simbolon aŭ elektu unu el la listoj"
 
-#: src/interface.c:1477
+#: src/interface.c:1409
 msgid "Enter Symbol"
 msgstr "Tajpu simbolon"
 
-#: src/interface.c:1492
+#: src/interface.c:1424
 msgid "Variables List"
 msgstr "Listo de variabloj"
 
-#: src/interface.c:1507
+#: src/interface.c:1439
 msgid "Functions List"
 msgstr "Listo de funkcioj"
 
-#: src/interface.c:1522
+#: src/interface.c:1454
 msgid "Macros List"
 msgstr "Listo de makrooj"
 
-#: src/interface.c:1561
+#: src/interface.c:1493
 msgid "Choose a register"
 msgstr "Elektu adresreĝistron"
 
@@ -589,7 +581,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/file-op.c:63
+#: src/file-op.c:63 src/file-op-gio.c:65
 #, c-format
 msgid "Failed to open <%s>"
 msgstr ""
@@ -598,12 +590,12 @@ msgstr ""
 msgid "File already exists; overwrite it?"
 msgstr ""
 
-#: src/file-op.c:157
+#: src/file-op.c:157 src/file-op-gio.c:152
 #, c-format
 msgid "Failed to save <%s>"
 msgstr ""
 
-#: src/file-op.c:328
+#: src/file-op.c:328 src/file-op-gio.c:334
 msgid "Failed to save listing file"
 msgstr ""
 
@@ -624,6 +616,12 @@ msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
+
+#~ msgid "Variables"
+#~ msgstr "Variabloj"
+
+#~ msgid "Stack Trace"
+#~ msgstr "Stakspurado"
 
 #~ msgid "00"
 #~ msgstr "00"

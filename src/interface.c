@@ -234,19 +234,14 @@ create_window_main (void)
   GtkWidget *label147;
   GtkWidget *main_entry_sa;
   GtkWidget *notebook5;
-  GtkWidget *main_frame_data;
   GtkWidget *main_data_scroll;
-  GtkWidget *label150;
   GtkWidget *hbox25;
   GtkWidget *image232;
   GtkWidget *label148;
-  GtkWidget *frame11;
   GtkWidget *main_stack_scroll;
-  GtkWidget *label152;
   GtkWidget *hbox26;
   GtkWidget *image233;
   GtkWidget *label149;
-  GtkWidget *frame14;
   GtkWidget *main_keypad_scroll;
   GtkWidget *hbox40;
   GtkWidget *image371;
@@ -254,18 +249,12 @@ create_window_main (void)
   GtkWidget *main_progressbar;
   GtkWidget *main_statusbar;
   GtkWidget *status_box;
-  GtkWidget *main_memory_frame;
-  GtkWidget *label177;
-  GtkWidget *label178;
   GtkWidget *main_memory_scroll;
   GtkWidget *vbox19;
   GtkWidget *hbox48;
   GtkWidget *label179;
   GtkWidget *mem_list_start;
   GtkWidget *button12;
-  GtkWidget *main_io_frame;
-  GtkWidget *label180;
-  GtkWidget *label181;
   GtkWidget *main_io_scroll;
   GtkWidget *vbox20;
   GtkWidget *hbox49;
@@ -789,21 +778,12 @@ create_window_main (void)
   gtk_widget_show (notebook5);
   gtk_box_pack_start (GTK_BOX (vbox_data), notebook5, TRUE, TRUE, 0);
 
-  main_frame_data = gtk_frame_new (NULL);
-  gtk_widget_show (main_frame_data);
-  gtk_container_add (GTK_CONTAINER (notebook5), main_frame_data);
-  gtk_container_set_border_width (GTK_CONTAINER (main_frame_data), 5);
-
   main_data_scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_widget_show (main_data_scroll);
-  gtk_container_add (GTK_CONTAINER (main_frame_data), main_data_scroll);
+  gtk_container_add (GTK_CONTAINER (notebook5), main_data_scroll);
+  gtk_container_set_border_width (GTK_CONTAINER (main_data_scroll), 5);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_data_scroll), GTK_SHADOW_OUT);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_data_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-
-  label150 = gtk_label_new (_("Variables"));
-  gtk_widget_show (label150);
-  gtk_frame_set_label_widget (GTK_FRAME (main_frame_data), label150);
-  gtk_label_set_justify (GTK_LABEL (label150), GTK_JUSTIFY_LEFT);
 
   hbox25 = HBOX (5);
   gtk_widget_show (hbox25);
@@ -818,21 +798,12 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox25), label148, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label148), GTK_JUSTIFY_LEFT);
 
-  frame11 = gtk_frame_new (NULL);
-  gtk_widget_show (frame11);
-  gtk_container_add (GTK_CONTAINER (notebook5), frame11);
-  gtk_container_set_border_width (GTK_CONTAINER (frame11), 5);
-
   main_stack_scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_widget_show (main_stack_scroll);
-  gtk_container_add (GTK_CONTAINER (frame11), main_stack_scroll);
+  gtk_container_add (GTK_CONTAINER (notebook5), main_stack_scroll);
+  gtk_container_set_border_width (GTK_CONTAINER (main_stack_scroll), 5);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_stack_scroll), GTK_SHADOW_OUT);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_stack_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-
-  label152 = gtk_label_new (_("Stack Trace"));
-  gtk_widget_show (label152);
-  gtk_frame_set_label_widget (GTK_FRAME (frame11), label152);
-  gtk_label_set_justify (GTK_LABEL (label152), GTK_JUSTIFY_LEFT);
 
   hbox26 = HBOX (5);
   gtk_widget_show (hbox26);
@@ -847,14 +818,10 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox26), label149, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label149), GTK_JUSTIFY_LEFT);
 
-  frame14 = gtk_frame_new (NULL);
-  gtk_widget_show (frame14);
-  gtk_container_add (GTK_CONTAINER (notebook5), frame14);
-  gtk_container_set_border_width (GTK_CONTAINER (frame14), 5);
-
   main_keypad_scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_widget_show (main_keypad_scroll);
-  gtk_container_add (GTK_CONTAINER (frame14), main_keypad_scroll);
+  gtk_container_add (GTK_CONTAINER (notebook5), main_keypad_scroll);
+  gtk_container_set_border_width (GTK_CONTAINER (main_keypad_scroll), 5);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_keypad_scroll), GTK_SHADOW_OUT);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_keypad_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
@@ -871,23 +838,11 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox40), label168, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label168), GTK_JUSTIFY_LEFT);
    
-  main_memory_frame = gtk_frame_new (NULL);
-  gtk_widget_show (main_memory_frame);
-  gtk_container_add (GTK_CONTAINER (notebook5), main_memory_frame);
-  gtk_container_set_border_width (GTK_CONTAINER (main_memory_frame), 5);
-
-  label178 = gtk_label_new (_("Memory"));
-  gtk_widget_show (label178);
-  gtk_frame_set_label_widget (GTK_FRAME (main_memory_frame), label178);
-  gtk_label_set_justify (GTK_LABEL (label178), GTK_JUSTIFY_LEFT);
-  
-  label177 = gtk_label_new (_("Memory"));
-  gtk_widget_show (label177);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 3), label177);
-  
-  vbox19 = VBOX (2);
+  vbox19 = VBOX (5);
   gtk_widget_show (vbox19);
-  gtk_container_add (GTK_CONTAINER (main_memory_frame), vbox19);
+  gtk_container_add (GTK_CONTAINER (notebook5), vbox19);
+  gtk_container_set_border_width (GTK_CONTAINER (vbox19), 5);
+  gtk_notebook_set_tab_label_text (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 3), _("Memory"));
   
   hbox48 = HBOX (3);
   gtk_widget_show (hbox48);
@@ -911,23 +866,11 @@ create_window_main (void)
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (main_memory_scroll), GTK_SHADOW_OUT);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (main_memory_scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
-  main_io_frame = gtk_frame_new (NULL);
-  gtk_widget_show (main_io_frame);
-  gtk_container_add (GTK_CONTAINER (notebook5), main_io_frame);
-  gtk_container_set_border_width (GTK_CONTAINER (main_io_frame), 5);
-
-  label180 = gtk_label_new (_("I/O Ports"));
-  gtk_widget_show (label180);
-  gtk_frame_set_label_widget (GTK_FRAME (main_io_frame), label180);
-  gtk_label_set_justify (GTK_LABEL (label178), GTK_JUSTIFY_LEFT);
-  
-  label181 = gtk_label_new (_("I/O Ports"));
-  gtk_widget_show (label181);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 4), label181);
-  
-  vbox20 = VBOX (2);
+  vbox20 = VBOX (5);
   gtk_widget_show (vbox20);
-  gtk_container_add (GTK_CONTAINER (main_io_frame), vbox20);
+  gtk_container_add (GTK_CONTAINER (notebook5), vbox20);
+  gtk_container_set_border_width (GTK_CONTAINER (vbox20), 5);
+  gtk_notebook_set_tab_label_text (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 4), _("I/O Ports"));
   
   hbox49 = HBOX (3);
   gtk_widget_show (hbox49);
@@ -1088,41 +1031,30 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label147, "label147");
   GLADE_HOOKUP_OBJECT (window_main, main_entry_sa, "main_entry_sa");
   GLADE_HOOKUP_OBJECT (window_main, notebook5, "notebook5");
-  GLADE_HOOKUP_OBJECT (window_main, main_frame_data, "main_frame_data");
   GLADE_HOOKUP_OBJECT (window_main, main_data_scroll, "main_data_scroll");
-  GLADE_HOOKUP_OBJECT (window_main, label150, "label150");
   GLADE_HOOKUP_OBJECT (window_main, hbox25, "hbox25");
   GLADE_HOOKUP_OBJECT (window_main, image232, "image232");
   GLADE_HOOKUP_OBJECT (window_main, label148, "label148");
-  GLADE_HOOKUP_OBJECT (window_main, frame11, "frame11");
   GLADE_HOOKUP_OBJECT (window_main, main_stack_scroll, "main_stack_scroll");
-  GLADE_HOOKUP_OBJECT (window_main, label152, "label152");
   GLADE_HOOKUP_OBJECT (window_main, hbox26, "hbox26");
   GLADE_HOOKUP_OBJECT (window_main, image233, "image233");
   GLADE_HOOKUP_OBJECT (window_main, label149, "label149");
-  GLADE_HOOKUP_OBJECT (window_main, frame14, "frame14");
   GLADE_HOOKUP_OBJECT (window_main, main_keypad_scroll, "main_keypad_scroll");
   GLADE_HOOKUP_OBJECT (window_main, hbox40, "hbox40");
   GLADE_HOOKUP_OBJECT (window_main, image371, "image371");
   GLADE_HOOKUP_OBJECT (window_main, label168, "label168");
-  GLADE_HOOKUP_OBJECT (window_main, main_memory_frame, "main_memory_frame");
   GLADE_HOOKUP_OBJECT (window_main, vbox19, "vbox19");
   GLADE_HOOKUP_OBJECT (window_main, hbox48, "hbox48");
   GLADE_HOOKUP_OBJECT (window_main, label179, "label179");
   GLADE_HOOKUP_OBJECT (window_main, mem_list_start, "mem_list_start");
   GLADE_HOOKUP_OBJECT (window_main, button12, "button12");
   GLADE_HOOKUP_OBJECT (window_main, main_memory_scroll, "main_memory_scroll");
-  GLADE_HOOKUP_OBJECT (window_main, label178, "label178");
-  GLADE_HOOKUP_OBJECT (window_main, label177, "label177");
-  GLADE_HOOKUP_OBJECT (window_main, main_io_frame, "main_io_frame");
   GLADE_HOOKUP_OBJECT (window_main, vbox20, "vbox20");
   GLADE_HOOKUP_OBJECT (window_main, hbox49, "hbox49");
   GLADE_HOOKUP_OBJECT (window_main, label182, "label182");
   GLADE_HOOKUP_OBJECT (window_main, io_list_start, "io_list_start");
   GLADE_HOOKUP_OBJECT (window_main, button13, "button13");
   GLADE_HOOKUP_OBJECT (window_main, main_io_scroll, "main_io_scroll");
-  GLADE_HOOKUP_OBJECT (window_main, label181, "label181");
-  GLADE_HOOKUP_OBJECT (window_main, label180, "label180");
   GLADE_HOOKUP_OBJECT (window_main, main_progressbar, "main_progressbar");
   GLADE_HOOKUP_OBJECT (window_main, main_statusbar, "main_statusbar");
   GLADE_HOOKUP_ACTION_OBJECT (window_main, gtk_ui_manager_get_action (ui_manager, "/MainMenu/FileMenu/New"), "newfile"); 

@@ -221,7 +221,7 @@ file_op_editor_save (void)
   gboolean is_saved = FALSE;
 
   file_selector = create_file_dialog
-	("Save File", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
+	(_("Save file"), GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
 
   while (!is_saved)
 	{
@@ -251,7 +251,7 @@ file_op_editor_save_as (void)
   gboolean is_saved = FALSE;
 
   file_selector = create_file_dialog
-	("Save File As", GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
+	(_("Save file as"), GTK_FILE_CHOOSER_ACTION_SAVE, GTK_STOCK_SAVE);
 
   while (!is_saved)
 	{

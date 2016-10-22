@@ -602,7 +602,7 @@ msgstr ""
 #: src/file-op.c:63 src/file-op-gio.c:65
 #, c-format
 msgid "Failed to open <%s>"
-msgstr "Impossible d'ouvrir <% s>"
+msgstr "Impossible d'ouvrir <%s>"
 
 #: src/file-op.c:142
 msgid "File already exists; overwrite it?"
@@ -611,7 +611,7 @@ msgstr "Le fichier existe déjà; Voulez-vous le remplacer?"
 #: src/file-op.c:157 src/file-op-gio.c:152
 #, c-format
 msgid "Failed to save <%s>"
-msgstr "Impossible d'enregistrer <% s>"
+msgstr "Impossible d'enregistrer <%s>"
 
 #: src/file-op.c:328 src/file-op-gio.c:334
 msgid "Failed to save listing file"

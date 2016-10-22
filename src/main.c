@@ -24,6 +24,7 @@
 #endif
 
 #include <libintl.h>
+#include <locale.h>
 #include "interface.h"
 #include "gui-app.h"
 #include "gui-list-message.h"

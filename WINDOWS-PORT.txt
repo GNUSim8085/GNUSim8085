@@ -27,24 +27,26 @@ PKG_CONFIG_PATH=/usr/i686-w64-mingw32/lib/pkgconfig pkg-config $*
    http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.24/
 5. Download gtksourceview(-dev) zip files from
    http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.8/
-6. Download libxml2 zip files from http://www.zlatkovic.com/pub/libxml/
+6. Download iconv zip files from http://www.zlatkovic.com/pub/libxml/
+7. Download libxml2 zip files from http://www.zlatkovic.com/pub/libxml/
    (version >= 2.7.7 required).
 
 Setting up development environment:
 1. Extract the GTK+ all in one bundle in /usr/i686-w64-mingw32/ directory.
 2. Extract the GtkSourceView zip files in /usr/i686-w64-mingw32/ directory.
-3. Extract the libxml2 zip files in /usr/i686-w64-mingw32/ directory.
-4. Run following commands to make the files suitable for development.
+3. Extract the iconv zip files in /usr/i686-w64-mingw32/ directory.
+4. Extract the libxml2 zip files in /usr/i686-w64-mingw32/ directory.
+5. Run following commands to make the files suitable for development.
 ==================
 cd /usr/i686-w64-mingw32
 sed -i 's|^prefix=.*$|prefix=/usr/i686-w64-mingw32|g' lib/pkgconfig/*.pc
 cd ./lib
 for f in *.lib; do mv $f lib${f%%lib}a; done
 ==================
-5. Comment out Requires.private from
+6. Comment out Requires.private from
    /usr/i686-w64-mingw32/lib/pkgconfig/gtksourceview-2.0.pc.
    This needs to be done to workaround problem in libxml2 distribution.
-6. Modify the configure script and delete any lines containing word
+7. Modify the configure script and delete any lines containing word
    '_nl_expand_alias'. This needs to be done to workaround a bug in autoconf
    macro for gettext detection.
 
@@ -73,24 +75,26 @@ PKG_CONFIG_PATH=/usr/i586-mingw32msvc/lib/pkgconfig pkg-config $*
    http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.24/
 5. Download gtksourceview(-dev) zip files from
    http://ftp.gnome.org/pub/GNOME/binaries/win32/gtksourceview/2.8/
-6. Download libxml2 zip files from http://www.zlatkovic.com/pub/libxml/
+6. Download iconv zip files from http://www.zlatkovic.com/pub/libxml/
+7. Download libxml2 zip files from http://www.zlatkovic.com/pub/libxml/
    (version >= 2.7.7 required).
 
 Setting up development environment:
 1. Extract the GTK+ all in one bundle in /usr/i586-mingw32msvc/ directory.
 2. Extract the GtkSourceView zip files in /usr/i586-mingw32msvc/ directory.
-3. Extract the libxml2 zip files in /usr/i586-mingw32msvc/ directory.
-4. Run following commands to make the files suitable for development.
+3. Extract the iconv zip files in /usr/i686-w64-mingw32/ directory.
+4. Extract the libxml2 zip files in /usr/i586-mingw32msvc/ directory.
+5. Run following commands to make the files suitable for development.
 ==================
 cd /usr/i586-mingw32msvc
 sed -i 's|^prefix=.*$|prefix=/usr/i586-mingw32msvc|g' lib/pkgconfig/*.pc
 cd ./lib
 for f in *.lib; do mv $f lib${f%%lib}a; done
 ==================
-5. Comment out Requires.private from
+6. Comment out Requires.private from
    /usr/i586-mingw32msvc/lib/pkgconfig/gtksourceview-2.0.pc.
    This needs to be done to workaround problem in libxml2 distribution.
-6. Modify the configure script and delete any lines containing word
+7. Modify the configure script and delete any lines containing word
    '_nl_expand_alias'. This needs to be done to workaround a bug in autoconf
    macro for gettext detection.
 

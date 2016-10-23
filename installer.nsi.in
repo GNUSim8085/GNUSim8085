@@ -31,7 +31,7 @@ Name GNUSim8085
   OutFile @PACKAGE@-@VERSION@-without-gtk-installer.exe
 !endif
 !define GTK_INSTALLER_EXE "gtk2-runtime-2.24.10-2012-10-10-ash.exe"
-!define GTK_VERSION_REQ "2.24.0"
+!define GTK_VERSION_REQ "@GTK_VERSION_REQ@"
 !define MUI_ICON pixmaps/gnusim8085.ico
 InstallDir "$PROGRAMFILES\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"

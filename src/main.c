@@ -43,7 +43,7 @@ main (int argc, char *argv[])
 {
   GtkWidget *statusbar;
   gchar *localedir = LOCALEDIR;
-#ifdef WINDOWS
+#ifdef G_OS_WIN32
   gchar *root = g_win32_get_package_installation_directory_of_module (NULL);
   localedir = g_build_filename (root, "locale", NULL);
   g_free (root);

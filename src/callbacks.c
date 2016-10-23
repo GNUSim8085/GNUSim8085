@@ -356,8 +356,15 @@ void
 on_help_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   // Show the HTML help.
-  gchar * html_help_uri = g_strconcat ("file://", PACKAGE_HELP_DIR, "/", PACKAGE, ".htm", NULL);
+#ifdef G_OS_WIN32
+  gchar * html_file_name = g_strconcat(g_get_current_dir(), G_DIR_SEPARATOR_S, "help", G_DIR_SEPARATOR_S, PACKAGE, ".htm", NULL);
+#else
+  gchar * html_file_name = g_strconcat(PACKAGE_HELP_DIR, G_DIR_SEPARATOR_S, PACKAGE, ".htm", NULL);
+#endif
+  gchar * html_help_uri = g_filename_to_uri(html_file_name, NULL, NULL);
+  g_debug ("HTML Help URI: %s\n", html_help_uri);
   gtk_show_uri (gdk_screen_get_default(), html_help_uri, GDK_CURRENT_TIME, NULL);
+  g_free (html_file_name);
   g_free (html_help_uri);
 }
 

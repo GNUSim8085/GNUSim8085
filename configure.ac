@@ -39,9 +39,6 @@ case "${host}" in
         *) WIN32="no" ;;
 esac
 AM_CONDITIONAL([WIN32], test "$WIN32" = "yes")
-if test "x$WIN32" = "xyes"; then
-    AC_DEFINE(WINDOWS, 1, [Defines if the build is for Windows])
-fi
 
 AC_PATH_PROG([xsltproc],[xsltproc])
 if test -z "$xsltproc" ; then

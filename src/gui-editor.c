@@ -387,7 +387,7 @@ void
 gui_editor_print (GUIEditor *editor)
 {
   editor->print_operation = gtk_print_operation_new ();
-#ifdef WINDOWS
+#ifdef G_OS_WIN32
   gtk_print_operation_set_unit (editor->print_operation, GTK_UNIT_POINTS);
 #endif
   GtkPrintOperationResult res;

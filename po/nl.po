@@ -8,151 +8,156 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.3.8\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-10-21 10:44+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-01-22 13:31+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Language-Team: Dutch "
+"<https://hosted.weblate.org/projects/gnusim8085/translations/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 #: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "Lettertype selecteren"
 
 #: src/callbacks.c:257
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "De applicatie bevat fouten. Controleer het Berichtpaneel."
 
 #: src/callbacks.c:278
 msgid "Error executing program"
-msgstr ""
+msgstr "Fout tijdens uitvoeren van applicatie"
 
 #: src/callbacks.c:298
 msgid "Error in step in"
-msgstr ""
+msgstr "Fout in step in"
 
 #: src/callbacks.c:313
 msgid "Error in step over"
-msgstr ""
+msgstr "Fout in step over"
 
 #: src/callbacks.c:328
 msgid "Error in step out"
-msgstr ""
+msgstr "Fout in step out"
 
 #: src/callbacks.c:420
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "Voer een geldig nummer in in het bereik"
 
 #: src/callbacks.c:630 src/callbacks.c:648
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr ""
+msgstr "Voer een geldig nummer in in het bereik (0-65535 of 0h-FFFFh)"
 
 #: src/callbacks.c:669 src/callbacks.c:687
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "Voer een geldig nummer in in het bereik (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:711
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
+"Het zelfstudiebestand, asm-guide.text, kan niet worden gevonden. Het moet "
+"aanwezig zijn in de map - "
 
 #: src/interface.c:42
 msgid "_File"
-msgstr ""
+msgstr "_Bestand"
 
 #: src/interface.c:43
 msgid "_Reset"
-msgstr ""
+msgstr "_Herstellen"
 
 #: src/interface.c:44
 msgid "_Assembler"
-msgstr ""
+msgstr "_Bouwer"
 
 #: src/interface.c:45
 msgid "_Debug"
-msgstr ""
+msgstr "_Foutopsporing"
 
 #: src/interface.c:46
 msgid "_Breakpoints"
-msgstr ""
+msgstr "_Breekpunten"
 
 #: src/interface.c:47
 msgid "_Help"
-msgstr ""
+msgstr "_Hulp"
 
 #: src/interface.c:48
 msgid "New source file"
-msgstr ""
+msgstr "Nieuw bronbestand"
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr ""
+msgstr "Een bestand openen"
 
 #: src/interface.c:50 src/file-op.c:224 src/file-op-gio.c:219
 msgid "Save file"
-msgstr ""
+msgstr "Bestand opslaan"
 
 #: src/interface.c:51 src/file-op.c:254 src/file-op-gio.c:249
 msgid "Save file as"
-msgstr ""
+msgstr "Bestand opslaan als"
 
 #: src/interface.c:52
 msgid "Print program"
-msgstr ""
+msgstr "Applicatie printen"
 
 #: src/interface.c:55
 msgid "_Registers"
-msgstr ""
+msgstr "_Registers"
 
 #: src/interface.c:55
 msgid "Reset Registers"
-msgstr ""
+msgstr "Registers herstellen"
 
 #: src/interface.c:56
 msgid "_Flags"
-msgstr ""
+msgstr "_Vlaggen"
 
 #: src/interface.c:56
 msgid "Reset Flags"
-msgstr ""
+msgstr "Vlaggen herstellen"
 
 #: src/interface.c:57
 msgid "_IO Ports"
-msgstr ""
+msgstr "_I/O-poorten"
 
 #: src/interface.c:57
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "I/O-poorten herstellen"
 
 #: src/interface.c:58
 msgid "_Memory"
-msgstr ""
+msgstr "_Geheugen"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr ""
+msgstr "Geheugen herstellen"
 
 #: src/interface.c:59
 msgid "Reset _All"
-msgstr ""
+msgstr "_Alles herstellen"
 
 #: src/interface.c:59
 msgid "Reset All"
-msgstr ""
+msgstr "Alles herstellen"
 
 #: src/interface.c:60
 msgid "A_ssemble"
-msgstr ""
+msgstr "Bou_wen"
 
 #: src/interface.c:60
 msgid "Only assemble program"
-msgstr ""
+msgstr "Applicatie alleen bouwen"
 
 #: src/interface.c:61
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "Gebouwd en geladen applicatie uitvoeren"
 
 #: src/interface.c:62
 msgid "Show _listing"

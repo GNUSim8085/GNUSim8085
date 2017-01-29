@@ -42,7 +42,8 @@ The simplest way to compile this package is:
      `./configure' to configure the package for your system.  If you're
      using `csh' on an old version of System V, you might need to type
      `sh ./configure' instead to prevent `csh' from trying to execute
-     `configure' itself.
+     `configure' itself. If configure script does not exist then run
+     './autogen.sh' to generate it.
 
      Running `configure' takes awhile.  While running, it prints some
      messages telling which features it is checking for.

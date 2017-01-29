@@ -30,10 +30,12 @@ Build dependencies (Mandatory)
 
 Build dependencies (Optional)
 * gettext (>= 0.18)
+* xsltproc
 * docbook-xsl
 
 To install from source, run the following commands
 
+  $ ./autogen.sh #only required when configure script does not exist
   $ ./configure
   $ make
   $ sudo make install

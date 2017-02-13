@@ -8,49 +8,52 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.3.8\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-10-21 10:44+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-02-13 06:40+0000\n"
+"Last-Translator: Tatsuya Shirai <tatsuvalue@gmail.com>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/gnusim8085/translations/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.12-dev\n"
 
 #: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "フォント選択"
 
 #: src/callbacks.c:257
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "プログラムにエラーが存在します。メッセージペーンを確認して下さい。"
 
 #: src/callbacks.c:278
 msgid "Error executing program"
-msgstr ""
+msgstr "プログラムの実行でエラーが発生"
 
 #: src/callbacks.c:298
 msgid "Error in step in"
-msgstr ""
+msgstr "ステップインでエラー"
 
 #: src/callbacks.c:313
 msgid "Error in step over"
-msgstr ""
+msgstr "ステップオーバーでエラー"
 
 #: src/callbacks.c:328
 msgid "Error in step out"
-msgstr ""
+msgstr "ステップアウトでエラー"
 
 #: src/callbacks.c:420
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "適切な値域の数値を入力"
 
 #: src/callbacks.c:630 src/callbacks.c:648
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr ""
+msgstr "適切な値域（0-65535 または 0h-FFFFh）の数値を入力"
 
 #: src/callbacks.c:669 src/callbacks.c:687
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "適切な値域（0-255 / 0h-00FFh）の値を入力"
 
 #: src/callbacks.c:711
 msgid ""
@@ -60,87 +63,87 @@ msgstr ""
 
 #: src/interface.c:42
 msgid "_File"
-msgstr ""
+msgstr "_ファイル"
 
 #: src/interface.c:43
 msgid "_Reset"
-msgstr ""
+msgstr "_リセット"
 
 #: src/interface.c:44
 msgid "_Assembler"
-msgstr ""
+msgstr "_アッセンブラー"
 
 #: src/interface.c:45
 msgid "_Debug"
-msgstr ""
+msgstr "_デバッグ"
 
 #: src/interface.c:46
 msgid "_Breakpoints"
-msgstr ""
+msgstr "_ブレークポイント"
 
 #: src/interface.c:47
 msgid "_Help"
-msgstr ""
+msgstr "_ヘルプ"
 
 #: src/interface.c:48
 msgid "New source file"
-msgstr ""
+msgstr "新しいソースファイル"
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr ""
+msgstr "ファイルを開く"
 
 #: src/interface.c:50 src/file-op.c:224 src/file-op-gio.c:219
 msgid "Save file"
-msgstr ""
+msgstr "ファイルを保存"
 
 #: src/interface.c:51 src/file-op.c:254 src/file-op-gio.c:249
 msgid "Save file as"
-msgstr ""
+msgstr "ファイルを別名保存"
 
 #: src/interface.c:52
 msgid "Print program"
-msgstr ""
+msgstr "プログラムを印刷"
 
 #: src/interface.c:55
 msgid "_Registers"
-msgstr ""
+msgstr "_レジスター"
 
 #: src/interface.c:55
 msgid "Reset Registers"
-msgstr ""
+msgstr "レジスターをリセット"
 
 #: src/interface.c:56
 msgid "_Flags"
-msgstr ""
+msgstr "_フラグ"
 
 #: src/interface.c:56
 msgid "Reset Flags"
-msgstr ""
+msgstr "フラグをリセット"
 
 #: src/interface.c:57
 msgid "_IO Ports"
-msgstr ""
+msgstr "_I/Oポート"
 
 #: src/interface.c:57
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "I/Oポートをリセット"
 
 #: src/interface.c:58
 msgid "_Memory"
-msgstr ""
+msgstr "_メモリー"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr ""
+msgstr "メモリーをリセット"
 
 #: src/interface.c:59
 msgid "Reset _All"
-msgstr ""
+msgstr "全てをリセット"
 
 #: src/interface.c:59
 msgid "Reset All"
-msgstr ""
+msgstr "全てをリセット"
 
 #: src/interface.c:60
 msgid "A_ssemble"
@@ -148,11 +151,11 @@ msgstr ""
 
 #: src/interface.c:60
 msgid "Only assemble program"
-msgstr ""
+msgstr "プログラムのアッセンブルのみ"
 
 #: src/interface.c:61
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "アッセンブルおよび読み込み済みプログラムの実行"
 
 #: src/interface.c:62
 msgid "Show _listing"
@@ -160,115 +163,115 @@ msgstr ""
 
 #: src/interface.c:62
 msgid "Show the source code along with opcodes and operands in hex numbers"
-msgstr ""
+msgstr "16進数によるコードとオペランド付きソースコードの表示"
 
 #: src/interface.c:63
 msgid "Step _in"
-msgstr ""
+msgstr "ステップイン"
 
 #: src/interface.c:63
 msgid "Step in the code"
-msgstr ""
+msgstr "コードへステップイン"
 
 #: src/interface.c:64
 msgid "Step o_ver"
-msgstr ""
+msgstr "ステップオーバー"
 
 #: src/interface.c:64
 msgid "Step over the code without calling functions"
-msgstr ""
+msgstr "関数呼出なしのステップオーバー"
 
 #: src/interface.c:65
 msgid "Step _out"
-msgstr ""
+msgstr "ステップアウト"
 
 #: src/interface.c:65
 msgid "Step out of the current function"
-msgstr ""
+msgstr "現関数からのステップアウト"
 
 #: src/interface.c:66
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "ブレークポイントの反転"
 
 #: src/interface.c:66
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "現ラインのブレークポイントの反転"
 
 #: src/interface.c:67
 msgid "_Clear all breakpoints"
-msgstr ""
+msgstr "_全てのブレークポイントのクリアー"
 
 #: src/interface.c:67
 msgid "Remove all breakpoints"
-msgstr ""
+msgstr "全てのブレークポイントの削除"
 
 #: src/interface.c:68
 msgid "Stop execution"
-msgstr ""
+msgstr "実行の中断"
 
 #: src/interface.c:68
 msgid "Stop debugging"
-msgstr ""
+msgstr "デバッグの中断"
 
 #: src/interface.c:69
 msgid "_Contents"
-msgstr ""
+msgstr "_コンテンツ"
 
 #: src/interface.c:70
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "アッセンブラー _チュートリアル"
 
 #: src/interface.c:75
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "表示/非表示 サイドペーン"
 
 #: src/interface.c:270
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
-msgstr ""
+msgstr "GNUsim8085 - 8085  Microprocessor Simulator"
 
 #: src/interface.c:479
 msgid "Registers"
-msgstr ""
+msgstr "レジスター"
 
 #: src/interface.c:562
 msgid "Flag"
-msgstr ""
+msgstr "フラグ"
 
 #: src/interface.c:582 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
-msgstr ""
+msgstr "10進数"
 
 #: src/interface.c:591
 msgid "Enter a decimal number"
-msgstr ""
+msgstr "10進数の入力"
 
 #: src/interface.c:594
 msgid "To Hex"
-msgstr ""
+msgstr "16進数へ"
 
 #: src/interface.c:597
 msgid "Convert this number to hexadecimal"
-msgstr ""
+msgstr "16進数への変換"
 
 #: src/interface.c:610
 msgid "Hex"
-msgstr ""
+msgstr "16進数"
 
 #: src/interface.c:619
 msgid "Enter a hexadecimal number"
-msgstr ""
+msgstr "16進数の入力"
 
 #: src/interface.c:622
 msgid "To Dec"
-msgstr ""
+msgstr "10進数へ"
 
 #: src/interface.c:625
 msgid "Convert this number to decimal"
-msgstr ""
+msgstr "10進数への変換"
 
 #: src/interface.c:641
 msgid "Decimal - Hex Convertion"
-msgstr ""
+msgstr "10進 - 16進変換"
 
 #: src/interface.c:665
 msgid "Change the port address to view here"
@@ -276,39 +279,39 @@ msgstr ""
 
 #: src/interface.c:672
 msgid "Enter new port value and click Update"
-msgstr ""
+msgstr "新しいポート値の入力とクリック上書き"
 
 #: src/interface.c:675
 msgid "Update Port Value"
-msgstr ""
+msgstr "ポート値の更新"
 
 #: src/interface.c:678
 msgid "Update the port value"
-msgstr ""
+msgstr "ポート値の更新"
 
 #: src/interface.c:694 src/interface.c:873
 msgid "I/O Ports"
-msgstr ""
+msgstr "I/Oポート"
 
 #: src/interface.c:718
 msgid "Change the memory location to view here"
-msgstr ""
+msgstr "メモリー位置の変更"
 
 #: src/interface.c:725
 msgid "Edit new value and click Update"
-msgstr ""
+msgstr "新しい値の編集とクリック更新"
 
 #: src/interface.c:728
 msgid "Update Memory"
-msgstr ""
+msgstr "メモリーの更新"
 
 #: src/interface.c:731
 msgid "Update the current memory location"
-msgstr ""
+msgstr "現在のメモリー位置の更新"
 
 #: src/interface.c:747 src/interface.c:845
 msgid "Memory"
-msgstr ""
+msgstr "メモリー"
 
 #: src/interface.c:766
 msgid "Load me at"
@@ -316,28 +319,28 @@ msgstr ""
 
 #: src/interface.c:774
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr ""
+msgstr "プログラムアドレスの入力。もし16進アドレスならば末尾に'h'を。"
 
 #: src/interface.c:796
 msgid "Data"
-msgstr ""
+msgstr "データ"
 
 #: src/interface.c:816
 msgid "Stack"
-msgstr ""
+msgstr "スタック"
 
 #: src/interface.c:836
 msgid "KeyPad"
-msgstr ""
+msgstr "キーパッド"
 
 #: src/interface.c:851 src/interface.c:879
 msgid "Start"
-msgstr ""
+msgstr "スタート"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: src/interface.c:1089
 msgid "translator_credits"
-msgstr ""
+msgstr "Tatsuya Shirai"
 
 #: src/interface.c:1135
 msgid "Assembler Listing"
@@ -345,11 +348,11 @@ msgstr ""
 
 #: src/interface.c:1159
 msgid "Save to file"
-msgstr ""
+msgstr "ファイルに保存"
 
 #: src/interface.c:1196
 msgid "Assembler Tutorial"
-msgstr ""
+msgstr "アッセンブラー・チュートリアル"
 
 #: src/interface.c:1240
 msgid "GNUSim8085 start with dialog"
@@ -357,69 +360,71 @@ msgstr ""
 
 #: src/interface.c:1271
 msgid "1. How to use this simulator?"
-msgstr ""
+msgstr "1. このシミュレーターの使い方は？"
 
 #: src/interface.c:1279
 msgid "_Tutorial"
-msgstr ""
+msgstr "_チュートリアル"
 
 #: src/interface.c:1284
 msgid "A short tutorial on writing assembly code!"
-msgstr ""
+msgstr "アッセウブリコードを記述するための短いチュートリアル!"
 
 #: src/interface.c:1291
 msgid "2. Open an existing assembly program."
-msgstr ""
+msgstr "2. 既存のアッセンブリープログラムを開く。"
 
 #: src/interface.c:1299
 msgid "_Open program"
-msgstr ""
+msgstr "_プログラムを開く"
 
 #: src/interface.c:1304
 msgid "Open an already saved program"
-msgstr ""
+msgstr "保存済みプログラムを開く"
 
 #: src/interface.c:1306
 msgid "What do you want to do now?"
-msgstr ""
+msgstr "いま何をしたいですか？"
 
 #: src/interface.c:1316
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
 msgstr ""
+"ドキュメントを読むのを忘れずに\n"
+"\"doc\"ディレクトリーにあります。"
 
 #: src/interface.c:1373
 msgid "Choose a symbol"
-msgstr ""
+msgstr "シンボルの選択"
 
 #: src/interface.c:1399
 msgid "Enter a symbol or choose one from the lists"
-msgstr ""
+msgstr "シンボルの入力かリストからの選択"
 
 #: src/interface.c:1409
 msgid "Enter Symbol"
-msgstr ""
+msgstr "シンボルの入力"
 
 #: src/interface.c:1424
 msgid "Variables List"
-msgstr ""
+msgstr "変数リスト"
 
 #: src/interface.c:1439
 msgid "Functions List"
-msgstr ""
+msgstr "関数リスト"
 
 #: src/interface.c:1454
 msgid "Macros List"
-msgstr ""
+msgstr "マクロリスト"
 
 #: src/interface.c:1493
 msgid "Choose a register"
-msgstr ""
+msgstr "レジスターの選択"
 
 #: src/main.c:85
 msgid "Simulator: Idle"
-msgstr ""
+msgstr "シミュレーター: アイドル"
 
 #: src/8085.c:251
 #, c-format
@@ -428,19 +433,19 @@ msgstr ""
 
 #: src/8085-instructions.c:29
 msgid "Invalid Opcode"
-msgstr ""
+msgstr "不正なオペコード"
 
 #: src/8085-instructions.c:878
 msgid "Instruction 'RIM' Not implemented"
-msgstr ""
+msgstr "'RIM'命令は未実装"
 
 #: src/8085-instructions.c:1029
 msgid "Instruction 'SIM' Not implemented"
-msgstr ""
+msgstr "'SIM'命令は未実装"
 
 #: src/asm-source.c:111
 msgid "Assembling Aborted"
-msgstr ""
+msgstr "アッセンブル作業の途中終了"
 
 #: src/asm-source.c:179
 msgid "Label should be given to a code line"
@@ -448,7 +453,7 @@ msgstr ""
 
 #: src/asm-source.c:209 src/asm-source.c:216 src/asm-source.c:223
 msgid "Incomplete opcode"
-msgstr ""
+msgstr "不完全なオペコード"
 
 #: src/asm-source.c:238
 #, c-format
@@ -475,11 +480,11 @@ msgstr ""
 
 #: src/asm-source.c:436
 msgid "Undefined symbol"
-msgstr ""
+msgstr "未定義のシンボル"
 
 #: src/asm-gensym.c:75
 msgid "Redundant label"
-msgstr ""
+msgstr "冗長なラベル"
 
 #: src/asm-gensym.c:90
 msgid "Invalid Operand in EQU"
@@ -487,15 +492,15 @@ msgstr ""
 
 #: src/asm-gensym.c:102 src/asm-gensym.c:124
 msgid "Invalid operand"
-msgstr ""
+msgstr "不正なオペランド"
 
 #: src/asm-gensym.c:114
 msgid "Redefinition of symbol"
-msgstr ""
+msgstr "シンボルの再定義"
 
 #: src/asm-genobj.c:111
 msgid "Invalid data size"
-msgstr ""
+msgstr "不正なデータサイズ"
 
 #: src/asm-genobj.c:116
 msgid "DS: Exceeded limit"
@@ -503,7 +508,7 @@ msgstr ""
 
 #: src/asm-genobj.c:131
 msgid "DB: Operand error"
-msgstr ""
+msgstr "DB: オペランドエラー"
 
 #: src/asm-genobj.c:161
 msgid ""
@@ -513,7 +518,7 @@ msgstr ""
 
 #: src/8085-asm.c:87
 msgid "Program assembled successfully"
-msgstr ""
+msgstr "プログラムのアッセンブルが成功"
 
 #: src/bridge.c:37
 msgid "Simulator: Program running"
@@ -533,28 +538,28 @@ msgstr ""
 
 #: src/bridge.c:308
 msgid "Assembler: running"
-msgstr ""
+msgstr "アッセンブラー: 実行中"
 
 #: src/gui-list-message.c:96
 msgid "Line No"
-msgstr ""
+msgstr "行番号"
 
 #: src/gui-list-message.c:97
 msgid "Assembler Message"
-msgstr ""
+msgstr "アセンブラーメッセージ"
 
 #: src/gui-list-data.c:76
 msgid "Address"
-msgstr ""
+msgstr "番地"
 
 #: src/gui-list-data.c:77
 msgid "Variable"
-msgstr ""
+msgstr "変数"
 
 #: src/gui-list-data.c:78 src/gui-list-data.c:79 src/gui-list-stack.c:83
 #: src/gui-list-stack.c:84
 msgid "Value"
-msgstr ""
+msgstr "値"
 
 #: src/asm-listing.c:208
 msgid "; Assembler generated listing; Not editable.\n"
@@ -578,7 +583,7 @@ msgstr ""
 
 #: src/file-op.c:142
 msgid "File already exists; overwrite it?"
-msgstr ""
+msgstr "ファイルは既に存在します; 上書きしますか？"
 
 #: src/file-op.c:157 src/file-op-gio.c:152
 #, c-format
@@ -605,4 +610,4 @@ msgstr ""
 msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
-msgstr ""
+msgstr "PUSHよりも多くのPOPが存在します。実行を中断し、あなたのプログラムのロジックを確認して下さい"

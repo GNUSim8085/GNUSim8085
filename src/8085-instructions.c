@@ -741,7 +741,7 @@ _eef_inst_func_17 (eef_addr_t opnd_addr)
   return _eef_inst_func_lxi (opnd_addr, 'D');
 }
 
-/* 12 STAX H */
+/* 12 STAX D */
 static gint
 _eef_inst_func_18 (eef_addr_t opnd_addr)
 {

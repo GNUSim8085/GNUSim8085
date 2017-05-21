@@ -4,7 +4,7 @@ AC_INIT([gnusim8085], [1.3.8], [https://github.com/GNUSim8085/GNUSim8085/issues]
 AC_DEFINE([PACKAGE_URL],["http://www.gnusim8085.org/"],[Website URL])
 
 AC_CANONICAL_HOST
-AM_INIT_AUTOMAKE([1.11 silent-rules])
+AM_INIT_AUTOMAKE([1.14 silent-rules])
 AM_SILENT_RULES([yes])
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS([config.h])
@@ -64,15 +64,15 @@ gtk_required="2.24.0"
 gtksourceview_required="2.10.0"
 
 AC_ARG_WITH([gtk3],
-	AS_HELP_STRING([--with-gtk3],[Build with GTK3 (default: no, Windows build ignores this option)]),
+	AS_HELP_STRING([--with-gtk3],[Build with GTK3 (default: yes, Windows build ignores this option)]),
 	[with_gtk3=$withval],
-	[with_gtk3=no])
+	[with_gtk3=yes])
 if test "x$WIN32" != "xyes"; then
 if test "x$with_gtk3" = "xyes"; then
 gtk_api="gtk+-3.0"
 gtksourceview_api="gtksourceview-3.0"
-gtk_required="3.0.0"
-gtksourceview_required="3.0.0"
+gtk_required="3.10.0"
+gtksourceview_required="3.10.0"
 fi
 fi
 AC_SUBST(GTK_VERSION_REQ, $gtk_required)

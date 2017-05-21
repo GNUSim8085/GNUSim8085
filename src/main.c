@@ -89,7 +89,7 @@ main (int argc, char *argv[])
   if (argc > 1)
 	ori_open (argv[1], TRUE);
   else
-	gtk_widget_show (create_window_start ());
+	gtk_widget_show (create_window_start (GTK_WINDOW (app->window_main)));
 
   gtk_main ();
 

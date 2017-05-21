@@ -1219,7 +1219,7 @@ create_window_tutorial (void)
 }
 
 GtkWidget*
-create_window_start (void)
+create_window_start (GtkWindow * parent)
 {
   GtkWidget *window_start;
   GdkPixbuf *window_start_icon_pixbuf;
@@ -1237,6 +1237,7 @@ create_window_start (void)
   GtkWidget *label166;
 
   window_start = gtk_dialog_new ();
+  gtk_window_set_transient_for (GTK_WINDOW (window_start), parent);
   gtk_window_set_title (GTK_WINDOW (window_start), _("GNUSim8085 start with dialog"));
   gtk_window_set_position (GTK_WINDOW (window_start), GTK_WIN_POS_CENTER);
   gtk_window_set_modal (GTK_WINDOW (window_start), TRUE);

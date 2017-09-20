@@ -2,16 +2,18 @@ GNUSim8085 1.3.8 (UNRELEASED)
 
 Fix:     Printing fix for Windows
 Translations:
-         New - Lithuanian (lt), Marathi (mr), Russian (ru).
+         New - Dutch (nl), Japanese (ja), Lithuanian (lt), Marathi (mr), Russian (ru).
          Updated - Arabic (ar), French (fr), German (de), Greek (el),
          Kannada (kn), Spanish (es), Tamil (ta).
 Note to packagers:
-         It is now possible to build the application against GTK3 APIs using
-         --with-gtk3 option of the configure script. The option is currently
-         set to no by default and ignored for Windows build.
-         Updated dependency: GTK+ >= 2.24, GtkSourceView >= 2.10 when using GTK2.
-         GTK+ >= 3.0.0, GtkSourceView >= 3.0.0 when using GTK3.
-         New dependency: docbook-xsl
+         The application is now built using GTK3 APIs by default.
+         If you wish to build it using GTK2 then use --without-gtk3 option of
+         configure script.
+         The Windows build is still using GTK2.
+         Dependencies:
+         New - GTK+ >= 3.10.0, GtkSourceView >= 3.10.0 when using GTK3 (default).
+               docbook-xsl
+         Updated - GTK+ >= 2.24, GtkSourceView >= 2.10 when built for GTK2 APIs.
 
 GNUSim8085 1.3.7 (20 Feb 2011)
 

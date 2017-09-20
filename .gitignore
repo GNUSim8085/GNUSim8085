@@ -19,3 +19,4 @@ po/POTFILES
 po/*.gmo
 *.gz
 *.exe
+doc/help/*.htm

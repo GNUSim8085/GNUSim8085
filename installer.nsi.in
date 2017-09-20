@@ -2,9 +2,9 @@
 # Copyright (C) 2008  Onkar Shinde <onkarshinde@gmail.com>
 # LICENSE: Same as specified in COPYING file
 #
-# NOTE: Tested with NSIS 2.43 and 2.46 only. 2.43 is giving problem when trying to
-# set icon for installer. You may have to disable icon if you are trying to build
-# installer.
+# NOTE: Tested with NSIS 2.43, 2.46 and 2.50. 2.43 is giving problem when trying
+# to set icon for installer. You may have to disable icon if you are trying to
+# build installer.
 
 # Pass -DINC_GTK to makensis to enable inclusion of GTK+ runtime.
 
@@ -69,12 +69,16 @@ InstallDir "$PROGRAMFILES\GNUSim8085"
 # Set available UI languages for installer
 !insertmacro MUI_LANGUAGE "English"
 !insertmacro MUI_LANGUAGE "Arabic"
+!insertmacro MUI_LANGUAGE "Dutch"
 !insertmacro MUI_LANGUAGE "Esperanto"
 !insertmacro MUI_LANGUAGE "French"
 !insertmacro MUI_LANGUAGE "German"
 !insertmacro MUI_LANGUAGE "Greek"
 !insertmacro MUI_LANGUAGE "Italian"
+!insertmacro MUI_LANGUAGE "Japanese"
+!insertmacro MUI_LANGUAGE "Lithuanian"
 !insertmacro MUI_LANGUAGE "PortugueseBR"
+!insertmacro MUI_LANGUAGE "Russian"
 !insertmacro MUI_LANGUAGE "Spanish"
 
 !ifdef INC_GTK

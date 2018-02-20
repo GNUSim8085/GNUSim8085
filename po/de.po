@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-10-21 10:44+0530\n"
-"PO-Revision-Date: 2016-10-14 06:29+0000\n"
-"Last-Translator: Onkar Shinde <onkarshinde@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/gnusim8085/"
-"translations/de/>\n"
+"PO-Revision-Date: 2018-02-21 17:36+0000\n"
+"Last-Translator: Andreas Kleinert <Andy.Kleinert@gmail.com>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/gnusim8085/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.9-dev\n"
+"X-Generator: Weblate 2.20-dev\n"
 "X-Launchpad-Export-Date: 2016-02-09 06:40+0000\n"
 
 #: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
@@ -82,7 +82,7 @@ msgstr "_Fehlerdiagnose"
 
 #: src/interface.c:46
 msgid "_Breakpoints"
-msgstr "_Breakpoints"
+msgstr "_Haltepunkte"
 
 #: src/interface.c:47
 msgid "_Help"
@@ -126,7 +126,7 @@ msgstr "Markierungen zurücksetzen"
 
 #: src/interface.c:57
 msgid "_IO Ports"
-msgstr "_IO Ports"
+msgstr "_E/A-Ports"
 
 #: src/interface.c:57
 msgid "Reset IO Ports"
@@ -222,7 +222,7 @@ msgstr "_Inhalte"
 
 #: src/interface.c:70
 msgid "Assembler _Tutorial"
-msgstr "Assembler _Tutorial"
+msgstr "Assembler _Anleitung"
 
 #: src/interface.c:75
 msgid "Show/Hide side pane"
@@ -238,7 +238,7 @@ msgstr "Register"
 
 #: src/interface.c:562
 msgid "Flag"
-msgstr "Flag"
+msgstr "Kennzeichen"
 
 #: src/interface.c:582 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
@@ -363,7 +363,7 @@ msgstr "In Datei speichern"
 
 #: src/interface.c:1196
 msgid "Assembler Tutorial"
-msgstr "Assembler Tutorial"
+msgstr "Assembler Anleitung"
 
 #: src/interface.c:1240
 msgid "GNUSim8085 start with dialog"
@@ -371,7 +371,7 @@ msgstr "GNUSim8085 starten mit Dialog"
 
 #: src/interface.c:1271
 msgid "1. How to use this simulator?"
-msgstr "1. Benutzung des Simulators"
+msgstr "1. Verwendung des Simulators"
 
 #: src/interface.c:1279
 msgid "_Tutorial"
@@ -565,7 +565,7 @@ msgstr "Assembler: läuft"
 
 #: src/gui-list-message.c:96
 msgid "Line No"
-msgstr "Zeile Nr."
+msgstr "Zeilennummer"
 
 #: src/gui-list-message.c:97
 msgid "Assembler Message"
@@ -636,8 +636,8 @@ msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
-"Die Anzahl von POP Instruktionen übersteigt die Anzahl an vorhergehenden "
-"PUSH Anweisungen. Ausführung stoppen und Logik des Programmes prüfen!"
+"Die Anzahl von POP-Instruktionen übersteigt die Anzahl an vorhergehenden "
+"PUSH-Anweisungen. Ausführung anhalten und Logik des Programms prüfen!"
 
 #~ msgid "Variables"
 #~ msgstr "Variablen"

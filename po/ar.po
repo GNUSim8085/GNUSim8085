@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-10-21 10:44+0530\n"
-"PO-Revision-Date: 2012-09-22 23:19+0000\n"
-"Last-Translator: Faiz Kidwai <f.y.kidwai@gmail.com>\n"
-"Language-Team: Arabic <ar@li.org>\n"
+"PO-Revision-Date: 2018-02-26 12:34+0000\n"
+"Last-Translator: b12 b34 <ahmedimad245@gmail.com>\n"
+"Language-Team: Arabic "
+"<https://hosted.weblate.org/projects/gnusim8085/translations/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 2.20-dev\n"
 "X-Launchpad-Export-Date: 2016-02-11 06:24+0000\n"
-"X-Generator: Launchpad (build 17923)\n"
 
 #: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
 msgid "Select font"
@@ -40,16 +43,15 @@ msgstr "خطأ في خطوة للخلف"
 
 #: src/callbacks.c:328
 msgid "Error in step out"
-msgstr ""
+msgstr "خطأ في الخروج‮‭‭"
 
 #: src/callbacks.c:420
 msgid "Enter a valid number within range"
 msgstr "أدخل رقما صحيحا ضمن النطاق"
 
 #: src/callbacks.c:630 src/callbacks.c:648
-#, fuzzy
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr "أدخل رقما صحيحا ضمن النطاق"
+msgstr "أدخل رقما صحيحا ضمن النطاق‮"
 
 #: src/callbacks.c:669 src/callbacks.c:687
 #, fuzzy
@@ -61,6 +63,8 @@ msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
+"لم يتم العثور على ملف البرنامج التعليمي، أسم-guide.txt. يجب أن تكون موجودة "
+"في الدليل - "
 
 #: src/interface.c:42
 msgid "_File"
@@ -72,7 +76,7 @@ msgstr "_إعادة ضبط"
 
 #: src/interface.c:44
 msgid "_Assembler"
-msgstr ""
+msgstr "_ المجمع"
 
 #: src/interface.c:45
 msgid "_Debug"
@@ -108,19 +112,19 @@ msgstr "طباعة برنامج"
 
 #: src/interface.c:55
 msgid "_Registers"
-msgstr ""
+msgstr "_ السجلات"
 
 #: src/interface.c:55
 msgid "Reset Registers"
-msgstr ""
+msgstr "إعادة تعيين السجلات"
 
 #: src/interface.c:56
 msgid "_Flags"
-msgstr ""
+msgstr "_ الأعلام"
 
 #: src/interface.c:56
 msgid "Reset Flags"
-msgstr ""
+msgstr "إعادة تعيين الأعلام"
 
 #: src/interface.c:57
 msgid "_IO Ports"
@@ -136,7 +140,7 @@ msgstr "_الذاكرة"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr ""
+msgstr "إعادة تعيين الذاكرة"
 
 #: src/interface.c:59
 msgid "Reset _All"
@@ -152,11 +156,11 @@ msgstr ""
 
 #: src/interface.c:60
 msgid "Only assemble program"
-msgstr ""
+msgstr "فقط تجميع البرنامج"
 
 #: src/interface.c:61
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "تنفيذ تجميعها وتحميلها البرنامج"
 
 #: src/interface.c:62
 msgid "Show _listing"

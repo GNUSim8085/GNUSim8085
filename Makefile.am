@@ -4,7 +4,7 @@ SUBDIRS = po src pixmaps doc data
 
 gnusim8085_docdir = $(docdir)
 gnusim8085_doc_DATA = \
-	README\
+	README.md\
 	AUTHORS\
 	NEWS\
 	TODO\

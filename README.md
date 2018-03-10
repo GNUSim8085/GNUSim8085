@@ -1,5 +1,4 @@
-GNUSim8085 (http://www.gnusim8085.org/)
-==========
+# GNUSim8085 (http://www.gnusim8085.org/)
 
 GNUSim8085 is a graphical cross platform simulator plus assembler with
 debugger for the Intel 8085 microprocessor. 
@@ -24,20 +23,25 @@ A lot of examples can be found in the docs directory! Try them.
 Also don't forget to take a tutorial, when you will be asked during
 the program startup.
 
+## Dependencies
+
 Build dependencies (Mandatory)
-* GTK2 (>= 2.24) or GTK3 (>= 3.0.0) development package
-* GtkSourceView2 (>= 2.10) or GtkSourceView3 (>= 3.0) development package
+- GTK2 (>= 2.24) or GTK3 (>= 3.0.0) development package
+- GtkSourceView2 (>= 2.10) or GtkSourceView3 (>= 3.0) development package
 
 Build dependencies (Optional)
-* gettext (>= 0.18)
-* xsltproc
-* docbook-xsl
+- gettext (>= 0.18)
+- xsltproc
+- docbook-xsl
 
+## Install from source
 To install from source, run the following commands
 
-  $ ./autogen.sh #only required when configure script does not exist
-  $ ./configure
-  $ make
-  $ sudo make install
+```sh
+$ ./autogen.sh # only required when configure script does not exist
+$ ./configure
+$ make
+$ sudo make install
+```
 
-OR, see the INSTALL file.
+Or, see the INSTALL file.

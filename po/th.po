@@ -8,447 +8,452 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.3.8\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-10-21 10:44+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2018-03-10 11:39+0000\n"
+"Last-Translator: Akom Chotiphantawanon <knight2000@gmail.com>\n"
+"Language-Team: Thai "
+"<https://hosted.weblate.org/projects/gnusim8085/translations/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.20-dev\n"
 
 #: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "เลือกแบบอักษร"
 
 #: src/callbacks.c:257
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "โปรแกรมมีข้อผิดพลาด ตรวจสอบช่องข้อความ"
 
 #: src/callbacks.c:278
 msgid "Error executing program"
-msgstr ""
+msgstr "เกิดข้อผิดพลาดขณะเรียกทำงาน"
 
 #: src/callbacks.c:298
 msgid "Error in step in"
-msgstr ""
+msgstr "เกิดข้อผิดพลาดใน \"ก้าวเข้า\""
 
 #: src/callbacks.c:313
 msgid "Error in step over"
-msgstr ""
+msgstr "เกิดข้อผิดพลาดใน \"ก้าวข้าม\""
 
 #: src/callbacks.c:328
 msgid "Error in step out"
-msgstr ""
+msgstr "เกิดข้อผิดพลาดใน \"ก้าวออก\""
 
 #: src/callbacks.c:420
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "ป้อนตัวเลขที่ถูกต้องในช่วง"
 
 #: src/callbacks.c:630 src/callbacks.c:648
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr ""
+msgstr "ป้อนตัวเลขในช่วง (0-65535 หรือ 0h-FFFFh)"
 
 #: src/callbacks.c:669 src/callbacks.c:687
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "ป้อนตัวเลขในช่วง (0-255 หรือ 0h-00FFh)"
 
 #: src/callbacks.c:711
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
-msgstr ""
+msgstr "ไม่พบแฟ้มบทเรียน asm-guide.txt ควรจะอยู่ในไดเรกทอรี - "
 
 #: src/interface.c:42
 msgid "_File"
-msgstr ""
+msgstr "แ_ฟ้ม"
 
 #: src/interface.c:43
 msgid "_Reset"
-msgstr ""
+msgstr "_ล้างค่า"
 
 #: src/interface.c:44
 msgid "_Assembler"
-msgstr ""
+msgstr "แ_อสเซมเบลอร์"
 
 #: src/interface.c:45
 msgid "_Debug"
-msgstr ""
+msgstr "_ดีบั๊ก"
 
 #: src/interface.c:46
 msgid "_Breakpoints"
-msgstr ""
+msgstr "จุด_พัก"
 
 #: src/interface.c:47
 msgid "_Help"
-msgstr ""
+msgstr "_วิธีใช้"
 
 #: src/interface.c:48
 msgid "New source file"
-msgstr ""
+msgstr "แฟ้มซอร์สใหม่"
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr ""
+msgstr "เปิดแฟ้ม"
 
 #: src/interface.c:50 src/file-op.c:224 src/file-op-gio.c:219
 msgid "Save file"
-msgstr ""
+msgstr "บันทึกแฟ้ม"
 
 #: src/interface.c:51 src/file-op.c:254 src/file-op-gio.c:249
 msgid "Save file as"
-msgstr ""
+msgstr "บันทึกแฟ้มเป็น"
 
 #: src/interface.c:52
 msgid "Print program"
-msgstr ""
+msgstr "พิมพ์โปรแกรม"
 
 #: src/interface.c:55
 msgid "_Registers"
-msgstr ""
+msgstr "เ_รจิสเตอร์"
 
 #: src/interface.c:55
 msgid "Reset Registers"
-msgstr ""
+msgstr "ล้างค่าเรจิสเตอร์"
 
 #: src/interface.c:56
 msgid "_Flags"
-msgstr ""
+msgstr "แ_ฟล็ก"
 
 #: src/interface.c:56
 msgid "Reset Flags"
-msgstr ""
+msgstr "ล้างค่าแฟล็ก"
 
 #: src/interface.c:57
 msgid "_IO Ports"
-msgstr ""
+msgstr "_พอร์ต IO"
 
 #: src/interface.c:57
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "ล้างค่าพอร์ต IO"
 
 #: src/interface.c:58
 msgid "_Memory"
-msgstr ""
+msgstr "_หน่วยความจำ"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr ""
+msgstr "ล้างค่าหน่วยความจำ"
 
 #: src/interface.c:59
 msgid "Reset _All"
-msgstr ""
+msgstr "ล้างค่า_ทั้งหมด"
 
 #: src/interface.c:59
 msgid "Reset All"
-msgstr ""
+msgstr "ล้างค่าทั้งหมด"
 
 #: src/interface.c:60
 msgid "A_ssemble"
-msgstr ""
+msgstr "แ_ปลภาษาแอสเซมบลี"
 
 #: src/interface.c:60
 msgid "Only assemble program"
-msgstr ""
+msgstr "แปลโปรแกรมเท่านั้น"
 
 #: src/interface.c:61
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "เรียกทำงานแอสเซมบลีและโหลดโปรแกรม"
 
 #: src/interface.c:62
 msgid "Show _listing"
-msgstr ""
+msgstr "แ_สดงรายการคำสั่ง"
 
 #: src/interface.c:62
 msgid "Show the source code along with opcodes and operands in hex numbers"
-msgstr ""
+msgstr "แสดงซอร์สโค้ดพร้อมกับอ็อปโค้ดและอ็อปเปอแรนด์ในเลขฐานสิบหก"
 
 #: src/interface.c:63
 msgid "Step _in"
-msgstr ""
+msgstr "ก้าวเ_ข้า"
 
 #: src/interface.c:63
 msgid "Step in the code"
-msgstr ""
+msgstr "ก้าวเข้าโค้ด"
 
 #: src/interface.c:64
 msgid "Step o_ver"
-msgstr ""
+msgstr "ก้าวข้า_ม"
 
 #: src/interface.c:64
 msgid "Step over the code without calling functions"
-msgstr ""
+msgstr "ก้าวข้ามโค้ดโดยไม่เรียกฟังก์ชัน"
 
 #: src/interface.c:65
 msgid "Step _out"
-msgstr ""
+msgstr "ก้าว_ออก"
 
 #: src/interface.c:65
 msgid "Step out of the current function"
-msgstr ""
+msgstr "ก้าวออกจากฟังก์ชันปัจจุบัน"
 
 #: src/interface.c:66
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "_สลับจุดพัก"
 
 #: src/interface.c:66
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "สลับจุดพักที่บรรทัดปัจจุบัน"
 
 #: src/interface.c:67
 msgid "_Clear all breakpoints"
-msgstr ""
+msgstr "_ล้างจุดพักทั้งหมด"
 
 #: src/interface.c:67
 msgid "Remove all breakpoints"
-msgstr ""
+msgstr "ลบจุดพักทั้งหมด"
 
 #: src/interface.c:68
 msgid "Stop execution"
-msgstr ""
+msgstr "หยุดการทำงาน"
 
 #: src/interface.c:68
 msgid "Stop debugging"
-msgstr ""
+msgstr "หยุดการดีบั๊ก"
 
 #: src/interface.c:69
 msgid "_Contents"
-msgstr ""
+msgstr "เ_นื้อหา"
 
 #: src/interface.c:70
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "_บทเรียนแอสเซมเบลอร์"
 
 #: src/interface.c:75
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "แสดง/ซ่อนช่องด้านข้าง"
 
 #: src/interface.c:270
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
-msgstr ""
+msgstr "GNUSim8085 - โปรแกรมจำลองไมโครโปรเซสเซอร์ 8085"
 
 #: src/interface.c:479
 msgid "Registers"
-msgstr ""
+msgstr "เรจิสเตอร์"
 
 #: src/interface.c:562
 msgid "Flag"
-msgstr ""
+msgstr "แฟล็ก"
 
 #: src/interface.c:582 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
-msgstr ""
+msgstr "ฐานสิบ"
 
 #: src/interface.c:591
 msgid "Enter a decimal number"
-msgstr ""
+msgstr "ป้อนเลขฐานสิบ"
 
 #: src/interface.c:594
 msgid "To Hex"
-msgstr ""
+msgstr "เป็นฐานสิบหก"
 
 #: src/interface.c:597
 msgid "Convert this number to hexadecimal"
-msgstr ""
+msgstr "แปลงเลขนี้เป็นฐานสิบหก"
 
 #: src/interface.c:610
 msgid "Hex"
-msgstr ""
+msgstr "ฐานสิบหก"
 
 #: src/interface.c:619
 msgid "Enter a hexadecimal number"
-msgstr ""
+msgstr "ป้อนเลขฐานสิบหก"
 
 #: src/interface.c:622
 msgid "To Dec"
-msgstr ""
+msgstr "เป็นฐานสิบ"
 
 #: src/interface.c:625
 msgid "Convert this number to decimal"
-msgstr ""
+msgstr "แปลงเลขนี้เป็นฐานสิบ"
 
 #: src/interface.c:641
 msgid "Decimal - Hex Convertion"
-msgstr ""
+msgstr "การแปลงฐานสิบ - ฐานสิบหก"
 
 #: src/interface.c:665
 msgid "Change the port address to view here"
-msgstr ""
+msgstr "เปลี่ยนแอดเดรสพอร์ตเพื่อดูที่นี่"
 
 #: src/interface.c:672
 msgid "Enter new port value and click Update"
-msgstr ""
+msgstr "ป้อนค่าพอร์ตใหม่แล้วคลิก ปรับข้อมูล"
 
 #: src/interface.c:675
 msgid "Update Port Value"
-msgstr ""
+msgstr "ปรับค่าพอร์ต"
 
 #: src/interface.c:678
 msgid "Update the port value"
-msgstr ""
+msgstr "ปรับค่าพอร์ต"
 
 #: src/interface.c:694 src/interface.c:873
 msgid "I/O Ports"
-msgstr ""
+msgstr "พอร์ต I/O"
 
 #: src/interface.c:718
 msgid "Change the memory location to view here"
-msgstr ""
+msgstr "เปลี่ยนตำแหน่งหน่วยความจำเพื่อดู ที่นี่"
 
 #: src/interface.c:725
 msgid "Edit new value and click Update"
-msgstr ""
+msgstr "แก้ไขค่าใหม่แล้วคลิก ปรับข้อมูล"
 
 #: src/interface.c:728
 msgid "Update Memory"
-msgstr ""
+msgstr "ปรับข้อมูลหน่วยความจำ"
 
 #: src/interface.c:731
 msgid "Update the current memory location"
-msgstr ""
+msgstr "ปรับข้อมูลหน่วยความจำตำแหน่งปัจจุบัน"
 
 #: src/interface.c:747 src/interface.c:845
 msgid "Memory"
-msgstr ""
+msgstr "หน่วยความจำ"
 
 #: src/interface.c:766
 msgid "Load me at"
-msgstr ""
+msgstr "โหลดที่"
 
 #: src/interface.c:774
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr ""
+msgstr "ป้อนแอดเดรสของโปรแกรม ลงท้ายด้วย 'h' ถ้าเป็นแอดเดรสฐานสิบหก"
 
 #: src/interface.c:796
 msgid "Data"
-msgstr ""
+msgstr "ข้อมูล"
 
 #: src/interface.c:816
 msgid "Stack"
-msgstr ""
+msgstr "แสต็ก"
 
 #: src/interface.c:836
 msgid "KeyPad"
-msgstr ""
+msgstr "แป้นพิมพ์"
 
 #: src/interface.c:851 src/interface.c:879
 msgid "Start"
-msgstr ""
+msgstr "เริ่มต้น"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: src/interface.c:1089
 msgid "translator_credits"
-msgstr ""
+msgstr "Akom Chotiphantawanon, 2018"
 
 #: src/interface.c:1135
 msgid "Assembler Listing"
-msgstr ""
+msgstr "รายการแอสเซมเบลอร์"
 
 #: src/interface.c:1159
 msgid "Save to file"
-msgstr ""
+msgstr "บันทึกไปยังแฟ้ม"
 
 #: src/interface.c:1196
 msgid "Assembler Tutorial"
-msgstr ""
+msgstr "บทเรียนแอสเซมเบลอร์"
 
 #: src/interface.c:1240
 msgid "GNUSim8085 start with dialog"
-msgstr ""
+msgstr "GNUSim8085 เริ่มต้นด้วยกล่องโต้ตอบ"
 
 #: src/interface.c:1271
 msgid "1. How to use this simulator?"
-msgstr ""
+msgstr "1. โปรแกรมจำลองนี้ใช้อย่างไร?"
 
 #: src/interface.c:1279
 msgid "_Tutorial"
-msgstr ""
+msgstr "_บทเรียน"
 
 #: src/interface.c:1284
 msgid "A short tutorial on writing assembly code!"
-msgstr ""
+msgstr "บทเรียนสั้นๆ เกี่ยวกับการเขียนโค้ดแอสเซมบลี!"
 
 #: src/interface.c:1291
 msgid "2. Open an existing assembly program."
-msgstr ""
+msgstr "2. เปิดโปรแกรมภาษาแอสเซมบลีที่มีอยู่แล้ว"
 
 #: src/interface.c:1299
 msgid "_Open program"
-msgstr ""
+msgstr "เ_ปิดโปรแกรม"
 
 #: src/interface.c:1304
 msgid "Open an already saved program"
-msgstr ""
+msgstr "เปิดโปรแกรมที่ได้บันทึกไว้แล้ว"
 
 #: src/interface.c:1306
 msgid "What do you want to do now?"
-msgstr ""
+msgstr "คุณต้องทำอะไรตอนนี้?"
 
 #: src/interface.c:1316
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
 msgstr ""
+"อย่าลืมอ่านเอกสาร \n"
+"ที่ให้ไว้ในไดเรกทอรี \\\"doc\\\""
 
 #: src/interface.c:1373
 msgid "Choose a symbol"
-msgstr ""
+msgstr "เลือกสัญลักษณ์"
 
 #: src/interface.c:1399
 msgid "Enter a symbol or choose one from the lists"
-msgstr ""
+msgstr "ป้อนสัญลักษณ์หรือเลือกจากรายชื่อ"
 
 #: src/interface.c:1409
 msgid "Enter Symbol"
-msgstr ""
+msgstr "ป้อนสัญลักษณ์"
 
 #: src/interface.c:1424
 msgid "Variables List"
-msgstr ""
+msgstr "รายชื่อตัวแปร"
 
 #: src/interface.c:1439
 msgid "Functions List"
-msgstr ""
+msgstr "รายชื่อฟังก์ชัน"
 
 #: src/interface.c:1454
 msgid "Macros List"
-msgstr ""
+msgstr "รายชื่อแมโคร"
 
 #: src/interface.c:1493
 msgid "Choose a register"
-msgstr ""
+msgstr "เลือกเรจิสเตอร์"
 
 #: src/main.c:85
 msgid "Simulator: Idle"
-msgstr ""
+msgstr "โปรแกรมจำลอง: ไม่มีกิจกรรม"
 
 #: src/8085.c:251
 #, c-format
 msgid "Unwanted %c reached"
-msgstr ""
+msgstr "%c ไม่ต้องการถึง"
 
 #: src/8085-instructions.c:29
 msgid "Invalid Opcode"
-msgstr ""
+msgstr "อ็อปโค้ดไม่ถูกต้อง"
 
 #: src/8085-instructions.c:878
 msgid "Instruction 'RIM' Not implemented"
-msgstr ""
+msgstr "คำสั่ง 'RIM' ยังไม่รองรับ"
 
 #: src/8085-instructions.c:1029
 msgid "Instruction 'SIM' Not implemented"
-msgstr ""
+msgstr "คำสั่ง 'SIM' ยังไม่รองรับ"
 
 #: src/asm-source.c:111
 msgid "Assembling Aborted"
-msgstr ""
+msgstr "การแอสเซมบลีถูกยกเลิก"
 
 #: src/asm-source.c:179
 msgid "Label should be given to a code line"
-msgstr ""
+msgstr "ควรจะให้ป้ายชื่อกับบรรทัดของโค้ด"
 
 #: src/asm-source.c:209 src/asm-source.c:216 src/asm-source.c:223
 msgid "Incomplete opcode"
-msgstr ""
+msgstr "อ็อปโค้ดไม่สมบูรณ์"
 
 #: src/asm-source.c:238
 #, c-format
@@ -456,68 +461,73 @@ msgid ""
 "\n"
 "Neither Op not PsOp: [%s]"
 msgstr ""
+"\n"
+"ไม่ใช่ทั้ง Op และ PsOp: [%s]"
 
 #: src/asm-source.c:239
 msgid "Invalid Opcode or Pseudo op"
-msgstr ""
+msgstr "อ็อปโค้ดหรือโค้ดเทียมไม่ถูกต้อง"
 
 #: src/asm-source.c:248
 msgid "Opcode needs an user argument"
-msgstr ""
+msgstr "อ็อปโค้ดต้องการอาร์กิวเมนต์ของผู้ใช้"
 
 #: src/asm-source.c:256
 msgid "Extra characters in line"
-msgstr ""
+msgstr "อักขระพิเศษในบรรทัด"
 
 #: src/asm-source.c:422
 msgid "Expression error in symbol"
-msgstr ""
+msgstr "ข้อผิดพลาดของนิพจน์ในสัญลักษณ์"
 
 #: src/asm-source.c:436
 msgid "Undefined symbol"
-msgstr ""
+msgstr "สัญลักษณ์ไม่ได้กำหนดไว้"
 
 #: src/asm-gensym.c:75
 msgid "Redundant label"
-msgstr ""
+msgstr "ป้ายชื่อส่วนเกิน"
 
 #: src/asm-gensym.c:90
 msgid "Invalid Operand in EQU"
-msgstr ""
+msgstr "อ็อปเปอแรนด์ใน EQU ไม่ถูกต้อง"
 
 #: src/asm-gensym.c:102 src/asm-gensym.c:124
 msgid "Invalid operand"
-msgstr ""
+msgstr "อ็อปเปอแรนด์ไม่ถูกต้อง"
 
 #: src/asm-gensym.c:114
 msgid "Redefinition of symbol"
-msgstr ""
+msgstr "ข้อกำหนดใหม่ของสัญลักษณ์"
 
 #: src/asm-genobj.c:111
 msgid "Invalid data size"
-msgstr ""
+msgstr "ขนาดข้อมูลไม่ถูกต้อง"
 
 #: src/asm-genobj.c:116
 msgid "DS: Exceeded limit"
-msgstr ""
+msgstr "DS: เกินขีดจำกัด"
 
 #: src/asm-genobj.c:131
 msgid "DB: Operand error"
-msgstr ""
+msgstr "DB: ข้อผิดพลาดของอ็อปเปอแรนด์"
 
 #: src/asm-genobj.c:161
 msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
 msgstr ""
+"อ็อปเปอแรนด์หรือสัญลักษณ์ไม่ถูกต้อง "
+"ตรวจสอบว่าอ็อปเปอแรนด์เริ่มต้นด้วยตัวเลขหรือไม่ เช่น a0H \n"
+"ควรเป็น 0a0H"
 
 #: src/8085-asm.c:87
 msgid "Program assembled successfully"
-msgstr ""
+msgstr "แปลโปรแกรมแอสเซมบลีเรียบร้อยแล้ว"
 
 #: src/bridge.c:37
 msgid "Simulator: Program running"
-msgstr ""
+msgstr "โปรแกรมจำลอง: โปรแกรมกำลังทำงาน"
 
 #: src/bridge.c:187
 #, c-format
@@ -530,79 +540,87 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source progam."
 msgstr ""
+"การทำงานแยกไปยังตำแหน่งหน่วยความจำไม่ถูกต้อง <%xH> การทำงานจะหยุดลง!\n"
+"\n"
+"ตรวจสอบว่าคุณได้รวมคำสั่ง \\\"hlt\\\" ไว้ตอนท้ายโปรแกรมของคุณ "
+"แล้วซอร์สโปรแกรมของคุณไม่ว่างเปล่า ตรวจสอบตรรกะโปรแกรมของคุณด้วย "
+"ถ้าคุณมั่นใจมากอาจมีบั๊กใน GNUSim8085 "
+"ถ้าเป็นเช่นนั้นคุณควรส่งสำเนาของซอร์สโปรแกรมของคุณ"
 
 #: src/bridge.c:308
 msgid "Assembler: running"
-msgstr ""
+msgstr "แอสเซมเบลอร์: กำลังทำงาน"
 
 #: src/gui-list-message.c:96
 msgid "Line No"
-msgstr ""
+msgstr "หมายเลขบรรทัด"
 
 #: src/gui-list-message.c:97
 msgid "Assembler Message"
-msgstr ""
+msgstr "ข้อความแอสเซมเบลอร์"
 
 #: src/gui-list-data.c:76
 msgid "Address"
-msgstr ""
+msgstr "แอดเดรส"
 
 #: src/gui-list-data.c:77
 msgid "Variable"
-msgstr ""
+msgstr "ตัวแปร"
 
 #: src/gui-list-data.c:78 src/gui-list-data.c:79 src/gui-list-stack.c:83
 #: src/gui-list-stack.c:84
 msgid "Value"
-msgstr ""
+msgstr "ค่า"
 
 #: src/asm-listing.c:208
 msgid "; Assembler generated listing; Not editable.\n"
-msgstr ""
+msgstr "; แอสเซมเบลอร์สร้างรายการแล้ว; ไม่สามารถแก้ไขได้\n"
 
 #: src/asm-listing.c:209
 #, c-format
 msgid "; Generated by GNUSim8085: %s\n"
-msgstr ""
+msgstr "; สร้างโดย GNUSim8085: %s\n"
 
 #: src/asm-listing.c:245
 msgid ""
 ";Assembler Listing (Do Not assemble)\n"
 "\n"
 msgstr ""
+";รายการแอสเซมเบลอร์ (ไม่ใช่แอสเซมบลี)\n"
+"\n"
 
 #: src/file-op.c:63 src/file-op-gio.c:65
 #, c-format
 msgid "Failed to open <%s>"
-msgstr ""
+msgstr "เปิด <%s> ไม่สำเร็จ"
 
 #: src/file-op.c:142
 msgid "File already exists; overwrite it?"
-msgstr ""
+msgstr "แฟ้มมีอยู่ก่อนแล้ว เขียนทับหรือไม่?"
 
 #: src/file-op.c:157 src/file-op-gio.c:152
 #, c-format
 msgid "Failed to save <%s>"
-msgstr ""
+msgstr "บันทึก <%s> ไม่สำเร็จ"
 
 #: src/file-op.c:328 src/file-op-gio.c:334
 msgid "Failed to save listing file"
-msgstr ""
+msgstr "บันทึกแฟ้มรายการไม่สำเร็จ"
 
 #: src/gui-list-stack.c:81
 msgid "Stack Loc"
-msgstr ""
+msgstr "ตำแหน่งสแต็ก"
 
 #: src/gui-list-stack.c:82
 msgid "Proc/Reg"
-msgstr ""
+msgstr "Proc/Reg"
 
 #: src/gui-list-stack.c:117
 msgid "Stack size exceeded.  Stop the execution"
-msgstr ""
+msgstr "สแต็กขนาดเกิน หยุดการทำงาน"
 
 #: src/gui-list-stack.c:131
 msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
-msgstr ""
+msgstr "มีจำนวน POP มากกว่า PUSH หยุดการทำงานและตรวจสอบตรรกะโปรแกรมของคุณ"

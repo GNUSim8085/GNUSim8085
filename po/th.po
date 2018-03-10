@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.3.8\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-10-21 10:44+0530\n"
-"PO-Revision-Date: 2018-03-10 11:39+0000\n"
+"PO-Revision-Date: 2018-03-11 12:39+0000\n"
 "Last-Translator: Akom Chotiphantawanon <knight2000@gmail.com>\n"
 "Language-Team: Thai "
 "<https://hosted.weblate.org/projects/gnusim8085/translations/th/>\n"
@@ -33,19 +33,19 @@ msgstr "เกิดข้อผิดพลาดขณะเรียกทำ
 
 #: src/callbacks.c:298
 msgid "Error in step in"
-msgstr "เกิดข้อผิดพลาดใน \"ก้าวเข้า\""
+msgstr "เกิดข้อผิดพลาดในก้าวเข้า"
 
 #: src/callbacks.c:313
 msgid "Error in step over"
-msgstr "เกิดข้อผิดพลาดใน \"ก้าวข้าม\""
+msgstr "เกิดข้อผิดพลาดในก้าวข้าม"
 
 #: src/callbacks.c:328
 msgid "Error in step out"
-msgstr "เกิดข้อผิดพลาดใน \"ก้าวออก\""
+msgstr "เกิดข้อผิดพลาดในก้าวออก"
 
 #: src/callbacks.c:420
 msgid "Enter a valid number within range"
-msgstr "ป้อนตัวเลขที่ถูกต้องในช่วง"
+msgstr "ป้อนตัวเลขในช่วง"
 
 #: src/callbacks.c:630 src/callbacks.c:648
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"

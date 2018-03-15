@@ -17,6 +17,8 @@ DISTCLEANFILES = *.exe *.gz
 gnomemenudir = $(datadir)/applications
 gnomemenu_DATA = GNUSim8085.desktop
 
+README: README.md
+
 # Copy all the spec files. Of cource, only one is actually used.
 dist-hook:
 	for specfile in *.spec; do \

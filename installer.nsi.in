@@ -80,6 +80,7 @@ InstallDir "$PROGRAMFILES\GNUSim8085"
 !insertmacro MUI_LANGUAGE "PortugueseBR"
 !insertmacro MUI_LANGUAGE "Russian"
 !insertmacro MUI_LANGUAGE "Spanish"
+!insertmacro MUI_LANGUAGE "Thai"
 
 !ifdef INC_GTK
   var gtk_mode  ; "public" or "none"

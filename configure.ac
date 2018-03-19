@@ -58,22 +58,26 @@ AC_MSG_CHECKING([whether documentation can be changed and compiled])
 AC_MSG_RESULT($can_build_documentation)
 AM_CONDITIONAL([BUILD_HELP], test "$can_build_documentation" = "yes")
 
-gtk_api="gtk+-2.0"
-gtksourceview_api="gtksourceview-2.0"
-gtk_required="2.24.0"
-gtksourceview_required="2.10.0"
-
-AC_ARG_WITH([gtk3],
-	AS_HELP_STRING([--with-gtk3],[Build with GTK3 (default: yes, Windows build ignores this option)]),
-	[with_gtk3=$withval],
-	[with_gtk3=yes])
-if test "x$WIN32" != "xyes"; then
-if test "x$with_gtk3" = "xyes"; then
 gtk_api="gtk+-3.0"
 gtksourceview_api="gtksourceview-3.0"
 gtk_required="3.10.0"
 gtksourceview_required="3.10.0"
+
+AC_ARG_WITH([gtk2],
+	AS_HELP_STRING([--with-gtk2],[Build with GTK2 (default: no, Windows build ignores this option and always builds with GTK2)]),
+	[with_gtk2=$withval],
+	[with_gtk2=no])
+if test "x$with_gtk2" = "xyes"; then
+gtk_api="gtk+-2.0"
+gtksourceview_api="gtksourceview-2.0"
+gtk_required="2.24.0"
+gtksourceview_required="2.10.0"
 fi
+if test "x$WIN32" = "xyes"; then
+gtk_api="gtk+-2.0"
+gtksourceview_api="gtksourceview-2.0"
+gtk_required="2.24.0"
+gtksourceview_required="2.10.0"
 fi
 AC_SUBST(GTK_VERSION_REQ, $gtk_required)
 

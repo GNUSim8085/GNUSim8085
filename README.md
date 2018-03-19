@@ -26,8 +26,8 @@ the program startup.
 ## Dependencies
 
 Build dependencies (Mandatory)
-- GTK2 (>= 2.24) or GTK3 (>= 3.0.0) development package
-- GtkSourceView2 (>= 2.10) or GtkSourceView3 (>= 3.0) development package
+- GTK3 (>= 3.10.0) or GTK2 (>= 2.24) development package
+- GtkSourceView3 (>= 3.10.0) or GtkSourceView2 (>= 2.10) development package
 
 Build dependencies (Optional)
 - gettext (>= 0.18)

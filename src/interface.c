@@ -1112,6 +1112,9 @@ create_dialog_about (void)
 						 "documenters", documenters,
 						 "translator-credits", translators,
 						 "border-width", 5,
+#if GTK_CHECK_VERSION (3, 6, 0)
+						 "license-type", GTK_LICENSE_GPL_2_0,
+#endif
 						 NULL);
 
   if (dialog_about_icon_pixbuf)
@@ -1150,7 +1153,7 @@ create_window_listing (void)
   gtk_container_add (GTK_CONTAINER (window_listing), listing_vbox);
   gtk_container_set_border_width (GTK_CONTAINER (listing_vbox), 5);
 
-  hbuttonbox1 = gtk_hbutton_box_new ();
+  hbuttonbox1 = HBUTTONBOX();
   gtk_widget_show (hbuttonbox1);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (hbuttonbox1), GTK_BUTTONBOX_CENTER);
   gtk_box_pack_start (GTK_BOX (listing_vbox), hbuttonbox1, FALSE, FALSE, 0);

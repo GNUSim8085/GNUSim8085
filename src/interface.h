@@ -39,9 +39,13 @@ GtkWidget* create_dialog_ireg (void);
 gtk_box_new (GTK_ORIENTATION_HORIZONTAL, spacing)
 #define VBOX(spacing) \
 gtk_box_new (GTK_ORIENTATION_VERTICAL, spacing)
+#define HBUTTONBOX() \
+gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL)
 #else
 #define HBOX(spacing) \
 gtk_hbox_new (FALSE, spacing)
 #define VBOX(spacing) \
 gtk_vbox_new (FALSE, spacing)
+#define HBUTTONBOX() \
+gtk_hbutton_box_new ()
 #endif

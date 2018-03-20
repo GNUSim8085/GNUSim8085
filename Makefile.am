@@ -12,12 +12,13 @@ gnusim8085_doc_DATA = \
 
 EXTRA_DIST = config.rpath m4/ChangeLog  $(gnusim8085doc_DATA)
 
-DISTCLEANFILES = *.exe *.gz
+DISTCLEANFILES = README *.exe *.gz
 
 gnomemenudir = $(datadir)/applications
 gnomemenu_DATA = GNUSim8085.desktop
 
 README: README.md
+	cp README.md README
 
 # Copy all the spec files. Of cource, only one is actually used.
 dist-hook:

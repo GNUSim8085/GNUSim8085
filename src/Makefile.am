@@ -6,10 +6,7 @@ AM_CPPFLAGS = \
         $(GTKSOURCEVIEW_CFLAGS)
 
 gnusim8085_CFLAGS =\
-	 -DPACKAGE_DOC_DIR=\"$(docdir)\"\
-	 -Wall\
-	 -O1\
-	 -g
+	 -DPACKAGE_DOC_DIR=\"$(docdir)\"
 
 if WIN32
 gnusim8085_CFLAGS += \

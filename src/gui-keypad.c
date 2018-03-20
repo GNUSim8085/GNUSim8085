@@ -193,7 +193,13 @@ create_me (void)
   opcode = asm_id_get_opcode ();
 
   /* Construct a table of cells */
+#if GTK_CHECK_VERSION (3, 4, 0)
+  table = gtk_grid_new ();
+  gtk_grid_set_column_homogeneous (GTK_GRID (table), TRUE);
+  gtk_grid_set_row_homogeneous (GTK_GRID (table), TRUE);
+#else
   table = gtk_table_new (TABLE_ROWS, TABLE_COLS, TRUE);
+#endif
 	
   g_signal_connect (table, "focus", (GCallback) cb_focus, NULL);
 	
@@ -215,8 +221,12 @@ create_me (void)
 		  gtk_widget_set_tooltip_text (button, op->op_desc);
 		  g_signal_connect (button, "clicked",
 							(GCallback) cb_clicked, op);
+#if GTK_CHECK_VERSION (3, 4, 0)
+		  gtk_grid_attach (GTK_GRID (table), button, j, i, 1, 1);
+#else
 		  gtk_table_attach_defaults (GTK_TABLE (table), button,
 									 j, j + 1, i, i + 1);
+#endif
 		}
 	}
  breakout:

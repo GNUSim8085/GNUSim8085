@@ -80,6 +80,7 @@ gtk_required="2.24.0"
 gtksourceview_required="2.10.0"
 fi
 AC_SUBST(GTK_VERSION_REQ, $gtk_required)
+AC_SUBST(GTKSOURCEVIEW_API, $gtksourceview_api)
 
 AC_ARG_ENABLE([gio],
 	AS_HELP_STRING([--enable-gio],[Enable gio based file handling (default: enabled)]),

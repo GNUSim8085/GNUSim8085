@@ -73,12 +73,6 @@ gtksourceview_api="gtksourceview-2.0"
 gtk_required="2.24.0"
 gtksourceview_required="2.10.0"
 fi
-if test "x$WIN32" = "xyes"; then
-gtk_api="gtk+-2.0"
-gtksourceview_api="gtksourceview-2.0"
-gtk_required="2.24.0"
-gtksourceview_required="2.10.0"
-fi
 AC_SUBST(GTK_VERSION_REQ, $gtk_required)
 AC_SUBST(GTKSOURCEVIEW_API, $gtksourceview_api)
 

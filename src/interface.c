@@ -487,75 +487,81 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox15), frame_flags, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (frame_flags), 5);
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+  table_flags = gtk_grid_new ();
+  gtk_grid_set_column_homogeneous (GTK_GRID (table_flags), TRUE);
+  gtk_grid_set_row_homogeneous (GTK_GRID (table_flags), TRUE);
+#else
   table_flags = gtk_table_new (5, 2, TRUE);
+#endif
   gtk_widget_show (table_flags);
   gtk_container_add (GTK_CONTAINER (frame_flags), table_flags);
   gtk_container_set_border_width (GTK_CONTAINER (table_flags), 5);
-  gtk_table_set_row_spacings (GTK_TABLE (table_flags), 10);
-  gtk_table_set_col_spacings (GTK_TABLE (table_flags), 5);
+  TABLE_SET_ROW_SPACING (table_flags, 10);
+  TABLE_SET_COLUMN_SPACING (table_flags, 5);
 
   label129 = gtk_label_new ("<i>S</i>");
   gtk_widget_show (label129);
-  gtk_table_attach (GTK_TABLE (table_flags), label129, 0, 1, 0, 1,
+  TABLE_ATTACH (table_flags, label129, 0, 1, 0, 1,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label129), TRUE);
 
   label130 = gtk_label_new ("<i>Z</i>");
   gtk_widget_show (label130);
-  gtk_table_attach (GTK_TABLE (table_flags), label130, 0, 1, 1, 2,
+  TABLE_ATTACH (table_flags, label130, 0, 1, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label130), TRUE);
 
   label131 = gtk_label_new ("<i>AC</i>");
   gtk_widget_show (label131);
-  gtk_table_attach (GTK_TABLE (table_flags), label131, 0, 1, 2, 3,
+  TABLE_ATTACH (table_flags, label131, 0, 1, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label131), TRUE);
 
   label132 = gtk_label_new ("<i>P</i>");
   gtk_widget_show (label132);
-  gtk_table_attach (GTK_TABLE (table_flags), label132, 0, 1, 3, 4,
+  TABLE_ATTACH (table_flags, label132, 0, 1, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label132), TRUE);
 
   label133 = gtk_label_new ("<i>C</i>");
   gtk_widget_show (label133);
-  gtk_table_attach (GTK_TABLE (table_flags), label133, 0, 1, 4, 5,
+  TABLE_ATTACH (table_flags, label133, 0, 1, 4, 5,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label133), TRUE);
 
   main_flag_s = gtk_label_new ("0");
   gtk_widget_show (main_flag_s);
-  gtk_table_attach (GTK_TABLE (table_flags), main_flag_s, 1, 2, 0, 1,
+  TABLE_ATTACH (table_flags, main_flag_s, 1, 2, 0, 1,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_flag_z = gtk_label_new ("0");
   gtk_widget_show (main_flag_z);
-  gtk_table_attach (GTK_TABLE (table_flags), main_flag_z, 1, 2, 1, 2,
+  TABLE_ATTACH (table_flags, main_flag_z, 1, 2, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_flag_ac = gtk_label_new ("0");
   gtk_widget_show (main_flag_ac);
-  gtk_table_attach (GTK_TABLE (table_flags), main_flag_ac, 1, 2, 2, 3,
+  TABLE_ATTACH (table_flags, main_flag_ac, 1, 2, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_flag_p = gtk_label_new ("0");
   gtk_widget_show (main_flag_p);
-  gtk_table_attach (GTK_TABLE (table_flags), main_flag_p, 1, 2, 3, 4,
+  TABLE_ATTACH (table_flags, main_flag_p, 1, 2, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_flag_c = gtk_label_new ("0");
   gtk_widget_show (main_flag_c);
-  gtk_table_attach (GTK_TABLE (table_flags), main_flag_c, 1, 2, 4, 5,
+  TABLE_ATTACH (table_flags, main_flag_c, 1, 2, 4, 5,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 

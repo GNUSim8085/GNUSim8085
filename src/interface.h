@@ -49,3 +49,23 @@ gtk_vbox_new (FALSE, spacing)
 #define HBUTTONBOX() \
 gtk_hbutton_box_new ()
 #endif
+
+#if GTK_CHECK_VERSION (3, 4, 0)
+#define TABLE_ATTACH(table, widget, left, right, top, bottom, xoptions, yoptions, xpadding, ypadding) \
+gtk_grid_attach (GTK_GRID (table), widget, left, top, right - left, bottom - top)
+#define TABLE_ATTACH_DEFAULTS(table, widget, left, right, top, bottom) \
+gtk_grid_attach (GTK_GRID (table), widget, left, top, right - left, bottom - top)
+#define TABLE_SET_ROW_SPACING(table, spacing) \
+gtk_grid_set_row_spacing (GTK_GRID (table), spacing)
+#define TABLE_SET_COLUMN_SPACING(table, spacing) \
+gtk_grid_set_column_spacing (GTK_GRID (table), spacing)
+#else
+#define TABLE_ATTACH(table, widget, left, right, top, bottom, xoptions, yoptions, xpadding, ypadding) \
+gtk_table_attach (GTK_TABLE (table), widget, left, right, top, bottom, xoptions, yoptions, xpadding, ypadding)
+#define TABLE_ATTACH_DEFAULTS(table, widget, left, right, top, bottom) \
+gtk_table_attach_defaults (GTK_TABLE (table), widget, left, right, top, bottom)
+#define TABLE_SET_ROW_SPACING(table, spacing) \
+gtk_table_set_row_spacings (GTK_TABLE (table), spacing)
+#define TABLE_SET_COLUMN_SPACING(table, spacing) \
+gtk_table_set_col_spacings (GTK_TABLE (table), spacing)
+#endif

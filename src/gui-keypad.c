@@ -23,6 +23,7 @@
 #include "asm-id.h"
 #include "gui-app.h"
 #include "gui-input-symbol.h"
+#include "interface.h"
 #include "bridge.h"
 
 static GtkWidget *table;
@@ -221,12 +222,7 @@ create_me (void)
 		  gtk_widget_set_tooltip_text (button, op->op_desc);
 		  g_signal_connect (button, "clicked",
 							(GCallback) cb_clicked, op);
-#if GTK_CHECK_VERSION (3, 4, 0)
-		  gtk_grid_attach (GTK_GRID (table), button, j, i, 1, 1);
-#else
-		  gtk_table_attach_defaults (GTK_TABLE (table), button,
-									 j, j + 1, i, i + 1);
-#endif
+		  TABLE_ATTACH_DEFAULTS (table, button, j, j + 1, i, i + 1);
 		}
 	}
  breakout:

@@ -6,7 +6,8 @@
 # to set icon for installer. You may have to disable icon if you are trying to
 # build installer.
 
-# Pass -DINC_GTK to makensis to enable inclusion of GTK+ runtime.
+# Pass -DINC_GTK to makensis to enable inclusion of GTK+ runtime installer.
+# Pass -DINC_EVERYTHING to makensis to include all the necessary files.
 
 # Use modern UI
 !include MUI2.nsh
@@ -29,6 +30,9 @@ Name GNUSim8085
   OutFile @PACKAGE@-@VERSION@-with-gtk-installer.exe
 !else
   OutFile @PACKAGE@-@VERSION@-without-gtk-installer.exe
+!endif
+!ifdef INC_EVERYTHING
+  OutFile @PACKAGE@-@VERSION@-installer.exe
 !endif
 !define GTK_INSTALLER_EXE "gtk2-runtime-2.24.10-2012-10-10-ash.exe"
 !define GTK_VERSION_REQ "@GTK_VERSION_REQ@"
@@ -111,6 +115,24 @@ SectionIn RO
   SetOutPath $INSTDIR
   !system 'make'
   !system 'make DESTDIR=`pwd`/win32 install'
+!ifdef INC_EVERYTHING
+  !system 'cp ${MINGW_HOME}/bin/freetype*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/intl*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/lib*win*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libatk*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libcairo*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libexpat*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libfontconfig*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libgdk*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libgio*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libglib*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libgmodule*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libgobject*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libgthread*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libpango*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/libpng*.dll win32/bin/'
+  !system 'cp ${MINGW_HOME}/bin/zlib1*.dll win32/bin/'
+!endif
   !system 'cp ${MINGW_HOME}/bin/iconv.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/lib${GTKSOURCEVIEW_API}*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/libxml2*.dll win32/bin/libxml2-2.dll'
@@ -235,6 +257,9 @@ FunctionEnd
 !endif  ; INC_GTK
 
 Function AskForGtk
+  !ifdef INC_EVERYTHING
+    goto have_gtk
+  !endif
   ${If} $have_gtk == "0"
     goto no_gtk
   ${Else}

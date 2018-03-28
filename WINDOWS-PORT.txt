@@ -10,6 +10,17 @@ https://wiki.gnome.org/Projects/GTK%2B/Win32/Apps
 Debian derivative.
 
 
+64 bit Fedora installation:
+Pre-requisites:
+1. Install package mingw32-gtksourceview3 and mingw32-nsis
+
+Build:
+1. Use configure command as follows
+   ./configure --host=i686-w64-mingw32 --prefix=/
+2. Execute command "make". This builds the application.
+3. Execute command "makensis -DINC_EVERYTHING -DMINGW_HOME=/usr/i686-w64-mingw32/sys-root/mingw installer.nsi".
+   This builds the installer.
+
 64 bit Ubuntu installation:
 Pre-requisites:
 1. Install package mingw-w64 and nsis

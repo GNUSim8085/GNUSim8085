@@ -329,149 +329,155 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox15), frame_registers, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (frame_registers), 5);
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+  table_registers = gtk_grid_new ();
+  gtk_grid_set_column_homogeneous (GTK_GRID (table_registers), TRUE);
+  gtk_grid_set_row_homogeneous (GTK_GRID (table_registers), TRUE);
+#else
   table_registers = gtk_table_new (8, 3, TRUE);
+#endif
   gtk_widget_show (table_registers);
   gtk_container_add (GTK_CONTAINER (frame_registers), table_registers);
   gtk_container_set_border_width (GTK_CONTAINER (table_registers), 5);
-  gtk_table_set_row_spacings (GTK_TABLE (table_registers), 10);
-  gtk_table_set_col_spacings (GTK_TABLE (table_registers), 6);
+  TABLE_SET_ROW_SPACING (table_registers, 10);
+  TABLE_SET_COLUMN_SPACING (table_registers, 6);
 
   label107 = gtk_label_new ("<i>BC</i>");
   gtk_widget_show (label107);
-  gtk_table_attach (GTK_TABLE (table_registers), label107, 0, 1, 1, 2,
+  TABLE_ATTACH (table_registers, label107, 0, 1, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label107), TRUE);
 
   label108 = gtk_label_new ("<i>DE</i>");
   gtk_widget_show (label108);
-  gtk_table_attach (GTK_TABLE (table_registers), label108, 0, 1, 2, 3,
+  TABLE_ATTACH (table_registers, label108, 0, 1, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label108), TRUE);
 
   label109 = gtk_label_new ("<i>HL</i>");
   gtk_widget_show (label109);
-  gtk_table_attach (GTK_TABLE (table_registers), label109, 0, 1, 3, 4,
+  TABLE_ATTACH (table_registers, label109, 0, 1, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label109), TRUE);
 
   label110 = gtk_label_new ("<i>PSW</i>");
   gtk_widget_show (label110);
-  gtk_table_attach (GTK_TABLE (table_registers), label110, 0, 1, 4, 5,
+  TABLE_ATTACH (table_registers, label110, 0, 1, 4, 5,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label110), TRUE);
 
   label111 = gtk_label_new ("<i>PC</i>");
   gtk_widget_show (label111);
-  gtk_table_attach (GTK_TABLE (table_registers), label111, 0, 1, 5, 6,
+  TABLE_ATTACH (table_registers, label111, 0, 1, 5, 6,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label111), TRUE);
 
   label112 = gtk_label_new ("<i>SP</i>");
   gtk_widget_show (label112);
-  gtk_table_attach (GTK_TABLE (table_registers), label112, 0, 1, 6, 7,
+  TABLE_ATTACH (table_registers, label112, 0, 1, 6, 7,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label112), TRUE);
 
   label113 = gtk_label_new ("<i>Int-Reg</i>");
   gtk_widget_show (label113);
-  gtk_table_attach (GTK_TABLE (table_registers), label113, 0, 1, 7, 8,
+  TABLE_ATTACH (table_registers, label113, 0, 1, 7, 8,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label113), TRUE);
 
   main_reg_a = gtk_label_new ("00");
   gtk_widget_show (main_reg_a);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_a, 1, 3, 0, 1,
+  TABLE_ATTACH (table_registers, main_reg_a, 1, 3, 0, 1,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_b = gtk_label_new ("00");
   gtk_widget_show (main_reg_b);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_b, 1, 2, 1, 2,
+  TABLE_ATTACH (table_registers, main_reg_b, 1, 2, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_c = gtk_label_new ("00");
   gtk_widget_show (main_reg_c);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_c, 2, 3, 1, 2,
+  TABLE_ATTACH (table_registers, main_reg_c, 2, 3, 1, 2,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_d = gtk_label_new ("00");
   gtk_widget_show (main_reg_d);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_d, 1, 2, 2, 3,
+  TABLE_ATTACH (table_registers, main_reg_d, 1, 2, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_e = gtk_label_new ("00");
   gtk_widget_show (main_reg_e);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_e, 2, 3, 2, 3,
+  TABLE_ATTACH (table_registers, main_reg_e, 2, 3, 2, 3,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_h = gtk_label_new ("00");
   gtk_widget_show (main_reg_h);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_h, 1, 2, 3, 4,
+  TABLE_ATTACH (table_registers, main_reg_h, 1, 2, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_l = gtk_label_new ("00");
   gtk_widget_show (main_reg_l);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_l, 2, 3, 3, 4,
+  TABLE_ATTACH (table_registers, main_reg_l, 2, 3, 3, 4,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_pswh = gtk_label_new ("00");
   gtk_widget_show (main_reg_pswh);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pswh, 1, 2, 4, 5,
+  TABLE_ATTACH (table_registers, main_reg_pswh, 1, 2, 4, 5,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_pswl = gtk_label_new ("00");
   gtk_widget_show (main_reg_pswl);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pswl, 2, 3, 4, 5,
+  TABLE_ATTACH (table_registers, main_reg_pswl, 2, 3, 4, 5,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_pch = gtk_label_new ("00");
   gtk_widget_show (main_reg_pch);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pch, 1, 2, 5, 6,
+  TABLE_ATTACH (table_registers, main_reg_pch, 1, 2, 5, 6,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_pcl = gtk_label_new ("00");
   gtk_widget_show (main_reg_pcl);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_pcl, 2, 3, 5, 6,
+  TABLE_ATTACH (table_registers, main_reg_pcl, 2, 3, 5, 6,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_sph = gtk_label_new ("00");
   gtk_widget_show (main_reg_sph);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_sph, 1, 2, 6, 7,
+  TABLE_ATTACH (table_registers, main_reg_sph, 1, 2, 6, 7,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_spl = gtk_label_new ("00");
   gtk_widget_show (main_reg_spl);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_spl, 2, 3, 6, 7,
+  TABLE_ATTACH (table_registers, main_reg_spl, 2, 3, 6, 7,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   main_reg_int_reg = gtk_label_new ("00");
   gtk_widget_show (main_reg_int_reg);
-  gtk_table_attach (GTK_TABLE (table_registers), main_reg_int_reg, 1, 3, 7, 8,
+  TABLE_ATTACH (table_registers, main_reg_int_reg, 1, 3, 7, 8,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
 
   label106 = gtk_label_new ("<i>A</i>");
   gtk_widget_show (label106);
-  gtk_table_attach (GTK_TABLE (table_registers), label106, 0, 1, 0, 1,
+  TABLE_ATTACH (table_registers, label106, 0, 1, 0, 1,
                     GTK_FILL,
                     GTK_FILL, 0, 0);
   gtk_label_set_use_markup (GTK_LABEL (label106), TRUE);

@@ -22,7 +22,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <gtk/gtk.h>
+#if GTK_CHECK_VERSION (3, 0, 0)
+#include <gtksourceview/gtksource.h>
+#else
 #include <gtksourceview/gtksourceview.h>
+#endif
 
 
 gboolean

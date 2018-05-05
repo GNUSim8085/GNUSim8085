@@ -20,11 +20,9 @@
 */
 //Instructions TODO: RIM, SIM, ~RST
 
-#ifdef HAVE_CONFIG_
-#  include <config.h>
-#endif
 
 #include "8085-instructions.h"
+#include "config.h"
 
 #define ERR_IV_OP _("Invalid Opcode")
 

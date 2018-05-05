@@ -21,14 +21,10 @@
 
 /* bridge.c is really an uglier code! sorry ;-| */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
-
 #include "bridge.h"
-
 #include "8085-asm.h"
 #include "8085.h"
+#include "config.h"
 #include "gui-app.h"
 #include "8085-link.h"
 #include "gui-view.h"

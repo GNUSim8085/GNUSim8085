@@ -19,13 +19,10 @@
   02110-1301, USA.
 */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
-
 #include "asm-gensym.h"
 #include "asm-ds-symtable.h"
 #include "asm-err-comm.h"
+#include "config.h"
 
 gboolean
 asm_gensym_generate (AsmSource * src, gint sa)

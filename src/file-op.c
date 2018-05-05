@@ -19,10 +19,7 @@
   02110-1301, USA.
 */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
-
+#include "config.h"
 #include "file-op.h"
 #include "gui-editor.h"
 #include "gui-app.h"

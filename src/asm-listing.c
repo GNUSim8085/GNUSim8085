@@ -19,12 +19,9 @@
   02110-1301, USA.
 */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
-
 #include "asm-listing.h"
 #include "asm-ds-limits.h"
+#include "config.h"
 
 static GString *
 get_hex_list (const gchar * str, gint * total)

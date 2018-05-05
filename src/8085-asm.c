@@ -19,13 +19,10 @@
   02110-1301, USA.
 */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
-
 #include "8085-asm.h"
 #include "8085.h"
 #include "8085-link.h"
+#include "config.h"
 #include "gui-list-message.h"
 #include "gui-app.h"
 #include "file-op.h"

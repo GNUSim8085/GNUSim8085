@@ -19,13 +19,11 @@
   02110-1301, USA.
 */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
 
 #include "8085.h"
 #include "8085-instructions.h"
 #include "8085-memblock.h"
+#include "config.h"
 
 /* errors */
 char *err_regname = "None of RegName"; 

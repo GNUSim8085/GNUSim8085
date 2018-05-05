@@ -19,15 +19,12 @@
   02110-1301, USA.
 */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
-
 #include "asm-source.h"
 #include "asm-err-comm.h"
 #include "asm-token.h"
 #include "asm-id.h"
 #include "asm-ds-symtable.h"
+#include "config.h"
 
 void
 disp_list (AsmSource * self)

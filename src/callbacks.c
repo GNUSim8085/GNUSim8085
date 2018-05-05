@@ -18,11 +18,9 @@
   Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA
   02110-1301, USA.
 */
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
 
 #include "callbacks.h"
+#include "config.h"
 #include "interface.h"
 #include "gui-app.h"
 #include "gui-editor.h"

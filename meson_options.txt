@@ -1,0 +1,3 @@
+option('enable-gio', type : 'boolean', value : true, description : 'Enable gio based file handling')
+option('with-gtk2', type : 'boolean', value : false, description : 'Build with GTK2')
+

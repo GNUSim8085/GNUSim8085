@@ -1,0 +1,27 @@
+language: c
+matrix:
+        include:
+                # Default build
+                - os: linux
+                  dist: trusty
+                  addons:
+                          apt:
+                                  packages:
+                                          - libgtksourceview-3.0-dev
+                                          - gettext
+                                          - xsltproc
+                                          - docbook-xsl
+                  script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
+
+                # GTK2 build
+                - os: linux
+                  dist: trusty
+                  addons:
+                          apt:
+                                  packages:
+                                          - libgtksourceview2.0-dev
+                                          - gettext
+                                          - xsltproc
+                                          - docbook-xsl
+                  script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall --with-gtk2 && make && make install
+

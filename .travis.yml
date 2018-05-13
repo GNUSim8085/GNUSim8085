@@ -31,6 +31,9 @@ matrix:
                 - os: osx
                   before_install:
                           - brew install pkg-config
+                          - brew install vala
+                          - brew install gobject-introspection
+                          - brew install intltool
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -41,6 +44,9 @@ matrix:
                   osx_image: xcode9.3
                   before_install:
                           - brew install pkg-config
+                          - brew install vala
+                          - brew install gobject-introspection
+                          - brew install intltool
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl

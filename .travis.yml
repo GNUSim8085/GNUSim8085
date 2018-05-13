@@ -29,7 +29,8 @@ matrix:
 
                 # Default build on OS X
                 - os: osx
-                  install:
+                  before_install:
+                          - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -38,7 +39,8 @@ matrix:
                 # Default build on OS X 10.13 (High Sierra)
                 - os: osx
                   osx_image: xcode9.3
-                  install:
+                  before_install:
+                          - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl

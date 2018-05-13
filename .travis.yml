@@ -35,6 +35,10 @@ matrix:
                           - brew install glib
                           - brew install cairo
                           - brew install libffi
+                          - brew install gdbm
+                          - brew install openssl
+                          - brew install readline
+                          - brew install sqlite
                           - brew install python@2
                           - brew install gobject-introspection
                           - brew install intltool
@@ -52,6 +56,10 @@ matrix:
                           - brew install glib
                           - brew install cairo
                           - brew install libffi
+                          - brew install gdbm
+                          - brew install openssl
+                          - brew install readline
+                          - brew install sqlite
                           - brew install python@2
                           - brew install gobject-introspection
                           - brew install intltool

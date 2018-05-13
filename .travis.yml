@@ -32,6 +32,10 @@ matrix:
                   before_install:
                           - brew install pkg-config
                           - brew install vala
+                          - brew install glib
+                          - brew install cairo
+                          - brew install libffi
+                          - brew install python@2
                           - brew install gobject-introspection
                           - brew install intltool
                           - brew install gtksourceview3
@@ -45,6 +49,10 @@ matrix:
                   before_install:
                           - brew install pkg-config
                           - brew install vala
+                          - brew install glib
+                          - brew install cairo
+                          - brew install libffi
+                          - brew install python@2
                           - brew install gobject-introspection
                           - brew install intltool
                           - brew install gtksourceview3

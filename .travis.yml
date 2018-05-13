@@ -1,5 +1,7 @@
 language: c
 matrix:
+        allow_failures:
+                - os: osx
         include:
                 # Default build
                 - os: linux
@@ -28,7 +30,7 @@ matrix:
                 # Default build on OS X
                 - os: osx
                   install:
-                          - brew install -v gtksourceview3
+                          - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
@@ -37,7 +39,7 @@ matrix:
                 - os: osx
                   osx_image: xcode9.3
                   install:
-                          - brew install -v gtksourceview3
+                          - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install

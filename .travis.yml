@@ -68,3 +68,12 @@ matrix:
                           - brew install docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
+                # GTK2 build on OS X
+                - os: osx
+                  before_install:
+                          - brew install pkg-config
+                          - brew install gtksourceview
+                          - brew install libxslt
+                          - brew install docbook-xsl
+                  script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall --with-gtk2 && make && make install
+

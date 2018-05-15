@@ -30,18 +30,8 @@ matrix:
                 # Default build on OS X
                 - os: osx
                   before_install:
+                          - brew deps --tree gtksourceview3
                           - brew install pkg-config
-                          - brew install vala
-                          - brew install glib
-                          - brew install cairo
-                          - brew install libffi
-                          - brew install gdbm
-                          - brew install openssl
-                          - brew install readline
-                          - brew install sqlite
-                          - brew install python@2
-                          - brew install gobject-introspection
-                          - brew install intltool
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -51,18 +41,8 @@ matrix:
                 - os: osx
                   osx_image: xcode9.3
                   before_install:
+                          - brew deps --tree gtksourceview3
                           - brew install pkg-config
-                          - brew install vala
-                          - brew install glib
-                          - brew install cairo
-                          - brew install libffi
-                          - brew install gdbm
-                          - brew install openssl
-                          - brew install readline
-                          - brew install sqlite
-                          - brew install python@2
-                          - brew install gobject-introspection
-                          - brew install intltool
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -71,6 +51,7 @@ matrix:
                 # GTK2 build on OS X
                 - os: osx
                   before_install:
+                          - brew deps --tree gtksourceview
                           - brew install pkg-config
                           - brew install gtksourceview
                           - brew install libxslt

@@ -30,7 +30,7 @@ matrix:
                 # Default build on OS X
                 - os: osx
                   before_install:
-                          - brew deps --tree gtksourceview3
+                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install libxslt
@@ -41,7 +41,7 @@ matrix:
                 - os: osx
                   osx_image: xcode9.3
                   before_install:
-                          - brew deps --tree gtksourceview3
+                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install libxslt
@@ -51,7 +51,7 @@ matrix:
                 # GTK2 build on OS X
                 - os: osx
                   before_install:
-                          - brew deps --tree gtksourceview
+                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview
                           - brew install pkg-config
                           - brew install gtksourceview
                           - brew install libxslt

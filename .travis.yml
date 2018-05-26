@@ -30,12 +30,14 @@ matrix:
                 # Default build on OS X
                 - os: osx
                   before_install:
-                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew list
                           - brew install glib
                           - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
                           - brew uses --recursive python@2
+                          - brew deps --tree --annotate --include-requirements --include-optional gtk+3
+                          - brew install gtk+3
+                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -45,12 +47,14 @@ matrix:
                 - os: osx
                   osx_image: xcode9.3
                   before_install:
-                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew list
                           - brew install glib
                           - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
                           - brew uses --recursive python@2
+                          - brew deps --tree --annotate --include-requirements --include-optional gtk+3
+                          - brew install gtk+3
+                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -59,12 +63,14 @@ matrix:
                 # GTK2 build on OS X
                 - os: osx
                   before_install:
-                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview
                           - brew list
                           - brew install glib
                           - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
                           - brew uses --recursive python@2
+                          - brew deps --tree --annotate --include-requirements --include-optional gtk+
+                          - brew install gtk+
+                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview
                           - brew install gtksourceview
                           - brew install libxslt
                           - brew install docbook-xsl

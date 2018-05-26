@@ -44,8 +44,6 @@ matrix:
                           - brew install --ignore-dependencies gtk+3
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew install --ignore-dependencies gtksourceview3
-                          - brew install libxslt
-                          - brew install docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
                 # Default build on OS X 10.13 (High Sierra)
@@ -66,8 +64,6 @@ matrix:
                           - brew install --ignore-dependencies gtk+3
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew install --ignore-dependencies gtksourceview3
-                          - brew install libxslt
-                          - brew install docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
                 # GTK2 build on OS X
@@ -80,9 +76,8 @@ matrix:
                           - brew uses --recursive python@2
                           - brew deps --tree --annotate --include-requirements --include-optional gtk+
                           - brew install gtk+
+                          - brew install gtk-mac-integration
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview
-                          - brew install gtksourceview
-                          - brew install libxslt
-                          - brew install docbook-xsl
+                          - brew install --ignore-dependencies gtksourceview
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall --with-gtk2 && make && make install
 

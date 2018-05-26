@@ -43,7 +43,7 @@ matrix:
                           - brew deps --tree --annotate --include-requirements --include-optional gtk+3
                           - brew install --ignore-dependencies gtk+3
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
-                          - brew install gtksourceview3
+                          - brew install --ignore-dependencies gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
@@ -65,7 +65,7 @@ matrix:
                           - brew deps --tree --annotate --include-requirements --include-optional gtk+3
                           - brew install --ignore-dependencies gtk+3
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
-                          - brew install gtksourceview3
+                          - brew install --ignore-dependencies gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install

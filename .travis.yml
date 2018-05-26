@@ -35,6 +35,7 @@ matrix:
                           - brew install glib
                           - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
+                          - brew uses --recursive python@2
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -49,6 +50,7 @@ matrix:
                           - brew install glib
                           - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
+                          - brew uses --recursive python@2
                           - brew install gtksourceview3
                           - brew install libxslt
                           - brew install docbook-xsl
@@ -62,6 +64,7 @@ matrix:
                           - brew install glib
                           - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
+                          - brew uses --recursive python@2
                           - brew install gtksourceview
                           - brew install libxslt
                           - brew install docbook-xsl

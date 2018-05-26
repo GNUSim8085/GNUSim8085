@@ -32,6 +32,7 @@ matrix:
                   before_install:
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew list
+                          - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install libxslt
@@ -44,6 +45,7 @@ matrix:
                   before_install:
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
                           - brew list
+                          - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install libxslt
@@ -55,6 +57,7 @@ matrix:
                   before_install:
                           - brew deps --tree --annotate --include-requirements --include-optional gtksourceview
                           - brew list
+                          - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
                           - brew install gtksourceview
                           - brew install libxslt

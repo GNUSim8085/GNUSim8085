@@ -69,3 +69,26 @@ gtk_table_set_row_spacings (GTK_TABLE (table), spacing)
 #define TABLE_SET_COLUMN_SPACING(table, spacing) \
 gtk_table_set_col_spacings (GTK_TABLE (table), spacing)
 #endif
+
+
+#if GTK_CHECK_VERSION (3, 10, 0)
+#define IMAGE_FROM_STOCK(name, size) \
+	gtk_image_new_from_icon_name (name, size)
+#define IMG_STOCK_DIALOG_INFO "dialog-information"
+#define IMG_STOCK_EXECUTE "system-run"
+#define IMG_STOCK_GO_BACK "go-previous"
+#define IMG_STOCK_GO_FORWARD "go-next"
+#define IMG_STOCK_JUSTIFY_FILL "format-justify-fill"
+#define IMG_STOCK_REFRESH "view-refresh"
+#define IMG_STOCK_SAVE_AS "document-save-as"
+#else
+#define IMAGE_FROM_STOCK(name, size) \
+	gtk_image_new_from_stock (name, size)
+#define IMG_STOCK_DIALOG_INFO GTK_STOCK_DIALOG_INFO
+#define IMG_STOCK_EXECUTE GTK_STOCK_EXECUTE
+#define IMG_STOCK_GO_BACK GTK_STOCK_GO_BACK
+#define IMG_STOCK_GO_FORWARD GTK_STOCK_GO_FORWARD
+#define IMG_STOCK_JUSTIFY_FILL GTK_STOCK_JUSTIFY_FIL
+#define IMG_STOCK_REFRESH GTK_STOCK_REFRESH
+#define IMG_STOCK_SAVE_AS GTK_STOCK_SAVE_AS
+#endif

@@ -605,7 +605,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (vbox13), main_but_to_hex, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_but_to_hex, _("Convert this number to hexadecimal"));
 
-  image293 = gtk_image_new_from_stock (GTK_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
+  image293 = IMAGE_FROM_STOCK (IMG_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_but_to_hex), image293);
 #if GTK_CHECK_VERSION (3, 6, 0)
   gtk_button_set_always_show_image (GTK_BUTTON (main_but_to_hex), TRUE);
@@ -633,7 +633,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (vbox14), main_but_to_dec, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_but_to_dec, _("Convert this number to decimal"));
 
-  image294 = gtk_image_new_from_stock (GTK_STOCK_GO_BACK, GTK_ICON_SIZE_BUTTON);
+  image294 = IMAGE_FROM_STOCK (IMG_STOCK_GO_BACK, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_but_to_dec), image294);
 #if GTK_CHECK_VERSION (3, 6, 0)
   gtk_button_set_always_show_image (GTK_BUTTON (main_but_to_dec), TRUE);
@@ -643,7 +643,7 @@ create_window_main (void)
   gtk_widget_show (hbox38);
   gtk_frame_set_label_widget (GTK_FRAME (frame_dec_hex), hbox38);
 
-  image369 = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_BUTTON);
+  image369 = IMAGE_FROM_STOCK (IMG_STOCK_DIALOG_INFO, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image369);
   gtk_box_pack_start (GTK_BOX (hbox38), image369, FALSE, FALSE, 0);
 
@@ -686,7 +686,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (vbox11), main_io_update, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_io_update, _("Update the port value"));
 
-  image226 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
+  image226 = IMAGE_FROM_STOCK (IMG_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_io_update), image226);
 #if GTK_CHECK_VERSION (3, 6, 0)
   gtk_button_set_always_show_image (GTK_BUTTON (main_io_update), TRUE);
@@ -696,7 +696,7 @@ create_window_main (void)
   gtk_widget_show (hbox36);
   gtk_frame_set_label_widget (GTK_FRAME (frame_io_ports), hbox36);
 
-  image367 = gtk_image_new_from_stock (GTK_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
+  image367 = IMAGE_FROM_STOCK (IMG_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image367);
   gtk_box_pack_start (GTK_BOX (hbox36), image367, FALSE, FALSE, 0);
 
@@ -739,7 +739,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (vbox12), main_mem_update, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_mem_update, _("Update the current memory location"));
 
-  image227 = gtk_image_new_from_stock (GTK_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
+  image227 = IMAGE_FROM_STOCK (IMG_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (main_mem_update), image227);
 #if GTK_CHECK_VERSION (3, 6, 0)
   gtk_button_set_always_show_image (GTK_BUTTON (main_mem_update), TRUE);
@@ -749,7 +749,7 @@ create_window_main (void)
   gtk_widget_show (hbox37);
   gtk_frame_set_label_widget (GTK_FRAME (frame_memory), hbox37);
 
-  image368 = gtk_image_new_from_stock (GTK_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
+  image368 = IMAGE_FROM_STOCK (IMG_STOCK_JUSTIFY_FILL, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image368);
   gtk_box_pack_start (GTK_BOX (hbox37), image368, FALSE, FALSE, 0);
 
@@ -798,7 +798,7 @@ create_window_main (void)
   gtk_widget_show (hbox25);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 0), hbox25);
 
-  image232 = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
+  image232 = IMAGE_FROM_STOCK (IMG_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image232);
   gtk_box_pack_start (GTK_BOX (hbox25), image232, TRUE, TRUE, 0);
 
@@ -818,7 +818,7 @@ create_window_main (void)
   gtk_widget_show (hbox26);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 1), hbox26);
 
-  image233 = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
+  image233 = IMAGE_FROM_STOCK (IMG_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image233);
   gtk_box_pack_start (GTK_BOX (hbox26), image233, TRUE, TRUE, 0);
 

@@ -78,7 +78,9 @@ gtk_table_set_col_spacings (GTK_TABLE (table), spacing)
 #define IMG_STOCK_EXECUTE "system-run"
 #define IMG_STOCK_GO_BACK "go-previous"
 #define IMG_STOCK_GO_FORWARD "go-next"
+#define IMG_STOCK_HELP "help-browser"
 #define IMG_STOCK_JUSTIFY_FILL "format-justify-fill"
+#define IMG_STOCK_OPEN "document-open"
 #define IMG_STOCK_REFRESH "view-refresh"
 #define IMG_STOCK_SAVE_AS "document-save-as"
 #else
@@ -88,7 +90,9 @@ gtk_table_set_col_spacings (GTK_TABLE (table), spacing)
 #define IMG_STOCK_EXECUTE GTK_STOCK_EXECUTE
 #define IMG_STOCK_GO_BACK GTK_STOCK_GO_BACK
 #define IMG_STOCK_GO_FORWARD GTK_STOCK_GO_FORWARD
+#define IMG_STOCK_HELP GTK_STOCK_HELP
 #define IMG_STOCK_JUSTIFY_FILL GTK_STOCK_JUSTIFY_FILL
+#define IMG_STOCK_HELP GTK_STOCK_OPEN
 #define IMG_STOCK_REFRESH GTK_STOCK_REFRESH
 #define IMG_STOCK_SAVE_AS GTK_STOCK_SAVE_AS
 #endif

@@ -1169,7 +1169,7 @@ create_window_listing (void)
 
   listing_save = gtk_button_new ();
   gtk_button_set_label (GTK_BUTTON(listing_save), _("Save to file"));
-  gtk_button_set_image (GTK_BUTTON(listing_save), gtk_image_new_from_stock (GTK_STOCK_SAVE_AS, GTK_ICON_SIZE_BUTTON));
+  gtk_button_set_image (GTK_BUTTON(listing_save), IMAGE_FROM_STOCK (IMG_STOCK_SAVE_AS, GTK_ICON_SIZE_BUTTON));
   gtk_widget_show (listing_save);
   gtk_box_pack_start (GTK_BOX (hbuttonbox1), listing_save, FALSE, FALSE, 0);
   gtk_widget_set_can_default (listing_save, TRUE);
@@ -1290,7 +1290,7 @@ create_window_start (GtkWindow * parent)
 
   start_but_tutorial = gtk_button_new ();
   gtk_button_set_label (GTK_BUTTON(start_but_tutorial), _("_Tutorial"));
-  gtk_button_set_image (GTK_BUTTON(start_but_tutorial), gtk_image_new_from_stock (GTK_STOCK_HELP, GTK_ICON_SIZE_BUTTON));
+  gtk_button_set_image (GTK_BUTTON(start_but_tutorial), IMAGE_FROM_STOCK (IMG_STOCK_HELP, GTK_ICON_SIZE_BUTTON));
   gtk_button_set_use_underline (GTK_BUTTON(start_but_tutorial), TRUE);
   gtk_widget_show (start_but_tutorial);
   gtk_box_pack_start (GTK_BOX (vbox17), start_but_tutorial, FALSE, FALSE, 0);
@@ -1310,7 +1310,7 @@ create_window_start (GtkWindow * parent)
 
   start_but_open = gtk_button_new ();
   gtk_button_set_label (GTK_BUTTON(start_but_open), _("_Open program"));
-  gtk_button_set_image (GTK_BUTTON(start_but_open), gtk_image_new_from_stock (GTK_STOCK_OPEN, GTK_ICON_SIZE_BUTTON));
+  gtk_button_set_image (GTK_BUTTON(start_but_open), IMAGE_FROM_STOCK (IMG_STOCK_OPEN, GTK_ICON_SIZE_BUTTON));
   gtk_button_set_use_underline (GTK_BUTTON(start_but_open), TRUE);
   gtk_widget_show (start_but_open);
   gtk_box_pack_start (GTK_BOX (vbox18), start_but_open, FALSE, FALSE, 0);

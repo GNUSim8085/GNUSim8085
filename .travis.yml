@@ -31,20 +31,8 @@ matrix:
                 - os: osx
                   before_install:
                           - brew list
-                          - brew install glib
-                          - brew install gdk-pixbuf
-                          - brew install atk
-                          - brew install libepoxy
-                          - brew install pango
-                          - brew install hicolor-icon-theme
-                          - brew deps --tree --annotate --include-requirements --include-optional gsettings-desktop-schemas
-                          - brew install --ignore-dependencies gsettings-desktop-schemas
                           - brew install pkg-config
-                          - brew uses --recursive python@2
-                          - brew deps --tree --annotate --include-requirements --include-optional gtk+3
-                          - brew install --ignore-dependencies gtk+3
-                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview3
-                          - brew install --ignore-dependencies gtksourceview3
+                          - brew install gtksourceview3
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
                 # Default build on OS X 10.13 (High Sierra)

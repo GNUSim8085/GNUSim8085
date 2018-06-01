@@ -48,16 +48,8 @@ matrix:
                 - os: osx
                   before_install:
                           - brew list
-                          - brew uninstall python
-                          - brew install glib
-                          - brew deps --tree --annotate --include-requirements --include-optional gsettings-desktop-schemas
-                          - brew install --ignore-dependencies gsettings-desktop-schemas
-                          - brew install pkg-config
-                          - brew uses --recursive python@2
-                          - brew deps --tree --annotate --include-requirements --include-optional gtk+
-                          - brew install gtk+
-                          - brew install gtk-mac-integration
-                          - brew deps --tree --annotate --include-requirements --include-optional gtksourceview
-                          - brew install --ignore-dependencies gtksourceview
+                          - brew uninstall mercurial
+                          - brew outdated python || brew upgrade python
+                          - brew install gtksourceview
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall --with-gtk2 && make && make install
 

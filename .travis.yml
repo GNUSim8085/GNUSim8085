@@ -49,7 +49,7 @@ matrix:
                   before_install:
                           - brew list
                           - brew uninstall mercurial
-                          - brew outdated python || brew upgrade python
+                          - brew uninstall python
                           - brew install gtksourceview
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall --with-gtk2 && make && make install
 

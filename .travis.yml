@@ -41,7 +41,7 @@ matrix:
                   osx_image: xcode8
                   before_install:
                           - brew list
-                          - brew uninstall mercurial
+                          - brew uninstall --force mercurial
                           - brew uninstall python
                           - brew install pkg-config
                           - brew install gtksourceview3

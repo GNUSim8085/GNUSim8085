@@ -31,6 +31,8 @@ matrix:
                 - os: osx
                   before_install:
                           - brew list
+                          - brew uninstall --force mercurial
+                          - brew uninstall python
                           - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install gettext
@@ -47,6 +49,9 @@ matrix:
                           - brew install gtksourceview3
                           - brew install gettext
                           - brew link --force gettext
+                          - brew install libxslt
+                          - brew install docbook-xsl
+                          - brew list docbook-xsl
                           - brew install meson
                   script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja && ninja install && cd ..
 

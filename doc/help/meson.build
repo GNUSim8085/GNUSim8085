@@ -1,6 +1,6 @@
 packagename = meson.project_name()
 binaryxsltproc = find_program('xsltproc', required : false)
-xslfile = files (get_option('with-xslpath'))
+xslfile = get_option('with-xslpath')
 inputxml = packagename + '.xml'
 imagefiles = [
 'assembler_listing.png',

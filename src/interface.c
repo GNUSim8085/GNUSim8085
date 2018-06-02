@@ -838,7 +838,7 @@ create_window_main (void)
   gtk_widget_show (hbox40);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 2), hbox40);
 
-  image371 = gtk_image_new_from_stock (GTK_STOCK_INDEX, GTK_ICON_SIZE_BUTTON);
+  image371 = IMAGE_FROM_STOCK (IMG_STOCK_KEYPAD, GTK_ICON_SIZE_BUTTON);
   gtk_widget_show (image371);
   gtk_box_pack_start (GTK_BOX (hbox40), image371, TRUE, TRUE, 0);
 
@@ -865,7 +865,7 @@ create_window_main (void)
   gtk_widget_show (mem_list_start);
   gtk_box_pack_start (GTK_BOX (hbox48), mem_list_start, TRUE, TRUE, 5);
   
-  button12 = gtk_button_new_from_stock (GTK_STOCK_OK);
+  button12 = button_from_stock (LABEL_STOCK_OK, NULL);
   gtk_widget_show (button12);
   gtk_box_pack_start (GTK_BOX (hbox48), button12, FALSE, FALSE, 5);
   
@@ -893,7 +893,7 @@ create_window_main (void)
   gtk_widget_show (io_list_start);
   gtk_box_pack_start (GTK_BOX (hbox49), io_list_start, TRUE, TRUE, 5);
   
-  button13 = gtk_button_new_from_stock (GTK_STOCK_OK);
+  button13 = button_from_stock (LABEL_STOCK_OK, NULL);
   gtk_widget_show (button13);
   gtk_box_pack_start (GTK_BOX (hbox49), button13, FALSE, FALSE, 5);
   
@@ -1178,7 +1178,7 @@ create_window_listing (void)
                     G_CALLBACK (on_listing_save_clicked),
                     NULL);
 
-  listing_print = gtk_button_new_from_stock (GTK_STOCK_PRINT);
+  listing_print = button_from_stock (LABEL_STOCK_PRINT, IMG_STOCK_PRINT);
   gtk_widget_show (listing_print);
   gtk_box_pack_start (GTK_BOX (hbuttonbox1), listing_print, FALSE, FALSE, 0);
   gtk_widget_set_can_default (listing_print, TRUE);
@@ -1321,7 +1321,7 @@ create_window_start (GtkWindow * parent)
   gtk_frame_set_label_widget (GTK_FRAME (frame13), label158);
   gtk_label_set_justify (GTK_LABEL (label158), GTK_JUSTIFY_LEFT);
 
-  start_but_close = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
+  start_but_close = button_from_stock (LABEL_STOCK_CLOSE, IMG_STOCK_CLOSE);
   gtk_widget_show (start_but_close);
   gtk_box_pack_end (GTK_BOX (vbox15), start_but_close, FALSE, FALSE, 0);
   gtk_widget_set_can_default (GTK_WIDGET (start_but_close), TRUE);

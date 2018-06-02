@@ -74,25 +74,39 @@ gtk_table_set_col_spacings (GTK_TABLE (table), spacing)
 #if GTK_CHECK_VERSION (3, 10, 0)
 #define IMAGE_FROM_STOCK(name, size) \
 	gtk_image_new_from_icon_name (name, size)
+#define LABEL_STOCK_CLOSE GTK_("_Close")
+#define LABEL_STOCK_OK GTK_("_OK")
+#define LABEL_STOCK_PRINT GTK_("_Print")
+#define IMG_STOCK_CLOSE "window-close"
 #define IMG_STOCK_DIALOG_INFO "dialog-information"
 #define IMG_STOCK_EXECUTE "system-run"
 #define IMG_STOCK_GO_BACK "go-previous"
 #define IMG_STOCK_GO_FORWARD "go-next"
 #define IMG_STOCK_HELP "help-browser"
 #define IMG_STOCK_JUSTIFY_FILL "format-justify-fill"
+#define IMG_STOCK_KEYPAD "insert-text"
+#define IMG_STOCK_OK "action-ok"
 #define IMG_STOCK_OPEN "document-open"
+#define IMG_STOCK_PRINT "document-print"
 #define IMG_STOCK_REFRESH "view-refresh"
 #define IMG_STOCK_SAVE_AS "document-save-as"
 #else
 #define IMAGE_FROM_STOCK(name, size) \
 	gtk_image_new_from_stock (name, size)
+#define LABEL_STOCK_CLOSE GTK_STOCK_CLOSE
+#define LABEL_STOCK_OK GTK_STOCK_OK
+#define LABEL_STOCK_PRINT GTK_STOCK_PRINT
+#define IMG_STOCK_CLOSE GTK_STOCK_CLOSE
 #define IMG_STOCK_DIALOG_INFO GTK_STOCK_DIALOG_INFO
 #define IMG_STOCK_EXECUTE GTK_STOCK_EXECUTE
 #define IMG_STOCK_GO_BACK GTK_STOCK_GO_BACK
 #define IMG_STOCK_GO_FORWARD GTK_STOCK_GO_FORWARD
 #define IMG_STOCK_HELP GTK_STOCK_HELP
 #define IMG_STOCK_JUSTIFY_FILL GTK_STOCK_JUSTIFY_FILL
+#define IMG_STOCK_KEYPAD GTK_STOCK_INDEX
+#define IMG_STOCK_OK GTK_ACTION_OK
 #define IMG_STOCK_OPEN GTK_STOCK_OPEN
+#define IMG_STOCK_PRINT GTK_STOCK_PRINT
 #define IMG_STOCK_REFRESH GTK_STOCK_REFRESH
 #define IMG_STOCK_SAVE_AS GTK_STOCK_SAVE_AS
 #endif

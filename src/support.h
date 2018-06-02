@@ -29,6 +29,7 @@
 
 #define _(String) gettext (String)
 #define N_(String) (String)
+#define GTK_(String) dgettext ("gtk30", String)
 
 /*
  * Public Functions.
@@ -65,3 +66,6 @@ gchar**  read_authors ();
 
 /* This is used to read tutorial from asm-guide.txt file. */
 GString*  read_tutorial ();
+
+/* A wrapper function to create button with stock items. */
+GtkWidget*  button_from_stock (const gchar *icon_name, const gchar *label);

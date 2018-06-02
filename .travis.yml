@@ -2,7 +2,6 @@ language: c
 matrix:
         allow_failures:
                 - os: osx
-                  osx_image: xcode8
         include:
                 # Default build
                 - os: linux
@@ -36,9 +35,8 @@ matrix:
                           - brew install gtksourceview3
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
-                # Default build using meson on OS X 10.11 (El Capitan)
+                # Default build using meson on OS X 10.12 (Sierra)
                 - os: osx
-                  osx_image: xcode8
                   before_install:
                           - brew list
                           - brew uninstall --force mercurial

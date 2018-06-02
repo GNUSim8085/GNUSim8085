@@ -34,6 +34,7 @@ matrix:
                           - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install gettext
+                          - brew link gettext
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
                 # Default build using meson on OS X 10.12 (Sierra)
@@ -45,6 +46,7 @@ matrix:
                           - brew install pkg-config
                           - brew install gtksourceview3
                           - brew install gettext
+                          - brew link gettext
                           - brew install meson
                   script: rm -rf builddir && meson setup . builddir && meson introspect builddir && cd builddir && ninja
 
@@ -55,6 +57,7 @@ matrix:
                           - brew uninstall mercurial
                           - brew uninstall python
                           - brew install gettext
+                          - brew link gettext
                           - brew install gtksourceview
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall --with-gtk2 && make && make install
 

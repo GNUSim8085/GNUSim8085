@@ -1,3 +1,4 @@
 option('enable-gio', type : 'boolean', value : true, description : 'Enable gio based file handling')
 option('with-gtk2', type : 'boolean', value : false, description : 'Build with GTK2')
+option('with-xslpath', type : 'string', value : '/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl', description : 'The path for docbook xsl used for building documentation')
 

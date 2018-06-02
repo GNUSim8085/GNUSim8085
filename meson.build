@@ -33,7 +33,8 @@ desktopconf = configuration_data()
 desktopconf.set('PACKAGE_PIXMAPS_DIR', packagepixmapsdir)
 configure_file(input : 'GNUSim8085.desktop.in',
                output : 'GNUSim8085.desktop',
-               configuration : desktopconf)
+               configuration : desktopconf,
+               install_dir : join_paths(get_option('datadir'), 'applications'))
 
 installerconf = configuration_data()
 installerconf.set('PACKAGE', packagename, description : 'Name of package')
@@ -61,4 +62,3 @@ subdir('pixmaps')
 subdir('doc')
 subdir('data')
 
-install_data('GNUSim8085.desktop', install_dir : join_paths(get_option('datadir'), 'applications'))

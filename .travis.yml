@@ -48,7 +48,7 @@ matrix:
                           - brew install gettext
                           - brew link --force gettext
                           - brew install meson
-                  script: rm -rf builddir && meson setup . builddir && meson introspect builddir && cd builddir && ninja
+                  script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja && ninja install && cd ..
 
                 # GTK2 build on OS X
                 - os: osx

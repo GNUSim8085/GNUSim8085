@@ -196,12 +196,10 @@ create_window_main (void)
   GtkWidget *label154;
   GtkWidget *main_entry_dec;
   GtkWidget *main_but_to_hex;
-  GtkWidget *image293;
   GtkWidget *vbox14;
   GtkWidget *label155;
   GtkWidget *main_entry_hex;
   GtkWidget *main_but_to_dec;
-  GtkWidget *image294;
   GtkWidget *hbox38;
   GtkWidget *image369;
   GtkWidget *label153;
@@ -211,7 +209,6 @@ create_window_main (void)
   GtkWidget *main_io_spin;
   GtkWidget *main_io_entry;
   GtkWidget *main_io_update;
-  GtkWidget *image226;
   GtkWidget *hbox36;
   GtkWidget *image367;
   GtkWidget *label164;
@@ -221,7 +218,6 @@ create_window_main (void)
   GtkWidget *main_mem_spin;
   GtkWidget *main_mem_entry;
   GtkWidget *main_mem_update;
-  GtkWidget *image227;
   GtkWidget *hbox37;
   GtkWidget *image368;
   GtkWidget *label165;
@@ -600,16 +596,11 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_entry_dec, _("Enter a decimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_dec), "0");
 
-  main_but_to_hex = gtk_button_new_with_label (_("To Hex"));
+  main_but_to_hex = button_from_stock_img_custom_label (_("To Hex"),
+		  IMG_STOCK_GO_FORWARD);
   gtk_widget_show (main_but_to_hex);
   gtk_box_pack_start (GTK_BOX (vbox13), main_but_to_hex, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_but_to_hex, _("Convert this number to hexadecimal"));
-
-  image293 = IMAGE_FROM_STOCK (IMG_STOCK_GO_FORWARD, GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (main_but_to_hex), image293);
-#if GTK_CHECK_VERSION (3, 6, 0)
-  gtk_button_set_always_show_image (GTK_BUTTON (main_but_to_hex), TRUE);
-#endif
 
   vbox14 = VBOX (5);
   gtk_widget_show (vbox14);
@@ -628,16 +619,11 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_entry_hex, _("Enter a hexadecimal number"));
   gtk_entry_set_text (GTK_ENTRY (main_entry_hex), "0");
 
-  main_but_to_dec = gtk_button_new_with_label (_("To Dec"));
+  main_but_to_dec = button_from_stock_img_custom_label (_("To Dec"),
+		  IMG_STOCK_GO_BACK);
   gtk_widget_show (main_but_to_dec);
   gtk_box_pack_start (GTK_BOX (vbox14), main_but_to_dec, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_but_to_dec, _("Convert this number to decimal"));
-
-  image294 = IMAGE_FROM_STOCK (IMG_STOCK_GO_BACK, GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (main_but_to_dec), image294);
-#if GTK_CHECK_VERSION (3, 6, 0)
-  gtk_button_set_always_show_image (GTK_BUTTON (main_but_to_dec), TRUE);
-#endif
 
   hbox38 = HBOX (5);
   gtk_widget_show (hbox38);
@@ -681,16 +667,11 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_io_entry, _("Enter new port value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_io_entry), "0");
 
-  main_io_update = gtk_button_new_with_label (_("Update Port Value"));
+  main_io_update = button_from_stock_img_custom_label (_("Update Port Value"),
+		  IMG_STOCK_REFRESH);
   gtk_widget_show (main_io_update);
   gtk_box_pack_start (GTK_BOX (vbox11), main_io_update, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_io_update, _("Update the port value"));
-
-  image226 = IMAGE_FROM_STOCK (IMG_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (main_io_update), image226);
-#if GTK_CHECK_VERSION (3, 6, 0)
-  gtk_button_set_always_show_image (GTK_BUTTON (main_io_update), TRUE);
-#endif
 
   hbox36 = HBOX (5);
   gtk_widget_show (hbox36);
@@ -734,16 +715,11 @@ create_window_main (void)
   gtk_widget_set_tooltip_text (main_mem_entry, _("Edit new value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_mem_entry), "0");
 
-  main_mem_update = gtk_button_new_with_label (_("Update Memory"));
+  main_mem_update = button_from_stock_img_custom_label (_("Update Memory"),
+		  IMG_STOCK_REFRESH);
   gtk_widget_show (main_mem_update);
   gtk_box_pack_start (GTK_BOX (vbox12), main_mem_update, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_mem_update, _("Update the current memory location"));
-
-  image227 = IMAGE_FROM_STOCK (IMG_STOCK_REFRESH, GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (main_mem_update), image227);
-#if GTK_CHECK_VERSION (3, 6, 0)
-  gtk_button_set_always_show_image (GTK_BUTTON (main_mem_update), TRUE);
-#endif
 
   hbox37 = HBOX (5);
   gtk_widget_show (hbox37);
@@ -1005,12 +981,10 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, label154, "label154");
   GLADE_HOOKUP_OBJECT (window_main, main_entry_dec, "main_entry_dec");
   GLADE_HOOKUP_OBJECT (window_main, main_but_to_hex, "main_but_to_hex");
-  GLADE_HOOKUP_OBJECT (window_main, image293, "image293");
   GLADE_HOOKUP_OBJECT (window_main, vbox14, "vbox14");
   GLADE_HOOKUP_OBJECT (window_main, label155, "label155");
   GLADE_HOOKUP_OBJECT (window_main, main_entry_hex, "main_entry_hex");
   GLADE_HOOKUP_OBJECT (window_main, main_but_to_dec, "main_but_to_dec");
-  GLADE_HOOKUP_OBJECT (window_main, image294, "image294");
   GLADE_HOOKUP_OBJECT (window_main, hbox38, "hbox38");
   GLADE_HOOKUP_OBJECT (window_main, image369, "image369");
   GLADE_HOOKUP_OBJECT (window_main, label153, "label153");
@@ -1020,7 +994,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_io_spin, "main_io_spin");
   GLADE_HOOKUP_OBJECT (window_main, main_io_entry, "main_io_entry");
   GLADE_HOOKUP_OBJECT (window_main, main_io_update, "main_io_update");
-  GLADE_HOOKUP_OBJECT (window_main, image226, "image226");
   GLADE_HOOKUP_OBJECT (window_main, hbox36, "hbox36");
   GLADE_HOOKUP_OBJECT (window_main, image367, "image367");
   GLADE_HOOKUP_OBJECT (window_main, label164, "label164");
@@ -1030,7 +1003,6 @@ create_window_main (void)
   GLADE_HOOKUP_OBJECT (window_main, main_mem_spin, "main_mem_spin");
   GLADE_HOOKUP_OBJECT (window_main, main_mem_entry, "main_mem_entry");
   GLADE_HOOKUP_OBJECT (window_main, main_mem_update, "main_mem_update");
-  GLADE_HOOKUP_OBJECT (window_main, image227, "image227");
   GLADE_HOOKUP_OBJECT (window_main, hbox37, "hbox37");
   GLADE_HOOKUP_OBJECT (window_main, image368, "image368");
   GLADE_HOOKUP_OBJECT (window_main, label165, "label165");
@@ -1167,9 +1139,8 @@ create_window_listing (void)
   gtk_button_box_set_layout (GTK_BUTTON_BOX (hbuttonbox1), GTK_BUTTONBOX_CENTER);
   gtk_box_pack_start (GTK_BOX (listing_vbox), hbuttonbox1, FALSE, FALSE, 0);
 
-  listing_save = gtk_button_new ();
-  gtk_button_set_label (GTK_BUTTON(listing_save), _("Save to file"));
-  gtk_button_set_image (GTK_BUTTON(listing_save), IMAGE_FROM_STOCK (IMG_STOCK_SAVE_AS, GTK_ICON_SIZE_BUTTON));
+  listing_save = button_from_stock_img_custom_label (_("Save to file"),
+		  IMG_STOCK_SAVE_AS);
   gtk_widget_show (listing_save);
   gtk_box_pack_start (GTK_BOX (hbuttonbox1), listing_save, FALSE, FALSE, 0);
   gtk_widget_set_can_default (listing_save, TRUE);
@@ -1288,10 +1259,8 @@ create_window_start (GtkWindow * parent)
   gtk_label_set_line_wrap (GTK_LABEL (label159), TRUE);
   gtk_misc_set_alignment (GTK_MISC (label159), 0, 0.5);
 
-  start_but_tutorial = gtk_button_new ();
-  gtk_button_set_label (GTK_BUTTON(start_but_tutorial), _("_Tutorial"));
-  gtk_button_set_image (GTK_BUTTON(start_but_tutorial), IMAGE_FROM_STOCK (IMG_STOCK_HELP, GTK_ICON_SIZE_BUTTON));
-  gtk_button_set_use_underline (GTK_BUTTON(start_but_tutorial), TRUE);
+  start_but_tutorial = button_from_stock_img_custom_label (_("_Tutorial"),
+		  IMG_STOCK_HELP);
   gtk_widget_show (start_but_tutorial);
   gtk_box_pack_start (GTK_BOX (vbox17), start_but_tutorial, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (start_but_tutorial, _("A short tutorial on writing assembly code!"));
@@ -1308,10 +1277,8 @@ create_window_start (GtkWindow * parent)
   gtk_label_set_line_wrap (GTK_LABEL (label161), TRUE);
   gtk_misc_set_alignment (GTK_MISC (label161), 0, 0.5);
 
-  start_but_open = gtk_button_new ();
-  gtk_button_set_label (GTK_BUTTON(start_but_open), _("_Open program"));
-  gtk_button_set_image (GTK_BUTTON(start_but_open), IMAGE_FROM_STOCK (IMG_STOCK_OPEN, GTK_ICON_SIZE_BUTTON));
-  gtk_button_set_use_underline (GTK_BUTTON(start_but_open), TRUE);
+  start_but_open = button_from_stock_img_custom_label (_("_Open program"),
+		  IMG_STOCK_OPEN);
   gtk_widget_show (start_but_open);
   gtk_box_pack_start (GTK_BOX (vbox18), start_but_open, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (start_but_open, _("Open an already saved program"));

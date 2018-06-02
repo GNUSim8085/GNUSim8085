@@ -68,4 +68,8 @@ gchar**  read_authors ();
 GString*  read_tutorial ();
 
 /* A wrapper function to create button with stock items. */
-GtkWidget*  button_from_stock (const gchar *icon_name, const gchar *label);
+GtkWidget*  button_from_stock (const gchar *label, const gchar *icon_name);
+
+/* A wrapper function to create button with stock image and custom label. */
+GtkWidget*  button_from_stock_img_custom_label (const gchar *label,
+		const gchar *icon_name);

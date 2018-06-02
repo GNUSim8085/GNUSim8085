@@ -2,6 +2,7 @@ language: c
 matrix:
         allow_failures:
                 - os: osx
+                  osx_image: xcode8
         include:
                 # Default build
                 - os: linux
@@ -35,14 +36,17 @@ matrix:
                           - brew install gtksourceview3
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
-                # Default build on OS X 10.13 (High Sierra)
+                # Default build using meson on OS X 10.11 (El Capitan)
                 - os: osx
-                  osx_image: xcode9.3
+                  osx_image: xcode8
                   before_install:
                           - brew list
+                          - brew uninstall mercurial
+                          - brew uninstall python
                           - brew install pkg-config
                           - brew install gtksourceview3
-                  script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
+                          - brew install meson
+                  script: rm -rf builddir && meson setup . builddir && meson introspect builddir && cd builddir && ninja
 
                 # GTK2 build on OS X
                 - os: osx

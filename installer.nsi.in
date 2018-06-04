@@ -156,7 +156,7 @@ SectionIn RO
   File /r /x Makefile* data
   File win32/share/doc/gnusim8085/asm-guide.txt
   File /r win32/share/doc/gnusim8085/examples
-  File /r win32/share/doc/gnusim8085/help
+  File /nonfatal /r win32/share/doc/gnusim8085/help
   File /r /x Makefile* pixmaps
   # Make example program files read only
   SetFileAttributes $INSTDIR\examples\addwithcarry.asm READONLY

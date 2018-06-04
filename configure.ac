@@ -53,11 +53,9 @@ AC_ARG_WITH([xslpath],
 	[with_xslpath=/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl])
 xsl_path="$with_xslpath"
 
-if test "x$WIN32" = "xno"; then
 AC_CHECK_FILE([$xsl_path],AC_SUBST(xsl_path), [AC_MSG_WARN([xhtml sytle sheet was not found. \
 If you want to change and compile the documentation, please install docbook-xsl \
 (http://docbook.sourceforge.net/)]) ; can_build_documentation=no])
-fi
 
 AC_MSG_CHECKING([whether documentation can be changed and compiled])
 AC_MSG_RESULT($can_build_documentation)

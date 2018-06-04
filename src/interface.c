@@ -60,7 +60,7 @@ static const GtkActionEntry entries[] = {
   { "StepIn", GTK_STOCK_GO_FORWARD, N_("Step _in"), "F5", N_("Step in the code"), G_CALLBACK(on_step_in1_activate) },
   { "StepOver", GTK_STOCK_GO_UP, N_("Step o_ver"), "F6", N_("Step over the code without calling functions"), G_CALLBACK(on_step_over1_activate) },
   { "StepOut", GTK_STOCK_GO_BACK, N_("Step _out"), "F7", N_("Step out of the current function"), G_CALLBACK(on_step_out1_activate) },
-  { "ToggleBreak", GTK_STOCK_NO, N_("Toggle _breakpoint"), "<control>B", N_("Toggles breakpoint at current line"), G_CALLBACK(on_toggle_breakpoint1_activate) },
+  { "ToggleBreak", GTK_STOCK_MEDIA_RECORD, N_("Toggle _breakpoint"), "<control>B", N_("Toggles breakpoint at current line"), G_CALLBACK(on_toggle_breakpoint1_activate) },
   { "ClearBreak", NULL, N_("_Clear all breakpoints"), "<control><shift>B", N_("Remove all breakpoints"), G_CALLBACK(on_clear_all_breakpoints1_activate) },
   { "StopExec", GTK_STOCK_STOP, N_("Stop execution"), NULL, N_("Stop debugging"), G_CALLBACK(on_stop_execution1_activate) },
   { "Help", GTK_STOCK_HELP, N_("_Contents"), "F1", NULL, G_CALLBACK(on_help_activate) },
@@ -1257,7 +1257,12 @@ create_window_start (GtkWindow * parent)
   gtk_box_pack_start (GTK_BOX (vbox17), label159, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label159), GTK_JUSTIFY_LEFT);
   gtk_label_set_line_wrap (GTK_LABEL (label159), TRUE);
+#if GTK_CHECK_VERSION (3, 16, 0)
+  gtk_label_set_xalign (GTK_LABEL (label159), 0);
+  gtk_label_set_yalign (GTK_LABEL (label159), 0.5);
+#else
   gtk_misc_set_alignment (GTK_MISC (label159), 0, 0.5);
+#endif
 
   start_but_tutorial = button_from_stock_img_custom_label (_("_Tutorial"),
 		  IMG_STOCK_HELP);
@@ -1275,7 +1280,12 @@ create_window_start (GtkWindow * parent)
   gtk_box_pack_start (GTK_BOX (vbox18), label161, FALSE, FALSE, 0);
   gtk_label_set_justify (GTK_LABEL (label161), GTK_JUSTIFY_LEFT);
   gtk_label_set_line_wrap (GTK_LABEL (label161), TRUE);
+#if GTK_CHECK_VERSION (3, 16, 0)
+  gtk_label_set_xalign (GTK_LABEL (label161), 0);
+  gtk_label_set_yalign (GTK_LABEL (label161), 0.5);
+#else
   gtk_misc_set_alignment (GTK_MISC (label161), 0, 0.5);
+#endif
 
   start_but_open = button_from_stock_img_custom_label (_("_Open program"),
 		  IMG_STOCK_OPEN);

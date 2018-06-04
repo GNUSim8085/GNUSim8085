@@ -33,8 +33,7 @@ matrix:
                           - brew list
                           - brew uninstall --force mercurial
                           - brew uninstall python
-                          - brew install gtksourceview3
-                          - brew install gettext
+                          - brew bundle
                           - brew link --force gettext
                   script:
                           - ./autogen.sh

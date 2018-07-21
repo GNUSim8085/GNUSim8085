@@ -51,11 +51,13 @@ AC_ARG_WITH([xslpath],
 	    AS_HELP_STRING([--with-xslpath],[The path for docbook xsl used for building documentation]),
 	[with_xslpath=$withval],
 	[with_xslpath=/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl])
-xsl_path="$with_xslpath"
+AC_SUBST(xsl_path, "$with_xslpath")
 
-AC_CHECK_FILE([$xsl_path],AC_SUBST(xsl_path), [AC_MSG_WARN([xhtml sytle sheet was not found. \
-If you want to change and compile the documentation, please install docbook-xsl \
-(http://docbook.sourceforge.net/)]) ; can_build_documentation=no])
+if test -f "$xsl_path"; then
+  can_build_documentation=yes
+else
+  can_build_documentation=no
+fi
 
 AC_MSG_CHECKING([whether documentation can be changed and compiled])
 AC_MSG_RESULT($can_build_documentation)

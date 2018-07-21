@@ -6,11 +6,10 @@ linux system
 Notes:
 1. Following instructions are derived from
 https://wiki.gnome.org/Projects/GTK%2B/Win32/Apps
-2. They have been only tested on Ubuntu installation. They should work on any
-Debian derivative.
+2. They have been only tested on Fedora and Ubuntu installation.
 
 
-64 bit Fedora installation:
+64 bit Fedora installation (default build using GTK3):
 Pre-requisites:
 1. Install package mingw32-gtksourceview3 and mingw32-nsis
 
@@ -18,10 +17,10 @@ Build:
 1. Use configure command as follows
    ./configure --host=i686-w64-mingw32 --prefix=/
 2. Execute command "make". This builds the application.
-3. Execute command "makensis -DINC_EVERYTHING -DMINGW_HOME=/usr/i686-w64-mingw32/sys-root/mingw installer.nsi".
+3. Execute command "makensis -DINC_GTK3 -DMINGW_HOME=/usr/i686-w64-mingw32/sys-root/mingw installer.nsi".
    This builds the installer.
 
-64 bit Ubuntu installation:
+64 bit Ubuntu installation (build using GTK2):
 Pre-requisites:
 1. Install package mingw-w64 and nsis
 2. Install the package docbook-xsl to make following file available
@@ -138,9 +137,8 @@ Status:
 
   Screenshots -
   http://www.gnusim8085.org/screenshots.php
-  
+
 
 TODO:
 
   1. Create makefile for native Mingw installation.
-

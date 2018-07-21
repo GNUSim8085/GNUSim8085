@@ -2,12 +2,12 @@
 # Copyright (C) 2008  Onkar Shinde <onkarshinde@gmail.com>
 # LICENSE: Same as specified in COPYING file
 #
-# NOTE: Tested with NSIS 2.43, 2.46 and 2.50. 2.43 is giving problem when trying
-# to set icon for installer. You may have to disable icon if you are trying to
+# NOTE: Tested with NSIS 2.43, 2.46, 2.50 and 3.03. 2.43 is giving problem when
+# trying to set icon for installer. You may have to disable icon if you are trying to
 # build installer.
 
 # Pass -DINC_GTK to makensis to enable inclusion of GTK+ runtime installer.
-# Pass -DINC_EVERYTHING to makensis to include all the necessary files.
+# Pass -DINC_GTK3 to makensis to include all the necessary files.
 
 # Use modern UI
 !include MUI2.nsh
@@ -31,7 +31,7 @@ Name GNUSim8085
 !else
   OutFile @PACKAGE@-@VERSION@-without-gtk-installer.exe
 !endif
-!ifdef INC_EVERYTHING
+!ifdef INC_GTK3
   OutFile @PACKAGE@-@VERSION@-installer.exe
 !endif
 !define GTK_INSTALLER_EXE "gtk2-runtime-2.24.10-2012-10-10-ash.exe"
@@ -61,7 +61,11 @@ InstallDir "$PROGRAMFILES\GNUSim8085"
 
 # Show finish page with an option to launch program
 !ifndef INC_GTK
-!define MUI_FINISHPAGE_RUN $INSTDIR\gnusim8085.exe
+!ifdef INC_GTK3
+!define MUI_FINISHPAGE_RUN $INSTDIR\@PACKAGE@.bat
+!else
+!define MUI_FINISHPAGE_RUN $INSTDIR\@PACKAGE@.exe
+!endif
 !endif
 !insertmacro MUI_PAGE_FINISH
 
@@ -115,7 +119,7 @@ SectionIn RO
   SetOutPath $INSTDIR
   !system 'make'
   !system 'make DESTDIR=`pwd`/win32 install'
-!ifdef INC_EVERYTHING
+!ifdef INC_GTK3
   !system 'cp ${MINGW_HOME}/bin/*freetype*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/*intl*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/lib*win*.dll win32/bin/'
@@ -152,12 +156,28 @@ SectionIn RO
   File COPYING
   File NEWS
   File TODO
-  File win32/bin/*
   File /r /x Makefile* data
   File win32/share/doc/gnusim8085/asm-guide.txt
   File /r win32/share/doc/gnusim8085/examples
   File /nonfatal /r win32/share/doc/gnusim8085/help
   File /r /x Makefile* pixmaps
+
+!ifdef INC_GTK3
+  SetOutPath "$INSTDIR\bin"
+  File "${MINGW_HOME}/bin/glib-compile-schemas.exe"
+  File "${MINGW_HOME}/bin/gtk-update-icon-cache.exe"
+  File win32/bin/*
+!else
+  File win32/bin/*
+!endif
+
+!ifdef INC_GTK3
+  SetOutPath "$INSTDIR"
+  FileOpen $0 @PACKAGE@.bat w
+  FileWrite $0 'C:\Windows\System32\cmd.exe /c "SET XDG_DATA_DIRS=%XDG_DATA_DIRS%;share; && START /D ^"$INSTDIR^" bin\gnusim8085.exe"'
+  FileClose $0
+!endif
+
   # Make example program files read only
   SetFileAttributes $INSTDIR\examples\addwithcarry.asm READONLY
   SetFileAttributes $INSTDIR\examples\bcd2bin.asm READONLY
@@ -167,13 +187,29 @@ SectionIn RO
   SetFileAttributes $INSTDIR\examples\sumofnumbers.asm READONLY
   SetFileAttributes $INSTDIR\examples\swaphex.asm READONLY
   CreateDirectory ${startmenu}
-  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\gnusim8085.exe" "" "$INSTDIR\pixmaps\gnusim8085.ico"
+!ifdef INC_GTK3
+  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\@PACKAGE@.bat" "" "$INSTDIR\pixmaps\gnusim8085.ico"
+!else
+  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\@PACKAGE@.exe" "" "$INSTDIR\pixmaps\gnusim8085.ico"
+!endif
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
   !system 'rm -f data/language2.rng'
   !system 'rm -f data/styles.rng'
   !system 'rm -f data/classic.xml'
   !system 'rm -f data/def.lang'
+!ifdef INC_GTK3
+  SetOutPath "$INSTDIR\share\icons"
+  File /r "${MINGW_HOME}/share/icons/Adwaita"
+
+  SetOutPath "$INSTDIR\share\glib-2.0\schemas"
+  File "${MINGW_HOME}/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml"
+
+  ReadEnvStr $0 COMSPEC
+  SetOutPath "$INSTDIR\bin"
+  nsExec::ExecToLog '"$0" /C glib-compile-schemas.exe ..\share\glib-2.0\schemas'
+  nsExec::ExecToLog '"$0" /C gtk-update-icon-cache.exe ..\share\icons\Adwaita'
+!endif
 SectionEnd
 
 !ifdef INC_GTK
@@ -187,8 +223,36 @@ Section "GTK+ (shared installation)" SecGtkPublic
 SectionEnd
 !endif  ; !INC_GTK
 
+!macro IncludeLocale LOCALE
+  SetOutPath "$INSTDIR\share\locale\${LOCALE}\LC_MESSAGES"
+  File "win32/share/locale/${LOCALE}/LC_MESSAGES/gnusim8085.mo"
+  File "${MINGW_HOME}/share/locale/${LOCALE}/LC_MESSAGES/gtk30.mo"
+!macroend
+
 Section "Translations" SecI18N
+!ifdef INC_GTK3
+  !insertmacro IncludeLocale "ar"
+  !insertmacro IncludeLocale "ast"
+  !insertmacro IncludeLocale "de"
+  !insertmacro IncludeLocale "el"
+  !insertmacro IncludeLocale "eo"
+  !insertmacro IncludeLocale "es"
+  !insertmacro IncludeLocale "fr"
+  !insertmacro IncludeLocale "gu"
+  !insertmacro IncludeLocale "it"
+  !insertmacro IncludeLocale "ja"
+  !insertmacro IncludeLocale "kn"
+  !insertmacro IncludeLocale "lt"
+  !insertmacro IncludeLocale "mr"
+  !insertmacro IncludeLocale "nl"
+  !insertmacro IncludeLocale "pt_BR"
+  !insertmacro IncludeLocale "ru"
+  !insertmacro IncludeLocale "ta"
+  !insertmacro IncludeLocale "th"
+!else
+  SetOutPath "$INSTDIR"
   File /r win32/share/locale
+!endif
   !system 'rm -rf win32'
 SectionEnd
 
@@ -264,7 +328,7 @@ FunctionEnd
 !endif  ; INC_GTK
 
 Function AskForGtk
-  !ifdef INC_EVERYTHING
+  !ifdef INC_GTK3
     goto have_gtk
   !endif
   ${If} $have_gtk == "0"

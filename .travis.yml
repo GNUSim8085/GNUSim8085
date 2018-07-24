@@ -15,18 +15,6 @@ matrix:
                                           - docbook-xsl
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
-                # GTK2 build
-                - os: linux
-                  dist: trusty
-                  addons:
-                          apt:
-                                  packages:
-                                          - libgtksourceview2.0-dev
-                                          - gettext
-                                          - xsltproc
-                                          - docbook-xsl
-                  script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall --with-gtk2 && make && make install
-
                 # Default build on OS X
                 - os: osx
                   before_install:
@@ -57,20 +45,4 @@ matrix:
                           - rm -rf builddir
                           - meson --prefix=`pwd`/mesoninstall -Dwith-xslpath=/usr/local/Cellar/docbook-xsl/1.79.1/docbook-xsl/xhtml/docbook.xsl builddir
                           - cd builddir && ninja install && cd ..
-
-                # GTK2 build on OS X
-                - os: osx
-                  before_install:
-                          - brew list
-                          - brew uninstall --force mercurial
-                          - brew uninstall python
-                          - brew install gtksourceview
-                          - brew install gettext
-                          - brew link --force gettext
-                          - brew install libxslt
-                          - brew install docbook-xsl
-                  script:
-                          - ./autogen.sh
-                          - ./configure --prefix=`pwd`/tempinstall --with-gtk2 --with-xslpath=/usr/local/Cellar/docbook-xsl/1.79.1/docbook-xsl/xhtml/docbook.xsl
-                          - make install
 

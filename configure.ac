@@ -68,16 +68,6 @@ gtksourceview_api="gtksourceview-3.0"
 gtk_required="3.10.0"
 gtksourceview_required="3.10.0"
 
-AC_ARG_WITH([gtk2],
-	AS_HELP_STRING([--with-gtk2],[Build with GTK2 (default: no, Windows build ignores this option and always builds with GTK2)]),
-	[with_gtk2=$withval],
-	[with_gtk2=no])
-if test "x$with_gtk2" = "xyes"; then
-gtk_api="gtk+-2.0"
-gtksourceview_api="gtksourceview-2.0"
-gtk_required="2.24.0"
-gtksourceview_required="2.10.0"
-fi
 AC_SUBST(GTK_VERSION_REQ, $gtk_required)
 AC_SUBST(GTKSOURCEVIEW_API, $gtksourceview_api)
 
@@ -113,11 +103,9 @@ PKG_CHECK_MODULES(GTK, [$gtk_api >= $gtk_required],, [
         Please check the following:
     
          * Do you have the $gtk_api development package installed?
-           (usually called $gtk_api-devel for rpm based distros or
-            lib$gtk_api-dev for deb based distros or similar)
            If
-               ls -l /usr/lib/pkgconfig/$gtk_api.pc
-           reports that the file does not exist, then you are missing
+               pkg-config --cflags $gtk_api
+           reports that the package does not exist, then you are missing
            the development package.
     
     ])])
@@ -130,10 +118,8 @@ PKG_CHECK_MODULES(GTKSOURCEVIEW, [$gtksourceview_api >= $gtksourceview_required]
         Please check the following:
     
          * Do you have the $gtksourceview_api development package installed?
-           (usually called $gtksourceview_api-devel for rpm based distros or
-            lib$gtksourceview_api-dev for deb based distros or similar)
            If
-               ls -l /usr/lib/pkgconfig/$gtksourceview_api.pc
+               pkg-config --cflags $gtksourceview_api
            reports that the file does not exist, then you are missing
            the development package.
     

@@ -6,9 +6,6 @@
 # trying to set icon for installer. You may have to disable icon if you are trying to
 # build installer.
 
-# Pass -DINC_GTK to makensis to enable inclusion of GTK+ runtime installer.
-# Pass -DINC_GTK3 to makensis to include all the necessary files.
-
 # Use modern UI
 !include MUI2.nsh
 # Use logic and version functions
@@ -26,15 +23,7 @@ Name GNUSim8085
 !ifndef MINGW_HOME
   !define MINGW_HOME "/usr/i586-mingw32msvc"
 !endif
-!ifdef INC_GTK
-  OutFile @PACKAGE@-@VERSION@-with-gtk-installer.exe
-!else
-  OutFile @PACKAGE@-@VERSION@-without-gtk-installer.exe
-!endif
-!ifdef INC_GTK3
-  OutFile @PACKAGE@-@VERSION@-installer.exe
-!endif
-!define GTK_INSTALLER_EXE "gtk2-runtime-2.24.10-2012-10-10-ash.exe"
+OutFile @PACKAGE@-@VERSION@-installer.exe
 !define GTK_VERSION_REQ "@GTK_VERSION_REQ@"
 !define GTKSOURCEVIEW_API @GTKSOURCEVIEW_API@
 !define MUI_ICON pixmaps/gnusim8085.ico
@@ -46,11 +35,6 @@ InstallDir "$PROGRAMFILES\GNUSim8085"
 !define MUI_LICENSEPAGE_CHECKBOX
 !insertmacro MUI_PAGE_LICENSE COPYING
 
-!ifdef INC_GTK
-  # Show components page
-  !define MUI_PAGE_CUSTOMFUNCTION_PRE on_components_page_pre
-  !define MUI_PAGE_CUSTOMFUNCTION_LEAVE on_components_page_leave
-!endif
 !insertmacro MUI_PAGE_COMPONENTS
 
 # Show installation directory selector page
@@ -60,13 +44,7 @@ InstallDir "$PROGRAMFILES\GNUSim8085"
 !insertmacro MUI_PAGE_INSTFILES
 
 # Show finish page with an option to launch program
-!ifndef INC_GTK
-!ifdef INC_GTK3
 !define MUI_FINISHPAGE_RUN $INSTDIR\@PACKAGE@.bat
-!else
-!define MUI_FINISHPAGE_RUN $INSTDIR\@PACKAGE@.exe
-!endif
-!endif
 !insertmacro MUI_PAGE_FINISH
 
 # Show uninstall confirmation page
@@ -91,26 +69,9 @@ InstallDir "$PROGRAMFILES\GNUSim8085"
 !insertmacro MUI_LANGUAGE "Spanish"
 !insertmacro MUI_LANGUAGE "Thai"
 
-!ifdef INC_GTK
-  var gtk_mode  ; "public" or "none"
-  var gtk_tmp  ; temporary variable
-!endif
-var have_gtk  ; "1" or "0"
-
 # Show language selection dialog in installer
 Function .onInit
   !insertmacro MUI_LANGDLL_DISPLAY
-
-# Check for existing GTK installation
-Call CheckGtk
-# ask for gtk only if it's a non-gtk installer.
-!ifndef INC_GTK
-  Call AskForGtk
-!endif
-
-!ifdef INC_GTK
-  StrCpy $gtk_mode "public" ; default
-!endif
 FunctionEnd
 
 # Install section
@@ -119,7 +80,6 @@ SectionIn RO
   SetOutPath $INSTDIR
   !system 'make'
   !system 'make DESTDIR=`pwd`/win32 install'
-!ifdef INC_GTK3
   !system 'cp ${MINGW_HOME}/bin/*freetype*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/*intl*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/lib*win*.dll win32/bin/'
@@ -143,7 +103,6 @@ SectionIn RO
   !system 'cp ${MINGW_HOME}/bin/libpixman*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/libpng*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/zlib1*.dll win32/bin/'
-!endif
   !system 'cp ${MINGW_HOME}/bin/iconv.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/lib${GTKSOURCEVIEW_API}*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/libxml2*.dll win32/bin/libxml2-2.dll'
@@ -162,21 +121,15 @@ SectionIn RO
   File /nonfatal /r win32/share/doc/gnusim8085/help
   File /r /x Makefile* pixmaps
 
-!ifdef INC_GTK3
   SetOutPath "$INSTDIR\bin"
   File "${MINGW_HOME}/bin/glib-compile-schemas.exe"
   File "${MINGW_HOME}/bin/gtk-update-icon-cache.exe"
   File win32/bin/*
-!else
-  File win32/bin/*
-!endif
 
-!ifdef INC_GTK3
   SetOutPath "$INSTDIR"
   FileOpen $0 @PACKAGE@.bat w
   FileWrite $0 'C:\Windows\System32\cmd.exe /c "SET XDG_DATA_DIRS=%XDG_DATA_DIRS%;share; && START /D ^"$INSTDIR^" bin\gnusim8085.exe"'
   FileClose $0
-!endif
 
   # Make example program files read only
   SetFileAttributes $INSTDIR\examples\addwithcarry.asm READONLY
@@ -187,18 +140,14 @@ SectionIn RO
   SetFileAttributes $INSTDIR\examples\sumofnumbers.asm READONLY
   SetFileAttributes $INSTDIR\examples\swaphex.asm READONLY
   CreateDirectory ${startmenu}
-!ifdef INC_GTK3
   CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\@PACKAGE@.bat" "" "$INSTDIR\pixmaps\gnusim8085.ico"
-!else
-  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\@PACKAGE@.exe" "" "$INSTDIR\pixmaps\gnusim8085.ico"
-!endif
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
   !system 'rm -f data/language2.rng'
   !system 'rm -f data/styles.rng'
   !system 'rm -f data/classic.xml'
   !system 'rm -f data/def.lang'
-!ifdef INC_GTK3
+
   SetOutPath "$INSTDIR\share\icons"
   File /r "${MINGW_HOME}/share/icons/Adwaita"
 
@@ -233,19 +182,7 @@ SectionIn RO
   SetOutPath "$INSTDIR\bin"
   nsExec::ExecToLog '"$0" /C glib-compile-schemas.exe ..\share\glib-2.0\schemas'
   nsExec::ExecToLog '"$0" /C gtk-update-icon-cache.exe ..\share\icons\Adwaita'
-!endif
 SectionEnd
-
-!ifdef INC_GTK
-Section "GTK+ (shared installation)" SecGtkPublic
-  SetShellVarContext all  ; use all user variables as opposed to current user
-  AddSize 12200  ; ~ size of unpacked gtk
-  SetOutPath "$INSTDIR"
-  File "${GTK_INSTALLER_EXE}"
-  ExecWait '"${GTK_INSTALLER_EXE}"'
-  Delete "$INSTDIR\${GTK_INSTALLER_EXE}"
-SectionEnd
-!endif  ; !INC_GTK
 
 !macro IncludeLocale LOCALE
   SetOutPath "$INSTDIR\share\locale\${LOCALE}\LC_MESSAGES"
@@ -254,7 +191,6 @@ SectionEnd
 !macroend
 
 Section "Translations" SecI18N
-!ifdef INC_GTK3
   !insertmacro IncludeLocale "ar"
   !insertmacro IncludeLocale "ast"
   !insertmacro IncludeLocale "de"
@@ -273,10 +209,6 @@ Section "Translations" SecI18N
   !insertmacro IncludeLocale "ru"
   !insertmacro IncludeLocale "ta"
   !insertmacro IncludeLocale "th"
-!else
-  SetOutPath "$INSTDIR"
-  File /r win32/share/locale
-!endif
   !system 'rm -rf win32'
 SectionEnd
 
@@ -290,97 +222,6 @@ SectionEnd
 ; Section descriptions
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SecMain} "GNUSim8085 - Intel 8085 microprocessor simulator"
-!ifdef INC_GTK  ; this component is shown only when using gtk
-  !insertmacro MUI_DESCRIPTION_TEXT ${SecGtkPublic} "GTK+ libraries, needed by GNUSim8085. \
-    This will install a system-wide version of GTK+, shareable with other programs."
-!endif
   !insertmacro MUI_DESCRIPTION_TEXT ${SecI18N} "Additional translations for the application UI (some may be incomplete)"
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
-!ifdef INC_GTK
-Function on_components_page_leave
-  StrCmp $gtk_mode "none" "" noabort
-  Call AskForGtk
-  noabort:
-FunctionEnd
-!endif  ; INC_GTK
-
-Function .onselchange
-!ifdef INC_GTK
-  ; store the current mode
-  StrCpy $gtk_mode "none"
-
-  SectionGetFlags ${SecGtkPublic} $gtk_tmp
-  IntOp $gtk_tmp $gtk_tmp & ${SF_SELECTED}
-  IntCmp $gtk_tmp ${SF_SELECTED} "" mode_end_public mode_end_public
-  StrCpy $gtk_mode "public"
-  mode_end_public:
-
-!endif  ; INC_GTK
-FunctionEnd
-
-; detect GTK installation, version >= GTK_VERSION_REQ
-Function CheckGtk
-  SetShellVarContext all  ; use all user variables as opposed to current user
-  push $R0
-  push $R1
-
-  ReadRegStr $R0 HKLM "SOFTWARE\GTK\2.0" "Version"
-  ${VersionCompare} $R0 ${GTK_VERSION_REQ} $R1
-  ${If} $R1 == "2"
-    StrCpy $have_gtk "0"
-  ${Else}
-    StrCpy $have_gtk "1"
-  ${EndIf}
-
-  pop $R1
-  pop $R0
-FunctionEnd
-
-!ifdef INC_GTK
-Function on_components_page_pre
-  push $R2
-  ${If} $have_gtk == "0"
-    ; we don't have gtk installed, do nothing
-  ${Else}
-    ; we have gtk installed, uncheck the runtime box
-    IntOp $R2 ${SF_SELECTED} & 0
-    SectionSetFlags ${SecGtkPublic} $R2
-  ${EndIf}
-  pop $R2
-FunctionEnd
-!endif  ; INC_GTK
-
-Function AskForGtk
-  !ifdef INC_GTK3
-    goto have_gtk
-  !endif
-  ${If} $have_gtk == "0"
-    goto no_gtk
-  ${Else}
-    goto have_gtk
-  ${EndIf}
-
-  no_gtk:
-    !ifdef INC_GTK
-      MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION \
-      "GTK2 Runtime (>= ${GTK_VERSION_REQ}) is not installed. GNUSIM8085 needs it to function properly.$\n$\n\
-      Click 'Cancel' to modify selection or 'OK' to continue anyway." \
-      /SD IDOK IDOK have_gtk
-      Abort
-    !else
-      MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION \
-      "GTK2 Runtime (>= ${GTK_VERSION_REQ}) is not installed. GNUSIM8085 needs it to function properly.$\n\
-      Please install GTK2-Runtime from http://gtk-win.sf.net/ first.$\n$\n\
-      Click 'Cancel' to abort installation or 'OK' to continue anyway." \
-      /SD IDOK IDOK have_gtk
-      Quit
-    !endif
-    goto end_gtk_check
-
-  have_gtk:
-    ; do nothing
-
-  end_gtk_check:
-
-FunctionEnd

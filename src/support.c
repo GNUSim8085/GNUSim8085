@@ -238,18 +238,11 @@ read_tutorial (){
 GtkWidget*  button_from_stock (const gchar *label, const gchar *icon_name)
 {
 	GtkWidget* button;
-#if GTK_CHECK_VERSION (3, 10, 0)
 	button = gtk_button_new_with_mnemonic (label);
 	if (icon_name != NULL)
 		gtk_button_set_image (GTK_BUTTON (button),
 		gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON));
-#else
-	button = gtk_button_new_from_stock (label);
-#endif
-
-#if GTK_CHECK_VERSION (3, 6, 0)
 	gtk_button_set_always_show_image (GTK_BUTTON (button), TRUE);
-#endif
 	return button;
 }
 
@@ -258,19 +251,10 @@ GtkWidget*  button_from_stock_img_custom_label (const gchar *label,
                 const gchar *icon_name)
 {
 	GtkWidget* button;
-#if GTK_CHECK_VERSION (3, 10, 0)
 	button = gtk_button_new_with_mnemonic (label);
 	if (icon_name != NULL)
 		gtk_button_set_image (GTK_BUTTON (button),
 		gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON));
-#else
-	button = gtk_button_new_from_stock (icon_name);
-	gtk_button_set_label (GTK_BUTTON (button), label);
-	gtk_button_set_use_underline (GTK_BUTTON (button), TRUE);
-#endif
-
-#if GTK_CHECK_VERSION (3, 6, 0)
 	gtk_button_set_always_show_image (GTK_BUTTON (button), TRUE);
-#endif
 	return button;
 }

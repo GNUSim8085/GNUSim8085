@@ -194,13 +194,9 @@ create_me (void)
   opcode = asm_id_get_opcode ();
 
   /* Construct a table of cells */
-#if GTK_CHECK_VERSION (3, 4, 0)
   table = gtk_grid_new ();
   gtk_grid_set_column_homogeneous (GTK_GRID (table), TRUE);
   gtk_grid_set_row_homogeneous (GTK_GRID (table), TRUE);
-#else
-  table = gtk_table_new (TABLE_ROWS, TABLE_COLS, TRUE);
-#endif
 	
   g_signal_connect (table, "focus", (GCallback) cb_focus, NULL);
 	

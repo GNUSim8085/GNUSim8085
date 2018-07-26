@@ -74,19 +74,9 @@ gui_editor_new (void)
   gtk_source_style_scheme_manager_append_search_path (self->style_scheme_manager, "data");
   gtk_source_style_scheme_manager_append_search_path (self->style_scheme_manager, ".");
 
-#if GTK_CHECK_VERSION(3, 0, 0)
   GtkSourceMarkAttributes *mark_attributes = gtk_source_mark_attributes_new ();
-  gtk_source_mark_attributes_set_icon_name (mark_attributes, "gtk-no");
+  gtk_source_mark_attributes_set_icon_name (mark_attributes, IMG_STOCK_MEDIA_RECORD);
   gtk_source_view_set_mark_attributes (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, mark_attributes, 0);
-#else
-  GdkPixbuf *pixbuf;
-  pixbuf = gui_editor_get_stock_icon (GTK_WIDGET(self->widget), GTK_STOCK_MEDIA_RECORD, GTK_ICON_SIZE_MENU);
-  if (pixbuf)
-	{
-	  gtk_source_view_set_mark_category_icon_from_pixbuf (GTK_SOURCE_VIEW (self->widget), MARKER_BREAKPOINT, pixbuf);
-	  g_object_unref (pixbuf);
-	}
-#endif
 
   return self;
 }
@@ -419,16 +409,9 @@ gui_editor_get_stock_icon (GtkWidget *widget, const gchar *stock_id, GtkIconSize
   GdkScreen *screen = gtk_widget_get_screen (widget);
   GtkIconTheme *theme = gtk_icon_theme_get_for_screen (screen);
   gint marker_size;
-#if GTK_CHECK_VERSION(3, 0, 0)
   gtk_icon_size_lookup (size,
 		  NULL,
 		  &marker_size);
-#else
-  gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (widget),
-									 size,
-									 NULL,
-									 &marker_size);
-#endif
 
 
   GdkPixbuf *pixbuf;

@@ -32,18 +32,12 @@
 #include <config.h>
 #include <string.h>
 #include <gtk/gtk.h>
-#if GTK_CHECK_VERSION (3, 0, 0)
 #include <gtksourceview/gtksource.h>
-#else
-#include <gtksourceview/gtksourceview.h>
-#endif
 #include <gtksourceview/gtksourcelanguagemanager.h>
 #include <gtksourceview/gtksourceprintcompositor.h>
 #include <gtksourceview/gtksourcestyleschememanager.h>
-#if GTK_CHECK_VERSION(3, 0, 0)
-#include <gtksourceview/gtksource.h>
-#endif
 #include "callbacks.h"
+#include "interface.h"
 
 #define DEFAULT_EDITOR_FONT   (const gchar*) "Monospace 12"
 #define MARKER_BREAKPOINT   (const gchar*) "breakpoint"

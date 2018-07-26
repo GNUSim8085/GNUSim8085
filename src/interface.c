@@ -322,13 +322,9 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox15), frame_registers, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (frame_registers), 5);
 
-#if GTK_CHECK_VERSION (3, 4, 0)
   table_registers = gtk_grid_new ();
   gtk_grid_set_column_homogeneous (GTK_GRID (table_registers), TRUE);
   gtk_grid_set_row_homogeneous (GTK_GRID (table_registers), TRUE);
-#else
-  table_registers = gtk_table_new (8, 3, TRUE);
-#endif
   gtk_widget_show (table_registers);
   gtk_container_add (GTK_CONTAINER (frame_registers), table_registers);
   gtk_container_set_border_width (GTK_CONTAINER (table_registers), 5);
@@ -486,13 +482,9 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox15), frame_flags, FALSE, FALSE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (frame_flags), 5);
 
-#if GTK_CHECK_VERSION (3, 4, 0)
   table_flags = gtk_grid_new ();
   gtk_grid_set_column_homogeneous (GTK_GRID (table_flags), TRUE);
   gtk_grid_set_row_homogeneous (GTK_GRID (table_flags), TRUE);
-#else
-  table_flags = gtk_table_new (5, 2, TRUE);
-#endif
   gtk_widget_show (table_flags);
   gtk_container_add (GTK_CONTAINER (frame_flags), table_flags);
   gtk_container_set_border_width (GTK_CONTAINER (table_flags), 5);
@@ -1093,9 +1085,7 @@ create_dialog_about (void)
 						 "documenters", documenters,
 						 "translator-credits", translators,
 						 "border-width", 5,
-#if GTK_CHECK_VERSION (3, 6, 0)
 						 "license-type", GTK_LICENSE_GPL_2_0,
-#endif
 						 NULL);
 
   if (dialog_about_icon_pixbuf)

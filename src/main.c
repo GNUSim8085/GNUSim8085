@@ -42,11 +42,7 @@ main (int argc, char *argv[])
   gchar *localedir = LOCALEDIR;
 #ifdef G_OS_WIN32
   gchar *root = g_win32_get_package_installation_directory_of_module (NULL);
-#if GTK_CHECK_VERSION (3, 0, 0)
   localedir = g_build_filename (root, "share", "locale", NULL);
-#else
-  localedir = g_build_filename (root, "locale", NULL);
-#endif
   g_free (root);
 #endif
 

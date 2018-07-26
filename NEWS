@@ -7,14 +7,10 @@ Translations:
          Updated - Arabic (ar), French (fr), German (de), Greek (el),
          Kannada (kn), Spanish (es), Tamil (ta).
 Note to packagers:
-         The application is now built using GTK3 APIs by default.
-         If you wish to build it using GTK2 then use --with-gtk2 option of
-         configure script.
-         The Windows build is still using GTK2.
+         The application is now built using GTK3 APIs.
          Dependencies:
-         New - GTK+ >= 3.10.0, GtkSourceView >= 3.10.0 when using GTK3 (default).
-               docbook-xsl
-         Updated - GTK+ >= 2.24, GtkSourceView >= 2.10 when using GTK2.
+         New - GTK+ >= 3.10.0, GtkSourceView >= 3.10.0,
+               docbook-xsl (optional)
 
 GNUSim8085 1.3.7 (20 Feb 2011)
 

@@ -355,7 +355,7 @@ on_help_activate (GtkMenuItem * menuitem, gpointer user_data)
 {
   // Show the HTML help.
 #ifdef G_OS_WIN32
-  gchar * html_file_name = g_strconcat(g_get_current_dir(), G_DIR_SEPARATOR_S, "help", G_DIR_SEPARATOR_S, PACKAGE, ".htm", NULL);
+  gchar * html_file_name = g_strconcat(g_win32_get_package_installation_directory_of_module (NULL), G_DIR_SEPARATOR_S, "help", G_DIR_SEPARATOR_S, PACKAGE, ".htm", NULL);
 #else
   gchar * html_file_name = g_strconcat(PACKAGE_HELP_DIR, G_DIR_SEPARATOR_S, PACKAGE, ".htm", NULL);
 #endif

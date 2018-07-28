@@ -658,6 +658,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox13), main_io_entry, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_io_entry, _("Enter new port value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_io_entry), "0");
+  gtk_entry_set_width_chars (GTK_ENTRY (main_io_entry), 12);
 
   main_io_update = button_from_stock_img_custom_label (_("Update Port Value"),
 		  IMG_STOCK_REFRESH);
@@ -706,6 +707,7 @@ create_window_main (void)
   gtk_box_pack_start (GTK_BOX (hbox14), main_mem_entry, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (main_mem_entry, _("Edit new value and click Update"));
   gtk_entry_set_text (GTK_ENTRY (main_mem_entry), "0");
+  gtk_entry_set_width_chars (GTK_ENTRY (main_mem_entry), 12);
 
   main_mem_update = button_from_stock_img_custom_label (_("Update Memory"),
 		  IMG_STOCK_REFRESH);

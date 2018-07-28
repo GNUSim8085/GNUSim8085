@@ -11,8 +11,7 @@ matrix:
                                   packages:
                                           - libgtksourceview-3.0-dev
                                           - gettext
-                                          - xsltproc
-                                          - docbook-xsl
+                                          - discount
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
 
                 # Default build on OS X
@@ -25,7 +24,7 @@ matrix:
                           - brew link --force gettext
                   script:
                           - ./autogen.sh
-                          - ./configure --prefix=`pwd`/tempinstall --with-xslpath=/usr/local/Cellar/docbook-xsl/1.79.1/docbook-xsl/xhtml/docbook.xsl
+                          - ./configure --prefix=`pwd`/tempinstall
                           - make install
 
                 # Default build using meson on OS X 10.12 (Sierra)
@@ -34,15 +33,11 @@ matrix:
                           - brew list
                           - brew uninstall --force mercurial
                           - brew uninstall python
-                          - brew install gtksourceview3
-                          - brew install gettext
+                          - brew bundle
                           - brew link --force gettext
-                          - brew install libxslt
-                          - brew install docbook-xsl
-                          - brew list docbook-xsl
                           - brew install meson
                   script:
                           - rm -rf builddir
-                          - meson --prefix=`pwd`/mesoninstall -Dwith-xslpath=/usr/local/Cellar/docbook-xsl/1.79.1/docbook-xsl/xhtml/docbook.xsl builddir
+                          - meson --prefix=`pwd`/mesoninstall builddir
                           - cd builddir && ninja install && cd ..
 

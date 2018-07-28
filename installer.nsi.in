@@ -78,8 +78,6 @@ FunctionEnd
 Section "!GNUSim8085" SecMain
 SectionIn RO
   SetOutPath $INSTDIR
-  !system 'make'
-  !system 'make DESTDIR=`pwd`/win32 install'
   !system 'cp ${MINGW_HOME}/bin/*freetype*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/*intl*.dll win32/bin/'
   !system 'cp ${MINGW_HOME}/bin/lib*win*.dll win32/bin/'

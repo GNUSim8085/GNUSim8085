@@ -6,13 +6,15 @@ linux system
 
 64 bit Fedora installation (default build using GTK3):
 Pre-requisites:
-1. Install package mingw32-gtksourceview3 and mingw32-nsis
+1. Install packages mingw32-gtksourceview3, mingw32-nsis, discount
 
 Build:
 1. Use configure command as follows
    ./configure --host=i686-w64-mingw32 --prefix=/
 2. Execute command "make". This builds the application.
-3. Execute command "makensis -DMINGW_HOME=/usr/i686-w64-mingw32/sys-root/mingw installer.nsi".
+3. Execute command "make DESTDIR=`pwd`/win32 install'.
+   This installs application in a temporary folder to be used by installer build script.
+4. Execute command "makensis -DMINGW_HOME=/usr/i686-w64-mingw32/sys-root/mingw installer.nsi".
    This builds the installer.
 
 TODO:

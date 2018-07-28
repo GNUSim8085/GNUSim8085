@@ -13,7 +13,8 @@ Note to packagers:
          The application is now built using GTK3 APIs.
          Dependencies:
          New - GTK+ >= 3.10.0, GtkSourceView >= 3.10.0,
-               docbook-xsl (optional)
+               markdown (discount or similar package that provides markdown
+               binary)
 
 GNUSim8085 1.3.7 (20 Feb 2011)
 

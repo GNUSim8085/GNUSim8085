@@ -31,8 +31,7 @@ Build dependencies (Mandatory)
 
 Build dependencies (Optional)
 - gettext (>= 0.18)
-- xsltproc
-- docbook-xsl
+- markdown (discount or similar package that provides markdown binary)
 
 ## Install from source
 To install from source, run the following commands

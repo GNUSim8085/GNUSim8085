@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>gnusim8085.desktop</id>
+  <name>GNUSim8085</name>
+  <summary>Intel 8085 microprocessor simulator</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+  <launchable type="desktop-id">GNUSim8085.desktop</launchable>
+  <description>
+    <p>
+     GNUSim8085 is a graphical simulator, assembler and debugger for the Intel 8085 microprocessor in Linux and Windows.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>A simple editor component with syntax highlighting.</li>
+      <li>A keypad to input assembly language instructions with appropriate arguments.</li>
+      <li>Easy view of register contents.</li>
+      <li>Easy view of flag contents.</li>
+      <li>Decimal &lt;–&gt; Hexadecimal converter.</li>
+      <li>View of stack, memory and I/O contents.</li>
+      <li>Support for breakpoints for program debugging.</li>
+      <li>Stepwise program execution.</li>
+      <li>One click conversion of assembly program to opcode listing.</li>
+      <li>Printing support (known not to work well on Windows).</li>
+      <li>UI translated in various languages.</li>
+    </ul>
+  </description>
+  <screenshots>
+   <screenshot type="default">
+    <image>https://gnusim8085.github.io/images/screenshots/syntax_highlight.png</image>
+    <caption>Editor with syntaxt highlighting, registers and flag view, decimal &lt;-&gt; hexadecimal converter</caption>
+   </screenshot>
+   <screenshot>
+    <image>https://gnusim8085.github.io/images/screenshots/breakpoints.png</image>
+    <caption>Using breakpoints to find problems in program</caption>
+   </screenshot>
+   <screenshot>
+    <image>https://gnusim8085.github.io/images/screenshots/easy_memory_io.png</image>
+    <caption>Easier view and editing for memory, I/O content</caption>
+   </screenshot>
+   <screenshot>
+    <image>https://gnusim8085.github.io/images/screenshots/print.png</image>
+    <caption>Print the assembly listing and take it to lab</caption>
+   </screenshot>
+  </screenshots>
+  <url type="homepage">http://www.gnusim8085.org</url>
+  <url type="bugtracker">https://github.com/GNUSim8085/GNUSim8085/issues</url>
+  <url type="translate">https://hosted.weblate.org/projects/gnusim8085/</url>
+  <provides>
+    <binary>gnusim8085</binary>
+  </provides>
+
+  <update_contact>onkarshinde_AT_gmail.com</update_contact>
+</component>

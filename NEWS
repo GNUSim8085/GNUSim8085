@@ -1,6 +1,9 @@
 GNUSim8085 1.3.8 (UNRELEASED)
 
 Fix:     Printing fix for Windows
+New:     LP: #1322687 - Please create an AppData file
+         This allows more information to be displayed in software centre
+         applications.
 Translations:
          New - Dutch (nl), Japanese (ja), Lithuanian (lt), Marathi (mr),
          Russian (ru), Thai (th).

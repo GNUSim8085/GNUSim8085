@@ -19,7 +19,7 @@ GNUSim8085 makes it easy to learn the assembly language programming by providing
   * Programming debugging using breakpoints or with step by step execution
   * Easy inspection of stack and source code variables defined
   * Easy inspection and manipulation of memory and I/O ports
-  * Printing of program from editor as well as assembled hex code (known not to work well in Windows)
+  * Printing of program from editor as well as assembled hex code
 
 ## User Interface
 The user interface of GNUSim8085 consists of following components currently.

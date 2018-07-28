@@ -21,7 +21,7 @@
       <li>Support for breakpoints for program debugging.</li>
       <li>Stepwise program execution.</li>
       <li>One click conversion of assembly program to opcode listing.</li>
-      <li>Printing support (known not to work well on Windows).</li>
+      <li>Printing support.</li>
       <li>UI translated in various languages.</li>
     </ul>
   </description>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
-"POT-Creation-Date: 2016-10-21 10:44+0530\n"
+"POT-Creation-Date: 2018-07-28 11:21+0530\n"
 "PO-Revision-Date: 2013-05-29 09:22+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -18,382 +18,382 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-02-11 06:24+0000\n"
 "X-Generator: Launchpad (build 17923)\n"
 
-#: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
+#: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
 msgstr "Pasirinkti šriftą"
 
-#: src/callbacks.c:257
+#: src/callbacks.c:246
 msgid "Program has errors. Check the Message pane."
 msgstr "Programoje yra klaidų. Patikrinkite pranešimų skydelį."
 
-#: src/callbacks.c:278
+#: src/callbacks.c:267
 msgid "Error executing program"
 msgstr "Įvyko klaida vykdant programą"
 
-#: src/callbacks.c:298
+#: src/callbacks.c:287
 msgid "Error in step in"
 msgstr "Įvyko klaida žengiant žingsnį į priekį"
 
-#: src/callbacks.c:313
+#: src/callbacks.c:302
 msgid "Error in step over"
 msgstr "Įvyko klaida peržengiant"
 
-#: src/callbacks.c:328
+#: src/callbacks.c:317
 msgid "Error in step out"
 msgstr "Įvyko klaida grįžtant žingsnį atgal"
 
-#: src/callbacks.c:420
+#: src/callbacks.c:416
 msgid "Enter a valid number within range"
 msgstr "Įveskite tinkamą skaičių intervale"
 
-#: src/callbacks.c:630 src/callbacks.c:648
+#: src/callbacks.c:626 src/callbacks.c:644
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
 msgstr "Įveskite reikalingą skaičių intervale (0-65535 or 0h-FFFFh)"
 
-#: src/callbacks.c:669 src/callbacks.c:687
+#: src/callbacks.c:665 src/callbacks.c:683
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
 msgstr "Įveskite reikalingą skaičių intervale (0-255 / 0h-00FFh)"
 
-#: src/callbacks.c:711
+#: src/callbacks.c:707
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
 "Nerasta žinyno rinkmena asm-guide.txt. Ji turėtų būti pateikta aplankale - "
 
-#: src/interface.c:42
+#: src/interface.c:39
 msgid "_File"
 msgstr "_Failas"
 
-#: src/interface.c:43
+#: src/interface.c:40
 msgid "_Reset"
 msgstr "_Atstatyti"
 
-#: src/interface.c:44
+#: src/interface.c:41
 msgid "_Assembler"
 msgstr "Su_rinkti"
 
-#: src/interface.c:45
+#: src/interface.c:42
 msgid "_Debug"
 msgstr "_Derinti"
 
-#: src/interface.c:46
+#: src/interface.c:43
 msgid "_Breakpoints"
 msgstr "_Lūžio taškai"
 
-#: src/interface.c:47
+#: src/interface.c:44
 msgid "_Help"
 msgstr "_Pagalba"
 
-#: src/interface.c:48
+#: src/interface.c:45
 msgid "New source file"
 msgstr "Nauja rinkmena"
 
-#: src/interface.c:49
+#: src/interface.c:46
 msgid "Open a file"
 msgstr "Atverti rinkmeną"
 
-#: src/interface.c:50 src/file-op.c:224 src/file-op-gio.c:219
+#: src/interface.c:47 src/file-op.c:221 src/file-op-gio.c:216
 msgid "Save file"
 msgstr "Išsaugoti rinkmeną"
 
-#: src/interface.c:51 src/file-op.c:254 src/file-op-gio.c:249
+#: src/interface.c:48 src/file-op.c:251 src/file-op-gio.c:246
 msgid "Save file as"
 msgstr "Išsaugoti rinkmeną kaip"
 
-#: src/interface.c:52
+#: src/interface.c:49
 msgid "Print program"
 msgstr "Spausdinti programą"
 
-#: src/interface.c:55
+#: src/interface.c:52
 msgid "_Registers"
 msgstr "_Registrai"
 
-#: src/interface.c:55
+#: src/interface.c:52
 msgid "Reset Registers"
 msgstr "Atstatyti registrus"
 
-#: src/interface.c:56
+#: src/interface.c:53
 msgid "_Flags"
 msgstr "_Požymiai"
 
-#: src/interface.c:56
+#: src/interface.c:53
 msgid "Reset Flags"
 msgstr "Atstatyti požymius"
 
-#: src/interface.c:57
+#: src/interface.c:54
 msgid "_IO Ports"
 msgstr "Įv. / Išv. prievadai"
 
-#: src/interface.c:57
+#: src/interface.c:54
 msgid "Reset IO Ports"
 msgstr "Atstatyti Įv. / Išv. prievadus"
 
-#: src/interface.c:58
+#: src/interface.c:55
 msgid "_Memory"
 msgstr "_Atmintis"
 
-#: src/interface.c:58
+#: src/interface.c:55
 msgid "Reset Memory"
 msgstr "Atstatyti atmintį"
 
-#: src/interface.c:59
+#: src/interface.c:56
 msgid "Reset _All"
 msgstr "Atstatyti _Viską"
 
-#: src/interface.c:59
+#: src/interface.c:56
 msgid "Reset All"
 msgstr "Atstatyti viską"
 
-#: src/interface.c:60
+#: src/interface.c:57
 msgid "A_ssemble"
 msgstr "Su_rinkti"
 
-#: src/interface.c:60
+#: src/interface.c:57
 msgid "Only assemble program"
 msgstr "Tik surinkti programą"
 
-#: src/interface.c:61
+#: src/interface.c:58
 msgid "Execute assembled and loaded program"
 msgstr "Vykdyti surinktą ir įkeltą programą"
 
-#: src/interface.c:62
+#: src/interface.c:59
 msgid "Show _listing"
 msgstr "Rodyti sąrašą"
 
-#: src/interface.c:62
+#: src/interface.c:59
 msgid "Show the source code along with opcodes and operands in hex numbers"
 msgstr ""
 "Rodyti programos kodą kartu su šešioliktainiais operacijos kodais ir "
 "operandais"
 
-#: src/interface.c:63
+#: src/interface.c:60
 msgid "Step _in"
 msgstr "Žingsnis į _priekį"
 
-#: src/interface.c:63
+#: src/interface.c:60
 msgid "Step in the code"
 msgstr "Vienas žingsnis į priekį"
 
-#: src/interface.c:64
+#: src/interface.c:61
 msgid "Step o_ver"
 msgstr "_Peržengti"
 
-#: src/interface.c:64
+#: src/interface.c:61
 msgid "Step over the code without calling functions"
 msgstr "Peržengti kodą neiškviečiant funkcijos"
 
-#: src/interface.c:65
+#: src/interface.c:62
 msgid "Step _out"
 msgstr "Žingsnis _atgal"
 
-#: src/interface.c:65
+#: src/interface.c:62
 msgid "Step out of the current function"
 msgstr "Žingsnis atgal iš esamos funkcijos"
 
-#: src/interface.c:66
+#: src/interface.c:63
 msgid "Toggle _breakpoint"
 msgstr "Pažymėti lūžio tašką"
 
-#: src/interface.c:66
+#: src/interface.c:63
 msgid "Toggles breakpoint at current line"
 msgstr "Pažymėti lūžio tašką ant pasirinktos eilutės"
 
-#: src/interface.c:67
+#: src/interface.c:64
 msgid "_Clear all breakpoints"
 msgstr "_Išvalyti visus lūžio taškus"
 
-#: src/interface.c:67
+#: src/interface.c:64
 msgid "Remove all breakpoints"
 msgstr "Pašalinti visus lūžio taškus"
 
-#: src/interface.c:68
+#: src/interface.c:65
 msgid "Stop execution"
 msgstr "Sustabdyti vykdymą"
 
-#: src/interface.c:68
+#: src/interface.c:65
 msgid "Stop debugging"
 msgstr "Stabdyti derinimą"
 
-#: src/interface.c:69
+#: src/interface.c:66
 msgid "_Contents"
 msgstr "_Turinys"
 
-#: src/interface.c:70
+#: src/interface.c:67
 msgid "Assembler _Tutorial"
 msgstr "Asemblerio _žinynas"
 
-#: src/interface.c:75
+#: src/interface.c:72
 msgid "Show/Hide side pane"
 msgstr "Rodyti / Paslėpti šoninį skydelį"
 
-#: src/interface.c:270
+#: src/interface.c:263
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
 msgstr "GNUSim8085 - 8085 mikroprocesoriaus imitatorius"
 
-#: src/interface.c:479
+#: src/interface.c:474
 msgid "Registers"
 msgstr "Registrai"
 
-#: src/interface.c:562
+#: src/interface.c:559
 msgid "Flag"
 msgstr "Požymis"
 
-#: src/interface.c:582 src/gui-list-data.c:79 src/gui-list-stack.c:84
+#: src/interface.c:579 src/gui-list-data.c:76 src/gui-list-stack.c:81
 msgid "Decimal"
 msgstr "Dešimtainis"
 
-#: src/interface.c:591
+#: src/interface.c:588
 msgid "Enter a decimal number"
 msgstr "Įveskite dešimtainį skaičių"
 
-#: src/interface.c:594
+#: src/interface.c:591
 msgid "To Hex"
 msgstr "Į Hex"
 
-#: src/interface.c:597
+#: src/interface.c:595
 msgid "Convert this number to hexadecimal"
 msgstr "Konvertuoti į šešioliktainį skaičių"
 
-#: src/interface.c:610
+#: src/interface.c:602
 msgid "Hex"
 msgstr "Šešioliktainis"
 
-#: src/interface.c:619
+#: src/interface.c:611
 msgid "Enter a hexadecimal number"
 msgstr "Įveskite šešioliktainį skaičių"
 
-#: src/interface.c:622
+#: src/interface.c:614
 msgid "To Dec"
 msgstr "Į Dec"
 
-#: src/interface.c:625
+#: src/interface.c:618
 msgid "Convert this number to decimal"
 msgstr "Konvertuoti į dešimtainį skaičių"
 
-#: src/interface.c:641
+#: src/interface.c:628
 msgid "Decimal - Hex Convertion"
 msgstr "Dex- Hex konvertavimas"
 
-#: src/interface.c:665
+#: src/interface.c:652
 msgid "Change the port address to view here"
 msgstr "Pakeisto prievado adresas"
 
-#: src/interface.c:672
+#: src/interface.c:659
 msgid "Enter new port value and click Update"
 msgstr "Įveskite naują prievado reikšmę ir paspauskite Atnaujinti"
 
-#: src/interface.c:675
+#: src/interface.c:663
 msgid "Update Port Value"
 msgstr "Atnaujinti prievado reikšmę"
 
-#: src/interface.c:678
+#: src/interface.c:667
 msgid "Update the port value"
 msgstr "Atnaujinti prievado reikšmę"
 
-#: src/interface.c:694 src/interface.c:873
+#: src/interface.c:677 src/interface.c:852
 msgid "I/O Ports"
 msgstr "Įv. / Išv. prievadai"
 
-#: src/interface.c:718
+#: src/interface.c:701
 msgid "Change the memory location to view here"
 msgstr "Pakeistos atminties vieta"
 
-#: src/interface.c:725
+#: src/interface.c:708
 msgid "Edit new value and click Update"
 msgstr "Pakeiskite į naują reikšmę ir paspauskite Atnaujinti"
 
-#: src/interface.c:728
+#: src/interface.c:712
 msgid "Update Memory"
 msgstr "Atnaujinti atmintį"
 
-#: src/interface.c:731
+#: src/interface.c:716
 msgid "Update the current memory location"
 msgstr "Atnaujinti dabartinės atminties vietą"
 
-#: src/interface.c:747 src/interface.c:845
+#: src/interface.c:726 src/interface.c:824
 msgid "Memory"
 msgstr "Atmintis"
 
-#: src/interface.c:766
+#: src/interface.c:745
 msgid "Load me at"
 msgstr "Nukelti mane į"
 
-#: src/interface.c:774
+#: src/interface.c:753
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
 msgstr ""
 "Įveskite programos adresą. Pabaigoje parašykite \"h\", jeigu tai yra "
 "šešioliktainis adresas."
 
-#: src/interface.c:796
+#: src/interface.c:775
 msgid "Data"
 msgstr "Duomenys"
 
-#: src/interface.c:816
+#: src/interface.c:795
 msgid "Stack"
 msgstr "Stekas"
 
-#: src/interface.c:836
+#: src/interface.c:815
 msgid "KeyPad"
 msgstr "Komandos"
 
-#: src/interface.c:851 src/interface.c:879
+#: src/interface.c:830 src/interface.c:858
 msgid "Start"
 msgstr "Pradžia"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: src/interface.c:1089
+#: src/interface.c:1064
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Mantas Kriaučiūnas https://launchpad.net/~mantas\n"
 "  Tadas Masiulionis https://launchpad.net/~tadzikaz"
 
-#: src/interface.c:1135
+#: src/interface.c:1111
 msgid "Assembler Listing"
 msgstr "Asemblerio programa"
 
-#: src/interface.c:1159
+#: src/interface.c:1134
 msgid "Save to file"
 msgstr "Išsaugoti į rinkmeną"
 
-#: src/interface.c:1196
+#: src/interface.c:1171
 msgid "Assembler Tutorial"
 msgstr "Asemblerio žinynas"
 
-#: src/interface.c:1240
+#: src/interface.c:1216
 msgid "GNUSim8085 start with dialog"
 msgstr "Įkelti  GNUSim8085 su dialogo langu"
 
-#: src/interface.c:1271
+#: src/interface.c:1247
 msgid "1. How to use this simulator?"
 msgstr "1. Kaip naudotis šiuo imitatoriumi?"
 
-#: src/interface.c:1279
+#: src/interface.c:1259
 msgid "_Tutorial"
 msgstr "_Žinynas"
 
-#: src/interface.c:1284
+#: src/interface.c:1263
 msgid "A short tutorial on writing assembly code!"
 msgstr "Trumpas žinynas, kaip rašyti asemblerio kodą!"
 
-#: src/interface.c:1291
+#: src/interface.c:1270
 msgid "2. Open an existing assembly program."
 msgstr "2. Atverti jau parašytą asemblerio programą."
 
-#: src/interface.c:1299
+#: src/interface.c:1282
 msgid "_Open program"
 msgstr "_Atverti programą"
 
-#: src/interface.c:1304
+#: src/interface.c:1286
 msgid "Open an already saved program"
 msgstr "Atverti išsaugotą programą"
 
-#: src/interface.c:1306
+#: src/interface.c:1288
 msgid "What do you want to do now?"
 msgstr "Ką norėtumėte daryti?"
 
-#: src/interface.c:1316
+#: src/interface.c:1298
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
@@ -401,68 +401,68 @@ msgstr ""
 "Nepamirškite skaityti dokumentacijos,\n"
 "kuri pateikta \"doc\" aplankale."
 
-#: src/interface.c:1373
+#: src/interface.c:1355
 msgid "Choose a symbol"
 msgstr "Pasirinkite simbolį"
 
-#: src/interface.c:1399
+#: src/interface.c:1381
 msgid "Enter a symbol or choose one from the lists"
 msgstr "Įveskite simbolį arba pasirinkite vieną iš sąrašo"
 
-#: src/interface.c:1409
+#: src/interface.c:1391
 msgid "Enter Symbol"
 msgstr "Įveskite simbolį"
 
-#: src/interface.c:1424
+#: src/interface.c:1406
 msgid "Variables List"
 msgstr "Kintamųjų sąrašas"
 
-#: src/interface.c:1439
+#: src/interface.c:1421
 msgid "Functions List"
 msgstr "Funkcijų sąrašas"
 
-#: src/interface.c:1454
+#: src/interface.c:1436
 msgid "Macros List"
 msgstr "Makro komandų sąrašas"
 
-#: src/interface.c:1493
+#: src/interface.c:1475
 msgid "Choose a register"
 msgstr "Pasirinkite registrą"
 
-#: src/main.c:85
+#: src/main.c:83
 msgid "Simulator: Idle"
 msgstr "Imitatorius: pasirengęs darbui"
 
-#: src/8085.c:251
+#: src/8085.c:249
 #, c-format
 msgid "Unwanted %c reached"
 msgstr "Atsirado nepageidaujamas %c"
 
-#: src/8085-instructions.c:29
+#: src/8085-instructions.c:27
 msgid "Invalid Opcode"
 msgstr "Netinkamas operacijos kodas"
 
-#: src/8085-instructions.c:878
+#: src/8085-instructions.c:876
 msgid "Instruction 'RIM' Not implemented"
 msgstr "Instrukcija \"RIM\" neįvykdyta"
 
-#: src/8085-instructions.c:1029
+#: src/8085-instructions.c:1027
 msgid "Instruction 'SIM' Not implemented"
 msgstr "Instrukcija \"SIM\" neįvykdyta"
 
-#: src/asm-source.c:111
+#: src/asm-source.c:108
 msgid "Assembling Aborted"
 msgstr "Surinkimas nutrauktas"
 
-#: src/asm-source.c:179
+#: src/asm-source.c:176
 msgid "Label should be given to a code line"
 msgstr "Kodo eilutei turi būti suteikta etiketė"
 
-#: src/asm-source.c:209 src/asm-source.c:216 src/asm-source.c:223
+#: src/asm-source.c:206 src/asm-source.c:213 src/asm-source.c:220
 msgid "Incomplete opcode"
 msgstr "Nepilnas operacijos kodas"
 
-#: src/asm-source.c:238
+#: src/asm-source.c:235
 #, c-format
 msgid ""
 "\n"
@@ -471,55 +471,55 @@ msgstr ""
 "\n"
 "Nei OP ne PsOP: [%s]"
 
-#: src/asm-source.c:239
+#: src/asm-source.c:236
 msgid "Invalid Opcode or Pseudo op"
 msgstr "Netinkamas operacijos arba pseudo operacijos kodas"
 
-#: src/asm-source.c:248
+#: src/asm-source.c:245
 msgid "Opcode needs an user argument"
 msgstr "Operacijos kodui reikalingas vartotojo argumentas"
 
-#: src/asm-source.c:256
+#: src/asm-source.c:253
 msgid "Extra characters in line"
 msgstr "Papildomi simboliai eilutėje"
 
-#: src/asm-source.c:422
+#: src/asm-source.c:419
 msgid "Expression error in symbol"
 msgstr "Simbolio išraiškos klaida"
 
-#: src/asm-source.c:436
+#: src/asm-source.c:433
 msgid "Undefined symbol"
 msgstr "Nežinomas simbolis"
 
-#: src/asm-gensym.c:75
+#: src/asm-gensym.c:72
 msgid "Redundant label"
 msgstr "Nereikalinga etiketė"
 
-#: src/asm-gensym.c:90
+#: src/asm-gensym.c:87
 msgid "Invalid Operand in EQU"
 msgstr "Netinkamas operandas komandoje EQU"
 
-#: src/asm-gensym.c:102 src/asm-gensym.c:124
+#: src/asm-gensym.c:99 src/asm-gensym.c:121
 msgid "Invalid operand"
 msgstr "Netinkamas operandas"
 
-#: src/asm-gensym.c:114
+#: src/asm-gensym.c:111
 msgid "Redefinition of symbol"
 msgstr "Naujas simbolio apibrėžimas"
 
-#: src/asm-genobj.c:111
+#: src/asm-genobj.c:108
 msgid "Invalid data size"
 msgstr "Negalimas duomenų dydis"
 
-#: src/asm-genobj.c:116
+#: src/asm-genobj.c:113
 msgid "DS: Exceeded limit"
 msgstr "DS: viršytas limitas"
 
-#: src/asm-genobj.c:131
+#: src/asm-genobj.c:128
 msgid "DB: Operand error"
 msgstr "DB: Operando klaida"
 
-#: src/asm-genobj.c:161
+#: src/asm-genobj.c:158
 msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
@@ -527,15 +527,15 @@ msgstr ""
 "Netinkamas operandas arba simbolis. Patikrinkite ar operandai prasideda "
 "tokiais skaičiais, pavyzdžiui,  a0H turėtų būti 0a0H"
 
-#: src/8085-asm.c:87
+#: src/8085-asm.c:84
 msgid "Program assembled successfully"
 msgstr "Programa sėkmingai surinkta"
 
-#: src/bridge.c:37
+#: src/bridge.c:33
 msgid "Simulator: Program running"
 msgstr "Imitatorius: programa vykdoma"
 
-#: src/bridge.c:187
+#: src/bridge.c:183
 #, c-format
 msgid ""
 "Execution branched to invalid memory location <%xH>. Execution will be "
@@ -554,41 +554,41 @@ msgstr ""
 "įsitikinę, kad tai galėtų būti GNUSim8085 klaida, patariame atsiųsti savo "
 "programos kopiją."
 
-#: src/bridge.c:308
+#: src/bridge.c:304
 msgid "Assembler: running"
 msgstr "Asembleris: vykdoma"
 
-#: src/gui-list-message.c:96
+#: src/gui-list-message.c:93
 msgid "Line No"
 msgstr "Eilės nr."
 
-#: src/gui-list-message.c:97
+#: src/gui-list-message.c:94
 msgid "Assembler Message"
 msgstr "Asemblerio pranešimas"
 
-#: src/gui-list-data.c:76
+#: src/gui-list-data.c:73
 msgid "Address"
 msgstr "Adresas"
 
-#: src/gui-list-data.c:77
+#: src/gui-list-data.c:74
 msgid "Variable"
 msgstr "Kintamasis"
 
-#: src/gui-list-data.c:78 src/gui-list-data.c:79 src/gui-list-stack.c:83
-#: src/gui-list-stack.c:84
+#: src/gui-list-data.c:75 src/gui-list-data.c:76 src/gui-list-stack.c:80
+#: src/gui-list-stack.c:81
 msgid "Value"
 msgstr "Reikšmė"
 
-#: src/asm-listing.c:208
+#: src/asm-listing.c:205
 msgid "; Assembler generated listing; Not editable.\n"
 msgstr ";Asemblerio sukurtas sąrašas; Neredaguojamas.\n"
 
-#: src/asm-listing.c:209
+#: src/asm-listing.c:206
 #, c-format
 msgid "; Generated by GNUSim8085: %s\n"
 msgstr "; Sukurta su GNUSim8085: %s\n"
 
-#: src/asm-listing.c:245
+#: src/asm-listing.c:242
 msgid ""
 ";Assembler Listing (Do Not assemble)\n"
 "\n"
@@ -596,37 +596,37 @@ msgstr ""
 ";Asemblerio sąrašas (nesurinktas)\n"
 "\n"
 
-#: src/file-op.c:63 src/file-op-gio.c:65
+#: src/file-op.c:60 src/file-op-gio.c:62
 #, c-format
 msgid "Failed to open <%s>"
 msgstr "Nepavyko atverti <%s>"
 
-#: src/file-op.c:142
+#: src/file-op.c:139
 msgid "File already exists; overwrite it?"
 msgstr "Tokia rimkmena jau yra. Perrašyti?"
 
-#: src/file-op.c:157 src/file-op-gio.c:152
+#: src/file-op.c:154 src/file-op-gio.c:149
 #, c-format
 msgid "Failed to save <%s>"
 msgstr "Nepavyko išssaugoti <%s>"
 
-#: src/file-op.c:328 src/file-op-gio.c:334
+#: src/file-op.c:325 src/file-op-gio.c:331
 msgid "Failed to save listing file"
 msgstr "Nepavyko išsaugoti sąrašo rinkmenos"
 
-#: src/gui-list-stack.c:81
+#: src/gui-list-stack.c:78
 msgid "Stack Loc"
 msgstr "Steko vieta"
 
-#: src/gui-list-stack.c:82
+#: src/gui-list-stack.c:79
 msgid "Proc/Reg"
 msgstr "Proc/Reg"
 
-#: src/gui-list-stack.c:117
+#: src/gui-list-stack.c:114
 msgid "Stack size exceeded.  Stop the execution"
 msgstr "Seko dydis viršytas. Stabdyti vykdymą"
 
-#: src/gui-list-stack.c:131
+#: src/gui-list-stack.c:128
 msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"

@@ -78,55 +78,57 @@ FunctionEnd
 Section "!GNUSim8085" SecMain
 SectionIn RO
   SetOutPath $INSTDIR
-  !system 'cp ${MINGW_HOME}/bin/*freetype*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/*intl*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/lib*win*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libatk*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libbz2*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libcairo*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libepoxy*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libexpat*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libffi*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libfontconfig*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libgcc*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libgdk*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libgio*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libglib*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libgmodule*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libgobject*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libgtk*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libgthread*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libpango*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libpcre*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libpixman*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libpng*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/zlib1*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/iconv.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/lib${GTKSOURCEVIEW_API}*.dll win32/bin/'
-  !system 'cp ${MINGW_HOME}/bin/libxml2*.dll win32/bin/libxml2-2.dll'
-  !system 'cp ${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/language-specs/language2.rng data/'
-  !system 'cp ${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/language-specs/def.lang data/'
-  !system 'cp ${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/styles/styles.rng data/'
-  !system 'cp ${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/styles/classic.xml data/'
   File AUTHORS
   File ChangeLog
   File COPYING
   File NEWS
   File TODO
-  File /r /x Makefile* data
   File win32/share/doc/gnusim8085/asm-guide.txt
   File /r win32/share/doc/gnusim8085/examples
   File /nonfatal /r win32/share/doc/gnusim8085/help
   File /r /x Makefile* pixmaps
 
+  SetOutPath "$INSTDIR\data"
+  File "win32/share/@PACKAGE@/8085asm.lang"
+  File "${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/language-specs/language2.rng"
+  File "${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/language-specs/def.lang"
+  File "${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/styles/styles.rng"
+  File "${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/styles/classic.xml"
+
   SetOutPath "$INSTDIR\bin"
+  File "${MINGW_HOME}/bin/*freetype*.dll"
+  File "${MINGW_HOME}/bin/*intl*.dll"
+  File "${MINGW_HOME}/bin/lib*win*.dll"
+  File "${MINGW_HOME}/bin/libatk*.dll"
+  File "${MINGW_HOME}/bin/libbz2*.dll"
+  File "${MINGW_HOME}/bin/libcairo*.dll"
+  File "${MINGW_HOME}/bin/libepoxy*.dll"
+  File "${MINGW_HOME}/bin/libexpat*.dll"
+  File "${MINGW_HOME}/bin/libffi*.dll"
+  File "${MINGW_HOME}/bin/libfontconfig*.dll"
+  File "${MINGW_HOME}/bin/libgcc*.dll"
+  File "${MINGW_HOME}/bin/libgdk*.dll"
+  File "${MINGW_HOME}/bin/libgio*.dll"
+  File "${MINGW_HOME}/bin/libglib*.dll"
+  File "${MINGW_HOME}/bin/libgmodule*.dll"
+  File "${MINGW_HOME}/bin/libgobject*.dll"
+  File "${MINGW_HOME}/bin/libgtk*.dll"
+  File "${MINGW_HOME}/bin/libgthread*.dll"
+  File "${MINGW_HOME}/bin/libpango*.dll"
+  File "${MINGW_HOME}/bin/libpcre*.dll"
+  File "${MINGW_HOME}/bin/libpixman*.dll"
+  File "${MINGW_HOME}/bin/libpng*.dll"
+  File "${MINGW_HOME}/bin/zlib1*.dll"
+  File "${MINGW_HOME}/bin/iconv.dll"
+  File "${MINGW_HOME}/bin/lib${GTKSOURCEVIEW_API}*.dll"
+  File "${MINGW_HOME}/bin/libxml2*.dll"
   File "${MINGW_HOME}/bin/glib-compile-schemas.exe"
   File "${MINGW_HOME}/bin/gtk-update-icon-cache.exe"
   File win32/bin/*
 
   SetOutPath "$INSTDIR"
   FileOpen $0 @PACKAGE@.bat w
-  FileWrite $0 'C:\Windows\System32\cmd.exe /c "SET XDG_DATA_DIRS=%XDG_DATA_DIRS%;share; && START /D ^"$INSTDIR^" bin\gnusim8085.exe"'
+  FileWrite $0 'C:\Windows\System32\cmd.exe /c "SET XDG_DATA_DIRS=%XDG_DATA_DIRS%;share; && START /D ^"$INSTDIR^" bin\@PACKAGE@.exe"'
   FileClose $0
 
   # Make example program files read only
@@ -141,10 +143,6 @@ SectionIn RO
   CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\@PACKAGE@.bat" "" "$INSTDIR\pixmaps\gnusim8085.ico"
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
-  !system 'rm -f data/language2.rng'
-  !system 'rm -f data/styles.rng'
-  !system 'rm -f data/classic.xml'
-  !system 'rm -f data/def.lang'
 
   SetOutPath "$INSTDIR\share\icons"
   File /r "${MINGW_HOME}/share/icons/Adwaita"

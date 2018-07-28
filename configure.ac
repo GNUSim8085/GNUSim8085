@@ -40,23 +40,11 @@ case "${host}" in
 esac
 AM_CONDITIONAL([WIN32], test "$WIN32" = "yes")
 
-AC_PATH_PROG([xsltproc],[xsltproc])
-if test -z "$xsltproc" ; then
-	AC_MSG_WARN([xsltproc was not found. If you want to change and compile the documentation, \
-please install libxslt (http://xmlsoft.org/XSLT/)])
+AC_PATH_PROG([markdown],[markdown])
+if test -z "$markdown" ; then
+	AC_MSG_WARN([markdown was not found. If you want to change and compile the documentation, \
+please install markdown])
 	can_build_documentation=no
-fi
-
-AC_ARG_WITH([xslpath],
-	    AS_HELP_STRING([--with-xslpath],[The path for docbook xsl used for building documentation]),
-	[with_xslpath=$withval],
-	[with_xslpath=/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl])
-AC_SUBST(xsl_path, "$with_xslpath")
-
-if test -f "$xsl_path"; then
-  can_build_documentation=yes
-else
-  can_build_documentation=no
 fi
 
 AC_MSG_CHECKING([whether documentation can be changed and compiled])

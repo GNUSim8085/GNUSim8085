@@ -1,25 +1,25 @@
 images = *.png
-source_tarball_files = *.xml
+source_tarball_files = userguide.md
 
 htmlhelpdir = $(htmldir)/help
 htmlhelp_DATA =
 if BUILD_HELP
-htmlhelp_DATA += $(images) $(PACKAGE).htm
+htmlhelp_DATA += $(images) userguide.htm
 endif
 
 EXTRA_DIST = $(source_tarball_files) $(images)
 
 DISTCLEANFILES = Makefile
 
-all: $(PACKAGE).htm
+all: userguide.htm
 
-force-update-doc: clean $(PACKAGE).htm
+force-update-doc: clean userguide.htm
 
-$(PACKAGE).htm: $(source_tarball_files)
+userguide.htm: $(source_tarball_files)
 if BUILD_HELP
-	$(xsltproc) -o $(srcdir)/$(PACKAGE).htm $(xsl_path) $(srcdir)/$(PACKAGE).xml
+	$(markdown) -o $(srcdir)/userguide.htm $(srcdir)/userguide.md
 else
-	echo "Missing xsltproc or xhtml style sheet." \
+	echo "Missing markdown." \
 	"Rerun configure and check for 'checking whether documentation can be changed and compiled... yes'!"
 endif
 

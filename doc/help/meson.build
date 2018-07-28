@@ -1,7 +1,6 @@
 packagename = meson.project_name()
-binaryxsltproc = find_program('xsltproc', required : false)
-xslfile = get_option('with-xslpath')
-inputxml = packagename + '.xml'
+binarymarkdown = find_program('markdown', required : false)
+inputmd = 'userguide.md'
 imagefiles = [
 'assembler_listing.png',
 'assembler_messages.png',
@@ -15,19 +14,17 @@ imagefiles = [
 'tab_stack.png',
 'toolbar.png'
 ]
-inputfiles = [inputxml, imagefiles]
-outputhtm = packagename + '.htm'
+inputfiles = [inputmd, imagefiles]
+outputhtm = 'userguide.htm'
 
-xslfileexists = run_command('ls', xslfile).returncode() == 0
-xslprogexists = binaryxsltproc.found()
-canbuildhelp = xslfileexists and xslprogexists
+canbuildhelp = binarymarkdown.found()
 message ('can build help : ' + canbuildhelp.to_string())
 if canbuildhelp
   custom_target (
   'buildhelp',
   input: inputfiles,
   output : outputhtm,
-  command : [binaryxsltproc, '-o', '@OUTPUT0@', xslfile, '@INPUT0@'],
+  command : [binarymarkdown, '-o', '@OUTPUT0@', '@INPUT0@'],
   install : true,
   install_dir : packagehelpdir
   )

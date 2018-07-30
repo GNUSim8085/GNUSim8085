@@ -1,4 +1,4 @@
-GNUSim8085 1.4.0 (29 Jul 2018)
+GNUSim8085 1.4.1 (31 Jul 2018)
 
 New:     The application has been ported to GTK3. There is no major functional
          difference compared to previous versions. But using GTK3 should allow

@@ -4,14 +4,13 @@ SUBDIRS = po src pixmaps doc data
 
 gnusim8085_docdir = $(docdir)
 gnusim8085_doc_DATA = \
-	README.md\
-	README_OSX.md\
 	AUTHORS\
 	NEWS\
 	TODO\
 	ABOUT-NLS
 
-EXTRA_DIST = config.rpath m4/ChangeLog  $(gnusim8085doc_DATA)
+EXTRA_DIST = config.rpath m4/ChangeLog $(gnusim8085_doc_DATA) \
+	     README.md README_OSX.md WINDOWS-PORT.txt Brewfile
 
 DISTCLEANFILES = README *.exe *.gz
 

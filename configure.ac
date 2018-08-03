@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT([gnusim8085], [1.4.1], [https://github.com/GNUSim8085/GNUSim8085/issues])
+AC_INIT([gnusim8085], [1.4.2], [https://github.com/GNUSim8085/GNUSim8085/issues])
 AC_DEFINE([PACKAGE_URL],["http://www.gnusim8085.org/"],[Website URL])
 
 AC_CANONICAL_HOST

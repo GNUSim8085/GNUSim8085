@@ -1,7 +1,7 @@
 language: c
 matrix:
         allow_failures:
-                - os: osx
+                - os: linux
         include:
                 - name: "Linux autotools build"
                   os: linux
@@ -14,12 +14,23 @@ matrix:
                                           - discount
                   script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install && make dist && tar -tzvf gnusim8085*.tar.*
 
+                - name: "Linux meson build"
+                  os: linux
+                  dist: xenial
+                  addons:
+                          apt:
+                                  packages:
+                                          - libgtksourceview-3.0-dev
+                                          - gettext
+                                          - discount
+                                          - meson
+                  script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja install && ninja dist && cd ..
+
                 - name: "OS X autotools build"
                   os: osx
                   before_install:
                           - brew list
                           - brew uninstall --force mercurial
-                          - brew uninstall python
                           - brew bundle
                           - brew link --force gettext
                   script:
@@ -34,7 +45,6 @@ matrix:
                   before_install:
                           - brew list
                           - brew uninstall --force mercurial
-                          - brew uninstall python
                           - brew install gtk+3
                           - brew install gtksourceview3
                           - brew install gettext

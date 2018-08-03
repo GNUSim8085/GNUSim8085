@@ -3,8 +3,8 @@ matrix:
         allow_failures:
                 - os: osx
         include:
-                # Default build
-                - os: linux
+                - name: "Linux autotools build"
+                  os: linux
                   dist: trusty
                   addons:
                           apt:
@@ -12,10 +12,10 @@ matrix:
                                           - libgtksourceview-3.0-dev
                                           - gettext
                                           - discount
-                  script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install
+                  script: ./autogen.sh && ./configure --prefix=`pwd`/tempinstall && make && make install && make dist && tar -tzvf gnusim8085*.tar.*
 
-                # Default build on OS X
-                - os: osx
+                - name: "OS X autotools build"
+                  os: osx
                   before_install:
                           - brew list
                           - brew uninstall --force mercurial
@@ -26,18 +26,23 @@ matrix:
                           - ./autogen.sh
                           - ./configure --prefix=`pwd`/tempinstall
                           - make install
+                          - make dist
+                          - tar -tzvf gnusim8085*.tar.*
 
-                # Default build using meson on OS X 10.12 (Sierra)
-                - os: osx
+                - name: "OS X meson build"
+                  os: osx
                   before_install:
                           - brew list
                           - brew uninstall --force mercurial
                           - brew uninstall python
-                          - brew bundle
+                          - brew install gtk+3
+                          - brew install gtksourceview3
+                          - brew install gettext
+                          - brew install discount
                           - brew link --force gettext
                           - brew install meson
                   script:
                           - rm -rf builddir
                           - meson --prefix=`pwd`/mesoninstall builddir
-                          - cd builddir && ninja install && cd ..
+                          - cd builddir && ninja install && ninja dist && cd ..
 

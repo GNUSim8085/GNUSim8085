@@ -56,5 +56,5 @@ matrix:
                   script:
                           - rm -rf builddir
                           - meson --prefix=`pwd`/mesoninstall builddir
-                          - cd builddir && ninja install && otool -L mesoninstall/bin/gnusim8085 && ninja dist && cd ..
+                          - cd builddir && ninja install && otool -L ../mesoninstall/bin/gnusim8085 && ninja dist && cd ..
 

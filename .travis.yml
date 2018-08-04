@@ -2,6 +2,7 @@ language: c
 matrix:
         allow_failures:
                 - os: linux
+                  dist: xenial
         include:
                 - name: "Linux autotools build"
                   os: linux
@@ -24,7 +25,7 @@ matrix:
                                           - gettext
                                           - discount
                                           - meson
-                  script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja install && ninja dist && cd ..
+                  script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja dist && cd ..
 
                 - name: "OS X autotools build"
                   os: osx
@@ -37,6 +38,7 @@ matrix:
                           - ./autogen.sh
                           - ./configure --prefix=`pwd`/tempinstall
                           - make install
+                          - otool -L tempinstall/bin/gnusim8085
                           - make dist
                           - tar -tzvf gnusim8085*.tar.*
 
@@ -54,5 +56,5 @@ matrix:
                   script:
                           - rm -rf builddir
                           - meson --prefix=`pwd`/mesoninstall builddir
-                          - cd builddir && ninja install && ninja dist && cd ..
+                          - cd builddir && ninja install && otool -L mesoninstall/bin/gnusim8085 && ninja dist && cd ..
 

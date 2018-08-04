@@ -30,6 +30,15 @@ gnusim8085_sources = [
 'support.c'
 ]
 
+compiler = meson.get_compiler('c')
+compiler.has_header('libintl.h')
+compiler.has_header('stdlib.h')
+compiler.has_header('string.h')
+compiler.has_header('unistd.h')
+compiler.has_function('memset')
+compiler.has_function('setlocale')
+compiler.has_function('strtol')
+compiler.has_function('strtoul')
 
 gtkdep = dependency(gtk_api, version : '>=' + gtk_required)
 gtksourceviewdep = dependency(gtksourceview_api, version : '>=' + gtksourceview_required)

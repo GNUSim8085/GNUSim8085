@@ -183,7 +183,7 @@ _bridge_8085_cb (eef_addr_t addr, eef_addr_t prev_addr, gboolean finished)
 					   _("Execution branched to invalid memory location <%xH>. Execution will be stopped!\n\n\
 Check whether you've included the \"hlt\" instruction at the end of your program and your source program\
  is not empty.  Also check your program logic. If you're very sure, there might be a bug in GNUSim8085.\
-If so you're advised to send a copy of your source progam."), addr);
+If so you're advised to send a copy of your source program."), addr);
 	  /* fatal error */
 	  gui_app_show_msg (GTK_MESSAGE_WARNING, err_str->str);
 	  g_string_free (err_str, TRUE);

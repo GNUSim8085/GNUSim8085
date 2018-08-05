@@ -625,7 +625,7 @@ create_window_main (void)
   gtk_widget_show (image369);
   gtk_box_pack_start (GTK_BOX (hbox38), image369, FALSE, FALSE, 0);
 
-  label153 = gtk_label_new (g_strconcat("<b>", _("Decimal - Hex Convertion"), "</b>", NULL));
+  label153 = gtk_label_new (g_strconcat("<b>", _("Decimal - Hex Conversion"), "</b>", NULL));
   gtk_widget_show (label153);
   gtk_box_pack_start (GTK_BOX (hbox38), label153, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label153), TRUE);

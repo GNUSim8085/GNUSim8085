@@ -55,6 +55,8 @@ matrix:
                           - brew install meson
                   script:
                           - rm -rf builddir
-                          - meson --prefix=`pwd`/mesoninstall builddir
-                          - cd builddir && ninja install && otool -L ../mesoninstall/bin/gnusim8085 && ninja dist && cd ..
+                          - meson --prefix=/tmp/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale -Dbuild-osx-app=true builddir
+                          - cd builddir && ninja install && ninja dist && cd ..
+                          - otool -L /tmp/GNUSim8085.app/Contents/MacOS/gnusim8085
+                          - ls -R /tmp/GNUSim8085.app
 

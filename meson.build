@@ -66,6 +66,6 @@ subdir('doc')
 subdir('data')
 
 if get_option('build-osx-app')
-  message('Commans to execute for modifying binary : dylibbundler'+' -x '+join_paths(prefix, bindir, packagename)+' -b '+' -d '+join_paths(prefix, 'Contents', 'libs')+' -cd ')
-#  meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagename),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
+  message('Command to execute for modifying binary : dylibbundler'+' -x '+join_paths(prefix, bindir, packagename)+' -b '+' -d '+join_paths(prefix, 'Contents', 'libs')+' -cd ')
+  meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagename),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
 endif

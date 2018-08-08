@@ -5,8 +5,13 @@ project('gnusim8085', 'c',
 )
 packagename = meson.project_name()
 prefix = get_option('prefix')
+bindir = get_option('bindir')
 datadir = get_option('datadir')
-packagedocdir = join_paths(prefix, datadir, 'doc', packagename)
+if get_option('build-osx-app')
+  packagedocdir = join_paths(prefix, 'Contents', 'SharedSupport')
+else
+  packagedocdir = join_paths(prefix, datadir, 'doc', packagename)
+endif
 packagehelpdir = join_paths(packagedocdir, 'help')
 packagepixmapsdir = prefix + '/' + datadir + '/icons/hicolor/scalable/apps'
 packagemenudir= join_paths(prefix, datadir, 'gnome', 'apps')
@@ -15,8 +20,13 @@ conf_data.set_quoted('PACKAGE', packagename, description : 'Name of package')
 conf_data.set_quoted('PACKAGE_NAME', packagename)
 conf_data.set_quoted('VERSION', meson.project_version(), description : 'Version number of package')
 conf_data.set_quoted('PACKAGE_DATA_DIR', prefix + '/' + datadir + '/' + packagename)
-conf_data.set_quoted('PACKAGE_DOC_DIR', packagedocdir)
-conf_data.set_quoted('PACKAGE_HELP_DIR', packagehelpdir, description : 'Directory where help files are installed')
+if get_option('build-osx-app')
+  conf_data.set_quoted('PACKAGE_DOC_DIR', '../' + 'SharedSupport')
+  conf_data.set_quoted('PACKAGE_HELP_DIR', '../' + 'SharedSupport/' + 'help', description : 'Directory where help files are installed')
+else
+  conf_data.set_quoted('PACKAGE_DOC_DIR', packagedocdir)
+  conf_data.set_quoted('PACKAGE_HELP_DIR', packagehelpdir, description : 'Directory where help files are installed')
+endif
 conf_data.set_quoted('PACKAGE_MENU_DIR', packagemenudir, description : 'Directory where menu files are installed')
 conf_data.set_quoted('PACKAGE_PIXMAPS_DIR', packagepixmapsdir, description : 'Directory where pixmaps files are installed')
 conf_data.set_quoted('PACKAGE_URL', 'http://www.gnusim8085.org/', description : 'Website URL')
@@ -55,3 +65,7 @@ subdir('pixmaps')
 subdir('doc')
 subdir('data')
 
+if get_option('build-osx-app')
+  message('Commans to execute for modifying binary : dylibbundler'+' -x '+join_paths(prefix, bindir, packagename)+' -b '+' -d '+join_paths(prefix, 'Contents', 'libs')+' -cd ')
+#  meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagename),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
+endif

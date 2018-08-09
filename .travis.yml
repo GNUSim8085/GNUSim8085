@@ -17,6 +17,7 @@ matrix:
 
                 - name: "Linux meson build"
                   os: linux
+                  sudo: false
                   dist: xenial
                   addons:
                           apt:
@@ -47,13 +48,8 @@ matrix:
                   before_install:
                           - brew list
                           - brew uninstall --force mercurial
-                          - brew install gtk+3
-                          - brew install gtksourceview3
-                          - brew install gettext
-                          - brew install discount
-                          - brew install dylibbundler
+                          - brew bundle
                           - brew link --force gettext
-                          - brew install meson
                   script:
                           - rm -rf builddir
                           - meson --prefix=`pwd`/builddir/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-osx-app=true builddir

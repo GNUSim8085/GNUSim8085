@@ -1,6 +1,8 @@
 brew 'autoconf'
 brew 'automake'
+brew 'meson'
 brew 'gtk+3'
 brew 'gtksourceview3'
 brew 'gettext'
 brew 'discount'
+brew 'dylibbundler'

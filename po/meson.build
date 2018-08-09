@@ -21,7 +21,7 @@ if get_option('build-osx-app') == true
   foreach l : languages
     gtk_translation = join_paths('/usr', 'local', 'share', 'locale', l, 'LC_MESSAGES', 'gtk30.mo')
     if run_command('ls', gtk_translation).returncode() == 0
-      meson.add_install_script('cp', '-t', join_paths(prefix, localedir, l, 'LC_MESSAGES'), gtk_translation)
+      install_data(gtk_translation, install_dir : join_paths(localedir, l, 'LC_MESSAGES'))
     endif
   endforeach
 endif

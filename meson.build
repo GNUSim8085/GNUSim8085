@@ -7,6 +7,7 @@ packagename = meson.project_name()
 prefix = get_option('prefix')
 bindir = get_option('bindir')
 datadir = get_option('datadir')
+localedir = get_option('localedir')
 if get_option('build-osx-app')
   packagedocdir = join_paths(prefix, 'Contents', 'SharedSupport')
 else
@@ -33,18 +34,19 @@ conf_data.set_quoted('PACKAGE_URL', 'http://www.gnusim8085.org/', description : 
 
 i18n = import('i18n')
 conf_data.set_quoted('GETTEXT_PACKAGE', packagename)
-conf_data.set_quoted('LOCALEDIR',
-  join_paths(get_option('prefix'), get_option('localedir')))
+conf_data.set_quoted('LOCALEDIR', join_paths(prefix, localedir))
 configure_file(output : 'config.h',
                configuration : conf_data)
 
 
+if get_option('build-osx-app') == false
 desktopconf = configuration_data()
 desktopconf.set('PACKAGE_PIXMAPS_DIR', packagepixmapsdir)
 configure_file(input : 'GNUSim8085.desktop.in',
                output : 'GNUSim8085.desktop',
                configuration : desktopconf,
                install_dir : join_paths(get_option('datadir'), 'applications'))
+endif
 
 installerconf = configuration_data()
 installerconf.set('PACKAGE', packagename, description : 'Name of package')
@@ -64,6 +66,6 @@ subdir('src')
 subdir('pixmaps')
 subdir('doc')
 subdir('data')
-if get_option('build-osx-app')
+if get_option('build-osx-app') == true
   subdir('osx')
 endif

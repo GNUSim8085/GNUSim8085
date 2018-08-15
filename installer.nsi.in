@@ -21,19 +21,22 @@ SetCompressor /SOLID lzma
 # Define application name and installer file name
 Name GNUSim8085
 !ifndef MINGW_HOME
-  !define MINGW_HOME "/usr/i586-mingw32msvc"
+  !define MINGW_HOME "/usr/i686-w64-mingw32/sys-root/mingw"
+!endif
+!ifndef BUILD_DIR_TEMP
+  !define BUILD_DIR_TEMP "win32"
 !endif
 OutFile @PACKAGE@-@VERSION@-installer.exe
 !define GTK_VERSION_REQ "@GTK_VERSION_REQ@"
 !define GTKSOURCEVIEW_API @GTKSOURCEVIEW_API@
-!define MUI_ICON pixmaps/gnusim8085.ico
+!define MUI_ICON ${BUILD_DIR_TEMP}/share/pixmaps/gnusim8085/gnusim8085.ico
 InstallDir "$PROGRAMFILES\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"
 !define uninstaller "uninstaller.exe"
 
 # Show license page
 !define MUI_LICENSEPAGE_CHECKBOX
-!insertmacro MUI_PAGE_LICENSE COPYING
+!insertmacro MUI_PAGE_LICENSE ${BUILD_DIR_TEMP}/share/doc/gnusim8085/COPYING
 
 !insertmacro MUI_PAGE_COMPONENTS
 
@@ -78,15 +81,12 @@ FunctionEnd
 Section "!GNUSim8085" SecMain
 SectionIn RO
   SetOutPath $INSTDIR
-  File AUTHORS
-  File ChangeLog
-  File COPYING
-  File NEWS
-  File TODO
-  File win32/share/doc/gnusim8085/asm-guide.txt
-  File /r win32/share/doc/gnusim8085/examples
-  File /nonfatal /r win32/share/doc/gnusim8085/help
-  File /r /x Makefile* pixmaps
+  File ${BUILD_DIR_TEMP}/share/doc/gnusim8085/*
+  File /r ${BUILD_DIR_TEMP}/share/doc/gnusim8085/examples
+  File /nonfatal /r ${BUILD_DIR_TEMP}/share/doc/gnusim8085/help
+
+  SetOutPath $INSTDIR\pixmaps
+  File ${BUILD_DIR_TEMP}/share/pixmaps/gnusim8085/*
 
   SetOutPath "$INSTDIR\data"
   File "win32/share/@PACKAGE@/8085asm.lang"

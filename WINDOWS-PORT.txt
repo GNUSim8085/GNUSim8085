@@ -15,7 +15,7 @@ Build using meson:
 2. Change to builddir and execute command "ninja". This builds the application.
 3. Execute command "DESTDIR=`pwd`/win32 ninja install'.
    This installs application in a temporary folder to be used by installer build script.
-4. Execute command "makensis -DMINGW_HOME=/usr/i686-w64-mingw32/sys-root/mingw installer.nsi".
+4. Execute command "makensis installer.nsi".
    This builds the installer.
 
 Build using autotools:
@@ -24,7 +24,7 @@ Build using autotools:
 2. Execute command "make". This builds the application.
 3. Execute command "make DESTDIR=`pwd`/win32 install'.
    This installs application in a temporary folder to be used by installer build script.
-4. Execute command "makensis -DMINGW_HOME=/usr/i686-w64-mingw32/sys-root/mingw installer.nsi".
+4. Execute command "makensis installer.nsi".
    This builds the installer.
 
 TODO:

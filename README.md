@@ -33,11 +33,21 @@ Build dependencies (Optional)
 - gettext (>= 0.18)
 - markdown (discount or similar package that provides markdown binary)
 
-## Install from source
+## Install from source using meson build system (default)
 To install from source, run the following commands
 
 ```sh
-$ ./autogen.sh # only required when configure script does not exist
+$ meson builddir
+$ cd builddir
+$ ninja
+$ sudo ninja install
+```
+
+## Install from source using autotools build system
+To install from source, run the following commands
+
+```sh
+$ ./autogen.sh
 $ ./configure
 $ make
 $ sudo make install

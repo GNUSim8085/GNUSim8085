@@ -1,5 +1,14 @@
 GNUSim8085 1.4.2 (UNRELEASED)
 
+New:     #31 - Fully switch to meson build
+Note to packagers:
+         The application can now be built using meson build system.
+         If you see any issues building with meson please report them on our
+         issue tracker.
+         If you still want to use autotools based build then you will need to
+         generate necessary files using autogen.sh.
+         Dependencies:
+         New - meson >= 0.37.0
 
 GNUSim8085 1.4.1 (31 Jul 2018)
 

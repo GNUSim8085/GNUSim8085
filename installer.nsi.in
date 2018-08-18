@@ -29,14 +29,14 @@ Name GNUSim8085
 OutFile @PACKAGE@-@VERSION@-installer.exe
 !define GTK_VERSION_REQ "@GTK_VERSION_REQ@"
 !define GTKSOURCEVIEW_API @GTKSOURCEVIEW_API@
-!define MUI_ICON ${BUILD_DIR_TEMP}/share/pixmaps/gnusim8085/gnusim8085.ico
+!define MUI_ICON ${BUILD_DIR_TEMP}/share/pixmaps/@PACKAGE@/@PACKAGE@.ico
 InstallDir "$PROGRAMFILES\GNUSim8085"
 !define startmenu "$SMPROGRAMS\GNUSim8085"
 !define uninstaller "uninstaller.exe"
 
 # Show license page
 !define MUI_LICENSEPAGE_CHECKBOX
-!insertmacro MUI_PAGE_LICENSE ${BUILD_DIR_TEMP}/share/doc/gnusim8085/COPYING
+!insertmacro MUI_PAGE_LICENSE ${BUILD_DIR_TEMP}/share/doc/@PACKAGE@/COPYING
 
 !insertmacro MUI_PAGE_COMPONENTS
 
@@ -47,7 +47,7 @@ InstallDir "$PROGRAMFILES\GNUSim8085"
 !insertmacro MUI_PAGE_INSTFILES
 
 # Show finish page with an option to launch program
-!define MUI_FINISHPAGE_RUN $INSTDIR\@PACKAGE@.bat
+!define MUI_FINISHPAGE_RUN $INSTDIR\\@PACKAGE@.bat
 !insertmacro MUI_PAGE_FINISH
 
 # Show uninstall confirmation page
@@ -81,15 +81,15 @@ FunctionEnd
 Section "!GNUSim8085" SecMain
 SectionIn RO
   SetOutPath $INSTDIR
-  File ${BUILD_DIR_TEMP}/share/doc/gnusim8085/*
-  File /r ${BUILD_DIR_TEMP}/share/doc/gnusim8085/examples
-  File /nonfatal /r ${BUILD_DIR_TEMP}/share/doc/gnusim8085/help
+  File ${BUILD_DIR_TEMP}/share/doc/@PACKAGE@/*
+  File /r ${BUILD_DIR_TEMP}/share/doc/@PACKAGE@/examples
+  File /nonfatal /r ${BUILD_DIR_TEMP}/share/doc/@PACKAGE@/help
 
   SetOutPath $INSTDIR\pixmaps
-  File ${BUILD_DIR_TEMP}/share/pixmaps/gnusim8085/*
+  File ${BUILD_DIR_TEMP}/share/pixmaps/@PACKAGE@/*
 
   SetOutPath "$INSTDIR\data"
-  File "win32/share/@PACKAGE@/8085asm.lang"
+  File "${BUILD_DIR_TEMP}/share/@PACKAGE@/8085asm.lang"
   File "${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/language-specs/language2.rng"
   File "${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/language-specs/def.lang"
   File "${MINGW_HOME}/share/${GTKSOURCEVIEW_API}/styles/styles.rng"
@@ -124,11 +124,11 @@ SectionIn RO
   File "${MINGW_HOME}/bin/libxml2*.dll"
   File "${MINGW_HOME}/bin/glib-compile-schemas.exe"
   File "${MINGW_HOME}/bin/gtk-update-icon-cache.exe"
-  File win32/bin/*
+  File ${BUILD_DIR_TEMP}/bin/*
 
   SetOutPath "$INSTDIR"
   FileOpen $0 @PACKAGE@.bat w
-  FileWrite $0 'C:\Windows\System32\cmd.exe /c "SET XDG_DATA_DIRS=%XDG_DATA_DIRS%;share; && START /D ^"$INSTDIR^" bin\@PACKAGE@.exe"'
+  FileWrite $0 'C:\Windows\System32\cmd.exe /c "SET XDG_DATA_DIRS=%XDG_DATA_DIRS%;share; && START /D ^"$INSTDIR^" bin\\@PACKAGE@.exe"'
   FileClose $0
 
   # Make example program files read only
@@ -140,7 +140,7 @@ SectionIn RO
   SetFileAttributes $INSTDIR\examples\sumofnumbers.asm READONLY
   SetFileAttributes $INSTDIR\examples\swaphex.asm READONLY
   CreateDirectory ${startmenu}
-  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\@PACKAGE@.bat" "" "$INSTDIR\pixmaps\gnusim8085.ico"
+  CreateShortcut "${startmenu}\GNUSim8085.lnk" "$INSTDIR\\@PACKAGE@.bat" "" "$INSTDIR\pixmaps\\@PACKAGE@.ico"
   WriteUninstaller $INSTDIR\${uninstaller}
   CreateShortcut "${startmenu}\Uninstall.lnk" "$INSTDIR\${uninstaller}"
 
@@ -182,7 +182,7 @@ SectionEnd
 
 !macro IncludeLocale LOCALE
   SetOutPath "$INSTDIR\share\locale\${LOCALE}\LC_MESSAGES"
-  File "win32/share/locale/${LOCALE}/LC_MESSAGES/gnusim8085.mo"
+  File "${BUILD_DIR_TEMP}/share/locale/${LOCALE}/LC_MESSAGES/@PACKAGE@.mo"
   File "${MINGW_HOME}/share/locale/${LOCALE}/LC_MESSAGES/gtk30.mo"
 !macroend
 
@@ -205,7 +205,7 @@ Section "Translations" SecI18N
   !insertmacro IncludeLocale "ru"
   !insertmacro IncludeLocale "ta"
   !insertmacro IncludeLocale "th"
-  !system 'rm -rf win32'
+  !system 'rm -rf ${BUILD_DIR_TEMP}'
 SectionEnd
 
 # Uninstall section

@@ -1315,18 +1315,14 @@ create_dialog_isymbol (void)
   GtkWidget *dialog_isymbol;
   GdkPixbuf *dialog_isymbol_icon_pixbuf;
   GtkWidget *dialog_vbox1;
-  GtkWidget *isymbol_vbox;
+  GtkWidget *dialog_isymbol_grid;
   GtkWidget *label170;
-  GtkWidget *hbox44;
   GtkWidget *label171;
   GtkWidget *entry1;
-  GtkWidget *hbox45;
   GtkWidget *label174;
   GtkWidget *isymbol_variables;
-  GtkWidget *hbox46;
   GtkWidget *label175;
   GtkWidget *isymbol_labels;
-  GtkWidget *hbox47;
   GtkWidget *label176;
   GtkWidget *isymbol_macros;
 
@@ -1351,90 +1347,64 @@ create_dialog_isymbol (void)
   dialog_vbox1 = gtk_dialog_get_content_area (GTK_DIALOG (dialog_isymbol));
   gtk_widget_show (dialog_vbox1);
 
-  isymbol_vbox = VBOX (2);
-  gtk_widget_show (isymbol_vbox);
-  gtk_box_pack_start (GTK_BOX (dialog_vbox1), isymbol_vbox, TRUE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (isymbol_vbox), 5);
+  dialog_isymbol_grid = gtk_grid_new();
+  gtk_grid_set_column_spacing (GTK_GRID (dialog_isymbol_grid), 5);
+  gtk_grid_set_row_spacing (GTK_GRID (dialog_isymbol_grid), 5);
+  gtk_widget_show (dialog_isymbol_grid);
+  gtk_box_pack_start (GTK_BOX (dialog_vbox1), dialog_isymbol_grid, TRUE, TRUE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (dialog_isymbol_grid), 5);
 
   label170 = gtk_label_new (_("Enter a symbol or choose one from the lists"));
   gtk_widget_show (label170);
-  gtk_box_pack_start (GTK_BOX (isymbol_vbox), label170, FALSE, FALSE, 0);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), label170, 0, 0, 2, 1);
   gtk_label_set_justify (GTK_LABEL (label170), GTK_JUSTIFY_LEFT);
-
-  hbox44 = HBOX (5);
-  gtk_widget_show (hbox44);
-  gtk_box_pack_start (GTK_BOX (isymbol_vbox), hbox44, TRUE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (hbox44), 2);
 
   label171 = gtk_label_new (_("Enter Symbol"));
   gtk_widget_show (label171);
-  gtk_box_pack_start (GTK_BOX (hbox44), label171, FALSE, FALSE, 0);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), label171, 0, 1, 1, 1);
   gtk_label_set_justify (GTK_LABEL (label171), GTK_JUSTIFY_LEFT);
 
   entry1 = gtk_entry_new ();
   gtk_widget_show (entry1);
-  gtk_box_pack_start (GTK_BOX (hbox44), entry1, TRUE, TRUE, 0);
-
-  hbox45 = HBOX (5);
-  gtk_box_set_homogeneous (GTK_BOX (hbox45), TRUE);
-  gtk_widget_show (hbox45);
-  gtk_box_pack_start (GTK_BOX (isymbol_vbox), hbox45, FALSE, FALSE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (hbox45), 2);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), entry1, 1, 1, 1, 1);
 
   label174 = gtk_label_new (_("Variables List"));
   gtk_widget_show (label174);
-  gtk_box_pack_start (GTK_BOX (hbox45), label174, FALSE, FALSE, 0);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), label174, 0, 2, 1, 1);
   gtk_label_set_justify (GTK_LABEL (label174), GTK_JUSTIFY_LEFT);
 
   isymbol_variables = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_variables);
-  gtk_box_pack_start (GTK_BOX (hbox45), isymbol_variables, TRUE, TRUE, 0);
-
-  hbox46 = HBOX (5);
-  gtk_box_set_homogeneous (GTK_BOX (hbox46), TRUE);
-  gtk_widget_show (hbox46);
-  gtk_box_pack_start (GTK_BOX (isymbol_vbox), hbox46, TRUE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (hbox46), 2);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), isymbol_variables, 1, 2, 1, 1);
 
   label175 = gtk_label_new (_("Functions List"));
   gtk_widget_show (label175);
-  gtk_box_pack_start (GTK_BOX (hbox46), label175, FALSE, FALSE, 0);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), label175, 0, 3, 1, 1);
   gtk_label_set_justify (GTK_LABEL (label175), GTK_JUSTIFY_LEFT);
 
   isymbol_labels = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_labels);
-  gtk_box_pack_start (GTK_BOX (hbox46), isymbol_labels, TRUE, TRUE, 0);
-
-  hbox47 = HBOX (5);
-  gtk_box_set_homogeneous (GTK_BOX (hbox47), TRUE);
-  gtk_widget_show (hbox47);
-  gtk_box_pack_start (GTK_BOX (isymbol_vbox), hbox47, TRUE, TRUE, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (hbox47), 2);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), isymbol_labels, 1, 3, 1, 1);
 
   label176 = gtk_label_new (_("Macros List"));
   gtk_widget_show (label176);
-  gtk_box_pack_start (GTK_BOX (hbox47), label176, FALSE, FALSE, 0);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), label176, 0, 4, 1, 1);
   gtk_label_set_justify (GTK_LABEL (label176), GTK_JUSTIFY_LEFT);
 
   isymbol_macros = gtk_combo_box_text_new ();
   gtk_widget_show (isymbol_macros);
-  gtk_box_pack_start (GTK_BOX (hbox47), isymbol_macros, TRUE, TRUE, 0);
+  gtk_grid_attach (GTK_GRID (dialog_isymbol_grid), isymbol_macros, 1, 4, 1, 1);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_isymbol, "dialog_isymbol");
   GLADE_HOOKUP_OBJECT_NO_REF (dialog_isymbol, dialog_vbox1, "dialog_vbox1");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_vbox, "isymbol_vbox");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label170, "label170");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox44, "hbox44");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label171, "label171");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, entry1, "entry1");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox45, "hbox45");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label174, "label174");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_variables, "isymbol_variables");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox46, "hbox46");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label175, "label175");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_labels, "isymbol_labels");
-  GLADE_HOOKUP_OBJECT (dialog_isymbol, hbox47, "hbox47");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, label176, "label176");
   GLADE_HOOKUP_OBJECT (dialog_isymbol, isymbol_macros, "isymbol_macros");
 

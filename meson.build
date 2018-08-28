@@ -24,9 +24,11 @@ conf_data.set_quoted('PACKAGE_DATA_DIR', prefix + '/' + datadir + '/' + packagen
 if get_option('build-osx-app')
   conf_data.set_quoted('PACKAGE_DOC_DIR', '../' + 'SharedSupport')
   conf_data.set_quoted('PACKAGE_HELP_DIR', '../' + 'SharedSupport/' + 'help', description : 'Directory where help files are installed')
+  conf_data.set_quoted('LOCALEDIR', '../../' + localedir)
 else
   conf_data.set_quoted('PACKAGE_DOC_DIR', packagedocdir)
   conf_data.set_quoted('PACKAGE_HELP_DIR', packagehelpdir, description : 'Directory where help files are installed')
+  conf_data.set_quoted('LOCALEDIR', join_paths(prefix, localedir))
 endif
 conf_data.set_quoted('PACKAGE_MENU_DIR', packagemenudir, description : 'Directory where menu files are installed')
 conf_data.set_quoted('PACKAGE_PIXMAPS_DIR', packagepixmapsdir, description : 'Directory where pixmaps files are installed')
@@ -34,7 +36,6 @@ conf_data.set_quoted('PACKAGE_URL', 'http://www.gnusim8085.org/', description : 
 
 i18n = import('i18n')
 conf_data.set_quoted('GETTEXT_PACKAGE', packagename)
-conf_data.set_quoted('LOCALEDIR', join_paths(prefix, localedir))
 configure_file(output : 'config.h',
                configuration : conf_data)
 

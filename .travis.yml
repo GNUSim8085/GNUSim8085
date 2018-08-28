@@ -53,6 +53,6 @@ matrix:
                   script:
                           - rm -rf builddir
                           - meson --prefix=`pwd`/builddir/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-osx-app=true builddir
-                          - cd builddir && ninja install && cd ..
+                          - cd builddir && meson configure && ninja install && cd ..
                           - otool -L builddir/GNUSim8085.app/Contents/MacOS/gnusim8085
 

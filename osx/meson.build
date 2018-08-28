@@ -19,8 +19,9 @@ meson.add_install_script('mkdir', '-p', join_paths(prefix, datadir, 'glib-2.0', 
 meson.add_install_script('ls','-R','/usr/local/share/')
 meson.add_install_script('ls','-R','/usr/local/opt/')
 install_data('/usr/local/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml', install_dir : join_paths(datadir, 'glib-2.0', 'schemas'))
-install_subdir('/usr/local/share/icons/Adwaita/', install_dir : join_paths(datadir, 'icons'))
 meson.add_install_script('glib-compile-schemas', join_paths(prefix, datadir, 'glib-2.0', 'schemas'))
+install_subdir('/usr/local/share/icons/Adwaita/', install_dir : join_paths(datadir, 'icons'))
+meson.add_install_script('gtk-update-icon-cache', join_paths(prefix, datadir, 'icons', 'Adwaita'))
 
 # Install launcher script
 install_data('gnusim8085.sh', install_dir : bindir)

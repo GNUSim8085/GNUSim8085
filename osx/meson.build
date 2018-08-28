@@ -16,8 +16,8 @@ meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagen
 
 # Copy necessary glib schemas and compile them
 meson.add_install_script('mkdir', '-p', join_paths(prefix, datadir, 'glib-2.0', 'schemas'))
-meson.add_install_script('ls','-R','/usr/local/share/')
-meson.add_install_script('ls','-R','/usr/local/opt/')
+#meson.add_install_script('ls','-R','/usr/local/share/')
+#meson.add_install_script('ls','-R','/usr/local/opt/')
 install_data('/usr/local/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml', install_dir : join_paths(datadir, 'glib-2.0', 'schemas'))
 meson.add_install_script('glib-compile-schemas', join_paths(prefix, datadir, 'glib-2.0', 'schemas'))
 install_subdir('/usr/local/share/icons/Adwaita/', install_dir : join_paths(datadir, 'icons'))

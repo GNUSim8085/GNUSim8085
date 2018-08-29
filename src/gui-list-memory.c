@@ -33,6 +33,7 @@ enum
 {
   C_ADDR_HEX,
   C_ADDR,
+  C_DATA_HEX,
   C_DATA,
   N_COLS
 };
@@ -46,10 +47,15 @@ on_mem_list_data_edited (GtkCellRendererText *renderer, gchar *path,
 	
   gint value;
   gint addr;
+  gchar value_hex[3] = "XX";
   if(!asm_util_parse_number (new_text, &value))
     value = 0;
 
+  /* hex value */
+  gui_util_gen_hex (value, value_hex, value_hex+1);
+
   gtk_tree_store_set (store, &iter, C_DATA, value, -1);
+  gtk_tree_store_set (store, &iter, C_DATA_HEX, value_hex, -1);
   gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, C_ADDR, &addr, -1);
   sys.mem[addr] = value;
 }
@@ -83,6 +89,7 @@ create_me (void)
   store = gtk_tree_store_new (N_COLS,
                               G_TYPE_STRING,
                               G_TYPE_INT,
+                              G_TYPE_STRING,
                               G_TYPE_INT);
   g_assert (store);
 
@@ -96,6 +103,7 @@ create_me (void)
   /* add column */
   _add_column (view, C_ADDR_HEX, g_strconcat(_("Address"), " (", _("Hex"), ")", NULL));
   _add_column (view, C_ADDR, _("Address"));
+  _add_column (view, C_DATA_HEX, g_strconcat(_("Data"), " (", _("Hex"), ")", NULL));
   _add_column (view, C_DATA, _("Data"));
 
 }
@@ -140,6 +148,7 @@ gui_list_memory_add (eef_addr_t addr, eef_data_t value)
 {
   GtkTreeIter iter;
   gchar addr_str[5] = "XXXX";
+  gchar value_hex[3] = "XX";
   guint8 s1, s2;
   g_assert (store);
 	
@@ -150,9 +159,13 @@ gui_list_memory_add (eef_addr_t addr, eef_data_t value)
   gui_util_gen_hex (s1, addr_str, addr_str+1);
   gui_util_gen_hex (s2, addr_str+2, addr_str+3);
 
+  /* hex value */
+  gui_util_gen_hex (value, value_hex, value_hex+1);
+
   gtk_tree_store_set (store, &iter,
                       C_ADDR_HEX, addr_str,
                       C_ADDR, addr,
+                      C_DATA_HEX, value_hex,
                       C_DATA, value,
                       -1);
 
@@ -189,6 +202,12 @@ gui_list_memory_update_single (eef_addr_t addr)
     while ( n++ < pos )
       gtk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
 
-    gtk_tree_store_set (store, &iter, C_DATA, sys.mem[addr], -1);
+    gchar value_hex[3] = "XX";
+    gui_util_gen_hex (sys.mem[addr], value_hex, value_hex+1);
+
+    gtk_tree_store_set (store, &iter,
+		    C_DATA, sys.mem[addr],
+		    C_DATA_HEX, value_hex,
+		    -1);
   }
 }

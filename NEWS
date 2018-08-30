@@ -1,7 +1,10 @@
 GNUSim8085 1.4.2 (UNRELEASED)
 
-New:     #31 - Fully switch to meson build
-Note to packagers:
+## New
+ - #27 - Allow to load data in memory in hexadecimal format
+ - #31 - Fully switch to meson build
+
+## Note to packagers:
          The application can now be built using meson build system.
          If you see any issues building with meson please report them on our
          issue tracker.

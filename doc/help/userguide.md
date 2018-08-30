@@ -62,7 +62,7 @@ The user interface of GNUSim8085 consists of following components currently.
   * Memory details  
       
     ![Tab Memory](tab_memory.png)  
-    This tab provides easy access to the memory contents. By default only first 1000 locations are shown. To see next locations, enter address in ‘Start’ text box and press ‘OK’ button.  
+    This tab provides easy access to the memory contents. By default only first 1000 locations are shown. To see next locations, enter address in ‘Start’ text box and press ‘OK’ button. You can either edit hexadecimal values in Data (Hex) column or decimal values in Data column. When using hexadecimal values do not add h or H as suffix. For example simply enter A or 1B and not Ah or 1Bh.  
     
   * I/O details  
       

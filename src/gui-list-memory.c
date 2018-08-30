@@ -1,5 +1,6 @@
 /*
   Copyright (C) 2010  Debajit Biswas <http://launchpad.net/~debjitbis08>
+  Copyright (C) 2018  Onkar Shinde <onkarshinde@gmail.com>
 	
   This file is part of GNUSim8085.
 
@@ -54,10 +55,30 @@ on_mem_list_data_edited (GtkCellRendererText *renderer, gchar *path,
   /* hex value */
   gui_util_gen_hex (value, value_hex, value_hex+1);
 
-  gtk_tree_store_set (store, &iter, C_DATA, value, -1);
   gtk_tree_store_set (store, &iter, C_DATA_HEX, value_hex, -1);
+  gtk_tree_store_set (store, &iter, C_DATA, value, -1);
   gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, C_ADDR, &addr, -1);
   sys.mem[addr] = value;
+}
+
+void
+on_mem_list_data_hex_edited (GtkCellRendererText *renderer, gchar *path,
+                         gchar *new_text, gpointer user_data)
+{
+  GtkTreeIter iter;
+  gtk_tree_model_get_iter_from_string (GTK_TREE_MODEL (store), &iter, path);
+
+  gint value;
+  gint addr;
+  value = strtoul ((const char *) new_text, NULL, 16);
+
+  if (value > 0 && value <= 255)
+  {
+    gtk_tree_store_set (store, &iter, C_DATA_HEX, new_text, -1);
+    gtk_tree_store_set (store, &iter, C_DATA, value, -1);
+    gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, C_ADDR, &addr, -1);
+    sys.mem[addr] = value;
+  }
 }
 
 static void
@@ -76,7 +97,15 @@ _add_column (GtkTreeView * view, gint id, gchar * title)
                     G_CALLBACK (on_mem_list_data_edited),
                     NULL);
   }
-  	
+
+  if (id == C_DATA_HEX)
+  {
+    g_object_set ((gpointer) renderer, "editable", TRUE, NULL);
+    g_signal_connect ((gpointer) renderer, "edited",
+                    G_CALLBACK (on_mem_list_data_hex_edited),
+                    NULL);
+  }
+
   column = gtk_tree_view_column_new_with_attributes (title, renderer,
                                                      "text", id, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (view), column);
@@ -206,8 +235,8 @@ gui_list_memory_update_single (eef_addr_t addr)
     gui_util_gen_hex (sys.mem[addr], value_hex, value_hex+1);
 
     gtk_tree_store_set (store, &iter,
-		    C_DATA, sys.mem[addr],
 		    C_DATA_HEX, value_hex,
+		    C_DATA, sys.mem[addr],
 		    -1);
   }
 }

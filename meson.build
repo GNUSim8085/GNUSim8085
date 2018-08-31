@@ -49,14 +49,15 @@ configure_file(input : 'GNUSim8085.desktop.in',
                install_dir : join_paths(get_option('datadir'), 'applications'))
 endif
 
-if host_machine.system() == 'windows'
-installerconf = configuration_data()
-installerconf.set('PACKAGE', packagename, description : 'Name of package')
-installerconf.set('VERSION', meson.project_version(), description : 'Version number of package')
 gtk_api='gtk+-3.0'
 gtksourceview_api='gtksourceview-3.0'
 gtk_required='3.10.0'
 gtksourceview_required='3.10.0'
+
+if host_machine.system() == 'windows'
+installerconf = configuration_data()
+installerconf.set('PACKAGE', packagename, description : 'Name of package')
+installerconf.set('VERSION', meson.project_version(), description : 'Version number of package')
 installerconf.set('GTK_VERSION_REQ', gtk_required, description : 'GTK version required')
 installerconf.set('GTKSOURCEVIEW_API', gtksourceview_api, description : 'GtkSourceView API version')
 configure_file(input : 'installer.nsi.in',

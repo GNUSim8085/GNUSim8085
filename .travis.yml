@@ -31,9 +31,9 @@ matrix:
                 - name: "OS X autotools build"
                   os: osx
                   before_install:
-                          - brew list
-                          - brew uninstall --force mercurial
                           - brew bundle
+                          - brew install autoconf
+                          - brew install automake
                           - brew link --force gettext
                   script:
                           - ./autogen.sh
@@ -46,13 +46,13 @@ matrix:
                 - name: "OS X meson build"
                   os: osx
                   before_install:
-                          - brew list
-                          - brew uninstall --force mercurial
                           - brew bundle
                           - brew link --force gettext
                   script:
-                          - rm -rf builddir
-                          - meson --prefix=`pwd`/builddir/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-osx-app=true builddir
-                          - cd builddir && meson configure && ninja install && cd ..
-                          - otool -L builddir/GNUSim8085.app/Contents/MacOS/gnusim8085
-
+                          - rm -rf osxdist
+                          - meson --prefix=`pwd`/osxdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-osx-app=true osxdist
+                          - cd osxdist && meson configure && ninja install && sha256sum *.zip && cd ..
+                          - otool -L osxdist/GNUSim8085.app/Contents/MacOS/gnusim8085
+                          - rm -rf distdir
+                          - meson distdir
+                          - cd distdir && meson configure && ninja dist && cat meson-dist/*.sha256sum && cd ..

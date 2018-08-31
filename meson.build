@@ -49,6 +49,7 @@ configure_file(input : 'GNUSim8085.desktop.in',
                install_dir : join_paths(get_option('datadir'), 'applications'))
 endif
 
+if host_machine.system() == 'windows'
 installerconf = configuration_data()
 installerconf.set('PACKAGE', packagename, description : 'Name of package')
 installerconf.set('VERSION', meson.project_version(), description : 'Version number of package')
@@ -61,6 +62,7 @@ installerconf.set('GTKSOURCEVIEW_API', gtksourceview_api, description : 'GtkSour
 configure_file(input : 'installer.nsi.in',
                output : 'installer.nsi',
                configuration : installerconf)
+endif
 
 subdir('po')
 subdir('src')

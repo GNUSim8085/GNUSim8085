@@ -1,5 +1,3 @@
-brew 'autoconf'
-brew 'automake'
 brew 'meson'
 brew 'gtk+3'
 brew 'gtksourceview3'

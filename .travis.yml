@@ -32,8 +32,6 @@ matrix:
                   os: osx
                   before_install:
                           - brew bundle
-                          - brew install autoconf
-                          - brew install automake
                           - brew link --force gettext
                   script:
                           - ./autogen.sh
@@ -51,7 +49,7 @@ matrix:
                   script:
                           - rm -rf osxdist
                           - meson --prefix=`pwd`/osxdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-osx-app=true osxdist
-                          - cd osxdist && meson configure && ninja install && sha256sum *.zip && cd ..
+                          - cd osxdist && meson configure && ninja install && shasum -a 256 *.zip && cd ..
                           - otool -L osxdist/GNUSim8085.app/Contents/MacOS/gnusim8085
                           - rm -rf distdir
                           - meson distdir

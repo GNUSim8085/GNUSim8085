@@ -67,7 +67,7 @@ The user interface of GNUSim8085 consists of following components currently.
   * I/O details  
       
     ![Tab IO](tab_io.png)  
-    This tab provides easy access to the I/O contents. User can also manipulate the values by simply editing the cell contents.  
+    This tab provides easy access to the I/O contents. You can either edit hexadecimal values in Data (Hex) column or decimal values in Data column. When using hexadecimal values do not add h or H as suffix. For example simply enter A or 1B and not Ah or 1Bh.  
     
   * Toolbar  
       

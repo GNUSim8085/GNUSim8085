@@ -3,6 +3,7 @@ GNUSim8085 1.4.2 (UNRELEASED)
 ## New
  - #27 - Allow to load data in memory in hexadecimal format
  - #31 - Fully switch to meson build
+ - #32 - Allow to load data in IO ports in hexadecimal format
 
 ## Note to packagers:
          The application can now be built using meson build system.

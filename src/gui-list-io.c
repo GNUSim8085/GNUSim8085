@@ -1,5 +1,6 @@
 /*
   Copyright (C) 2010  Debajit Biswas <http://launchpad.net/~debjitbis08>
+  Copyright (C) 2018  Onkar Shinde <onkarshinde@gmail.com>
 	
   This file is part of GNUSim8085.
 
@@ -33,6 +34,7 @@ enum
 {
   C_ADDR_HEX,
   C_ADDR,
+  C_DATA_HEX,
   C_DATA,
   N_COLS
 };
@@ -46,12 +48,37 @@ on_io_list_data_edited (GtkCellRendererText *renderer, gchar *path,
 	
   gint value;
   gint addr;
+  gchar value_hex[3] = "XX";
   if(!asm_util_parse_number (new_text, &value))
     value = 0;
 
+  /* hex value */
+  gui_util_gen_hex (value, value_hex, value_hex+1);
+
+  gtk_tree_store_set (store, &iter, C_DATA_HEX, value_hex, -1);
   gtk_tree_store_set (store, &iter, C_DATA, value, -1);
   gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, C_ADDR, &addr, -1);
   sys.io[addr] = value;
+}
+
+void
+on_io_list_data_hex_edited (GtkCellRendererText *renderer, gchar *path,
+                         gchar *new_text, gpointer user_data)
+{
+  GtkTreeIter iter;
+  gtk_tree_model_get_iter_from_string (GTK_TREE_MODEL (store), &iter, path);
+
+  gint value;
+  gint addr;
+  value = strtoul ((const char *) new_text, NULL, 16);
+
+  if (value > 0 && value <= 255)
+  {
+    gtk_tree_store_set (store, &iter, C_DATA_HEX, new_text, -1);
+    gtk_tree_store_set (store, &iter, C_DATA, value, -1);
+    gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, C_ADDR, &addr, -1);
+    sys.io[addr] = value;
+  }
 }
 
 static void
@@ -70,7 +97,15 @@ _add_column (GtkTreeView * view, gint id, gchar * title)
                     G_CALLBACK (on_io_list_data_edited),
                     NULL);
   }
-  	
+
+  if (id == C_DATA_HEX)
+  {
+    g_object_set ((gpointer) renderer, "editable", TRUE, NULL);
+    g_signal_connect ((gpointer) renderer, "edited",
+                    G_CALLBACK (on_io_list_data_hex_edited),
+                    NULL);
+  }
+
   column = gtk_tree_view_column_new_with_attributes (title, renderer,
                                                      "text", id, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (view), column);
@@ -83,6 +118,7 @@ create_me (void)
   store = gtk_tree_store_new (N_COLS,
                               G_TYPE_STRING,
                               G_TYPE_INT,
+                              G_TYPE_STRING,
                               G_TYPE_INT);
   g_assert (store);
 
@@ -96,6 +132,7 @@ create_me (void)
   /* add column */
   _add_column (view, C_ADDR_HEX, g_strconcat(_("Address"), " (", _("Hex"), ")", NULL));
   _add_column (view, C_ADDR, _("Address"));
+  _add_column (view, C_DATA_HEX, g_strconcat(_("Data"), " (", _("Hex"), ")", NULL));
   _add_column (view, C_DATA, _("Data"));
 
 }
@@ -140,6 +177,7 @@ gui_list_io_add (eef_data_t addr, eef_data_t value)
 {
   GtkTreeIter iter;
   gchar addr_str[3] = "XX";
+  gchar value_hex[3] = "XX";
   g_assert (store);
 	
   gtk_tree_store_append (store, &iter, NULL);
@@ -147,9 +185,13 @@ gui_list_io_add (eef_data_t addr, eef_data_t value)
   /* address */
   gui_util_gen_hex (addr, addr_str, addr_str+1);
 
+  /* hex value */
+  gui_util_gen_hex (value, value_hex, value_hex+1);
+
   gtk_tree_store_set (store, &iter,
                       C_ADDR_HEX, addr_str,
                       C_ADDR, addr,
+                      C_DATA_HEX, value_hex,
                       C_DATA, value,
                       -1);
 
@@ -186,6 +228,12 @@ gui_list_io_update_single (eef_data_t addr)
     while ( n++ < pos )
       gtk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
 
-    gtk_tree_store_set (store, &iter, C_DATA, sys.io[addr], -1);
+    gchar value_hex[3] = "XX";
+    gui_util_gen_hex (sys.io[addr], value_hex, value_hex+1);
+
+    gtk_tree_store_set (store, &iter,
+		   C_DATA_HEX, value_hex,
+		   C_DATA, sys.io[addr],
+		   -1);
   }
 }

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.3.8\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: 2016-10-13 21:00+0000\n"
-"Last-Translator: Onkar <onkarshinde@gmail.com>\n"
+"PO-Revision-Date: 2018-09-02 10:05+0000\n"
+"Last-Translator: Onkar Shinde <onkarshinde@gmail.com>\n"
 "Language-Team: Marathi <https://hosted.weblate.org/projects/gnusim8085/"
 "translations/mr/>\n"
 "Language: mr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.9-dev\n"
+"X-Generator: Weblate 3.2-dev\n"
 
 #: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
@@ -25,7 +25,7 @@ msgstr "फॉंट निवडा"
 
 #: src/callbacks.c:246
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "प्रोग्राममधे चुका आहेत. मेसेजेस यादी पहा."
 
 #: src/callbacks.c:267
 msgid "Error executing program"
@@ -63,27 +63,27 @@ msgstr ""
 
 #: src/interface.c:39
 msgid "_File"
-msgstr ""
+msgstr "फाइल (_F)"
 
 #: src/interface.c:40
 msgid "_Reset"
-msgstr ""
+msgstr "रिसेट (_R)"
 
 #: src/interface.c:41
 msgid "_Assembler"
-msgstr ""
+msgstr "असेंब्लर (_A)"
 
 #: src/interface.c:42
 msgid "_Debug"
-msgstr ""
+msgstr "डिबग (_D)"
 
 #: src/interface.c:43
 msgid "_Breakpoints"
-msgstr ""
+msgstr "ब्रेकपॉईंट्स (_B)"
 
 #: src/interface.c:44
 msgid "_Help"
-msgstr ""
+msgstr "मदत (_H)"
 
 #: src/interface.c:45
 msgid "New source file"
@@ -107,7 +107,7 @@ msgstr "प्रोग्राम प्रिंट करा"
 
 #: src/interface.c:52
 msgid "_Registers"
-msgstr ""
+msgstr "रजिस्टर्स (_R)"
 
 #: src/interface.c:52
 msgid "Reset Registers"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: src/interface.c:53
 msgid "_Flags"
-msgstr ""
+msgstr "फ्लॅग्स (_F)"
 
 #: src/interface.c:53
 msgid "Reset Flags"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: src/interface.c:54
 msgid "_IO Ports"
-msgstr ""
+msgstr "आय/ओ पोर्ट (_I)"
 
 #: src/interface.c:54
 msgid "Reset IO Ports"
@@ -131,7 +131,7 @@ msgstr ""
 
 #: src/interface.c:55
 msgid "_Memory"
-msgstr ""
+msgstr "मेमरी (_M)"
 
 #: src/interface.c:55
 msgid "Reset Memory"
@@ -231,19 +231,19 @@ msgstr ""
 
 #: src/interface.c:474
 msgid "Registers"
-msgstr ""
+msgstr "रजिस्टर्स"
 
 #: src/interface.c:559
 msgid "Flag"
-msgstr ""
+msgstr "फ्लॅग"
 
 #: src/interface.c:579 src/gui-list-data.c:76 src/gui-list-stack.c:81
 msgid "Decimal"
-msgstr ""
+msgstr "डेसिमल"
 
 #: src/interface.c:588
 msgid "Enter a decimal number"
-msgstr ""
+msgstr "डेसिमल संख्या टाका"
 
 #: src/interface.c:591
 msgid "To Hex"
@@ -255,11 +255,11 @@ msgstr ""
 
 #: src/interface.c:602
 msgid "Hex"
-msgstr ""
+msgstr "हेक्झाडेसिमल"
 
 #: src/interface.c:611
 msgid "Enter a hexadecimal number"
-msgstr ""
+msgstr "हेक्झाडेसिमल संख्या टाका"
 
 #: src/interface.c:614
 msgid "To Dec"
@@ -271,7 +271,7 @@ msgstr ""
 
 #: src/interface.c:628
 msgid "Decimal - Hex Conversion"
-msgstr ""
+msgstr "डेसिमल - हेक्झाडेसिमल रुपांतर"
 
 #: src/interface.c:652
 msgid "Change the port address to view here"
@@ -291,7 +291,7 @@ msgstr ""
 
 #: src/interface.c:677 src/interface.c:852
 msgid "I/O Ports"
-msgstr ""
+msgstr "आय/ओ पोर्ट"
 
 #: src/interface.c:701
 msgid "Change the memory location to view here"
@@ -311,7 +311,7 @@ msgstr ""
 
 #: src/interface.c:726 src/interface.c:824
 msgid "Memory"
-msgstr ""
+msgstr "मेमरी"
 
 #: src/interface.c:745
 msgid "Load me at"
@@ -323,15 +323,15 @@ msgstr ""
 
 #: src/interface.c:775
 msgid "Data"
-msgstr ""
+msgstr "डेटा"
 
 #: src/interface.c:795
 msgid "Stack"
-msgstr ""
+msgstr "स्टॅक"
 
 #: src/interface.c:815
 msgid "KeyPad"
-msgstr ""
+msgstr "कीपॅड"
 
 #: src/interface.c:830 src/interface.c:858
 msgid "Start"
@@ -340,7 +340,7 @@ msgstr ""
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: src/interface.c:1064
 msgid "translator_credits"
-msgstr ""
+msgstr "Onkar Shinde"
 
 #: src/interface.c:1111
 msgid "Assembler Listing"
@@ -352,7 +352,7 @@ msgstr ""
 
 #: src/interface.c:1171
 msgid "Assembler Tutorial"
-msgstr ""
+msgstr "असेंब्लर ट्यूटोरियल"
 
 #: src/interface.c:1216
 msgid "GNUSim8085 start with dialog"
@@ -360,11 +360,11 @@ msgstr ""
 
 #: src/interface.c:1247
 msgid "1. How to use this simulator?"
-msgstr ""
+msgstr "१. हे सिम्युलेटर कसे वापरायचे?"
 
 #: src/interface.c:1259
 msgid "_Tutorial"
-msgstr ""
+msgstr "ट्यूटोरियल (_T)"
 
 #: src/interface.c:1263
 msgid "A short tutorial on writing assembly code!"
@@ -372,11 +372,11 @@ msgstr ""
 
 #: src/interface.c:1270
 msgid "2. Open an existing assembly program."
-msgstr ""
+msgstr "२. असेंब्ली प्रोग्राम उघडा."
 
 #: src/interface.c:1282
 msgid "_Open program"
-msgstr ""
+msgstr "प्रोग्राम उघडा (_O)"
 
 #: src/interface.c:1286
 msgid "Open an already saved program"
@@ -391,6 +391,8 @@ msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
 msgstr ""
+"\"doc\" डिरेक्टरीमधे दिलेले डॉक्युमेंटेशन\n"
+"वाचायला विसरू नका."
 
 #: src/interface.c:1355
 msgid "Choose a symbol"
@@ -418,7 +420,7 @@ msgstr ""
 
 #: src/interface.c:1475
 msgid "Choose a register"
-msgstr ""
+msgstr "रजिस्टर निवडा"
 
 #: src/main.c:83
 msgid "Simulator: Idle"
@@ -520,7 +522,7 @@ msgstr ""
 #. show success message
 #: src/8085-asm.c:84
 msgid "Program assembled successfully"
-msgstr ""
+msgstr "प्रोग्राम यशस्वीपणे असेंबल झाला"
 
 #: src/bridge.c:33
 msgid "Simulator: Program running"
@@ -545,11 +547,11 @@ msgstr ""
 #. add column
 #: src/gui-list-message.c:93
 msgid "Line No"
-msgstr ""
+msgstr "ओळ क्रमांक"
 
 #: src/gui-list-message.c:94
 msgid "Assembler Message"
-msgstr ""
+msgstr "असेंब्लर मेसेज"
 
 #. add column
 #: src/gui-list-data.c:73

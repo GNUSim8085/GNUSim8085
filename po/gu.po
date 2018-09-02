@@ -344,7 +344,6 @@ msgstr "સ્ટૅક"
 msgid "translator_credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  GNUSim8085 Administrators https://launchpad.net/~gnusim8085-admins\n"
 "  Kartik Mistry https://launchpad.net/~kartik.mistry"
 
 #: src/interface.c:1111

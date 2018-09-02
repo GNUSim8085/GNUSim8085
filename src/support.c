@@ -98,7 +98,7 @@ create_pixbuf                          (const gchar     *filename)
 	  g_string_free(str, TRUE);
     }
 
-  pixbuf = gdk_pixbuf_new_from_file (pathname, &error);
+  pixbuf = gdk_pixbuf_new_from_file_at_size (pathname, 64, 64, &error);
   if (!pixbuf)
     {
 	  GString *str;
@@ -108,7 +108,7 @@ create_pixbuf                          (const gchar     *filename)
           g_string_append(str, filename);
           pathname = g_strdup(str->str);
           g_string_free(str, TRUE);
-          pixbuf = gdk_pixbuf_new_from_file (pathname, &error);
+          pixbuf = gdk_pixbuf_new_from_file_at_size (pathname, 64, 64, &error);
     }
   if (!pixbuf)
     {

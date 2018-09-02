@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop-application">
-  <id>gnusim8085.desktop</id>
+  <id>org.gnusim8085.GNUSim8085.desktop</id>
   <name>GNUSim8085</name>
   <summary>Intel 8085 microprocessor simulator</summary>
   <metadata_license>CC0-1.0</metadata_license>
@@ -28,7 +28,7 @@
   <screenshots>
    <screenshot type="default">
     <image>https://gnusim8085.github.io/images/screenshots/syntax_highlight.png</image>
-    <caption>Editor with syntaxt highlighting, registers and flag view, decimal &lt;-&gt; hexadecimal converter</caption>
+    <caption>Syntax highlighting, registers and flag view, decimal &lt;-&gt; hexadecimal converter</caption>
    </screenshot>
    <screenshot>
     <image>https://gnusim8085.github.io/images/screenshots/breakpoints.png</image>

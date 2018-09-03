@@ -8,7 +8,7 @@ prefix = get_option('prefix')
 bindir = get_option('bindir')
 datadir = get_option('datadir')
 localedir = get_option('localedir')
-if get_option('build-osx-app')
+if get_option('build-macos-app') == true
   packagedocdir = join_paths(prefix, 'Contents', 'SharedSupport')
 else
   packagedocdir = join_paths(prefix, datadir, 'doc', packagename)
@@ -21,7 +21,7 @@ conf_data.set_quoted('PACKAGE', packagename, description : 'Name of package')
 conf_data.set_quoted('PACKAGE_NAME', packagename)
 conf_data.set_quoted('VERSION', meson.project_version(), description : 'Version number of package')
 conf_data.set_quoted('PACKAGE_DATA_DIR', prefix + '/' + datadir + '/' + packagename)
-if get_option('build-osx-app')
+if get_option('build-macos-app') == true
   conf_data.set_quoted('PACKAGE_DOC_DIR', '../' + 'SharedSupport')
   conf_data.set_quoted('PACKAGE_HELP_DIR', '../' + 'SharedSupport/' + 'help', description : 'Directory where help files are installed')
   conf_data.set_quoted('LOCALEDIR', '../../' + localedir)
@@ -40,7 +40,7 @@ configure_file(output : 'config.h',
                configuration : conf_data)
 
 
-if get_option('build-osx-app') == false
+if get_option('build-macos-app') == false
 desktopconf = configuration_data()
 desktopconf.set('PACKAGE_PIXMAPS_DIR', packagepixmapsdir)
 configure_file(input : 'GNUSim8085.desktop.in',
@@ -70,6 +70,6 @@ subdir('src')
 subdir('pixmaps')
 subdir('doc')
 subdir('data')
-if get_option('build-osx-app') == true
-  subdir('osx')
+if get_option('build-macos-app') == true
+  subdir('macos')
 endif

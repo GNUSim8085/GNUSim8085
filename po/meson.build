@@ -12,7 +12,7 @@ i18n.gettext(meson.project_name(),
 
 # Following block assumes that packages are installed from brew.
 # It will not work when packages are installed from Fink or MacPorts.
-if get_option('build-osx-app') == true
+if get_option('build-macos-app') == true
   # Bundle GTK translations based on the languages we have
   read_languages = run_command ('tail', '-1', 'LINGUAS')
   if read_languages.returncode() == 0

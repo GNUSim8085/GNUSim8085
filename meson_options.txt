@@ -1,2 +1,2 @@
 option('enable-gio', type : 'boolean', value : true, description : 'Enable gio based file handling')
-option('build-osx-app', type : 'boolean', value : false, description : 'Required for installation quirks for OS X app bundle')
+option('build-macos-app', type : 'boolean', value : false, description : 'Required for installation quirks for macOS app bundle')

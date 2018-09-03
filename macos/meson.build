@@ -29,4 +29,4 @@ meson.add_install_script('gtk3-update-icon-cache', '-t', join_paths(prefix, data
 install_data('gnusim8085.sh', install_dir : bindir)
 
 # Create app bundle for distribution
-meson.add_install_script('zip','-r',packagename +'_osx' + '-' + meson.project_version() + '.app.zip', 'GNUSim8085.app')
+meson.add_install_script('zip','-r',packagename +'_macos' + '-' + meson.project_version() + '.app.zip', 'GNUSim8085.app')

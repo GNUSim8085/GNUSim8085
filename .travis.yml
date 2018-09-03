@@ -28,7 +28,7 @@ matrix:
                                           - meson
                   script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja dist && cd ..
 
-                - name: "OS X autotools build"
+                - name: "macOS autotools build"
                   os: osx
                   before_install:
                           - brew bundle
@@ -41,16 +41,16 @@ matrix:
                           - make dist
                           - tar -tzvf gnusim8085*.tar.*
 
-                - name: "OS X meson build"
+                - name: "macOS meson build"
                   os: osx
                   before_install:
                           - brew bundle
                           - brew link --force gettext
                   script:
-                          - rm -rf osxdist
-                          - meson --prefix=`pwd`/osxdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-osx-app=true osxdist
-                          - cd osxdist && meson configure && ninja install && shasum -a 256 *.zip && cd ..
-                          - otool -L osxdist/GNUSim8085.app/Contents/MacOS/gnusim8085
+                          - rm -rf macosdist
+                          - meson --prefix=`pwd`/macosdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-macos-app=true macosdist
+                          - cd macosdist && meson configure && ninja install && shasum -a 256 *.zip && cd ..
+                          - otool -L macosdist/GNUSim8085.app/Contents/MacOS/gnusim8085
                           - rm -rf distdir
                           - meson distdir
                           - cd distdir && meson configure && ninja dist && cat meson-dist/*.sha256sum && cd ..
@@ -60,7 +60,7 @@ matrix:
                                   secure: Zd1gkmesg5kOHEWnruhzB/PiPMmYgYptS+ra+1Wz00Oy0B0gNftKcsNoHLxmCx2P3atNSiqxYHjlw4Dg9rbckKLMpU096+Bs7AWmJG30L5NFOsy8z2HRCcM+513MCF2dd3d/R/cIPEOTr9GzMMHQCpQkExq7JGAIJ3n53hg+J50iU12ZKC+kBuscMJvl5QaBtci+1We/6ADG4zXHbhAY6nyxE9ZWg71GYFPFtaM6Vv3BrVmD1M/dKEqwn+1D2KFl3nVpueXxPUpriZT7z4RFRM4yK6ORcLGGMu6jc3CQ+gyLyg9d/SY2o8/VkotEzIBZo27EMZvFlX2JFHSyoq7BaaIn41JPfrwgTYtTH1vWX53eSk3ERuiwlQdxVmnqUwPMQx76gE6OvWzub5Pn10R+XbRu9aVUSMtex7I3ie3uP7oAsg7twy3+vxiqEwJuxy/tw6a/zecca6sBaZ5N8XmOjMLSU9UON8NS1n0Iaf88JH+sMgOG0I+Ud6RchKo5k4wDhkq2n1/nMG1ChA1426EtPK9rs7+XMXD4omMZ8Jqtsn0uqnApJxWJPdlzt8Sy3UVztW3eWM4dV5WvPiySrfL01Q7w4Caqf4M8AZc9JgjqWOADuDdYY+gVuATvjVkWd+MjaKSGbH6evS0ue8DTeV8yvw3YEDxNSkj7hoYrkwChhLw=
                           file_glob: true
                           file:
-                                  - osxdist/gnusim8085*.zip
+                                  - macosdist/gnusim8085*.zip
                                   - distdir/meson-dist/gnusim8085*.tar.xz
                           draft: true
                           prerelease: true

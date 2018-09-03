@@ -58,8 +58,10 @@ matrix:
                           provider: releases
                           api_key:
                                   secure: Zd1gkmesg5kOHEWnruhzB/PiPMmYgYptS+ra+1Wz00Oy0B0gNftKcsNoHLxmCx2P3atNSiqxYHjlw4Dg9rbckKLMpU096+Bs7AWmJG30L5NFOsy8z2HRCcM+513MCF2dd3d/R/cIPEOTr9GzMMHQCpQkExq7JGAIJ3n53hg+J50iU12ZKC+kBuscMJvl5QaBtci+1We/6ADG4zXHbhAY6nyxE9ZWg71GYFPFtaM6Vv3BrVmD1M/dKEqwn+1D2KFl3nVpueXxPUpriZT7z4RFRM4yK6ORcLGGMu6jc3CQ+gyLyg9d/SY2o8/VkotEzIBZo27EMZvFlX2JFHSyoq7BaaIn41JPfrwgTYtTH1vWX53eSk3ERuiwlQdxVmnqUwPMQx76gE6OvWzub5Pn10R+XbRu9aVUSMtex7I3ie3uP7oAsg7twy3+vxiqEwJuxy/tw6a/zecca6sBaZ5N8XmOjMLSU9UON8NS1n0Iaf88JH+sMgOG0I+Ud6RchKo5k4wDhkq2n1/nMG1ChA1426EtPK9rs7+XMXD4omMZ8Jqtsn0uqnApJxWJPdlzt8Sy3UVztW3eWM4dV5WvPiySrfL01Q7w4Caqf4M8AZc9JgjqWOADuDdYY+gVuATvjVkWd+MjaKSGbH6evS0ue8DTeV8yvw3YEDxNSkj7hoYrkwChhLw=
-                          file: osxdist/gnusim8085*.zip
-                          file: distdir/meson-dist/gnusim8085*.tar.xz
+                          file_glob: true
+                          file:
+                                  - osxdist/gnusim8085*.zip
+                                  - distdir/meson-dist/gnusim8085*.tar.xz
                           draft: true
                           prerelease: true
                           skip_cleanup: true

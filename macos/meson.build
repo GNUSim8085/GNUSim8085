@@ -17,6 +17,11 @@ meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagen
 dyliblist = ['libcairo-gobject.2.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib']
 foreach dylib : dyliblist
 meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/cairo/1.14.12/lib/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/glib/2.56.1/lib/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/glib/2.56.1/lib/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/glib/2.56.1/lib/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/gtk+3/3.22.30/lib/libgdk-3.0.dylib', '@executable_path/../libs/libgdk-3.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/pango/1.42.1/lib/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 endforeach
 
 # Copy necessary glib schemas and compile them

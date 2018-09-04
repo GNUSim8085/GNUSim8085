@@ -16,7 +16,7 @@ meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagen
 # Below lines added to work around a problem in dylibbundler
 dyliblist = ['libcairo-gobject.2.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib']
 foreach dylib : dyliblist
-meson.add_install_script('dylibbundler','-x',join_paths(prefix, 'Contents', 'libs', dylib),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
+meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/cairo/1.14.12/lib/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 endforeach
 
 # Copy necessary glib schemas and compile them

@@ -8,30 +8,32 @@ prefix = get_option('prefix')
 bindir = get_option('bindir')
 datadir = get_option('datadir')
 localedir = get_option('localedir')
+packagedocdir = join_paths(datadir, 'doc', packagename)
+packagepixmapsdir = join_paths(datadir, 'icons', 'hicolor', 'scalable', 'apps')
 if get_option('build-macos-app') == true
-  packagedocdir = join_paths(prefix, 'Contents', 'SharedSupport')
+  packagedocdir = join_paths('Contents', 'SharedSupport')
 else
-  packagedocdir = join_paths(prefix, datadir, 'doc', packagename)
 endif
 packagehelpdir = join_paths(packagedocdir, 'help')
-packagepixmapsdir = prefix + '/' + datadir + '/icons/hicolor/scalable/apps'
 packagemenudir= join_paths(prefix, datadir, 'gnome', 'apps')
 conf_data = configuration_data()
 conf_data.set_quoted('PACKAGE', packagename, description : 'Name of package')
 conf_data.set_quoted('PACKAGE_NAME', packagename)
 conf_data.set_quoted('VERSION', meson.project_version(), description : 'Version number of package')
-conf_data.set_quoted('PACKAGE_DATA_DIR', prefix + '/' + datadir + '/' + packagename)
 if get_option('build-macos-app') == true
-  conf_data.set_quoted('PACKAGE_DOC_DIR', '../' + 'SharedSupport')
-  conf_data.set_quoted('PACKAGE_HELP_DIR', '../' + 'SharedSupport/' + 'help', description : 'Directory where help files are installed')
+  conf_data.set_quoted('PACKAGE_DATA_DIR', '../../' + datadir + '/' + packagename)
+  conf_data.set_quoted('PACKAGE_DOC_DIR', '../../' + packagedocdir)
+  conf_data.set_quoted('PACKAGE_HELP_DIR', '../../' + packagehelpdir, description : 'Directory where help files are installed')
+  conf_data.set_quoted('PACKAGE_PIXMAPS_DIR', '../../' + packagepixmapsdir, description : 'Directory where pixmaps files are installed')
   conf_data.set_quoted('LOCALEDIR', '../../' + localedir)
 else
-  conf_data.set_quoted('PACKAGE_DOC_DIR', packagedocdir)
-  conf_data.set_quoted('PACKAGE_HELP_DIR', packagehelpdir, description : 'Directory where help files are installed')
+  conf_data.set_quoted('PACKAGE_DATA_DIR', prefix + '/' + datadir + '/' + packagename)
+  conf_data.set_quoted('PACKAGE_DOC_DIR', join_paths(prefix, packagedocdir))
+  conf_data.set_quoted('PACKAGE_HELP_DIR', join_paths(prefix, packagehelpdir), description : 'Directory where help files are installed')
+  conf_data.set_quoted('PACKAGE_PIXMAPS_DIR', join_paths(prefix, packagepixmapsdir), description : 'Directory where pixmaps files are installed')
   conf_data.set_quoted('LOCALEDIR', join_paths(prefix, localedir))
 endif
 conf_data.set_quoted('PACKAGE_MENU_DIR', packagemenudir, description : 'Directory where menu files are installed')
-conf_data.set_quoted('PACKAGE_PIXMAPS_DIR', packagepixmapsdir, description : 'Directory where pixmaps files are installed')
 conf_data.set_quoted('PACKAGE_URL', 'http://www.gnusim8085.org/', description : 'Website URL')
 
 i18n = import('i18n')

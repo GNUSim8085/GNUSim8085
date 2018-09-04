@@ -13,6 +13,11 @@ configure_file(input : 'Info.plist.in',
 
 # Use dylibbundler to bundle dynamic libraries and modify their lookup path
 meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagename),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
+# Below lines added to work around a problem in dylibbundler
+dyliblist = ['libcairo-gobject.2.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib']
+foreach dylib : dyliblist
+meson.add_install_script('dylibbundler','-x',join_paths(prefix, 'Contents', 'libs', dylib),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
+endforeach
 
 # Copy necessary glib schemas and compile them
 meson.add_install_script('mkdir', '-p', join_paths(prefix, datadir, 'glib-2.0', 'schemas'))

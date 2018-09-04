@@ -351,6 +351,12 @@ on_help_activate (GtkMenuItem * menuitem, gpointer user_data)
   gchar * html_file_name = g_build_filename (PACKAGE_HELP_DIR, "userguide.htm", NULL);
 #endif
   gchar * html_help_uri = g_filename_to_uri(html_file_name, NULL, NULL);
+  if (html_help_uri == NULL)
+  {
+    // Special handling for macOS bundle
+    html_file_name = g_build_filename (g_get_current_dir(), PACKAGE_HELP_DIR, "userguide.htm", NULL);
+    html_help_uri = g_filename_to_uri(html_file_name, NULL, NULL);
+  }
   g_debug ("HTML Help URI: %s\n", html_help_uri);
   gtk_show_uri (gdk_screen_get_default(), html_help_uri, GDK_CURRENT_TIME, NULL);
   g_free (html_file_name);

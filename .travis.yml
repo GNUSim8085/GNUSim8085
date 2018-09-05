@@ -25,7 +25,10 @@ matrix:
                                           - libgtksourceview-3.0-dev
                                           - gettext
                                           - discount
-                                          - meson
+                                          - python3-pip
+                  install:
+                          - pip3 install --user meson
+                          - export PATH=$PATH:~/.local/bin
                   script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja dist && cd ..
 
                 - name: "macOS autotools build"
@@ -69,4 +72,4 @@ matrix:
                           skip_cleanup: true
                           on:
                                   repo: GNUSim8085/GNUSim8085
-                                  #tags: true
+                                  tags: true

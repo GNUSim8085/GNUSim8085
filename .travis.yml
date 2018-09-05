@@ -27,7 +27,7 @@ matrix:
                                           - discount
                                           - python3-pip
                   install:
-                          - pip3 install --user meson
+                          - pip3 install --user meson==0.37.0
                           - export PATH=$PATH:~/.local/bin
                   script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja dist && cd ..
 

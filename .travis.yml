@@ -54,9 +54,9 @@ matrix:
                           - meson --prefix=`pwd`/macosdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-macos-app=true macosdist
                           - cd macosdist && meson configure && ninja install && shasum -a 256 *.zip && cd ..
                           #- otool -L macosdist/GNUSim8085.app/Contents/MacOS/gnusim8085
-                          - strings macosdist/GNUSim8085.app/Contents/MacOS/gnusim8085|sort -u
+                          #- strings macosdist/GNUSim8085.app/Contents/MacOS/gnusim8085|sort -u
                           - otool -L macosdist/GNUSim8085.app/Contents/libs/*.dylib
-                          - otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.dylib
+                          - otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.so
                           - rm -rf distdir
                           - meson distdir
                           - cd distdir && meson configure && ninja dist && cat meson-dist/*.sha256sum && cd ..

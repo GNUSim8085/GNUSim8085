@@ -23,11 +23,11 @@ message('cairo path ' + cairodir)
 gtkdir=run_command('pkg-config', 'gtk+-3.0', '--variable', 'libdir').stdout().strip()
 message('gtk path ' + gtkdir)
 foreach dylib : dyliblist
-meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/cairo/1.14.12/lib/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', glibdir + '/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', glibdir + '/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
-meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/gtk+3/3.22.30/lib/libgdk-3.0.dylib', '@executable_path/../libs/libgdk-3.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', gtkdir + '/libgdk-3.0.dylib', '@executable_path/../libs/libgdk-3.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/pango/1.42.1/lib/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 endforeach
 
@@ -39,7 +39,7 @@ message('gdk_pixbuf_prefix ' + gdk_pixbuf_prefix)
 message('gdk_pixbuf_version ' + gdk_pixbuf_version)
 message('gdk_pixbuf_binarydir ' + gdk_pixbuf_binarydir)
 message('gdk_pixbuf_moduledir ' + gdk_pixbuf_moduledir)
-meson.add_install_script('cp', '-L', '-r', gdk_pixbuf_binarydir, join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
+meson.add_install_script('cp', '-r', join_paths(gdk_pixbuf_prefix, 'lib', 'gdk-pixbuf-2.0', gdk_pixbuf_version), join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
 install_subdir(gdk_pixbuf_binarydir, install_dir : join_paths('Contents', 'libs', 'gdk-pixbuf-2.0'))
 meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
 

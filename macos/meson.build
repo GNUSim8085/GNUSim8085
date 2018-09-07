@@ -39,7 +39,7 @@ message('gdk_pixbuf_prefix ' + gdk_pixbuf_prefix)
 message('gdk_pixbuf_version ' + gdk_pixbuf_version)
 message('gdk_pixbuf_binarydir ' + gdk_pixbuf_binarydir)
 message('gdk_pixbuf_moduledir ' + gdk_pixbuf_moduledir)
-meson.add_install_script('cp', '-r', gdk_pixbuf_binarydir, join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
+meson.add_install_script('cp', '-L', '-r', gdk_pixbuf_binarydir, join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
 install_subdir(gdk_pixbuf_binarydir, install_dir : join_paths('Contents', 'libs', 'gdk-pixbuf-2.0'))
 meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
 

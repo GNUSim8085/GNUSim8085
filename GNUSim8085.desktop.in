@@ -5,4 +5,4 @@ Exec=gnusim8085
 Icon=@PACKAGE_PIXMAPS_DIR@/gnusim8085.svg
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;Development;
+Categories=GNOME;GTK;Development;Electronics;

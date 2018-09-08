@@ -47,6 +47,7 @@ matrix:
                 - name: "macOS meson build"
                   os: osx
                   before_install:
+                          - brew install --build-from-source gdk-pixbuf --with-included-loaders=png
                           - brew bundle
                           - brew link --force gettext
                   script:
@@ -56,7 +57,7 @@ matrix:
                           #- otool -L macosdist/GNUSim8085.app/Contents/MacOS/gnusim8085
                           #- strings macosdist/GNUSim8085.app/Contents/MacOS/gnusim8085|sort -u
                           - otool -L macosdist/GNUSim8085.app/Contents/libs/*.dylib
-                          - otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.so
+                          #- otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.so
                           - rm -rf distdir
                           - meson distdir
                           - cd distdir && meson configure && ninja dist && cat meson-dist/*.sha256sum && cd ..

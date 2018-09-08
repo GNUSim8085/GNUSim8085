@@ -1,5 +1,5 @@
 project('gnusim8085', 'c',
-  version : '1.4.1.20180905',
+  version : '1.4.1.20180908',
   license : 'GPL-2.0+',
   meson_version : '>=0.37'
 )

@@ -22,13 +22,15 @@ cairodir=run_command('pkg-config', 'cairo', '--variable', 'libdir').stdout().str
 message('cairo path ' + cairodir)
 gtkdir=run_command('pkg-config', 'gtk+-3.0', '--variable', 'libdir').stdout().strip()
 message('gtk path ' + gtkdir)
+pangodir=run_command('pkg-config', 'pango', '--variable', 'libdir').stdout().strip()
+message('pango path ' + pangodir)
 foreach dylib : dyliblist
 meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', glibdir + '/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', glibdir + '/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 meson.add_install_script('install_name_tool', '-change', gtkdir + '/libgdk-3.0.dylib', '@executable_path/../libs/libgdk-3.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
-meson.add_install_script('install_name_tool', '-change', '/usr/local/Cellar/pango/1.42.1/lib/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
+meson.add_install_script('install_name_tool', '-change', pangodir + '/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', join_paths(prefix, 'Contents', 'libs', dylib))
 endforeach
 
 gdk_pixbuf_prefix = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'prefix').stdout().strip()

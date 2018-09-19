@@ -8,25 +8,29 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.3.8\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2016-10-21 10:44+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2018-09-20 06:32+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"gnusim8085/translations/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.2-dev\n"
 
 #: src/callbacks.c:139 src/callbacks.c:142 src/interface.c:53
 msgid "Select font"
-msgstr ""
+msgstr "Velg skrift"
 
 #: src/callbacks.c:257
+#, fuzzy
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "Programmet har feil. Sjekk meldingsfeltet"
 
 #: src/callbacks.c:278
 msgid "Error executing program"
-msgstr ""
+msgstr "Feil ved kjøring av program"
 
 #: src/callbacks.c:298
 msgid "Error in step in"
@@ -50,7 +54,7 @@ msgstr ""
 
 #: src/callbacks.c:669 src/callbacks.c:687
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "Skriv inn et gyldig nummer i området (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:711
 msgid ""
@@ -60,19 +64,19 @@ msgstr ""
 
 #: src/interface.c:42
 msgid "_File"
-msgstr ""
+msgstr "_Fil"
 
 #: src/interface.c:43
 msgid "_Reset"
-msgstr ""
+msgstr "_Tilbakestill"
 
 #: src/interface.c:44
 msgid "_Assembler"
-msgstr ""
+msgstr "_Assembler"
 
 #: src/interface.c:45
 msgid "_Debug"
-msgstr ""
+msgstr "_Feilretting"
 
 #: src/interface.c:46
 msgid "_Breakpoints"
@@ -80,23 +84,23 @@ msgstr ""
 
 #: src/interface.c:47
 msgid "_Help"
-msgstr ""
+msgstr "_Hjelp"
 
 #: src/interface.c:48
 msgid "New source file"
-msgstr ""
+msgstr "Ny kildefil"
 
 #: src/interface.c:49
 msgid "Open a file"
-msgstr ""
+msgstr "Åpne en fil"
 
 #: src/interface.c:50 src/file-op.c:224 src/file-op-gio.c:219
 msgid "Save file"
-msgstr ""
+msgstr "Lagre fil"
 
 #: src/interface.c:51 src/file-op.c:254 src/file-op-gio.c:249
 msgid "Save file as"
-msgstr ""
+msgstr "Lagre fil som"
 
 #: src/interface.c:52
 msgid "Print program"
@@ -104,43 +108,43 @@ msgstr ""
 
 #: src/interface.c:55
 msgid "_Registers"
-msgstr ""
+msgstr "_Registere"
 
 #: src/interface.c:55
 msgid "Reset Registers"
-msgstr ""
+msgstr "Tilbakestill registere"
 
 #: src/interface.c:56
 msgid "_Flags"
-msgstr ""
+msgstr "_Flagg"
 
 #: src/interface.c:56
 msgid "Reset Flags"
-msgstr ""
+msgstr "Tilbakestill flagg"
 
 #: src/interface.c:57
 msgid "_IO Ports"
-msgstr ""
+msgstr "_I/U-porter"
 
 #: src/interface.c:57
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "Tilbakestill I/U-porter"
 
 #: src/interface.c:58
 msgid "_Memory"
-msgstr ""
+msgstr "_Minne"
 
 #: src/interface.c:58
 msgid "Reset Memory"
-msgstr ""
+msgstr "Tilbakestill minne"
 
 #: src/interface.c:59
 msgid "Reset _All"
-msgstr ""
+msgstr "Tilbakestill _alle"
 
 #: src/interface.c:59
 msgid "Reset All"
-msgstr ""
+msgstr "Tilbakestill alle"
 
 #: src/interface.c:60
 msgid "A_ssemble"
@@ -204,59 +208,59 @@ msgstr ""
 
 #: src/interface.c:68
 msgid "Stop execution"
-msgstr ""
+msgstr "Stopp kjøring"
 
 #: src/interface.c:68
 msgid "Stop debugging"
-msgstr ""
+msgstr "Stopp feilretting"
 
 #: src/interface.c:69
 msgid "_Contents"
-msgstr ""
+msgstr "_Innhold"
 
 #: src/interface.c:70
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "Assembler_veiledning"
 
 #: src/interface.c:75
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "Vis/skjul sidefelt"
 
 #: src/interface.c:270
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
-msgstr ""
+msgstr "GNUSim8085 - 8085 mikroprosessorsimulator"
 
 #: src/interface.c:479
 msgid "Registers"
-msgstr ""
+msgstr "Registere"
 
 #: src/interface.c:562
 msgid "Flag"
-msgstr ""
+msgstr "Flagg"
 
 #: src/interface.c:582 src/gui-list-data.c:79 src/gui-list-stack.c:84
 msgid "Decimal"
-msgstr ""
+msgstr "Desimal"
 
 #: src/interface.c:591
 msgid "Enter a decimal number"
-msgstr ""
+msgstr "Skriv inn et desimalnummer"
 
 #: src/interface.c:594
 msgid "To Hex"
-msgstr ""
+msgstr "Til heks"
 
 #: src/interface.c:597
 msgid "Convert this number to hexadecimal"
-msgstr ""
+msgstr "Konverter dette nummeret til heksadesimal"
 
 #: src/interface.c:610
 msgid "Hex"
-msgstr ""
+msgstr "Heks"
 
 #: src/interface.c:619
 msgid "Enter a hexadecimal number"
-msgstr ""
+msgstr "Skriv inn heksadesimalt nummer"
 
 #: src/interface.c:622
 msgid "To Dec"
@@ -288,19 +292,19 @@ msgstr ""
 
 #: src/interface.c:694 src/interface.c:873
 msgid "I/O Ports"
-msgstr ""
+msgstr "I/U-porter"
 
 #: src/interface.c:718
 msgid "Change the memory location to view here"
-msgstr ""
+msgstr "Endre minneplasseringen å vise her"
 
 #: src/interface.c:725
 msgid "Edit new value and click Update"
-msgstr ""
+msgstr "Skriv inn en ny verdi og klikk \"Oppdater\""
 
 #: src/interface.c:728
 msgid "Update Memory"
-msgstr ""
+msgstr "Oppdater minne"
 
 #: src/interface.c:731
 msgid "Update the current memory location"
@@ -308,7 +312,7 @@ msgstr ""
 
 #: src/interface.c:747 src/interface.c:845
 msgid "Memory"
-msgstr ""
+msgstr "Minne"
 
 #: src/interface.c:766
 msgid "Load me at"
@@ -320,7 +324,7 @@ msgstr ""
 
 #: src/interface.c:796
 msgid "Data"
-msgstr ""
+msgstr "Data"
 
 #: src/interface.c:816
 msgid "Stack"
@@ -332,12 +336,12 @@ msgstr ""
 
 #: src/interface.c:851 src/interface.c:879
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: src/interface.c:1089
 msgid "translator_credits"
-msgstr ""
+msgstr "Allan Nordhøy, <epost@anotheragency.no>"
 
 #: src/interface.c:1135
 msgid "Assembler Listing"
@@ -345,7 +349,7 @@ msgstr ""
 
 #: src/interface.c:1159
 msgid "Save to file"
-msgstr ""
+msgstr "Lagre til fil"
 
 #: src/interface.c:1196
 msgid "Assembler Tutorial"
@@ -361,7 +365,7 @@ msgstr ""
 
 #: src/interface.c:1279
 msgid "_Tutorial"
-msgstr ""
+msgstr "_Veiledning"
 
 #: src/interface.c:1284
 msgid "A short tutorial on writing assembly code!"
@@ -373,15 +377,15 @@ msgstr ""
 
 #: src/interface.c:1299
 msgid "_Open program"
-msgstr ""
+msgstr "_Åpne program"
 
 #: src/interface.c:1304
 msgid "Open an already saved program"
-msgstr ""
+msgstr "Åpne et allerede lagret program"
 
 #: src/interface.c:1306
 msgid "What do you want to do now?"
-msgstr ""
+msgstr "Hva ønsker du å gjøre nå?"
 
 #: src/interface.c:1316
 msgid ""
@@ -391,7 +395,7 @@ msgstr ""
 
 #: src/interface.c:1373
 msgid "Choose a symbol"
-msgstr ""
+msgstr "Velg et symbol"
 
 #: src/interface.c:1399
 msgid "Enter a symbol or choose one from the lists"
@@ -399,23 +403,23 @@ msgstr ""
 
 #: src/interface.c:1409
 msgid "Enter Symbol"
-msgstr ""
+msgstr "Skriv inn symbol"
 
 #: src/interface.c:1424
 msgid "Variables List"
-msgstr ""
+msgstr "Variabelliste"
 
 #: src/interface.c:1439
 msgid "Functions List"
-msgstr ""
+msgstr "Funksjonsliste"
 
 #: src/interface.c:1454
 msgid "Macros List"
-msgstr ""
+msgstr "Makroliste"
 
 #: src/interface.c:1493
 msgid "Choose a register"
-msgstr ""
+msgstr "Velg et register"
 
 #: src/main.c:85
 msgid "Simulator: Idle"
@@ -545,16 +549,16 @@ msgstr ""
 
 #: src/gui-list-data.c:76
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: src/gui-list-data.c:77
 msgid "Variable"
-msgstr ""
+msgstr "Variabel"
 
 #: src/gui-list-data.c:78 src/gui-list-data.c:79 src/gui-list-stack.c:83
 #: src/gui-list-stack.c:84
 msgid "Value"
-msgstr ""
+msgstr "Verdi"
 
 #: src/asm-listing.c:208
 msgid "; Assembler generated listing; Not editable.\n"
@@ -574,16 +578,16 @@ msgstr ""
 #: src/file-op.c:63 src/file-op-gio.c:65
 #, c-format
 msgid "Failed to open <%s>"
-msgstr ""
+msgstr "Klarte ikke å åpne <%s>"
 
 #: src/file-op.c:142
 msgid "File already exists; overwrite it?"
-msgstr ""
+msgstr "Filen finnes allerede, overskriv den?"
 
 #: src/file-op.c:157 src/file-op-gio.c:152
 #, c-format
 msgid "Failed to save <%s>"
-msgstr ""
+msgstr "Klarte ikke å lagre <%s>"
 
 #: src/file-op.c:328 src/file-op-gio.c:334
 msgid "Failed to save listing file"

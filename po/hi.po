@@ -8,449 +8,454 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.4.2\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2018-09-27 06:28+0000\n"
+"Last-Translator: Sameer Mansuri <mansurisameer@gmail.com>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/gnusim8085/"
+"translations/hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.2-dev\n"
 
 #: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
-msgstr ""
+msgstr "फोंट्स चुने"
 
 #: src/callbacks.c:246
 msgid "Program has errors. Check the Message pane."
 msgstr ""
+"प्रोग्राम में एक या ज्यादा त्रुटिया  है. जानकारी के लिए मेसेज विंडो देखे."
 
 #: src/callbacks.c:267
 msgid "Error executing program"
-msgstr ""
+msgstr "क्रियान्वित करने में त्रुटि"
 
 #: src/callbacks.c:287
 msgid "Error in step in"
-msgstr ""
+msgstr "स्टेप इन में त्रुटि"
 
 #: src/callbacks.c:302
 msgid "Error in step over"
-msgstr ""
+msgstr "स्टेप ओवर में त्रुटि"
 
 #: src/callbacks.c:317
 msgid "Error in step out"
-msgstr ""
+msgstr "स्टेप आउट में त्रुटि"
 
 #: src/callbacks.c:416
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "सीमा के भीतर एक मान्य संख्या दर्ज करें"
 
 #: src/callbacks.c:626 src/callbacks.c:644
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr ""
+msgstr "सीमा के भीतर एक मान्य संख्या दर्ज करें (0-65535 or 0h-FFFFh)"
 
 #: src/callbacks.c:665 src/callbacks.c:683
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "सीमा के भीतर एक मान्य संख्या दर्ज करें (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:707
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
+"टुटोरिअल फाइल asm-guide.txt नहीं मिली।यह निर्देशिका में मौजूद होना चाहिए | "
 
 #: src/interface.c:39
 msgid "_File"
-msgstr ""
+msgstr "_File"
 
 #: src/interface.c:40
 msgid "_Reset"
-msgstr ""
+msgstr "_Reset"
 
 #: src/interface.c:41
 msgid "_Assembler"
-msgstr ""
+msgstr "_असेम्बलर"
 
 #: src/interface.c:42
 msgid "_Debug"
-msgstr ""
+msgstr "_Debug"
 
 #: src/interface.c:43
 msgid "_Breakpoints"
-msgstr ""
+msgstr "_ब्रेक पॉइंट्स"
 
 #: src/interface.c:44
 msgid "_Help"
-msgstr ""
+msgstr "_Help"
 
 #: src/interface.c:45
 msgid "New source file"
-msgstr ""
+msgstr "नया स्रोत फ़ाइल"
 
 #: src/interface.c:46
 msgid "Open a file"
-msgstr ""
+msgstr "फाइल खोले"
 
 #: src/interface.c:47 src/file-op.c:221 src/file-op-gio.c:216
 msgid "Save file"
-msgstr ""
+msgstr "फाइल को सुरक्षित करे"
 
 #: src/interface.c:48 src/file-op.c:251 src/file-op-gio.c:246
 msgid "Save file as"
-msgstr ""
+msgstr "फाइल को फिरसे सुरक्षित करे"
 
 #: src/interface.c:49
 msgid "Print program"
-msgstr ""
+msgstr "प्रोग्राम प्रिंट करे"
 
 #: src/interface.c:52
 msgid "_Registers"
-msgstr ""
+msgstr "_रजिस्टर्स"
 
 #: src/interface.c:52
 msgid "Reset Registers"
-msgstr ""
+msgstr "Registers रिसेट करे"
 
 #: src/interface.c:53
 msgid "_Flags"
-msgstr ""
+msgstr "_फ्लैग्स"
 
 #: src/interface.c:53
 msgid "Reset Flags"
-msgstr ""
+msgstr "_Flags रिसेट करे"
 
 #: src/interface.c:54
 msgid "_IO Ports"
-msgstr ""
+msgstr "_IO पोर्ट्स"
 
 #: src/interface.c:54
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "IO Ports रिसेट करे"
 
 #: src/interface.c:55
 msgid "_Memory"
-msgstr ""
+msgstr "_मेमोरी"
 
 #: src/interface.c:55
 msgid "Reset Memory"
-msgstr ""
+msgstr "Memory रिसेट करे"
 
 #: src/interface.c:56
 msgid "Reset _All"
-msgstr ""
+msgstr "सब कुछ रिसेट करे"
 
 #: src/interface.c:56
 msgid "Reset All"
-msgstr ""
+msgstr "सब कुछ रिसेट करे"
 
 #: src/interface.c:57
 msgid "A_ssemble"
-msgstr ""
+msgstr "असेम्बल"
 
 #: src/interface.c:57
 msgid "Only assemble program"
-msgstr ""
+msgstr "सिर्फ प्रोग्राम असेम्बल करे"
 
 #: src/interface.c:58
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "असेम्बल और लोड किये गए प्रोग्राम को कार्यान्वित करे"
 
 #: src/interface.c:59
 msgid "Show _listing"
-msgstr ""
+msgstr "_listing दिखाए"
 
 #: src/interface.c:59
 msgid "Show the source code along with opcodes and operands in hex numbers"
-msgstr ""
+msgstr "Source code को Opcdoe, operand और Hex नंबर के साथ दिखाए"
 
 #: src/interface.c:60
 msgid "Step _in"
-msgstr ""
+msgstr "स्टेप इन"
 
 #: src/interface.c:60
 msgid "Step in the code"
-msgstr ""
+msgstr "कोड में स्टेप इन करे"
 
 #: src/interface.c:61
 msgid "Step o_ver"
-msgstr ""
+msgstr "स्टेप ओवर"
 
 #: src/interface.c:61
 msgid "Step over the code without calling functions"
-msgstr ""
+msgstr "फंक्शनको बुलाये बिना कोड में स्टेप ओवर करे"
 
 #: src/interface.c:62
 msgid "Step _out"
-msgstr ""
+msgstr "स्टेप आउट"
 
 #: src/interface.c:62
 msgid "Step out of the current function"
-msgstr ""
+msgstr "मौजूदा फंक्शनमें से स्टेप आउट करे"
 
 #: src/interface.c:63
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "ब्रेक पॉइंट को टॉगल करे"
 
 #: src/interface.c:63
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "मौजूदा लाइन में ब्रेक पॉइंट को टॉगल करे"
 
 #: src/interface.c:64
 msgid "_Clear all breakpoints"
-msgstr ""
+msgstr "सभी ब्रेकपॉइंट को मिटाये"
 
 #: src/interface.c:64
 msgid "Remove all breakpoints"
-msgstr ""
+msgstr "सभी ब्रेकपॉइंट को मिटाये"
 
 #: src/interface.c:65
 msgid "Stop execution"
-msgstr ""
+msgstr "कार्यान्वयन बंध करे"
 
 #: src/interface.c:65
 msgid "Stop debugging"
-msgstr ""
+msgstr "डिबगिंग बंध करे"
 
 #: src/interface.c:66
 msgid "_Contents"
-msgstr ""
+msgstr "कंटेंट्स"
 
 #: src/interface.c:67
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "असेम्ब्लर ट्यूटोरियल"
 
 #: src/interface.c:72
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "साइड पेन दिखाए/छुपाये"
 
 #: src/interface.c:263
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
-msgstr ""
+msgstr "GNUSim8085 - 8085 माइक्रोप्रोसेसर सिम्युलेटर"
 
 #: src/interface.c:474
 msgid "Registers"
-msgstr ""
+msgstr "रजिस्टर्स"
 
 #: src/interface.c:559
 msgid "Flag"
-msgstr ""
+msgstr "फ्लैग"
 
 #: src/interface.c:579 src/gui-list-data.c:76 src/gui-list-stack.c:81
 msgid "Decimal"
-msgstr ""
+msgstr "डेसीमल"
 
 #: src/interface.c:588
 msgid "Enter a decimal number"
-msgstr ""
+msgstr "डेसीमल नंबर डालें"
 
 #: src/interface.c:591
 msgid "To Hex"
-msgstr ""
+msgstr "हेक्स में"
 
 #: src/interface.c:595
 msgid "Convert this number to hexadecimal"
-msgstr ""
+msgstr "नंबर को हेक्स में परिवर्तित करे"
 
 #: src/interface.c:602
 msgid "Hex"
-msgstr ""
+msgstr "हेक्स"
 
 #: src/interface.c:611
 msgid "Enter a hexadecimal number"
-msgstr ""
+msgstr "हेक्साडेसिमल नंबर डालें"
 
 #: src/interface.c:614
 msgid "To Dec"
-msgstr ""
+msgstr "डेसीमल में"
 
 #: src/interface.c:618
 msgid "Convert this number to decimal"
-msgstr ""
+msgstr "नंबर को डेसीमल में परिवर्तित करे"
 
 #: src/interface.c:628
 msgid "Decimal - Hex Conversion"
-msgstr ""
+msgstr "डेसिमल- हेक्स परिवर्तन"
 
 #: src/interface.c:652
 msgid "Change the port address to view here"
-msgstr ""
+msgstr "यहाँ देखने के लिए पोर्ट एड्रेस बदले"
 
 #: src/interface.c:659
 msgid "Enter new port value and click Update"
-msgstr ""
+msgstr "नयी पोर्ट वैल्यू डाले और अपडेट पर क्लीक करे"
 
 #: src/interface.c:663
 msgid "Update Port Value"
-msgstr ""
+msgstr "अपडेट पोर्ट वैल्यू"
 
 #: src/interface.c:667
 msgid "Update the port value"
-msgstr ""
+msgstr "अपडेट पोर्ट वैल्यू"
 
 #: src/interface.c:677 src/interface.c:852
 msgid "I/O Ports"
-msgstr ""
+msgstr "I/O पोर्ट्स"
 
 #: src/interface.c:701
 msgid "Change the memory location to view here"
-msgstr ""
+msgstr "यहाँ देखने के लिए मेमोरी एड्रेस बदले"
 
 #: src/interface.c:708
 msgid "Edit new value and click Update"
-msgstr ""
+msgstr "नयी वैल्यू बदले और अपडेट पर क्लीक करे"
 
 #: src/interface.c:712
 msgid "Update Memory"
-msgstr ""
+msgstr "मेमोरी अपडेट करे"
 
 #: src/interface.c:716
 msgid "Update the current memory location"
-msgstr ""
+msgstr "मौजूदा मेमोरी लोकेशन अपडेट करे"
 
 #: src/interface.c:726 src/interface.c:824
 msgid "Memory"
-msgstr ""
+msgstr "मेमोरी"
 
 #: src/interface.c:745
 msgid "Load me at"
-msgstr ""
+msgstr "यहाँ लोड करे"
 
 #: src/interface.c:753
 msgid "Enter the program address.  End with a 'h' if it is a hex address."
-msgstr ""
+msgstr "प्रोग्राम अड्रेस यहाँ डाले.   हेक्स अड्रेस के लिए अंत में 'h' लगाए."
 
 #: src/interface.c:775
 msgid "Data"
-msgstr ""
+msgstr "डाटा"
 
 #: src/interface.c:795
 msgid "Stack"
-msgstr ""
+msgstr "स्टेक"
 
 #: src/interface.c:815
 msgid "KeyPad"
-msgstr ""
+msgstr "कीपेड़"
 
 #: src/interface.c:830 src/interface.c:858
 msgid "Start"
-msgstr ""
+msgstr "स्टार्ट"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: src/interface.c:1064
 msgid "translator_credits"
-msgstr ""
+msgstr "ट्रांसलेटर क्रेडिट्स"
 
 #: src/interface.c:1111
 msgid "Assembler Listing"
-msgstr ""
+msgstr "असेम्ब्लर लिस्टिंग"
 
 #: src/interface.c:1134
 msgid "Save to file"
-msgstr ""
+msgstr "फाइल में सुरक्षित करे"
 
 #: src/interface.c:1171
 msgid "Assembler Tutorial"
-msgstr ""
+msgstr "असेम्ब्लर टुटोरिअल"
 
 #: src/interface.c:1216
 msgid "GNUSim8085 start with dialog"
-msgstr ""
+msgstr "GNUSim8085 : डायलॉग के साथ शुरू करे"
 
 #: src/interface.c:1247
 msgid "1. How to use this simulator?"
-msgstr ""
+msgstr "1. इस सिम्युलेटर का उपयोग कैसे करे?"
 
 #: src/interface.c:1259
 msgid "_Tutorial"
-msgstr ""
+msgstr "टुटोरिअल"
 
 #: src/interface.c:1263
 msgid "A short tutorial on writing assembly code!"
-msgstr ""
+msgstr "असेम्ब्ली प्रोग्राम लिखने के लिए संक्षिप्तमें जानकारी!"
 
 #: src/interface.c:1270
 msgid "2. Open an existing assembly program."
-msgstr ""
+msgstr "2. मौजूदा असेम्ब्ली प्रोग्राम खोलने के लिए."
 
 #: src/interface.c:1282
 msgid "_Open program"
-msgstr ""
+msgstr "प्रोग्राम खोले"
 
 #: src/interface.c:1286
 msgid "Open an already saved program"
-msgstr ""
+msgstr "सुरक्षित किया हुआ प्रोग्राम खोले"
 
 #: src/interface.c:1288
 msgid "What do you want to do now?"
-msgstr ""
+msgstr "आगे आप क्या करना चाहते है?"
 
 #: src/interface.c:1298
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
-msgstr ""
+msgstr "\"doc\" फोल्डर में दिया गया डॉक्युमेंटेशन फ़ाइल पढ़ना ना भूले."
 
 #: src/interface.c:1355
 msgid "Choose a symbol"
-msgstr ""
+msgstr "संकेत चुने"
 
 #: src/interface.c:1381
 msgid "Enter a symbol or choose one from the lists"
-msgstr ""
+msgstr "संकेत डाले या सूचि में से चुने"
 
 #: src/interface.c:1391
 msgid "Enter Symbol"
-msgstr ""
+msgstr "संकेत डाले"
 
 #: src/interface.c:1406
 msgid "Variables List"
-msgstr ""
+msgstr "वेरिएबल्स की सूचि"
 
 #: src/interface.c:1421
 msgid "Functions List"
-msgstr ""
+msgstr "फंक्शन्स की सूचि"
 
 #: src/interface.c:1436
 msgid "Macros List"
-msgstr ""
+msgstr "मेक्रोस की सूचि"
 
 #: src/interface.c:1475
 msgid "Choose a register"
-msgstr ""
+msgstr "रजिस्टर को चुने"
 
 #: src/main.c:83
 msgid "Simulator: Idle"
-msgstr ""
+msgstr "सिमलुलेटर: स्थगित"
 
 #: src/8085.c:249
 #, c-format
 msgid "Unwanted %c reached"
-msgstr ""
+msgstr "अवांछित %c1 पर पहुंचा"
 
 #: src/8085-instructions.c:27
 msgid "Invalid Opcode"
-msgstr ""
+msgstr "अमान्य ओपकोड"
 
 #. TODO (page 748)
 #: src/8085-instructions.c:876
 msgid "Instruction 'RIM' Not implemented"
-msgstr ""
+msgstr "RIM इंस्ट्रक्शन अभी अमली नहीं है"
 
 #. TODO (page 752)
 #: src/8085-instructions.c:1027
 msgid "Instruction 'SIM' Not implemented"
-msgstr ""
+msgstr "SIM इंस्ट्रक्शन अभी अमली नहीं है"
 
 #: src/asm-source.c:108
 msgid "Assembling Aborted"
-msgstr ""
+msgstr "असेम्ब्लिंग बंद किया गया है"
 
 #: src/asm-source.c:176
 msgid "Label should be given to a code line"
-msgstr ""
+msgstr "लेबल सिर्फ कोड लाइन के आगे ही लिखा जाता है"
 
 #: src/asm-source.c:206 src/asm-source.c:213 src/asm-source.c:220
 msgid "Incomplete opcode"
-msgstr ""
+msgstr "अपूर्ण ओपकोड"
 
 #. debug
 #: src/asm-source.c:235
@@ -459,69 +464,73 @@ msgid ""
 "\n"
 "Neither Op not PsOp: [%s]"
 msgstr ""
+"\n"
+"Op या PsOp नहीं [%s]"
 
 #: src/asm-source.c:236
 msgid "Invalid Opcode or Pseudo op"
-msgstr ""
+msgstr "अपूर्ण ओपकोड या Pseudo op"
 
 #: src/asm-source.c:245
 msgid "Opcode needs an user argument"
-msgstr ""
+msgstr "ओपकोडको यूजरसे आर्गुमेंट चाहिए"
 
 #: src/asm-source.c:253
 msgid "Extra characters in line"
-msgstr ""
+msgstr "लाइन में अतिरिक्त करैक्टर है"
 
 #: src/asm-source.c:419
 msgid "Expression error in symbol"
-msgstr ""
+msgstr "अभिव्यक्ति में संकेत की गलती"
 
 #: src/asm-source.c:433
 msgid "Undefined symbol"
-msgstr ""
+msgstr "अपरिभाषित संकेत"
 
 #: src/asm-gensym.c:72
 msgid "Redundant label"
-msgstr ""
+msgstr "अनावश्यक लेबल"
 
 #: src/asm-gensym.c:87
 msgid "Invalid Operand in EQU"
-msgstr ""
+msgstr "EQU में गलत ओपरांड"
 
 #: src/asm-gensym.c:99 src/asm-gensym.c:121
 msgid "Invalid operand"
-msgstr ""
+msgstr "गलत ओपरांड"
 
 #: src/asm-gensym.c:111
 msgid "Redefinition of symbol"
-msgstr ""
+msgstr "संकेत की पुनः परिभाषा"
 
 #: src/asm-genobj.c:108
 msgid "Invalid data size"
-msgstr ""
+msgstr "डाटा साइज अमान्य"
 
 #: src/asm-genobj.c:113
 msgid "DS: Exceeded limit"
-msgstr ""
+msgstr "DS: अधिकतम सीमा से बहार"
 
 #: src/asm-genobj.c:128
 msgid "DB: Operand error"
-msgstr ""
+msgstr "DB : गलत ओपरांड"
 
 #: src/asm-genobj.c:158
 msgid ""
 "Invalid operand or symbol. Check whether operands start with a number. e.g "
 "a0H should be 0a0H"
 msgstr ""
+"अमान्य ओपरांड या संकेत. ध्यान रखे के ऑपरेंड नंबर्स सिर्फ नंबर से शुरू हो सकते"
+" है. जैसे की a0h की जगह 0a0H लिखे"
 
 #. show success message
 #: src/8085-asm.c:84
 msgid "Program assembled successfully"
-msgstr ""
+msgstr "प्रोग्राम सफलतापूर्वक असेम्ब्ल हुआ"
 
 #: src/bridge.c:33
 msgid "Simulator: Program running"
-msgstr ""
+msgstr "सिम्युलेटर: प्रोग्राम रनिंग"
 
 #: src/bridge.c:183
 #, c-format
@@ -534,42 +543,49 @@ msgid ""
 "logic. If you're very sure, there might be a bug in GNUSim8085.If so you're "
 "advised to send a copy of your source program."
 msgstr ""
+"प्रोग्रामका एक्सेक्यूशन अमान्य मेमोरी लोकेशनपे पहुँच गया है <%xH>. एक्सेक्यू"
+"शन  रोक दिया गया है. \n"
+"\n"
+"जाँच करे की प्रोग्राम के अंत में आपने 0\"hlt\" इंस्ट्रक्शन लिखा है और यह भी "
+"जांचे की आपका प्रोग्राम पूरा रिक्त नहीं है. और प्रोग्राम के लॉजिक के सही होने"
+" का भी जाँच करे. और आप आपके प्रोग्राम के सही होने पे निश्चित है तो GNU8085 "
+"सॉफ्टवेयर में भी गलती हो सकती है. कृपया आपका प्रोग्राम हमको भेजे."
 
 #: src/bridge.c:304
 msgid "Assembler: running"
-msgstr ""
+msgstr "असेम्बलर : रनिंग"
 
 #. add column
 #: src/gui-list-message.c:93
 msgid "Line No"
-msgstr ""
+msgstr "लाइन क्रमांक"
 
 #: src/gui-list-message.c:94
 msgid "Assembler Message"
-msgstr ""
+msgstr "असेम्ब्लर सन्देश"
 
 #. add column
 #: src/gui-list-data.c:73
 msgid "Address"
-msgstr ""
+msgstr "एड्रेस"
 
 #: src/gui-list-data.c:74
 msgid "Variable"
-msgstr ""
+msgstr "वेरिएबल"
 
 #: src/gui-list-data.c:75 src/gui-list-data.c:76 src/gui-list-stack.c:80
 #: src/gui-list-stack.c:81
 msgid "Value"
-msgstr ""
+msgstr "मूल्य"
 
 #: src/asm-listing.c:205
 msgid "; Assembler generated listing; Not editable.\n"
-msgstr ""
+msgstr "असेम्बलरका जनरेट किया गया लिस्टिंग : असंपादित\n"
 
 #: src/asm-listing.c:206
 #, c-format
 msgid "; Generated by GNUSim8085: %s\n"
-msgstr ""
+msgstr "; GNUSim8085 द्वारा जनरेट किया गया : %s\n"
 
 #. debug
 #: src/asm-listing.c:242
@@ -577,40 +593,44 @@ msgid ""
 ";Assembler Listing (Do Not assemble)\n"
 "\n"
 msgstr ""
+";असेम्बलर लिस्टिंग (संपादन ना करे)\n"
+"\n"
 
 #: src/file-op.c:60 src/file-op-gio.c:62
 #, c-format
 msgid "Failed to open <%s>"
-msgstr ""
+msgstr "खोलने में असफल <%s>"
 
 #: src/file-op.c:139
 msgid "File already exists; overwrite it?"
-msgstr ""
+msgstr "फाइल पहले से ही मौजूद है । क्या दोबारा फाइल लिखा जाए?"
 
 #: src/file-op.c:154 src/file-op-gio.c:149
 #, c-format
 msgid "Failed to save <%s>"
-msgstr ""
+msgstr "फाइल सुरक्षित करने में असफल <%s>"
 
 #: src/file-op.c:325 src/file-op-gio.c:331
 msgid "Failed to save listing file"
-msgstr ""
+msgstr "लिस्टिंग फाइल सुरक्षित करने में असफल"
 
 #. add column
 #: src/gui-list-stack.c:78
 msgid "Stack Loc"
-msgstr ""
+msgstr "स्टेक लोकेशन"
 
 #: src/gui-list-stack.c:79
 msgid "Proc/Reg"
-msgstr ""
+msgstr "proc/reg"
 
 #: src/gui-list-stack.c:114
 msgid "Stack size exceeded.  Stop the execution"
-msgstr ""
+msgstr "स्टेक की क्षमता के बहार  : एक्सेक्यूशन रोक दे"
 
 #: src/gui-list-stack.c:128
 msgid ""
 "More number of POP are executed than PUSH. Stop the execution and check the "
 "logic of your program"
 msgstr ""
+"PUSH की संख्या से ज्यादा POP एक्सेक्यूट किये गए है. एक्सेक्यूशन रोक दे और "
+"अपने प्रोग्राम लॉजिक की जाँच करे"

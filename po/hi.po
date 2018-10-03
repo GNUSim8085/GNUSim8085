@@ -342,7 +342,7 @@ msgstr "स्टार्ट"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: src/interface.c:1064
 msgid "translator_credits"
-msgstr "ट्रांसलेटर क्रेडिट्स"
+msgstr "Sameer Mansuri <mansurisameer@gmail.com>"
 
 #: src/interface.c:1111
 msgid "Assembler Listing"

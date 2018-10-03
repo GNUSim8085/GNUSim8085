@@ -183,7 +183,7 @@ SectionEnd
 !macro IncludeLocale LOCALE
   SetOutPath "$INSTDIR\share\locale\${LOCALE}\LC_MESSAGES"
   File "${BUILD_DIR_TEMP}/share/locale/${LOCALE}/LC_MESSAGES/@PACKAGE@.mo"
-  File "${MINGW_HOME}/share/locale/${LOCALE}/LC_MESSAGES/gtk30.mo"
+  File /nonfatal "${MINGW_HOME}/share/locale/${LOCALE}/LC_MESSAGES/gtk30.mo"
 !macroend
 
 Section "Translations" SecI18N
@@ -195,11 +195,13 @@ Section "Translations" SecI18N
   !insertmacro IncludeLocale "es"
   !insertmacro IncludeLocale "fr"
   !insertmacro IncludeLocale "gu"
+  !insertmacro IncludeLocale "hi"
   !insertmacro IncludeLocale "it"
   !insertmacro IncludeLocale "ja"
   !insertmacro IncludeLocale "kn"
   !insertmacro IncludeLocale "lt"
   !insertmacro IncludeLocale "mr"
+  !insertmacro IncludeLocale "nb_NO"
   !insertmacro IncludeLocale "nl"
   !insertmacro IncludeLocale "pt_BR"
   !insertmacro IncludeLocale "ru"

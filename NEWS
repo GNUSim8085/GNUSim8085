@@ -5,6 +5,9 @@ GNUSim8085 1.4.2 (UNRELEASED)
  - #31 - Fully switch to meson build
  - #32 - Allow to load data in IO ports in hexadecimal format
 
+## Translations
+ - New - Hindi (hi), Norwegian Bokmål (nb_NO)
+
 ## Note to packagers:
 The application can now be built using meson build system.
 If you see any issues building with meson please report them on our

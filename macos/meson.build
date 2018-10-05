@@ -5,7 +5,7 @@
 infoplistconf = configuration_data()
 infoplistconf.set('PACKAGE', packagename, description : 'Name of package')
 infoplistconf.set('VERSION', meson.project_version(), description : 'Version number of package')
-infoplistconf.set('COPYRIGHT_STRING', 'Copyright (C) 2003  Sridhar Ratnakumar <srid@srid.ca>', description : 'Copyright information')
+infoplistconf.set('COPYRIGHT_STRING', 'Copyright (C) 2003  Sridhar Ratnakumar &lt;srid@srid.ca&gt;', description : 'Copyright information')
 configure_file(input : 'Info.plist.in',
                output : 'Info.plist',
                configuration : infoplistconf,
@@ -47,7 +47,7 @@ meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loade
 
 # Copy necessary glib schemas and compile them
 meson.add_install_script('mkdir', '-p', join_paths(prefix, datadir, 'glib-2.0', 'schemas'))
-#meson.add_install_script('ls','-R','/usr/local/share/')
+meson.add_install_script('ls','-R','/usr/local/share/')
 #meson.add_install_script('ls','-R','/usr/local/opt/')
 install_data('/usr/local/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml', install_dir : join_paths(datadir, 'glib-2.0', 'schemas'))
 meson.add_install_script('glib-compile-schemas', join_paths(prefix, datadir, 'glib-2.0', 'schemas'))

@@ -17,7 +17,6 @@ matrix:
 
                 - name: "Linux meson build"
                   os: linux
-                  sudo: false
                   dist: xenial
                   addons:
                           apt:
@@ -26,6 +25,7 @@ matrix:
                                           - gettext
                                           - discount
                                           - python3-pip
+                                          - python3-setuptools
                   install:
                           - pip3 install --user meson==0.37.0
                           - export PATH=$PATH:~/.local/bin

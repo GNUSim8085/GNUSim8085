@@ -27,7 +27,8 @@ matrix:
                                           - python3-pip
                                           - python3-setuptools
                   install:
-                          - pip3 install --user meson==0.37.0
+                          - pip3 install --user meson==0.41.0
+                          - pip3 install --user ninja==1.7.2.post1
                           - export PATH=$PATH:~/.local/bin
                   script: rm -rf builddir && meson --prefix=`pwd`/mesoninstall builddir && cd builddir && ninja dist && cd ..
 

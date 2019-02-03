@@ -1,7 +1,7 @@
 project('gnusim8085', 'c',
   version : '1.4.1.20180912',
   license : 'GPL-2.0+',
-  meson_version : '>=0.37'
+  meson_version : '>=0.41.0'
 )
 packagename = meson.project_name()
 prefix = get_option('prefix')

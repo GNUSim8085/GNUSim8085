@@ -1,8 +1,8 @@
 language: c
 matrix:
         allow_failures:
-                - os: linux
-                  dist: xenial
+                - os: osx
+                  #dist: xenial
         include:
                 - name: "Linux autotools build"
                   os: linux

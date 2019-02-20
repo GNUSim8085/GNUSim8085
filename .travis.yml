@@ -48,7 +48,7 @@ matrix:
                 - name: "macOS meson build"
                   os: osx
                   before_install:
-                          - brew extract --version 6a7306be3158a5a3c42fbfb892fa95588edd7103 gdk-pixbuf onkarshinde/gdk-pixbuf-bundle
+                          - HOMEBREW_DEVELOPER="budding" brew extract --version 6a7306be3158a5a3c42fbfb892fa95588edd7103 gdk-pixbuf onkarshinde/gdk-pixbuf-bundle
                           - brew install --build-from-source onkarshinde/gdk-pixbuf-bundle/gdk-pixbuf --with-included-loaders=png
                           - brew bundle
                           - brew link --force gettext

@@ -77,4 +77,4 @@ matrix:
                           skip_cleanup: true
                           on:
                                   repo: GNUSim8085/GNUSim8085
-                                  #tags: true
+                                  tags: true

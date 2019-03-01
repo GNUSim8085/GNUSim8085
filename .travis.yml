@@ -45,14 +45,16 @@ matrix:
                           - make dist
                           - tar -tzvf gnusim8085*.tar.*
 
-                - name: "macOS meson build"
+                - name: "MacOS app bundle build"
                   os: osx
                   before_install:
                           - brew config
-                          - brew uninstall gdk-pixbuf
                           - brew tap onkarshinde/gnusim8085-bundle
                           - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png,svg
-                          - brew bundle
+                          - brew install gtksourceview3
+                          - brew install discount
+                          - brew install dylibbundler
+                          - brew install adwaita-icon-theme
                           - brew link --force gettext
                   script:
                           - rm -rf macosdist

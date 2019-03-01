@@ -50,7 +50,7 @@ matrix:
                   before_install:
                           - brew config
                           - brew tap onkarshinde/gnusim8085-bundle
-                          - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png
+                          - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png,svg
                           - brew bundle
                           - brew link --force gettext
                   script:

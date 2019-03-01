@@ -50,12 +50,8 @@ matrix:
                   before_install:
                           - brew config
                           - brew tap onkarshinde/gnusim8085-bundle
-                          - brew tap-pin onkarshinde/gnusim8085-bundle
-                          - brew install --build-from-source gdk-pixbuf --with-included-loaders=png,svg
-                          - brew install gtksourceview3
-                          - brew install discount
-                          - brew install dylibbundler
-                          - brew install adwaita-icon-theme
+                          - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png,svg
+                          - brew bundle
                           - brew link --force gettext
                   script:
                           - rm -rf macosdist

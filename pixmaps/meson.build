@@ -6,6 +6,7 @@ endif
 
 # Create icns file for macOS bundle
 if get_option('build-macos-app') == true
+install_data('gnusim8085.png', install_dir : packagepixmapsdir)
 meson.add_install_script('mkdir', '-p', join_paths(prefix, datadir, packagename + '.iconset'))
 meson.add_install_script('cp', join_paths(meson.source_root(), 'pixmaps', 'gnusim8085.png'), join_paths(prefix, datadir, packagename + '.iconset', 'icon_512x512.png'))
 meson.add_install_script('iconutil', '-c', 'icns', '-o', join_paths(prefix, datadir, packagename + '.icns'), join_paths(prefix, datadir, packagename + '.iconset'))

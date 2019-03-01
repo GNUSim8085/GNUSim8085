@@ -262,6 +262,8 @@ create_window_main (void)
   window_main_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!window_main_icon_pixbuf)
     window_main_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!window_main_icon_pixbuf)
+    window_main_icon_pixbuf = create_pixbuf ("gnusim8085.png");
 
   if (window_main_icon_pixbuf)
     {
@@ -1048,10 +1050,14 @@ create_dialog_about (void)
   dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!dialog_about_logo_pixbuf)
     dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!dialog_about_logo_pixbuf)
+    dialog_about_logo_pixbuf = create_pixbuf ("gnusim8085.png");
 
   dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!dialog_about_icon_pixbuf)
     dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!dialog_about_icon_pixbuf)
+    dialog_about_icon_pixbuf = create_pixbuf ("gnusim8085.png");
 
   gtk_show_about_dialog (NULL,
 						 "name", name,
@@ -1092,6 +1098,8 @@ create_window_listing (void)
   window_listing_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!window_listing_icon_pixbuf)
     window_listing_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!window_listing_icon_pixbuf)
+    window_listing_icon_pixbuf = create_pixbuf ("gnusim8085.png");
 
   if (window_listing_icon_pixbuf)
     {
@@ -1152,6 +1160,8 @@ create_window_tutorial (void)
   window_tutorial_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!window_tutorial_icon_pixbuf)
     window_tutorial_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!window_tutorial_icon_pixbuf)
+    window_tutorial_icon_pixbuf = create_pixbuf ("gnusim8085.png");
 
   if (window_tutorial_icon_pixbuf)
     {
@@ -1198,6 +1208,8 @@ create_window_start (GtkWindow * parent)
   window_start_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!window_start_icon_pixbuf)
     window_start_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!window_start_icon_pixbuf)
+    window_start_icon_pixbuf = create_pixbuf ("gnusim8085.png");
 
   if (window_start_icon_pixbuf)
     {
@@ -1337,6 +1349,8 @@ create_dialog_isymbol (void)
   dialog_isymbol_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!dialog_isymbol_icon_pixbuf)
     dialog_isymbol_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!dialog_isymbol_icon_pixbuf)
+    dialog_isymbol_icon_pixbuf = create_pixbuf ("gnusim8085.png");
 
   if (dialog_isymbol_icon_pixbuf)
     {
@@ -1431,6 +1445,8 @@ create_dialog_ireg (void)
   dialog_ireg_icon_pixbuf = create_pixbuf ("gnusim8085.svg");
   if (!dialog_ireg_icon_pixbuf)
     dialog_ireg_icon_pixbuf = create_pixbuf ("gnusim8085.ico");
+  if (!dialog_ireg_icon_pixbuf)
+    dialog_ireg_icon_pixbuf = create_pixbuf ("gnusim8085.png");
 
   if (dialog_ireg_icon_pixbuf)
     {

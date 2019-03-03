@@ -236,8 +236,7 @@ gui_keypad_attach_me (void)
 
   create_me ();
 
-  gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (cont),
-										 GTK_WIDGET (table));
+  gtk_container_add (GTK_CONTAINER (cont), GTK_WIDGET (table));
 
   gtk_widget_show_all (GTK_WIDGET (cont));
 }

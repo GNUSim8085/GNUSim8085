@@ -6,7 +6,7 @@ matrix:
         include:
                 - name: "Linux autotools build"
                   os: linux
-                  dist: trusty
+                  dist: xenial
                   addons:
                           apt:
                                   packages:

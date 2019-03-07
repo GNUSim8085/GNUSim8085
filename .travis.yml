@@ -40,6 +40,7 @@ matrix:
                                   brewfile: true
                                   update: true
                   before_install:
+                          - brew upgrade
                           - brew link --force gettext
                   script:
                           - ./autogen.sh
@@ -57,6 +58,7 @@ matrix:
                                   taps: onkarshinde/gnusim8085-bundle
                                   update: true
                   before_install:
+                          - brew upgrade
                           - brew config
                           - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png,svg
                           - brew bundle

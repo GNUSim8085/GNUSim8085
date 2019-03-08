@@ -1,5 +1,6 @@
 brew 'meson'
 brew 'gdk-pixbuf'
+brew 'glib'
 brew 'gtk+3'
 brew 'gtksourceview3'
 brew 'gettext'

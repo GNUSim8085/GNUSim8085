@@ -1,4 +1,5 @@
 brew 'meson'
+brew 'cairo'
 brew 'gdk-pixbuf'
 brew 'glib'
 brew 'gtk+3'

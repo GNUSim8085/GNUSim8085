@@ -40,7 +40,6 @@ matrix:
                                   update: true
                   before_install:
                           - brew bundle
-                          - brew upgrade gtk+3
                           - brew link --force gettext
                   script:
                           - ./autogen.sh
@@ -62,7 +61,6 @@ matrix:
                           - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png,svg
                           - brew upgrade mercurial
                           - brew bundle
-                          - brew upgrade gtk+3
                           - brew link --force gettext
                   script:
                           - rm -rf macosdist

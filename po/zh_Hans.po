@@ -8,139 +8,142 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.4.2\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-03-12 07:03+0000\n"
+"Last-Translator: chen zefan <czfshine@outlook.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnusim8085/translations/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.5.1\n"
 
 #: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
-msgstr ""
+msgstr "选择字体"
 
 #: src/callbacks.c:246
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "程序错误，请检查消息面板。"
 
 #: src/callbacks.c:267
 msgid "Error executing program"
-msgstr ""
+msgstr "程序运行错误"
 
 #: src/callbacks.c:287
 msgid "Error in step in"
-msgstr ""
+msgstr "步进出错"
 
 #: src/callbacks.c:302
 msgid "Error in step over"
-msgstr ""
+msgstr "跳过时出错"
 
 #: src/callbacks.c:317
 msgid "Error in step out"
-msgstr ""
+msgstr "跳出时出错"
 
 #: src/callbacks.c:416
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "请输入范围内的数字"
 
 #: src/callbacks.c:626 src/callbacks.c:644
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr ""
+msgstr "请输入(0-65535 或 0h-FFFFh)内的数字"
 
 #: src/callbacks.c:665 src/callbacks.c:683
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "请输入(0-255 或 0h-00FFh)内的数字"
 
 #: src/callbacks.c:707
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
-msgstr ""
+msgstr "找不到教程文件（ asm-guide.txt）它应当在目录下 "
 
 #: src/interface.c:39
 msgid "_File"
-msgstr ""
+msgstr "文件"
 
 #: src/interface.c:40
 msgid "_Reset"
-msgstr ""
+msgstr "重置"
 
 #: src/interface.c:41
 msgid "_Assembler"
-msgstr ""
+msgstr "汇编"
 
 #: src/interface.c:42
 msgid "_Debug"
-msgstr ""
+msgstr "调试"
 
 #: src/interface.c:43
 msgid "_Breakpoints"
-msgstr ""
+msgstr "断点"
 
 #: src/interface.c:44
 msgid "_Help"
-msgstr ""
+msgstr "帮助"
 
 #: src/interface.c:45
 msgid "New source file"
-msgstr ""
+msgstr "新建源文件"
 
 #: src/interface.c:46
 msgid "Open a file"
-msgstr ""
+msgstr "打开文件"
 
 #: src/interface.c:47 src/file-op.c:221 src/file-op-gio.c:216
 msgid "Save file"
-msgstr ""
+msgstr "保存文件"
 
 #: src/interface.c:48 src/file-op.c:251 src/file-op-gio.c:246
 msgid "Save file as"
-msgstr ""
+msgstr "另存为"
 
 #: src/interface.c:49
 msgid "Print program"
-msgstr ""
+msgstr "打印"
 
 #: src/interface.c:52
 msgid "_Registers"
-msgstr ""
+msgstr "寄存器"
 
 #: src/interface.c:52
 msgid "Reset Registers"
-msgstr ""
+msgstr "重置寄存器"
 
 #: src/interface.c:53
 msgid "_Flags"
-msgstr ""
+msgstr "标记"
 
 #: src/interface.c:53
 msgid "Reset Flags"
-msgstr ""
+msgstr "重置标记"
 
 #: src/interface.c:54
 msgid "_IO Ports"
-msgstr ""
+msgstr "IO端口"
 
 #: src/interface.c:54
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "重置IO端口"
 
 #: src/interface.c:55
 msgid "_Memory"
-msgstr ""
+msgstr "内存"
 
 #: src/interface.c:55
 msgid "Reset Memory"
-msgstr ""
+msgstr "重置内存"
 
 #: src/interface.c:56
 msgid "Reset _All"
-msgstr ""
+msgstr "重置所有"
 
 #: src/interface.c:56
 msgid "Reset All"
-msgstr ""
+msgstr "重置所有"
 
 #: src/interface.c:57
 msgid "A_ssemble"
@@ -156,7 +159,7 @@ msgstr ""
 
 #: src/interface.c:59
 msgid "Show _listing"
-msgstr ""
+msgstr "显示列表文件"
 
 #: src/interface.c:59
 msgid "Show the source code along with opcodes and operands in hex numbers"
@@ -164,111 +167,111 @@ msgstr ""
 
 #: src/interface.c:60
 msgid "Step _in"
-msgstr ""
+msgstr "跳入"
 
 #: src/interface.c:60
 msgid "Step in the code"
-msgstr ""
+msgstr "跳入到代码"
 
 #: src/interface.c:61
 msgid "Step o_ver"
-msgstr ""
+msgstr "跳过"
 
 #: src/interface.c:61
 msgid "Step over the code without calling functions"
-msgstr ""
+msgstr "跳过当前调用的函数"
 
 #: src/interface.c:62
 msgid "Step _out"
-msgstr ""
+msgstr "跳出"
 
 #: src/interface.c:62
 msgid "Step out of the current function"
-msgstr ""
+msgstr "跳出当前函数"
 
 #: src/interface.c:63
 msgid "Toggle _breakpoint"
-msgstr ""
+msgstr "开关断点"
 
 #: src/interface.c:63
 msgid "Toggles breakpoint at current line"
-msgstr ""
+msgstr "在当前行开关断点"
 
 #: src/interface.c:64
 msgid "_Clear all breakpoints"
-msgstr ""
+msgstr "清除所有断点"
 
 #: src/interface.c:64
 msgid "Remove all breakpoints"
-msgstr ""
+msgstr "删除所有断点"
 
 #: src/interface.c:65
 msgid "Stop execution"
-msgstr ""
+msgstr "停止运行"
 
 #: src/interface.c:65
 msgid "Stop debugging"
-msgstr ""
+msgstr "停止调试"
 
 #: src/interface.c:66
 msgid "_Contents"
-msgstr ""
+msgstr "内容"
 
 #: src/interface.c:67
 msgid "Assembler _Tutorial"
-msgstr ""
+msgstr "汇编教程"
 
 #: src/interface.c:72
 msgid "Show/Hide side pane"
-msgstr ""
+msgstr "显示或隐藏面板"
 
 #: src/interface.c:263
 msgid "GNUSim8085 - 8085 Microprocessor Simulator"
-msgstr ""
+msgstr "GNUSim8085 - 8085 模拟器"
 
 #: src/interface.c:474
 msgid "Registers"
-msgstr ""
+msgstr "寄存器"
 
 #: src/interface.c:559
 msgid "Flag"
-msgstr ""
+msgstr "标记"
 
 #: src/interface.c:579 src/gui-list-data.c:76 src/gui-list-stack.c:81
 msgid "Decimal"
-msgstr ""
+msgstr "十进制"
 
 #: src/interface.c:588
 msgid "Enter a decimal number"
-msgstr ""
+msgstr "输入一个十进制的数字"
 
 #: src/interface.c:591
 msgid "To Hex"
-msgstr ""
+msgstr "转成十六进制"
 
 #: src/interface.c:595
 msgid "Convert this number to hexadecimal"
-msgstr ""
+msgstr "转成十六进制"
 
 #: src/interface.c:602
 msgid "Hex"
-msgstr ""
+msgstr "十六进制"
 
 #: src/interface.c:611
 msgid "Enter a hexadecimal number"
-msgstr ""
+msgstr "输入一个十六进制数字"
 
 #: src/interface.c:614
 msgid "To Dec"
-msgstr ""
+msgstr "转八进制"
 
 #: src/interface.c:618
 msgid "Convert this number to decimal"
-msgstr ""
+msgstr "转八进制"
 
 #: src/interface.c:628
 msgid "Decimal - Hex Conversion"
-msgstr ""
+msgstr "十进制－十六进制转换"
 
 #: src/interface.c:652
 msgid "Change the port address to view here"
@@ -332,7 +335,7 @@ msgstr ""
 
 #: src/interface.c:830 src/interface.c:858
 msgid "Start"
-msgstr ""
+msgstr "开始"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: src/interface.c:1064
@@ -345,90 +348,92 @@ msgstr ""
 
 #: src/interface.c:1134
 msgid "Save to file"
-msgstr ""
+msgstr "保存到文件"
 
 #: src/interface.c:1171
 msgid "Assembler Tutorial"
-msgstr ""
+msgstr "汇编教程"
 
 #: src/interface.c:1216
 msgid "GNUSim8085 start with dialog"
-msgstr ""
+msgstr "GNUSim8085 引导对话框"
 
 #: src/interface.c:1247
 msgid "1. How to use this simulator?"
-msgstr ""
+msgstr "1.如何使用这个模拟器？"
 
 #: src/interface.c:1259
 msgid "_Tutorial"
-msgstr ""
+msgstr "看教程"
 
 #: src/interface.c:1263
 msgid "A short tutorial on writing assembly code!"
-msgstr ""
+msgstr "一个使用汇编代码编写的简短教程!"
 
 #: src/interface.c:1270
 msgid "2. Open an existing assembly program."
-msgstr ""
+msgstr "2.打开一个已存在的项目。"
 
 #: src/interface.c:1282
 msgid "_Open program"
-msgstr ""
+msgstr "打开项目"
 
 #: src/interface.c:1286
 msgid "Open an already saved program"
-msgstr ""
+msgstr "打开一个已经保存在本地的程序"
 
 #: src/interface.c:1288
 msgid "What do you want to do now?"
-msgstr ""
+msgstr "你现在想做什么？"
 
 #: src/interface.c:1298
 msgid ""
 "Don't forget to read the documentation \n"
 "given in \"doc\" directory."
 msgstr ""
+"不要忘记阅读\n"
+"doc目录下的文档。"
 
 #: src/interface.c:1355
 msgid "Choose a symbol"
-msgstr ""
+msgstr "选择一个符号"
 
 #: src/interface.c:1381
 msgid "Enter a symbol or choose one from the lists"
-msgstr ""
+msgstr "输入或在列表内选择一个符号"
 
 #: src/interface.c:1391
 msgid "Enter Symbol"
-msgstr ""
+msgstr "输入符号"
 
 #: src/interface.c:1406
 msgid "Variables List"
-msgstr ""
+msgstr "变量列表"
 
 #: src/interface.c:1421
 msgid "Functions List"
-msgstr ""
+msgstr "函数列表"
 
 #: src/interface.c:1436
 msgid "Macros List"
-msgstr ""
+msgstr "宏列表"
 
 #: src/interface.c:1475
 msgid "Choose a register"
-msgstr ""
+msgstr "选择一个寄存器"
 
 #: src/main.c:83
 msgid "Simulator: Idle"
-msgstr ""
+msgstr "模拟器:空闲"
 
 #: src/8085.c:249
-#, c-format
+#, c-format, fuzzy
 msgid "Unwanted %c reached"
-msgstr ""
+msgstr "没找到 %c"
 
 #: src/8085-instructions.c:27
 msgid "Invalid Opcode"
-msgstr ""
+msgstr "无效的操作码"
 
 #. TODO (page 748)
 #: src/8085-instructions.c:876
@@ -442,15 +447,15 @@ msgstr ""
 
 #: src/asm-source.c:108
 msgid "Assembling Aborted"
-msgstr ""
+msgstr "汇编器停止"
 
 #: src/asm-source.c:176
 msgid "Label should be given to a code line"
-msgstr ""
+msgstr "标记必须独占一个代码行"
 
 #: src/asm-source.c:206 src/asm-source.c:213 src/asm-source.c:220
 msgid "Incomplete opcode"
-msgstr ""
+msgstr "不完整的操作码"
 
 #. debug
 #: src/asm-source.c:235

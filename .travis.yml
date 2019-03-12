@@ -35,9 +35,6 @@ matrix:
                 - name: "macOS autotools build"
                   os: osx
                   #osx_image: xcode9.2
-                  addons:
-                          homebrew:
-                                  update: true
                   before_install:
                           - brew bundle
                           - brew link --force gettext
@@ -52,12 +49,9 @@ matrix:
                 - name: "MacOS app bundle build"
                   os: osx
                   osx_image: xcode9.2
-                  addons:
-                          homebrew:
-                                  taps: onkarshinde/gnusim8085-bundle
-                                  update: true
                   before_install:
                           - brew config
+                          - brew tap onkarshinde/gnusim8085-bundle
                           - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png,svg
                           - brew upgrade mercurial
                           - brew bundle

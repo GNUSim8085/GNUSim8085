@@ -34,7 +34,7 @@ matrix:
 
                 - name: "macOS autotools build"
                   os: osx
-                  osx_image: xcode9.2
+                  #osx_image: xcode9.2
                   addons:
                           homebrew:
                                   update: true

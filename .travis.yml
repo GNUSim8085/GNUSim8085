@@ -58,6 +58,7 @@ matrix:
                           - brew link --force gettext
                   script:
                           - rm -rf macosdist
+                          - export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
                           - pkg-config --cflags gtk+-3.0
                           - meson --prefix=`pwd`/macosdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-macos-app=true macosdist
                           - cd macosdist && ninja install && shasum -a 256 *.zip && cd ..

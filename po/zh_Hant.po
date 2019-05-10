@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.4.2\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: 2019-01-21 07:20+0000\n"
+"PO-Revision-Date: 2019-05-10 11:33+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "gnusim8085/translations/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.4-dev\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
@@ -25,35 +25,35 @@ msgstr "選擇字體"
 
 #: src/callbacks.c:246
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "程式有錯誤。檢查 \"消息\" 窗格。"
 
 #: src/callbacks.c:267
 msgid "Error executing program"
-msgstr ""
+msgstr "執行程式時出錯"
 
 #: src/callbacks.c:287
 msgid "Error in step in"
-msgstr ""
+msgstr "步驟中出錯"
 
 #: src/callbacks.c:302
 msgid "Error in step over"
-msgstr ""
+msgstr "步驟中錯誤"
 
 #: src/callbacks.c:317
 msgid "Error in step out"
-msgstr ""
+msgstr "退出時出錯"
 
 #: src/callbacks.c:416
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "在範圍內輸入有效的數位"
 
 #: src/callbacks.c:626 src/callbacks.c:644
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr ""
+msgstr "輸入範圍內的有效數字 (0-65535 或 0h-ffh)"
 
 #: src/callbacks.c:665 src/callbacks.c:683
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "輸入範圍內的有效數字 (0-255/0h-00ffh)"
 
 #: src/callbacks.c:707
 msgid ""

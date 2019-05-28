@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2003  Sridhar Ratnakumar <srid@srid.ca>
+  Copyright (C) 2003 Sridhar Ratnakumar <srid@srid.ca>
 	
   This file is part of GNUSim8085.
 
@@ -111,7 +111,7 @@ stack_modified (eef_addr_t sp, gboolean pushed, gchar what)
 		{
 		  gui_app_show_msg (GTK_MESSAGE_WARNING,
 							_
-							("Stack size exceeded.  Stop the execution"));
+							("Stack size exceeded. Stop the execution"));
 		  return;
 		}
 	  /* push to stack */
@@ -125,7 +125,7 @@ stack_modified (eef_addr_t sp, gboolean pushed, gchar what)
 		{
 		  gui_app_show_msg (GTK_MESSAGE_WARNING,
 							_
-							("More number of POP are executed than PUSH. Stop the execution and check the logic of your program"));
+							("Number of executed POP exceeding PUSH. Stop the execution and check the program logic."));
 		  return;
 		}
 	  /* pop */

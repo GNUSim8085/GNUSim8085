@@ -8,21 +8,24 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.4.2\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-07-07 17:01+0000\n"
+"Last-Translator: Leo Ruizendaal <leoruizendaal@hotmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/gnusim8085/"
+"translations/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
-msgstr ""
+msgstr "Betűtípus kiválasztása"
 
 #: src/callbacks.c:246
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "A programnak vannak hibák. Nézd meg az üzenettáblát."
 
 #: src/callbacks.c:267
 msgid "Error executing program"
@@ -30,129 +33,132 @@ msgstr ""
 
 #: src/callbacks.c:287
 msgid "Error in step in"
-msgstr ""
+msgstr "Hiba a belépésnél"
 
 #: src/callbacks.c:302
 msgid "Error in step over"
-msgstr ""
+msgstr "Hiba átlépésnél"
 
 #: src/callbacks.c:317
 msgid "Error in step out"
-msgstr ""
+msgstr "Hiba a kilépésnél"
 
 #: src/callbacks.c:416
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "Adjon meg egy érvényes számot a távolságon belül"
 
 #: src/callbacks.c:626 src/callbacks.c:644
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
 msgstr ""
+"Adjon meg egy érvényes számot hatótávolságon belül (0-65535 vagy 0h-FFFFh)"
 
 #: src/callbacks.c:665 src/callbacks.c:683
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "Adjon meg egy érvényes számot hatótávolságon belül (0-255 / 0h-00FFh)"
 
 #: src/callbacks.c:707
 msgid ""
 "The tutorial file, asm-guide.txt, was not found. It should be present in "
 "directory - "
 msgstr ""
+"A bemutató fájlt, asm-guide.txt, nem talált. Ez jelen kell lennie a "
+"könyvtárban - "
 
 #: src/interface.c:39
 msgid "_File"
-msgstr ""
+msgstr "_Fájl"
 
 #: src/interface.c:40
 msgid "_Reset"
-msgstr ""
+msgstr "_Visszaállítás"
 
 #: src/interface.c:41
 msgid "_Assembler"
-msgstr ""
+msgstr "_Assembler"
 
 #: src/interface.c:42
 msgid "_Debug"
-msgstr ""
+msgstr "_Hibakeresési műveletek"
 
 #: src/interface.c:43
 msgid "_Breakpoints"
-msgstr ""
+msgstr "_Töréspontok"
 
 #: src/interface.c:44
 msgid "_Help"
-msgstr ""
+msgstr "_Segítség"
 
 #: src/interface.c:45
 msgid "New source file"
-msgstr ""
+msgstr "Új forrásfájl"
 
 #: src/interface.c:46
 msgid "Open a file"
-msgstr ""
+msgstr "Fájl megnyitása"
 
 #: src/interface.c:47 src/file-op.c:221 src/file-op-gio.c:216
 msgid "Save file"
-msgstr ""
+msgstr "Fájl mentése"
 
 #: src/interface.c:48 src/file-op.c:251 src/file-op-gio.c:246
 msgid "Save file as"
-msgstr ""
+msgstr "Fájl mentése másként"
 
 #: src/interface.c:49
 msgid "Print program"
-msgstr ""
+msgstr "A program kinyomtatása"
 
 #: src/interface.c:52
 msgid "_Registers"
-msgstr ""
+msgstr "_ Regiszterek"
 
 #: src/interface.c:52
 msgid "Reset Registers"
-msgstr ""
+msgstr "Regiszterek visszaállítása"
 
 #: src/interface.c:53
 msgid "_Flags"
-msgstr ""
+msgstr "_ Zászlók"
 
 #: src/interface.c:53
 msgid "Reset Flags"
-msgstr ""
+msgstr "A zászlók visszaállítása"
 
 #: src/interface.c:54
 msgid "_IO Ports"
-msgstr ""
+msgstr "_I/O-Portok"
 
 #: src/interface.c:54
 msgid "Reset IO Ports"
-msgstr ""
+msgstr "I/O-portok visszaállítása"
 
 #: src/interface.c:55
 msgid "_Memory"
-msgstr ""
+msgstr "_Memória"
 
 #: src/interface.c:55
 msgid "Reset Memory"
-msgstr ""
+msgstr "A Memória Visszaállítása"
 
 #: src/interface.c:56
 msgid "Reset _All"
-msgstr ""
+msgstr "Újraindítja az összes"
 
 #: src/interface.c:56
 msgid "Reset All"
-msgstr ""
+msgstr "Összes Visszaállítása"
 
 #: src/interface.c:57
 msgid "A_ssemble"
-msgstr ""
+msgstr "össze_szerelni"
 
 #: src/interface.c:57
 msgid "Only assemble program"
-msgstr ""
+msgstr "Csak összerakni program"
 
 #: src/interface.c:58
 msgid "Execute assembled and loaded program"
-msgstr ""
+msgstr "Az összeállított és betöltött program végrehajtása"
 
 #: src/interface.c:59
 msgid "Show _listing"

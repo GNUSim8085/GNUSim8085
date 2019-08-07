@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.4.2\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: 2019-03-12 07:03+0000\n"
-"Last-Translator: chen zefan <czfshine@outlook.com>\n"
+"PO-Revision-Date: 2019-08-08 19:23+0000\n"
+"Last-Translator: Elizabeth Sherrock <lizzyd710@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnusim8085/translations/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
@@ -63,27 +63,27 @@ msgstr "找不到教程文件（ asm-guide.txt）它应当在目录下 "
 
 #: src/interface.c:39
 msgid "_File"
-msgstr "文件"
+msgstr "文件（_F）"
 
 #: src/interface.c:40
 msgid "_Reset"
-msgstr "重置"
+msgstr "重置（_R）"
 
 #: src/interface.c:41
 msgid "_Assembler"
-msgstr "汇编"
+msgstr "汇编（_A）"
 
 #: src/interface.c:42
 msgid "_Debug"
-msgstr "调试"
+msgstr "调试（_D）"
 
 #: src/interface.c:43
 msgid "_Breakpoints"
-msgstr "断点"
+msgstr "断点（_B）"
 
 #: src/interface.c:44
 msgid "_Help"
-msgstr "帮助"
+msgstr "帮助（_H）"
 
 #: src/interface.c:45
 msgid "New source file"
@@ -107,7 +107,7 @@ msgstr "打印"
 
 #: src/interface.c:52
 msgid "_Registers"
-msgstr "寄存器"
+msgstr "寄存器（_R）"
 
 #: src/interface.c:52
 msgid "Reset Registers"
@@ -115,7 +115,7 @@ msgstr "重置寄存器"
 
 #: src/interface.c:53
 msgid "_Flags"
-msgstr "标记"
+msgstr "标记（_F）"
 
 #: src/interface.c:53
 msgid "Reset Flags"
@@ -123,7 +123,7 @@ msgstr "重置标记"
 
 #: src/interface.c:54
 msgid "_IO Ports"
-msgstr "IO端口"
+msgstr "_IO端口"
 
 #: src/interface.c:54
 msgid "Reset IO Ports"
@@ -131,7 +131,7 @@ msgstr "重置IO端口"
 
 #: src/interface.c:55
 msgid "_Memory"
-msgstr "内存"
+msgstr "内存（_M）"
 
 #: src/interface.c:55
 msgid "Reset Memory"
@@ -139,7 +139,7 @@ msgstr "重置内存"
 
 #: src/interface.c:56
 msgid "Reset _All"
-msgstr "重置所有"
+msgstr "重置所有（_A）"
 
 #: src/interface.c:56
 msgid "Reset All"
@@ -159,7 +159,7 @@ msgstr ""
 
 #: src/interface.c:59
 msgid "Show _listing"
-msgstr "显示列表文件"
+msgstr "显示列表文件（_L）"
 
 #: src/interface.c:59
 msgid "Show the source code along with opcodes and operands in hex numbers"
@@ -167,7 +167,7 @@ msgstr ""
 
 #: src/interface.c:60
 msgid "Step _in"
-msgstr "跳入"
+msgstr "跳入（_I）"
 
 #: src/interface.c:60
 msgid "Step in the code"
@@ -175,7 +175,7 @@ msgstr "跳入到代码"
 
 #: src/interface.c:61
 msgid "Step o_ver"
-msgstr "跳过"
+msgstr "跳过（_V）"
 
 #: src/interface.c:61
 msgid "Step over the code without calling functions"
@@ -183,7 +183,7 @@ msgstr "跳过当前调用的函数"
 
 #: src/interface.c:62
 msgid "Step _out"
-msgstr "跳出"
+msgstr "跳出（_O）"
 
 #: src/interface.c:62
 msgid "Step out of the current function"
@@ -191,7 +191,7 @@ msgstr "跳出当前函数"
 
 #: src/interface.c:63
 msgid "Toggle _breakpoint"
-msgstr "开关断点"
+msgstr "开关断点（_B）"
 
 #: src/interface.c:63
 msgid "Toggles breakpoint at current line"
@@ -199,7 +199,7 @@ msgstr "在当前行开关断点"
 
 #: src/interface.c:64
 msgid "_Clear all breakpoints"
-msgstr "清除所有断点"
+msgstr "清除所有断点（_C）"
 
 #: src/interface.c:64
 msgid "Remove all breakpoints"
@@ -215,11 +215,11 @@ msgstr "停止调试"
 
 #: src/interface.c:66
 msgid "_Contents"
-msgstr "内容"
+msgstr "内容（_C）"
 
 #: src/interface.c:67
 msgid "Assembler _Tutorial"
-msgstr "汇编教程"
+msgstr "汇编教程（_T）"
 
 #: src/interface.c:72
 msgid "Show/Hide side pane"
@@ -263,11 +263,11 @@ msgstr "输入一个十六进制数字"
 
 #: src/interface.c:614
 msgid "To Dec"
-msgstr "转八进制"
+msgstr "转十进制"
 
 #: src/interface.c:618
 msgid "Convert this number to decimal"
-msgstr "转八进制"
+msgstr "转十进制"
 
 #: src/interface.c:628
 msgid "Decimal - Hex Conversion"
@@ -327,7 +327,7 @@ msgstr ""
 
 #: src/interface.c:795
 msgid "Stack"
-msgstr ""
+msgstr "堆叠"
 
 #: src/interface.c:815
 msgid "KeyPad"
@@ -364,7 +364,7 @@ msgstr "1.如何使用这个模拟器？"
 
 #: src/interface.c:1259
 msgid "_Tutorial"
-msgstr "看教程"
+msgstr "看教程（_T）"
 
 #: src/interface.c:1263
 msgid "A short tutorial on writing assembly code!"
@@ -376,7 +376,7 @@ msgstr "2.打开一个已存在的项目。"
 
 #: src/interface.c:1282
 msgid "_Open program"
-msgstr "打开项目"
+msgstr "打开项目（_O）"
 
 #: src/interface.c:1286
 msgid "Open an already saved program"
@@ -560,12 +560,12 @@ msgstr ""
 
 #: src/gui-list-data.c:74
 msgid "Variable"
-msgstr ""
+msgstr "变数"
 
 #: src/gui-list-data.c:75 src/gui-list-data.c:76 src/gui-list-stack.c:80
 #: src/gui-list-stack.c:81
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 #: src/asm-listing.c:205
 msgid "; Assembler generated listing; Not editable.\n"

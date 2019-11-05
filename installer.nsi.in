@@ -207,6 +207,8 @@ Section "Translations" SecI18N
   !insertmacro IncludeLocale "ru"
   !insertmacro IncludeLocale "ta"
   !insertmacro IncludeLocale "th"
+  !insertmacro IncludeLocale "zh_CN"
+  !insertmacro IncludeLocale "zh_TW"
   !system 'rm -rf ${BUILD_DIR_TEMP}'
 SectionEnd
 

@@ -36,6 +36,7 @@ matrix:
                   os: osx
                   #osx_image: xcode9.2
                   before_install:
+                          - brew update
                           - brew bundle
                           - brew link --force gettext
                   script:
@@ -50,6 +51,7 @@ matrix:
                   os: osx
                   #osx_image: xcode9.2
                   before_install:
+                          - brew update
                           - brew config
                           - brew tap onkarshinde/gnusim8085-bundle
                           - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=png,svg

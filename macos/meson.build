@@ -72,7 +72,6 @@ message('gdk_pixbuf_moduledir ' + gdk_pixbuf_moduledir)
 install_subdir(gdk_pixbuf_binarydir, install_dir : join_paths('Contents', 'libs', 'gdk-pixbuf-2.0'))
 #meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
 install_data(join_paths(crocodir, 'libcroco-0.6.3.dylib'), install_dir : join_paths('Contents', 'libs'))
-install_data(join_paths(harfbuzzdir, 'libharfbuzz.0.dylib'), install_dir : join_paths('Contents', 'libs'))
 install_data(join_paths(rsvgdir, 'librsvg-2.2.dylib'), install_dir : join_paths('Contents', 'libs'))
 # Modify lookup path on pixbuf loaders
 pixbufloaderlist = ['libpixbufloader-svg.so']

@@ -16,16 +16,36 @@ meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagen
 # Below lines added to work around a problem in dylibbundler
 message('brew prefix ' + run_command('brew', '--prefix').stdout().strip())
 dyliblist = ['libcairo-gobject.2.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib']
+giodir=run_command('pkg-config', 'gio-2.0', '--variable', 'libdir').stdout().strip()
+message('gio path ' + giodir)
 glibdir=run_command('pkg-config', 'glib-2.0', '--variable', 'libdir').stdout().strip()
 message('glib path ' + glibdir)
+gobjectdir=run_command('pkg-config', 'gobject-2.0', '--variable', 'libdir').stdout().strip()
+message('gobject path ' + gobjectdir)
 cairodir=run_command('pkg-config', 'cairo', '--variable', 'libdir').stdout().strip()
 message('cairo path ' + cairodir)
+cairogobjectdir=run_command('pkg-config', 'cairo-gobject', '--variable', 'libdir').stdout().strip()
+message('cairo-gobject path ' + cairogobjectdir)
+crocodir=run_command('pkg-config', 'libcroco-0.6', '--variable', 'libdir').stdout().strip()
+message('croco path ' + crocodir)
+fontconfigdir=run_command('pkg-config', 'fontconfig', '--variable', 'libdir').stdout().strip()
+message('fontconfig path ' + fontconfigdir)
+freetype2dir=run_command('pkg-config', 'freetype2', '--variable', 'libdir').stdout().strip()
+message('freetype2 path ' + freetype2dir)
 gtkdir=run_command('pkg-config', 'gtk+-3.0', '--variable', 'libdir').stdout().strip()
 message('gtk path ' + gtkdir)
+harfbuzzdir=run_command('pkg-config', 'harfbuzz', '--variable', 'libdir').stdout().strip()
+message('harfbuzz path ' + harfbuzzdir)
+pangocairodir=run_command('pkg-config', 'pangocairo', '--variable', 'libdir').stdout().strip()
+message('pangocairo path ' + pangocairodir)
 pangodir=run_command('pkg-config', 'pango', '--variable', 'libdir').stdout().strip()
 message('pango path ' + pangodir)
 pangoft2dir=run_command('pkg-config', 'pangoft2', '--variable', 'libdir').stdout().strip()
 message('pangoft2 path ' + pangoft2dir)
+pngdir=run_command('pkg-config', 'libpng', '--variable', 'libdir').stdout().strip()
+message('png path ' + pngdir)
+rsvgdir=run_command('pkg-config', 'librsvg-2.0', '--variable', 'libdir').stdout().strip()
+message('rsvg path ' + rsvgdir)
 foreach dylib : dyliblist
 dylib_path = join_paths(prefix, 'Contents', 'libs', dylib)
 if run_command('ls', dylib_path).returncode() == 0
@@ -48,8 +68,35 @@ message('gdk_pixbuf_version ' + gdk_pixbuf_version)
 message('gdk_pixbuf_binarydir ' + gdk_pixbuf_binarydir)
 message('gdk_pixbuf_moduledir ' + gdk_pixbuf_moduledir)
 #meson.add_install_script('cp', '-r', join_paths(gdk_pixbuf_prefix, 'lib', 'gdk-pixbuf-2.0', gdk_pixbuf_version), join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
+# Include pixbuf loaders
 install_subdir(gdk_pixbuf_binarydir, install_dir : join_paths('Contents', 'libs', 'gdk-pixbuf-2.0'))
 #meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
+install_data(join_paths(crocodir, 'libcroco-0.6.3.dylib'), install_dir : join_paths('Contents', 'libs'))
+install_data(join_paths(harfbuzzdir, 'libharfbuzz.0.dylib'), install_dir : join_paths('Contents', 'libs'))
+install_data(join_paths(rsvgdir, 'librsvg-2.2.dylib'), install_dir : join_paths('Contents', 'libs'))
+# Modify lookup path on pixbuf loaders
+pixbufloaderlist = ['libpixbufloader-svg.so']
+foreach pixbufloader : pixbufloaderlist
+pixbufloader_path = join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, pixbufloader)
+if run_command('ls', pixbufloader_path).returncode() == 0
+  meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', cairogobjectdir + '/libcairo-gobject.2.dylib', '@executable_path/../libs/libcairo-gobject.2.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', crocodir + '/libcroco-0.6.3.dylib', '@executable_path/../libs/libcroco-0.6.3.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', fontconfigdir + '/libfontconfig.1.dylib', '@executable_path/../libs/libfontconfig.1.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', freetype2dir + '/libfreetype.6.dylib', '@executable_path/../libs/libfreetype.6.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', gdkpixbufdir + '/libgdk_pixbuf-2.0.0.dylib', '@executable_path/../libs/libgdk_pixbuf-2.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', giodir + '/libgio-2.0.0.dylib', '@executable_path/../libs/libgio-2.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', glibdir + '/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', harfbuzzdir + '/libharfbuzz.0.dylib', '@executable_path/../libs/libharfbuzz.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', pangocairodir + '/libpangocairo-1.0.0.dylib', '@executable_path/../libs/libpangocairo-1.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', pangodir + '/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', pangoft2dir + '/libpangoft2-1.0.0.dylib', '@executable_path/../libs/libpangoft2-1.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', pngdir + '/libpng16.16.dylib', '@executable_path/../libs/libpng16.16.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', rsvgdir + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gettext/lib/libintl.8.dylib', '@executable_path/../libs/libintl.8.dylib', pixbufloader_path)
+endif
+endforeach
 
 # Copy necessary glib schemas and compile them
 meson.add_install_script('mkdir', '-p', join_paths(prefix, datadir, 'glib-2.0', 'schemas'))

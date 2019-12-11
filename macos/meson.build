@@ -13,8 +13,6 @@ configure_file(input : 'Info.plist.in',
 
 # Use dylibbundler to bundle dynamic libraries and modify their lookup path
 meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagename),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
-install_data(join_paths(crocodir, 'libcroco-0.6.3.dylib'), install_dir : join_paths('Contents', 'libs'))
-install_data(join_paths(rsvgdir, 'librsvg-2.2.dylib'), install_dir : join_paths('Contents', 'libs'))
 # Below lines added to work around a problem in dylibbundler
 message('brew prefix ' + run_command('brew', '--prefix').stdout().strip())
 dyliblist = ['libcairo-gobject.2.dylib', 'libcroco-0.6.3.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib', 'librsvg-2.2.dylib']
@@ -56,6 +54,9 @@ if run_command('ls', dylib_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', dylib_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', dylib_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', dylib_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', gtkdir + '/libgdk-3.0.dylib', '@executable_path/../libs/libgdk-3.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', pangodir + '/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', pangoft2dir + '/libpangoft2-1.0.0.dylib', '@executable_path/../libs/libpangoft2-1.0.0.dylib', dylib_path)
@@ -73,8 +74,10 @@ message('gdk_pixbuf_version ' + gdk_pixbuf_version)
 message('gdk_pixbuf_binarydir ' + gdk_pixbuf_binarydir)
 message('gdk_pixbuf_moduledir ' + gdk_pixbuf_moduledir)
 #meson.add_install_script('cp', '-r', join_paths(gdk_pixbuf_prefix, 'lib', 'gdk-pixbuf-2.0', gdk_pixbuf_version), join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
-# Include pixbuf loaders
+# Include pixbuf loaders and dependencies
 install_subdir(gdk_pixbuf_binarydir, install_dir : join_paths('Contents', 'libs', 'gdk-pixbuf-2.0'))
+install_data(join_paths(crocodir, 'libcroco-0.6.3.dylib'), install_dir : join_paths('Contents', 'libs'))
+install_data(join_paths(rsvgdir, 'librsvg-2.2.dylib'), install_dir : join_paths('Contents', 'libs'))
 #meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
 # Modify lookup path on pixbuf loaders
 pixbufloaderlist = ['libpixbufloader-svg.so']

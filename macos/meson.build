@@ -11,11 +11,7 @@ configure_file(input : 'Info.plist.in',
                configuration : infoplistconf,
                install_dir : 'Contents')
 
-# Use dylibbundler to bundle dynamic libraries and modify their lookup path
-meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagename),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
-# Below lines added to work around a problem in dylibbundler
 message('brew prefix ' + run_command('brew', '--prefix').stdout().strip())
-dyliblist = ['libcairo-gobject.2.dylib', 'libcroco-0.6.3.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib', 'librsvg-2.2.dylib']
 giodir=run_command('pkg-config', 'gio-2.0', '--variable', 'libdir').stdout().strip()
 message('gio path ' + giodir)
 glibdir=run_command('pkg-config', 'glib-2.0', '--variable', 'libdir').stdout().strip()
@@ -46,6 +42,24 @@ pngdir=run_command('pkg-config', 'libpng', '--variable', 'libdir').stdout().stri
 message('png path ' + pngdir)
 rsvgdir=run_command('pkg-config', 'librsvg-2.0', '--variable', 'libdir').stdout().strip()
 message('rsvg path ' + rsvgdir)
+
+gdk_pixbuf_prefix = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'prefix').stdout().strip()
+gdk_pixbuf_version = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'gdk_pixbuf_binary_version').stdout().strip()
+gdk_pixbuf_binarydir = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'gdk_pixbuf_binarydir').stdout().strip()
+gdk_pixbuf_moduledir = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'gdk_pixbuf_moduledir').stdout().strip()
+message('gdk_pixbuf_prefix ' + gdk_pixbuf_prefix)
+message('gdk_pixbuf_version ' + gdk_pixbuf_version)
+message('gdk_pixbuf_binarydir ' + gdk_pixbuf_binarydir)
+message('gdk_pixbuf_moduledir ' + gdk_pixbuf_moduledir)
+
+# Use dylibbundler to bundle dynamic libraries and modify their lookup path
+meson.add_install_script('dylibbundler','-x',join_paths(prefix, bindir, packagename),'-b','-d',join_paths(prefix, 'Contents','libs'),'-cd')
+# Include pixbuf loaders and dependencies
+install_subdir(gdk_pixbuf_binarydir, install_dir : join_paths('Contents', 'libs', 'gdk-pixbuf-2.0'))
+install_data(join_paths(crocodir, 'libcroco-0.6.3.dylib'), install_dir : join_paths('Contents', 'libs'))
+install_data(join_paths(rsvgdir, 'librsvg-2.2.dylib'), install_dir : join_paths('Contents', 'libs'))
+# Below lines added to work around a problem in dylibbundler
+dyliblist = ['libcairo-gobject.2.dylib', 'libcroco-0.6.3.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib', 'librsvg-2.2.dylib']
 foreach dylib : dyliblist
 dylib_path = join_paths(prefix, 'Contents', 'libs', dylib)
 if run_command('ls', dylib_path).returncode() == 0
@@ -65,19 +79,7 @@ if run_command('ls', dylib_path).returncode() == 0
 endif
 endforeach
 
-gdk_pixbuf_prefix = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'prefix').stdout().strip()
-gdk_pixbuf_version = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'gdk_pixbuf_binary_version').stdout().strip()
-gdk_pixbuf_binarydir = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'gdk_pixbuf_binarydir').stdout().strip()
-gdk_pixbuf_moduledir = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'gdk_pixbuf_moduledir').stdout().strip()
-message('gdk_pixbuf_prefix ' + gdk_pixbuf_prefix)
-message('gdk_pixbuf_version ' + gdk_pixbuf_version)
-message('gdk_pixbuf_binarydir ' + gdk_pixbuf_binarydir)
-message('gdk_pixbuf_moduledir ' + gdk_pixbuf_moduledir)
 #meson.add_install_script('cp', '-r', join_paths(gdk_pixbuf_prefix, 'lib', 'gdk-pixbuf-2.0', gdk_pixbuf_version), join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
-# Include pixbuf loaders and dependencies
-install_subdir(gdk_pixbuf_binarydir, install_dir : join_paths('Contents', 'libs', 'gdk-pixbuf-2.0'))
-install_data(join_paths(crocodir, 'libcroco-0.6.3.dylib'), install_dir : join_paths('Contents', 'libs'))
-install_data(join_paths(rsvgdir, 'librsvg-2.2.dylib'), install_dir : join_paths('Contents', 'libs'))
 #meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
 # Modify lookup path on pixbuf loaders
 pixbufloaderlist = ['libpixbufloader-svg.so']

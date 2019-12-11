@@ -62,6 +62,7 @@ install_data(join_paths(rsvgdir, 'librsvg-2.2.dylib'), install_dir : join_paths(
 dyliblist = ['libcairo-gobject.2.dylib', 'libcroco-0.6.3.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0.dylib', 'libgobject-2.0.0.dylib', 'libgthread-2.0.0.dylib', 'libgtk-3.0.dylib', 'libpangocairo-1.0.0.dylib', 'libpangoft2-1.0.0.dylib', 'librsvg-2.2.dylib']
 foreach dylib : dyliblist
 dylib_path = join_paths(prefix, 'Contents', 'libs', dylib)
+message('Updating lookup path for ' + dylib_path)
 if run_command('ls', dylib_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', crocodir + '/libcroco-0.6.3.dylib', '@executable_path/../libs/libcroco-0.6.3.dylib', pixbufloader_path)
@@ -85,6 +86,7 @@ endforeach
 pixbufloaderlist = ['libpixbufloader-svg.so']
 foreach pixbufloader : pixbufloaderlist
 pixbufloader_path = join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders', pixbufloader)
+message('Updating lookup path for ' + pixbufloader_path)
 if run_command('ls', pixbufloader_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', cairogobjectdir + '/libcairo-gobject.2.dylib', '@executable_path/../libs/libcairo-gobject.2.dylib', pixbufloader_path)

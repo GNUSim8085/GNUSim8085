@@ -52,9 +52,9 @@ configure_file(input : 'GNUSim8085.desktop.in',
 endif
 
 gtk_api='gtk+-3.0'
-gtksourceview_api='gtksourceview-3.0'
+gtksourceview_api='gtksourceview-4'
 gtk_required='3.10.0'
-gtksourceview_required='3.10.0'
+gtksourceview_required='4.4.0'
 
 if host_machine.system() == 'windows'
 installerconf = configuration_data()

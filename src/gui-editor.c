@@ -29,6 +29,8 @@ gui_editor_new (void)
   const gchar * const *current_search_path;
   gchar **lang_spec_search_path;
 
+  gtk_source_init ();
+
   self = g_malloc0 (sizeof (GUIEditor));
 
   self->buffer = gtk_source_buffer_new (NULL);
@@ -102,6 +104,7 @@ void
 gui_editor_destroy (GUIEditor * self)
 {
   gtk_widget_destroy (self->widget);
+  gtk_source_finalize();
   g_free (self);
 }
 

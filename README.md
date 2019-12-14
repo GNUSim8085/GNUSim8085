@@ -8,7 +8,7 @@ assembly syntax is not too hard to learn. For more information see
 "asm-guide.txt" in the doc/ directory.
 
 Variable declarations are supported in assembler.  You have
-a seperate Data view widget to show variable values during debugging.
+a separate Data view widget to show variable values during debugging.
 And did I mention that?  Yes, you can also debug your code with the
 builtin debugger!  For detailed stuff, you can generate program
 listing which contains line by line of code with address and operand
@@ -27,7 +27,7 @@ the program startup.
 
 Build dependencies (Mandatory)
 - GTK3 (>= 3.10.0) development package
-- GtkSourceView3 (>= 3.10.0) development package
+- GtkSourceView4 (>= 4.4.0) development package
 
 Build dependencies (Optional)
 - gettext (>= 0.18)

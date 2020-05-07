@@ -60,8 +60,6 @@ cb_clicked (GtkTreeView * listview, gpointer user_data)
   /* get selected */
   selection = gtk_tree_view_get_selection (view);
   g_assert (selection);
-  g_assert (gtk_tree_selection_get_selected
-			(selection, (GtkTreeModel **)&store, &iter));
 
   /* get */ 
   gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, C_NO, &ln, -1);

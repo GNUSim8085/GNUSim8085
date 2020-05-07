@@ -8,49 +8,52 @@ msgstr ""
 "Project-Id-Version: gnusim8085 1.4.2\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-05-07 22:12+0000\n"
+"Last-Translator: রিং <toshazed@gmail.com>\n"
+"Language-Team: Bengali (Bangladesh) <https://hosted.weblate.org/projects/"
+"gnusim8085/translations/bn_BD/>\n"
 "Language: bn_BD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: src/callbacks.c:136 src/interface.c:50
 msgid "Select font"
-msgstr ""
+msgstr "ফন্ট বেছে নিন"
 
 #: src/callbacks.c:246
 msgid "Program has errors. Check the Message pane."
-msgstr ""
+msgstr "প্রোগ্রামে ত্রুটি রয়েছে। বার্তায় বিস্তারিত দেখুন।"
 
 #: src/callbacks.c:267
 msgid "Error executing program"
-msgstr ""
+msgstr "প্রোগ্রাম চালনায় ত্রুটি হচ্ছে"
 
 #: src/callbacks.c:287
 msgid "Error in step in"
-msgstr ""
+msgstr "step in তে ত্রুটি"
 
 #: src/callbacks.c:302
 msgid "Error in step over"
-msgstr ""
+msgstr "step over তে ত্রুটি"
 
 #: src/callbacks.c:317
 msgid "Error in step out"
-msgstr ""
+msgstr "step out তে ত্রুটি"
 
 #: src/callbacks.c:416
 msgid "Enter a valid number within range"
-msgstr ""
+msgstr "সীমার মধ্যে বাস্তব সংখ্যা প্রবেশ করান"
 
 #: src/callbacks.c:626 src/callbacks.c:644
 msgid "Enter a valid number within range (0-65535 or 0h-FFFFh)"
-msgstr ""
+msgstr "(0-65535 or 0h-FFFFh) সীমার মধ্যে বাস্তব সংখ্যা প্রবেশ করান"
 
 #: src/callbacks.c:665 src/callbacks.c:683
 msgid "Enter a valid number within range (0-255 / 0h-00FFh)"
-msgstr ""
+msgstr "(0-255 / 0h-00FFh) সীমার মধ্যে বাস্তব সংখ্যা প্রবেশ করান"
 
 #: src/callbacks.c:707
 msgid ""

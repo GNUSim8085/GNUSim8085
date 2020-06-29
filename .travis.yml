@@ -54,7 +54,7 @@ matrix:
                           - brew update
                           - brew config
                           - brew tap onkarshinde/gnusim8085-bundle
-                          - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf --with-included-loaders=all
+                          - brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf
                           - brew upgrade mercurial
                           - brew bundle
                           - brew link --force gettext

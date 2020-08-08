@@ -1,4 +1,4 @@
-# GNUSim8085 (http://www.gnusim8085.org/)
+# GNUSim8085 (https://www.gnusim8085.org/)
 
 GNUSim8085 is a graphical cross platform simulator plus assembler with
 debugger for the Intel 8085 microprocessor. 

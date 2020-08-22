@@ -18,7 +18,7 @@
   Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA
   02110-1301, USA.
 */
-
+#include <ctype.h>
 #include "gui-view.h"
 #include "gui-app.h"
 #include "asm-source.h"
@@ -119,6 +119,15 @@ gui_util_gen_hex (guint8 val, gchar * a, gchar * b)
 
   *a = gui_util_hex_char (x);
   *b = gui_util_hex_char (y);
+}
+
+void
+gui_util_gen_ascii(guint8 val, gchar* a)
+{
+  if(isprint(val))
+    *a = val;
+  else
+    *a = '.';
 }
 
 void

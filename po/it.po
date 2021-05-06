@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnusim8085\n"
 "Report-Msgid-Bugs-To: https://github.com/GNUSim8085/GNUSim8085/issues\n"
 "POT-Creation-Date: 2018-08-05 20:24+0530\n"
-"PO-Revision-Date: 2019-08-27 14:23+0000\n"
-"Last-Translator: leela <53352@protonmail.com>\n"
+"PO-Revision-Date: 2021-05-07 17:33+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnusim8085/"
 "translations/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 "X-Launchpad-Export-Date: 2010-12-12 14:28+0000\n"
 
 #: src/callbacks.c:136 src/interface.c:50
@@ -116,11 +116,11 @@ msgstr "Azzera registri"
 
 #: src/interface.c:53
 msgid "_Flags"
-msgstr "_Flag"
+msgstr "Bandiere"
 
 #: src/interface.c:53
 msgid "Reset Flags"
-msgstr "Azzera Flags"
+msgstr "Azzera le bandiere"
 
 #: src/interface.c:54
 msgid "_IO Ports"
@@ -236,7 +236,7 @@ msgstr "Registri"
 
 #: src/interface.c:559
 msgid "Flag"
-msgstr "Flag"
+msgstr "Bandiera"
 
 #: src/interface.c:579 src/gui-list-data.c:76 src/gui-list-stack.c:81
 msgid "Decimal"

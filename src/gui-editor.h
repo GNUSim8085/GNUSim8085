@@ -33,9 +33,6 @@
 #include <string.h>
 #include <gtk/gtk.h>
 #include <gtksourceview/gtksource.h>
-#include <gtksourceview/gtksourcelanguagemanager.h>
-#include <gtksourceview/gtksourceprintcompositor.h>
-#include <gtksourceview/gtksourcestyleschememanager.h>
 #include "callbacks.h"
 #include "interface.h"
 

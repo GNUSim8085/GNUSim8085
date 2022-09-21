@@ -41,6 +41,9 @@ void gui_view_update_all(void);
 void
 gui_util_gen_hex (guint8 val, gchar * a, gchar * b);
 
+void
+gui_util_gen_ascii(guint8 val, gchar* a);
+
 G_END_DECLS
 
 #endif /* __GUI_VIEW_H__*/

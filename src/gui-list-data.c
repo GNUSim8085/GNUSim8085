@@ -37,6 +37,7 @@ enum
 	C_NAME,
 	C_VAL,
 	C_VAL_HEX,
+	C_VAL_STRING,
 	N_COLS
   };
 
@@ -59,7 +60,7 @@ create_me (void)
 {
   /* create store */
   store = gtk_tree_store_new (N_COLS, G_TYPE_STRING, G_TYPE_STRING,
-							  G_TYPE_INT, G_TYPE_STRING);
+							  G_TYPE_INT, G_TYPE_STRING, G_TYPE_STRING);
   g_assert (store);
 
   /* create view */
@@ -74,6 +75,7 @@ create_me (void)
   _add_column (view, C_NAME, _("Variable"));
   _add_column (view, C_VAL_HEX, _("Value"));
   _add_column (view, C_VAL, g_strconcat(_("Value"), " (", _("Decimal"), ")", NULL));
+  _add_column (view, C_VAL_STRING, g_strconcat(_("Value"), " (", _("String"), ")", NULL));
 }
 
 void
@@ -103,6 +105,7 @@ gui_list_data_add (guint16 addr, const char *sym_name, guint8 val)
   gchar str[4] = "XXh";
   gchar add_str[5] = "XXXX";
   guint8 s1, s2;
+  gchar ascii[2] = "X";
   g_assert (store);
   g_assert (sym_name);
 
@@ -116,11 +119,15 @@ gui_list_data_add (guint16 addr, const char *sym_name, guint8 val)
   /* value */
   gui_util_gen_hex (val, str, str+1);
 	
+  /* string */
+  gui_util_gen_ascii (val, ascii+0);
+
   gtk_tree_store_set (store, &iter, 
 					  C_ADDR, add_str, 
 					  C_NAME, sym_name,
 					  C_VAL, val, 
-					  C_VAL_HEX, str, -1);
+					  C_VAL_HEX, str, 
+					  C_VAL_STRING, ascii, -1);
 
   last_iter = iter;
 }

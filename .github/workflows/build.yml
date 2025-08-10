@@ -25,3 +25,24 @@ jobs:
     - name: Build
       run: cd builddir && ninja
 
+  build-macos:
+
+    runs-on: macos-13
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Install build dependencies
+      run: |
+        brew update
+        brew bundle
+    - name: Configure
+      run: |
+        meson --prefix=`pwd`/macosdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-macos-app=true macosdist
+    - name: Build
+      run: |
+        cd macosdist && ninja install && shasum -a 256 *.zip && cd ..
+        otool -L macosdist/GNUSim8085.app/Contents/libs/*.dylib
+        otool -L macosdist/GNUSim8085.app/Contents/libs/*.dylib
+        otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.so
+

@@ -1,0 +1,27 @@
+name: Build Verification
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'ghatrial'
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build-linux:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libgtksourceview-3.0-dev gettext discount markdown meson
+    - name: Configure
+      run: meson builddir
+    - name: Build
+      run: cd builddir && ninja
+

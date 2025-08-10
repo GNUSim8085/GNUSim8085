@@ -19,7 +19,7 @@ jobs:
     - name: Install build dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install libgtksourceview-3.0-dev gettext discount markdown meson
+        sudo apt-get install libgtksourceview-3.0-dev gettext discount meson
     - name: Configure
       run: meson builddir
     - name: Build

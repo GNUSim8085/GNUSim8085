@@ -35,7 +35,11 @@ jobs:
     - name: Install build dependencies
       run: |
         brew update
+        brew config
+        brew tap onkarshinde/gnusim8085-bundle
+        brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf
         brew bundle
+        brew link --force gettext
     - name: Configure
       run: |
         meson --prefix=`pwd`/macosdist/GNUSim8085.app --bindir=Contents/MacOS --datadir=Contents/Resources --localedir=Contents/Resources/locale --mandir=Contents/SharedSupport -Dbuild-macos-app=true macosdist

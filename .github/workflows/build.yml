@@ -46,6 +46,8 @@ jobs:
     - name: Build
       run: |
         cd macosdist && ninja install && shasum -a 256 *.zip && cd ..
+        otool -L macosdist/GNUSim8085.app/Contents/MacOS/gnusim8085
         otool -L macosdist/GNUSim8085.app/Contents/libs/*.dylib
         otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.so
+        otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.dylib
 

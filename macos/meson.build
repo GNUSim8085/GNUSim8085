@@ -71,15 +71,15 @@ if run_command('ls', dylib_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', gtkdir + '/libgdk-3.0.dylib', '@executable_path/../libs/libgdk-3.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', pangodir + '/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', pangoft2dir + '/libpangoft2-1.0.0.dylib', '@executable_path/../libs/libpangoft2-1.0.0.dylib', dylib_path)
-  meson.add_install_script('install_name_tool', '-change', rsvgdir + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gettext/lib/libintl.8.dylib', '@executable_path/../libs/libintl.8.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', rsvgdir + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', dylib_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gettext/lib/libintl.8.dylib', '@executable_path/../libs/libintl.8.dylib', dylib_path)
 endif
 endforeach
 
 #meson.add_install_script('cp', '-r', join_paths(gdk_pixbuf_prefix, 'lib', 'gdk-pixbuf-2.0', gdk_pixbuf_version), join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
 #meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
 # Modify lookup path on pixbuf loaders
-pixbufloaderlist = ['libpixbufloader-svg.so']
+pixbufloaderlist = ['libpixbufloader-svg.so', 'libpixbufloader-svg.dylib']
 foreach pixbufloader : pixbufloaderlist
 pixbufloader_path = join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders', pixbufloader)
 message('Updating lookup path for ' + pixbufloader_path)

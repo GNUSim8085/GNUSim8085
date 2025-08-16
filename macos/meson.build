@@ -76,8 +76,8 @@ dyliblist = ['libcairo-gobject.2.dylib', 'libgio-2.0.0.dylib', 'libgmodule-2.0.0
 foreach dylib : dyliblist
 dylib_path = join_paths('Contents', 'libs', dylib)
 #message('Updating lookup path for ' + dylib_path)
+meson.add_install_script('echo', 'Updating lookup path for ' + dylib_path)
 if run_command('ls', dylib_path).returncode() == 0
-  meson.add_install_script('echo', 'Updating lookup path for ' + dylib_path)
   meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', dylib_path)

@@ -103,41 +103,27 @@ endforeach
 #meson.add_install_script('cp', '-r', join_paths(gdk_pixbuf_prefix, 'lib', 'gdk-pixbuf-2.0', gdk_pixbuf_version), join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))
 #meson.add_install_script('sed', '-i', '-e', 's|'+ gdk_pixbuf_moduledir + '|loaders|g', join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders.cache'))
 # Modify lookup path on pixbuf loaders
-pixbufloaderlist = ['libpixbufloader-svg.so', 'libpixbufloader-svg.dylib']
+pixbufloaderlist = ['libpixbufloader_svg.so', 'libpixbufloader_svg.dylib']
 foreach pixbufloader : pixbufloaderlist
 pixbufloader_path = join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version, 'loaders', pixbufloader)
 #message('Updating lookup path for ' + pixbufloader_path)
 #if run_command('ls', pixbufloader_path).returncode() == 0
   meson.add_install_script('echo', 'Updating lookup path for ' + pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/librsvg/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib', '@executable_path/../libs/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', cairogobjectdir + '/libcairo-gobject.2.dylib', '@executable_path/../libs/libcairo-gobject.2.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', fontconfigdir + '/libfontconfig.1.dylib', '@executable_path/../libs/libfontconfig.1.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', freetype2dir + '/libfreetype.6.dylib', '@executable_path/../libs/libfreetype.6.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/cairo/lib/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', gdkpixbufdir + '/libgdk_pixbuf-2.0.0.dylib', '@executable_path/../libs/libgdk_pixbuf-2.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gdk-pixbuf/lib/libgdk_pixbuf-2.0.0.dylib', '@executable_path/../libs/libgdk_pixbuf-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', giodir + '/libgio-2.0.0.dylib', '@executable_path/../libs/libgio-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libgio-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', harfbuzzdir + '/libharfbuzz.0.dylib', '@executable_path/../libs/libharfbuzz.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', pangocairodir + '/libpangocairo-1.0.0.dylib', '@executable_path/../libs/libpangocairo-1.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', pangodir + '/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', pangoft2dir + '/libpangoft2-1.0.0.dylib', '@executable_path/../libs/libpangoft2-1.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', pngdir + '/libpng16.16.dylib', '@executable_path/../libs/libpng16.16.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', rsvgdir + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/librsvg/lib/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', '@rpath/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gettext/lib/libintl.8.dylib', '@executable_path/../libs/libintl.8.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/cairo/lib/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/cairo/lib/libcairo-gobject.2.dylib', '@executable_path/../libs/libcairo-gobject.2.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gdk-pixbuf/lib/libgdk_pixbuf-2.0.0.dylib', '@executable_path/../libs/libgdk_pixbuf-2.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libgio-2.0.0.dylib', '@executable_path/../libs/libgio-2.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/glib/lib/libgobject-2.0.0.dylib', '@executable_path/../libs/libgobject-2.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/pango/lib/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/pango/lib/libpangocairo-1.0.0.dylib', '@executable_path/../libs/libpangocairo-1.0.0.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', gtkdir + '/libgdk-3.0.dylib', '@executable_path/../libs/libgdk-3.0.dylib', pixbufloader_path)
 #endif
 endforeach
 

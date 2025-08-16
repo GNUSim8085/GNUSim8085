@@ -54,8 +54,6 @@ pngdir=run_command('pkg-config', 'libpng', '--variable', 'libdir').stdout().stri
 message('png path ' + pngdir)
 rsvgdir=run_command('pkg-config', 'librsvg-2.0', '--variable', 'libdir').stdout().strip()
 message('rsvg path ' + rsvgdir)
-rsvgdirabsolute=run_command('readlink', '-n', rsvgdir).stdout().strip()
-message('rsvg absolute path ' + rsvgdirabsolute)
 
 gdk_pixbuf_prefix = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'prefix').stdout().strip()
 gdk_pixbuf_version = run_command('pkg-config', 'gdk-pixbuf-2.0', '--variable', 'gdk_pixbuf_binary_version').stdout().strip()
@@ -88,7 +86,9 @@ if run_command('ls', dylib_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', pangodir + '/libpango-1.0.0.dylib', '@executable_path/../libs/libpango-1.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', pangoft2dir + '/libpangoft2-1.0.0.dylib', '@executable_path/../libs/libpangoft2-1.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', rsvgdir + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', dylib_path)
-  meson.add_install_script('install_name_tool', '-change', rsvgdirabsolute + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', dylib_path)
+  rsvgpathabsolute=run_command('readlink', '-n', rsvgdir + '/librsvg-2.2.dylib').stdout().strip()
+  message('rsvg absolute path ' + rsvgpathabsolute)
+  meson.add_install_script('install_name_tool', '-change', rsvgpathabsolute + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gettext/lib/libintl.8.dylib', '@executable_path/../libs/libintl.8.dylib', dylib_path)
 endif
 endforeach
@@ -115,7 +115,9 @@ if run_command('ls', pixbufloader_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', pangoft2dir + '/libpangoft2-1.0.0.dylib', '@executable_path/../libs/libpangoft2-1.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', pngdir + '/libpng16.16.dylib', '@executable_path/../libs/libpng16.16.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', rsvgdir + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', rsvgdirabsolute + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
+  rsvgpathabsolute=run_command('readlink', '-n', rsvgdir + '/librsvg-2.2.dylib').stdout().strip()
+  message('rsvg absolute path ' + rsvgpathabsolute)
+  meson.add_install_script('install_name_tool', '-change', rsvgpathabsolute, '@executable_path/../libs/librsvg-2.2.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gettext/lib/libintl.8.dylib', '@executable_path/../libs/libintl.8.dylib', pixbufloader_path)
 endif
 endforeach

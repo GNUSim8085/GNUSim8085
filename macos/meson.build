@@ -77,7 +77,7 @@ foreach dylib : dyliblist
 dylib_path = join_paths(prefix, 'Contents', 'libs', dylib)
 #message('Updating lookup path for ' + dylib_path)
 meson.add_install_script('echo', 'Updating lookup path for ' + dylib_path)
-if run_command('ls', dylib_path).returncode() == 0
+#if run_command('ls', dylib_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libgmodule-2.0.0.dylib', '@executable_path/../libs/libgmodule-2.0.0.dylib', dylib_path)
@@ -91,7 +91,7 @@ if run_command('ls', dylib_path).returncode() == 0
   meson.add_install_script('install_name_tool', '-change', rsvgdir + '/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/librsvg/lib/librsvg-2.2.dylib', '@executable_path/../libs/librsvg-2.2.dylib', dylib_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gettext/lib/libintl.8.dylib', '@executable_path/../libs/libintl.8.dylib', dylib_path)
-endif
+#endif
 endforeach
 
 #meson.add_install_script('cp', '-r', join_paths(gdk_pixbuf_prefix, 'lib', 'gdk-pixbuf-2.0', gdk_pixbuf_version), join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk_pixbuf_version))

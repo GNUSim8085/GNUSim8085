@@ -112,7 +112,7 @@ pixbufloader_path = join_paths(prefix, 'Contents', 'libs', 'gdk-pixbuf-2.0', gdk
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/librsvg/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib', '@executable_path/../libs/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', cairodir + '/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/cairo/lib/libcairo.2.dylib', '@executable_path/../libs/libcairo.2.dylib', pixbufloader_path)
-  meson.add_install_script('install_name_tool', '-change', gdkpixbufdir + '/libgdk_pixbuf-2.0.0.dylib', '@executable_path/../libs/libgdk_pixbuf-2.0.0.dylib', pixbufloader_path)
+  meson.add_install_script('install_name_tool', '-change', gdk_pixbuf_binarydir + '/libgdk_pixbuf-2.0.0.dylib', '@executable_path/../libs/libgdk_pixbuf-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', '/usr/local/opt/gdk-pixbuf/lib/libgdk_pixbuf-2.0.0.dylib', '@executable_path/../libs/libgdk_pixbuf-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', giodir + '/libgio-2.0.0.dylib', '@executable_path/../libs/libgio-2.0.0.dylib', pixbufloader_path)
   meson.add_install_script('install_name_tool', '-change', glibdir + '/libglib-2.0.0.dylib', '@executable_path/../libs/libglib-2.0.0.dylib', pixbufloader_path)

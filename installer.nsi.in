@@ -151,7 +151,7 @@ SectionIn RO
   File "${MINGW_HOME}/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml"
 
   SetOutPath "$INSTDIR\share\licenses"
-  File /r "${MINGW_HOME}/share/licenses/mingw32-adwaita-icon-theme"
+  File /r "${MINGW_HOME}/share/licenses/adwaita-icon-theme"
   File /r "/usr/share/licenses/mingw32-atk"
   File /r "/usr/share/licenses/mingw32-cairo"
   File /r "/usr/share/licenses/mingw32-expat"

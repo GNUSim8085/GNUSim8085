@@ -54,3 +54,31 @@ jobs:
         otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.so
         otool -L macosdist/GNUSim8085.app/Contents/libs/gdk-pixbuf-2.0/2.10.0/loaders/*.dylib
 
+  build-windows:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup podman
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install podman
+        podman pull fedora:42
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        path: 'red_amber'
+    - name: Create container and build code
+      run: |
+        {
+            echo 'FROM fedora:42'
+            echo 'RUN dnf -y update'
+            echo 'RUN dnf -y install mingw32-gtksourceview3 mingw32-nsis meson discount'
+            echo 'RUN dnf clean all'
+            echo 'COPY red_amber red_amber'
+            echo 'WORKDIR /red_amber'
+            echo 'RUN meson builddir --prefix=/ --cross-file meson_cross_win32.txt'
+            echo 'RUN cd builddir && ninja && DESTDIR=`pwd`/win32 ninja install && makensis installer.nsi'
+        } > podmanfile
+        podman build -f ./podmanfile
+

@@ -42,6 +42,8 @@ jobs:
         brew tap onkarshinde/gnusim8085-bundle
         brew install --build-from-source onkarshinde/gnusim8085-bundle/gdk-pixbuf
         brew bundle
+        brew info gtksourceview3
+        brew --prefix gtksourceview3
         brew link --force gettext
     - name: Configure
       run: |

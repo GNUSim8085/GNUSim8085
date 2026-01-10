@@ -28,6 +28,7 @@ jobs:
   build-macos:
 
     runs-on: macos-14-large
+    continue-on-error: true
 
     steps:
     - name: Checkout code

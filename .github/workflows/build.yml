@@ -77,6 +77,7 @@ jobs:
             echo 'RUN dnf -y update'
             echo 'RUN dnf -y install mingw32-gcc mingw32-gtksourceview3 mingw32-nsis meson discount'
             echo 'RUN dnf clean all'
+            echo 'RUN rpm -ql mingw32-bzip2'
             echo 'COPY red_amber red_amber'
             echo 'WORKDIR /red_amber'
             echo 'RUN meson builddir --prefix=/ --cross-file meson_cross_win32.txt'

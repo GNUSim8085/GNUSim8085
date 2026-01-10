@@ -172,7 +172,7 @@ SectionIn RO
   File /r "/usr/share/licenses/mingw32-gettext"
   File /r "/usr/share/licenses/mingw32-libxml2"
   File /r "/usr/share/licenses/mingw32-pcre2"
-  File /r "/usr/share/doc/mingw32-win-iconv"
+  File /nonfatal /r "/usr/share/doc/mingw32-win-iconv"
 
   ReadEnvStr $0 COMSPEC
   SetOutPath "$INSTDIR\bin"

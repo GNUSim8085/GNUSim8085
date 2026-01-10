@@ -168,7 +168,7 @@ SectionIn RO
   File /r "/usr/share/licenses/mingw32-pango"
   File /r "/usr/share/licenses/mingw32-pixman"
   File /r "/usr/share/licenses/mingw32-winpthreads"
-  File /r /nonfatal "/usr/share/doc/mingw32-bzip2"
+  File /nonfatal /r "/usr/share/doc/mingw32-bzip2"
   File /r "/usr/share/licenses/mingw32-gettext"
   File /r "/usr/share/licenses/mingw32-libxml2"
   File /r "/usr/share/licenses/mingw32-pcre2"
